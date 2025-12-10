@@ -13,5 +13,5 @@
 If you use this tool or the data generated for research, presentations, or public analysis, please cite it as:
 
 > **"Global ROV Audit & Triangulation Tool" by Terry Sweetser**  
-> Source: https://github.com/yourusername/rov_audit
+> Source: https://github.com/IEISI-ORG/rov_audit
 
