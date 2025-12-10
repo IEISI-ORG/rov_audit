@@ -150,25 +150,25 @@ def analyze():
 
     # [D] Top 50 Vulnerable
     print("\n" + "="*80)
-    print("TOP 50 VULNERABLE NETWORKS (Known Graph, No Protection)")
+    print("TOP 250 VULNERABLE NETWORKS (Known Graph, No Protection)")
     print("="*80)
     print(f"{'ASN':<8} | {'CC':<2} | {'Cone':<8} | {'Feeds':<6} | {'Name'}")
     print("-" * 80)
     
-    vuln_df = df[df['verdict'] == "VULNERABLE (No Coverage)"].sort_values(by='cone', ascending=False).head(50)
+    vuln_df = df[df['verdict'] == "VULNERABLE (No Coverage)"].sort_values(by='cone', ascending=False).head(250)
     for _, row in vuln_df.iterrows():
         ups = f"{row['dirty']}/{row['total']}"
         print(f"AS{row['asn']:<6} | {row['cc']:<2} | {row['cone']:<8} | {ups:<6} | {row['name'][:45]}")
 
     # [E] Top 50 Known Unknowns
     print("\n" + "="*80)
-    print("TOP 50 KNOWN UNKNOWNS (Missing Graph Data - High Priority Targets)")
+    print("TOP 500 KNOWN UNKNOWNS (Missing Graph Data - High Priority Targets)")
     print("="*80)
     print(f"{'ASN':<8} | {'CC':<2} | {'Cone':<8} | {'Score':<6} | {'Name'}")
     print("-" * 80)
 
     unknown_df = df[df['verdict'] == "Unverified (Missing Data)"].sort_values(by='cone', ascending=False)
-    for _, row in unknown_df.head(50).iterrows():
+    for _, row in unknown_df.head(500).iterrows():
         print(f"AS{row['asn']:<6} | {row['cc']:<2} | {row['cone']:<8} | {'?/?':<6} | {row['name'][:45]}")
 
     # [F] Unknown Unknowns
