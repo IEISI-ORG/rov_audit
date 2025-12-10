@@ -52,3 +52,13 @@ rov_coverage/
 ├── requirements.txt            # Python dependencies
 └── README.md                   # This file
 
+---
+
+## Notes / TODO
+
+* Cached data is not refreshed often or at all
+* There are false negatives and positives: submit an issue to tell me!
+* Fork and contribute as collaborate is very welcome.
+
+
+
