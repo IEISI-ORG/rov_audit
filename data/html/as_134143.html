@@ -1,0 +1,2934 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Kinetix Networks (AS134143) is a 10 year old BGP network that is peering with 50 other networks and has 4 upstream carriers">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000">
+    <link rel="search" type="application/opensearchdescription+xml" title="BGP.Tools" href="https://bgp.tools/opensearch.xml">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="theme-color" content="#000000">
+    <link href="https://social.bgp.tools/@bgptools" rel="me">
+    <link rel="canonical" href="https://bgp.tools/as/134143" />
+    <title>AS134143 Kinetix Networks - bgp.tools</title>
+    <link rel="stylesheet" type="text/css" href="/assets/main-new.css?2025-12-09-1723%20UTC">
+</head>
+
+<body>
+    <div id="container">
+        
+<div id="global-header" class="global-header-top">
+    <div class="header-sitewide">
+        <div class="global-header">
+            <div class="header-logo">
+                <a href="/" id="logo" class="content">bgp.tools</a>
+            </div>
+            <form id="search" action="/search" method="get" accept-charset="utf-8" role="search" class="top-search-header js-search-hash">
+                <div class="searchfield">
+                    <input type="search" autocomplete="off" name="q" id="site-search-text" title="Search" value="" placeholder="Start here..." autofocus="autofocus" class="js-search-focus">
+                    <button type="submit" id="search-submit" class="search-submit">Search</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div id="global-header-blob" >
+    <a id="auth-header-text" href="/login">Login</a>
+    
+</div>
+<div id="global-header-bar" >
+    <a id="auth-header-bar-text" href="/login">Login</a>
+    
+</div>
+<div class="small-clearfix"></div>
+
+        <div id="global-container">
+            
+
+
+            
+            <div class="section-tabs js-tabs">
+                <ul>
+                    
+<li class="active">
+    <h1> <a id="viewbutton-tab" href="/as/134143">View</a></h1>
+</li>
+
+<li >
+    <a id="editbutton-tab" href="/edit/as/134143">Edit</a>
+</li>
+
+
+
+
+
+                    <li style="float: right;">
+                        
+                        <img id="ws-status" width="24" height="24" src="/assets/disconnected.png" title="Not Connected To realtime data updates">
+                        
+                    </li>
+                </ul>
+            </div>
+
+            <div id="search-container">
+
+                <div class="column-full-width">
+
+                    <div class="clearfix">
+                        
+                    </div>
+                    
+                    
+
+                    <div class="network-header">
+                        
+                        
+                        <img width="334" height="250" src="/img/134143" alt="The website screenshot for https://kinetix.net.au" >
+                        
+                        
+                        <p id="network-name" class="heading-xlarge">Kinetix Networks</p>
+                        <p id="network-number">
+                            AS Number
+                            <strong id="ASNumberString" pure="134143">134143</strong>
+                            <br>
+                        
+                            Website
+                            <strong><a href="https://kinetix.net.au" rel="nofollow">https://kinetix.net.au</a></strong>
+                        
+                        </p>
+
+                    </div>
+
+
+                    <div class="clearfix">
+                        
+                    </div>
+
+
+                    <div class="section-tabs js-tabs">
+                        <ul>
+
+                            <li id="overview-tab-li" class="active">
+                                <a id="overview-tab" href="#asinfo">Overview</a>
+                            </li>
+                            
+                            <li id="prefix-tab-li">
+                                <a id="prefix-tab" href="#prefixes">Prefixes</a>
+                            </li>
+
+                            <li id="connectivity-tab-li">
+                                <a id="connectivity-tab" href="#connectivity">Connectivity</a>
+                            </li>
+                            
+                            <li id="whois-tab-li">
+                                <a id="whois-tab" href="#whois">Whois</a>
+                            </li>
+                        
+                            <li id="ix-tab-li">
+                                <a id="ix-tab" href="#ix">IX</a>
+                            </li>
+                        
+                        
+                        </ul>
+                    </div>
+
+<script>
+    function removeAllActiveTab() {
+        var tabs = [
+            "overview-tab-li", 
+            "prefix-tab-li", 
+            "connectivity-tab-li",
+            "whois-tab-li",
+            "ix-tab-li",
+            "issues-tab-li"
+        ];
+
+        tabs.forEach(element => {
+            var aaa = document.querySelectorAll('#'+element);
+            if(aaa.length != 0) {
+                aaa[0].classList.remove("active")
+            }
+        });
+    }
+
+    function hideAllContent() {
+        var tabs = [
+            "overview-page", 
+            "prefixes-page", 
+            "connectivity-page",
+            "whois-page",
+            "ix-page",
+            "issues-page"
+        ];
+
+        tabs.forEach(element => {
+            var aaa = document.querySelectorAll('#'+element);
+            if(aaa.length != 0) {
+                aaa[0].style.display = "none";
+            }
+        });
+        if (document.getElementById("donotscrapebgptools-prefixlist-tbody")) {
+            var prefixrows = document.getElementById("donotscrapebgptools-prefixlist-tbody").children;
+            for (var i = 0; i < prefixrows.length; i++) {
+                prefixrows[i].style = "";
+            }
+        }
+    }
+
+    var otab = document.querySelectorAll('#overview-tab');
+    otab[0].addEventListener("click", function () {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#overview-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#overview-page');
+        aaa[0].style.display = "";
+    });
+    
+
+    var ptab = document.querySelectorAll('#prefix-tab');
+    ptab[0].addEventListener("click", function () {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#prefix-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#prefixes-page');
+        aaa[0].style.display = "";
+    });
+
+    var ctab = document.querySelectorAll('#connectivity-tab');
+    ctab[0].addEventListener("click", function () {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#connectivity-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#connectivity-page');
+        aaa[0].style.display = "";
+    });
+    
+
+    var wtab = document.querySelectorAll('#whois-tab');
+    wtab[0].addEventListener("click", function () {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#whois-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#whois-page');
+        aaa[0].style.display = "";
+    });
+
+</script>
+
+
+<script>
+var wtab = document.querySelectorAll('#ix-tab');
+wtab[0].addEventListener("click", function () {
+    removeAllActiveTab()
+    hideAllContent()
+    var otab2 = document.querySelectorAll('#ix-tab-li');
+    otab2[0].classList.add("active");
+
+    var aaa = document.querySelectorAll('#ix-page');
+    aaa[0].style.display = "";
+});
+</script>
+
+
+                    
+                    <div id="overview-page">
+
+                        <div class="grid-row">
+                        
+                        <div class="column-two-thirds">
+                            <dl>
+                                <dt>Registered on</dt>
+                                <dd class="text data">
+                                    
+                                    16 Apr 2015 (10 years old)
+                                </dd>
+                            
+                            
+                            <dt>Registered to</dt>
+                            <dd class="text data">
+                                <a href="/rir-owner/A91D7578">A91D7578</a> (apnic)</dd>
+                                
+                            
+                            </dl>
+                        </div>
+                        
+    
+                        <dl class="column-third">
+                            <dt>Network status</dt>
+                            <dd class="text data">
+                                
+                                Active, Allocated under APNIC
+                                
+                            </dd>
+                        </dl>
+    
+                        </div>
+    
+                        <div class="grid-row">
+                            <dl class="column-two-thirds">
+                                <dt>Network type</dt>
+                                <dd class="text data">
+                                    Eyeball
+                                </dd>
+                            </dl>
+    
+                            <dl class="column-third">
+                                <dt>Prefixes Originated</dt>
+                                <dd class="data">50 IPv4, 15 IPv6</dd>
+                            </dl>
+                        </div>
+                        <div class="grid-row">
+                            <div class="column-half">
+    
+                                <h2 class="heading-medium"><derp>Upstreams</derp></h2>
+                                <ul>
+                                    
+                                    <li>
+                                        <span id="sic0">
+                                          <a href="/as/38195">AS38195</a> - Superloop
+                                        </span>
+                                    </li>
+                                    
+                                    <li>
+                                        <span id="sic0">
+                                          <a href="/as/137409">AS137409</a> - GSL Networks Pty LTD
+                                        </span>
+                                    </li>
+                                    
+                                    <li>
+                                        <span id="sic0">
+                                          <a href="/as/63956">AS63956</a> - 5G NETWORK OPERATIONS PTY LTD
+                                        </span>
+                                    </li>
+                                    
+                                    <li>
+                                        <span id="sic0">
+                                          <a href="/as/9652">AS9652</a> - ECN Internet
+                                        </span>
+                                    </li>
+                                    
+                                </ul>
+    
+                            </div>
+    
+                            <div class="column-half">
+                                
+                                    <h2 class="heading-medium"><derp>Rankings</derp></h2>
+                                    
+                                    <li><span id="sic0">#32 for <a href="/rankings/AU?sort=cone">AS Cone  in Australia</a></span></li>
+                                    
+                                    <li><span id="sic0">#35 for <a href="/rankings/AU?sort=eyeballs">Estimated Eyeballs  in Australia</a></span></li>
+                                    
+                                    <li><span id="sic0">#87 for <a href="/rankings/AU?sort=dns">Unique Domains  in Australia</a></span></li>
+                                    
+                                    <li><span id="sic0">#43 for <a href="/rankings/AU?sort=peering">Known Peers  in Australia</a></span></li>
+                                    
+                                    <li><span id="sic0">#93 for <a href="/rankings/AU?sort=v4">Originated IPv4 Space  in Australia</a></span></li>
+                                    
+                                
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+
+                    <div style="display: none" id="prefixes-page">
+                        
+
+                        
+                        <div style="float:left">
+                            <dt>Prefixes Originated</dt>
+                            <dd class="data">50 IPv4, 15 IPv6</dd>
+                            
+                            
+                        </div>
+                        <div style="float:right">
+                                <dt>Addresses Originated</dt>
+                                <dd class="data">73 /24's of IPv4</dd>
+                                <dd class="data">65536 /48's of IPv6</dd>
+                        </div>
+
+                        <div class="clearfix">
+                            
+                        </div>
+
+
+                        <table id="fhTable" class="full-width-table ">
+                            <tbody id="donotscrapebgptools-prefixlist-tbody">
+                                <tr>
+                                    <th class="nowrap">  &nbsp;  </th>
+                                    <th class="boldpls">Prefix</th>
+                                    <th class="nowrap boldpls">Description</th>
+                                </tr>
+                                <p id="readme-if-you-are-human" style="display: none;">If you are scraping this block for the prefixes that a AS originates, please use the data dumps in https://bgp.tools/kb/api and cache them</p>
+                                
+                                <tr id="pfx-14.102.164.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="AU" src="/assets/flags/AU.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/14.102.164.0/24">14.102.164.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Kinetix Networks</td>
+                                </tr>
+                                
+                                <tr id="pfx-14.102.164.0/22">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="AU" src="/assets/flags/AU.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/14.102.164.0/22">14.102.164.0/22</a></td>
+                                    <td class="smallonmobile nowrap">Professional Data Kinetics Pty Ltd</td>
+                                </tr>
+                                
+                                <tr id="pfx-14.102.165.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="AU" src="/assets/flags/AU.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/14.102.165.0/24">14.102.165.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Kinetix Networks</td>
+                                </tr>
+                                
+                                <tr id="pfx-14.102.166.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="AU" src="/assets/flags/AU.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/14.102.166.0/24">14.102.166.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Kinetix Networks</td>
+                                </tr>
+                                
+                                <tr id="pfx-14.102.167.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="AU" src="/assets/flags/AU.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/14.102.167.0/24">14.102.167.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Kinetix Networks</td>
+                                </tr>
+                                
+                                <tr id="pfx-45.248.196.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="AU" src="/assets/flags/AU.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/45.248.196.0/24">45.248.196.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Kinetix Networks</td>
+                                </tr>
+                                
+                                <tr id="pfx-45.248.196.0/22">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="AU" src="/assets/flags/AU.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/45.248.196.0/22">45.248.196.0/22</a></td>
+                                    <td class="smallonmobile nowrap">Professional Data Kinetics Pty Ltd</td>
+                                </tr>
+                                
+                                <tr id="pfx-45.248.197.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="AU" src="/assets/flags/AU.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/45.248.197.0/24">45.248.197.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Kinetix Networks</td>
+                                </tr>
+                                
+                                <tr id="pfx-45.248.198.0/23">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="AU" src="/assets/flags/AU.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/45.248.198.0/23">45.248.198.0/23</a></td>
+                                    <td class="smallonmobile nowrap">Kinetix Networks</td>
+                                </tr>
+                                
+                                <tr id="pfx-95.82.0.0/21">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="AU" src="/assets/flags/AU.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/95.82.0.0/21">95.82.0.0/21</a></td>
+                                    <td class="smallonmobile nowrap">Kinetix Networks</td>
+                                </tr>
+                                
+                                <tr id="pfx-95.82.0.0/22">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="AU" src="/assets/flags/AU.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/95.82.0.0/22">95.82.0.0/22</a></td>
+                                    <td class="smallonmobile nowrap">Kinetix Networks</td>
+                                </tr>
+                                
+                                <tr id="pfx-95.82.4.0/22">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="AU" src="/assets/flags/AU.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/95.82.4.0/22">95.82.4.0/22</a></td>
+                                    <td class="smallonmobile nowrap">Kinetix Networks</td>
+                                </tr>
+                                
+                                <tr id="pfx-95.82.32.0/22">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="AU" src="/assets/flags/AU.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/95.82.32.0/22">95.82.32.0/22</a></td>
+                                    <td class="smallonmobile nowrap">Kinetix Networks</td>
+                                </tr>
+                                
+                                <tr id="pfx-95.82.32.0/21">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="AU" src="/assets/flags/AU.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/95.82.32.0/21">95.82.32.0/21</a></td>
+                                    <td class="smallonmobile nowrap">Kinetix Networks</td>
+                                </tr>
+                                
+                                <tr id="pfx-95.82.36.0/22">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="AU" src="/assets/flags/AU.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/95.82.36.0/22">95.82.36.0/22</a></td>
+                                    <td class="smallonmobile nowrap">Kinetix Networks</td>
+                                </tr>
+                                
+                                <tr id="pfx-103.4.55.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="AU" src="/assets/flags/AU.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/103.4.55.0/24">103.4.55.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Professional Data Kinetics Pty Ltd</td>
+                                </tr>
+                                
+                                <tr id="pfx-103.55.92.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="AU" src="/assets/flags/AU.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/103.55.92.0/24">103.55.92.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Kinetix Networks</td>
+                                </tr>
+                                
+                                <tr id="pfx-103.55.93.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="AU" src="/assets/flags/AU.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/103.55.93.0/24">103.55.93.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Kinetix Networks</td>
+                                </tr>
+                                
+                                <tr id="pfx-103.55.94.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="AU" src="/assets/flags/AU.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/103.55.94.0/24">103.55.94.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Kinetix Networks</td>
+                                </tr>
+                                
+                                <tr id="pfx-103.55.95.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="AU" src="/assets/flags/AU.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/103.55.95.0/24">103.55.95.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Kinetix Networks</td>
+                                </tr>
+                                
+                                <tr id="pfx-103.133.52.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="AU" src="/assets/flags/AU.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/103.133.52.0/24">103.133.52.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Kinetix Networks</td>
+                                </tr>
+                                
+                                <tr id="pfx-103.133.52.0/22">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="AU" src="/assets/flags/AU.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/103.133.52.0/22">103.133.52.0/22</a></td>
+                                    <td class="smallonmobile nowrap">Professional Data Kinetics Pty Ltd</td>
+                                </tr>
+                                
+                                <tr id="pfx-103.133.53.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="AU" src="/assets/flags/AU.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/103.133.53.0/24">103.133.53.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Kinetix Networks</td>
+                                </tr>
+                                
+                                <tr id="pfx-103.133.54.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="AU" src="/assets/flags/AU.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/103.133.54.0/24">103.133.54.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Kinetix Networks</td>
+                                </tr>
+                                
+                                <tr id="pfx-103.133.55.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="AU" src="/assets/flags/AU.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/103.133.55.0/24">103.133.55.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Kinetix Networks</td>
+                                </tr>
+                                
+                                <tr id="pfx-103.217.164.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="AU" src="/assets/flags/AU.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/103.217.164.0/24">103.217.164.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Kinetix Networks</td>
+                                </tr>
+                                
+                                <tr id="pfx-103.217.165.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="AU" src="/assets/flags/AU.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/103.217.165.0/24">103.217.165.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Kinetix Networks</td>
+                                </tr>
+                                
+                                <tr id="pfx-103.217.166.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="AU" src="/assets/flags/AU.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/103.217.166.0/24">103.217.166.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Kinetix Networks</td>
+                                </tr>
+                                
+                                <tr id="pfx-103.217.167.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="AU" src="/assets/flags/AU.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/103.217.167.0/24">103.217.167.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Kinetix Networks</td>
+                                </tr>
+                                
+                                <tr id="pfx-103.228.104.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="AU" src="/assets/flags/AU.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/103.228.104.0/24">103.228.104.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Kinetix Networks</td>
+                                </tr>
+                                
+                                <tr id="pfx-103.228.104.0/22">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="AU" src="/assets/flags/AU.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/103.228.104.0/22">103.228.104.0/22</a></td>
+                                    <td class="smallonmobile nowrap">Professional Data Kinetics Pty Ltd</td>
+                                </tr>
+                                
+                                <tr id="pfx-103.228.105.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="AU" src="/assets/flags/AU.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/103.228.105.0/24">103.228.105.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Kinetix Networks</td>
+                                </tr>
+                                
+                                <tr id="pfx-103.228.106.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="AU" src="/assets/flags/AU.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/103.228.106.0/24">103.228.106.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Kinetix Networks</td>
+                                </tr>
+                                
+                                <tr id="pfx-103.228.107.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="AU" src="/assets/flags/AU.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/103.228.107.0/24">103.228.107.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Kinetix Networks</td>
+                                </tr>
+                                
+                                <tr id="pfx-157.85.72.0/21">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="AU" src="/assets/flags/AU.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/157.85.72.0/21">157.85.72.0/21</a></td>
+                                    <td class="smallonmobile nowrap">Professional Data Kinetics Pty Ltd</td>
+                                </tr>
+                                
+                                <tr id="pfx-157.85.72.0/23">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="AU" src="/assets/flags/AU.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/157.85.72.0/23">157.85.72.0/23</a></td>
+                                    <td class="smallonmobile nowrap">The University of Newcastle</td>
+                                </tr>
+                                
+                                <tr id="pfx-205.164.120.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="AU" src="/assets/flags/AU.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/205.164.120.0/24">205.164.120.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Kinetix Networks</td>
+                                </tr>
+                                
+                                <tr id="pfx-205.164.121.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="AU" src="/assets/flags/AU.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/205.164.121.0/24">205.164.121.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Kinetix Networks</td>
+                                </tr>
+                                
+                                <tr id="pfx-205.164.122.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="AU" src="/assets/flags/AU.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/205.164.122.0/24">205.164.122.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Kinetix Networks</td>
+                                </tr>
+                                
+                                <tr id="pfx-205.164.123.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="AU" src="/assets/flags/AU.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/205.164.123.0/24">205.164.123.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Kinetix Networks</td>
+                                </tr>
+                                
+                                <tr id="pfx-205.164.124.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="AU" src="/assets/flags/AU.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/205.164.124.0/24">205.164.124.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Kinetix Networks</td>
+                                </tr>
+                                
+                                <tr id="pfx-205.164.125.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="AU" src="/assets/flags/AU.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/205.164.125.0/24">205.164.125.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Kinetix Networks</td>
+                                </tr>
+                                
+                                <tr id="pfx-205.164.126.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="AU" src="/assets/flags/AU.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/205.164.126.0/24">205.164.126.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Kinetix Networks</td>
+                                </tr>
+                                
+                                <tr id="pfx-205.164.127.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="AU" src="/assets/flags/AU.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/205.164.127.0/24">205.164.127.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Kinetix Networks</td>
+                                </tr>
+                                
+                                <tr id="pfx-218.33.64.0/22">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="AU" src="/assets/flags/AU.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/218.33.64.0/22">218.33.64.0/22</a></td>
+                                    <td class="smallonmobile nowrap">Kinetix-Networks</td>
+                                </tr>
+                                
+                                <tr id="pfx-218.33.64.0/20">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="AU" src="/assets/flags/AU.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/218.33.64.0/20">218.33.64.0/20</a></td>
+                                    <td class="smallonmobile nowrap">Kinetix-Networks</td>
+                                </tr>
+                                
+                                <tr id="pfx-218.33.68.0/22">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="AU" src="/assets/flags/AU.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/218.33.68.0/22">218.33.68.0/22</a></td>
+                                    <td class="smallonmobile nowrap">Kinetix-Networks</td>
+                                </tr>
+                                
+                                <tr id="pfx-218.33.72.0/22">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="AU" src="/assets/flags/AU.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/218.33.72.0/22">218.33.72.0/22</a></td>
+                                    <td class="smallonmobile nowrap">Kinetix-Networks</td>
+                                </tr>
+                                
+                                <tr id="pfx-218.33.76.0/23">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="AU" src="/assets/flags/AU.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/218.33.76.0/23">218.33.76.0/23</a></td>
+                                    <td class="smallonmobile nowrap">Kinetix-Networks</td>
+                                </tr>
+                                
+                                <tr id="pfx-218.33.78.0/23">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="AU" src="/assets/flags/AU.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/218.33.78.0/23">218.33.78.0/23</a></td>
+                                    <td class="smallonmobile nowrap">Kinetix-Networks</td>
+                                </tr>
+                                
+                                <tr id="pfx-2405:e180::/32">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="AU" src="/assets/flags/AU.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2405:e180::/32">2405:e180::/32</a></td>
+                                    <td class="smallonmobile nowrap">Professional Data Kinetics Pty Ltd</td>
+                                </tr>
+                                
+                                <tr id="pfx-2405:e180:2000::/36">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="AU" src="/assets/flags/AU.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2405:e180:2000::/36">2405:e180:2000::/36</a></td>
+                                    <td class="smallonmobile nowrap">Kinetix Networks</td>
+                                </tr>
+                                
+                                <tr id="pfx-2405:e180:3000::/36">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="AU" src="/assets/flags/AU.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2405:e180:3000::/36">2405:e180:3000::/36</a></td>
+                                    <td class="smallonmobile nowrap">Kinetix Networks</td>
+                                </tr>
+                                
+                                <tr id="pfx-2405:e180:4000::/36">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="AU" src="/assets/flags/AU.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2405:e180:4000::/36">2405:e180:4000::/36</a></td>
+                                    <td class="smallonmobile nowrap">Kinetix Networks</td>
+                                </tr>
+                                
+                                <tr id="pfx-2405:e180:5000::/36">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="AU" src="/assets/flags/AU.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2405:e180:5000::/36">2405:e180:5000::/36</a></td>
+                                    <td class="smallonmobile nowrap">Kinetix Networks</td>
+                                </tr>
+                                
+                                <tr id="pfx-2405:e180:6000::/36">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="AU" src="/assets/flags/AU.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2405:e180:6000::/36">2405:e180:6000::/36</a></td>
+                                    <td class="smallonmobile nowrap">Kinetix Networks</td>
+                                </tr>
+                                
+                                <tr id="pfx-2405:e180:7000::/36">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="AU" src="/assets/flags/AU.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2405:e180:7000::/36">2405:e180:7000::/36</a></td>
+                                    <td class="smallonmobile nowrap">Kinetix Networks</td>
+                                </tr>
+                                
+                                <tr id="pfx-2405:e180:8000::/36">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="AU" src="/assets/flags/AU.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2405:e180:8000::/36">2405:e180:8000::/36</a></td>
+                                    <td class="smallonmobile nowrap">Kinetix Networks</td>
+                                </tr>
+                                
+                                <tr id="pfx-2405:e180:9000::/36">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="AU" src="/assets/flags/AU.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2405:e180:9000::/36">2405:e180:9000::/36</a></td>
+                                    <td class="smallonmobile nowrap">Kinetix Networks</td>
+                                </tr>
+                                
+                                <tr id="pfx-2405:e180:a000::/36">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="AU" src="/assets/flags/AU.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2405:e180:a000::/36">2405:e180:a000::/36</a></td>
+                                    <td class="smallonmobile nowrap">Kinetix Networks</td>
+                                </tr>
+                                
+                                <tr id="pfx-2405:e180:b000::/36">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="AU" src="/assets/flags/AU.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2405:e180:b000::/36">2405:e180:b000::/36</a></td>
+                                    <td class="smallonmobile nowrap">Kinetix Networks</td>
+                                </tr>
+                                
+                                <tr id="pfx-2405:e180:c000::/36">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="AU" src="/assets/flags/AU.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2405:e180:c000::/36">2405:e180:c000::/36</a></td>
+                                    <td class="smallonmobile nowrap">Kinetix Networks</td>
+                                </tr>
+                                
+                                <tr id="pfx-2405:e180:d000::/36">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="AU" src="/assets/flags/AU.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2405:e180:d000::/36">2405:e180:d000::/36</a></td>
+                                    <td class="smallonmobile nowrap">Kinetix Networks</td>
+                                </tr>
+                                
+                                <tr id="pfx-2405:e180:e000::/36">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="AU" src="/assets/flags/AU.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2405:e180:e000::/36">2405:e180:e000::/36</a></td>
+                                    <td class="smallonmobile nowrap">Kinetix Networks</td>
+                                </tr>
+                                
+                                <tr id="pfx-2405:e180:f000::/36">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="AU" src="/assets/flags/AU.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2405:e180:f000::/36">2405:e180:f000::/36</a></td>
+                                    <td class="smallonmobile nowrap">Kinetix Networks</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div style="display: none" id="connectivity-page">
+
+                        <div class="grid-row">
+                            <dl class="column-third column-third-first">
+                                <dt><a href="#peers">Peers</a></dt>
+                                <dd class="data">50</dd>
+                            </dl><dl class="column-third column-third-mid">
+                                <dt><a href="#upstreams">Upstreams</a></dt>
+                                
+                                <dd class="text data">4</dd>
+                                
+                            </dl>
+                            <dl class="column-third column-third-last">
+                                <dt><a href="#downstreams">Downstreams</a></dt> <dd class="data">13 (Cone: 14)</dd>
+                            </dl>
+
+                        </div>
+
+
+                        <hr>
+                        <h3>Network Policy<img class="flag-img" src="/assets/info.png" style="padding-left: 12px;" title="This info can take up to 2 hours to fully update" alt="This info take up to 2 hours to fully update"/></h3></h3>
+                        <a style="font-size: small;" href="/kb/network-policy">Click here to learn more about what this graph means and what makes up a network policy</a>
+
+                        <select id="netpolicydropdown" class="dropdownmenu">
+                            
+                                <option disabled=true value="disabled-default">Global Aggregation (disabled due to size)</option>
+                            
+
+                            
+                                
+                            
+                                
+                                <option value="1ff9b69adf1b3a4d79282351c38d0001e19de20a34eadf946d339514">Policy nervous_shtern</option>
+                                
+                            
+                                
+                                <option value="8174a35c7c601a55ee7d6426e499ce93cf0daf29714d56e151711368">Policy quizzical_davinci</option>
+                                
+                            
+                                
+                                <option value="f635596ecc89d851a5bfadd564ebe4ffd351177f51e19f56fdaa170d">Policy quizzical_gauss</option>
+                                
+                            
+                                
+                                <option value="48a4a47df2264d11a6038c9a7577f323c5f4b53ff579d1c0dfbef522">Policy elastic_cori</option>
+                                
+                            
+                                
+                                <option value="773d3dcd34cb2e5c5c9f2d10c5281a95fe9896770d43517b775e08d6">Policy trusting_bell</option>
+                                
+                            
+                                
+                                <option value="7d28e3758069f2b81e239aa6485d73b8e71baefc33fe373b2ca1f654">Policy vigorous_margulis</option>
+                                
+                            
+                                
+                                <option value="e522c94ff910c6c008a559bcbc5b158eff086cdf9794249a7fca31e9">Policy nostalgic_chatelet</option>
+                                
+                            
+                                
+                                <option value="1a44d68b4158eeb1f4264b99c09b559716036c75fa5a6a3c49cbc52c">Policy agitated_agnesi</option>
+                                
+                            
+                                
+                                <option value="99efb86f0798f1c69ac65370a3b86fd57d248b44815646bef78f4ff8">Policy recursing_heisenberg</option>
+                                
+                            
+                                
+                                <option value="c1ebabde696e923a20aa04b6d670ef363907e12997c6fa73d93a2342">Policy tender_engelbart</option>
+                                
+                            
+                                
+                                <option value="5927ed1279d7a992e52494b213ee3b03f09dfb1fe58521c304a6cb14">Policy quizzical_johnson</option>
+                                
+                            
+                                
+                                <option value="999a95ffb24a0e84e6a18eed82fbaf1e5b7471b87d02b31cae69c563">Policy gifted_hypatia</option>
+                                
+                            
+                                
+                                <option selected value="ad6f17d0c66f48b7449b7b5a1ed9159ae345c8f3021dd8577e17071e">Policy happy_cohen</option>
+                                
+                            
+
+                            
+
+
+                        </select>
+
+                        <script>var netgroups = {"1a44d68b4158eeb1f4264b99c09b559716036c75fa5a6a3c49cbc52c":["14.102.164.0/22"],"1ff9b69adf1b3a4d79282351c38d0001e19de20a34eadf946d339514":["103.228.104.0/24","103.228.106.0/24","103.228.107.0/24","103.228.105.0/24"],"48a4a47df2264d11a6038c9a7577f323c5f4b53ff579d1c0dfbef522":["103.133.52.0/22"],"5927ed1279d7a992e52494b213ee3b03f09dfb1fe58521c304a6cb14":["157.85.72.0/21","157.85.72.0/23"],"773d3dcd34cb2e5c5c9f2d10c5281a95fe9896770d43517b775e08d6":["95.82.36.0/22","95.82.4.0/22","95.82.32.0/22","95.82.0.0/22"],"7d28e3758069f2b81e239aa6485d73b8e71baefc33fe373b2ca1f654":["45.248.196.0/24","218.33.72.0/22"],"8174a35c7c601a55ee7d6426e499ce93cf0daf29714d56e151711368":["95.82.32.0/21","95.82.0.0/21"],"999a95ffb24a0e84e6a18eed82fbaf1e5b7471b87d02b31cae69c563":["103.55.92.0/24"],"99efb86f0798f1c69ac65370a3b86fd57d248b44815646bef78f4ff8":["205.164.124.0/24","205.164.123.0/24","205.164.122.0/24","103.4.55.0/24","205.164.121.0/24","205.164.120.0/24","205.164.126.0/24","205.164.125.0/24","103.55.93.0/24","205.164.127.0/24"],"ad6f17d0c66f48b7449b7b5a1ed9159ae345c8f3021dd8577e17071e":["2405:e180:3000::/36","2405:e180:6000::/36","2405:e180:b000::/36","2405:e180:e000::/36","2405:e180:2000::/36","2405:e180:7000::/36","2405:e180:8000::/36","2405:e180:f000::/36","2405:e180:a000::/36","2405:e180:4000::/36","2405:e180:d000::/36","2405:e180:5000::/36","2405:e180:c000::/36","2405:e180:9000::/36"],"c1ebabde696e923a20aa04b6d670ef363907e12997c6fa73d93a2342":["2405:e180::/32"],"e522c94ff910c6c008a559bcbc5b158eff086cdf9794249a7fca31e9":["218.33.78.0/23","218.33.76.0/23","103.217.167.0/24","218.33.68.0/22","218.33.64.0/22","103.217.164.0/24","45.248.198.0/23","103.217.166.0/24","103.217.165.0/24","45.248.197.0/24"],"f635596ecc89d851a5bfadd564ebe4ffd351177f51e19f56fdaa170d":["103.55.95.0/24","218.33.64.0/20","103.55.94.0/24","103.228.104.0/22","45.248.196.0/22"]}</script>
+
+                        <div style="text-align: center;">
+                            <img id="pathimg" usemap="#world" src="">
+                            <div id="world2"></div>
+                        </div>
+
+                        <details>
+                            <summary>Chart Display Options</summary>
+                            <noscript>This requires javascript to work</noscript>
+                            <label for="graphOptionMoreWiggle" style="display: flex;align-items: center;font-size: 20px;">
+                                <input type="checkbox" id="graphOptionMoreWiggle" name="graphOptionMoreWiggle" style="width: 64px; height: 32px;">
+                                    <p id="graphOptionMoreWiggleLabel" style="width: 200%;">Display links using non straight lines</p>
+                            </label>
+                        </details>
+
+                        <h3 style="display: none;" id="PISPBanner">Prefixes in selected policy</h3>
+                        <table id="policytable" class="full-width-table">
+                        </table>
+                        <button style="width:100%;display: none;" id="ShowFullPolicyButton" class="bigButton" onclick="dropdownPoke()">Load all prefixes in policy</button>
+
+                        <script>
+                            !function(a,b){"function"==typeof define&&define.amd?define([],b):"undefined"!=typeof module&&module.exports?module.exports=b():a.ReconnectingWebSocket=b()}(this,function(){function a(b,c,d){function l(a,b){var c=document.createEvent("CustomEvent");return c.initCustomEvent(a,!1,!1,b),c}var e={debug:!1,automaticOpen:!0,reconnectInterval:1e3,maxReconnectInterval:3e4,reconnectDecay:1.5,timeoutInterval:2e3};d||(d={});for(var f in e)this[f]="undefined"!=typeof d[f]?d[f]:e[f];this.url=b,this.reconnectAttempts=0,this.readyState=WebSocket.CONNECTING,this.protocol=null;var h,g=this,i=!1,j=!1,k=document.createElement("div");k.addEventListener("open",function(a){g.onopen(a)}),k.addEventListener("close",function(a){g.onclose(a)}),k.addEventListener("connecting",function(a){g.onconnecting(a)}),k.addEventListener("message",function(a){g.onmessage(a)}),k.addEventListener("error",function(a){g.onerror(a)}),this.addEventListener=k.addEventListener.bind(k),this.removeEventListener=k.removeEventListener.bind(k),this.dispatchEvent=k.dispatchEvent.bind(k),this.open=function(b){h=new WebSocket(g.url,c||[]),b||k.dispatchEvent(l("connecting")),(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","attempt-connect",g.url);var d=h,e=setTimeout(function(){(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","connection-timeout",g.url),j=!0,d.close(),j=!1},g.timeoutInterval);h.onopen=function(){clearTimeout(e),(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","onopen",g.url),g.protocol=h.protocol,g.readyState=WebSocket.OPEN,g.reconnectAttempts=0;var d=l("open");d.isReconnect=b,b=!1,k.dispatchEvent(d)},h.onclose=function(c){if(clearTimeout(e),h=null,i)g.readyState=WebSocket.CLOSED,k.dispatchEvent(l("close"));else{g.readyState=WebSocket.CONNECTING;var d=l("connecting");d.code=c.code,d.reason=c.reason,d.wasClean=c.wasClean,k.dispatchEvent(d),b||j||((g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","onclose",g.url),k.dispatchEvent(l("close")));var e=g.reconnectInterval*Math.pow(g.reconnectDecay,g.reconnectAttempts);setTimeout(function(){g.reconnectAttempts++,g.open(!0)},e>g.maxReconnectInterval?g.maxReconnectInterval:e)}},h.onmessage=function(b){(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","onmessage",g.url,b.data);var c=l("message");c.data=b.data,k.dispatchEvent(c)},h.onerror=function(b){(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","onerror",g.url,b),k.dispatchEvent(l("error"))}},1==this.automaticOpen&&this.open(!1),this.send=function(b){if(h)return(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","send",g.url,b),h.send(b);throw"INVALID_STATE_ERR : Pausing to reconnect websocket"},this.close=function(a,b){"undefined"==typeof a&&(a=1e3),i=!0,h&&h.close(a,b)},this.refresh=function(){h&&h.close()}}return a.prototype.onopen=function(){},a.prototype.onclose=function(){},a.prototype.onconnecting=function(){},a.prototype.onmessage=function(){},a.prototype.onerror=function(){},a.debugAll=!1,a.CONNECTING=WebSocket.CONNECTING,a.OPEN=WebSocket.OPEN,a.CLOSING=WebSocket.CLOSING,a.CLOSED=WebSocket.CLOSED,a});
+                        </script>
+                        
+                        <script>
+                            var prefixinfo = [{"PrefixString":"14.102.164.0/24","WhoisName":"Kinetix Networks","WhoisCountry":"AU"},{"PrefixString":"14.102.164.0/22","WhoisName":"Professional Data Kinetics Pty Ltd","WhoisCountry":"AU"},{"PrefixString":"14.102.165.0/24","WhoisName":"Kinetix Networks","WhoisCountry":"AU"},{"PrefixString":"14.102.166.0/24","WhoisName":"Kinetix Networks","WhoisCountry":"AU"},{"PrefixString":"14.102.167.0/24","WhoisName":"Kinetix Networks","WhoisCountry":"AU"},{"PrefixString":"45.248.196.0/24","WhoisName":"Kinetix Networks","WhoisCountry":"AU"},{"PrefixString":"45.248.196.0/22","WhoisName":"Professional Data Kinetics Pty Ltd","WhoisCountry":"AU"},{"PrefixString":"45.248.197.0/24","WhoisName":"Kinetix Networks","WhoisCountry":"AU"},{"PrefixString":"45.248.198.0/23","WhoisName":"Kinetix Networks","WhoisCountry":"AU"},{"PrefixString":"95.82.0.0/21","WhoisName":"Kinetix Networks","WhoisCountry":"AU"},{"PrefixString":"95.82.0.0/22","WhoisName":"Kinetix Networks","WhoisCountry":"AU"},{"PrefixString":"95.82.4.0/22","WhoisName":"Kinetix Networks","WhoisCountry":"AU"},{"PrefixString":"95.82.32.0/22","WhoisName":"Kinetix Networks","WhoisCountry":"AU"},{"PrefixString":"95.82.32.0/21","WhoisName":"Kinetix Networks","WhoisCountry":"AU"},{"PrefixString":"95.82.36.0/22","WhoisName":"Kinetix Networks","WhoisCountry":"AU"},{"PrefixString":"103.4.55.0/24","WhoisName":"Professional Data Kinetics Pty Ltd","WhoisCountry":"AU"},{"PrefixString":"103.55.92.0/24","WhoisName":"Kinetix Networks","WhoisCountry":"AU"},{"PrefixString":"103.55.93.0/24","WhoisName":"Kinetix Networks","WhoisCountry":"AU"},{"PrefixString":"103.55.94.0/24","WhoisName":"Kinetix Networks","WhoisCountry":"AU"},{"PrefixString":"103.55.95.0/24","WhoisName":"Kinetix Networks","WhoisCountry":"AU"},{"PrefixString":"103.133.52.0/24","WhoisName":"Kinetix Networks","WhoisCountry":"AU"},{"PrefixString":"103.133.52.0/22","WhoisName":"Professional Data Kinetics Pty Ltd","WhoisCountry":"AU"},{"PrefixString":"103.133.53.0/24","WhoisName":"Kinetix Networks","WhoisCountry":"AU"},{"PrefixString":"103.133.54.0/24","WhoisName":"Kinetix Networks","WhoisCountry":"AU"},{"PrefixString":"103.133.55.0/24","WhoisName":"Kinetix Networks","WhoisCountry":"AU"},{"PrefixString":"103.217.164.0/24","WhoisName":"Kinetix Networks","WhoisCountry":"AU"},{"PrefixString":"103.217.165.0/24","WhoisName":"Kinetix Networks","WhoisCountry":"AU"},{"PrefixString":"103.217.166.0/24","WhoisName":"Kinetix Networks","WhoisCountry":"AU"},{"PrefixString":"103.217.167.0/24","WhoisName":"Kinetix Networks","WhoisCountry":"AU"},{"PrefixString":"103.228.104.0/24","WhoisName":"Kinetix Networks","WhoisCountry":"AU"},{"PrefixString":"103.228.104.0/22","WhoisName":"Professional Data Kinetics Pty Ltd","WhoisCountry":"AU"},{"PrefixString":"103.228.105.0/24","WhoisName":"Kinetix Networks","WhoisCountry":"AU"},{"PrefixString":"103.228.106.0/24","WhoisName":"Kinetix Networks","WhoisCountry":"AU"},{"PrefixString":"103.228.107.0/24","WhoisName":"Kinetix Networks","WhoisCountry":"AU"},{"PrefixString":"157.85.72.0/21","WhoisName":"Professional Data Kinetics Pty Ltd","WhoisCountry":"AU"},{"PrefixString":"157.85.72.0/23","WhoisName":"The University of Newcastle","WhoisCountry":"AU"},{"PrefixString":"205.164.120.0/24","WhoisName":"Kinetix Networks","WhoisCountry":"AU"},{"PrefixString":"205.164.121.0/24","WhoisName":"Kinetix Networks","WhoisCountry":"AU"},{"PrefixString":"205.164.122.0/24","WhoisName":"Kinetix Networks","WhoisCountry":"AU"},{"PrefixString":"205.164.123.0/24","WhoisName":"Kinetix Networks","WhoisCountry":"AU"},{"PrefixString":"205.164.124.0/24","WhoisName":"Kinetix Networks","WhoisCountry":"AU"},{"PrefixString":"205.164.125.0/24","WhoisName":"Kinetix Networks","WhoisCountry":"AU"},{"PrefixString":"205.164.126.0/24","WhoisName":"Kinetix Networks","WhoisCountry":"AU"},{"PrefixString":"205.164.127.0/24","WhoisName":"Kinetix Networks","WhoisCountry":"AU"},{"PrefixString":"218.33.64.0/22","WhoisName":"Kinetix-Networks","WhoisCountry":"AU"},{"PrefixString":"218.33.64.0/20","WhoisName":"Kinetix-Networks","WhoisCountry":"AU"},{"PrefixString":"218.33.68.0/22","WhoisName":"Kinetix-Networks","WhoisCountry":"AU"},{"PrefixString":"218.33.72.0/22","WhoisName":"Kinetix-Networks","WhoisCountry":"AU"},{"PrefixString":"218.33.76.0/23","WhoisName":"Kinetix-Networks","WhoisCountry":"AU"},{"PrefixString":"218.33.78.0/23","WhoisName":"Kinetix-Networks","WhoisCountry":"AU"},{"PrefixString":"2405:e180::/32","WhoisName":"Professional Data Kinetics Pty Ltd","WhoisCountry":"AU"},{"PrefixString":"2405:e180:2000::/36","WhoisName":"Kinetix Networks","WhoisCountry":"AU"},{"PrefixString":"2405:e180:3000::/36","WhoisName":"Kinetix Networks","WhoisCountry":"AU"},{"PrefixString":"2405:e180:4000::/36","WhoisName":"Kinetix Networks","WhoisCountry":"AU"},{"PrefixString":"2405:e180:5000::/36","WhoisName":"Kinetix Networks","WhoisCountry":"AU"},{"PrefixString":"2405:e180:6000::/36","WhoisName":"Kinetix Networks","WhoisCountry":"AU"},{"PrefixString":"2405:e180:7000::/36","WhoisName":"Kinetix Networks","WhoisCountry":"AU"},{"PrefixString":"2405:e180:8000::/36","WhoisName":"Kinetix Networks","WhoisCountry":"AU"},{"PrefixString":"2405:e180:9000::/36","WhoisName":"Kinetix Networks","WhoisCountry":"AU"},{"PrefixString":"2405:e180:a000::/36","WhoisName":"Kinetix Networks","WhoisCountry":"AU"},{"PrefixString":"2405:e180:b000::/36","WhoisName":"Kinetix Networks","WhoisCountry":"AU"},{"PrefixString":"2405:e180:c000::/36","WhoisName":"Kinetix Networks","WhoisCountry":"AU"},{"PrefixString":"2405:e180:d000::/36","WhoisName":"Kinetix Networks","WhoisCountry":"AU"},{"PrefixString":"2405:e180:e000::/36","WhoisName":"Kinetix Networks","WhoisCountry":"AU"},{"PrefixString":"2405:e180:f000::/36","WhoisName":"Kinetix Networks","WhoisCountry":"AU"}]
+                            var asn =  134143 
+
+                            var pfxExtraString = "";
+
+                            function saveGraphOptionsToLocalStorage() {
+                                localStorage.setItem("pfx-chart-options:wiggle", document.getElementById("graphOptionMoreWiggle").checked);
+                            }
+
+                            function loadGraphOptionsToLocalStorage() {
+                                document.getElementById("graphOptionMoreWiggle").checked = localStorage.getItem("pfx-chart-options:wiggle") == "true";
+                                pfxExtraString= "";
+                                if (document.getElementById("graphOptionMoreWiggle").checked) {
+                                    pfxExtraString = pfxExtraString + "&wiggly";
+                                }
+                            }
+                            loadGraphOptionsToLocalStorage();
+
+                            function graphOptionsChanged() {
+                                saveGraphOptionsToLocalStorage();
+                                handleImageChange();
+                            }
+                            document.getElementById("graphOptionMoreWiggle").addEventListener("click", graphOptionsChanged)
+
+
+                            function handleImageChange() {
+                                loadGraphOptionsToLocalStorage();
+                                
+                                document.getElementById("pathimg").src=("/pathimg/"+asn+ "-" + document.getElementById("netpolicydropdown").value +"?"+pfxExtraString);
+                                var request = new XMLHttpRequest();
+                                request.open('GET', "/pathimg/"+asn+ "-" + document.getElementById("netpolicydropdown").value + "?map=true" + pfxExtraString, true);
+
+                                request.onload = function() {
+                                    if (this.status >= 200 && this.status < 400) {
+                                        
+                                        
+                                        document.getElementById("world2").innerHTML = this.response;
+                                        setTimeout(function(){
+                                            imageMapResize('#world');
+                                        },1000)
+                                    }
+                                };
+                                request.send();
+                                buildPrefixTable();
+                            } 
+
+                            function encodeHTML(s) {
+                                return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
+                            }
+
+                            function dropdownPoke(){
+                                InteractedWithPolicyTableYet=true;
+                                handleImageChange();
+                            }
+
+                            var InteractedWithPolicyTableYet = false;
+                            var OverloadPolicySize = 0;
+                            function buildPrefixTable() {
+                                var policy = document.getElementById("netpolicydropdown").value;
+                                
+                                var cidrs = netgroups[policy];
+                                var ihtml = "<tbody> <tr> <th class=\"nowrap\">  -  </th> <th>Prefix</th> <th class=\"nowrap\">Description</th> </tr>";
+
+                                
+                                var aaa = document.querySelectorAll('#PISPBanner');
+                                var bbb = document.querySelectorAll('#policytable');
+                                var n = 0
+                                if (cidrs) {
+                                    aaa[0].style.display = "";
+                                    bbb[0].style.display = "";
+                                    cidrs.forEach(cidr => {
+                                        var obj = {};
+                                        var dont =false;
+                                        n++;
+                                        
+                                        if (!InteractedWithPolicyTableYet) {
+                                            if (n == 5) {
+                                                dont = true;
+                                            } else if (n > 5) {
+                                                dont = true;
+                                            }
+                                        }
+                                        
+                                        if (!dont) {
+                                            prefixinfo.forEach(el => {
+                                                if(el.PrefixString == cidr) {
+                                                    
+                                                        ihtml += "<tr><td class=\"nowrap ns\"><img class=\"flag-img\" src=\"/assets/flags/"+el.WhoisCountry+".png\" title=\""+el.WhoisCountry+"\"></td>"
+                                                        ihtml += "<td><a href=\"/prefix/"+el.PrefixString+"\">"+el.PrefixString+"</a></td>"
+                                                        ihtml += "<td class=\"nowrap\">"+encodeHTML(el.WhoisName)+"</td></tr>"
+                                                }
+                                            });
+                                        } else {
+                                            OverloadPolicySize++;
+                                        }
+                                    });
+                                    document.getElementById("policytable").innerHTML = ihtml
+                                    var PolButton = document.querySelectorAll('#ShowFullPolicyButton');
+                                    if (!InteractedWithPolicyTableYet && OverloadPolicySize!=0) {
+                                        PolButton[0].style="width:100%";
+                                        PolButton[0].innerHTML = "Load all "+OverloadPolicySize+" prefixes in policy"
+                                    } else {
+                                        PolButton[0].style="display:none;";
+                                    }
+                                    
+                                } else {
+                                    aaa[0].style.display = "none";
+                                    bbb[0].style.display = "none";
+                                }
+                            }
+
+
+                            var pathdropdown = document.querySelectorAll('#netpolicydropdown');
+                            pathdropdown[0].addEventListener("change",dropdownPoke)
+                            handleImageChange()
+                            buildPrefixTable()
+
+                            document.addEventListener("load", function(){
+                                
+                                handleImageChange()
+                            });
+
+                            function uuidv4() {
+                                return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+                                    var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+                                    return v.toString(16);
+                                });
+                            }
+
+                            
+                            let realTimeSocket = new ReconnectingWebSocket("wss://bgp.tools/ws/rt-asn?prefix=AS134143" + "&magic=" + encodeURIComponent("RNKFBEDJALTIMZSSXNO2NMMTNI76IBW6RJ4SG32SALAUAERBDKEQ===="));
+                            
+                            realTimeSocket.onmessage = function(event) {
+                                console.log(`[message] Data received from server: ${event.data}`);
+                                if (event.data == "Running.") {
+                                    document.getElementById("ws-status").src = "/assets/connected.png";
+                                    document.getElementById("ws-status").title = "Connected to realtime data";
+                                } else if (event.data == "STOP-CONNECTING") {
+                                    document.getElementById("ws-status").src = disconectedIcon;
+                                    document.getElementById("ws-status").title = "Not connected to realtime data";
+                                    realTimeSocket.maxReconnectAttempts = 1;
+                                    realTimeSocket.close()
+                                } else {
+                                    var obj = JSON.parse(event.data);
+                                    var elm = document.getElementById("pfx-"+obj.Prefix);
+                                    if (!elm && obj.Vis > 6) {
+                                        var tblist = document.getElementById("donotscrapebgptools-prefixlist-tbody");
+                                        var node = document.createElement("tr");                 
+                                        node.outerHTML = '<tr id="pfx-'+obj.Prefix+'"><td class="nowrap"><img class="flag-img" src="/assets/flags/'+obj.Whois.WhoisCountry+'.png" title="'+obj.Whois.WhoisCountry+'"></td><td><a href="/prefix/'+obj.Prefix+'">'+obj.Prefix+'</a></td><td class="smallonmobile nowrap">'+obj.Whois.WhoisName+'</td></tr>';
+                                        tblist.appendChild(node);                              
+                                    }
+                                    if (!elm) {
+                                        elm = document.getElementById("pfx-"+obj.Prefix);
+                                    }
+                                    
+                                    if (obj.Vis > 70) {
+                                        if (elm.style) {
+                                            var es = elm.style;
+                                            if (es.animation.includes("pulse1b")) {
+                                                elm.style = "animation: pulse2b 1s 1;";
+                                            } else if (es.animation.includes("pulse2b")) {
+                                                elm.style = "animation: pulse1b 1s 1;";
+                                            } else {
+                                                elm.style = "animation: pulse1b 1s 1;";
+                                            }
+                                        }
+                                    } else if (obj.Vis < 5) {
+                                        
+                                        var elm = document.getElementById("pfx-"+obj.Prefix);
+                                        if (elm) {
+                                            elm.parentNode.removeChild(elm);
+                                        }
+                                    } else {
+                                        if (elm.style) {
+                                            var es = elm.style;
+                                            if (es.animation.includes("pulse1r")) {
+                                                elm.style = "animation: pulse2r 1s 1;";
+                                            } else if (es.animation.includes("pulse2r")) {
+                                                elm.style = "animation: pulse1r 1s 1;";
+                                            } else {
+                                                elm.style = "animation: pulse1r 1s 1;";
+                                            }
+                                        }
+                                    }
+                                }
+                            };
+                            var disconectedIcon = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAAZlBMVEX/ewBZWVn/ewf/ew5fWljudiP8egp6XVT6eRHodSmVYU6hZEzObjrldCv3eRZ/XlNjWliHX1KrZkngci71eBl1XFXCa0CKYFHydx18XlSQYE+lZUq0aEbJbT3SbzhvXFaLYFG8akLYdYVFAAABQElEQVRIx5XV25KDIAwGYIKASLutqOtZ277/S26xK4ozJea/qRdfajATZaRkd6B6oPoL1d9QphUn+WvXmGF8TfN8yvNrDj6nvNj5Hu8n8HCh9ONiON5PEKuQx55DmFTHC1R9uMOjYkhFERbkEikofw8FGe5t0FWJ+kLvz5H+t8RdGD9k8TeebBXpzwIZT955XyVBtHHeXYzeJy5fhydtoZffZvUMSfvxT4BOeI/G/b9paxH1at8XQF8xNcV8aaQvHQBMhY/XttsdYp5nah3XdvIqui61Cjy+jqLwXp1cx9XLQZ5cR/vx1p8cez2IWrlxYY/T9bNVyCfmdQdbxNgs441FNRAEHS83oe9ahmTw1p88nhHCiAkpeIUeX5eJ6NlM9Gwm+uxO9/3F2PSR597jn1+udCWzUp7150P1jOoZ1f8BGPARG85JosIAAAAASUVORK5CYII=";
+                            realTimeSocket.onerror = function(error) {
+                                document.getElementById("ws-status").src = disconectedIcon;
+                                document.getElementById("ws-status").title = "Not connected to realtime data";
+
+                                console.log(`[error] ${error.message}`);
+                            };
+                            realTimeSocket.onclose = function(error) {
+                                document.getElementById("ws-status").src = disconectedIcon;
+                                document.getElementById("ws-status").title = "Not connected to realtime data";
+
+                                console.log(`[error] ${error.message}`);
+                            };
+                        </script>
+
+<div class="superclearfix">
+    
+</div>
+
+                        <hr>
+                        <a style="font-size: small;" href="/kb/what-is-a-upstream">How are upstreams and downstreams calculated?</a>
+                        <h3 id="upstreams">Upstreams<img class="flag-img" src="/assets/lightning.png" style="padding-left: 12px;" title="This information was fetched live at page load time" alt="This information was fetched live at page load time"/></h3>
+
+
+                        <table id="donotscrapebgptools-upstreamTable" class="full-width-table">
+                            <thead class="sortable">
+                                <tr>
+                                    <th class="nowrap boldpls">  &nbsp;  </th>
+                                    <th data-sort-method='number' class="boldpls">ASN</th>
+                                    <th class="nowrap boldpls">Description</th>
+                                    <th class="nowrap boldpls">IPv4</th>
+                                    <th class="nowrap boldpls">IPv6</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                <tr>
+                                    <td data-sort='AU' class="nowrap ns"><img class="flag-img" src="/assets/flags/AU.png" title="AU">
+                                        
+                                        </td>
+                                    <td data-sort='38195'><a href="/as/38195">AS38195</a></td>
+                                    <td class="smallonmobile nowrap">Superloop</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='AU' class="nowrap ns"><img class="flag-img" src="/assets/flags/AU.png" title="AU">
+                                        
+                                        </td>
+                                    <td data-sort='137409'><a href="/as/137409">AS137409</a></td>
+                                    <td class="smallonmobile nowrap">GSL Networks Pty LTD</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='AU' class="nowrap ns"><img class="flag-img" src="/assets/flags/AU.png" title="AU">
+                                        
+                                        </td>
+                                    <td data-sort='63956'><a href="/as/63956">AS63956</a></td>
+                                    <td class="smallonmobile nowrap">5G NETWORK OPERATIONS PTY LTD</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='AU' class="nowrap ns"><img class="flag-img" src="/assets/flags/AU.png" title="AU">
+                                        
+                                        </td>
+                                    <td data-sort='9652'><a href="/as/9652">AS9652</a></td>
+                                    <td class="smallonmobile nowrap">ECN Internet</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+
+                        <hr>
+                        <h3 id="peers">Peers<img class="flag-img" src="/assets/lightning.png" style="padding-left: 12px;" title="This information was fetched live at page load time" alt="This information was fetched live at page load time"/></h3>
+
+
+
+                        <table id="donotscrapebgptools-upstreamTablePeers" class="full-width-table">
+                            <thead class="sortable">
+                                <tr>
+                                    <th class="nowrap boldpls">  &nbsp;  </th>
+                                    <th data-sort-method='number' class="boldpls">ASN</th>
+                                    <th class="nowrap boldpls">Description</th>
+                                    <th class="nowrap boldpls">IPv4</th>
+                                    <th class="nowrap boldpls">IPv6</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                <tr>
+                                    <td data-sort='AU' class="nowrap ns"><img class="flag-img" src="/assets/flags/AU.png" title="AU"></td>
+                                    <td data-sort='137409'><a href="/as/137409">AS137409</a></td>
+                                    <td class="smallonmobile nowrap">GSL Networks Pty LTD</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='AU' class="nowrap ns"><img class="flag-img" src="/assets/flags/AU.png" title="AU"></td>
+                                    <td data-sort='38195'><a href="/as/38195">AS38195</a></td>
+                                    <td class="smallonmobile nowrap">Superloop</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='6939'><a href="/as/6939">AS6939</a></td>
+                                    <td class="smallonmobile nowrap">Hurricane Electric LLC</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='AU' class="nowrap ns"><img class="flag-img" src="/assets/flags/AU.png" title="AU"></td>
+                                    <td data-sort='63956'><a href="/as/63956">AS63956</a></td>
+                                    <td class="smallonmobile nowrap">5G NETWORK OPERATIONS PTY LTD</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='AU' class="nowrap ns"><img class="flag-img" src="/assets/flags/AU.png" title="AU"></td>
+                                    <td data-sort='63842'><a href="/as/63842">AS63842</a></td>
+                                    <td class="smallonmobile nowrap">Fantel Pty Ltd</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='AU' class="nowrap ns"><img class="flag-img" src="/assets/flags/AU.png" title="AU"></td>
+                                    <td data-sort='131316'><a href="/as/131316">AS131316</a></td>
+                                    <td class="smallonmobile nowrap">Slnet Hosting</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='AU' class="nowrap ns"><img class="flag-img" src="/assets/flags/AU.png" title="AU"></td>
+                                    <td data-sort='139592'><a href="/as/139592">AS139592</a></td>
+                                    <td class="smallonmobile nowrap">Breeze Connect Pty Ltd</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='AU' class="nowrap ns"><img class="flag-img" src="/assets/flags/AU.png" title="AU"></td>
+                                    <td data-sort='154127'><a href="/as/154127">AS154127</a></td>
+                                    <td class="smallonmobile nowrap">RIFATEL PTY LTD</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='AU' class="nowrap ns"><img class="flag-img" src="/assets/flags/AU.png" title="AU"></td>
+                                    <td data-sort='142588'><a href="/as/142588">AS142588</a></td>
+                                    <td class="smallonmobile nowrap">Sharon AI</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='AU' class="nowrap ns"><img class="flag-img" src="/assets/flags/AU.png" title="AU"></td>
+                                    <td data-sort='153748'><a href="/as/153748">AS153748</a></td>
+                                    <td class="smallonmobile nowrap">Function4</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='AU' class="nowrap ns"><img class="flag-img" src="/assets/flags/AU.png" title="AU"></td>
+                                    <td data-sort='138700'><a href="/as/138700">AS138700</a></td>
+                                    <td class="smallonmobile nowrap">Plutus Investments Australia Pty Ltd</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='AU' class="nowrap ns"><img class="flag-img" src="/assets/flags/AU.png" title="AU"></td>
+                                    <td data-sort='152604'><a href="/as/152604">AS152604</a></td>
+                                    <td class="smallonmobile nowrap">En-Linc Pty Ltd</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='AU' class="nowrap ns"><img class="flag-img" src="/assets/flags/AU.png" title="AU"></td>
+                                    <td data-sort='152097'><a href="/as/152097">AS152097</a></td>
+                                    <td class="smallonmobile nowrap">Centrefit Group Pty Ltd</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='AU' class="nowrap ns"><img class="flag-img" src="/assets/flags/AU.png" title="AU"></td>
+                                    <td data-sort='138214'><a href="/as/138214">AS138214</a></td>
+                                    <td class="smallonmobile nowrap">RAMPANT TECHNOLOGY PTY. LTD.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='AU' class="nowrap ns"><img class="flag-img" src="/assets/flags/AU.png" title="AU"></td>
+                                    <td data-sort='153042'><a href="/as/153042">AS153042</a></td>
+                                    <td class="smallonmobile nowrap">Binary Evolution</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='AU' class="nowrap ns"><img class="flag-img" src="/assets/flags/AU.png" title="AU"></td>
+                                    <td data-sort='24322'><a href="/as/24322">AS24322</a></td>
+                                    <td class="smallonmobile nowrap">Infininet Global Pty Ltd</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='NZ' class="nowrap ns"><img class="flag-img" src="/assets/flags/NZ.png" title="NZ"></td>
+                                    <td data-sort='64073'><a href="/as/64073">AS64073</a></td>
+                                    <td class="smallonmobile nowrap">Vetta Online Ltd</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='2635'><a href="/as/2635">AS2635</a></td>
+                                    <td class="smallonmobile nowrap">Automattic, Inc</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='AU' class="nowrap ns"><img class="flag-img" src="/assets/flags/AU.png" title="AU"></td>
+                                    <td data-sort='138637'><a href="/as/138637">AS138637</a></td>
+                                    <td class="smallonmobile nowrap">VOCPHONE PTY LTD</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='AU' class="nowrap ns"><img class="flag-img" src="/assets/flags/AU.png" title="AU"></td>
+                                    <td data-sort='4764'><a href="/as/4764">AS4764</a></td>
+                                    <td class="smallonmobile nowrap">Aussie Broadband</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='AU' class="nowrap ns"><img class="flag-img" src="/assets/flags/AU.png" title="AU"></td>
+                                    <td data-sort='139077'><a href="/as/139077">AS139077</a></td>
+                                    <td class="smallonmobile nowrap">FREEDOM INTERNET HOLDINGS PTY LTD</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='13335'><a href="/as/13335">AS13335</a></td>
+                                    <td class="smallonmobile nowrap">Cloudflare, Inc.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='396998'><a href="/as/396998">AS396998</a></td>
+                                    <td class="smallonmobile nowrap">Path Network, Inc.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='AU' class="nowrap ns"><img class="flag-img" src="/assets/flags/AU.png" title="AU"></td>
+                                    <td data-sort='136557'><a href="/as/136557">AS136557</a></td>
+                                    <td class="smallonmobile nowrap">Host Universal Pty Ltd</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='FR' class="nowrap ns"><img class="flag-img" src="/assets/flags/FR.png" title="FR"></td>
+                                    <td data-sort='35280'><a href="/as/35280">AS35280</a></td>
+                                    <td class="smallonmobile nowrap">F5 Networks SARL</td>
+                                    <td class="nowrap">&#10008;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='20473'><a href="/as/20473">AS20473</a></td>
+                                    <td class="smallonmobile nowrap">The Constant Company, LLC</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='AU' class="nowrap ns"><img class="flag-img" src="/assets/flags/AU.png" title="AU"></td>
+                                    <td data-sort='17635'><a href="/as/17635">AS17635</a></td>
+                                    <td class="smallonmobile nowrap">GoldNet Pty Ltd</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='AU' class="nowrap ns"><img class="flag-img" src="/assets/flags/AU.png" title="AU"></td>
+                                    <td data-sort='7575'><a href="/as/7575">AS7575</a></td>
+                                    <td class="smallonmobile nowrap">Australian Academic and Research Network (AARNet)</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='AU' class="nowrap ns"><img class="flag-img" src="/assets/flags/AU.png" title="AU"></td>
+                                    <td data-sort='140627'><a href="/as/140627">AS140627</a></td>
+                                    <td class="smallonmobile nowrap">OneQode</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='SG' class="nowrap ns"><img class="flag-img" src="/assets/flags/SG.png" title="SG"></td>
+                                    <td data-sort='24482'><a href="/as/24482">AS24482</a></td>
+                                    <td class="smallonmobile nowrap">SG.GS</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='AU' class="nowrap ns"><img class="flag-img" src="/assets/flags/AU.png" title="AU"></td>
+                                    <td data-sort='153346'><a href="/as/153346">AS153346</a></td>
+                                    <td class="smallonmobile nowrap">HawkNet Labs Pty Ltd</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CH' class="nowrap ns"><img class="flag-img" src="/assets/flags/CH.png" title="CH"></td>
+                                    <td data-sort='34927'><a href="/as/34927">AS34927</a></td>
+                                    <td class="smallonmobile nowrap">iFog GmbH</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='AU' class="nowrap ns"><img class="flag-img" src="/assets/flags/AU.png" title="AU"></td>
+                                    <td data-sort='153836'><a href="/as/153836">AS153836</a></td>
+                                    <td class="smallonmobile nowrap">Solitary Technology</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='32590'><a href="/as/32590">AS32590</a></td>
+                                    <td class="smallonmobile nowrap">Valve Corporation</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='NL' class="nowrap ns"><img class="flag-img" src="/assets/flags/NL.png" title="NL"></td>
+                                    <td data-sort='49544'><a href="/as/49544">AS49544</a></td>
+                                    <td class="smallonmobile nowrap">i3D.net B.V</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='AU' class="nowrap ns"><img class="flag-img" src="/assets/flags/AU.png" title="AU"></td>
+                                    <td data-sort='8888'><a href="/as/8888">AS8888</a></td>
+                                    <td class="smallonmobile nowrap">xTom Pty Ltd</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='36236'><a href="/as/36236">AS36236</a></td>
+                                    <td class="smallonmobile nowrap">NetActuate, Inc</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='15169'><a href="/as/15169">AS15169</a></td>
+                                    <td class="smallonmobile nowrap">Google LLC</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='AU' class="nowrap ns"><img class="flag-img" src="/assets/flags/AU.png" title="AU"></td>
+                                    <td data-sort='139288'><a href="/as/139288">AS139288</a></td>
+                                    <td class="smallonmobile nowrap">Twish Tech</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='AU' class="nowrap ns"><img class="flag-img" src="/assets/flags/AU.png" title="AU"></td>
+                                    <td data-sort='132847'><a href="/as/132847">AS132847</a></td>
+                                    <td class="smallonmobile nowrap">Network Solutions Group Pty Ltd</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='AU' class="nowrap ns"><img class="flag-img" src="/assets/flags/AU.png" title="AU"></td>
+                                    <td data-sort='135027'><a href="/as/135027">AS135027</a></td>
+                                    <td class="smallonmobile nowrap">Virtualplatform Pty Ltd</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='NZ' class="nowrap ns"><img class="flag-img" src="/assets/flags/NZ.png" title="NZ"></td>
+                                    <td data-sort='152909'><a href="/as/152909">AS152909</a></td>
+                                    <td class="smallonmobile nowrap">SaferCities</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='398465'><a href="/as/398465">AS398465</a></td>
+                                    <td class="smallonmobile nowrap">Rackdog LLC</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='AU' class="nowrap ns"><img class="flag-img" src="/assets/flags/AU.png" title="AU"></td>
+                                    <td data-sort='9652'><a href="/as/9652">AS9652</a></td>
+                                    <td class="smallonmobile nowrap">ECN Internet</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='SG' class="nowrap ns"><img class="flag-img" src="/assets/flags/SG.png" title="SG"></td>
+                                    <td data-sort='137182'><a href="/as/137182">AS137182</a></td>
+                                    <td class="smallonmobile nowrap">Blue Wireless PTE LTD</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='AU' class="nowrap ns"><img class="flag-img" src="/assets/flags/AU.png" title="AU"></td>
+                                    <td data-sort='4826'><a href="/as/4826">AS4826</a></td>
+                                    <td class="smallonmobile nowrap">Vocus Connect International Backbone</td>
+                                    <td class="nowrap">&#10008;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='NZ' class="nowrap ns"><img class="flag-img" src="/assets/flags/NZ.png" title="NZ"></td>
+                                    <td data-sort='55785'><a href="/as/55785">AS55785</a></td>
+                                    <td class="smallonmobile nowrap">ISP Limited</td>
+                                    <td class="nowrap">&#10008;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='AU' class="nowrap ns"><img class="flag-img" src="/assets/flags/AU.png" title="AU"></td>
+                                    <td data-sort='38561'><a href="/as/38561">AS38561</a></td>
+                                    <td class="smallonmobile nowrap">NTT Australia Solutions Pty Ltd</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='NZ' class="nowrap ns"><img class="flag-img" src="/assets/flags/NZ.png" title="NZ"></td>
+                                    <td data-sort='55850'><a href="/as/55850">AS55850</a></td>
+                                    <td class="smallonmobile nowrap">Mercury NZ Limited</td>
+                                    <td class="nowrap">&#10008;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='AU' class="nowrap ns"><img class="flag-img" src="/assets/flags/AU.png" title="AU"></td>
+                                    <td data-sort='9507'><a href="/as/9507">AS9507</a></td>
+                                    <td class="smallonmobile nowrap">NextHop Pty Ltd</td>
+                                    <td class="nowrap">&#10008;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+
+
+
+                        <hr>
+                        <h3 id="downstreams">Downstreams<img class="flag-img" src="/assets/lightning.png" style="padding-left: 12px;" title="This information was fetched live at page load time" alt="This information was fetched live at page load time"/></h3>
+                        <table id="donotscrapebgptools-upstreamTableDowns" class="full-width-table">
+                            <thead class="sortable">
+                                
+                                <tr>
+                                    <th class="nowrap boldpls">  &nbsp;  </th>
+                                    <th data-sort-method='number'  class="boldpls">ASN</th>
+                                    <th class="nowrap boldpls">Description</th>
+                                    <th class="nowrap boldpls">IPv4</th>
+                                    <th class="nowrap boldpls">IPv6</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                <tr>
+                                    <td data-sort='AU' class="nowrap ns"><img class="flag-img" src="/assets/flags/AU.png" title="AU">
+                                        
+                                        </td>
+                                    <td data-sort='63842'><a href="/as/63842">AS63842</a></td>
+                                    <td class="smallonmobile nowrap">Fantel Pty Ltd</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='AU' class="nowrap ns"><img class="flag-img" src="/assets/flags/AU.png" title="AU">
+                                        
+                                        </td>
+                                    <td data-sort='131316'><a href="/as/131316">AS131316</a></td>
+                                    <td class="smallonmobile nowrap">Slnet Hosting</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='AU' class="nowrap ns"><img class="flag-img" src="/assets/flags/AU.png" title="AU">
+                                        
+                                        </td>
+                                    <td data-sort='139592'><a href="/as/139592">AS139592</a></td>
+                                    <td class="smallonmobile nowrap">Breeze Connect Pty Ltd</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='AU' class="nowrap ns"><img class="flag-img" src="/assets/flags/AU.png" title="AU">
+                                        
+                                        </td>
+                                    <td data-sort='154127'><a href="/as/154127">AS154127</a></td>
+                                    <td class="smallonmobile nowrap">RIFATEL PTY LTD</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='AU' class="nowrap ns"><img class="flag-img" src="/assets/flags/AU.png" title="AU">
+                                        
+                                        </td>
+                                    <td data-sort='142588'><a href="/as/142588">AS142588</a></td>
+                                    <td class="smallonmobile nowrap">Sharon AI</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='AU' class="nowrap ns"><img class="flag-img" src="/assets/flags/AU.png" title="AU">
+                                        
+                                        </td>
+                                    <td data-sort='152097'><a href="/as/152097">AS152097</a></td>
+                                    <td class="smallonmobile nowrap">Centrefit Group Pty Ltd</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='AU' class="nowrap ns"><img class="flag-img" src="/assets/flags/AU.png" title="AU">
+                                        
+                                        </td>
+                                    <td data-sort='152604'><a href="/as/152604">AS152604</a></td>
+                                    <td class="smallonmobile nowrap">En-Linc Pty Ltd</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='AU' class="nowrap ns"><img class="flag-img" src="/assets/flags/AU.png" title="AU">
+                                        
+                                        </td>
+                                    <td data-sort='153748'><a href="/as/153748">AS153748</a></td>
+                                    <td class="smallonmobile nowrap">Function4</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='AU' class="nowrap ns"><img class="flag-img" src="/assets/flags/AU.png" title="AU">
+                                        
+                                        </td>
+                                    <td data-sort='138214'><a href="/as/138214">AS138214</a></td>
+                                    <td class="smallonmobile nowrap">RAMPANT TECHNOLOGY PTY. LTD.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='AU' class="nowrap ns"><img class="flag-img" src="/assets/flags/AU.png" title="AU">
+                                        
+                                        </td>
+                                    <td data-sort='138700'><a href="/as/138700">AS138700</a></td>
+                                    <td class="smallonmobile nowrap">Plutus Investments Australia Pty Ltd</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='AU' class="nowrap ns"><img class="flag-img" src="/assets/flags/AU.png" title="AU">
+                                        
+                                        </td>
+                                    <td data-sort='153042'><a href="/as/153042">AS153042</a></td>
+                                    <td class="smallonmobile nowrap">Binary Evolution</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='AU' class="nowrap ns"><img class="flag-img" src="/assets/flags/AU.png" title="AU">
+                                        
+                                        </td>
+                                    <td data-sort='24322'><a href="/as/24322">AS24322</a></td>
+                                    <td class="smallonmobile nowrap">Infininet Global Pty Ltd</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='AU' class="nowrap ns"><img class="flag-img" src="/assets/flags/AU.png" title="AU">
+                                        
+                                        </td>
+                                    <td data-sort='138637'><a href="/as/138637">AS138637</a></td>
+                                    <td class="smallonmobile nowrap">VOCPHONE PTY LTD</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+
+                    </div>
+
+                    <div style="display: none" id="whois-page">
+                        
+                        
+                        <pre style="white-space: pre-wrap;">aut-num:        <a href="/AS134143">AS134143</a>
+as-name:        <a href="https://wq.apnic.net/apnic-bin/whois.pl?searchtext=PDKPL-AS-AP&amp;form_type=advanced">PDKPL-AS-AP</a>
+descr:          Kinetix Networks
+country:        AU
+org:            <a href="https://wq.apnic.net/apnic-bin/whois.pl?searchtext=ORG-PDKP2-AP&amp;form_type=advanced">ORG-PDKP2-AP</a>
+admin-c:        <a href="https://wq.apnic.net/apnic-bin/whois.pl?searchtext=PDKP1-AP&amp;form_type=advanced">PDKP1-AP</a>
+tech-c:         <a href="https://wq.apnic.net/apnic-bin/whois.pl?searchtext=PDKP1-AP&amp;form_type=advanced">PDKP1-AP</a>
+abuse-c:        <a href="https://wq.apnic.net/apnic-bin/whois.pl?searchtext=AP965-AP&amp;form_type=advanced">AP965-AP</a>
+mnt-lower:      MAINT-PDKPL-AU
+mnt-routes:     MAINT-PDKPL-AU
+mnt-routes:     MAINT-AS134143-IPXO
+mnt-by:         APNIC-HM
+mnt-irt:        IRT-PDKPL-AU
+last-modified:  2024-07-01T14:09:36Z
+source:         APNIC
+
+
+organisation:   <a href="https://wq.apnic.net/apnic-bin/whois.pl?searchtext=ORG-PDKP2-AP&amp;form_type=advanced">ORG-PDKP2-AP</a>
+org-name:       Kinetix Networks
+org-type:       LIR
+country:        AU
+address:        121 Hammond Avenue
+phone:          &#43;61-2-6910-3444
+# Email removed, Log into bgp.tools to see whois emails
+mnt-ref:        APNIC-HM
+mnt-by:         APNIC-HM
+last-modified:  2024-06-26T13:01:04Z
+source:         APNIC
+
+</pre>
+                        
+                        
+                        <a style="font-size: small;">Last Update: 2025-12-09T03:22:22Z UTC </a>
+                        
+                        <hr>
+                        
+                            <h2>Member of the following AS-SETs</h2>
+
+                            <table id="fhTable" class="full-width-table ">
+                                <tbody id="prefixlist-tbody">
+                                    <tr>
+                                        <th class="boldpls nowrap"> - </th>
+                                        <th class="boldpls">Member</th>
+                                        
+                                        <th class="boldpls nowrap">ASN Count</th>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-telstra-intl-customers">as-telstra-intl-customers</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap boldpls"><p style="display: contents;color: red">11838</p></td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as137409:as-mercury">as137409:as-mercury</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">5017</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as7606:as-wa-ix">as7606:as-wa-ix</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap boldpls"><p style="display: contents;color: red">52117</p></td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as7606:as-nsw-ix">as7606:as-nsw-ix</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap boldpls"><p style="display: contents;color: red">76768</p></td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">APNIC</td>
+                                        
+                                        <td><a href="/as-set/APNIC::as1221:as-customers">as1221:as-customers</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">4679</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as7606:as-sa-ix">as7606:as-sa-ix</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap boldpls"><p style="display: contents;color: red">22821</p></td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">APNIC</td>
+                                        
+                                        <td><a href="/as-set/APNIC::as-pdk">as-pdk</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">14</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-superloop-cust">as-superloop-cust</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">817</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as7606:as-qld-ix">as7606:as-qld-ix</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap boldpls"><p style="display: contents;color: red">51393</p></td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-pdk">as-pdk</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">14</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-telstra-testing-1">as-telstra-testing-1</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap boldpls"><p style="display: contents;color: red">11761</p></td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as134143:as-cone">as134143:as-cone</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">1</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-equinix-me">as-equinix-me</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">2770</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-telstra-intl-customers-4637">as-telstra-intl-customers-4637</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">1599</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as7606:as-vic-ix">as7606:as-vic-ix</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap boldpls"><p style="display: contents;color: red">42505</p></td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-equinix-pe">as-equinix-pe</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">2729</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">APNIC</td>
+                                        
+                                        <td><a href="/as-set/APNIC::as134143:as-all">as134143:as-all</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">14</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">NTTCOM</td>
+                                        
+                                        <td><a href="/as-set/NTTCOM::as-equinix-ap">as-equinix-ap</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">2764</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-transroute-spec">as-transroute-spec</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap boldpls"><p style="display: contents;color: red">19692</p></td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">APNIC</td>
+                                        
+                                        <td><a href="/as-set/APNIC::as138613:as-connecttel">as138613:as-connecttel</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">2</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                        
+
+                    </div>
+
+                    
+
+                    
+                    <div style="display: none" id="ix-page">
+                        <div class="grid-row">
+                            <dl class="column-two-thirds">
+                                <p style="margin: 0px;"><img style="vertical-align: middle; margin-left: 5px;" class="flag-img" src="/assets/peeringdb-icon.png" title="PeeringDB"><a href="https://www.peeringdb.com/asn/134143">Go to PeeringDB page</a></p>
+                            </dl>
+                            
+                            
+                        </div>
+                        <div class="grid-row">
+                            
+                        
+                        <div class="column-two-thirds">
+                            <dl>
+                                <dt>PeeringDB AS-SET:</dt>
+                                <dd class="text data">
+                                    
+                                    <a href="/as-set/as-pdk">AS-PDK</a>
+                                    
+                                </dd>
+                            </dl>
+                        </div>
+                        
+    
+    
+                        <dl class="column-third">
+                            <dt>Suggested Prefix Limits</dt>
+                            <dd class="text data">
+                                
+                                <p style="margin: 0px;"><b>IPv4:</b> 200</p>
+                                
+                                <p style="margin: 0px;"><b>IPv6:</b> 50</p>
+                            </dd>
+                        </dl>
+                        </div>
+
+                        
+
+                        <div id="normalixpsubpage">
+
+
+<h3>Internet Exchange Points</h3>
+
+<div class="scroll-ixp-div-on-small">
+<table id="ixpTable" class="full-width-table table-wide-to-force-scroll-on-mobile">
+    <thead class="sortable">
+        <tr>
+            <th class="nowrap boldpls">  &nbsp;  </th>
+            <th class="boldpls">Name</th>
+            <th class="nowrap boldpls">IPv4</th>
+            <th class="nowrap boldpls">IPv6</th>
+            <th data-sort-method='number' class="nowrap boldpls">Link Speed</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+        
+        <tr>
+            <td data-sort='AU' class="nowrap ns"><img class="flag-img" src="/assets/flags/AU.png" title="AU"><img style="margin-left: 5px;" class="flag-img" src="/assets/icons/huawei.png" title="Detected Vendor: HUAWEI TECHNOLOGIES CO.,LTD"><a href="/ixp-nexthop/?nh=103.26.69.9&nh=2001%3adea%3a0%3a10%3a%3a109&rta=134143"><img class="flag-img" src="/assets/tick-rs.png" title="This ASN is peering with RS right now"></a></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/MegaIX%20Sydney">MegaIX Sydney</a></td>
+            <td class="smallonmobile">103.26.69.9</a></td>
+            <td class="smallonmobile nowrap">2001:dea:0:10::109</td>
+            <td data-sort='20000' class="smallonmobile">20 gbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='AU' class="nowrap ns"><img class="flag-img" src="/assets/flags/AU.png" title="AU"><img style="margin-left: 5px;" class="flag-img" src="/assets/icons/huawei.png" title="Detected Vendor: HUAWEI TECHNOLOGIES CO.,LTD"><a href="/ixp-nexthop/?nh=103.136.102.76&nh=2001%3adf0%3a680%3a3%3a%3a4c&rta=134143"><img class="flag-img" src="/assets/tick-rs.png" title="This ASN is peering with RS right now"></a></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/EdgeIX%20-%20Perth">EdgeIX - Perth</a></td>
+            <td class="smallonmobile">103.136.102.76</a></td>
+            <td class="smallonmobile nowrap">2001:df0:680:3::4c</td>
+            <td data-sort='10000' class="smallonmobile">10 gbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='AU' class="nowrap ns"><img class="flag-img" src="/assets/flags/AU.png" title="AU"><img style="margin-left: 5px;" class="flag-img" src="/assets/icons/huawei.png" title="Detected Vendor: HUAWEI TECHNOLOGIES CO.,LTD"><a href="/ixp-nexthop/?nh=202.12.243.49&nh=2001%3adea%3a0%3a50%3a%3a31&rta=134143"><img class="flag-img" src="/assets/tick-rs.png" title="This ASN is peering with RS right now"></a></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/MegaIX%20Perth">MegaIX Perth</a></td>
+            <td class="smallonmobile">202.12.243.49</a></td>
+            <td class="smallonmobile nowrap">2001:dea:0:50::31</td>
+            <td data-sort='10000' class="smallonmobile">10 gbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='AU' class="nowrap ns"><img class="flag-img" src="/assets/flags/AU.png" title="AU"><img style="margin-left: 5px;" class="flag-img" src="/assets/icons/huawei.png" title="Detected Vendor: HUAWEI TECHNOLOGIES CO.,LTD"><a href="/ixp-nexthop/?nh=103.26.70.92&nh=2001%3adea%3a0%3a20%3a%3a5c&rta=134143"><img class="flag-img" src="/assets/tick-rs.png" title="This ASN is peering with RS right now"></a></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/MegaIX%20Brisbane">MegaIX Brisbane</a></td>
+            <td class="smallonmobile">103.26.70.92</a></td>
+            <td class="smallonmobile nowrap">2001:dea:0:20::5c</td>
+            <td data-sort='10000' class="smallonmobile">10 gbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='AU' class="nowrap ns"><img class="flag-img" src="/assets/flags/AU.png" title="AU"><img style="margin-left: 5px;" class="flag-img" src="/assets/icons/huawei.png" title="Detected Vendor: HUAWEI TECHNOLOGIES CO.,LTD"><a href="/ixp-nexthop/?nh=103.26.71.94&nh=2001%3adea%3a0%3a30%3a%3a5e&rta=134143"><img class="flag-img" src="/assets/tick-rs.png" title="This ASN is peering with RS right now"></a></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/MegaIX%20Melbourne">MegaIX Melbourne</a></td>
+            <td class="smallonmobile">103.26.71.94</a></td>
+            <td class="smallonmobile nowrap">2001:dea:0:30::5e</td>
+            <td data-sort='10000' class="smallonmobile">10 gbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='AU' class="nowrap ns"><img class="flag-img" src="/assets/flags/AU.png" title="AU"><img style="margin-left: 5px;" class="flag-img" src="/assets/icons/huawei.png" title="Detected Vendor: HUAWEI TECHNOLOGIES CO.,LTD"><a href="/ixp-nexthop/?nh=202.77.88.116&nh=2001%3adf0%3a680%3a5%3a%3a73&rta=134143"><img class="flag-img" src="/assets/tick-rs.png" title="This ASN is peering with RS right now"></a></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/EdgeIX%20-%20Sydney">EdgeIX - Sydney</a></td>
+            <td class="smallonmobile">202.77.88.116</a></td>
+            <td class="smallonmobile nowrap">2001:df0:680:5::73</td>
+            <td data-sort='10000' class="smallonmobile">10 gbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='AU' class="nowrap ns"><img class="flag-img" src="/assets/flags/AU.png" title="AU"><img style="margin-left: 5px;" class="flag-img" src="/assets/icons/nic.png" title="Detected Vendor: Ufispace Co., LTD."><img class="flag-img" src="/assets/tick.png" title="Last seen online 103 mins ago"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/Equinix%20Sydney">Equinix Sydney</a></td>
+            <td class="smallonmobile">45.127.172.156</a></td>
+            <td class="smallonmobile nowrap">2001:de8:6::13:4143:1</td>
+            <td data-sort='10000' class="smallonmobile">10 gbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='AU' class="nowrap ns"><img class="flag-img" src="/assets/flags/AU.png" title="AU"><img style="margin-left: 5px;" class="flag-img" src="/assets/icons/huawei.png" title="Detected Vendor: HUAWEI TECHNOLOGIES CO.,LTD"><a href="/ixp-nexthop/?nh=202.77.90.34&nh=2001%3adf0%3a680%3a6%3a%3a22&rta=134143"><img class="flag-img" src="/assets/tick-rs.png" title="This ASN is peering with RS right now"></a></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/EdgeIX%20-%20Melbourne">EdgeIX - Melbourne</a></td>
+            <td class="smallonmobile">202.77.90.34</a></td>
+            <td class="smallonmobile nowrap">2001:df0:680:6::22</td>
+            <td data-sort='10000' class="smallonmobile">10 gbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='AU' class="nowrap ns"><img class="flag-img" src="/assets/flags/AU.png" title="AU"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/EdgeIX%20-%20Adelaide">EdgeIX - Adelaide</a></td>
+            <td class="smallonmobile">103.136.101.41</a></td>
+            <td class="smallonmobile nowrap">2001:df0:680:2::2a</td>
+            <td data-sort='10000' class="smallonmobile">10 gbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='AU' class="nowrap ns"><img class="flag-img" src="/assets/flags/AU.png" title="AU"><img style="margin-left: 5px;" class="flag-img" src="/assets/icons/huawei.png" title="Detected Vendor: HUAWEI TECHNOLOGIES CO.,LTD"><a href="/ixp-nexthop/?nh=218.100.78.61&nh=2001%3a7fa%3a11%3a1%3a2%3abff%3a0%3a1&rta=134143"><img class="flag-img" src="/assets/tick-rs.png" title="This ASN is peering with RS right now"></a></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/VIC-IX">VIC-IX</a></td>
+            <td class="smallonmobile">218.100.78.61</a></td>
+            <td class="smallonmobile nowrap">2001:7fa:11:1:2:bff:0:1</td>
+            <td data-sort='10000' class="smallonmobile"><abbr title="pe3.mel3 -  []">10 gbps</abbr></td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='AU' class="nowrap ns"><img class="flag-img" src="/assets/flags/AU.png" title="AU"><img style="margin-left: 5px;" class="flag-img" src="/assets/icons/huawei.png" title="Detected Vendor: HUAWEI TECHNOLOGIES CO.,LTD"><a href="/ixp-nexthop/?nh=27.106.192.153&nh=2001%3a7fa%3a11%3a0%3a2%3abff%3a0%3a1&rta=134143"><img class="flag-img" src="/assets/tick-rs.png" title="This ASN is peering with RS right now"></a></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/WA-IX">WA-IX</a></td>
+            <td class="smallonmobile">27.106.192.153</a></td>
+            <td class="smallonmobile nowrap">2001:7fa:11:0:2:bff:0:1</td>
+            <td data-sort='10000' class="smallonmobile"><abbr title="pe2.per5 -  []">10 gbps</abbr></td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='AU' class="nowrap ns"><img class="flag-img" src="/assets/flags/AU.png" title="AU"><img style="margin-left: 5px;" class="flag-img" src="/assets/icons/huawei.png" title="Detected Vendor: HUAWEI TECHNOLOGIES CO.,LTD"><a href="/ixp-nexthop/?nh=218.100.52.122&nh=2001%3a7fa%3a11%3a4%3a2%3abff%3a0%3a1&rta=134143"><img class="flag-img" src="/assets/tick-rs.png" title="This ASN is peering with RS right now"></a></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/NSW-IX">NSW-IX</a></td>
+            <td class="smallonmobile">218.100.52.122</a></td>
+            <td class="smallonmobile nowrap">2001:7fa:11:4:2:bff:0:1</td>
+            <td data-sort='10000' class="smallonmobile"><abbr title="pe2.syd4 -  []">10 gbps</abbr></td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='AU' class="nowrap ns"><img class="flag-img" src="/assets/flags/AU.png" title="AU"><img style="margin-left: 5px;" class="flag-img" src="/assets/icons/huawei.png" title="Detected Vendor: HUAWEI TECHNOLOGIES CO.,LTD"><a href="/ixp-nexthop/?nh=218.100.76.38&nh=2001%3a7fa%3a11%3a2%3a2%3abff%3a0%3a1&rta=134143"><img class="flag-img" src="/assets/tick-rs.png" title="This ASN is peering with RS right now"></a></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/QLD-IX">QLD-IX</a></td>
+            <td class="smallonmobile">218.100.76.38</a></td>
+            <td class="smallonmobile nowrap">2001:7fa:11:2:2:bff:0:1</td>
+            <td data-sort='10000' class="smallonmobile"><abbr title="pe2.bne6 -  []">10 gbps</abbr></td>
+        </tr>
+        
+        
+    </tbody>
+</table>
+</div>
+
+
+
+
+
+
+
+
+<a style="font-size: small;">Last Update: 2025-12-09T10:08:19Z UTC</a>
+
+
+                        </div>
+                        <div id="overlapixpsubpage">
+                        </div>
+                    </div>
+                    
+                    
+
+                    
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="superclearfix">
+            
+            <div class="superclearfix">
+                
+            </div>
+
+            <div class="superclearfix">
+                
+            </div>
+
+
+        </div>
+
+
+        <div class="group js-footer" id="footer">
+            <nav>
+                <div>
+                    <ul>
+                        <li><a href="/kb/api" target="_blank">Scripting/API</a></li>
+                        <li><a href="/credits" target="_blank">Credits</a></li>
+                        <li><a href="/pricing" target="_blank">Pricing</a></li>
+                        <li><a href="/kb/contact" target="_blank">Contact Us</a></li>
+                        <li><a href="https://github.com/bgptools/issues" target="_blank">Issue Tracker</a></li>
+                        <li><a href="/kb/setup-sessions" target="">Contribute Data</a></li>
+                        
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <script>
+    
+    var inhash = window.location.hash;
+    if (inhash == "#asinfo") {
+        
+    } else if (inhash == "#prefixes") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#prefix-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#prefixes-page');
+        aaa[0].style.display = "";
+
+    } else if (inhash == "#connectivity" || inhash == "#peers" || inhash == "#upstreams" || inhash == "#downstreams") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#connectivity-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#connectivity-page');
+        aaa[0].style.display = "";
+    } else if (inhash == "#whois") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#whois-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#whois-page');
+        aaa[0].style.display = "";
+    } else if (inhash == "#ix") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#ix-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#ix-page');
+        aaa[0].style.display = "";
+    }</script>
+
+    <script>
+    
+
+
+    ;(function() {
+  'use strict'
+
+  function scaleImageMap() {
+    function resizeMap() {
+      function resizeAreaTag(cachedAreaCoords, idx) {
+        function scale(coord) {
+          var dimension = 1 === (isWidth = 1 - isWidth) ? 'width' : 'height'
+          return (
+            padding[dimension] +
+            Math.floor(Number(coord) * scalingFactor[dimension])
+          )
+        }
+
+        var isWidth = 0
+        areas[idx].coords = cachedAreaCoords
+          .split(',')
+          .map(scale)
+          .join(',')
+      }
+
+      var scalingFactor = {
+        width: image.width / image.naturalWidth,
+        height: image.height / image.naturalHeight,
+      }
+
+      var padding = {
+        width: parseInt(
+          window.getComputedStyle(image, null).getPropertyValue('padding-left'),
+          10
+        ),
+        height: parseInt(
+          window.getComputedStyle(image, null).getPropertyValue('padding-top'),
+          10
+        ),
+      }
+
+      cachedAreaCoordsArray.forEach(resizeAreaTag)
+    }
+
+    function getCoords(e) {
+      
+      return e.coords.replace(/ *, */g, ',').replace(/ +/g, ',')
+    }
+
+    function debounce() {
+      clearTimeout(timer)
+      timer = setTimeout(resizeMap, 250)
+    }
+
+    function start() {
+      if (
+        image.width !== image.naturalWidth ||
+        image.height !== image.naturalHeight
+      ) {
+        resizeMap()
+      }
+    }
+
+    function addEventListeners() {
+      image.addEventListener('load', resizeMap, false) 
+      window.addEventListener('focus', resizeMap, false) 
+      window.addEventListener('resize', debounce, false)
+      window.addEventListener('readystatechange', resizeMap, false)
+      document.addEventListener('fullscreenchange', resizeMap, false)
+    }
+
+    function beenHere() {
+      return 'function' === typeof map._resize
+    }
+
+    function getImg(name) {
+      return document.querySelector('img[usemap="#world"]')
+    }
+
+    function setup() {
+      areas = map.getElementsByTagName('area')
+      cachedAreaCoordsArray = Array.prototype.map.call(areas, getCoords)
+      image = getImg('#' + map.name) || getImg(map.name)
+      map._resize = resizeMap 
+    }
+
+    var  
+      map = this,
+      areas = null,
+      cachedAreaCoordsArray = null,
+      image = null,
+      timer = null
+
+    if (!beenHere()) {
+      setup()
+      addEventListeners()
+      start()
+    } else {
+      map._resize() 
+    }
+  }
+
+  function factory() {
+    function chkMap(element) {
+      if (!element.tagName) {
+        throw new TypeError('Object is not a valid DOM element')
+      } else if ('MAP' !== element.tagName.toUpperCase()) {
+        throw new TypeError(
+          'Expected <MAP> tag, found <' + element.tagName + '>.'
+        )
+      }
+    }
+
+    function init(element) {
+      if (element) {
+        chkMap(element)
+        scaleImageMap.call(element)
+        maps.push(element)
+      }
+    }
+
+    var maps
+
+    return function imageMapResizeF(target) {
+      maps = [] 
+
+      switch (typeof target) {
+        case 'undefined':
+        case 'string':
+          Array.prototype.forEach.call(
+            document.querySelectorAll(target || 'map'),
+            init
+          )
+          break
+        case 'object':
+          init(target)
+          break
+        default:
+          throw new TypeError('Unexpected data type (' + typeof target + ').')
+      }
+
+      return maps
+    }
+  }
+
+  if (typeof define === 'function' && define.amd) {
+    define([], factory)
+  } else if (typeof module === 'object' && typeof module.exports === 'object') {
+    module.exports = factory() 
+  } else {
+    window.imageMapResize = factory()
+  }
+
+  if ('jQuery' in window) {
+    window.jQuery.fn.imageMapResize = function $imageMapResizeF() {
+      return this.filter('map')
+        .each(scaleImageMap)
+        .end()
+    }
+  }
+})()
+    
+    </script>
+    <script>
+        var imgEl = document.getElementById("pathimg");
+        imgEl.addEventListener("mouseover",function() {
+            imageMapResize('#world');
+        })
+    </script>
+    <script src="/assets/tablesort.min.js"></script>
+    <script>
+        addEventListener("load", (event) => {
+            
+            
+            var sort = new Tablesort(document.getElementById('donotscrapebgptools-upstreamTable'));
+            var sort2 = new Tablesort(document.getElementById('donotscrapebgptools-upstreamTablePeers'));
+            
+            var sort3 = new Tablesort(document.getElementById('donotscrapebgptools-upstreamTableDowns'));
+            
+            var sort4 = new Tablesort(document.getElementById('ixpTable'));
+            
+        });
+    </script>
+    
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        setTimeout(function() {
+
+        var beaconHttp = new XMLHttpRequest();
+        var url = '/performance-beacon';
+        var params = JSON.stringify(window.performance)
+        beaconHttp.open('POST', url, true);
+        
+        
+        beaconHttp.setRequestHeader('Content-type', 'application/json');
+        beaconHttp.setRequestHeader('visit-url', "/as/134143");
+        if (navigator.connection) {
+            beaconHttp.setRequestHeader('client-side-rtt', navigator.connection.rtt);
+        } else {
+            beaconHttp.setRequestHeader('client-side-rtt', '-2');
+        }
+        beaconHttp.onreadystatechange = function() {}
+        beaconHttp.send(params);
+        },1000)
+    }, false);
+</script>
+
+</body>
+
+
+</html>
