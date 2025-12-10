@@ -1,0 +1,2056 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="University of Oregon Route Views Project (AS6447) is a inactive BGP network">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000">
+    <link rel="search" type="application/opensearchdescription+xml" title="BGP.Tools" href="https://bgp.tools/opensearch.xml">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="theme-color" content="#000000">
+    <link href="https://social.bgp.tools/@bgptools" rel="me">
+    <link rel="canonical" href="https://bgp.tools/as/6447" />
+    <title>AS6447 University of Oregon Route Views Project - bgp.tools</title>
+    <link rel="stylesheet" type="text/css" href="/assets/main-new.css?2025-12-09-1723%20UTC">
+</head>
+
+<body>
+    <div id="container">
+        
+<div id="global-header" class="global-header-top">
+    <div class="header-sitewide">
+        <div class="global-header">
+            <div class="header-logo">
+                <a href="/" id="logo" class="content">bgp.tools</a>
+            </div>
+            <form id="search" action="/search" method="get" accept-charset="utf-8" role="search" class="top-search-header js-search-hash">
+                <div class="searchfield">
+                    <input type="search" autocomplete="off" name="q" id="site-search-text" title="Search" value="" placeholder="Start here..." autofocus="autofocus" class="js-search-focus">
+                    <button type="submit" id="search-submit" class="search-submit">Search</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div id="global-header-blob" >
+    <a id="auth-header-text" href="/login">Login</a>
+    
+</div>
+<div id="global-header-bar" >
+    <a id="auth-header-bar-text" href="/login">Login</a>
+    
+</div>
+<div class="small-clearfix"></div>
+
+        <div id="global-container">
+            
+
+
+            
+            <div class="section-tabs js-tabs">
+                <ul>
+                    
+<li class="active">
+    <h1> <a id="viewbutton-tab" href="/as/6447">View</a></h1>
+</li>
+
+<li >
+    <a id="editbutton-tab" href="/edit/as/6447">Edit</a>
+</li>
+
+
+
+
+
+                    <li style="float: right;">
+                        
+                        <img id="ws-status" width="24" height="24" src="/assets/disconnected.png" title="Not Connected To realtime data updates">
+                        
+                    </li>
+                </ul>
+            </div>
+
+            <div id="search-container">
+
+                <div class="column-full-width">
+
+                    <div class="clearfix">
+                        
+                    </div>
+                    
+                    <div class="warningbox">This ASN is not currently in the global routing table</div>
+                    
+                    
+
+                    <div class="network-header">
+                        
+                        
+                        <img width="334" height="250" src="/img/6447" alt="The website screenshot for https://www.routeviews.org/" >
+                        
+                        
+                        <p id="network-name" class="heading-xlarge">University of Oregon Route Views Project</p>
+                        <p id="network-number">
+                            AS Number
+                            <strong id="ASNumberString" pure="6447">6447</strong>
+                            <br>
+                        
+                            Website
+                            <strong><a href="https://www.routeviews.org/" rel="nofollow">https://www.routeviews.org/</a></strong>
+                        
+                        </p>
+
+                    </div>
+
+
+                    <div class="clearfix">
+                        
+                    </div>
+
+
+                    <div class="section-tabs js-tabs">
+                        <ul>
+
+                            <li id="overview-tab-li" class="active">
+                                <a id="overview-tab" href="#asinfo">Overview</a>
+                            </li>
+                            
+                            <li id="whois-tab-li">
+                                <a id="whois-tab" href="#whois">Whois</a>
+                            </li>
+                        
+                            <li id="ix-tab-li">
+                                <a id="ix-tab" href="#ix">IX</a>
+                            </li>
+                        
+                        
+                        </ul>
+                    </div>
+
+<script>
+    function removeAllActiveTab() {
+        var tabs = [
+            "overview-tab-li", 
+            "prefix-tab-li", 
+            "connectivity-tab-li",
+            "whois-tab-li",
+            "ix-tab-li",
+            "issues-tab-li"
+        ];
+
+        tabs.forEach(element => {
+            var aaa = document.querySelectorAll('#'+element);
+            if(aaa.length != 0) {
+                aaa[0].classList.remove("active")
+            }
+        });
+    }
+
+    function hideAllContent() {
+        var tabs = [
+            "overview-page", 
+            "prefixes-page", 
+            "connectivity-page",
+            "whois-page",
+            "ix-page",
+            "issues-page"
+        ];
+
+        tabs.forEach(element => {
+            var aaa = document.querySelectorAll('#'+element);
+            if(aaa.length != 0) {
+                aaa[0].style.display = "none";
+            }
+        });
+        if (document.getElementById("donotscrapebgptools-prefixlist-tbody")) {
+            var prefixrows = document.getElementById("donotscrapebgptools-prefixlist-tbody").children;
+            for (var i = 0; i < prefixrows.length; i++) {
+                prefixrows[i].style = "";
+            }
+        }
+    }
+
+    var otab = document.querySelectorAll('#overview-tab');
+    otab[0].addEventListener("click", function () {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#overview-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#overview-page');
+        aaa[0].style.display = "";
+    });
+    
+
+    var wtab = document.querySelectorAll('#whois-tab');
+    wtab[0].addEventListener("click", function () {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#whois-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#whois-page');
+        aaa[0].style.display = "";
+    });
+
+</script>
+
+
+<script>
+var wtab = document.querySelectorAll('#ix-tab');
+wtab[0].addEventListener("click", function () {
+    removeAllActiveTab()
+    hideAllContent()
+    var otab2 = document.querySelectorAll('#ix-tab-li');
+    otab2[0].classList.add("active");
+
+    var aaa = document.querySelectorAll('#ix-page');
+    aaa[0].style.display = "";
+});
+</script>
+
+
+                    
+                    <div id="overview-page">
+
+                        <div class="grid-row">
+                        
+                        <div class="column-two-thirds">
+                            <dl>
+                                <dt>Registered on</dt>
+                                <dd class="text data">
+                                    
+                                    18 Apr 1996 (29 years old)
+                                </dd>
+                            
+                            
+                            <dt>Registered to</dt>
+                            <dd class="text data">
+                                <a href="/rir-owner/ARIN-UO-102">ARIN-UO-102</a> (arin)</dd>
+                                
+                                <dd class="text data" id="network-status">
+                                    <a href="/transfer-history/6447">[Transfer History]</a>
+                                </dd>
+                                
+                            
+                            </dl>
+                        </div>
+                        
+    
+                        <dl class="column-third">
+                            <dt>Network status</dt>
+                            <dd class="text data">
+                                
+                                Active, Allocated under ARIN
+                                
+                            </dd>
+                        </dl>
+    
+                        </div>
+    
+                        <div class="grid-row">
+                            <dl class="column-two-thirds">
+                                <dt>Network type</dt>
+                                <dd class="text data">
+                                    Unknown
+                                </dd>
+                            </dl>
+    
+                            <dl class="column-third">
+                                <dt>Prefixes Originated</dt>
+                                <dd class="data">0 IPv4, 0 IPv6</dd>
+                            </dl>
+                        </div>
+                        <div class="grid-row">
+                            <div class="column-half">
+    
+                                <h2 class="heading-medium"><derp>Upstreams</derp></h2>
+                                <ul>
+                                    
+                                </ul>
+    
+                            </div>
+    
+                            <div class="column-half">
+                                
+                                    <h2 class="heading-medium"><derp>Locations of Operation</derp></h2>
+                                    
+                                    <li><span id="sic0">United States</span></li>
+                                    
+                                
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                    <div style="display: none" id="whois-page">
+                        
+                        
+                        <pre style="white-space: pre-wrap;">ASHandle:       <a href="/AS6447">AS6447</a>
+OrgID:          UO-102
+ASName:         ROUTEVIEWS
+ASNumber:       6447
+RegDate:        1996-04-18
+Updated:        2024-12-19
+Source:         ARIN
+
+
+
+OrgID:          UO-102
+OrgName:        University of Oregon
+CanAllocate:    
+Street:         1600 Mill Race Street, Suite E256
+City:           Eugene
+State/Prov:     OR
+Country:        US
+PostalCode:     97403
+RegDate:        2024-10-21
+Updated:        2024-12-09
+OrgAdminHandle: <a href="https://whois.arin.net/rest/poc/ROUTE5-ARIN">ROUTE5-ARIN</a>
+OrgTechHandle:  <a href="https://whois.arin.net/rest/poc/ROUTE5-ARIN">ROUTE5-ARIN</a>
+OrgAbuseHandle: <a href="https://whois.arin.net/rest/poc/ROUTE5-ARIN">ROUTE5-ARIN</a>
+Source:         ARIN
+
+
+
+
+
+OrgAdminHandle:       <a href="https://whois.arin.net/rest/poc/ROUTE5-ARIN">ROUTE5-ARIN</a>
+OrgAdminName:          ROUTEVIEWS-NOC
+# Email removed, Log into bgp.tools to see whois emails
+
+
+OrgTechHandle:        <a href="https://whois.arin.net/rest/poc/ROUTE5-ARIN">ROUTE5-ARIN</a>
+OrgTechName:           ROUTEVIEWS-NOC
+# Email removed, Log into bgp.tools to see whois emails
+
+
+OrgAbuseHandle:       <a href="https://whois.arin.net/rest/poc/ROUTE5-ARIN">ROUTE5-ARIN</a>
+OrgAbuseName:          ROUTEVIEWS-NOC
+# Email removed, Log into bgp.tools to see whois emails
+
+</pre>
+                        
+                        
+                        <a style="font-size: small;">Last Update: 2025-12-10T03:29:38Z UTC </a>
+                        
+                        <hr>
+                        
+                            <h2>Member of the following AS-SETs</h2>
+
+                            <table id="fhTable" class="full-width-table ">
+                                <tbody id="prefixlist-tbody">
+                                    <tr>
+                                        <th class="boldpls nowrap"> - </th>
+                                        <th class="boldpls">Member</th>
+                                         
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-pit-lim-rs">as-pit-lim-rs</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">APNIC</td>
+                                        
+                                        <td><a href="/as-set/APNIC::as38194:as-decix-kul-rs">as38194:as-decix-kul-rs</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-global-ix">as-global-ix</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">AFRINIC</td>
+                                        
+                                        <td><a href="/as-set/AFRINIC::as-set-kixp37704-rs">as-set-kixp37704-rs</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">APNIC</td>
+                                        
+                                        <td><a href="/as-set/APNIC::as23942:as-getafix-manila">as23942:as-getafix-manila</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as61374:as-uaeix-rs-v6">as61374:as-uaeix-rs-v6</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">ARIN</td>
+                                        
+                                        <td><a href="/as-set/ARIN::as63034:as-decix-nyc-connected">as63034:as-decix-nyc-connected</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">ARIN</td>
+                                        
+                                        <td><a href="/as-set/ARIN::as-sfmix-rs">as-sfmix-rs</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as34968:as-ams-ix-v6-peers">as34968:as-ams-ix-v6-peers</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">JPIRR</td>
+                                        
+                                        <td><a href="/as-set/JPIRR::as-iij">as-iij</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">ARIN</td>
+                                        
+                                        <td><a href="/as-set/ARIN::as63034:as-decix-nyc-v6">as63034:as-decix-nyc-v6</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">APNIC</td>
+                                        
+                                        <td><a href="/as-set/APNIC::as-bknix-rs-set-v6">as-bknix-rs-set-v6</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as6777:as-ams-ix-rs">as6777:as-ams-ix-rs</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">APNIC</td>
+                                        
+                                        <td><a href="/as-set/APNIC::as38137:as-decix-ase-rs-v6">as38137:as-decix-ase-rs-v6</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as25091:as-peers">as25091:as-peers</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">APNIC</td>
+                                        
+                                        <td><a href="/as-set/APNIC::as38194:as-decix-kul">as38194:as-decix-kul</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">APNIC</td>
+                                        
+                                        <td><a href="/as-set/APNIC::as38137:as-decix-ase-v6">as38137:as-decix-ase-v6</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-anexia">as-anexia</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-oregon-ix-peerage">as-oregon-ix-peerage</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">LEVEL3</td>
+                                        
+                                        <td><a href="/as-set/LEVEL3::as-lumen-customers-asns">as-lumen-customers-asns</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as34968:as-ams-ix-peers">as34968:as-ams-ix-peers</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as7606:as-nsw-ix">as7606:as-nsw-ix</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-siex">as-siex</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as211100:as-iraq-ixp-v6">as211100:as-iraq-ixp-v6</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as7606:as-wa-ix">as7606:as-wa-ix</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as37271:as-peers">as37271:as-peers</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">APNIC</td>
+                                        
+                                        <td><a href="/as-set/APNIC::as23942:as-getafix-davao">as23942:as-getafix-davao</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-locix">as-locix</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as211100:as-iraq-ixp-rs-v6">as211100:as-iraq-ixp-rs-v6</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as61374:as-uaeix-rs">as61374:as-uaeix-rs</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">ARIN</td>
+                                        
+                                        <td><a href="/as-set/ARIN::as63034:as-decix-nyc">as63034:as-decix-nyc</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">APNIC</td>
+                                        
+                                        <td><a href="/as-set/APNIC::as38137:as-decix-ase">as38137:as-decix-ase</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-iij6">as-iij6</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as7606:as-sa-ix">as7606:as-sa-ix</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">APNIC</td>
+                                        
+                                        <td><a href="/as-set/APNIC::as38137:as-decix-ase-connected">as38137:as-decix-ase-connected</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">ARIN</td>
+                                        
+                                        <td><a href="/as-set/ARIN::as63034:as-decix-nyc-rs">as63034:as-decix-nyc-rs</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-iij">as-iij</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">APNIC</td>
+                                        
+                                        <td><a href="/as-set/APNIC::as38137:as-decix-ase-rs">as38137:as-decix-ase-rs</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as6777:as-ams-ix-rs-v6">as6777:as-ams-ix-rs-v6</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">APNIC</td>
+                                        
+                                        <td><a href="/as-set/APNIC::as38175:as-decix-may-v6">as38175:as-decix-may-v6</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">APNIC</td>
+                                        
+                                        <td><a href="/as-set/APNIC::as38194:as-decix-kul-rs-v6">as38194:as-decix-kul-rs-v6</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">APNIC</td>
+                                        
+                                        <td><a href="/as-set/APNIC::as-bknix-rs">as-bknix-rs</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as7606:as-qld-ix">as7606:as-qld-ix</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as6777:as-ams-ix-rs-sets">as6777:as-ams-ix-rs-sets</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as61374:as-uaeix-v6">as61374:as-uaeix-v6</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">APNIC</td>
+                                        
+                                        <td><a href="/as-set/APNIC::as38175:as-decix-may">as38175:as-decix-may</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as52925:as-cone">as52925:as-cone</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">APNIC</td>
+                                        
+                                        <td><a href="/as-set/APNIC::as-137491">as-137491</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as6777:as-ams-ix-rs-sets-v6">as6777:as-ams-ix-rs-sets-v6</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-interlanro">as-interlanro</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-sidn-peers-amsix-v4">as-sidn-peers-amsix-v4</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">APNIC</td>
+                                        
+                                        <td><a href="/as-set/APNIC::as-bknix-rs-set">as-bknix-rs-set</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">APNIC</td>
+                                        
+                                        <td><a href="/as-set/APNIC::as141013:as-getafix-ixp">as141013:as-getafix-ixp</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as3303:as-swcmpeers">as3303:as-swcmpeers</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as8218:as-uk-customers">as8218:as-uk-customers</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as7575:as-views">as7575:as-views</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-datamena">as-datamena</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-oregon-ix">as-oregon-ix</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as211390:as-feed">as211390:as-feed</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-viva-bh">as-viva-bh</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as211100:as-iraq-ixp">as211100:as-iraq-ixp</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as211100:as-iraq-ixp-connected">as211100:as-iraq-ixp-connected</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">JPIRR</td>
+                                        
+                                        <td><a href="/as-set/JPIRR::as-iij6">as-iij6</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-devstorage-peerings">as-devstorage-peerings</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">ALTDB</td>
+                                        
+                                        <td><a href="/as-set/ALTDB::as262507:as-announcements">as262507:as-announcements</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as211100:as-iraq-ixp-rs">as211100:as-iraq-ixp-rs</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-sidn-peers-amsix-v6">as-sidn-peers-amsix-v6</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-rcn-ce-peers">as-rcn-ce-peers</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">APNIC</td>
+                                        
+                                        <td><a href="/as-set/APNIC::as38194:as-decix-kul-connected">as38194:as-decix-kul-connected</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-gorex">as-gorex</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as7606:as-act-ix">as7606:as-act-ix</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">LEVEL3</td>
+                                        
+                                        <td><a href="/as-set/LEVEL3::as-as209-cust">as-as209-cust</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">ARIN</td>
+                                        
+                                        <td><a href="/as-set/ARIN::as63034:as-decix-nyc-rs-v6">as63034:as-decix-nyc-rs-v6</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as7606:as-vic-ix">as7606:as-vic-ix</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as37271:as-peers:as6447">as37271:as-peers:as6447</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">APNIC</td>
+                                        
+                                        <td><a href="/as-set/APNIC::as38175:as-decix-may-connected">as38175:as-decix-may-connected</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as61374:as-uaeix">as61374:as-uaeix</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-mfnx">as-mfnx</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">APNIC</td>
+                                        
+                                        <td><a href="/as-set/APNIC::as23942:as-getafix-cebu">as23942:as-getafix-cebu</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as25091:as-downstreams">as25091:as-downstreams</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">APNIC</td>
+                                        
+                                        <td><a href="/as-set/APNIC::as38175:as-decix-may-rs-v6">as38175:as-decix-may-rs-v6</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">ARIN</td>
+                                        
+                                        <td><a href="/as-set/ARIN::as401332:as-routecollect">as401332:as-routecollect</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as61374:as-uaeix-connected">as61374:as-uaeix-connected</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">APNIC</td>
+                                        
+                                        <td><a href="/as-set/APNIC::as38175:as-decix-may-rs">as38175:as-decix-may-rs</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">APNIC</td>
+                                        
+                                        <td><a href="/as-set/APNIC::as38194:as-decix-kul-v6">as38194:as-decix-kul-v6</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                        
+
+                    </div>
+
+                    
+
+                    
+                    <div style="display: none" id="ix-page">
+                        <div class="grid-row">
+                            <dl class="column-two-thirds">
+                                <p style="margin: 0px;"><img style="vertical-align: middle; margin-left: 5px;" class="flag-img" src="/assets/peeringdb-icon.png" title="PeeringDB"><a href="https://www.peeringdb.com/asn/6447">Go to PeeringDB page</a></p>
+                            </dl>
+                            
+                            
+                        </div>
+                        <div class="grid-row">
+                            
+                        
+                        <div class="column-two-thirds">
+                            <dl>
+                                <dt>PeeringDB AS-SET:</dt>
+                                <dd class="text data">
+                                    
+                                    <a href="/as-set/as6447:as-routeviews-collector">AS6447:AS-ROUTEVIEWS-COLLECTOR</a>
+                                    
+                                </dd>
+                            </dl>
+                        </div>
+                        
+    
+    
+                        <dl class="column-third">
+                            <dt>Suggested Prefix Limits</dt>
+                            <dd class="text data">
+                                
+                                
+                            </dd>
+                        </dl>
+                        </div>
+
+                        
+
+                        <div id="normalixpsubpage">
+
+
+<h3>Internet Exchange Points</h3>
+
+<div class="scroll-ixp-div-on-small">
+<table id="ixpTable" class="full-width-table table-wide-to-force-scroll-on-mobile">
+    <thead class="sortable">
+        <tr>
+            <th class="nowrap boldpls">  &nbsp;  </th>
+            <th class="boldpls">Name</th>
+            <th class="nowrap boldpls">IPv4</th>
+            <th class="nowrap boldpls">IPv6</th>
+            <th data-sort-method='number' class="nowrap boldpls">Link Speed</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+        
+        <tr>
+            <td data-sort='AU' class="nowrap ns"><img class="flag-img" src="/assets/flags/AU.png" title="AU"><img style="margin-left: 5px;" class="flag-img" src="/assets/icons/proxmox.png" title="Detected Vendor: Proxmox Server Solutions GmbH"><img class="flag-img" src="/assets/tick.png" title="Last seen online 45 mins ago"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/WA-IX">WA-IX</a></td>
+            <td class="smallonmobile">27.106.192.97</a></td>
+            <td class="smallonmobile nowrap">2001:7fa:11::192f:0:1</td>
+            <td data-sort='200000' class="smallonmobile"><abbr title="pe1.syd1 -  []">200 gbps</abbr></td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='AU' class="nowrap ns"><img class="flag-img" src="/assets/flags/AU.png" title="AU"><img style="margin-left: 5px;" class="flag-img" src="/assets/icons/proxmox.png" title="Detected Vendor: Proxmox Server Solutions GmbH"><img class="flag-img" src="/assets/tick.png" title="Last seen online 45 mins ago"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/SA-IX">SA-IX</a></td>
+            <td class="smallonmobile">218.100.54.2</a></td>
+            <td class="smallonmobile nowrap">2001:7fa:11:3:0:192f:0:1</td>
+            <td data-sort='200000' class="smallonmobile"><abbr title="pe1.syd1 -  []">200 gbps</abbr></td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='AU' class="nowrap ns"><img class="flag-img" src="/assets/flags/AU.png" title="AU"><img style="margin-left: 5px;" class="flag-img" src="/assets/icons/proxmox.png" title="Detected Vendor: Proxmox Server Solutions GmbH"><img class="flag-img" src="/assets/tick.png" title="Last seen online 45 mins ago"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/QLD-IX">QLD-IX</a></td>
+            <td class="smallonmobile">218.100.76.18</a></td>
+            <td class="smallonmobile nowrap">2001:7fa:11:2:0:192f:0:1</td>
+            <td data-sort='200000' class="smallonmobile"><abbr title="pe1.syd1 -  []">200 gbps</abbr></td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='AU' class="nowrap ns"><img class="flag-img" src="/assets/flags/AU.png" title="AU"><img style="margin-left: 5px;" class="flag-img" src="/assets/icons/proxmox.png" title="Detected Vendor: Proxmox Server Solutions GmbH"><img class="flag-img" src="/assets/tick.png" title="Last seen online 45 mins ago"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/NSW-IX">NSW-IX</a></td>
+            <td class="smallonmobile">218.100.52.52</a></td>
+            <td class="smallonmobile nowrap">2001:7fa:11:4:0:192f:0:1</td>
+            <td data-sort='200000' class="smallonmobile"><abbr title="pe1.syd1 -  []">200 gbps</abbr></td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='AU' class="nowrap ns"><img class="flag-img" src="/assets/flags/AU.png" title="AU"><img style="margin-left: 5px;" class="flag-img" src="/assets/icons/proxmox.png" title="Detected Vendor: Proxmox Server Solutions GmbH"><img class="flag-img" src="/assets/tick.png" title="Last seen online 45 mins ago"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/VIC-IX">VIC-IX</a></td>
+            <td class="smallonmobile">218.100.78.37</a></td>
+            <td class="smallonmobile nowrap">2001:7fa:11:1:0:192f:0:1</td>
+            <td data-sort='200000' class="smallonmobile"><abbr title="pe1.syd1 -  []">200 gbps</abbr></td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='ID' class="nowrap ns"><img class="flag-img" src="/assets/flags/ID.png" title="ID"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/IIX-Jakarta">IIX-Jakarta</a></td>
+            <td class="smallonmobile">123.108.11.250</a></td>
+            <td class="smallonmobile nowrap">2001:7fa:2:5::40a</td>
+            <td data-sort='10000' class="smallonmobile">10 gbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='DE' class="nowrap ns"><img class="flag-img" src="/assets/flags/DE.png" title="DE"><img style="margin-left: 5px;" class="flag-img" src="/assets/icons/private-localadmin.png" title="Detected Vendor: locally administered mac addresses"><img class="flag-img" src="/assets/tick.png" title="Last seen online 8 hours ago"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/LOCIX%20FRANKFURT">LOCIX FRANKFURT</a></td>
+            <td class="smallonmobile">185.1.167.72</a></td>
+            <td class="smallonmobile nowrap">2001:7f8:f2:e1::6447:1</td>
+            <td data-sort='10000' class="smallonmobile">10 gbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"><img style="margin-left: 5px;" class="flag-img" src="/assets/icons/juniper.png" title="Detected Vendor: Juniper Networks"><img class="flag-img" src="/assets/tick.png" title="Last seen online 61 mins ago"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/DE-CIX%20New%20York">DE-CIX New York</a></td>
+            <td class="smallonmobile">206.82.105.7</a></td>
+            <td class="smallonmobile nowrap">2001:504:36::192f:0:1</td>
+            <td data-sort='10000' class="smallonmobile"><abbr title="edge03.nyc5 -  []">10 gbps</abbr></td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/Digital%20Realty%20Atlanta">Digital Realty Atlanta</a></td>
+            <td class="smallonmobile">206.126.110.3</a></td>
+            <td class="smallonmobile nowrap">2001:504:17:110::3</td>
+            <td data-sort='10000' class="smallonmobile">10 gbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='KE' class="nowrap ns"><img class="flag-img" src="/assets/flags/KE.png" title="KE"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/KIXP%20-%20Nairobi">KIXP - Nairobi</a></td>
+            <td class="smallonmobile">196.223.21.54</a></td>
+            <td class="smallonmobile nowrap">2001:43f8:60:1::54</td>
+            <td data-sort='10000' class="smallonmobile">10 gbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='CR' class="nowrap ns"><img class="flag-img" src="/assets/flags/CR.png" title="CR"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/CRIX">CRIX</a></td>
+            <td class="smallonmobile">200.107.83.206</a></td>
+            <td class="smallonmobile nowrap">2801:1d:a000:1::1206</td>
+            <td data-sort='10000' class="smallonmobile"><abbr title="SW-Virt - MMR NIC Costa Rica [CR]">10 gbps</abbr></td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='RO' class="nowrap ns"><img class="flag-img" src="/assets/flags/RO.png" title="RO"><img style="margin-left: 5px;" class="flag-img" src="/assets/icons/private-localadmin.png" title="Detected Vendor: locally administered mac addresses"><img class="flag-img" src="/assets/tick.png" title="Last seen online 56 mins ago"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/InterLAN-IX">InterLAN-IX</a></td>
+            <td class="smallonmobile">86.104.125.222</a></td>
+            <td class="smallonmobile nowrap">2001:7f8:64:225::6447:1</td>
+            <td data-sort='10000' class="smallonmobile"><abbr title="ilan.b.nx1.as01 - Bucharest NXDATA-1 [RO]">10 gbps</abbr></td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/Equinix%20Chicago">Equinix Chicago</a></td>
+            <td class="smallonmobile">208.115.136.187</a></td>
+            <td class="smallonmobile nowrap">2001:504:0:4::6447:1</td>
+            <td data-sort='10000' class="smallonmobile">10 gbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/FL-IX">FL-IX</a></td>
+            <td class="smallonmobile">206.41.108.119</a></td>
+            <td class="smallonmobile nowrap">2001:504:40:108::1:119</td>
+            <td data-sort='10000' class="smallonmobile"><abbr title="agg01.mia002 - Equinix-MI1 [US]">10 gbps</abbr></td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"><img style="margin-left: 5px;" class="flag-img" src="/assets/icons/private-localadmin.png" title="Detected Vendor: locally administered mac addresses"><img class="flag-img" src="/assets/tick.png" title="Last seen online 82 mins ago"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/FD-IX%20-%20Indianapolis">FD-IX - Indianapolis</a></td>
+            <td class="smallonmobile">206.53.139.49</a></td>
+            <td class="smallonmobile nowrap">2001:504:45:f3e8::49</td>
+            <td data-sort='10000' class="smallonmobile">10 gbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/Equinix%20Palo%20Alto">Equinix Palo Alto</a></td>
+            <td class="smallonmobile">198.32.176.5</a></td>
+            <td class="smallonmobile nowrap">2001:504:d::5</td>
+            <td data-sort='10000' class="smallonmobile">10 gbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='GB' class="nowrap ns"><img class="flag-img" src="/assets/flags/GB.png" title="GB"><img style="margin-left: 5px;" class="flag-img" src="/assets/icons/fs.png" title="Detected Vendor: FS COM INC"><img class="flag-img" src="/assets/tick.png" title="Last seen online 28 mins ago"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/LINX%20LON1">LINX LON1</a></td>
+            <td class="smallonmobile">195.66.225.222</a></td>
+            <td class="smallonmobile nowrap">2001:7f8:4::192f:1</td>
+            <td data-sort='10000' class="smallonmobile"><abbr title="edge6-thn - Telehouse North (THN) [GB]">10 gbps</abbr></td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='ZA' class="nowrap ns"><img class="flag-img" src="/assets/flags/ZA.png" title="ZA"><img style="margin-left: 5px;" class="flag-img" src="/assets/icons/intel.png" title="Detected Vendor: Intel Corporate"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/NAPAfrica%20IX%20Johannesburg">NAPAfrica IX Johannesburg</a></td>
+            <td class="smallonmobile">196.60.9.68</a></td>
+            <td class="smallonmobile nowrap">2001:43f8:6d0::9:68</td>
+            <td data-sort='10000' class="smallonmobile"><abbr title="ar-l7.jb1.napafrica.net - Teraco Data Environments Johannesburg [ZA]">10 gbps</abbr></td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/DRF%20IX">DRF IX</a></td>
+            <td class="smallonmobile">206.197.210.76</a></td>
+            <td class="smallonmobile nowrap">2606:7c80:3375:50::76</td>
+            <td data-sort='10000' class="smallonmobile">10 gbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='HK' class="nowrap ns"><img class="flag-img" src="/assets/flags/HK.png" title="HK"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/HKIX">HKIX</a></td>
+            <td class="smallonmobile">123.255.90.18</a></td>
+            <td class="smallonmobile nowrap">2001:7fa:0:1::ca28:a012</td>
+            <td data-sort='10000' class="smallonmobile">10 gbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='AU' class="nowrap ns"><img class="flag-img" src="/assets/flags/AU.png" title="AU"><img style="margin-left: 5px;" class="flag-img" src="/assets/icons/proxmox.png" title="Detected Vendor: Proxmox Server Solutions GmbH"><img class="flag-img" src="/assets/tick.png" title="Last seen online 45 mins ago"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/ACT-IX">ACT-IX</a></td>
+            <td class="smallonmobile">218.100.54.130</a></td>
+            <td class="smallonmobile nowrap">2001:7fa:11:5:0:192f:0:1</td>
+            <td data-sort='10000' class="smallonmobile"><abbr title="pe1.syd1 -  []">10 gbps</abbr></td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='DK' class="nowrap ns"><img class="flag-img" src="/assets/flags/DK.png" title="DK"><img style="margin-left: 5px;" class="flag-img" src="/assets/icons/private-localadmin.png" title="Detected Vendor: locally administered mac addresses"><img class="flag-img" src="/assets/tick.png" title="Last seen online 112 mins ago"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/Netnod%20Copenhagen%20GREEN%20--%20MTU9K">Netnod Copenhagen GREEN -- MTU9K</a></td>
+            <td class="smallonmobile">212.237.193.5</a></td>
+            <td class="smallonmobile nowrap">2001:7f8:d:203::5</td>
+            <td data-sort='10000' class="smallonmobile">10 gbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='AE' class="nowrap ns"><img class="flag-img" src="/assets/flags/AE.png" title="AE"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/UAE-IX">UAE-IX</a></td>
+            <td class="smallonmobile">185.1.8.105</a></td>
+            <td class="smallonmobile nowrap">2001:7f8:73::192f:0:1</td>
+            <td data-sort='10000' class="smallonmobile">10 gbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/Pacific%20Wave">Pacific Wave</a></td>
+            <td class="smallonmobile">207.231.240.252</a></td>
+            <td class="smallonmobile nowrap">2001:504:b:20::252</td>
+            <td data-sort='10000' class="smallonmobile">10 gbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/Pacific%20Wave">Pacific Wave</a></td>
+            <td class="smallonmobile">207.231.242.252</a></td>
+            <td class="smallonmobile nowrap">2001:504:b:21::252</td>
+            <td data-sort='10000' class="smallonmobile">10 gbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/Pacific%20Wave">Pacific Wave</a></td>
+            <td class="smallonmobile">207.231.241.251</a></td>
+            <td class="smallonmobile nowrap">2001:504:b:80::251</td>
+            <td data-sort='10000' class="smallonmobile">10 gbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/Pacific%20Wave">Pacific Wave</a></td>
+            <td class="smallonmobile">207.231.243.251</a></td>
+            <td class="smallonmobile nowrap">2001:504:b:81::251</td>
+            <td data-sort='10000' class="smallonmobile">10 gbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/Pacific%20Wave">Pacific Wave</a></td>
+            <td class="smallonmobile">207.231.246.252</a></td>
+            <td class="smallonmobile nowrap">2001:504:b:90::252</td>
+            <td data-sort='10000' class="smallonmobile">10 gbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/Pacific%20Wave">Pacific Wave</a></td>
+            <td class="smallonmobile">207.231.249.252</a></td>
+            <td class="smallonmobile nowrap">2001:504:b:91::252</td>
+            <td data-sort='10000' class="smallonmobile">10 gbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='CL' class="nowrap ns"><img class="flag-img" src="/assets/flags/CL.png" title="CL"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/PIT%20Santiago%20-%20PIT%20Chile">PIT Santiago - PIT Chile</a></td>
+            <td class="smallonmobile">45.68.17.253</a></td>
+            <td class="smallonmobile nowrap">2801:14:9000::6447:1</td>
+            <td data-sort='10000' class="smallonmobile">10 gbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='MX' class="nowrap ns"><img class="flag-img" src="/assets/flags/MX.png" title="MX"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/PIT%20MX">PIT MX</a></td>
+            <td class="smallonmobile">200.23.206.183</a></td>
+            <td class="smallonmobile nowrap">2803:3440:9025::6447:1</td>
+            <td data-sort='10000' class="smallonmobile">10 gbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='DK' class="nowrap ns"><img class="flag-img" src="/assets/flags/DK.png" title="DK"><img style="margin-left: 5px;" class="flag-img" src="/assets/icons/private-localadmin.png" title="Detected Vendor: locally administered mac addresses"><img class="flag-img" src="/assets/tick.png" title="Last seen online 112 mins ago"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/Netnod%20Copenhagen%20BLUE%20--%20MTU9K">Netnod Copenhagen BLUE -- MTU9K</a></td>
+            <td class="smallonmobile">212.237.192.5</a></td>
+            <td class="smallonmobile nowrap">2001:7f8:d:202::5</td>
+            <td data-sort='10000' class="smallonmobile">10 gbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='SE' class="nowrap ns"><img class="flag-img" src="/assets/flags/SE.png" title="SE"><img style="margin-left: 5px;" class="flag-img" src="/assets/icons/private-localadmin.png" title="Detected Vendor: locally administered mac addresses"><img class="flag-img" src="/assets/tick.png" title="Last seen online 112 mins ago"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/Netnod%20Stockholm%20GREEN%20--%20MTU4470">Netnod Stockholm GREEN -- MTU4470</a></td>
+            <td class="smallonmobile">195.245.240.32</a></td>
+            <td class="smallonmobile nowrap">2001:7f8:d:fc::32</td>
+            <td data-sort='10000' class="smallonmobile">10 gbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='SE' class="nowrap ns"><img class="flag-img" src="/assets/flags/SE.png" title="SE"><img style="margin-left: 5px;" class="flag-img" src="/assets/icons/private-localadmin.png" title="Detected Vendor: locally administered mac addresses"><img class="flag-img" src="/assets/tick.png" title="Last seen online 112 mins ago"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/Netnod%20Stockholm%20GREEN%20--%20MTU1500">Netnod Stockholm GREEN -- MTU1500</a></td>
+            <td class="smallonmobile">194.68.123.32</a></td>
+            <td class="smallonmobile nowrap">2001:7f8:d:ff::32</td>
+            <td data-sort='10000' class="smallonmobile">10 gbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='SE' class="nowrap ns"><img class="flag-img" src="/assets/flags/SE.png" title="SE"><img style="margin-left: 5px;" class="flag-img" src="/assets/icons/private-localadmin.png" title="Detected Vendor: locally administered mac addresses"><img class="flag-img" src="/assets/tick.png" title="Last seen online 112 mins ago"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/Netnod%20Stockholm%20BLUE%20--%20MTU4470">Netnod Stockholm BLUE -- MTU4470</a></td>
+            <td class="smallonmobile">195.69.119.32</a></td>
+            <td class="smallonmobile nowrap">2001:7f8:d:fb::32</td>
+            <td data-sort='10000' class="smallonmobile">10 gbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/CIX-ATL">CIX-ATL</a></td>
+            <td class="smallonmobile">206.71.12.119</a></td>
+            <td class="smallonmobile nowrap">2001:504:40:12::1:119</td>
+            <td data-sort='10000' class="smallonmobile">10 gbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='SE' class="nowrap ns"><img class="flag-img" src="/assets/flags/SE.png" title="SE"><img style="margin-left: 5px;" class="flag-img" src="/assets/icons/private-localadmin.png" title="Detected Vendor: locally administered mac addresses"><img class="flag-img" src="/assets/tick.png" title="Last seen online 112 mins ago"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/Netnod%20Stockholm%20BLUE%20--%20MTU1500">Netnod Stockholm BLUE -- MTU1500</a></td>
+            <td class="smallonmobile">194.68.128.32</a></td>
+            <td class="smallonmobile nowrap">2001:7f8:d:fe::32</td>
+            <td data-sort='10000' class="smallonmobile">10 gbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/IX.br%20%28PTT.br%29%20Fortaleza">IX.br (PTT.br) Fortaleza</a></td>
+            <td class="smallonmobile">45.68.72.184</a></td>
+            <td class="smallonmobile nowrap">2001:12f8:0:9::184</td>
+            <td data-sort='1000' class="smallonmobile">1000 mbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"><img style="margin-left: 5px;" class="flag-img" src="/assets/icons/private-localadmin.png" title="Detected Vendor: locally administered mac addresses"><img class="flag-img" src="/assets/tick.png" title="Last seen online 2 hours ago"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/IX.br%20%28PTT.br%29%20S%c3%a3o%20Paulo">IX.br (PTT.br) São Paulo</a></td>
+            <td class="smallonmobile">187.16.219.166</a></td>
+            <td class="smallonmobile nowrap">2001:12f8::219:166</td>
+            <td data-sort='1000' class="smallonmobile">1000 mbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='PH' class="nowrap ns"><img class="flag-img" src="/assets/flags/PH.png" title="PH"><img style="margin-left: 5px;" class="flag-img" src="/assets/icons/proxmox.png" title="Detected Vendor: Proxmox Server Solutions GmbH"><img class="flag-img" src="/assets/tick.png" title="Last seen online 8 hours ago"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/GetaFIX%20Cebu">GetaFIX Cebu</a></td>
+            <td class="smallonmobile">116.89.244.14</a></td>
+            <td class="smallonmobile nowrap">2401:fdc0:0:1::6447:1</td>
+            <td data-sort='1000' class="smallonmobile">1000 mbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='KR' class="nowrap ns"><img class="flag-img" src="/assets/flags/KR.png" title="KR"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/KINX">KINX</a></td>
+            <td class="smallonmobile">139.150.100.100</a></td>
+            <td class="smallonmobile nowrap">2001:7fa:8::100</td>
+            <td data-sort='1000' class="smallonmobile">1000 mbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='GU' class="nowrap ns"><img class="flag-img" src="/assets/flags/GU.png" title="GU"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/MARIIX">MARIIX</a></td>
+            <td class="smallonmobile">103.115.193.21</a></td>
+            <td class="smallonmobile nowrap">2001:de9:4000::15</td>
+            <td data-sort='1000' class="smallonmobile">1000 mbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='GU' class="nowrap ns"><img class="flag-img" src="/assets/flags/GU.png" title="GU"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/GOREX">GOREX</a></td>
+            <td class="smallonmobile">192.35.145.25</a></td>
+            <td class="smallonmobile nowrap">2604:8ac0:3000:3005::2</td>
+            <td data-sort='1000' class="smallonmobile">1000 mbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='PE' class="nowrap ns"><img class="flag-img" src="/assets/flags/PE.png" title="PE"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/PIT%20-%20Peru%20-%20Lima">PIT - Peru - Lima</a></td>
+            <td class="smallonmobile">45.183.47.201</a></td>
+            <td class="smallonmobile nowrap">2803:cd60:6411:5::ab</td>
+            <td data-sort='1000' class="smallonmobile">1000 mbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='IQ' class="nowrap ns"><img class="flag-img" src="/assets/flags/IQ.png" title="IQ"><img style="margin-left: 5px;" class="flag-img" src="/assets/icons/dell.png" title="Detected Vendor: Dell Inc."><img class="flag-img" src="/assets/tick.png" title="Last seen online 48 mins ago"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/IRAQ-IXP">IRAQ-IXP</a></td>
+            <td class="smallonmobile">128.0.45.21</a></td>
+            <td class="smallonmobile nowrap">2a10:fa42:0:6:0:192f:0:1</td>
+            <td data-sort='1000' class="smallonmobile">1000 mbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='BD' class="nowrap ns"><img class="flag-img" src="/assets/flags/BD.png" title="BD"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/BDIX">BDIX</a></td>
+            <td class="smallonmobile">103.151.196.30</a></td>
+            <td class="smallonmobile nowrap">2001:df3:d680::30</td>
+            <td data-sort='1000' class="smallonmobile">1000 mbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='GH' class="nowrap ns"><img class="flag-img" src="/assets/flags/GH.png" title="GH"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/GIXA">GIXA</a></td>
+            <td class="smallonmobile">196.201.2.119</a></td>
+            <td class="smallonmobile nowrap"></td>
+            <td data-sort='1000' class="smallonmobile">1000 mbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='PH' class="nowrap ns"><img class="flag-img" src="/assets/flags/PH.png" title="PH"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/PhOpenIX-Manila">PhOpenIX-Manila</a></td>
+            <td class="smallonmobile">198.32.172.137</a></td>
+            <td class="smallonmobile nowrap">2001:478:172::137</td>
+            <td data-sort='1000' class="smallonmobile">1000 mbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='AU' class="nowrap ns"><img class="flag-img" src="/assets/flags/AU.png" title="AU"><img style="margin-left: 5px;" class="flag-img" src="/assets/icons/supermicro.png" title="Detected Vendor: Super Micro Computer, Inc."><img class="flag-img" src="/assets/tick.png" title="Last seen online 6 hours ago"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/Equinix%20Sydney">Equinix Sydney</a></td>
+            <td class="smallonmobile">45.127.172.100</a></td>
+            <td class="smallonmobile nowrap">2001:de8:6::6447:1</td>
+            <td data-sort='1000' class="smallonmobile">1000 mbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/IX.br%20%28PTT.br%29%20Rio%20de%20Janeiro">IX.br (PTT.br) Rio de Janeiro</a></td>
+            <td class="smallonmobile">45.68.80.213</a></td>
+            <td class="smallonmobile nowrap">2001:12f8:0:2::213</td>
+            <td data-sort='1000' class="smallonmobile">1000 mbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='PH' class="nowrap ns"><img class="flag-img" src="/assets/flags/PH.png" title="PH"><img style="margin-left: 5px;" class="flag-img" src="/assets/icons/proxmox.png" title="Detected Vendor: Proxmox Server Solutions GmbH"><img class="flag-img" src="/assets/tick.png" title="Last seen online 8 hours ago"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/GetaFIX%20Davao">GetaFIX Davao</a></td>
+            <td class="smallonmobile">103.125.245.11</a></td>
+            <td class="smallonmobile nowrap">2401:fdc0:0:2::6447:1</td>
+            <td data-sort='1000' class="smallonmobile">1000 mbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='SG' class="nowrap ns"><img class="flag-img" src="/assets/flags/SG.png" title="SG"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/DE-CIX%20ASEAN">DE-CIX ASEAN</a></td>
+            <td class="smallonmobile">103.162.254.36</a></td>
+            <td class="smallonmobile nowrap">2001:df6:480::192f:0:1</td>
+            <td data-sort='1000' class="smallonmobile">1000 mbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='MY' class="nowrap ns"><img class="flag-img" src="/assets/flags/MY.png" title="MY"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/DE-CIX%20Malaysia">DE-CIX Malaysia</a></td>
+            <td class="smallonmobile">103.119.232.32</a></td>
+            <td class="smallonmobile nowrap">2403:4ac0::192f:0:1</td>
+            <td data-sort='1000' class="smallonmobile">1000 mbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='TH' class="nowrap ns"><img class="flag-img" src="/assets/flags/TH.png" title="TH"><img style="margin-left: 5px;" class="flag-img" src="/assets/icons/nic.png" title="Detected Vendor: DIGITAL EQUIPMENT CORPORATION"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/BKNIX%20%28Thailand%29">BKNIX (Thailand)</a></td>
+            <td class="smallonmobile">203.159.68.20</a></td>
+            <td class="smallonmobile nowrap">2001:df5:b881::20</td>
+            <td data-sort='1000' class="smallonmobile"><abbr title="vysw.bkk.bknix - T.C.C Technology [TH]">1000 mbps</abbr></td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='MY' class="nowrap ns"><img class="flag-img" src="/assets/flags/MY.png" title="MY"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/DE-CIX%20Kuala%20Lumpur">DE-CIX Kuala Lumpur</a></td>
+            <td class="smallonmobile">103.119.234.26</a></td>
+            <td class="smallonmobile nowrap">2403:4ac0:1::192f:0:1</td>
+            <td data-sort='1000' class="smallonmobile"><abbr title="edge01.kul2 -  []">1000 mbps</abbr></td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"><img style="margin-left: 5px;" class="flag-img" src="/assets/icons/private-localadmin.png" title="Detected Vendor: locally administered mac addresses"><img class="flag-img" src="/assets/tick.png" title="Last seen online 2 hours ago"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/IX.br%20%28PTT.br%29%20S%c3%a3o%20Paulo">IX.br (PTT.br) São Paulo</a></td>
+            <td class="smallonmobile">187.16.216.223</a></td>
+            <td class="smallonmobile nowrap">2001:12f8::223</td>
+            <td data-sort='1000' class="smallonmobile">1000 mbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='SG' class="nowrap ns"><img class="flag-img" src="/assets/flags/SG.png" title="SG"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/Equinix%20Singapore">Equinix Singapore</a></td>
+            <td class="smallonmobile">27.111.228.208</a></td>
+            <td class="smallonmobile nowrap">2001:de8:4::6447:1</td>
+            <td data-sort='1000' class="smallonmobile">1000 mbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"><img style="margin-left: 5px;" class="flag-img" src="/assets/icons/nvidia.png" title="Detected Vendor: Mellanox Technologies, Inc."><img class="flag-img" src="/assets/tick.png" title="Last seen online 8 hours ago"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/SFMIX">SFMIX</a></td>
+            <td class="smallonmobile">206.197.187.28</a></td>
+            <td class="smallonmobile nowrap">2001:504:30::ba00:6447:1</td>
+            <td data-sort='1000' class="smallonmobile">1000 mbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"><img style="margin-left: 5px;" class="flag-img" src="/assets/icons/supermicro.png" title="Detected Vendor: Super Micro Computer, Inc."></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/NWAX">NWAX</a></td>
+            <td class="smallonmobile">198.32.195.240</a></td>
+            <td class="smallonmobile nowrap">2620:124:2000::240</td>
+            <td data-sort='1000' class="smallonmobile">1000 mbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='RS' class="nowrap ns"><img class="flag-img" src="/assets/flags/RS.png" title="RS"><img style="margin-left: 5px;" class="flag-img" src="/assets/icons/private-localadmin.png" title="Detected Vendor: locally administered mac addresses"><img class="flag-img" src="/assets/tick.png" title="Last seen online 45 mins ago"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/SOX%20Serbia">SOX Serbia</a></td>
+            <td class="smallonmobile">185.1.27.49</a></td>
+            <td class="smallonmobile nowrap">2001:7f8:1e::49</td>
+            <td data-sort='1000' class="smallonmobile">1000 mbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/Equinix%20Ashburn">Equinix Ashburn</a></td>
+            <td class="smallonmobile">206.126.236.142</a></td>
+            <td class="smallonmobile nowrap">2001:504:0:2::6447:1</td>
+            <td data-sort='1000' class="smallonmobile">1000 mbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='IT' class="nowrap ns"><img class="flag-img" src="/assets/flags/IT.png" title="IT"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/Namex%20Rome">Namex Rome</a></td>
+            <td class="smallonmobile">193.201.28.251</a></td>
+            <td class="smallonmobile nowrap">2001:7f8:10::6447</td>
+            <td data-sort='1000' class="smallonmobile"><abbr title="rom1-mlnx-leaf-10 - Caesar / Namex [IT]">1000 mbps</abbr></td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='GB' class="nowrap ns"><img class="flag-img" src="/assets/flags/GB.png" title="GB"><img style="margin-left: 5px;" class="flag-img" src="/assets/icons/fs.png" title="Detected Vendor: FS COM INC"><img class="flag-img" src="/assets/tick.png" title="Last seen online 68 mins ago"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/LINX%20LON2">LINX LON2</a></td>
+            <td class="smallonmobile">195.66.237.222</a></td>
+            <td class="smallonmobile nowrap">2001:7f8:4:1::192f:1</td>
+            <td data-sort='1000' class="smallonmobile">1000 mbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='NL' class="nowrap ns"><img class="flag-img" src="/assets/flags/NL.png" title="NL"><img style="margin-left: 5px;" class="flag-img" src="/assets/icons/juniper.png" title="Detected Vendor: Juniper Networks"><img class="flag-img" src="/assets/tick.png" title="Last seen online 102 mins ago"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/AMS-IX">AMS-IX</a></td>
+            <td class="smallonmobile">80.249.213.84</a></td>
+            <td class="smallonmobile nowrap">2001:7f8:1::a500:6447:2</td>
+            <td data-sort='100' class="smallonmobile"><abbr title="pxc-tel-147 - Equinix AM7 [NL]">100 mbps</abbr></td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='JP' class="nowrap ns"><img class="flag-img" src="/assets/flags/JP.png" title="JP"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/DIX-IE">DIX-IE</a></td>
+            <td class="smallonmobile">202.249.2.166</a></td>
+            <td class="smallonmobile nowrap">2001:200:0:fe00::192f:0</td>
+            <td data-sort='100' class="smallonmobile">100 mbps</td>
+        </tr>
+        
+        
+    </tbody>
+</table>
+</div>
+
+
+
+
+
+
+
+
+<a style="font-size: small;">Last Update: 2025-12-10T10:08:19Z UTC</a>
+
+
+                        </div>
+                        <div id="overlapixpsubpage">
+                        </div>
+                    </div>
+                    
+                    
+
+                    
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="superclearfix">
+            
+            <div class="superclearfix">
+                
+            </div>
+
+            <div class="superclearfix">
+                
+            </div>
+
+
+        </div>
+
+
+        <div class="group js-footer" id="footer">
+            <nav>
+                <div>
+                    <ul>
+                        <li><a href="/kb/api" target="_blank">Scripting/API</a></li>
+                        <li><a href="/credits" target="_blank">Credits</a></li>
+                        <li><a href="/pricing" target="_blank">Pricing</a></li>
+                        <li><a href="/kb/contact" target="_blank">Contact Us</a></li>
+                        <li><a href="https://github.com/bgptools/issues" target="_blank">Issue Tracker</a></li>
+                        <li><a href="/kb/setup-sessions" target="">Contribute Data</a></li>
+                        
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <script>
+    
+    var inhash = window.location.hash;
+    if (inhash == "#asinfo") {
+        
+    } else if (inhash == "#prefixes") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#prefix-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#prefixes-page');
+        aaa[0].style.display = "";
+
+    } else if (inhash == "#connectivity" || inhash == "#peers" || inhash == "#upstreams" || inhash == "#downstreams") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#connectivity-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#connectivity-page');
+        aaa[0].style.display = "";
+    } else if (inhash == "#whois") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#whois-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#whois-page');
+        aaa[0].style.display = "";
+    } else if (inhash == "#ix") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#ix-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#ix-page');
+        aaa[0].style.display = "";
+    }</script>
+
+    <script>
+    
+
+
+    ;(function() {
+  'use strict'
+
+  function scaleImageMap() {
+    function resizeMap() {
+      function resizeAreaTag(cachedAreaCoords, idx) {
+        function scale(coord) {
+          var dimension = 1 === (isWidth = 1 - isWidth) ? 'width' : 'height'
+          return (
+            padding[dimension] +
+            Math.floor(Number(coord) * scalingFactor[dimension])
+          )
+        }
+
+        var isWidth = 0
+        areas[idx].coords = cachedAreaCoords
+          .split(',')
+          .map(scale)
+          .join(',')
+      }
+
+      var scalingFactor = {
+        width: image.width / image.naturalWidth,
+        height: image.height / image.naturalHeight,
+      }
+
+      var padding = {
+        width: parseInt(
+          window.getComputedStyle(image, null).getPropertyValue('padding-left'),
+          10
+        ),
+        height: parseInt(
+          window.getComputedStyle(image, null).getPropertyValue('padding-top'),
+          10
+        ),
+      }
+
+      cachedAreaCoordsArray.forEach(resizeAreaTag)
+    }
+
+    function getCoords(e) {
+      
+      return e.coords.replace(/ *, */g, ',').replace(/ +/g, ',')
+    }
+
+    function debounce() {
+      clearTimeout(timer)
+      timer = setTimeout(resizeMap, 250)
+    }
+
+    function start() {
+      if (
+        image.width !== image.naturalWidth ||
+        image.height !== image.naturalHeight
+      ) {
+        resizeMap()
+      }
+    }
+
+    function addEventListeners() {
+      image.addEventListener('load', resizeMap, false) 
+      window.addEventListener('focus', resizeMap, false) 
+      window.addEventListener('resize', debounce, false)
+      window.addEventListener('readystatechange', resizeMap, false)
+      document.addEventListener('fullscreenchange', resizeMap, false)
+    }
+
+    function beenHere() {
+      return 'function' === typeof map._resize
+    }
+
+    function getImg(name) {
+      return document.querySelector('img[usemap="#world"]')
+    }
+
+    function setup() {
+      areas = map.getElementsByTagName('area')
+      cachedAreaCoordsArray = Array.prototype.map.call(areas, getCoords)
+      image = getImg('#' + map.name) || getImg(map.name)
+      map._resize = resizeMap 
+    }
+
+    var  
+      map = this,
+      areas = null,
+      cachedAreaCoordsArray = null,
+      image = null,
+      timer = null
+
+    if (!beenHere()) {
+      setup()
+      addEventListeners()
+      start()
+    } else {
+      map._resize() 
+    }
+  }
+
+  function factory() {
+    function chkMap(element) {
+      if (!element.tagName) {
+        throw new TypeError('Object is not a valid DOM element')
+      } else if ('MAP' !== element.tagName.toUpperCase()) {
+        throw new TypeError(
+          'Expected <MAP> tag, found <' + element.tagName + '>.'
+        )
+      }
+    }
+
+    function init(element) {
+      if (element) {
+        chkMap(element)
+        scaleImageMap.call(element)
+        maps.push(element)
+      }
+    }
+
+    var maps
+
+    return function imageMapResizeF(target) {
+      maps = [] 
+
+      switch (typeof target) {
+        case 'undefined':
+        case 'string':
+          Array.prototype.forEach.call(
+            document.querySelectorAll(target || 'map'),
+            init
+          )
+          break
+        case 'object':
+          init(target)
+          break
+        default:
+          throw new TypeError('Unexpected data type (' + typeof target + ').')
+      }
+
+      return maps
+    }
+  }
+
+  if (typeof define === 'function' && define.amd) {
+    define([], factory)
+  } else if (typeof module === 'object' && typeof module.exports === 'object') {
+    module.exports = factory() 
+  } else {
+    window.imageMapResize = factory()
+  }
+
+  if ('jQuery' in window) {
+    window.jQuery.fn.imageMapResize = function $imageMapResizeF() {
+      return this.filter('map')
+        .each(scaleImageMap)
+        .end()
+    }
+  }
+})()
+    
+    </script>
+    <script>
+        var imgEl = document.getElementById("pathimg");
+        imgEl.addEventListener("mouseover",function() {
+            imageMapResize('#world');
+        })
+    </script>
+    <script src="/assets/tablesort.min.js"></script>
+    <script>
+        addEventListener("load", (event) => {
+            
+            
+            var sort = new Tablesort(document.getElementById('donotscrapebgptools-upstreamTable'));
+            var sort2 = new Tablesort(document.getElementById('donotscrapebgptools-upstreamTablePeers'));
+            
+            
+            var sort4 = new Tablesort(document.getElementById('ixpTable'));
+            
+        });
+    </script>
+    
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        setTimeout(function() {
+
+        var beaconHttp = new XMLHttpRequest();
+        var url = '/performance-beacon';
+        var params = JSON.stringify(window.performance)
+        beaconHttp.open('POST', url, true);
+        
+        
+        beaconHttp.setRequestHeader('Content-type', 'application/json');
+        beaconHttp.setRequestHeader('visit-url', "/as/6447");
+        if (navigator.connection) {
+            beaconHttp.setRequestHeader('client-side-rtt', navigator.connection.rtt);
+        } else {
+            beaconHttp.setRequestHeader('client-side-rtt', '-2');
+        }
+        beaconHttp.onreadystatechange = function() {}
+        beaconHttp.send(params);
+        },1000)
+    }, false);
+</script>
+
+</body>
+
+
+</html>

@@ -1,0 +1,3044 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Kar-Tel LLC (AS206026) is a small BGP network that is peering with 2 other networks and has 2 upstream carriers">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000">
+    <link rel="search" type="application/opensearchdescription+xml" title="BGP.Tools" href="https://bgp.tools/opensearch.xml">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="theme-color" content="#000000">
+    <link href="https://social.bgp.tools/@bgptools" rel="me">
+    <link rel="canonical" href="https://bgp.tools/as/206026" />
+    <title>AS206026 Kar-Tel LLC - bgp.tools</title>
+    <link rel="stylesheet" type="text/css" href="/assets/main-new.css?2025-12-09-1723%20UTC">
+</head>
+
+<body>
+    <div id="container">
+        
+<div id="global-header" class="global-header-top">
+    <div class="header-sitewide">
+        <div class="global-header">
+            <div class="header-logo">
+                <a href="/" id="logo" class="content">bgp.tools</a>
+            </div>
+            <form id="search" action="/search" method="get" accept-charset="utf-8" role="search" class="top-search-header js-search-hash">
+                <div class="searchfield">
+                    <input type="search" autocomplete="off" name="q" id="site-search-text" title="Search" value="" placeholder="Start here..." autofocus="autofocus" class="js-search-focus">
+                    <button type="submit" id="search-submit" class="search-submit">Search</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div id="global-header-blob" >
+    <a id="auth-header-text" href="/login">Login</a>
+    
+</div>
+<div id="global-header-bar" >
+    <a id="auth-header-bar-text" href="/login">Login</a>
+    
+</div>
+<div class="small-clearfix"></div>
+
+        <div id="global-container">
+            
+
+
+            
+            <div class="section-tabs js-tabs">
+                <ul>
+                    
+<li class="active">
+    <h1> <a id="viewbutton-tab" href="/as/206026">View</a></h1>
+</li>
+
+<li >
+    <a id="editbutton-tab" href="/edit/as/206026">Edit</a>
+</li>
+
+
+
+
+
+                    <li style="float: right;">
+                        
+                        <img id="ws-status" width="24" height="24" src="/assets/disconnected.png" title="Not Connected To realtime data updates">
+                        
+                    </li>
+                </ul>
+            </div>
+
+            <div id="search-container">
+
+                <div class="column-full-width">
+
+                    <div class="clearfix">
+                        
+                    </div>
+                    
+                    
+
+                    <div class="network-header">
+                        
+                        <p id="network-name" class="heading-xlarge">Kar-Tel LLC</p>
+                        <p id="network-number">
+                            AS Number
+                            <strong id="ASNumberString" pure="206026">206026</strong>
+                            <br>
+                        
+                        </p>
+
+                    </div>
+
+
+                    <div class="clearfix">
+                        
+                    </div>
+
+
+                    <div class="section-tabs js-tabs">
+                        <ul>
+
+                            <li id="overview-tab-li" class="active">
+                                <a id="overview-tab" href="#asinfo">Overview</a>
+                            </li>
+                            
+                            <li id="prefix-tab-li">
+                                <a id="prefix-tab" href="#prefixes">Prefixes</a>
+                            </li>
+
+                            <li id="connectivity-tab-li">
+                                <a id="connectivity-tab" href="#connectivity">Connectivity</a>
+                            </li>
+                            
+                            <li id="whois-tab-li">
+                                <a id="whois-tab" href="#whois">Whois</a>
+                            </li>
+                        
+                        
+                        </ul>
+                    </div>
+
+<script>
+    function removeAllActiveTab() {
+        var tabs = [
+            "overview-tab-li", 
+            "prefix-tab-li", 
+            "connectivity-tab-li",
+            "whois-tab-li",
+            "ix-tab-li",
+            "issues-tab-li"
+        ];
+
+        tabs.forEach(element => {
+            var aaa = document.querySelectorAll('#'+element);
+            if(aaa.length != 0) {
+                aaa[0].classList.remove("active")
+            }
+        });
+    }
+
+    function hideAllContent() {
+        var tabs = [
+            "overview-page", 
+            "prefixes-page", 
+            "connectivity-page",
+            "whois-page",
+            "ix-page",
+            "issues-page"
+        ];
+
+        tabs.forEach(element => {
+            var aaa = document.querySelectorAll('#'+element);
+            if(aaa.length != 0) {
+                aaa[0].style.display = "none";
+            }
+        });
+        if (document.getElementById("donotscrapebgptools-prefixlist-tbody")) {
+            var prefixrows = document.getElementById("donotscrapebgptools-prefixlist-tbody").children;
+            for (var i = 0; i < prefixrows.length; i++) {
+                prefixrows[i].style = "";
+            }
+        }
+    }
+
+    var otab = document.querySelectorAll('#overview-tab');
+    otab[0].addEventListener("click", function () {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#overview-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#overview-page');
+        aaa[0].style.display = "";
+    });
+    
+
+    var ptab = document.querySelectorAll('#prefix-tab');
+    ptab[0].addEventListener("click", function () {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#prefix-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#prefixes-page');
+        aaa[0].style.display = "";
+    });
+
+    var ctab = document.querySelectorAll('#connectivity-tab');
+    ctab[0].addEventListener("click", function () {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#connectivity-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#connectivity-page');
+        aaa[0].style.display = "";
+    });
+    
+
+    var wtab = document.querySelectorAll('#whois-tab');
+    wtab[0].addEventListener("click", function () {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#whois-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#whois-page');
+        aaa[0].style.display = "";
+    });
+
+</script>
+
+
+
+                    
+                    <div id="overview-page">
+
+                        <div class="grid-row">
+                        
+                        <div class="column-two-thirds">
+                            <dl>
+                                <dt>Registered on</dt>
+                                <dd class="text data">
+                                    
+                                     7 Apr 2017 (8 years old)
+                                </dd>
+                            
+                            
+                            <dt>Registered to</dt>
+                            <dd class="text data">
+                                <a href="/rir-owner/kz.ipnet-kar-tel">kz.ipnet-kar-t...</a> (ripe)</dd>
+                                
+                            
+                            </dl>
+                        </div>
+                        
+    
+                        <dl class="column-third">
+                            <dt>Network status</dt>
+                            <dd class="text data">
+                                
+                                Active, Allocated under RIPE
+                                
+                            </dd>
+                        </dl>
+    
+                        </div>
+    
+                        <div class="grid-row">
+                            <dl class="column-two-thirds">
+                                <dt>Network type</dt>
+                                <dd class="text data">
+                                    Eyeball
+                                </dd>
+                            </dl>
+    
+                            <dl class="column-third">
+                                <dt>Prefixes Originated</dt>
+                                <dd class="data">90 IPv4, 26 IPv6</dd>
+                            </dl>
+                        </div>
+                        <div class="grid-row">
+                            <div class="column-half">
+    
+                                <h2 class="heading-medium"><derp>Upstreams</derp></h2>
+                                <ul>
+                                    
+                                    <li>
+                                        <span id="sic0">
+                                          <a href="/as/197556">AS197556</a> - TNS-Plus LLP
+                                        </span>
+                                    </li>
+                                    
+                                    <li>
+                                        <span id="sic0">
+                                          <a href="/as/35168">AS35168</a> - TNS-Plus LLP
+                                        </span>
+                                    </li>
+                                    
+                                </ul>
+    
+                            </div>
+    
+                            <div class="column-half">
+                                
+                                    <h2 class="heading-medium"><derp>Rankings</derp></h2>
+                                    
+                                    <li><span id="sic0">#2 for <a href="/rankings/KZ?sort=eyeballs">Estimated Eyeballs  in Kazakhstan</a></span></li>
+                                    
+                                    <li><span id="sic0">#80 for <a href="/rankings/KZ?sort=dns">Unique Domains  in Kazakhstan</a></span></li>
+                                    
+                                    <li><span id="sic0">#20 for <a href="/rankings/KZ?sort=peering">Known Peers  in Kazakhstan</a></span></li>
+                                    
+                                    <li><span id="sic0">#12 for <a href="/rankings/KZ?sort=v4">Originated IPv4 Space  in Kazakhstan</a></span></li>
+                                    
+                                    <li><span id="sic0">#14 for <a href="/rankings/KZ?sort=v6">Originated IPv6 Space  in Kazakhstan</a></span></li>
+                                    
+                                
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+
+                    <div style="display: none" id="prefixes-page">
+                        
+
+                        
+                        <div style="float:left">
+                            <dt>Prefixes Originated</dt>
+                            <dd class="data">90 IPv4, 26 IPv6</dd>
+                            <dd class="data"><a href="/as/206026?show-low-vis#prefixes">Show Low Visibility Prefixes</a></dd>
+                            
+                        </div>
+                        <div style="float:right">
+                                <dt>Addresses Originated</dt>
+                                <dd class="data">91 /24's of IPv4</dd>
+                                <dd class="data">416 /48's of IPv6</dd>
+                        </div>
+
+                        <div class="clearfix">
+                            
+                        </div>
+
+
+                        <table id="fhTable" class="full-width-table ">
+                            <tbody id="donotscrapebgptools-prefixlist-tbody">
+                                <tr>
+                                    <th class="nowrap">  &nbsp;  </th>
+                                    <th class="boldpls">Prefix</th>
+                                    <th class="nowrap boldpls">Description</th>
+                                </tr>
+                                <p id="readme-if-you-are-human" style="display: none;">If you are scraping this block for the prefixes that a AS originates, please use the data dumps in https://bgp.tools/kb/api and cache them</p>
+                                
+                                <tr id="pfx-5.34.25.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/cross.png" title="Matches IRR source, but under a different ASN">
+                                    </td>
+                                    <td><a href="/prefix/5.34.25.0/24">5.34.25.0/24</a></td>
+                                    <td class="smallonmobile nowrap">FTTB_Almaty</td>
+                                </tr>
+                                
+                                <tr id="pfx-5.34.26.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/cross.png" title="Matches IRR source, but under a different ASN">
+                                    </td>
+                                    <td><a href="/prefix/5.34.26.0/24">5.34.26.0/24</a></td>
+                                    <td class="smallonmobile nowrap">FTTB_Almaty</td>
+                                </tr>
+                                
+                                <tr id="pfx-5.34.27.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/cross.png" title="Matches IRR source, but under a different ASN">
+                                    </td>
+                                    <td><a href="/prefix/5.34.27.0/24">5.34.27.0/24</a></td>
+                                    <td class="smallonmobile nowrap">FTTB_Almaty</td>
+                                </tr>
+                                
+                                <tr id="pfx-5.34.28.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/5.34.28.0/24">5.34.28.0/24</a></td>
+                                    <td class="smallonmobile nowrap">FTTB_Almaty</td>
+                                </tr>
+                                
+                                <tr id="pfx-5.34.29.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/5.34.29.0/24">5.34.29.0/24</a></td>
+                                    <td class="smallonmobile nowrap">FTTB_Almaty</td>
+                                </tr>
+                                
+                                <tr id="pfx-5.34.30.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/5.34.30.0/24">5.34.30.0/24</a></td>
+                                    <td class="smallonmobile nowrap">FTTB_Almaty</td>
+                                </tr>
+                                
+                                <tr id="pfx-46.227.184.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/46.227.184.0/24">46.227.184.0/24</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-46.227.190.0/23">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/cross.png" title="Matches IRR source, but under a different ASN">
+                                    </td>
+                                    <td><a href="/prefix/46.227.190.0/23">46.227.190.0/23</a></td>
+                                    <td class="smallonmobile nowrap">Kar-Tel LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-86.107.128.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/cross.png" title="Matches IRR source, but under a different ASN">
+                                    </td>
+                                    <td><a href="/prefix/86.107.128.0/24">86.107.128.0/24</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-86.107.129.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/cross.png" title="Matches IRR source, but under a different ASN">
+                                    </td>
+                                    <td><a href="/prefix/86.107.129.0/24">86.107.129.0/24</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-86.107.130.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/cross.png" title="Matches IRR source, but under a different ASN">
+                                    </td>
+                                    <td><a href="/prefix/86.107.130.0/24">86.107.130.0/24</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-86.107.131.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/cross.png" title="Matches IRR source, but under a different ASN">
+                                    </td>
+                                    <td><a href="/prefix/86.107.131.0/24">86.107.131.0/24</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-86.107.136.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/86.107.136.0/24">86.107.136.0/24</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-86.107.137.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/86.107.137.0/24">86.107.137.0/24</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-86.107.138.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/86.107.138.0/24">86.107.138.0/24</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-86.107.139.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/86.107.139.0/24">86.107.139.0/24</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-89.37.220.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/89.37.220.0/24">89.37.220.0/24</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-89.37.221.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/89.37.221.0/24">89.37.221.0/24</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-89.37.222.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/89.37.222.0/24">89.37.222.0/24</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-89.37.223.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/89.37.223.0/24">89.37.223.0/24</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-89.40.192.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/89.40.192.0/24">89.40.192.0/24</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-89.40.193.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/89.40.193.0/24">89.40.193.0/24</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-89.40.194.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/89.40.194.0/24">89.40.194.0/24</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-89.40.195.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/89.40.195.0/24">89.40.195.0/24</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-89.42.60.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/89.42.60.0/24">89.42.60.0/24</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-89.42.61.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/89.42.61.0/24">89.42.61.0/24</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-89.42.62.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/89.42.62.0/24">89.42.62.0/24</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-91.240.8.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/91.240.8.0/24">91.240.8.0/24</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-91.240.9.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/91.240.9.0/24">91.240.9.0/24</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-91.240.10.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/91.240.10.0/24">91.240.10.0/24</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-92.49.219.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/cross.png" title="Matches IRR source, but under a different ASN">
+                                    </td>
+                                    <td><a href="/prefix/92.49.219.0/24">92.49.219.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Kar-Tel LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-92.49.231.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/cross.png" title="Matches IRR source, but under a different ASN">
+                                    </td>
+                                    <td><a href="/prefix/92.49.231.0/24">92.49.231.0/24</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-95.82.64.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/95.82.64.0/24">95.82.64.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Kar-Tel LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-95.82.66.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/95.82.66.0/24">95.82.66.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Kar-Tel LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-95.82.67.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/95.82.67.0/24">95.82.67.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Kar-Tel LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-95.82.70.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/95.82.70.0/24">95.82.70.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Kar-Tel LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-95.82.72.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/95.82.72.0/24">95.82.72.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Kar-Tel LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-95.82.74.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/95.82.74.0/24">95.82.74.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Kar-Tel LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-95.82.80.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/95.82.80.0/24">95.82.80.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Kar-Tel LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-95.82.82.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/95.82.82.0/24">95.82.82.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Kar-Tel LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-95.82.83.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/95.82.83.0/24">95.82.83.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Kar-Tel LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-95.82.84.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/95.82.84.0/24">95.82.84.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Kar-Tel LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-95.82.85.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/95.82.85.0/24">95.82.85.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Kar-Tel LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-95.82.86.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/95.82.86.0/24">95.82.86.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Kar-Tel LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-95.82.87.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/95.82.87.0/24">95.82.87.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Kar-Tel LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-95.82.88.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/95.82.88.0/24">95.82.88.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Kar-Tel LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-95.82.89.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/95.82.89.0/24">95.82.89.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Kar-Tel LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-95.82.113.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/95.82.113.0/24">95.82.113.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Kar-Tel LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-95.82.114.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/95.82.114.0/24">95.82.114.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Kar-Tel LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-95.82.115.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/95.82.115.0/24">95.82.115.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Kar-Tel LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-95.82.116.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/95.82.116.0/24">95.82.116.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Kar-Tel LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-95.82.117.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/95.82.117.0/24">95.82.117.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Kar-Tel LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-95.82.118.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/95.82.118.0/24">95.82.118.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Kar-Tel LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-95.82.119.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/95.82.119.0/24">95.82.119.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Kar-Tel LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-95.82.121.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/95.82.121.0/24">95.82.121.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Kar-Tel LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-95.82.122.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/95.82.122.0/24">95.82.122.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Kar-Tel LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-95.82.123.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/95.82.123.0/24">95.82.123.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Kar-Tel LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-95.82.124.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/95.82.124.0/24">95.82.124.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Kar-Tel LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-95.82.125.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/95.82.125.0/24">95.82.125.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Kar-Tel LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-95.82.126.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/95.82.126.0/24">95.82.126.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Kar-Tel LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-95.82.127.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/95.82.127.0/24">95.82.127.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Kar-Tel LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-109.206.5.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/109.206.5.0/24">109.206.5.0/24</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-162.255.197.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/162.255.197.0/24">162.255.197.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Kar-Tel LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-162.255.198.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/162.255.198.0/24">162.255.198.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Kar-Tel LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-162.255.199.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/162.255.199.0/24">162.255.199.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Kar-Tel LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-176.222.131.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/cross.png" title="Matches IRR source, but under a different ASN">
+                                    </td>
+                                    <td><a href="/prefix/176.222.131.0/24">176.222.131.0/24</a></td>
+                                    <td class="smallonmobile nowrap">FTTB_Taraz</td>
+                                </tr>
+                                
+                                <tr id="pfx-176.222.152.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/cross.png" title="Matches IRR source, but under a different ASN">
+                                    </td>
+                                    <td><a href="/prefix/176.222.152.0/24">176.222.152.0/24</a></td>
+                                    <td class="smallonmobile nowrap">FTTB_Almaty</td>
+                                </tr>
+                                
+                                <tr id="pfx-176.223.76.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/cross.png" title="Matches IRR source, but under a different ASN">
+                                    </td>
+                                    <td><a href="/prefix/176.223.76.0/24">176.223.76.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Kar-Tel LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-176.223.77.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/cross.png" title="Matches IRR source, but under a different ASN">
+                                    </td>
+                                    <td><a href="/prefix/176.223.77.0/24">176.223.77.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Kar-Tel LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-176.223.78.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/cross.png" title="Matches IRR source, but under a different ASN">
+                                    </td>
+                                    <td><a href="/prefix/176.223.78.0/24">176.223.78.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Kar-Tel LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-176.223.103.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/176.223.103.0/24">176.223.103.0/24</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-176.223.184.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/176.223.184.0/24">176.223.184.0/24</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-176.223.185.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/176.223.185.0/24">176.223.185.0/24</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-176.223.186.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/176.223.186.0/24">176.223.186.0/24</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-185.8.232.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/185.8.232.0/24">185.8.232.0/24</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-185.8.233.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/185.8.233.0/24">185.8.233.0/24</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-185.8.234.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/185.8.234.0/24">185.8.234.0/24</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-185.116.143.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/185.116.143.0/24">185.116.143.0/24</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-188.246.243.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/188.246.243.0/24">188.246.243.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Kar-Tel LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-188.246.244.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/188.246.244.0/24">188.246.244.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Kar-Tel LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-188.246.245.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/188.246.245.0/24">188.246.245.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Kar-Tel LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-188.246.247.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/188.246.247.0/24">188.246.247.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Kar-Tel LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-188.246.248.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/188.246.248.0/24">188.246.248.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Kar-Tel LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-188.246.249.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/188.246.249.0/24">188.246.249.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Kar-Tel LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-188.246.250.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/188.246.250.0/24">188.246.250.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Kar-Tel LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-188.246.251.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/188.246.251.0/24">188.246.251.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Kar-Tel LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-188.247.198.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/cross.png" title="Matches IRR source, but under a different ASN">
+                                    </td>
+                                    <td><a href="/prefix/188.247.198.0/24">188.247.198.0/24</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-207.174.218.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/cross.png" title="Matches IRR source, but under a different ASN">
+                                    </td>
+                                    <td><a href="/prefix/207.174.218.0/24">207.174.218.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Kar-Tel LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-207.174.219.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/cross.png" title="Matches IRR source, but under a different ASN">
+                                    </td>
+                                    <td><a href="/prefix/207.174.219.0/24">207.174.219.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Kar-Tel LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-213.109.215.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/213.109.215.0/24">213.109.215.0/24</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a0d:b201::/44">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/2a0d:b201::/44">2a0d:b201::/44</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a0d:b201:10::/44">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/2a0d:b201:10::/44">2a0d:b201:10::/44</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a0d:b201:40::/44">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/2a0d:b201:40::/44">2a0d:b201:40::/44</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a0d:b201:c0::/44">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/2a0d:b201:c0::/44">2a0d:b201:c0::/44</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a0d:b201:e0::/44">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/2a0d:b201:e0::/44">2a0d:b201:e0::/44</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a0d:b201:1000::/44">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/2a0d:b201:1000::/44">2a0d:b201:1000::/44</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a0d:b201:1010::/44">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/2a0d:b201:1010::/44">2a0d:b201:1010::/44</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a0d:b201:1020::/44">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/2a0d:b201:1020::/44">2a0d:b201:1020::/44</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a0d:b201:1030::/44">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/2a0d:b201:1030::/44">2a0d:b201:1030::/44</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a0d:b201:1040::/44">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/2a0d:b201:1040::/44">2a0d:b201:1040::/44</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a0d:b201:1050::/44">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/2a0d:b201:1050::/44">2a0d:b201:1050::/44</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a0d:b201:1060::/44">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/2a0d:b201:1060::/44">2a0d:b201:1060::/44</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a0d:b201:1070::/44">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/2a0d:b201:1070::/44">2a0d:b201:1070::/44</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a0d:b201:10a0::/44">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/2a0d:b201:10a0::/44">2a0d:b201:10a0::/44</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a0d:b201:10c0::/44">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/2a0d:b201:10c0::/44">2a0d:b201:10c0::/44</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a0d:b201:10d0::/44">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/2a0d:b201:10d0::/44">2a0d:b201:10d0::/44</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a0d:b201:10e0::/44">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/2a0d:b201:10e0::/44">2a0d:b201:10e0::/44</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a0d:b201:8040::/44">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/2a0d:b201:8040::/44">2a0d:b201:8040::/44</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a0d:b201:9030::/44">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/2a0d:b201:9030::/44">2a0d:b201:9030::/44</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a0d:b201:90c0::/44">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/2a0d:b201:90c0::/44">2a0d:b201:90c0::/44</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a0d:b201:c000::/44">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/2a0d:b201:c000::/44">2a0d:b201:c000::/44</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a0d:b201:c030::/44">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/2a0d:b201:c030::/44">2a0d:b201:c030::/44</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a0d:b201:c040::/44">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/2a0d:b201:c040::/44">2a0d:b201:c040::/44</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a0d:b201:c0c0::/44">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/2a0d:b201:c0c0::/44">2a0d:b201:c0c0::/44</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a0d:b201:c0d0::/44">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/2a0d:b201:c0d0::/44">2a0d:b201:c0d0::/44</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a0d:b201:c0e0::/44">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KZ" src="/assets/flags/KZ.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/2a0d:b201:c0e0::/44">2a0d:b201:c0e0::/44</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div style="display: none" id="connectivity-page">
+
+                        <div class="grid-row">
+
+                            <dl class="column-two-thirds">
+                                <dt><a href="#upstreams">Upstreams</a></dt>
+                                <dd class="text data">
+                                    2
+                                </dd>
+                            </dl>
+
+                            <dl class="column-third">
+                                <dt><a href="#peers">Peers</a></dt>
+                                <dd class="data">2</dd>
+                            </dl>
+                        </div>
+
+
+                        <hr>
+                        <h3>Network Policy<img class="flag-img" src="/assets/info.png" style="padding-left: 12px;" title="This info can take up to 2 hours to fully update" alt="This info take up to 2 hours to fully update"/></h3></h3>
+                        <a style="font-size: small;" href="/kb/network-policy">Click here to learn more about what this graph means and what makes up a network policy</a>
+
+                        <select id="netpolicydropdown" class="dropdownmenu">
+                            
+                                <option disabled=true value="disabled-default">Global Aggregation (disabled due to size)</option>
+                            
+
+                            
+                                
+                            
+                                
+                                <option value="8014e6f7f035891ea26ddeb1a6f4081e291d844c2728082ee12ca1ed">Policy ecstatic_feynman</option>
+                                
+                            
+                                
+                                <option value="8e361dc579eb055689920331536da1845446bd337088e0c946ba91d9">Policy bold_hamilton</option>
+                                
+                            
+                                
+                                <option value="a4b32eb0c4b9d7586a9f6dbad1fa0365cbf56cf4a2239e0af1115ec6">Policy frosty_roentgen</option>
+                                
+                            
+                                
+                                <option value="db4a0f015942ff7cdc03beca2a88aa4e4a7770473183e8d53b3f30d0">Policy infallible_maxwell</option>
+                                
+                            
+                                
+                                <option value="364077147c3d9330805fc65a8e1acba7cc05a82e5b21a09dcd29541d">Policy keen_rhodes</option>
+                                
+                            
+                                
+                                <option value="4573012b458fd700ec54ec1e3d528b03037b485b608ccf0b3cbdb6ec">Policy hardcore_bassi</option>
+                                
+                            
+                                
+                                <option value="be91fa91092af454f13e42107bb46c9e96cca32974e9ad5ab3fba2bd">Policy practical_goodall</option>
+                                
+                            
+                                
+                                <option selected value="9311011dd06a657acacfeb267351813f69fc8215c8b215e824610049">Policy upbeat_lichterman</option>
+                                
+                            
+                                
+                                <option value="eff8ed2cd4dfc41be357c9ee8295c52e0351f189814411a00809b889">Policy nervous_bohr</option>
+                                
+                            
+                                
+                                <option value="f5b21ab3394bc58fb6fd6aca4076e57c19d83b024554a66810b237fb">Policy cool_archimedes</option>
+                                
+                            
+                                
+                                <option value="0c2212a90e87ddb9a7d43ce46c05e9b500ceb48156bdf2dea308493a">Policy sweet_wu</option>
+                                
+                            
+                                
+                                <option value="1ed72bda75e954a58728c9ff8b8c716bbaa3d030de6328608e2035ce">Policy clever_khayyam</option>
+                                
+                            
+                                
+                                <option value="85397326fbfe699aa83683e678fec520483b587b7da00c428b897a1e">Policy clever_ritchie</option>
+                                
+                            
+                                
+                                <option value="e544179175205b39577a3ede37d70256fed4215e4e27498ecbd486b2">Policy vibrant_dewdney</option>
+                                
+                            
+                                
+                                <option value="00c8f52b29eeeb877c10f9bf4e0b4ef36e0c9ed1582efd08c0ee0360">Policy flamboyant_austin</option>
+                                
+                            
+                                
+                                <option value="2d5fee53f9ca398b49a3784cce25f19949913b925bf95f653730eaac">Policy xenodochial_mcnulty</option>
+                                
+                            
+                                
+                                <option value="701a1955f5bdea06012166909bea2ac81a7a817686c609f529fb223f">Policy sad_feistel</option>
+                                
+                            
+                                
+                                <option value="73af1ddaaf733bcaa02b93eba000fc327cd3be939e8edab50e3e63dd">Policy serene_lumiere</option>
+                                
+                            
+                                
+                                <option value="cabf93ad3db575e02912fa58b9aa8c89ce2a817662754ef1ae34fc5f">Policy quirky_roentgen</option>
+                                
+                            
+                                
+                                <option value="8c7bf8a7aa7185df47ce83c2ef68500356467ccccc4065d9e2491ea8">Policy cool_bell</option>
+                                
+                            
+                                
+                                <option value="a962dc19ce4c2541cf716e723f88ed1e75aa0e61c53f699e3ea507eb">Policy mystifying_hofstadter</option>
+                                
+                            
+                                
+                                <option value="b824e522abc71cb9f52977928e9db7e83c163c9ce8ab32f5940f9f05">Policy infallible_hypatia</option>
+                                
+                            
+                                
+                                <option value="c46a32a42b27e413eed223f61a72f56390c4862670bc4cd0183724a5">Policy charming_bose</option>
+                                
+                            
+                                
+                                <option value="d7af14cdaa4258c5da09f8d3e81465681b1369ab48b9ca0c458d37fa">Policy practical_rosalind</option>
+                                
+                            
+                                
+                                <option value="e48d284ca90fdacdd25292aa4b4bfd323664d565b6584e564d8db4c3">Policy determined_bartik</option>
+                                
+                            
+                                
+                                <option value="1cf61f2721d4edac3ac2b19d2651cca0d66cae7d40afb92d7f87a6f9">Policy inspiring_wozniak</option>
+                                
+                            
+                                
+                                <option value="ba4a326ceb9abc8fe15067788098d542982c0c362b70e949cde78dc6">Policy competent_vaughan</option>
+                                
+                            
+                                
+                                <option value="4a984b5d591921962b1871b9dc7ea2dda0cc318a3b02b6e8c6129693">Policy clever_blackburn</option>
+                                
+                            
+                                
+                                <option value="62efa77e9e24042764d6fc8e5aeb8b226effcdf927e2c16f3d56210e">Policy compassionate_panini</option>
+                                
+                            
+                                
+                                <option value="b32afdc8842d37ec1e81c41944de885e980da8396488486fecd8d149">Policy recursing_clarke</option>
+                                
+                            
+                                
+                                <option value="3684d8d673fd5ff99939fdc57fac3b1274d2a2bd4100afe27269ec7b">Policy elegant_goodall</option>
+                                
+                            
+
+                            
+
+
+                        </select>
+
+                        <script>var netgroups = {"00c8f52b29eeeb877c10f9bf4e0b4ef36e0c9ed1582efd08c0ee0360":["89.42.61.0/24"],"0c2212a90e87ddb9a7d43ce46c05e9b500ceb48156bdf2dea308493a":["91.240.9.0/24","95.82.72.0/24","92.49.219.0/24","95.82.83.0/24"],"1cf61f2721d4edac3ac2b19d2651cca0d66cae7d40afb92d7f87a6f9":["95.82.82.0/24"],"1ed72bda75e954a58728c9ff8b8c716bbaa3d030de6328608e2035ce":["188.246.243.0/24","188.246.247.0/24","95.82.70.0/24"],"2d5fee53f9ca398b49a3784cce25f19949913b925bf95f653730eaac":["188.246.248.0/24","95.82.118.0/24","95.82.86.0/24","188.246.251.0/24","95.82.67.0/24"],"364077147c3d9330805fc65a8e1acba7cc05a82e5b21a09dcd29541d":["176.222.152.0/24"],"3684d8d673fd5ff99939fdc57fac3b1274d2a2bd4100afe27269ec7b":["176.223.78.0/24","176.222.131.0/24"],"4573012b458fd700ec54ec1e3d528b03037b485b608ccf0b3cbdb6ec":["2a0d:b201:90c0::/44"],"4a984b5d591921962b1871b9dc7ea2dda0cc318a3b02b6e8c6129693":["176.223.185.0/24","176.223.186.0/24","95.82.89.0/24","95.82.80.0/24"],"62efa77e9e24042764d6fc8e5aeb8b226effcdf927e2c16f3d56210e":["95.82.115.0/24"],"701a1955f5bdea06012166909bea2ac81a7a817686c609f529fb223f":["162.255.197.0/24","162.255.198.0/24"],"73af1ddaaf733bcaa02b93eba000fc327cd3be939e8edab50e3e63dd":["95.82.84.0/24","95.82.85.0/24"],"8014e6f7f035891ea26ddeb1a6f4081e291d844c2728082ee12ca1ed":["188.246.245.0/24","188.246.249.0/24"],"85397326fbfe699aa83683e678fec520483b587b7da00c428b897a1e":["2a0d:b201:8040::/44"],"8c7bf8a7aa7185df47ce83c2ef68500356467ccccc4065d9e2491ea8":["185.116.143.0/24","5.34.25.0/24"],"8e361dc579eb055689920331536da1845446bd337088e0c946ba91d9":["2a0d:b201:1070::/44","2a0d:b201:1000::/44","2a0d:b201:1060::/44","2a0d:b201:10a0::/44","2a0d:b201:1040::/44","2a0d:b201:1020::/44","2a0d:b201:1030::/44","2a0d:b201:1050::/44","2a0d:b201:10d0::/44","2a0d:b201:10c0::/44","2a0d:b201:10e0::/44"],"9311011dd06a657acacfeb267351813f69fc8215c8b215e824610049":["95.82.127.0/24","95.82.113.0/24","176.223.76.0/24","95.82.66.0/24","95.82.64.0/24","95.82.125.0/24","95.82.122.0/24","5.34.26.0/24","188.246.250.0/24","95.82.121.0/24","89.42.62.0/24","89.42.60.0/24","95.82.114.0/24","95.82.126.0/24","176.223.103.0/24","188.246.244.0/24","95.82.117.0/24","95.82.88.0/24","91.240.8.0/24","176.223.77.0/24","95.82.119.0/24","89.37.220.0/24"],"a4b32eb0c4b9d7586a9f6dbad1fa0365cbf56cf4a2239e0af1115ec6":["162.255.199.0/24"],"a962dc19ce4c2541cf716e723f88ed1e75aa0e61c53f699e3ea507eb":["2a0d:b201:c040::/44"],"b32afdc8842d37ec1e81c41944de885e980da8396488486fecd8d149":["176.223.184.0/24","89.37.221.0/24"],"b824e522abc71cb9f52977928e9db7e83c163c9ce8ab32f5940f9f05":["2a0d:b201:c030::/44"],"ba4a326ceb9abc8fe15067788098d542982c0c362b70e949cde78dc6":["95.82.124.0/24"],"be91fa91092af454f13e42107bb46c9e96cca32974e9ad5ab3fba2bd":["92.49.231.0/24"],"c46a32a42b27e413eed223f61a72f56390c4862670bc4cd0183724a5":["95.82.74.0/24"],"cabf93ad3db575e02912fa58b9aa8c89ce2a817662754ef1ae34fc5f":["46.227.184.0/24","185.8.233.0/24","46.227.190.0/23","185.8.232.0/24","185.8.234.0/24"],"d7af14cdaa4258c5da09f8d3e81465681b1369ab48b9ca0c458d37fa":["89.40.193.0/24","89.40.195.0/24","89.40.192.0/24"],"db4a0f015942ff7cdc03beca2a88aa4e4a7770473183e8d53b3f30d0":["95.82.116.0/24","95.82.87.0/24","95.82.123.0/24"],"e48d284ca90fdacdd25292aa4b4bfd323664d565b6584e564d8db4c3":["2a0d:b201:c0c0::/44","2a0d:b201:c0::/44","2a0d:b201:c0e0::/44","2a0d:b201:c000::/44","2a0d:b201::/44","2a0d:b201:c0d0::/44","2a0d:b201:e0::/44"],"e544179175205b39577a3ede37d70256fed4215e4e27498ecbd486b2":["2a0d:b201:1010::/44"],"eff8ed2cd4dfc41be357c9ee8295c52e0351f189814411a00809b889":["91.240.10.0/24"],"f5b21ab3394bc58fb6fd6aca4076e57c19d83b024554a66810b237fb":["2a0d:b201:40::/44","2a0d:b201:9030::/44","2a0d:b201:10::/44"]}</script>
+
+                        <div style="text-align: center;">
+                            <img id="pathimg" usemap="#world" src="">
+                            <div id="world2"></div>
+                        </div>
+
+                        <details>
+                            <summary>Chart Display Options</summary>
+                            <noscript>This requires javascript to work</noscript>
+                            <label for="graphOptionMoreWiggle" style="display: flex;align-items: center;font-size: 20px;">
+                                <input type="checkbox" id="graphOptionMoreWiggle" name="graphOptionMoreWiggle" style="width: 64px; height: 32px;">
+                                    <p id="graphOptionMoreWiggleLabel" style="width: 200%;">Display links using non straight lines</p>
+                            </label>
+                        </details>
+
+                        <h3 style="display: none;" id="PISPBanner">Prefixes in selected policy</h3>
+                        <table id="policytable" class="full-width-table">
+                        </table>
+                        <button style="width:100%;display: none;" id="ShowFullPolicyButton" class="bigButton" onclick="dropdownPoke()">Load all prefixes in policy</button>
+
+                        <script>
+                            !function(a,b){"function"==typeof define&&define.amd?define([],b):"undefined"!=typeof module&&module.exports?module.exports=b():a.ReconnectingWebSocket=b()}(this,function(){function a(b,c,d){function l(a,b){var c=document.createEvent("CustomEvent");return c.initCustomEvent(a,!1,!1,b),c}var e={debug:!1,automaticOpen:!0,reconnectInterval:1e3,maxReconnectInterval:3e4,reconnectDecay:1.5,timeoutInterval:2e3};d||(d={});for(var f in e)this[f]="undefined"!=typeof d[f]?d[f]:e[f];this.url=b,this.reconnectAttempts=0,this.readyState=WebSocket.CONNECTING,this.protocol=null;var h,g=this,i=!1,j=!1,k=document.createElement("div");k.addEventListener("open",function(a){g.onopen(a)}),k.addEventListener("close",function(a){g.onclose(a)}),k.addEventListener("connecting",function(a){g.onconnecting(a)}),k.addEventListener("message",function(a){g.onmessage(a)}),k.addEventListener("error",function(a){g.onerror(a)}),this.addEventListener=k.addEventListener.bind(k),this.removeEventListener=k.removeEventListener.bind(k),this.dispatchEvent=k.dispatchEvent.bind(k),this.open=function(b){h=new WebSocket(g.url,c||[]),b||k.dispatchEvent(l("connecting")),(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","attempt-connect",g.url);var d=h,e=setTimeout(function(){(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","connection-timeout",g.url),j=!0,d.close(),j=!1},g.timeoutInterval);h.onopen=function(){clearTimeout(e),(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","onopen",g.url),g.protocol=h.protocol,g.readyState=WebSocket.OPEN,g.reconnectAttempts=0;var d=l("open");d.isReconnect=b,b=!1,k.dispatchEvent(d)},h.onclose=function(c){if(clearTimeout(e),h=null,i)g.readyState=WebSocket.CLOSED,k.dispatchEvent(l("close"));else{g.readyState=WebSocket.CONNECTING;var d=l("connecting");d.code=c.code,d.reason=c.reason,d.wasClean=c.wasClean,k.dispatchEvent(d),b||j||((g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","onclose",g.url),k.dispatchEvent(l("close")));var e=g.reconnectInterval*Math.pow(g.reconnectDecay,g.reconnectAttempts);setTimeout(function(){g.reconnectAttempts++,g.open(!0)},e>g.maxReconnectInterval?g.maxReconnectInterval:e)}},h.onmessage=function(b){(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","onmessage",g.url,b.data);var c=l("message");c.data=b.data,k.dispatchEvent(c)},h.onerror=function(b){(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","onerror",g.url,b),k.dispatchEvent(l("error"))}},1==this.automaticOpen&&this.open(!1),this.send=function(b){if(h)return(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","send",g.url,b),h.send(b);throw"INVALID_STATE_ERR : Pausing to reconnect websocket"},this.close=function(a,b){"undefined"==typeof a&&(a=1e3),i=!0,h&&h.close(a,b)},this.refresh=function(){h&&h.close()}}return a.prototype.onopen=function(){},a.prototype.onclose=function(){},a.prototype.onconnecting=function(){},a.prototype.onmessage=function(){},a.prototype.onerror=function(){},a.debugAll=!1,a.CONNECTING=WebSocket.CONNECTING,a.OPEN=WebSocket.OPEN,a.CLOSING=WebSocket.CLOSING,a.CLOSED=WebSocket.CLOSED,a});
+                        </script>
+                        
+                        <script>
+                            var prefixinfo = [{"PrefixString":"5.34.25.0/24","WhoisName":"FTTB_Almaty","WhoisCountry":"KZ"},{"PrefixString":"5.34.26.0/24","WhoisName":"FTTB_Almaty","WhoisCountry":"KZ"},{"PrefixString":"5.34.27.0/24","WhoisName":"FTTB_Almaty","WhoisCountry":"KZ"},{"PrefixString":"5.34.28.0/24","WhoisName":"FTTB_Almaty","WhoisCountry":"KZ"},{"PrefixString":"5.34.29.0/24","WhoisName":"FTTB_Almaty","WhoisCountry":"KZ"},{"PrefixString":"5.34.30.0/24","WhoisName":"FTTB_Almaty","WhoisCountry":"KZ"},{"PrefixString":"46.227.184.0/24","WhoisName":"-","WhoisCountry":"KZ"},{"PrefixString":"46.227.190.0/23","WhoisName":"Kar-Tel LLC","WhoisCountry":"KZ"},{"PrefixString":"86.107.128.0/24","WhoisName":"-","WhoisCountry":"KZ"},{"PrefixString":"86.107.129.0/24","WhoisName":"-","WhoisCountry":"KZ"},{"PrefixString":"86.107.130.0/24","WhoisName":"-","WhoisCountry":"KZ"},{"PrefixString":"86.107.131.0/24","WhoisName":"-","WhoisCountry":"KZ"},{"PrefixString":"86.107.136.0/24","WhoisName":"-","WhoisCountry":"KZ"},{"PrefixString":"86.107.137.0/24","WhoisName":"-","WhoisCountry":"KZ"},{"PrefixString":"86.107.138.0/24","WhoisName":"-","WhoisCountry":"KZ"},{"PrefixString":"86.107.139.0/24","WhoisName":"-","WhoisCountry":"KZ"},{"PrefixString":"89.37.220.0/24","WhoisName":"-","WhoisCountry":"KZ"},{"PrefixString":"89.37.221.0/24","WhoisName":"-","WhoisCountry":"KZ"},{"PrefixString":"89.37.222.0/24","WhoisName":"-","WhoisCountry":"KZ"},{"PrefixString":"89.37.223.0/24","WhoisName":"-","WhoisCountry":"KZ"},{"PrefixString":"89.40.192.0/24","WhoisName":"-","WhoisCountry":"KZ"},{"PrefixString":"89.40.193.0/24","WhoisName":"-","WhoisCountry":"KZ"},{"PrefixString":"89.40.194.0/24","WhoisName":"-","WhoisCountry":"KZ"},{"PrefixString":"89.40.195.0/24","WhoisName":"-","WhoisCountry":"KZ"},{"PrefixString":"89.42.60.0/24","WhoisName":"-","WhoisCountry":"KZ"},{"PrefixString":"89.42.61.0/24","WhoisName":"-","WhoisCountry":"KZ"},{"PrefixString":"89.42.62.0/24","WhoisName":"-","WhoisCountry":"KZ"},{"PrefixString":"91.240.8.0/24","WhoisName":"-","WhoisCountry":"KZ"},{"PrefixString":"91.240.9.0/24","WhoisName":"-","WhoisCountry":"KZ"},{"PrefixString":"91.240.10.0/24","WhoisName":"-","WhoisCountry":"KZ"},{"PrefixString":"92.49.219.0/24","WhoisName":"Kar-Tel LLC","WhoisCountry":"KZ"},{"PrefixString":"92.49.231.0/24","WhoisName":"-","WhoisCountry":"KZ"},{"PrefixString":"95.82.64.0/24","WhoisName":"Kar-Tel LLC","WhoisCountry":"KZ"},{"PrefixString":"95.82.66.0/24","WhoisName":"Kar-Tel LLC","WhoisCountry":"KZ"},{"PrefixString":"95.82.67.0/24","WhoisName":"Kar-Tel LLC","WhoisCountry":"KZ"},{"PrefixString":"95.82.70.0/24","WhoisName":"Kar-Tel LLC","WhoisCountry":"KZ"},{"PrefixString":"95.82.72.0/24","WhoisName":"Kar-Tel LLC","WhoisCountry":"KZ"},{"PrefixString":"95.82.74.0/24","WhoisName":"Kar-Tel LLC","WhoisCountry":"KZ"},{"PrefixString":"95.82.80.0/24","WhoisName":"Kar-Tel LLC","WhoisCountry":"KZ"},{"PrefixString":"95.82.82.0/24","WhoisName":"Kar-Tel LLC","WhoisCountry":"KZ"},{"PrefixString":"95.82.83.0/24","WhoisName":"Kar-Tel LLC","WhoisCountry":"KZ"},{"PrefixString":"95.82.84.0/24","WhoisName":"Kar-Tel LLC","WhoisCountry":"KZ"},{"PrefixString":"95.82.85.0/24","WhoisName":"Kar-Tel LLC","WhoisCountry":"KZ"},{"PrefixString":"95.82.86.0/24","WhoisName":"Kar-Tel LLC","WhoisCountry":"KZ"},{"PrefixString":"95.82.87.0/24","WhoisName":"Kar-Tel LLC","WhoisCountry":"KZ"},{"PrefixString":"95.82.88.0/24","WhoisName":"Kar-Tel LLC","WhoisCountry":"KZ"},{"PrefixString":"95.82.89.0/24","WhoisName":"Kar-Tel LLC","WhoisCountry":"KZ"},{"PrefixString":"95.82.113.0/24","WhoisName":"Kar-Tel LLC","WhoisCountry":"KZ"},{"PrefixString":"95.82.114.0/24","WhoisName":"Kar-Tel LLC","WhoisCountry":"KZ"},{"PrefixString":"95.82.115.0/24","WhoisName":"Kar-Tel LLC","WhoisCountry":"KZ"},{"PrefixString":"95.82.116.0/24","WhoisName":"Kar-Tel LLC","WhoisCountry":"KZ"},{"PrefixString":"95.82.117.0/24","WhoisName":"Kar-Tel LLC","WhoisCountry":"KZ"},{"PrefixString":"95.82.118.0/24","WhoisName":"Kar-Tel LLC","WhoisCountry":"KZ"},{"PrefixString":"95.82.119.0/24","WhoisName":"Kar-Tel LLC","WhoisCountry":"KZ"},{"PrefixString":"95.82.121.0/24","WhoisName":"Kar-Tel LLC","WhoisCountry":"KZ"},{"PrefixString":"95.82.122.0/24","WhoisName":"Kar-Tel LLC","WhoisCountry":"KZ"},{"PrefixString":"95.82.123.0/24","WhoisName":"Kar-Tel LLC","WhoisCountry":"KZ"},{"PrefixString":"95.82.124.0/24","WhoisName":"Kar-Tel LLC","WhoisCountry":"KZ"},{"PrefixString":"95.82.125.0/24","WhoisName":"Kar-Tel LLC","WhoisCountry":"KZ"},{"PrefixString":"95.82.126.0/24","WhoisName":"Kar-Tel LLC","WhoisCountry":"KZ"},{"PrefixString":"95.82.127.0/24","WhoisName":"Kar-Tel LLC","WhoisCountry":"KZ"},{"PrefixString":"109.206.5.0/24","WhoisName":"-","WhoisCountry":"KZ"},{"PrefixString":"162.255.197.0/24","WhoisName":"Kar-Tel LLC","WhoisCountry":"KZ"},{"PrefixString":"162.255.198.0/24","WhoisName":"Kar-Tel LLC","WhoisCountry":"KZ"},{"PrefixString":"162.255.199.0/24","WhoisName":"Kar-Tel LLC","WhoisCountry":"KZ"},{"PrefixString":"176.222.131.0/24","WhoisName":"FTTB_Taraz","WhoisCountry":"KZ"},{"PrefixString":"176.222.152.0/24","WhoisName":"FTTB_Almaty","WhoisCountry":"KZ"},{"PrefixString":"176.223.76.0/24","WhoisName":"Kar-Tel LLC","WhoisCountry":"KZ"},{"PrefixString":"176.223.77.0/24","WhoisName":"Kar-Tel LLC","WhoisCountry":"KZ"},{"PrefixString":"176.223.78.0/24","WhoisName":"Kar-Tel LLC","WhoisCountry":"KZ"},{"PrefixString":"176.223.103.0/24","WhoisName":"-","WhoisCountry":"KZ"},{"PrefixString":"176.223.184.0/24","WhoisName":"-","WhoisCountry":"KZ"},{"PrefixString":"176.223.185.0/24","WhoisName":"-","WhoisCountry":"KZ"},{"PrefixString":"176.223.186.0/24","WhoisName":"-","WhoisCountry":"KZ"},{"PrefixString":"185.8.232.0/24","WhoisName":"-","WhoisCountry":"KZ"},{"PrefixString":"185.8.233.0/24","WhoisName":"-","WhoisCountry":"KZ"},{"PrefixString":"185.8.234.0/24","WhoisName":"-","WhoisCountry":"KZ"},{"PrefixString":"185.116.143.0/24","WhoisName":"-","WhoisCountry":"KZ"},{"PrefixString":"188.246.243.0/24","WhoisName":"Kar-Tel LLC","WhoisCountry":"KZ"},{"PrefixString":"188.246.244.0/24","WhoisName":"Kar-Tel LLC","WhoisCountry":"KZ"},{"PrefixString":"188.246.245.0/24","WhoisName":"Kar-Tel LLC","WhoisCountry":"KZ"},{"PrefixString":"188.246.247.0/24","WhoisName":"Kar-Tel LLC","WhoisCountry":"KZ"},{"PrefixString":"188.246.248.0/24","WhoisName":"Kar-Tel LLC","WhoisCountry":"KZ"},{"PrefixString":"188.246.249.0/24","WhoisName":"Kar-Tel LLC","WhoisCountry":"KZ"},{"PrefixString":"188.246.250.0/24","WhoisName":"Kar-Tel LLC","WhoisCountry":"KZ"},{"PrefixString":"188.246.251.0/24","WhoisName":"Kar-Tel LLC","WhoisCountry":"KZ"},{"PrefixString":"188.247.198.0/24","WhoisName":"-","WhoisCountry":"KZ"},{"PrefixString":"207.174.218.0/24","WhoisName":"Kar-Tel LLC","WhoisCountry":"KZ"},{"PrefixString":"207.174.219.0/24","WhoisName":"Kar-Tel LLC","WhoisCountry":"KZ"},{"PrefixString":"213.109.215.0/24","WhoisName":"-","WhoisCountry":"KZ"},{"PrefixString":"2a0d:b201::/44","WhoisName":"-","WhoisCountry":"KZ"},{"PrefixString":"2a0d:b201:10::/44","WhoisName":"-","WhoisCountry":"KZ"},{"PrefixString":"2a0d:b201:40::/44","WhoisName":"-","WhoisCountry":"KZ"},{"PrefixString":"2a0d:b201:c0::/44","WhoisName":"-","WhoisCountry":"KZ"},{"PrefixString":"2a0d:b201:e0::/44","WhoisName":"-","WhoisCountry":"KZ"},{"PrefixString":"2a0d:b201:1000::/44","WhoisName":"-","WhoisCountry":"KZ"},{"PrefixString":"2a0d:b201:1010::/44","WhoisName":"-","WhoisCountry":"KZ"},{"PrefixString":"2a0d:b201:1020::/44","WhoisName":"-","WhoisCountry":"KZ"},{"PrefixString":"2a0d:b201:1030::/44","WhoisName":"-","WhoisCountry":"KZ"},{"PrefixString":"2a0d:b201:1040::/44","WhoisName":"-","WhoisCountry":"KZ"},{"PrefixString":"2a0d:b201:1050::/44","WhoisName":"-","WhoisCountry":"KZ"},{"PrefixString":"2a0d:b201:1060::/44","WhoisName":"-","WhoisCountry":"KZ"},{"PrefixString":"2a0d:b201:1070::/44","WhoisName":"-","WhoisCountry":"KZ"},{"PrefixString":"2a0d:b201:10a0::/44","WhoisName":"-","WhoisCountry":"KZ"},{"PrefixString":"2a0d:b201:10c0::/44","WhoisName":"-","WhoisCountry":"KZ"},{"PrefixString":"2a0d:b201:10d0::/44","WhoisName":"-","WhoisCountry":"KZ"},{"PrefixString":"2a0d:b201:10e0::/44","WhoisName":"-","WhoisCountry":"KZ"},{"PrefixString":"2a0d:b201:8040::/44","WhoisName":"-","WhoisCountry":"KZ"},{"PrefixString":"2a0d:b201:9030::/44","WhoisName":"-","WhoisCountry":"KZ"},{"PrefixString":"2a0d:b201:90c0::/44","WhoisName":"-","WhoisCountry":"KZ"},{"PrefixString":"2a0d:b201:c000::/44","WhoisName":"-","WhoisCountry":"KZ"},{"PrefixString":"2a0d:b201:c030::/44","WhoisName":"-","WhoisCountry":"KZ"},{"PrefixString":"2a0d:b201:c040::/44","WhoisName":"-","WhoisCountry":"KZ"},{"PrefixString":"2a0d:b201:c0c0::/44","WhoisName":"-","WhoisCountry":"KZ"},{"PrefixString":"2a0d:b201:c0d0::/44","WhoisName":"-","WhoisCountry":"KZ"},{"PrefixString":"2a0d:b201:c0e0::/44","WhoisName":"-","WhoisCountry":"KZ"}]
+                            var asn =  206026 
+
+                            var pfxExtraString = "";
+
+                            function saveGraphOptionsToLocalStorage() {
+                                localStorage.setItem("pfx-chart-options:wiggle", document.getElementById("graphOptionMoreWiggle").checked);
+                            }
+
+                            function loadGraphOptionsToLocalStorage() {
+                                document.getElementById("graphOptionMoreWiggle").checked = localStorage.getItem("pfx-chart-options:wiggle") == "true";
+                                pfxExtraString= "";
+                                if (document.getElementById("graphOptionMoreWiggle").checked) {
+                                    pfxExtraString = pfxExtraString + "&wiggly";
+                                }
+                            }
+                            loadGraphOptionsToLocalStorage();
+
+                            function graphOptionsChanged() {
+                                saveGraphOptionsToLocalStorage();
+                                handleImageChange();
+                            }
+                            document.getElementById("graphOptionMoreWiggle").addEventListener("click", graphOptionsChanged)
+
+
+                            function handleImageChange() {
+                                loadGraphOptionsToLocalStorage();
+                                
+                                document.getElementById("pathimg").src=("/pathimg/"+asn+ "-" + document.getElementById("netpolicydropdown").value +"?"+pfxExtraString);
+                                var request = new XMLHttpRequest();
+                                request.open('GET', "/pathimg/"+asn+ "-" + document.getElementById("netpolicydropdown").value + "?map=true" + pfxExtraString, true);
+
+                                request.onload = function() {
+                                    if (this.status >= 200 && this.status < 400) {
+                                        
+                                        
+                                        document.getElementById("world2").innerHTML = this.response;
+                                        setTimeout(function(){
+                                            imageMapResize('#world');
+                                        },1000)
+                                    }
+                                };
+                                request.send();
+                                buildPrefixTable();
+                            } 
+
+                            function encodeHTML(s) {
+                                return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
+                            }
+
+                            function dropdownPoke(){
+                                InteractedWithPolicyTableYet=true;
+                                handleImageChange();
+                            }
+
+                            var InteractedWithPolicyTableYet = false;
+                            var OverloadPolicySize = 0;
+                            function buildPrefixTable() {
+                                var policy = document.getElementById("netpolicydropdown").value;
+                                
+                                var cidrs = netgroups[policy];
+                                var ihtml = "<tbody> <tr> <th class=\"nowrap\">  -  </th> <th>Prefix</th> <th class=\"nowrap\">Description</th> </tr>";
+
+                                
+                                var aaa = document.querySelectorAll('#PISPBanner');
+                                var bbb = document.querySelectorAll('#policytable');
+                                var n = 0
+                                if (cidrs) {
+                                    aaa[0].style.display = "";
+                                    bbb[0].style.display = "";
+                                    cidrs.forEach(cidr => {
+                                        var obj = {};
+                                        var dont =false;
+                                        n++;
+                                        
+                                        if (!InteractedWithPolicyTableYet) {
+                                            if (n == 5) {
+                                                dont = true;
+                                            } else if (n > 5) {
+                                                dont = true;
+                                            }
+                                        }
+                                        
+                                        if (!dont) {
+                                            prefixinfo.forEach(el => {
+                                                if(el.PrefixString == cidr) {
+                                                    
+                                                        ihtml += "<tr><td class=\"nowrap ns\"><img class=\"flag-img\" src=\"/assets/flags/"+el.WhoisCountry+".png\" title=\""+el.WhoisCountry+"\"></td>"
+                                                        ihtml += "<td><a href=\"/prefix/"+el.PrefixString+"\">"+el.PrefixString+"</a></td>"
+                                                        ihtml += "<td class=\"nowrap\">"+encodeHTML(el.WhoisName)+"</td></tr>"
+                                                }
+                                            });
+                                        } else {
+                                            OverloadPolicySize++;
+                                        }
+                                    });
+                                    document.getElementById("policytable").innerHTML = ihtml
+                                    var PolButton = document.querySelectorAll('#ShowFullPolicyButton');
+                                    if (!InteractedWithPolicyTableYet && OverloadPolicySize!=0) {
+                                        PolButton[0].style="width:100%";
+                                        PolButton[0].innerHTML = "Load all "+OverloadPolicySize+" prefixes in policy"
+                                    } else {
+                                        PolButton[0].style="display:none;";
+                                    }
+                                    
+                                } else {
+                                    aaa[0].style.display = "none";
+                                    bbb[0].style.display = "none";
+                                }
+                            }
+
+
+                            var pathdropdown = document.querySelectorAll('#netpolicydropdown');
+                            pathdropdown[0].addEventListener("change",dropdownPoke)
+                            handleImageChange()
+                            buildPrefixTable()
+
+                            document.addEventListener("load", function(){
+                                
+                                handleImageChange()
+                            });
+
+                            function uuidv4() {
+                                return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+                                    var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+                                    return v.toString(16);
+                                });
+                            }
+
+                            
+                            let realTimeSocket = new ReconnectingWebSocket("wss://bgp.tools/ws/rt-asn?prefix=AS206026" + "&magic=" + encodeURIComponent("V2TPAHV4NKWKEHNWACCIJ2B2M3GF7SOOBBMOHIBH22LQNWHWJEDA===="));
+                            
+                            realTimeSocket.onmessage = function(event) {
+                                console.log(`[message] Data received from server: ${event.data}`);
+                                if (event.data == "Running.") {
+                                    document.getElementById("ws-status").src = "/assets/connected.png";
+                                    document.getElementById("ws-status").title = "Connected to realtime data";
+                                } else if (event.data == "STOP-CONNECTING") {
+                                    document.getElementById("ws-status").src = disconectedIcon;
+                                    document.getElementById("ws-status").title = "Not connected to realtime data";
+                                    realTimeSocket.maxReconnectAttempts = 1;
+                                    realTimeSocket.close()
+                                } else {
+                                    var obj = JSON.parse(event.data);
+                                    var elm = document.getElementById("pfx-"+obj.Prefix);
+                                    if (!elm && obj.Vis > 6) {
+                                        var tblist = document.getElementById("donotscrapebgptools-prefixlist-tbody");
+                                        var node = document.createElement("tr");                 
+                                        node.outerHTML = '<tr id="pfx-'+obj.Prefix+'"><td class="nowrap"><img class="flag-img" src="/assets/flags/'+obj.Whois.WhoisCountry+'.png" title="'+obj.Whois.WhoisCountry+'"></td><td><a href="/prefix/'+obj.Prefix+'">'+obj.Prefix+'</a></td><td class="smallonmobile nowrap">'+obj.Whois.WhoisName+'</td></tr>';
+                                        tblist.appendChild(node);                              
+                                    }
+                                    if (!elm) {
+                                        elm = document.getElementById("pfx-"+obj.Prefix);
+                                    }
+                                    
+                                    if (obj.Vis > 70) {
+                                        if (elm.style) {
+                                            var es = elm.style;
+                                            if (es.animation.includes("pulse1b")) {
+                                                elm.style = "animation: pulse2b 1s 1;";
+                                            } else if (es.animation.includes("pulse2b")) {
+                                                elm.style = "animation: pulse1b 1s 1;";
+                                            } else {
+                                                elm.style = "animation: pulse1b 1s 1;";
+                                            }
+                                        }
+                                    } else if (obj.Vis < 5) {
+                                        
+                                        var elm = document.getElementById("pfx-"+obj.Prefix);
+                                        if (elm) {
+                                            elm.parentNode.removeChild(elm);
+                                        }
+                                    } else {
+                                        if (elm.style) {
+                                            var es = elm.style;
+                                            if (es.animation.includes("pulse1r")) {
+                                                elm.style = "animation: pulse2r 1s 1;";
+                                            } else if (es.animation.includes("pulse2r")) {
+                                                elm.style = "animation: pulse1r 1s 1;";
+                                            } else {
+                                                elm.style = "animation: pulse1r 1s 1;";
+                                            }
+                                        }
+                                    }
+                                }
+                            };
+                            var disconectedIcon = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAAZlBMVEX/ewBZWVn/ewf/ew5fWljudiP8egp6XVT6eRHodSmVYU6hZEzObjrldCv3eRZ/XlNjWliHX1KrZkngci71eBl1XFXCa0CKYFHydx18XlSQYE+lZUq0aEbJbT3SbzhvXFaLYFG8akLYdYVFAAABQElEQVRIx5XV25KDIAwGYIKASLutqOtZ277/S26xK4ozJea/qRdfajATZaRkd6B6oPoL1d9QphUn+WvXmGF8TfN8yvNrDj6nvNj5Hu8n8HCh9ONiON5PEKuQx55DmFTHC1R9uMOjYkhFERbkEikofw8FGe5t0FWJ+kLvz5H+t8RdGD9k8TeebBXpzwIZT955XyVBtHHeXYzeJy5fhydtoZffZvUMSfvxT4BOeI/G/b9paxH1at8XQF8xNcV8aaQvHQBMhY/XttsdYp5nah3XdvIqui61Cjy+jqLwXp1cx9XLQZ5cR/vx1p8cez2IWrlxYY/T9bNVyCfmdQdbxNgs441FNRAEHS83oe9ahmTw1p88nhHCiAkpeIUeX5eJ6NlM9Gwm+uxO9/3F2PSR597jn1+udCWzUp7150P1jOoZ1f8BGPARG85JosIAAAAASUVORK5CYII=";
+                            realTimeSocket.onerror = function(error) {
+                                document.getElementById("ws-status").src = disconectedIcon;
+                                document.getElementById("ws-status").title = "Not connected to realtime data";
+
+                                console.log(`[error] ${error.message}`);
+                            };
+                            realTimeSocket.onclose = function(error) {
+                                document.getElementById("ws-status").src = disconectedIcon;
+                                document.getElementById("ws-status").title = "Not connected to realtime data";
+
+                                console.log(`[error] ${error.message}`);
+                            };
+                        </script>
+
+<div class="superclearfix">
+    
+</div>
+
+                        <hr>
+                        <a style="font-size: small;" href="/kb/what-is-a-upstream">How are upstreams and downstreams calculated?</a>
+                        <h3 id="upstreams">Upstreams<img class="flag-img" src="/assets/lightning.png" style="padding-left: 12px;" title="This information was fetched live at page load time" alt="This information was fetched live at page load time"/></h3>
+
+
+                        <table id="donotscrapebgptools-upstreamTable" class="full-width-table">
+                            <thead class="sortable">
+                                <tr>
+                                    <th class="nowrap boldpls">  &nbsp;  </th>
+                                    <th data-sort-method='number' class="boldpls">ASN</th>
+                                    <th class="nowrap boldpls">Description</th>
+                                    <th class="nowrap boldpls">IPv4</th>
+                                    <th class="nowrap boldpls">IPv6</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                <tr>
+                                    <td data-sort='KZ' class="nowrap ns"><img class="flag-img" src="/assets/flags/KZ.png" title="KZ">
+                                        
+                                        </td>
+                                    <td data-sort='197556'><a href="/as/197556">AS197556</a></td>
+                                    <td class="smallonmobile nowrap">TNS-Plus LLP</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='KZ' class="nowrap ns"><img class="flag-img" src="/assets/flags/KZ.png" title="KZ">
+                                        
+                                        </td>
+                                    <td data-sort='35168'><a href="/as/35168">AS35168</a></td>
+                                    <td class="smallonmobile nowrap">TNS-Plus LLP</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+
+                        <hr>
+                        <h3 id="peers">Peers<img class="flag-img" src="/assets/lightning.png" style="padding-left: 12px;" title="This information was fetched live at page load time" alt="This information was fetched live at page load time"/></h3>
+
+
+
+                        <table id="donotscrapebgptools-upstreamTablePeers" class="full-width-table">
+                            <thead class="sortable">
+                                <tr>
+                                    <th class="nowrap boldpls">  &nbsp;  </th>
+                                    <th data-sort-method='number' class="boldpls">ASN</th>
+                                    <th class="nowrap boldpls">Description</th>
+                                    <th class="nowrap boldpls">IPv4</th>
+                                    <th class="nowrap boldpls">IPv6</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                <tr>
+                                    <td data-sort='KZ' class="nowrap ns"><img class="flag-img" src="/assets/flags/KZ.png" title="KZ"></td>
+                                    <td data-sort='197556'><a href="/as/197556">AS197556</a></td>
+                                    <td class="smallonmobile nowrap">TNS-Plus LLP</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='KZ' class="nowrap ns"><img class="flag-img" src="/assets/flags/KZ.png" title="KZ"></td>
+                                    <td data-sort='35168'><a href="/as/35168">AS35168</a></td>
+                                    <td class="smallonmobile nowrap">TNS-Plus LLP</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+
+
+                    </div>
+
+                    <div style="display: none" id="whois-page">
+                        
+                        
+                        <pre style="white-space: pre-wrap;">aut-num:        <a href="/AS206026">AS206026</a>
+as-name:        ipnet_kar-tel
+org:            <a href="https://apps.db.ripe.net/db-web-ui/query?searchtext=ORG-KL166-RIPE">ORG-KL166-RIPE</a>
+import:         from <a href="/AS21299">AS21299</a> accept ANY
+export:         to <a href="/AS21299">AS21299</a> announce <a href="/AS206026">AS206026</a>
+import:         from <a href="/AS35168">AS35168</a> accept ANY
+export:         to <a href="/AS35168">AS35168</a> announce <a href="/AS206026">AS206026</a>
+import:         from <a href="/AS197556">AS197556</a> accept ANY
+export:         to <a href="/AS197556">AS197556</a> announce <a href="/AS206026">AS206026</a>
+admin-c:        DUMY-RIPE
+tech-c:         DUMY-RIPE
+status:         ASSIGNED
+mnt-by:         RIPE-NCC-END-MNT
+mnt-by:         kz-ipnet-kar-tel-1-mnt
+created:        2017-04-07T16:02:08Z
+last-modified:  2018-09-04T11:59:54Z
+source:         RIPE
+remarks:        ****************************
+remarks:        * THIS OBJECT IS MODIFIED
+remarks:        * Please note that all data that is generally regarded as personal
+remarks:        * data has been removed from this object.
+remarks:        * To view the original object, please query the RIPE Database at:
+remarks:        * http://www.ripe.net/whois
+remarks:        ****************************
+
+
+organisation:   <a href="https://apps.db.ripe.net/db-web-ui/query?searchtext=ORG-KL166-RIPE">ORG-KL166-RIPE</a>
+org-name:       Kar-Tel LLC
+country:        KZ
+org-type:       LIR
+address:        Dummy address for <a href="https://apps.db.ripe.net/db-web-ui/query?searchtext=ORG-KL166-RIPE">ORG-KL166-RIPE</a>
+# Email removed, Log into bgp.tools to see whois emails
+abuse-c:        AR33409-RIPE
+mnt-ref:        kz-ipnet-kar-tel-1-mnt
+mnt-ref:        RIPE-NCC-HM-MNT
+mnt-by:         RIPE-NCC-HM-MNT
+mnt-by:         kz-ipnet-kar-tel-1-mnt
+created:        2015-09-04T15:41:30Z
+last-modified:  2020-12-16T13:03:27Z
+source:         RIPE
+remarks:        ****************************
+remarks:        * THIS OBJECT IS MODIFIED
+remarks:        * Please note that all data that is generally regarded as personal
+remarks:        * data has been removed from this object.
+remarks:        * To view the original object, please query the RIPE Database at:
+remarks:        * http://www.ripe.net/whois
+remarks:        ****************************
+
+</pre>
+                        
+                        
+                        <a style="font-size: small;">Last Update: 2025-12-07T03:25:56Z UTC </a>
+                        
+                        <hr>
+                        
+                            <h2>Member of the following AS-SETs</h2>
+
+                            <table id="fhTable" class="full-width-table ">
+                                <tbody id="prefixlist-tbody">
+                                    <tr>
+                                        <th class="boldpls nowrap"> - </th>
+                                        <th class="boldpls">Member</th>
+                                        
+                                        <th class="boldpls nowrap">ASN Count</th>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-tratata">as-tratata</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">1097</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-kaztelecompeers">as-kaztelecompeers</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">1083</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-set_tnsplus">as-set_tnsplus</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">1086</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as41194:as-rascom">as41194:as-rascom</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">2558</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-hurricane">as-hurricane</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap boldpls"><p style="display: contents;color: red">24285</p></td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-set_tnsplus_ipv6">as-set_tnsplus_ipv6</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">36</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-emix">as-emix</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap boldpls"><p style="display: contents;color: red">25625</p></td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-retn-actual-v6">as-retn-actual-v6</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">3829</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-hurricanev6">as-hurricanev6</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap boldpls"><p style="display: contents;color: red">20267</p></td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-retn-actual-v4">as-retn-actual-v4</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap boldpls"><p style="display: contents;color: red">12267</p></td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                        
+
+                    </div>
+
+                    
+
+                    
+
+                    
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="superclearfix">
+            
+            <div class="superclearfix">
+                
+            </div>
+
+            <div class="superclearfix">
+                
+            </div>
+
+
+        </div>
+
+
+        <div class="group js-footer" id="footer">
+            <nav>
+                <div>
+                    <ul>
+                        <li><a href="/kb/api" target="_blank">Scripting/API</a></li>
+                        <li><a href="/credits" target="_blank">Credits</a></li>
+                        <li><a href="/pricing" target="_blank">Pricing</a></li>
+                        <li><a href="/kb/contact" target="_blank">Contact Us</a></li>
+                        <li><a href="https://github.com/bgptools/issues" target="_blank">Issue Tracker</a></li>
+                        <li><a href="/kb/setup-sessions" target="">Contribute Data</a></li>
+                        
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <script>
+    
+    var inhash = window.location.hash;
+    if (inhash == "#asinfo") {
+        
+    } else if (inhash == "#prefixes") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#prefix-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#prefixes-page');
+        aaa[0].style.display = "";
+
+    } else if (inhash == "#connectivity" || inhash == "#peers" || inhash == "#upstreams" || inhash == "#downstreams") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#connectivity-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#connectivity-page');
+        aaa[0].style.display = "";
+    } else if (inhash == "#whois") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#whois-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#whois-page');
+        aaa[0].style.display = "";
+    } else if (inhash == "#ix") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#ix-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#ix-page');
+        aaa[0].style.display = "";
+    }</script>
+
+    <script>
+    
+
+
+    ;(function() {
+  'use strict'
+
+  function scaleImageMap() {
+    function resizeMap() {
+      function resizeAreaTag(cachedAreaCoords, idx) {
+        function scale(coord) {
+          var dimension = 1 === (isWidth = 1 - isWidth) ? 'width' : 'height'
+          return (
+            padding[dimension] +
+            Math.floor(Number(coord) * scalingFactor[dimension])
+          )
+        }
+
+        var isWidth = 0
+        areas[idx].coords = cachedAreaCoords
+          .split(',')
+          .map(scale)
+          .join(',')
+      }
+
+      var scalingFactor = {
+        width: image.width / image.naturalWidth,
+        height: image.height / image.naturalHeight,
+      }
+
+      var padding = {
+        width: parseInt(
+          window.getComputedStyle(image, null).getPropertyValue('padding-left'),
+          10
+        ),
+        height: parseInt(
+          window.getComputedStyle(image, null).getPropertyValue('padding-top'),
+          10
+        ),
+      }
+
+      cachedAreaCoordsArray.forEach(resizeAreaTag)
+    }
+
+    function getCoords(e) {
+      
+      return e.coords.replace(/ *, */g, ',').replace(/ +/g, ',')
+    }
+
+    function debounce() {
+      clearTimeout(timer)
+      timer = setTimeout(resizeMap, 250)
+    }
+
+    function start() {
+      if (
+        image.width !== image.naturalWidth ||
+        image.height !== image.naturalHeight
+      ) {
+        resizeMap()
+      }
+    }
+
+    function addEventListeners() {
+      image.addEventListener('load', resizeMap, false) 
+      window.addEventListener('focus', resizeMap, false) 
+      window.addEventListener('resize', debounce, false)
+      window.addEventListener('readystatechange', resizeMap, false)
+      document.addEventListener('fullscreenchange', resizeMap, false)
+    }
+
+    function beenHere() {
+      return 'function' === typeof map._resize
+    }
+
+    function getImg(name) {
+      return document.querySelector('img[usemap="#world"]')
+    }
+
+    function setup() {
+      areas = map.getElementsByTagName('area')
+      cachedAreaCoordsArray = Array.prototype.map.call(areas, getCoords)
+      image = getImg('#' + map.name) || getImg(map.name)
+      map._resize = resizeMap 
+    }
+
+    var  
+      map = this,
+      areas = null,
+      cachedAreaCoordsArray = null,
+      image = null,
+      timer = null
+
+    if (!beenHere()) {
+      setup()
+      addEventListeners()
+      start()
+    } else {
+      map._resize() 
+    }
+  }
+
+  function factory() {
+    function chkMap(element) {
+      if (!element.tagName) {
+        throw new TypeError('Object is not a valid DOM element')
+      } else if ('MAP' !== element.tagName.toUpperCase()) {
+        throw new TypeError(
+          'Expected <MAP> tag, found <' + element.tagName + '>.'
+        )
+      }
+    }
+
+    function init(element) {
+      if (element) {
+        chkMap(element)
+        scaleImageMap.call(element)
+        maps.push(element)
+      }
+    }
+
+    var maps
+
+    return function imageMapResizeF(target) {
+      maps = [] 
+
+      switch (typeof target) {
+        case 'undefined':
+        case 'string':
+          Array.prototype.forEach.call(
+            document.querySelectorAll(target || 'map'),
+            init
+          )
+          break
+        case 'object':
+          init(target)
+          break
+        default:
+          throw new TypeError('Unexpected data type (' + typeof target + ').')
+      }
+
+      return maps
+    }
+  }
+
+  if (typeof define === 'function' && define.amd) {
+    define([], factory)
+  } else if (typeof module === 'object' && typeof module.exports === 'object') {
+    module.exports = factory() 
+  } else {
+    window.imageMapResize = factory()
+  }
+
+  if ('jQuery' in window) {
+    window.jQuery.fn.imageMapResize = function $imageMapResizeF() {
+      return this.filter('map')
+        .each(scaleImageMap)
+        .end()
+    }
+  }
+})()
+    
+    </script>
+    <script>
+        var imgEl = document.getElementById("pathimg");
+        imgEl.addEventListener("mouseover",function() {
+            imageMapResize('#world');
+        })
+    </script>
+    <script src="/assets/tablesort.min.js"></script>
+    <script>
+        addEventListener("load", (event) => {
+            
+            
+            var sort = new Tablesort(document.getElementById('donotscrapebgptools-upstreamTable'));
+            var sort2 = new Tablesort(document.getElementById('donotscrapebgptools-upstreamTablePeers'));
+            
+            
+            
+        });
+    </script>
+    
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        setTimeout(function() {
+
+        var beaconHttp = new XMLHttpRequest();
+        var url = '/performance-beacon';
+        var params = JSON.stringify(window.performance)
+        beaconHttp.open('POST', url, true);
+        
+        
+        beaconHttp.setRequestHeader('Content-type', 'application/json');
+        beaconHttp.setRequestHeader('visit-url', "/as/206026");
+        if (navigator.connection) {
+            beaconHttp.setRequestHeader('client-side-rtt', navigator.connection.rtt);
+        } else {
+            beaconHttp.setRequestHeader('client-side-rtt', '-2');
+        }
+        beaconHttp.onreadystatechange = function() {}
+        beaconHttp.send(params);
+        },1000)
+    }, false);
+</script>
+
+</body>
+
+
+</html>

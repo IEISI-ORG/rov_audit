@@ -1,0 +1,2909 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="JasTel Network (AS55423) is a 15 year old BGP network that is peering with 23 other networks and has 1 upstream carriers">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000">
+    <link rel="search" type="application/opensearchdescription+xml" title="BGP.Tools" href="https://bgp.tools/opensearch.xml">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="theme-color" content="#000000">
+    <link href="https://social.bgp.tools/@bgptools" rel="me">
+    <link rel="canonical" href="https://bgp.tools/as/55423" />
+    <title>AS55423 JasTel Network - bgp.tools</title>
+    <link rel="stylesheet" type="text/css" href="/assets/main-new.css?2025-12-09-1723%20UTC">
+</head>
+
+<body>
+    <div id="container">
+        
+<div id="global-header" class="global-header-top">
+    <div class="header-sitewide">
+        <div class="global-header">
+            <div class="header-logo">
+                <a href="/" id="logo" class="content">bgp.tools</a>
+            </div>
+            <form id="search" action="/search" method="get" accept-charset="utf-8" role="search" class="top-search-header js-search-hash">
+                <div class="searchfield">
+                    <input type="search" autocomplete="off" name="q" id="site-search-text" title="Search" value="" placeholder="Start here..." autofocus="autofocus" class="js-search-focus">
+                    <button type="submit" id="search-submit" class="search-submit">Search</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div id="global-header-blob" >
+    <a id="auth-header-text" href="/login">Login</a>
+    
+</div>
+<div id="global-header-bar" >
+    <a id="auth-header-bar-text" href="/login">Login</a>
+    
+</div>
+<div class="small-clearfix"></div>
+
+        <div id="global-container">
+            
+
+
+            
+            <div class="section-tabs js-tabs">
+                <ul>
+                    
+<li class="active">
+    <h1> <a id="viewbutton-tab" href="/as/55423">View</a></h1>
+</li>
+
+<li >
+    <a id="editbutton-tab" href="/edit/as/55423">Edit</a>
+</li>
+
+
+
+
+
+                    <li style="float: right;">
+                        
+                        <img id="ws-status" width="24" height="24" src="/assets/disconnected.png" title="Not Connected To realtime data updates">
+                        
+                    </li>
+                </ul>
+            </div>
+
+            <div id="search-container">
+
+                <div class="column-full-width">
+
+                    <div class="clearfix">
+                        
+                    </div>
+                    
+                    
+
+                    <div class="network-header">
+                        
+                        <p id="network-name" class="heading-xlarge">JasTel Network</p>
+                        <p id="network-number">
+                            AS Number
+                            <strong id="ASNumberString" pure="55423">55423</strong>
+                            <br>
+                        
+                        </p>
+
+                    </div>
+
+
+                    <div class="clearfix">
+                        
+                    </div>
+
+
+                    <div class="section-tabs js-tabs">
+                        <ul>
+
+                            <li id="overview-tab-li" class="active">
+                                <a id="overview-tab" href="#asinfo">Overview</a>
+                            </li>
+                            
+                            <li id="prefix-tab-li">
+                                <a id="prefix-tab" href="#prefixes">Prefixes</a>
+                            </li>
+
+                            <li id="connectivity-tab-li">
+                                <a id="connectivity-tab" href="#connectivity">Connectivity</a>
+                            </li>
+                            
+                            <li id="whois-tab-li">
+                                <a id="whois-tab" href="#whois">Whois</a>
+                            </li>
+                        
+                        
+                        </ul>
+                    </div>
+
+<script>
+    function removeAllActiveTab() {
+        var tabs = [
+            "overview-tab-li", 
+            "prefix-tab-li", 
+            "connectivity-tab-li",
+            "whois-tab-li",
+            "ix-tab-li",
+            "issues-tab-li"
+        ];
+
+        tabs.forEach(element => {
+            var aaa = document.querySelectorAll('#'+element);
+            if(aaa.length != 0) {
+                aaa[0].classList.remove("active")
+            }
+        });
+    }
+
+    function hideAllContent() {
+        var tabs = [
+            "overview-page", 
+            "prefixes-page", 
+            "connectivity-page",
+            "whois-page",
+            "ix-page",
+            "issues-page"
+        ];
+
+        tabs.forEach(element => {
+            var aaa = document.querySelectorAll('#'+element);
+            if(aaa.length != 0) {
+                aaa[0].style.display = "none";
+            }
+        });
+        if (document.getElementById("donotscrapebgptools-prefixlist-tbody")) {
+            var prefixrows = document.getElementById("donotscrapebgptools-prefixlist-tbody").children;
+            for (var i = 0; i < prefixrows.length; i++) {
+                prefixrows[i].style = "";
+            }
+        }
+    }
+
+    var otab = document.querySelectorAll('#overview-tab');
+    otab[0].addEventListener("click", function () {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#overview-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#overview-page');
+        aaa[0].style.display = "";
+    });
+    
+
+    var ptab = document.querySelectorAll('#prefix-tab');
+    ptab[0].addEventListener("click", function () {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#prefix-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#prefixes-page');
+        aaa[0].style.display = "";
+    });
+
+    var ctab = document.querySelectorAll('#connectivity-tab');
+    ctab[0].addEventListener("click", function () {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#connectivity-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#connectivity-page');
+        aaa[0].style.display = "";
+    });
+    
+
+    var wtab = document.querySelectorAll('#whois-tab');
+    wtab[0].addEventListener("click", function () {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#whois-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#whois-page');
+        aaa[0].style.display = "";
+    });
+
+</script>
+
+
+
+                    
+                    <div id="overview-page">
+
+                        <div class="grid-row">
+                        
+                        <div class="column-two-thirds">
+                            <dl>
+                                <dt>Registered on</dt>
+                                <dd class="text data">
+                                    
+                                    18 Feb 2010 (15 years old)
+                                </dd>
+                            
+                            
+                            <dt>Registered to</dt>
+                            <dd class="text data">
+                                <a href="/rir-owner/A914781A">A914781A</a> (apnic)</dd>
+                                
+                            
+                            </dl>
+                        </div>
+                        
+    
+                        <dl class="column-third">
+                            <dt>Network status</dt>
+                            <dd class="text data">
+                                
+                                Active, Allocated under APNIC
+                                
+                            </dd>
+                        </dl>
+    
+                        </div>
+    
+                        <div class="grid-row">
+                            <dl class="column-two-thirds">
+                                <dt>Network type</dt>
+                                <dd class="text data">
+                                    Eyeball
+                                </dd>
+                            </dl>
+    
+                            <dl class="column-third">
+                                <dt>Prefixes Originated</dt>
+                                <dd class="data">88 IPv4, 4 IPv6</dd>
+                            </dl>
+                        </div>
+                        <div class="grid-row">
+                            <div class="column-half">
+    
+                                <h2 class="heading-medium"><derp>Upstreams</derp></h2>
+                                <ul>
+                                    
+                                    <li>
+                                        <span id="sic0">
+                                          <a href="/as/45629">AS45629</a> - JasTel Network International Gateway
+                                        </span>
+                                    </li>
+                                    
+                                </ul>
+    
+                            </div>
+    
+                            <div class="column-half">
+                                
+                                    <h2 class="heading-medium"><derp>Rankings</derp></h2>
+                                    
+                                    <li><span id="sic0">#19 for <a href="/rankings/TH?sort=cone">AS Cone  in Thailand</a></span></li>
+                                    
+                                    <li><span id="sic0">#22 for <a href="/rankings/TH?sort=eyeballs">Estimated Eyeballs  in Thailand</a></span></li>
+                                    
+                                    <li><span id="sic0">#28 for <a href="/rankings/TH?sort=dns">Unique Domains  in Thailand</a></span></li>
+                                    
+                                    <li><span id="sic0">#34 for <a href="/rankings/TH?sort=peering">Known Peers  in Thailand</a></span></li>
+                                    
+                                    <li><span id="sic0">#32 for <a href="/rankings/TH?sort=v4">Originated IPv4 Space  in Thailand</a></span></li>
+                                    
+                                    <li><span id="sic0">#30 for <a href="/rankings/TH?sort=v6">Originated IPv6 Space  in Thailand</a></span></li>
+                                    
+                                
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+
+                    <div style="display: none" id="prefixes-page">
+                        
+
+                        
+                        <div style="float:left">
+                            <dt>Prefixes Originated</dt>
+                            <dd class="data">88 IPv4, 4 IPv6</dd>
+                            <dd class="data"><a href="/as/55423?show-low-vis#prefixes">Show Low Visibility Prefixes</a></dd>
+                            
+                        </div>
+                        <div style="float:right">
+                                <dt>Addresses Originated</dt>
+                                <dd class="data">171 /24's of IPv4</dd>
+                                <dd class="data">4 /48's of IPv6</dd>
+                        </div>
+
+                        <div class="clearfix">
+                            
+                        </div>
+
+
+                        <table id="fhTable" class="full-width-table ">
+                            <tbody id="donotscrapebgptools-prefixlist-tbody">
+                                <tr>
+                                    <th class="nowrap">  &nbsp;  </th>
+                                    <th class="boldpls">Prefix</th>
+                                    <th class="nowrap boldpls">Description</th>
+                                </tr>
+                                <p id="readme-if-you-are-human" style="display: none;">If you are scraping this block for the prefixes that a AS originates, please use the data dumps in https://bgp.tools/kb/api and cache them</p>
+                                
+                                <tr id="pfx-58.82.128.0/21">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="TH" src="/assets/flags/TH.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/58.82.128.0/21">58.82.128.0/21</a></td>
+                                    <td class="smallonmobile nowrap">JasTel Network</td>
+                                </tr>
+                                
+                                <tr id="pfx-58.82.128.0/22">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="TH" src="/assets/flags/TH.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/58.82.128.0/22">58.82.128.0/22</a></td>
+                                    <td class="smallonmobile nowrap">JasTel Network</td>
+                                </tr>
+                                
+                                <tr id="pfx-58.82.128.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="TH" src="/assets/flags/TH.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/58.82.128.0/24">58.82.128.0/24</a></td>
+                                    <td class="smallonmobile nowrap">JasTel Network</td>
+                                </tr>
+                                
+                                <tr id="pfx-58.82.129.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="TH" src="/assets/flags/TH.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/58.82.129.0/24">58.82.129.0/24</a></td>
+                                    <td class="smallonmobile nowrap">JasTel Network</td>
+                                </tr>
+                                
+                                <tr id="pfx-58.82.130.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="TH" src="/assets/flags/TH.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/58.82.130.0/24">58.82.130.0/24</a></td>
+                                    <td class="smallonmobile nowrap">JasTel Network</td>
+                                </tr>
+                                
+                                <tr id="pfx-58.82.132.0/22">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="TH" src="/assets/flags/TH.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/58.82.132.0/22">58.82.132.0/22</a></td>
+                                    <td class="smallonmobile nowrap">JasTel Network</td>
+                                </tr>
+                                
+                                <tr id="pfx-58.82.136.0/21">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="TH" src="/assets/flags/TH.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/58.82.136.0/21">58.82.136.0/21</a></td>
+                                    <td class="smallonmobile nowrap">JasTel Network</td>
+                                </tr>
+                                
+                                <tr id="pfx-58.82.136.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="TH" src="/assets/flags/TH.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/58.82.136.0/24">58.82.136.0/24</a></td>
+                                    <td class="smallonmobile nowrap">JasTel Network</td>
+                                </tr>
+                                
+                                <tr id="pfx-58.82.137.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="TH" src="/assets/flags/TH.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/58.82.137.0/24">58.82.137.0/24</a></td>
+                                    <td class="smallonmobile nowrap">200 Moo 4 Cheangwattana Rd</td>
+                                </tr>
+                                
+                                <tr id="pfx-58.82.144.0/21">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="TH" src="/assets/flags/TH.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/58.82.144.0/21">58.82.144.0/21</a></td>
+                                    <td class="smallonmobile nowrap">JasTel Network</td>
+                                </tr>
+                                
+                                <tr id="pfx-58.82.145.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="TH" src="/assets/flags/TH.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/58.82.145.0/24">58.82.145.0/24</a></td>
+                                    <td class="smallonmobile nowrap">JasTel Network</td>
+                                </tr>
+                                
+                                <tr id="pfx-58.82.152.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="TH" src="/assets/flags/TH.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/58.82.152.0/24">58.82.152.0/24</a></td>
+                                    <td class="smallonmobile nowrap">JasTel Network</td>
+                                </tr>
+                                
+                                <tr id="pfx-58.82.152.0/21">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="TH" src="/assets/flags/TH.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/58.82.152.0/21">58.82.152.0/21</a></td>
+                                    <td class="smallonmobile nowrap">JasTel Network</td>
+                                </tr>
+                                
+                                <tr id="pfx-58.82.157.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="TH" src="/assets/flags/TH.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/58.82.157.0/24">58.82.157.0/24</a></td>
+                                    <td class="smallonmobile nowrap">JasTel Network</td>
+                                </tr>
+                                
+                                <tr id="pfx-58.82.160.0/21">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="TH" src="/assets/flags/TH.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/58.82.160.0/21">58.82.160.0/21</a></td>
+                                    <td class="smallonmobile nowrap">JasTel Network</td>
+                                </tr>
+                                
+                                <tr id="pfx-58.82.160.0/20">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="TH" src="/assets/flags/TH.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/58.82.160.0/20">58.82.160.0/20</a></td>
+                                    <td class="smallonmobile nowrap">JasTel Network</td>
+                                </tr>
+                                
+                                <tr id="pfx-58.82.160.0/22">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="TH" src="/assets/flags/TH.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/58.82.160.0/22">58.82.160.0/22</a></td>
+                                    <td class="smallonmobile nowrap">JasTel Network</td>
+                                </tr>
+                                
+                                <tr id="pfx-58.82.163.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="TH" src="/assets/flags/TH.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/58.82.163.0/24">58.82.163.0/24</a></td>
+                                    <td class="smallonmobile nowrap">JasTel Network</td>
+                                </tr>
+                                
+                                <tr id="pfx-58.82.166.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="TH" src="/assets/flags/TH.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/58.82.166.0/24">58.82.166.0/24</a></td>
+                                    <td class="smallonmobile nowrap">JasTel Network</td>
+                                </tr>
+                                
+                                <tr id="pfx-58.82.168.0/21">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="TH" src="/assets/flags/TH.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/58.82.168.0/21">58.82.168.0/21</a></td>
+                                    <td class="smallonmobile nowrap">JasTel Network</td>
+                                </tr>
+                                
+                                <tr id="pfx-58.82.171.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="TH" src="/assets/flags/TH.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/58.82.171.0/24">58.82.171.0/24</a></td>
+                                    <td class="smallonmobile nowrap">JasTel Network</td>
+                                </tr>
+                                
+                                <tr id="pfx-58.82.172.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="TH" src="/assets/flags/TH.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/58.82.172.0/24">58.82.172.0/24</a></td>
+                                    <td class="smallonmobile nowrap">JasTel Network</td>
+                                </tr>
+                                
+                                <tr id="pfx-58.82.173.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="TH" src="/assets/flags/TH.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/58.82.173.0/24">58.82.173.0/24</a></td>
+                                    <td class="smallonmobile nowrap">JasTel Network</td>
+                                </tr>
+                                
+                                <tr id="pfx-58.82.175.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="TH" src="/assets/flags/TH.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/58.82.175.0/24">58.82.175.0/24</a></td>
+                                    <td class="smallonmobile nowrap">JasTel Network</td>
+                                </tr>
+                                
+                                <tr id="pfx-58.82.176.0/21">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="TH" src="/assets/flags/TH.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/58.82.176.0/21">58.82.176.0/21</a></td>
+                                    <td class="smallonmobile nowrap">JasTel Network</td>
+                                </tr>
+                                
+                                <tr id="pfx-58.82.176.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="TH" src="/assets/flags/TH.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/58.82.176.0/24">58.82.176.0/24</a></td>
+                                    <td class="smallonmobile nowrap">JasTel Network</td>
+                                </tr>
+                                
+                                <tr id="pfx-58.82.176.0/20">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="TH" src="/assets/flags/TH.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/58.82.176.0/20">58.82.176.0/20</a></td>
+                                    <td class="smallonmobile nowrap">JasTel Network</td>
+                                </tr>
+                                
+                                <tr id="pfx-58.82.177.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="TH" src="/assets/flags/TH.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/58.82.177.0/24">58.82.177.0/24</a></td>
+                                    <td class="smallonmobile nowrap">JasTel Network</td>
+                                </tr>
+                                
+                                <tr id="pfx-58.82.178.0/23">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="TH" src="/assets/flags/TH.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/58.82.178.0/23">58.82.178.0/23</a></td>
+                                    <td class="smallonmobile nowrap">JasTel Network</td>
+                                </tr>
+                                
+                                <tr id="pfx-58.82.180.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="TH" src="/assets/flags/TH.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/58.82.180.0/24">58.82.180.0/24</a></td>
+                                    <td class="smallonmobile nowrap">JasTel Network</td>
+                                </tr>
+                                
+                                <tr id="pfx-58.82.181.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="TH" src="/assets/flags/TH.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/58.82.181.0/24">58.82.181.0/24</a></td>
+                                    <td class="smallonmobile nowrap">JasTel Network</td>
+                                </tr>
+                                
+                                <tr id="pfx-58.82.182.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="TH" src="/assets/flags/TH.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/58.82.182.0/24">58.82.182.0/24</a></td>
+                                    <td class="smallonmobile nowrap">JasTel Network</td>
+                                </tr>
+                                
+                                <tr id="pfx-58.82.183.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="TH" src="/assets/flags/TH.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/58.82.183.0/24">58.82.183.0/24</a></td>
+                                    <td class="smallonmobile nowrap">JasTel Network</td>
+                                </tr>
+                                
+                                <tr id="pfx-58.82.184.0/21">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="TH" src="/assets/flags/TH.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/58.82.184.0/21">58.82.184.0/21</a></td>
+                                    <td class="smallonmobile nowrap">JasTel Network</td>
+                                </tr>
+                                
+                                <tr id="pfx-58.82.184.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="TH" src="/assets/flags/TH.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/58.82.184.0/24">58.82.184.0/24</a></td>
+                                    <td class="smallonmobile nowrap">JasTel Network</td>
+                                </tr>
+                                
+                                <tr id="pfx-103.247.60.0/22">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="TH" src="/assets/flags/TH.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/103.247.60.0/22">103.247.60.0/22</a></td>
+                                    <td class="smallonmobile nowrap">JasTel Network</td>
+                                </tr>
+                                
+                                <tr id="pfx-103.247.60.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="TH" src="/assets/flags/TH.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/103.247.60.0/24">103.247.60.0/24</a></td>
+                                    <td class="smallonmobile nowrap">JasTel Network</td>
+                                </tr>
+                                
+                                <tr id="pfx-103.247.61.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="TH" src="/assets/flags/TH.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/103.247.61.0/24">103.247.61.0/24</a></td>
+                                    <td class="smallonmobile nowrap">JasTel Network</td>
+                                </tr>
+                                
+                                <tr id="pfx-160.250.202.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="TH" src="/assets/flags/TH.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/160.250.202.0/24">160.250.202.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Worldscope Company</td>
+                                </tr>
+                                
+                                <tr id="pfx-160.250.203.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="TH" src="/assets/flags/TH.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/160.250.203.0/24">160.250.203.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Worldscope Company</td>
+                                </tr>
+                                
+                                <tr id="pfx-167.179.224.0/21">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="TH" src="/assets/flags/TH.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/167.179.224.0/21">167.179.224.0/21</a></td>
+                                    <td class="smallonmobile nowrap">JasTel Network</td>
+                                </tr>
+                                
+                                <tr id="pfx-167.179.224.0/19">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="TH" src="/assets/flags/TH.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/167.179.224.0/19">167.179.224.0/19</a></td>
+                                    <td class="smallonmobile nowrap">JasTel Network</td>
+                                </tr>
+                                
+                                <tr id="pfx-167.179.235.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="TH" src="/assets/flags/TH.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/167.179.235.0/24">167.179.235.0/24</a></td>
+                                    <td class="smallonmobile nowrap">JasTel Network</td>
+                                </tr>
+                                
+                                <tr id="pfx-167.179.236.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="TH" src="/assets/flags/TH.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/167.179.236.0/24">167.179.236.0/24</a></td>
+                                    <td class="smallonmobile nowrap">JasTel Network</td>
+                                </tr>
+                                
+                                <tr id="pfx-167.179.246.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="TH" src="/assets/flags/TH.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/167.179.246.0/24">167.179.246.0/24</a></td>
+                                    <td class="smallonmobile nowrap">JasTel Network</td>
+                                </tr>
+                                
+                                <tr id="pfx-167.179.249.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="TH" src="/assets/flags/TH.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/167.179.249.0/24">167.179.249.0/24</a></td>
+                                    <td class="smallonmobile nowrap">JasTel Network</td>
+                                </tr>
+                                
+                                <tr id="pfx-182.50.80.0/22">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="TH" src="/assets/flags/TH.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/182.50.80.0/22">182.50.80.0/22</a></td>
+                                    <td class="smallonmobile nowrap">JasTel Network</td>
+                                </tr>
+                                
+                                <tr id="pfx-182.50.80.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="TH" src="/assets/flags/TH.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/182.50.80.0/24">182.50.80.0/24</a></td>
+                                    <td class="smallonmobile nowrap">200 Moo 4 Cheangwattana Rd</td>
+                                </tr>
+                                
+                                <tr id="pfx-182.50.83.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="TH" src="/assets/flags/TH.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/182.50.83.0/24">182.50.83.0/24</a></td>
+                                    <td class="smallonmobile nowrap">JasTel Network</td>
+                                </tr>
+                                
+                                <tr id="pfx-182.50.86.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="TH" src="/assets/flags/TH.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/182.50.86.0/24">182.50.86.0/24</a></td>
+                                    <td class="smallonmobile nowrap">JasTel Network</td>
+                                </tr>
+                                
+                                <tr id="pfx-182.50.88.0/22">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="TH" src="/assets/flags/TH.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/182.50.88.0/22">182.50.88.0/22</a></td>
+                                    <td class="smallonmobile nowrap">JasTel Network</td>
+                                </tr>
+                                
+                                <tr id="pfx-182.50.88.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="TH" src="/assets/flags/TH.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/182.50.88.0/24">182.50.88.0/24</a></td>
+                                    <td class="smallonmobile nowrap">JasTel Network</td>
+                                </tr>
+                                
+                                <tr id="pfx-203.130.140.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="TH" src="/assets/flags/TH.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/203.130.140.0/24">203.130.140.0/24</a></td>
+                                    <td class="smallonmobile nowrap">JasTel Network</td>
+                                </tr>
+                                
+                                <tr id="pfx-203.130.152.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="TH" src="/assets/flags/TH.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/203.130.152.0/24">203.130.152.0/24</a></td>
+                                    <td class="smallonmobile nowrap">JasTel Network</td>
+                                </tr>
+                                
+                                <tr id="pfx-203.147.6.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="TH" src="/assets/flags/TH.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/203.147.6.0/24">203.147.6.0/24</a></td>
+                                    <td class="smallonmobile nowrap">JasTel Network</td>
+                                </tr>
+                                
+                                <tr id="pfx-203.147.26.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="TH" src="/assets/flags/TH.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/203.147.26.0/24">203.147.26.0/24</a></td>
+                                    <td class="smallonmobile nowrap">JasTel Network</td>
+                                </tr>
+                                
+                                <tr id="pfx-203.147.46.0/23">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="TH" src="/assets/flags/TH.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/203.147.46.0/23">203.147.46.0/23</a></td>
+                                    <td class="smallonmobile nowrap">JasTel Network</td>
+                                </tr>
+                                
+                                <tr id="pfx-203.156.0.0/22">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="TH" src="/assets/flags/TH.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/203.156.0.0/22">203.156.0.0/22</a></td>
+                                    <td class="smallonmobile nowrap">JasTel Network</td>
+                                </tr>
+                                
+                                <tr id="pfx-203.156.8.0/21">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="TH" src="/assets/flags/TH.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/203.156.8.0/21">203.156.8.0/21</a></td>
+                                    <td class="smallonmobile nowrap">JasTel Network</td>
+                                </tr>
+                                
+                                <tr id="pfx-203.156.9.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="TH" src="/assets/flags/TH.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/203.156.9.0/24">203.156.9.0/24</a></td>
+                                    <td class="smallonmobile nowrap">JasTel Network</td>
+                                </tr>
+                                
+                                <tr id="pfx-203.156.16.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="TH" src="/assets/flags/TH.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/203.156.16.0/24">203.156.16.0/24</a></td>
+                                    <td class="smallonmobile nowrap">JasTel Network</td>
+                                </tr>
+                                
+                                <tr id="pfx-203.156.24.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="TH" src="/assets/flags/TH.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/203.156.24.0/24">203.156.24.0/24</a></td>
+                                    <td class="smallonmobile nowrap">JasTel Network</td>
+                                </tr>
+                                
+                                <tr id="pfx-203.156.25.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="TH" src="/assets/flags/TH.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/203.156.25.0/24">203.156.25.0/24</a></td>
+                                    <td class="smallonmobile nowrap">JasTel Network</td>
+                                </tr>
+                                
+                                <tr id="pfx-203.156.26.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="TH" src="/assets/flags/TH.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/203.156.26.0/24">203.156.26.0/24</a></td>
+                                    <td class="smallonmobile nowrap">JasTel Network</td>
+                                </tr>
+                                
+                                <tr id="pfx-203.156.28.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="TH" src="/assets/flags/TH.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/203.156.28.0/24">203.156.28.0/24</a></td>
+                                    <td class="smallonmobile nowrap">JasTel Network</td>
+                                </tr>
+                                
+                                <tr id="pfx-203.156.31.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="TH" src="/assets/flags/TH.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/203.156.31.0/24">203.156.31.0/24</a></td>
+                                    <td class="smallonmobile nowrap">JasTel Network</td>
+                                </tr>
+                                
+                                <tr id="pfx-203.156.40.0/22">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="TH" src="/assets/flags/TH.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/203.156.40.0/22">203.156.40.0/22</a></td>
+                                    <td class="smallonmobile nowrap">JasTel Network</td>
+                                </tr>
+                                
+                                <tr id="pfx-203.156.46.0/23">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="TH" src="/assets/flags/TH.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/203.156.46.0/23">203.156.46.0/23</a></td>
+                                    <td class="smallonmobile nowrap">JasTel Network</td>
+                                </tr>
+                                
+                                <tr id="pfx-203.156.48.0/23">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="TH" src="/assets/flags/TH.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/203.156.48.0/23">203.156.48.0/23</a></td>
+                                    <td class="smallonmobile nowrap">JasTel Network</td>
+                                </tr>
+                                
+                                <tr id="pfx-203.156.51.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="TH" src="/assets/flags/TH.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/cross.png" title="Matches IRR source, but under a different ASN">
+                                    </td>
+                                    <td><a href="/prefix/203.156.51.0/24">203.156.51.0/24</a></td>
+                                    <td class="smallonmobile nowrap">JasTel Network</td>
+                                </tr>
+                                
+                                <tr id="pfx-203.156.52.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="TH" src="/assets/flags/TH.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/cross.png" title="Matches IRR source, but under a different ASN">
+                                    </td>
+                                    <td><a href="/prefix/203.156.52.0/24">203.156.52.0/24</a></td>
+                                    <td class="smallonmobile nowrap">JasTel Network</td>
+                                </tr>
+                                
+                                <tr id="pfx-203.156.57.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="TH" src="/assets/flags/TH.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/cross.png" title="Matches IRR source, but under a different ASN">
+                                    </td>
+                                    <td><a href="/prefix/203.156.57.0/24">203.156.57.0/24</a></td>
+                                    <td class="smallonmobile nowrap">JasTel Network</td>
+                                </tr>
+                                
+                                <tr id="pfx-203.156.96.0/23">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="TH" src="/assets/flags/TH.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/203.156.96.0/23">203.156.96.0/23</a></td>
+                                    <td class="smallonmobile nowrap">JasTel Network</td>
+                                </tr>
+                                
+                                <tr id="pfx-203.156.101.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="TH" src="/assets/flags/TH.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/203.156.101.0/24">203.156.101.0/24</a></td>
+                                    <td class="smallonmobile nowrap">JasTel Network</td>
+                                </tr>
+                                
+                                <tr id="pfx-203.156.102.0/23">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="TH" src="/assets/flags/TH.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/203.156.102.0/23">203.156.102.0/23</a></td>
+                                    <td class="smallonmobile nowrap">JasTel Network</td>
+                                </tr>
+                                
+                                <tr id="pfx-203.156.108.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="TH" src="/assets/flags/TH.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/203.156.108.0/24">203.156.108.0/24</a></td>
+                                    <td class="smallonmobile nowrap">JasTel Network</td>
+                                </tr>
+                                
+                                <tr id="pfx-203.156.109.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="TH" src="/assets/flags/TH.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/203.156.109.0/24">203.156.109.0/24</a></td>
+                                    <td class="smallonmobile nowrap">JasTel Network</td>
+                                </tr>
+                                
+                                <tr id="pfx-203.156.110.0/23">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="TH" src="/assets/flags/TH.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/203.156.110.0/23">203.156.110.0/23</a></td>
+                                    <td class="smallonmobile nowrap">JasTel Network</td>
+                                </tr>
+                                
+                                <tr id="pfx-203.156.110.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="TH" src="/assets/flags/TH.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/203.156.110.0/24">203.156.110.0/24</a></td>
+                                    <td class="smallonmobile nowrap">JasTel Network</td>
+                                </tr>
+                                
+                                <tr id="pfx-203.156.111.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="TH" src="/assets/flags/TH.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/203.156.111.0/24">203.156.111.0/24</a></td>
+                                    <td class="smallonmobile nowrap">JasTel Network</td>
+                                </tr>
+                                
+                                <tr id="pfx-203.156.112.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="TH" src="/assets/flags/TH.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/203.156.112.0/24">203.156.112.0/24</a></td>
+                                    <td class="smallonmobile nowrap">JasTel Network</td>
+                                </tr>
+                                
+                                <tr id="pfx-203.156.113.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="TH" src="/assets/flags/TH.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/203.156.113.0/24">203.156.113.0/24</a></td>
+                                    <td class="smallonmobile nowrap">JasTel Network</td>
+                                </tr>
+                                
+                                <tr id="pfx-203.156.114.0/23">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="TH" src="/assets/flags/TH.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/203.156.114.0/23">203.156.114.0/23</a></td>
+                                    <td class="smallonmobile nowrap">JasTel Network</td>
+                                </tr>
+                                
+                                <tr id="pfx-203.156.119.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="TH" src="/assets/flags/TH.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/203.156.119.0/24">203.156.119.0/24</a></td>
+                                    <td class="smallonmobile nowrap">JasTel Network</td>
+                                </tr>
+                                
+                                <tr id="pfx-203.156.120.0/21">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="TH" src="/assets/flags/TH.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/203.156.120.0/21">203.156.120.0/21</a></td>
+                                    <td class="smallonmobile nowrap">JasTel Network</td>
+                                </tr>
+                                
+                                <tr id="pfx-203.156.143.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="TH" src="/assets/flags/TH.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/203.156.143.0/24">203.156.143.0/24</a></td>
+                                    <td class="smallonmobile nowrap">JI-NET</td>
+                                </tr>
+                                
+                                <tr id="pfx-203.156.150.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="TH" src="/assets/flags/TH.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/203.156.150.0/24">203.156.150.0/24</a></td>
+                                    <td class="smallonmobile nowrap">JasTel Network</td>
+                                </tr>
+                                
+                                <tr id="pfx-203.156.183.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="TH" src="/assets/flags/TH.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/203.156.183.0/24">203.156.183.0/24</a></td>
+                                    <td class="smallonmobile nowrap">JasTel Network</td>
+                                </tr>
+                                
+                                <tr id="pfx-2403:8300:80bf::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="DE" src="/assets/flags/DE.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/2403:8300:80bf::/48">2403:8300:80bf::/48</a></td>
+                                    <td class="smallonmobile nowrap">BMW AG</td>
+                                </tr>
+                                
+                                <tr id="pfx-2404:4a00:1000::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="TH" src="/assets/flags/TH.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2404:4a00:1000::/48">2404:4a00:1000::/48</a></td>
+                                    <td class="smallonmobile nowrap">JasTel Network</td>
+                                </tr>
+                                
+                                <tr id="pfx-2404:4a00:2094::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="TH" src="/assets/flags/TH.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2404:4a00:2094::/48">2404:4a00:2094::/48</a></td>
+                                    <td class="smallonmobile nowrap">JasTel Network</td>
+                                </tr>
+                                
+                                <tr id="pfx-2404:4a00:5542::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="TH" src="/assets/flags/TH.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2404:4a00:5542::/48">2404:4a00:5542::/48</a></td>
+                                    <td class="smallonmobile nowrap">JasTel Network</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div style="display: none" id="connectivity-page">
+
+                        <div class="grid-row">
+                            <dl class="column-third column-third-first">
+                                <dt><a href="#peers">Peers</a></dt>
+                                <dd class="data">23</dd>
+                            </dl><dl class="column-third column-third-mid">
+                                <dt><a href="#upstreams">Upstreams</a></dt>
+                                
+                                <dd class="text data">1</dd>
+                                
+                            </dl>
+                            <dl class="column-third column-third-last">
+                                <dt><a href="#downstreams">Downstreams</a></dt> <dd class="data">16 (Cone: 17)</dd>
+                            </dl>
+
+                        </div>
+
+
+                        <hr>
+                        <h3>Network Policy<img class="flag-img" src="/assets/info.png" style="padding-left: 12px;" title="This info can take up to 2 hours to fully update" alt="This info take up to 2 hours to fully update"/></h3></h3>
+                        <a style="font-size: small;" href="/kb/network-policy">Click here to learn more about what this graph means and what makes up a network policy</a>
+
+                        <select id="netpolicydropdown" class="dropdownmenu">
+                            
+                                <option disabled=true value="disabled-default">Global Aggregation (disabled due to size)</option>
+                            
+
+                            
+                                
+                            
+                                
+                                <option value="dd77716d8f39644cec8360e9e160c52b8420d8083195235e68c618dc">Policy lucid_rubin</option>
+                                
+                            
+                                
+                                <option value="0c73407721a3932837fcac1f137d7d04be7bd23329a888efc0981024">Policy lucid_visvesvaraya</option>
+                                
+                            
+                                
+                                <option value="9019caf9666ba486bd56a34542ee9a3feaecab9d02b74240dfe29b4f">Policy elastic_allen</option>
+                                
+                            
+                                
+                                <option value="a3c5a3b1a21f193eaa1c5a91c345955d8b546923999bf9095b47f484">Policy vibrant_rhodes</option>
+                                
+                            
+                                
+                                <option value="dc827525f6e31da31830054847730fb0fdd1ee8d4f18b3f53b4442d3">Policy infallible_wescoff</option>
+                                
+                            
+                                
+                                <option value="ee5a83b26440a81d6f7b8ddd8e3c6c255adefd3a8f494efc426bed22">Policy nifty_pike</option>
+                                
+                            
+                                
+                                <option value="f8def231b04c71fb97c993b6b6e080ac75f7c03a7af6d95fb28cf25b">Policy hopeful_gagarin</option>
+                                
+                            
+                                
+                                <option value="16782c7a61d3f3100eefda3a01335cf7a1a1e151e655b4fc069adf41">Policy optimistic_lumiere</option>
+                                
+                            
+                                
+                                <option value="178948411243620dd5e16e9628a348cdda9823c758891b6d3a383a70">Policy zealous_archimedes</option>
+                                
+                            
+                                
+                                <option value="28ff718462df7fb2ba2e09eb4962d440dab09be90f84bab82cc08138">Policy jolly_elion</option>
+                                
+                            
+                                
+                                <option value="4b90f6ecdd8e825fe44e7f08e4c643ea68267adfc3687aebcd046e4b">Policy stoic_curran</option>
+                                
+                            
+                                
+                                <option value="59b650559582770cba869c42f03f522f5ee31df3c82eb5655595d7a8">Policy epic_ritchie</option>
+                                
+                            
+                                
+                                <option value="b7c5f27ab9a50706d3c15d7579fdfbdda2e4601813a419554ce95f81">Policy heuristic_knuth</option>
+                                
+                            
+                                
+                                <option value="e2b5c09eb9475fce5aec371924cff4e072d419180d6d015b5377002c">Policy serene_chaplygin</option>
+                                
+                            
+                                
+                                <option value="80bcb1bf5a037407a8fedcc8f7dc66f3efdef68e43ddf934580fd852">Policy elastic_buck</option>
+                                
+                            
+                                
+                                <option value="884d989dd171ab0ac826854061f2555f4ae5bab79bc5940aec0af325">Policy condescending_fermat</option>
+                                
+                            
+                                
+                                <option value="acbd5bcd746acbe117e22a490490c9de7a62ba39a66ce94d556dfd9c">Policy agitated_cori</option>
+                                
+                            
+                                
+                                <option value="e0888f011009872b173e189f0ffa0c73c54e11421af37a3411c4f4cb">Policy sleepy_faraday</option>
+                                
+                            
+                                
+                                <option value="e7914f9d4f63b0b1e3d449c2f4140e29b18e3db8b047c4818b3e77ca">Policy nifty_newton</option>
+                                
+                            
+                                
+                                <option value="56960f43aeb93b0396447f48c2b54dfd774e21bca17e599959cad82c">Policy competent_khayyam</option>
+                                
+                            
+                                
+                                <option value="2e5c05b8e3523d85c275361ae860187fa3b1321342a1b5b896d06861">Policy competent_boyd</option>
+                                
+                            
+                                
+                                <option value="449404574970d64cbb54ac6f71115c09e32292c8d7e88af0291a9f2a">Policy elastic_agnesi</option>
+                                
+                            
+                                
+                                <option value="86469b7e307299b3935b03f04db30bbd94d2c4729442b5c285936e04">Policy sad_ritchie</option>
+                                
+                            
+                                
+                                <option value="bc392a20f2461c4b643d4a48b7c1f1d2db09114985096ca8d0a7dda7">Policy angry_haibt</option>
+                                
+                            
+                                
+                                <option value="fbab71cab52ef4beacfcce27c6452c065a3ae049ab2b7fad26062890">Policy cranky_blackburn</option>
+                                
+                            
+                                
+                                <option value="14912498e627a1acea04f16bbe6b0aade4bb356beff5f12250692cc9">Policy naughty_haibt</option>
+                                
+                            
+                                
+                                <option value="a20434e7bf46b775dbae1d93d26fd35896104737af1c9506a3739849">Policy crazy_gauss</option>
+                                
+                            
+                                
+                                <option value="a86769969fd05683c739cf73869598e820ff76d075b9398187bcf125">Policy awesome_jepsen</option>
+                                
+                            
+                                
+                                <option value="f7e21ff1b0044ac7d9a3fa1a38b026571186afa96ff35db640cfe1f1">Policy loving_bose</option>
+                                
+                            
+                                
+                                <option value="6eb9db015e05ecd0dec64f63c4a7c7c54a204e8d0bcbbbe7afba62bc">Policy happy_golick</option>
+                                
+                            
+                                
+                                <option value="bf802044ad7c5d556a4ff598466e7f8143f04a6e67f23effd77997d5">Policy happy_heyrovsky</option>
+                                
+                            
+                                
+                                <option value="c4c7b51e2ed9d23af0b255f03de62bd5a70a8977847ab2b4e6d285f7">Policy flamboyant_dhawan</option>
+                                
+                            
+                                
+                                <option selected value="0635c838e72c3fd1175b98602c9028e54712f4db4082580091f6ff90">Policy lucid_varahamihira</option>
+                                
+                            
+                                
+                                <option value="30b878d437451d582035372cb027382ba706c5010c4106c7fd0859d2">Policy amazing_buck</option>
+                                
+                            
+                                
+                                <option value="7a94ddcb0618a6faed6daa646c026e71f5e4de306f77cc74e021ee5c">Policy laughing_feynman</option>
+                                
+                            
+                                
+                                <option value="7c6a9464ff19ac872f190c6fac899aae223bd3293d78e3eee3b4c6ef">Policy epic_gould</option>
+                                
+                            
+                                
+                                <option value="ba00bc7854aef9c15e13cdcf5187fa1b11904ab18f5275fd06fd4a9e">Policy tender_hawking</option>
+                                
+                            
+                                
+                                <option value="c3640fa7f632e6d82d71ecf517525d0f797611aecb6e957af9ae36b7">Policy condescending_leakey</option>
+                                
+                            
+                                
+                                <option value="c45e6d1524fa3db7a166e8e2cae89f6308c64ad6e7c0ee9af3d435a2">Policy angry_aryabhata</option>
+                                
+                            
+                                
+                                <option value="a32d8a03826ab52fc2fa68a9ec4079af699766cfa35d5c325d29cf2a">Policy relaxed_kowalevski</option>
+                                
+                            
+                                
+                                <option value="320e4fa165c46253dd07c15e0904d24aa5b8f17f6b1d673edb926ff9">Policy zealous_mcnulty</option>
+                                
+                            
+                                
+                                <option value="324de6b985ab862866cf2adf1f1a38459bb47993092c0c93fa954fb7">Policy stoic_ptolemy</option>
+                                
+                            
+                                
+                                <option value="5b50967d76da8cc2c4a8f5baa4b99da807cbafe5534a576bc94e55f7">Policy crazy_chatelet</option>
+                                
+                            
+                                
+                                <option value="5edfc3fa220739c926764260f085cfcc221bc9f8763c5daa39cfa874">Policy zealous_hofstadter</option>
+                                
+                            
+                                
+                                <option value="a9f8ee3d0b7b3566471461daca76487e72534197905aed257979b099">Policy blissful_curie</option>
+                                
+                            
+                                
+                                <option value="ab1d77d54e7637db1162487976996dba8e23f9e27eebcc4f64900914">Policy boring_swanson</option>
+                                
+                            
+
+                            
+
+
+                        </select>
+
+                        <script>var netgroups = {"0635c838e72c3fd1175b98602c9028e54712f4db4082580091f6ff90":["203.147.46.0/23","203.156.26.0/24","203.156.111.0/24","203.156.109.0/24","203.156.110.0/23","182.50.83.0/24","203.156.40.0/22","203.156.46.0/23","203.156.108.0/24","203.156.96.0/23","203.156.113.0/24"],"0c73407721a3932837fcac1f137d7d04be7bd23329a888efc0981024":["203.156.0.0/22"],"14912498e627a1acea04f16bbe6b0aade4bb356beff5f12250692cc9":["203.156.51.0/24","203.156.52.0/24","203.156.57.0/24"],"16782c7a61d3f3100eefda3a01335cf7a1a1e151e655b4fc069adf41":["58.82.152.0/21"],"178948411243620dd5e16e9628a348cdda9823c758891b6d3a383a70":["203.156.112.0/24","203.156.31.0/24"],"28ff718462df7fb2ba2e09eb4962d440dab09be90f84bab82cc08138":["167.179.236.0/24"],"2e5c05b8e3523d85c275361ae860187fa3b1321342a1b5b896d06861":["167.179.246.0/24"],"30b878d437451d582035372cb027382ba706c5010c4106c7fd0859d2":["203.156.120.0/21"],"320e4fa165c46253dd07c15e0904d24aa5b8f17f6b1d673edb926ff9":["203.156.114.0/23"],"324de6b985ab862866cf2adf1f1a38459bb47993092c0c93fa954fb7":["167.179.224.0/19"],"449404574970d64cbb54ac6f71115c09e32292c8d7e88af0291a9f2a":["203.156.183.0/24"],"4b90f6ecdd8e825fe44e7f08e4c643ea68267adfc3687aebcd046e4b":["203.156.143.0/24"],"56960f43aeb93b0396447f48c2b54dfd774e21bca17e599959cad82c":["2403:8300:80bf::/48"],"59b650559582770cba869c42f03f522f5ee31df3c82eb5655595d7a8":["203.156.110.0/24"],"5b50967d76da8cc2c4a8f5baa4b99da807cbafe5534a576bc94e55f7":["2404:4a00:2094::/48","2404:4a00:1000::/48","2404:4a00:5542::/48"],"5edfc3fa220739c926764260f085cfcc221bc9f8763c5daa39cfa874":["58.82.160.0/20","58.82.168.0/21","167.179.224.0/21","182.50.80.0/22","182.50.88.0/22","58.82.176.0/20","182.50.88.0/24","182.50.86.0/24"],"6eb9db015e05ecd0dec64f63c4a7c7c54a204e8d0bcbbbe7afba62bc":["182.50.80.0/24"],"7a94ddcb0618a6faed6daa646c026e71f5e4de306f77cc74e021ee5c":["58.82.177.0/24"],"7c6a9464ff19ac872f190c6fac899aae223bd3293d78e3eee3b4c6ef":["203.156.16.0/24"],"80bcb1bf5a037407a8fedcc8f7dc66f3efdef68e43ddf934580fd852":["58.82.182.0/24"],"86469b7e307299b3935b03f04db30bbd94d2c4729442b5c285936e04":["203.147.26.0/24","203.130.140.0/24"],"884d989dd171ab0ac826854061f2555f4ae5bab79bc5940aec0af325":["167.179.235.0/24"],"9019caf9666ba486bd56a34542ee9a3feaecab9d02b74240dfe29b4f":["203.156.48.0/23"],"a20434e7bf46b775dbae1d93d26fd35896104737af1c9506a3739849":["103.247.61.0/24","103.247.60.0/24","103.247.60.0/22"],"a32d8a03826ab52fc2fa68a9ec4079af699766cfa35d5c325d29cf2a":["58.82.178.0/23"],"a3c5a3b1a21f193eaa1c5a91c345955d8b546923999bf9095b47f484":["203.156.102.0/23","203.156.25.0/24"],"a86769969fd05683c739cf73869598e820ff76d075b9398187bcf125":["203.156.28.0/24"],"a9f8ee3d0b7b3566471461daca76487e72534197905aed257979b099":["58.82.180.0/24"],"ab1d77d54e7637db1162487976996dba8e23f9e27eebcc4f64900914":["58.82.175.0/24"],"acbd5bcd746acbe117e22a490490c9de7a62ba39a66ce94d556dfd9c":["203.156.9.0/24"],"b7c5f27ab9a50706d3c15d7579fdfbdda2e4601813a419554ce95f81":["203.156.101.0/24"],"ba00bc7854aef9c15e13cdcf5187fa1b11904ab18f5275fd06fd4a9e":["58.82.130.0/24","58.82.163.0/24"],"bc392a20f2461c4b643d4a48b7c1f1d2db09114985096ca8d0a7dda7":["160.250.202.0/24","160.250.203.0/24"],"bf802044ad7c5d556a4ff598466e7f8143f04a6e67f23effd77997d5":["58.82.183.0/24"],"c3640fa7f632e6d82d71ecf517525d0f797611aecb6e957af9ae36b7":["58.82.157.0/24"],"c45e6d1524fa3db7a166e8e2cae89f6308c64ad6e7c0ee9af3d435a2":["203.156.119.0/24"],"c4c7b51e2ed9d23af0b255f03de62bd5a70a8977847ab2b4e6d285f7":["58.82.144.0/21"],"dc827525f6e31da31830054847730fb0fdd1ee8d4f18b3f53b4442d3":["58.82.128.0/22","58.82.145.0/24"],"dd77716d8f39644cec8360e9e160c52b8420d8083195235e68c618dc":["58.82.166.0/24"],"e0888f011009872b173e189f0ffa0c73c54e11421af37a3411c4f4cb":["58.82.128.0/24"],"e2b5c09eb9475fce5aec371924cff4e072d419180d6d015b5377002c":["58.82.137.0/24","58.82.176.0/24","58.82.173.0/24","58.82.184.0/24","58.82.160.0/22","58.82.152.0/24","58.82.176.0/21","58.82.172.0/24","58.82.171.0/24"],"e7914f9d4f63b0b1e3d449c2f4140e29b18e3db8b047c4818b3e77ca":["203.156.8.0/21"],"ee5a83b26440a81d6f7b8ddd8e3c6c255adefd3a8f494efc426bed22":["58.82.128.0/21","58.82.136.0/21","58.82.129.0/24","58.82.132.0/22","58.82.184.0/21","58.82.160.0/21"],"f7e21ff1b0044ac7d9a3fa1a38b026571186afa96ff35db640cfe1f1":["203.156.24.0/24"],"f8def231b04c71fb97c993b6b6e080ac75f7c03a7af6d95fb28cf25b":["203.130.152.0/24","167.179.249.0/24","203.156.150.0/24","203.147.6.0/24"],"fbab71cab52ef4beacfcce27c6452c065a3ae049ab2b7fad26062890":["58.82.181.0/24"]}</script>
+
+                        <div style="text-align: center;">
+                            <img id="pathimg" usemap="#world" src="">
+                            <div id="world2"></div>
+                        </div>
+
+                        <details>
+                            <summary>Chart Display Options</summary>
+                            <noscript>This requires javascript to work</noscript>
+                            <label for="graphOptionMoreWiggle" style="display: flex;align-items: center;font-size: 20px;">
+                                <input type="checkbox" id="graphOptionMoreWiggle" name="graphOptionMoreWiggle" style="width: 64px; height: 32px;">
+                                    <p id="graphOptionMoreWiggleLabel" style="width: 200%;">Display links using non straight lines</p>
+                            </label>
+                        </details>
+
+                        <h3 style="display: none;" id="PISPBanner">Prefixes in selected policy</h3>
+                        <table id="policytable" class="full-width-table">
+                        </table>
+                        <button style="width:100%;display: none;" id="ShowFullPolicyButton" class="bigButton" onclick="dropdownPoke()">Load all prefixes in policy</button>
+
+                        <script>
+                            !function(a,b){"function"==typeof define&&define.amd?define([],b):"undefined"!=typeof module&&module.exports?module.exports=b():a.ReconnectingWebSocket=b()}(this,function(){function a(b,c,d){function l(a,b){var c=document.createEvent("CustomEvent");return c.initCustomEvent(a,!1,!1,b),c}var e={debug:!1,automaticOpen:!0,reconnectInterval:1e3,maxReconnectInterval:3e4,reconnectDecay:1.5,timeoutInterval:2e3};d||(d={});for(var f in e)this[f]="undefined"!=typeof d[f]?d[f]:e[f];this.url=b,this.reconnectAttempts=0,this.readyState=WebSocket.CONNECTING,this.protocol=null;var h,g=this,i=!1,j=!1,k=document.createElement("div");k.addEventListener("open",function(a){g.onopen(a)}),k.addEventListener("close",function(a){g.onclose(a)}),k.addEventListener("connecting",function(a){g.onconnecting(a)}),k.addEventListener("message",function(a){g.onmessage(a)}),k.addEventListener("error",function(a){g.onerror(a)}),this.addEventListener=k.addEventListener.bind(k),this.removeEventListener=k.removeEventListener.bind(k),this.dispatchEvent=k.dispatchEvent.bind(k),this.open=function(b){h=new WebSocket(g.url,c||[]),b||k.dispatchEvent(l("connecting")),(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","attempt-connect",g.url);var d=h,e=setTimeout(function(){(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","connection-timeout",g.url),j=!0,d.close(),j=!1},g.timeoutInterval);h.onopen=function(){clearTimeout(e),(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","onopen",g.url),g.protocol=h.protocol,g.readyState=WebSocket.OPEN,g.reconnectAttempts=0;var d=l("open");d.isReconnect=b,b=!1,k.dispatchEvent(d)},h.onclose=function(c){if(clearTimeout(e),h=null,i)g.readyState=WebSocket.CLOSED,k.dispatchEvent(l("close"));else{g.readyState=WebSocket.CONNECTING;var d=l("connecting");d.code=c.code,d.reason=c.reason,d.wasClean=c.wasClean,k.dispatchEvent(d),b||j||((g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","onclose",g.url),k.dispatchEvent(l("close")));var e=g.reconnectInterval*Math.pow(g.reconnectDecay,g.reconnectAttempts);setTimeout(function(){g.reconnectAttempts++,g.open(!0)},e>g.maxReconnectInterval?g.maxReconnectInterval:e)}},h.onmessage=function(b){(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","onmessage",g.url,b.data);var c=l("message");c.data=b.data,k.dispatchEvent(c)},h.onerror=function(b){(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","onerror",g.url,b),k.dispatchEvent(l("error"))}},1==this.automaticOpen&&this.open(!1),this.send=function(b){if(h)return(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","send",g.url,b),h.send(b);throw"INVALID_STATE_ERR : Pausing to reconnect websocket"},this.close=function(a,b){"undefined"==typeof a&&(a=1e3),i=!0,h&&h.close(a,b)},this.refresh=function(){h&&h.close()}}return a.prototype.onopen=function(){},a.prototype.onclose=function(){},a.prototype.onconnecting=function(){},a.prototype.onmessage=function(){},a.prototype.onerror=function(){},a.debugAll=!1,a.CONNECTING=WebSocket.CONNECTING,a.OPEN=WebSocket.OPEN,a.CLOSING=WebSocket.CLOSING,a.CLOSED=WebSocket.CLOSED,a});
+                        </script>
+                        
+                        <script>
+                            var prefixinfo = [{"PrefixString":"58.82.128.0/21","WhoisName":"JasTel Network","WhoisCountry":"TH"},{"PrefixString":"58.82.128.0/22","WhoisName":"JasTel Network","WhoisCountry":"TH"},{"PrefixString":"58.82.128.0/24","WhoisName":"JasTel Network","WhoisCountry":"TH"},{"PrefixString":"58.82.129.0/24","WhoisName":"JasTel Network","WhoisCountry":"TH"},{"PrefixString":"58.82.130.0/24","WhoisName":"JasTel Network","WhoisCountry":"TH"},{"PrefixString":"58.82.132.0/22","WhoisName":"JasTel Network","WhoisCountry":"TH"},{"PrefixString":"58.82.136.0/21","WhoisName":"JasTel Network","WhoisCountry":"TH"},{"PrefixString":"58.82.136.0/24","WhoisName":"JasTel Network","WhoisCountry":"TH"},{"PrefixString":"58.82.137.0/24","WhoisName":"200 Moo 4 Cheangwattana Rd","WhoisCountry":"TH"},{"PrefixString":"58.82.144.0/21","WhoisName":"JasTel Network","WhoisCountry":"TH"},{"PrefixString":"58.82.145.0/24","WhoisName":"JasTel Network","WhoisCountry":"TH"},{"PrefixString":"58.82.152.0/24","WhoisName":"JasTel Network","WhoisCountry":"TH"},{"PrefixString":"58.82.152.0/21","WhoisName":"JasTel Network","WhoisCountry":"TH"},{"PrefixString":"58.82.157.0/24","WhoisName":"JasTel Network","WhoisCountry":"TH"},{"PrefixString":"58.82.160.0/21","WhoisName":"JasTel Network","WhoisCountry":"TH"},{"PrefixString":"58.82.160.0/20","WhoisName":"JasTel Network","WhoisCountry":"TH"},{"PrefixString":"58.82.160.0/22","WhoisName":"JasTel Network","WhoisCountry":"TH"},{"PrefixString":"58.82.163.0/24","WhoisName":"JasTel Network","WhoisCountry":"TH"},{"PrefixString":"58.82.166.0/24","WhoisName":"JasTel Network","WhoisCountry":"TH"},{"PrefixString":"58.82.168.0/21","WhoisName":"JasTel Network","WhoisCountry":"TH"},{"PrefixString":"58.82.171.0/24","WhoisName":"JasTel Network","WhoisCountry":"TH"},{"PrefixString":"58.82.172.0/24","WhoisName":"JasTel Network","WhoisCountry":"TH"},{"PrefixString":"58.82.173.0/24","WhoisName":"JasTel Network","WhoisCountry":"TH"},{"PrefixString":"58.82.175.0/24","WhoisName":"JasTel Network","WhoisCountry":"TH"},{"PrefixString":"58.82.176.0/21","WhoisName":"JasTel Network","WhoisCountry":"TH"},{"PrefixString":"58.82.176.0/24","WhoisName":"JasTel Network","WhoisCountry":"TH"},{"PrefixString":"58.82.176.0/20","WhoisName":"JasTel Network","WhoisCountry":"TH"},{"PrefixString":"58.82.177.0/24","WhoisName":"JasTel Network","WhoisCountry":"TH"},{"PrefixString":"58.82.178.0/23","WhoisName":"JasTel Network","WhoisCountry":"TH"},{"PrefixString":"58.82.180.0/24","WhoisName":"JasTel Network","WhoisCountry":"TH"},{"PrefixString":"58.82.181.0/24","WhoisName":"JasTel Network","WhoisCountry":"TH"},{"PrefixString":"58.82.182.0/24","WhoisName":"JasTel Network","WhoisCountry":"TH"},{"PrefixString":"58.82.183.0/24","WhoisName":"JasTel Network","WhoisCountry":"TH"},{"PrefixString":"58.82.184.0/21","WhoisName":"JasTel Network","WhoisCountry":"TH"},{"PrefixString":"58.82.184.0/24","WhoisName":"JasTel Network","WhoisCountry":"TH"},{"PrefixString":"103.247.60.0/22","WhoisName":"JasTel Network","WhoisCountry":"TH"},{"PrefixString":"103.247.60.0/24","WhoisName":"JasTel Network","WhoisCountry":"TH"},{"PrefixString":"103.247.61.0/24","WhoisName":"JasTel Network","WhoisCountry":"TH"},{"PrefixString":"160.250.202.0/24","WhoisName":"Worldscope Company","WhoisCountry":"TH"},{"PrefixString":"160.250.203.0/24","WhoisName":"Worldscope Company","WhoisCountry":"TH"},{"PrefixString":"167.179.224.0/21","WhoisName":"JasTel Network","WhoisCountry":"TH"},{"PrefixString":"167.179.224.0/19","WhoisName":"JasTel Network","WhoisCountry":"TH"},{"PrefixString":"167.179.235.0/24","WhoisName":"JasTel Network","WhoisCountry":"TH"},{"PrefixString":"167.179.236.0/24","WhoisName":"JasTel Network","WhoisCountry":"TH"},{"PrefixString":"167.179.246.0/24","WhoisName":"JasTel Network","WhoisCountry":"TH"},{"PrefixString":"167.179.249.0/24","WhoisName":"JasTel Network","WhoisCountry":"TH"},{"PrefixString":"182.50.80.0/22","WhoisName":"JasTel Network","WhoisCountry":"TH"},{"PrefixString":"182.50.80.0/24","WhoisName":"200 Moo 4 Cheangwattana Rd","WhoisCountry":"TH"},{"PrefixString":"182.50.83.0/24","WhoisName":"JasTel Network","WhoisCountry":"TH"},{"PrefixString":"182.50.86.0/24","WhoisName":"JasTel Network","WhoisCountry":"TH"},{"PrefixString":"182.50.88.0/22","WhoisName":"JasTel Network","WhoisCountry":"TH"},{"PrefixString":"182.50.88.0/24","WhoisName":"JasTel Network","WhoisCountry":"TH"},{"PrefixString":"203.130.140.0/24","WhoisName":"JasTel Network","WhoisCountry":"TH"},{"PrefixString":"203.130.152.0/24","WhoisName":"JasTel Network","WhoisCountry":"TH"},{"PrefixString":"203.147.6.0/24","WhoisName":"JasTel Network","WhoisCountry":"TH"},{"PrefixString":"203.147.26.0/24","WhoisName":"JasTel Network","WhoisCountry":"TH"},{"PrefixString":"203.147.46.0/23","WhoisName":"JasTel Network","WhoisCountry":"TH"},{"PrefixString":"203.156.0.0/22","WhoisName":"JasTel Network","WhoisCountry":"TH"},{"PrefixString":"203.156.8.0/21","WhoisName":"JasTel Network","WhoisCountry":"TH"},{"PrefixString":"203.156.9.0/24","WhoisName":"JasTel Network","WhoisCountry":"TH"},{"PrefixString":"203.156.16.0/24","WhoisName":"JasTel Network","WhoisCountry":"TH"},{"PrefixString":"203.156.24.0/24","WhoisName":"JasTel Network","WhoisCountry":"TH"},{"PrefixString":"203.156.25.0/24","WhoisName":"JasTel Network","WhoisCountry":"TH"},{"PrefixString":"203.156.26.0/24","WhoisName":"JasTel Network","WhoisCountry":"TH"},{"PrefixString":"203.156.28.0/24","WhoisName":"JasTel Network","WhoisCountry":"TH"},{"PrefixString":"203.156.31.0/24","WhoisName":"JasTel Network","WhoisCountry":"TH"},{"PrefixString":"203.156.40.0/22","WhoisName":"JasTel Network","WhoisCountry":"TH"},{"PrefixString":"203.156.46.0/23","WhoisName":"JasTel Network","WhoisCountry":"TH"},{"PrefixString":"203.156.48.0/23","WhoisName":"JasTel Network","WhoisCountry":"TH"},{"PrefixString":"203.156.51.0/24","WhoisName":"JasTel Network","WhoisCountry":"TH"},{"PrefixString":"203.156.52.0/24","WhoisName":"JasTel Network","WhoisCountry":"TH"},{"PrefixString":"203.156.57.0/24","WhoisName":"JasTel Network","WhoisCountry":"TH"},{"PrefixString":"203.156.96.0/23","WhoisName":"JasTel Network","WhoisCountry":"TH"},{"PrefixString":"203.156.101.0/24","WhoisName":"JasTel Network","WhoisCountry":"TH"},{"PrefixString":"203.156.102.0/23","WhoisName":"JasTel Network","WhoisCountry":"TH"},{"PrefixString":"203.156.108.0/24","WhoisName":"JasTel Network","WhoisCountry":"TH"},{"PrefixString":"203.156.109.0/24","WhoisName":"JasTel Network","WhoisCountry":"TH"},{"PrefixString":"203.156.110.0/23","WhoisName":"JasTel Network","WhoisCountry":"TH"},{"PrefixString":"203.156.110.0/24","WhoisName":"JasTel Network","WhoisCountry":"TH"},{"PrefixString":"203.156.111.0/24","WhoisName":"JasTel Network","WhoisCountry":"TH"},{"PrefixString":"203.156.112.0/24","WhoisName":"JasTel Network","WhoisCountry":"TH"},{"PrefixString":"203.156.113.0/24","WhoisName":"JasTel Network","WhoisCountry":"TH"},{"PrefixString":"203.156.114.0/23","WhoisName":"JasTel Network","WhoisCountry":"TH"},{"PrefixString":"203.156.119.0/24","WhoisName":"JasTel Network","WhoisCountry":"TH"},{"PrefixString":"203.156.120.0/21","WhoisName":"JasTel Network","WhoisCountry":"TH"},{"PrefixString":"203.156.143.0/24","WhoisName":"JI-NET","WhoisCountry":"TH"},{"PrefixString":"203.156.150.0/24","WhoisName":"JasTel Network","WhoisCountry":"TH"},{"PrefixString":"203.156.183.0/24","WhoisName":"JasTel Network","WhoisCountry":"TH"},{"PrefixString":"2403:8300:80bf::/48","WhoisName":"BMW AG","WhoisCountry":"DE"},{"PrefixString":"2404:4a00:1000::/48","WhoisName":"JasTel Network","WhoisCountry":"TH"},{"PrefixString":"2404:4a00:2094::/48","WhoisName":"JasTel Network","WhoisCountry":"TH"},{"PrefixString":"2404:4a00:5542::/48","WhoisName":"JasTel Network","WhoisCountry":"TH"}]
+                            var asn =  55423 
+
+                            var pfxExtraString = "";
+
+                            function saveGraphOptionsToLocalStorage() {
+                                localStorage.setItem("pfx-chart-options:wiggle", document.getElementById("graphOptionMoreWiggle").checked);
+                            }
+
+                            function loadGraphOptionsToLocalStorage() {
+                                document.getElementById("graphOptionMoreWiggle").checked = localStorage.getItem("pfx-chart-options:wiggle") == "true";
+                                pfxExtraString= "";
+                                if (document.getElementById("graphOptionMoreWiggle").checked) {
+                                    pfxExtraString = pfxExtraString + "&wiggly";
+                                }
+                            }
+                            loadGraphOptionsToLocalStorage();
+
+                            function graphOptionsChanged() {
+                                saveGraphOptionsToLocalStorage();
+                                handleImageChange();
+                            }
+                            document.getElementById("graphOptionMoreWiggle").addEventListener("click", graphOptionsChanged)
+
+
+                            function handleImageChange() {
+                                loadGraphOptionsToLocalStorage();
+                                
+                                document.getElementById("pathimg").src=("/pathimg/"+asn+ "-" + document.getElementById("netpolicydropdown").value +"?"+pfxExtraString);
+                                var request = new XMLHttpRequest();
+                                request.open('GET', "/pathimg/"+asn+ "-" + document.getElementById("netpolicydropdown").value + "?map=true" + pfxExtraString, true);
+
+                                request.onload = function() {
+                                    if (this.status >= 200 && this.status < 400) {
+                                        
+                                        
+                                        document.getElementById("world2").innerHTML = this.response;
+                                        setTimeout(function(){
+                                            imageMapResize('#world');
+                                        },1000)
+                                    }
+                                };
+                                request.send();
+                                buildPrefixTable();
+                            } 
+
+                            function encodeHTML(s) {
+                                return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
+                            }
+
+                            function dropdownPoke(){
+                                InteractedWithPolicyTableYet=true;
+                                handleImageChange();
+                            }
+
+                            var InteractedWithPolicyTableYet = false;
+                            var OverloadPolicySize = 0;
+                            function buildPrefixTable() {
+                                var policy = document.getElementById("netpolicydropdown").value;
+                                
+                                var cidrs = netgroups[policy];
+                                var ihtml = "<tbody> <tr> <th class=\"nowrap\">  -  </th> <th>Prefix</th> <th class=\"nowrap\">Description</th> </tr>";
+
+                                
+                                var aaa = document.querySelectorAll('#PISPBanner');
+                                var bbb = document.querySelectorAll('#policytable');
+                                var n = 0
+                                if (cidrs) {
+                                    aaa[0].style.display = "";
+                                    bbb[0].style.display = "";
+                                    cidrs.forEach(cidr => {
+                                        var obj = {};
+                                        var dont =false;
+                                        n++;
+                                        
+                                        if (!InteractedWithPolicyTableYet) {
+                                            if (n == 5) {
+                                                dont = true;
+                                            } else if (n > 5) {
+                                                dont = true;
+                                            }
+                                        }
+                                        
+                                        if (!dont) {
+                                            prefixinfo.forEach(el => {
+                                                if(el.PrefixString == cidr) {
+                                                    
+                                                        ihtml += "<tr><td class=\"nowrap ns\"><img class=\"flag-img\" src=\"/assets/flags/"+el.WhoisCountry+".png\" title=\""+el.WhoisCountry+"\"></td>"
+                                                        ihtml += "<td><a href=\"/prefix/"+el.PrefixString+"\">"+el.PrefixString+"</a></td>"
+                                                        ihtml += "<td class=\"nowrap\">"+encodeHTML(el.WhoisName)+"</td></tr>"
+                                                }
+                                            });
+                                        } else {
+                                            OverloadPolicySize++;
+                                        }
+                                    });
+                                    document.getElementById("policytable").innerHTML = ihtml
+                                    var PolButton = document.querySelectorAll('#ShowFullPolicyButton');
+                                    if (!InteractedWithPolicyTableYet && OverloadPolicySize!=0) {
+                                        PolButton[0].style="width:100%";
+                                        PolButton[0].innerHTML = "Load all "+OverloadPolicySize+" prefixes in policy"
+                                    } else {
+                                        PolButton[0].style="display:none;";
+                                    }
+                                    
+                                } else {
+                                    aaa[0].style.display = "none";
+                                    bbb[0].style.display = "none";
+                                }
+                            }
+
+
+                            var pathdropdown = document.querySelectorAll('#netpolicydropdown');
+                            pathdropdown[0].addEventListener("change",dropdownPoke)
+                            handleImageChange()
+                            buildPrefixTable()
+
+                            document.addEventListener("load", function(){
+                                
+                                handleImageChange()
+                            });
+
+                            function uuidv4() {
+                                return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+                                    var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+                                    return v.toString(16);
+                                });
+                            }
+
+                            
+                            let realTimeSocket = new ReconnectingWebSocket("wss://bgp.tools/ws/rt-asn?prefix=AS55423" + "&magic=" + encodeURIComponent("DZ647QOHJYFOMME5QG4K6D2CEFNKRCUI7PWEEMY26UQATICYMA2A===="));
+                            
+                            realTimeSocket.onmessage = function(event) {
+                                console.log(`[message] Data received from server: ${event.data}`);
+                                if (event.data == "Running.") {
+                                    document.getElementById("ws-status").src = "/assets/connected.png";
+                                    document.getElementById("ws-status").title = "Connected to realtime data";
+                                } else if (event.data == "STOP-CONNECTING") {
+                                    document.getElementById("ws-status").src = disconectedIcon;
+                                    document.getElementById("ws-status").title = "Not connected to realtime data";
+                                    realTimeSocket.maxReconnectAttempts = 1;
+                                    realTimeSocket.close()
+                                } else {
+                                    var obj = JSON.parse(event.data);
+                                    var elm = document.getElementById("pfx-"+obj.Prefix);
+                                    if (!elm && obj.Vis > 6) {
+                                        var tblist = document.getElementById("donotscrapebgptools-prefixlist-tbody");
+                                        var node = document.createElement("tr");                 
+                                        node.outerHTML = '<tr id="pfx-'+obj.Prefix+'"><td class="nowrap"><img class="flag-img" src="/assets/flags/'+obj.Whois.WhoisCountry+'.png" title="'+obj.Whois.WhoisCountry+'"></td><td><a href="/prefix/'+obj.Prefix+'">'+obj.Prefix+'</a></td><td class="smallonmobile nowrap">'+obj.Whois.WhoisName+'</td></tr>';
+                                        tblist.appendChild(node);                              
+                                    }
+                                    if (!elm) {
+                                        elm = document.getElementById("pfx-"+obj.Prefix);
+                                    }
+                                    
+                                    if (obj.Vis > 70) {
+                                        if (elm.style) {
+                                            var es = elm.style;
+                                            if (es.animation.includes("pulse1b")) {
+                                                elm.style = "animation: pulse2b 1s 1;";
+                                            } else if (es.animation.includes("pulse2b")) {
+                                                elm.style = "animation: pulse1b 1s 1;";
+                                            } else {
+                                                elm.style = "animation: pulse1b 1s 1;";
+                                            }
+                                        }
+                                    } else if (obj.Vis < 5) {
+                                        
+                                        var elm = document.getElementById("pfx-"+obj.Prefix);
+                                        if (elm) {
+                                            elm.parentNode.removeChild(elm);
+                                        }
+                                    } else {
+                                        if (elm.style) {
+                                            var es = elm.style;
+                                            if (es.animation.includes("pulse1r")) {
+                                                elm.style = "animation: pulse2r 1s 1;";
+                                            } else if (es.animation.includes("pulse2r")) {
+                                                elm.style = "animation: pulse1r 1s 1;";
+                                            } else {
+                                                elm.style = "animation: pulse1r 1s 1;";
+                                            }
+                                        }
+                                    }
+                                }
+                            };
+                            var disconectedIcon = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAAZlBMVEX/ewBZWVn/ewf/ew5fWljudiP8egp6XVT6eRHodSmVYU6hZEzObjrldCv3eRZ/XlNjWliHX1KrZkngci71eBl1XFXCa0CKYFHydx18XlSQYE+lZUq0aEbJbT3SbzhvXFaLYFG8akLYdYVFAAABQElEQVRIx5XV25KDIAwGYIKASLutqOtZ277/S26xK4ozJea/qRdfajATZaRkd6B6oPoL1d9QphUn+WvXmGF8TfN8yvNrDj6nvNj5Hu8n8HCh9ONiON5PEKuQx55DmFTHC1R9uMOjYkhFERbkEikofw8FGe5t0FWJ+kLvz5H+t8RdGD9k8TeebBXpzwIZT955XyVBtHHeXYzeJy5fhydtoZffZvUMSfvxT4BOeI/G/b9paxH1at8XQF8xNcV8aaQvHQBMhY/XttsdYp5nah3XdvIqui61Cjy+jqLwXp1cx9XLQZ5cR/vx1p8cez2IWrlxYY/T9bNVyCfmdQdbxNgs441FNRAEHS83oe9ahmTw1p88nhHCiAkpeIUeX5eJ6NlM9Gwm+uxO9/3F2PSR597jn1+udCWzUp7150P1jOoZ1f8BGPARG85JosIAAAAASUVORK5CYII=";
+                            realTimeSocket.onerror = function(error) {
+                                document.getElementById("ws-status").src = disconectedIcon;
+                                document.getElementById("ws-status").title = "Not connected to realtime data";
+
+                                console.log(`[error] ${error.message}`);
+                            };
+                            realTimeSocket.onclose = function(error) {
+                                document.getElementById("ws-status").src = disconectedIcon;
+                                document.getElementById("ws-status").title = "Not connected to realtime data";
+
+                                console.log(`[error] ${error.message}`);
+                            };
+                        </script>
+
+<div class="superclearfix">
+    
+</div>
+
+                        <hr>
+                        <a style="font-size: small;" href="/kb/what-is-a-upstream">How are upstreams and downstreams calculated?</a>
+                        <h3 id="upstreams">Upstreams<img class="flag-img" src="/assets/lightning.png" style="padding-left: 12px;" title="This information was fetched live at page load time" alt="This information was fetched live at page load time"/></h3>
+
+
+                        <table id="donotscrapebgptools-upstreamTable" class="full-width-table">
+                            <thead class="sortable">
+                                <tr>
+                                    <th class="nowrap boldpls">  &nbsp;  </th>
+                                    <th data-sort-method='number' class="boldpls">ASN</th>
+                                    <th class="nowrap boldpls">Description</th>
+                                    <th class="nowrap boldpls">IPv4</th>
+                                    <th class="nowrap boldpls">IPv6</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                <tr>
+                                    <td data-sort='TH' class="nowrap ns"><img class="flag-img" src="/assets/flags/TH.png" title="TH">
+                                        
+                                        </td>
+                                    <td data-sort='45629'><a href="/as/45629">AS45629</a></td>
+                                    <td class="smallonmobile nowrap">JasTel Network International Gateway</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+
+                        <hr>
+                        <h3 id="peers">Peers<img class="flag-img" src="/assets/lightning.png" style="padding-left: 12px;" title="This information was fetched live at page load time" alt="This information was fetched live at page load time"/></h3>
+
+
+
+                        <table id="donotscrapebgptools-upstreamTablePeers" class="full-width-table">
+                            <thead class="sortable">
+                                <tr>
+                                    <th class="nowrap boldpls">  &nbsp;  </th>
+                                    <th data-sort-method='number' class="boldpls">ASN</th>
+                                    <th class="nowrap boldpls">Description</th>
+                                    <th class="nowrap boldpls">IPv4</th>
+                                    <th class="nowrap boldpls">IPv6</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                <tr>
+                                    <td data-sort='TH' class="nowrap ns"><img class="flag-img" src="/assets/flags/TH.png" title="TH"></td>
+                                    <td data-sort='45629'><a href="/as/45629">AS45629</a></td>
+                                    <td class="smallonmobile nowrap">JasTel Network International Gateway</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='TH' class="nowrap ns"><img class="flag-img" src="/assets/flags/TH.png" title="TH"></td>
+                                    <td data-sort='135034'><a href="/as/135034">AS135034</a></td>
+                                    <td class="smallonmobile nowrap">Planet Communications Asia Public Company Limited</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='TH' class="nowrap ns"><img class="flag-img" src="/assets/flags/TH.png" title="TH"></td>
+                                    <td data-sort='24455'><a href="/as/24455">AS24455</a></td>
+                                    <td class="smallonmobile nowrap">The Siam Cement Group</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='TH' class="nowrap ns"><img class="flag-img" src="/assets/flags/TH.png" title="TH"></td>
+                                    <td data-sort='17901'><a href="/as/17901">AS17901</a></td>
+                                    <td class="smallonmobile nowrap">One to One Contacts Public Company Limited.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='TH' class="nowrap ns"><img class="flag-img" src="/assets/flags/TH.png" title="TH"></td>
+                                    <td data-sort='136566'><a href="/as/136566">AS136566</a></td>
+                                    <td class="smallonmobile nowrap">CyberWorld Data Center Co.,Ltd.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='TH' class="nowrap ns"><img class="flag-img" src="/assets/flags/TH.png" title="TH"></td>
+                                    <td data-sort='24190'><a href="/as/24190">AS24190</a></td>
+                                    <td class="smallonmobile nowrap">The Stock Exchange of Thailand</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='TH' class="nowrap ns"><img class="flag-img" src="/assets/flags/TH.png" title="TH"></td>
+                                    <td data-sort='136906'><a href="/as/136906">AS136906</a></td>
+                                    <td class="smallonmobile nowrap">NJ Network Company Limited 96/26</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='TH' class="nowrap ns"><img class="flag-img" src="/assets/flags/TH.png" title="TH"></td>
+                                    <td data-sort='134089'><a href="/as/134089">AS134089</a></td>
+                                    <td class="smallonmobile nowrap">JasTel Network</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='TH' class="nowrap ns"><img class="flag-img" src="/assets/flags/TH.png" title="TH"></td>
+                                    <td data-sort='38231'><a href="/as/38231">AS38231</a></td>
+                                    <td class="smallonmobile nowrap">CIMB Securities Co., Ltd.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='TH' class="nowrap ns"><img class="flag-img" src="/assets/flags/TH.png" title="TH"></td>
+                                    <td data-sort='7616'><a href="/as/7616">AS7616</a></td>
+                                    <td class="smallonmobile nowrap">JasTel Network</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='TH' class="nowrap ns"><img class="flag-img" src="/assets/flags/TH.png" title="TH"></td>
+                                    <td data-sort='135381'><a href="/as/135381">AS135381</a></td>
+                                    <td class="smallonmobile nowrap">SiS Distribution (Thailand) Public Company Limited de...</td>
+                                    <td class="nowrap">&#10008;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='PH' class="nowrap ns"><img class="flag-img" src="/assets/flags/PH.png" title="PH"></td>
+                                    <td data-sort='141730'><a href="/as/141730">AS141730</a></td>
+                                    <td class="smallonmobile nowrap">Pacific Technologies and Network Philippines Incorporation</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='TH' class="nowrap ns"><img class="flag-img" src="/assets/flags/TH.png" title="TH"></td>
+                                    <td data-sort='142029'><a href="/as/142029">AS142029</a></td>
+                                    <td class="smallonmobile nowrap">Ascend Money</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='GB' class="nowrap ns"><img class="flag-img" src="/assets/flags/GB.png" title="GB"></td>
+                                    <td data-sort='21433'><a href="/as/21433">AS21433</a></td>
+                                    <td class="smallonmobile nowrap">Accenture UK Limited</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='TH' class="nowrap ns"><img class="flag-img" src="/assets/flags/TH.png" title="TH"></td>
+                                    <td data-sort='147187'><a href="/as/147187">AS147187</a></td>
+                                    <td class="smallonmobile nowrap">Bualuang Securities</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='26380'><a href="/as/26380">AS26380</a></td>
+                                    <td class="smallonmobile nowrap">MasterCard Technologies LLC</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='TH' class="nowrap ns"><img class="flag-img" src="/assets/flags/TH.png" title="TH"></td>
+                                    <td data-sort='45642'><a href="/as/45642">AS45642</a></td>
+                                    <td class="smallonmobile nowrap">Jasmine International Tower</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='TH' class="nowrap ns"><img class="flag-img" src="/assets/flags/TH.png" title="TH"></td>
+                                    <td data-sort='152727'><a href="/as/152727">AS152727</a></td>
+                                    <td class="smallonmobile nowrap">Villa Market JP Co.,Ltd</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CN' class="nowrap ns"><img class="flag-img" src="/assets/flags/CN.png" title="CN"></td>
+                                    <td data-sort='4809'><a href="/as/4809">AS4809</a></td>
+                                    <td class="smallonmobile nowrap">China Telecom Next Generation Carrier Network</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='26415'><a href="/as/26415">AS26415</a></td>
+                                    <td class="smallonmobile nowrap">VeriSign Global Registry Services</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='HK' class="nowrap ns"><img class="flag-img" src="/assets/flags/HK.png" title="HK"></td>
+                                    <td data-sort='23764'><a href="/as/23764">AS23764</a></td>
+                                    <td class="smallonmobile nowrap">China Telecom Global</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='TH' class="nowrap ns"><img class="flag-img" src="/assets/flags/TH.png" title="TH"></td>
+                                    <td data-sort='135419'><a href="/as/135419">AS135419</a></td>
+                                    <td class="smallonmobile nowrap">Cableconnect Co.,Ltd</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='SG' class="nowrap ns"><img class="flag-img" src="/assets/flags/SG.png" title="SG"></td>
+                                    <td data-sort='136041'><a href="/as/136041">AS136041</a></td>
+                                    <td class="smallonmobile nowrap">Singapore Telecom, ConnectPlus</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+
+
+
+                        <hr>
+                        <h3 id="downstreams">Downstreams<img class="flag-img" src="/assets/lightning.png" style="padding-left: 12px;" title="This information was fetched live at page load time" alt="This information was fetched live at page load time"/></h3>
+                        <table id="donotscrapebgptools-upstreamTableDowns" class="full-width-table">
+                            <thead class="sortable">
+                                
+                                <tr>
+                                    <th class="nowrap boldpls">  &nbsp;  </th>
+                                    <th data-sort-method='number'  class="boldpls">ASN</th>
+                                    <th class="nowrap boldpls">Description</th>
+                                    <th class="nowrap boldpls">IPv4</th>
+                                    <th class="nowrap boldpls">IPv6</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                <tr>
+                                    <td data-sort='TH' class="nowrap ns"><img class="flag-img" src="/assets/flags/TH.png" title="TH">
+                                        
+                                        </td>
+                                    <td data-sort='136566'><a href="/as/136566">AS136566</a></td>
+                                    <td class="smallonmobile nowrap">CyberWorld Data Center Co.,Ltd.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='TH' class="nowrap ns"><img class="flag-img" src="/assets/flags/TH.png" title="TH">
+                                        
+                                        </td>
+                                    <td data-sort='135034'><a href="/as/135034">AS135034</a></td>
+                                    <td class="smallonmobile nowrap">Planet Communications Asia Public Company Limited</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='TH' class="nowrap ns"><img class="flag-img" src="/assets/flags/TH.png" title="TH">
+                                        
+                                        </td>
+                                    <td data-sort='136906'><a href="/as/136906">AS136906</a></td>
+                                    <td class="smallonmobile nowrap">NJ Network Company Limited 96/26</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='TH' class="nowrap ns"><img class="flag-img" src="/assets/flags/TH.png" title="TH">
+                                        
+                                        </td>
+                                    <td data-sort='135381'><a href="/as/135381">AS135381</a></td>
+                                    <td class="smallonmobile nowrap">SiS Distribution (Thailand) Public Company Limited de...</td>
+                                    <td class="nowrap">&#10008;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='TH' class="nowrap ns"><img class="flag-img" src="/assets/flags/TH.png" title="TH">
+                                        
+                                        </td>
+                                    <td data-sort='24455'><a href="/as/24455">AS24455</a></td>
+                                    <td class="smallonmobile nowrap">The Siam Cement Group</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='TH' class="nowrap ns"><img class="flag-img" src="/assets/flags/TH.png" title="TH">
+                                        
+                                        </td>
+                                    <td data-sort='17901'><a href="/as/17901">AS17901</a></td>
+                                    <td class="smallonmobile nowrap">One to One Contacts Public Company Limited.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='TH' class="nowrap ns"><img class="flag-img" src="/assets/flags/TH.png" title="TH">
+                                        
+                                        </td>
+                                    <td data-sort='24190'><a href="/as/24190">AS24190</a></td>
+                                    <td class="smallonmobile nowrap">The Stock Exchange of Thailand</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='TH' class="nowrap ns"><img class="flag-img" src="/assets/flags/TH.png" title="TH">
+                                        
+                                        </td>
+                                    <td data-sort='142029'><a href="/as/142029">AS142029</a></td>
+                                    <td class="smallonmobile nowrap">Ascend Money</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='TH' class="nowrap ns"><img class="flag-img" src="/assets/flags/TH.png" title="TH">
+                                        
+                                        </td>
+                                    <td data-sort='134089'><a href="/as/134089">AS134089</a></td>
+                                    <td class="smallonmobile nowrap">JasTel Network</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='TH' class="nowrap ns"><img class="flag-img" src="/assets/flags/TH.png" title="TH">
+                                        
+                                        </td>
+                                    <td data-sort='147187'><a href="/as/147187">AS147187</a></td>
+                                    <td class="smallonmobile nowrap">Bualuang Securities</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='GB' class="nowrap ns"><img class="flag-img" src="/assets/flags/GB.png" title="GB">
+                                        
+                                        </td>
+                                    <td data-sort='21433'><a href="/as/21433">AS21433</a></td>
+                                    <td class="smallonmobile nowrap">Accenture UK Limited</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='TH' class="nowrap ns"><img class="flag-img" src="/assets/flags/TH.png" title="TH">
+                                        
+                                        </td>
+                                    <td data-sort='38231'><a href="/as/38231">AS38231</a></td>
+                                    <td class="smallonmobile nowrap">CIMB Securities Co., Ltd.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='PH' class="nowrap ns"><img class="flag-img" src="/assets/flags/PH.png" title="PH">
+                                        
+                                        </td>
+                                    <td data-sort='141730'><a href="/as/141730">AS141730</a></td>
+                                    <td class="smallonmobile nowrap">Pacific Technologies and Network Philippines Incorporation</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='TH' class="nowrap ns"><img class="flag-img" src="/assets/flags/TH.png" title="TH">
+                                        
+                                        </td>
+                                    <td data-sort='7616'><a href="/as/7616">AS7616</a></td>
+                                    <td class="smallonmobile nowrap">JasTel Network</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US">
+                                        
+                                        </td>
+                                    <td data-sort='26380'><a href="/as/26380">AS26380</a></td>
+                                    <td class="smallonmobile nowrap">MasterCard Technologies LLC</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='TH' class="nowrap ns"><img class="flag-img" src="/assets/flags/TH.png" title="TH">
+                                        
+                                        </td>
+                                    <td data-sort='152727'><a href="/as/152727">AS152727</a></td>
+                                    <td class="smallonmobile nowrap">Villa Market JP Co.,Ltd</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+
+                    </div>
+
+                    <div style="display: none" id="whois-page">
+                        
+                        
+                        <pre style="white-space: pre-wrap;">aut-num:        <a href="/AS55423">AS55423</a>
+as-name:        <a href="https://wq.apnic.net/apnic-bin/whois.pl?searchtext=JASTEL-NETWORK-TH-IDC-AP&amp;form_type=advanced">JASTEL-NETWORK-TH-IDC-AP</a>
+descr:          JasTel Network
+descr:          Jasmine International Tower
+descr:          200 Moo 4 Cheangwattana Rd
+country:        TH
+org:            <a href="https://wq.apnic.net/apnic-bin/whois.pl?searchtext=ORG-JN1-AP&amp;form_type=advanced">ORG-JN1-AP</a>
+admin-c:        <a href="https://wq.apnic.net/apnic-bin/whois.pl?searchtext=JNna1-AP&amp;form_type=advanced">JNna1-AP</a>
+tech-c:         <a href="https://wq.apnic.net/apnic-bin/whois.pl?searchtext=JNna1-AP&amp;form_type=advanced">JNna1-AP</a>
+abuse-c:        <a href="https://wq.apnic.net/apnic-bin/whois.pl?searchtext=AJ451-AP&amp;form_type=advanced">AJ451-AP</a>
+mnt-lower:      MAINT-JASTEL-NETWORK-TH
+mnt-routes:     MAINT-JASTEL-NETWORK-TH
+mnt-by:         APNIC-HM
+mnt-irt:        IRT-JASTEL-NETWORK-TH
+last-modified:  2020-07-29T13:13:00Z
+source:         APNIC
+
+
+organisation:   <a href="https://wq.apnic.net/apnic-bin/whois.pl?searchtext=ORG-JN1-AP&amp;form_type=advanced">ORG-JN1-AP</a>
+org-name:       JasTel Network Company Limited
+org-type:       LIR
+country:        TH
+address:        Jasmine International Tower
+address:        200 Moo 4 Cheangwattana Rd
+address:        Pakkred
+phone:          &#43;6621003168
+fax-no:         &#43;6621003184
+# Email removed, Log into bgp.tools to see whois emails
+mnt-ref:        APNIC-HM
+mnt-by:         APNIC-HM
+last-modified:  2024-03-28T12:55:15Z
+source:         APNIC
+
+</pre>
+                        
+                        
+                        <a style="font-size: small;">Last Update: 2025-12-10T03:22:13Z UTC </a>
+                        
+                        <hr>
+                        
+                            <h2>Member of the following AS-SETs</h2>
+
+                            <table id="fhTable" class="full-width-table ">
+                                <tbody id="prefixlist-tbody">
+                                    <tr>
+                                        <th class="boldpls nowrap"> - </th>
+                                        <th class="boldpls">Member</th>
+                                         
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">NTTCOM</td>
+                                        
+                                        <td><a href="/as-set/NTTCOM::as-ocn">as-ocn</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-twig">as-twig</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-hurricane">as-hurricane</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">JPIRR</td>
+                                        
+                                        <td><a href="/as-set/JPIRR::as-ocn">as-ocn</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-ocn">as-ocn</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">APNIC</td>
+                                        
+                                        <td><a href="/as-set/APNIC::as58453:as-asiaascust">as58453:as-asiaascust</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">APNIC</td>
+                                        
+                                        <td><a href="/as-set/APNIC::as63529:as-63529-as-import-as23764">as63529:as-63529-as-import-as23764</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">APNIC</td>
+                                        
+                                        <td><a href="/as-set/APNIC::as-cnx-rs-clients">as-cnx-rs-clients</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-pacnet-downstream-hk">as-pacnet-downstream-hk</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-kddcustomer2">as-kddcustomer2</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-transroute-spec">as-transroute-spec</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">APNIC</td>
+                                        
+                                        <td><a href="/as-set/APNIC::as58453:as-asiatest">as58453:as-asiatest</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as58453:as-asiaascust">as58453:as-asiaascust</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-hurricanev6">as-hurricanev6</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-45629">as-45629</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">APNIC</td>
+                                        
+                                        <td><a href="/as-set/APNIC::as45629:as-jastel">as45629:as-jastel</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-telstra-intl-customers-4637">as-telstra-intl-customers-4637</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-th-ix-as45642">as-th-ix-as45642</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as3491:as-customers-ap">as3491:as-customers-ap</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-th-ix-as45758">as-th-ix-as45758</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-tripletnet">as-tripletnet</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-cttj">as-cttj</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-telstra-testing-1">as-telstra-testing-1</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-pacnet-downstream-ph">as-pacnet-downstream-ph</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-telstra-intl-customers">as-telstra-intl-customers</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">APNIC</td>
+                                        
+                                        <td><a href="/as-set/APNIC::as45758:as-tripletnet">as45758:as-tripletnet</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-45642">as-45642</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-thix">as-thix</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                        
+
+                    </div>
+
+                    
+
+                    
+
+                    
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="superclearfix">
+            
+            <div class="superclearfix">
+                
+            </div>
+
+            <div class="superclearfix">
+                
+            </div>
+
+
+        </div>
+
+
+        <div class="group js-footer" id="footer">
+            <nav>
+                <div>
+                    <ul>
+                        <li><a href="/kb/api" target="_blank">Scripting/API</a></li>
+                        <li><a href="/credits" target="_blank">Credits</a></li>
+                        <li><a href="/pricing" target="_blank">Pricing</a></li>
+                        <li><a href="/kb/contact" target="_blank">Contact Us</a></li>
+                        <li><a href="https://github.com/bgptools/issues" target="_blank">Issue Tracker</a></li>
+                        <li><a href="/kb/setup-sessions" target="">Contribute Data</a></li>
+                        
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <script>
+    
+    var inhash = window.location.hash;
+    if (inhash == "#asinfo") {
+        
+    } else if (inhash == "#prefixes") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#prefix-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#prefixes-page');
+        aaa[0].style.display = "";
+
+    } else if (inhash == "#connectivity" || inhash == "#peers" || inhash == "#upstreams" || inhash == "#downstreams") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#connectivity-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#connectivity-page');
+        aaa[0].style.display = "";
+    } else if (inhash == "#whois") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#whois-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#whois-page');
+        aaa[0].style.display = "";
+    } else if (inhash == "#ix") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#ix-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#ix-page');
+        aaa[0].style.display = "";
+    }</script>
+
+    <script>
+    
+
+
+    ;(function() {
+  'use strict'
+
+  function scaleImageMap() {
+    function resizeMap() {
+      function resizeAreaTag(cachedAreaCoords, idx) {
+        function scale(coord) {
+          var dimension = 1 === (isWidth = 1 - isWidth) ? 'width' : 'height'
+          return (
+            padding[dimension] +
+            Math.floor(Number(coord) * scalingFactor[dimension])
+          )
+        }
+
+        var isWidth = 0
+        areas[idx].coords = cachedAreaCoords
+          .split(',')
+          .map(scale)
+          .join(',')
+      }
+
+      var scalingFactor = {
+        width: image.width / image.naturalWidth,
+        height: image.height / image.naturalHeight,
+      }
+
+      var padding = {
+        width: parseInt(
+          window.getComputedStyle(image, null).getPropertyValue('padding-left'),
+          10
+        ),
+        height: parseInt(
+          window.getComputedStyle(image, null).getPropertyValue('padding-top'),
+          10
+        ),
+      }
+
+      cachedAreaCoordsArray.forEach(resizeAreaTag)
+    }
+
+    function getCoords(e) {
+      
+      return e.coords.replace(/ *, */g, ',').replace(/ +/g, ',')
+    }
+
+    function debounce() {
+      clearTimeout(timer)
+      timer = setTimeout(resizeMap, 250)
+    }
+
+    function start() {
+      if (
+        image.width !== image.naturalWidth ||
+        image.height !== image.naturalHeight
+      ) {
+        resizeMap()
+      }
+    }
+
+    function addEventListeners() {
+      image.addEventListener('load', resizeMap, false) 
+      window.addEventListener('focus', resizeMap, false) 
+      window.addEventListener('resize', debounce, false)
+      window.addEventListener('readystatechange', resizeMap, false)
+      document.addEventListener('fullscreenchange', resizeMap, false)
+    }
+
+    function beenHere() {
+      return 'function' === typeof map._resize
+    }
+
+    function getImg(name) {
+      return document.querySelector('img[usemap="#world"]')
+    }
+
+    function setup() {
+      areas = map.getElementsByTagName('area')
+      cachedAreaCoordsArray = Array.prototype.map.call(areas, getCoords)
+      image = getImg('#' + map.name) || getImg(map.name)
+      map._resize = resizeMap 
+    }
+
+    var  
+      map = this,
+      areas = null,
+      cachedAreaCoordsArray = null,
+      image = null,
+      timer = null
+
+    if (!beenHere()) {
+      setup()
+      addEventListeners()
+      start()
+    } else {
+      map._resize() 
+    }
+  }
+
+  function factory() {
+    function chkMap(element) {
+      if (!element.tagName) {
+        throw new TypeError('Object is not a valid DOM element')
+      } else if ('MAP' !== element.tagName.toUpperCase()) {
+        throw new TypeError(
+          'Expected <MAP> tag, found <' + element.tagName + '>.'
+        )
+      }
+    }
+
+    function init(element) {
+      if (element) {
+        chkMap(element)
+        scaleImageMap.call(element)
+        maps.push(element)
+      }
+    }
+
+    var maps
+
+    return function imageMapResizeF(target) {
+      maps = [] 
+
+      switch (typeof target) {
+        case 'undefined':
+        case 'string':
+          Array.prototype.forEach.call(
+            document.querySelectorAll(target || 'map'),
+            init
+          )
+          break
+        case 'object':
+          init(target)
+          break
+        default:
+          throw new TypeError('Unexpected data type (' + typeof target + ').')
+      }
+
+      return maps
+    }
+  }
+
+  if (typeof define === 'function' && define.amd) {
+    define([], factory)
+  } else if (typeof module === 'object' && typeof module.exports === 'object') {
+    module.exports = factory() 
+  } else {
+    window.imageMapResize = factory()
+  }
+
+  if ('jQuery' in window) {
+    window.jQuery.fn.imageMapResize = function $imageMapResizeF() {
+      return this.filter('map')
+        .each(scaleImageMap)
+        .end()
+    }
+  }
+})()
+    
+    </script>
+    <script>
+        var imgEl = document.getElementById("pathimg");
+        imgEl.addEventListener("mouseover",function() {
+            imageMapResize('#world');
+        })
+    </script>
+    <script src="/assets/tablesort.min.js"></script>
+    <script>
+        addEventListener("load", (event) => {
+            
+            
+            var sort = new Tablesort(document.getElementById('donotscrapebgptools-upstreamTable'));
+            var sort2 = new Tablesort(document.getElementById('donotscrapebgptools-upstreamTablePeers'));
+            
+            var sort3 = new Tablesort(document.getElementById('donotscrapebgptools-upstreamTableDowns'));
+            
+            
+        });
+    </script>
+    
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        setTimeout(function() {
+
+        var beaconHttp = new XMLHttpRequest();
+        var url = '/performance-beacon';
+        var params = JSON.stringify(window.performance)
+        beaconHttp.open('POST', url, true);
+        
+        
+        beaconHttp.setRequestHeader('Content-type', 'application/json');
+        beaconHttp.setRequestHeader('visit-url', "/as/55423");
+        if (navigator.connection) {
+            beaconHttp.setRequestHeader('client-side-rtt', navigator.connection.rtt);
+        } else {
+            beaconHttp.setRequestHeader('client-side-rtt', '-2');
+        }
+        beaconHttp.onreadystatechange = function() {}
+        beaconHttp.send(params);
+        },1000)
+    }, false);
+</script>
+
+</body>
+
+
+</html>

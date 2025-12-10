@@ -1,0 +1,2583 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Pro-M Zrt. (AS47169) is a 17 year old BGP network that is peering with 42 other networks and has 3 upstream carriers">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000">
+    <link rel="search" type="application/opensearchdescription+xml" title="BGP.Tools" href="https://bgp.tools/opensearch.xml">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="theme-color" content="#000000">
+    <link href="https://social.bgp.tools/@bgptools" rel="me">
+    <link rel="canonical" href="https://bgp.tools/as/47169" />
+    <title>AS47169 Pro-M Zrt. - bgp.tools</title>
+    <link rel="stylesheet" type="text/css" href="/assets/main-new.css?2025-12-09-1723%20UTC">
+</head>
+
+<body>
+    <div id="container">
+        
+<div id="global-header" class="global-header-top">
+    <div class="header-sitewide">
+        <div class="global-header">
+            <div class="header-logo">
+                <a href="/" id="logo" class="content">bgp.tools</a>
+            </div>
+            <form id="search" action="/search" method="get" accept-charset="utf-8" role="search" class="top-search-header js-search-hash">
+                <div class="searchfield">
+                    <input type="search" autocomplete="off" name="q" id="site-search-text" title="Search" value="" placeholder="Start here..." autofocus="autofocus" class="js-search-focus">
+                    <button type="submit" id="search-submit" class="search-submit">Search</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div id="global-header-blob" >
+    <a id="auth-header-text" href="/login">Login</a>
+    
+</div>
+<div id="global-header-bar" >
+    <a id="auth-header-bar-text" href="/login">Login</a>
+    
+</div>
+<div class="small-clearfix"></div>
+
+        <div id="global-container">
+            
+
+
+            
+            <div class="section-tabs js-tabs">
+                <ul>
+                    
+<li class="active">
+    <h1> <a id="viewbutton-tab" href="/as/47169">View</a></h1>
+</li>
+
+<li >
+    <a id="editbutton-tab" href="/edit/as/47169">Edit</a>
+</li>
+
+
+
+
+
+                    <li style="float: right;">
+                        
+                        <img id="ws-status" width="24" height="24" src="/assets/disconnected.png" title="Not Connected To realtime data updates">
+                        
+                    </li>
+                </ul>
+            </div>
+
+            <div id="search-container">
+
+                <div class="column-full-width">
+
+                    <div class="clearfix">
+                        
+                    </div>
+                    
+                    
+
+                    <div class="network-header">
+                        
+                        
+                        <img width="334" height="250" src="/img/47169" alt="The website screenshot for http://www.pro-m.hu/" >
+                        
+                        
+                        <p id="network-name" class="heading-xlarge">Pro-M Zrt.</p>
+                        <p id="network-number">
+                            AS Number
+                            <strong id="ASNumberString" pure="47169">47169</strong>
+                            <br>
+                        
+                            Website
+                            <strong><a href="http://www.pro-m.hu/" rel="nofollow">http://www.pro-m.hu/</a></strong>
+                        
+                        </p>
+
+                    </div>
+
+
+                    <div class="clearfix">
+                        
+                    </div>
+
+
+                    <div class="section-tabs js-tabs">
+                        <ul>
+
+                            <li id="overview-tab-li" class="active">
+                                <a id="overview-tab" href="#asinfo">Overview</a>
+                            </li>
+                            
+                            <li id="prefix-tab-li">
+                                <a id="prefix-tab" href="#prefixes">Prefixes</a>
+                            </li>
+
+                            <li id="connectivity-tab-li">
+                                <a id="connectivity-tab" href="#connectivity">Connectivity</a>
+                            </li>
+                            
+                            <li id="whois-tab-li">
+                                <a id="whois-tab" href="#whois">Whois</a>
+                            </li>
+                        
+                            <li id="ix-tab-li">
+                                <a id="ix-tab" href="#ix">IX</a>
+                            </li>
+                        
+                        
+                        </ul>
+                    </div>
+
+<script>
+    function removeAllActiveTab() {
+        var tabs = [
+            "overview-tab-li", 
+            "prefix-tab-li", 
+            "connectivity-tab-li",
+            "whois-tab-li",
+            "ix-tab-li",
+            "issues-tab-li"
+        ];
+
+        tabs.forEach(element => {
+            var aaa = document.querySelectorAll('#'+element);
+            if(aaa.length != 0) {
+                aaa[0].classList.remove("active")
+            }
+        });
+    }
+
+    function hideAllContent() {
+        var tabs = [
+            "overview-page", 
+            "prefixes-page", 
+            "connectivity-page",
+            "whois-page",
+            "ix-page",
+            "issues-page"
+        ];
+
+        tabs.forEach(element => {
+            var aaa = document.querySelectorAll('#'+element);
+            if(aaa.length != 0) {
+                aaa[0].style.display = "none";
+            }
+        });
+        if (document.getElementById("donotscrapebgptools-prefixlist-tbody")) {
+            var prefixrows = document.getElementById("donotscrapebgptools-prefixlist-tbody").children;
+            for (var i = 0; i < prefixrows.length; i++) {
+                prefixrows[i].style = "";
+            }
+        }
+    }
+
+    var otab = document.querySelectorAll('#overview-tab');
+    otab[0].addEventListener("click", function () {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#overview-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#overview-page');
+        aaa[0].style.display = "";
+    });
+    
+
+    var ptab = document.querySelectorAll('#prefix-tab');
+    ptab[0].addEventListener("click", function () {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#prefix-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#prefixes-page');
+        aaa[0].style.display = "";
+    });
+
+    var ctab = document.querySelectorAll('#connectivity-tab');
+    ctab[0].addEventListener("click", function () {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#connectivity-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#connectivity-page');
+        aaa[0].style.display = "";
+    });
+    
+
+    var wtab = document.querySelectorAll('#whois-tab');
+    wtab[0].addEventListener("click", function () {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#whois-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#whois-page');
+        aaa[0].style.display = "";
+    });
+
+</script>
+
+
+<script>
+var wtab = document.querySelectorAll('#ix-tab');
+wtab[0].addEventListener("click", function () {
+    removeAllActiveTab()
+    hideAllContent()
+    var otab2 = document.querySelectorAll('#ix-tab-li');
+    otab2[0].classList.add("active");
+
+    var aaa = document.querySelectorAll('#ix-page');
+    aaa[0].style.display = "";
+});
+</script>
+
+
+                    
+                    <div id="overview-page">
+
+                        <div class="grid-row">
+                        
+                        <div class="column-two-thirds">
+                            <dl>
+                                <dt>Registered on</dt>
+                                <dd class="text data">
+                                    
+                                     8 May 2008 (17 years old)
+                                </dd>
+                            
+                            
+                            <dt>Registered to</dt>
+                            <dd class="text data">
+                                <a href="/rir-owner/hu.hpc-mvm">hu.hpc-mvm</a> (ripe)</dd>
+                                
+                                <dd class="text data" id="network-status">
+                                    <a href="/transfer-history/47169">[Transfer History]</a>
+                                </dd>
+                                
+                            
+                            </dl>
+                        </div>
+                        
+    
+                        <dl class="column-third">
+                            <dt>Network status</dt>
+                            <dd class="text data">
+                                
+                                Active, Allocated under RIPE
+                                
+                            </dd>
+                        </dl>
+    
+                        </div>
+    
+                        <div class="grid-row">
+                            <dl class="column-two-thirds">
+                                <dt>Network type</dt>
+                                <dd class="text data">
+                                    Eyeball
+                                </dd>
+                            </dl>
+    
+                            <dl class="column-third">
+                                <dt>Prefixes Originated</dt>
+                                <dd class="data">36 IPv4, 4 IPv6</dd>
+                            </dl>
+                        </div>
+                        <div class="grid-row">
+                            <div class="column-half">
+    
+                                <h2 class="heading-medium"><derp>Upstreams</derp></h2>
+                                <ul>
+                                    
+                                    <li>
+                                        <span id="sic0">
+                                          <a href="/as/1299">AS1299</a> - Arelion (fka. Telia Carrier)
+                                        </span>
+                                    </li>
+                                    
+                                    <li>
+                                        <span id="sic0">
+                                          <a href="/as/6453">AS6453</a> - TATA Communications (America) Inc
+                                        </span>
+                                    </li>
+                                    
+                                    <li>
+                                        <span id="sic0">
+                                          <a href="/as/3257">AS3257</a> - GTT Communications Inc.
+                                        </span>
+                                    </li>
+                                    
+                                </ul>
+    
+                            </div>
+    
+                            <div class="column-half">
+                                
+                                    <h2 class="heading-medium"><derp>Rankings</derp></h2>
+                                    
+                                    <li><span id="sic0">#5 for <a href="/rankings/HU?sort=cone">AS Cone  in Hungary</a></span></li>
+                                    
+                                    <li><span id="sic0">#14 for <a href="/rankings/HU?sort=eyeballs">Estimated Eyeballs  in Hungary</a></span></li>
+                                    
+                                    <li><span id="sic0">#45 for <a href="/rankings/HU?sort=dns">Unique Domains  in Hungary</a></span></li>
+                                    
+                                    <li><span id="sic0">#7 for <a href="/rankings/HU?sort=peering">Known Peers  in Hungary</a></span></li>
+                                    
+                                    <li><span id="sic0">#11 for <a href="/rankings/HU?sort=v4">Originated IPv4 Space  in Hungary</a></span></li>
+                                    
+                                    <li><span id="sic0">#12 for <a href="/rankings/HU?sort=v6">Originated IPv6 Space  in Hungary</a></span></li>
+                                    
+                                
+                            </div>
+                        </div>
+                        
+                        <div class="grid-row" style="padding: 15px;">
+                            <h2 class="heading-medium"><derp>Tags:</derp></h2>
+                            <br>
+                            
+                            <a href="/tags/dsl"><span style="border: 5px solid #F49C23;" class="taglist"> Home ISP </span></a>
+                            
+                        </div>
+                        
+                    </div>
+                    
+
+                    <div style="display: none" id="prefixes-page">
+                        
+
+                        
+                        <div style="float:left">
+                            <dt>Prefixes Originated</dt>
+                            <dd class="data">36 IPv4, 4 IPv6</dd>
+                            
+                            
+                        </div>
+                        <div style="float:right">
+                                <dt>Addresses Originated</dt>
+                                <dd class="data">224 /24's of IPv4</dd>
+                                <dd class="data">131072 /48's of IPv6</dd>
+                        </div>
+
+                        <div class="clearfix">
+                            
+                        </div>
+
+
+                        <table id="fhTable" class="full-width-table ">
+                            <tbody id="donotscrapebgptools-prefixlist-tbody">
+                                <tr>
+                                    <th class="nowrap">  &nbsp;  </th>
+                                    <th class="boldpls">Prefix</th>
+                                    <th class="nowrap boldpls">Description</th>
+                                </tr>
+                                <p id="readme-if-you-are-human" style="display: none;">If you are scraping this block for the prefixes that a AS originates, please use the data dumps in https://bgp.tools/kb/api and cache them</p>
+                                
+                                <tr id="pfx-5.61.240.0/21">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="HU" src="/assets/flags/HU.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/5.61.240.0/21">5.61.240.0/21</a></td>
+                                    <td class="smallonmobile nowrap">Pro-M Zrt.</td>
+                                </tr>
+                                
+                                <tr id="pfx-45.10.92.0/23">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="HU" src="/assets/flags/HU.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/45.10.92.0/23">45.10.92.0/23</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-45.130.240.0/22">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="HU" src="/assets/flags/HU.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/45.130.240.0/22">45.130.240.0/22</a></td>
+                                    <td class="smallonmobile nowrap">Techno-Tel Kft</td>
+                                </tr>
+                                
+                                <tr id="pfx-45.144.192.0/22">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="HU" src="/assets/flags/HU.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/45.144.192.0/22">45.144.192.0/22</a></td>
+                                    <td class="smallonmobile nowrap">Saghy-Sat Szolgaltato es Kereskedelmi Kft</td>
+                                </tr>
+                                
+                                <tr id="pfx-45.153.148.0/22">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="HU" src="/assets/flags/HU.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/45.153.148.0/22">45.153.148.0/22</a></td>
+                                    <td class="smallonmobile nowrap">Pro Media I. Kft.</td>
+                                </tr>
+                                
+                                <tr id="pfx-80.85.60.0/22">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="HU" src="/assets/flags/HU.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/80.85.60.0/22">80.85.60.0/22</a></td>
+                                    <td class="smallonmobile nowrap">Novi-Com Kft.</td>
+                                </tr>
+                                
+                                <tr id="pfx-81.160.128.0/17">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="HU" src="/assets/flags/HU.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/81.160.128.0/17">81.160.128.0/17</a></td>
+                                    <td class="smallonmobile nowrap">National Infocommunications Service Company Limited b...</td>
+                                </tr>
+                                
+                                <tr id="pfx-84.21.4.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="HU" src="/assets/flags/HU.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/84.21.4.0/24">84.21.4.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Nethun Kft.</td>
+                                </tr>
+                                
+                                <tr id="pfx-87.229.16.0/22">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="HU" src="/assets/flags/HU.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/87.229.16.0/22">87.229.16.0/22</a></td>
+                                    <td class="smallonmobile nowrap">Saghy-Sat Kft.</td>
+                                </tr>
+                                
+                                <tr id="pfx-87.229.38.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="HU" src="/assets/flags/HU.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/87.229.38.0/24">87.229.38.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Saghy-Sat Kft.</td>
+                                </tr>
+                                
+                                <tr id="pfx-87.229.39.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="HU" src="/assets/flags/HU.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/87.229.39.0/24">87.229.39.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Saghy-Sat Kft.</td>
+                                </tr>
+                                
+                                <tr id="pfx-87.229.42.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="HU" src="/assets/flags/HU.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/87.229.42.0/24">87.229.42.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Saghy-Sat Kft.</td>
+                                </tr>
+                                
+                                <tr id="pfx-87.229.43.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="HU" src="/assets/flags/HU.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/87.229.43.0/24">87.229.43.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Saghy-Sat Kft.</td>
+                                </tr>
+                                
+                                <tr id="pfx-87.229.106.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="HU" src="/assets/flags/HU.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/87.229.106.0/24">87.229.106.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Saghy-Sat Kft.</td>
+                                </tr>
+                                
+                                <tr id="pfx-87.229.107.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="HU" src="/assets/flags/HU.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/87.229.107.0/24">87.229.107.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Saghy-Sat Kft.</td>
+                                </tr>
+                                
+                                <tr id="pfx-91.209.114.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="HU" src="/assets/flags/HU.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/91.209.114.0/24">91.209.114.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Techno-Tel Kft</td>
+                                </tr>
+                                
+                                <tr id="pfx-91.213.40.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="HU" src="/assets/flags/HU.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/91.213.40.0/24">91.213.40.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Attila Matko</td>
+                                </tr>
+                                
+                                <tr id="pfx-91.226.79.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="HU" src="/assets/flags/HU.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/91.226.79.0/24">91.226.79.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Techno-Tel Kft</td>
+                                </tr>
+                                
+                                <tr id="pfx-93.190.0.0/21">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="HU" src="/assets/flags/HU.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/93.190.0.0/21">93.190.0.0/21</a></td>
+                                    <td class="smallonmobile nowrap">Pro-M Zrt.</td>
+                                </tr>
+                                
+                                <tr id="pfx-185.11.172.0/22">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="HU" src="/assets/flags/HU.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/185.11.172.0/22">185.11.172.0/22</a></td>
+                                    <td class="smallonmobile nowrap">MOBILLAN-SAT Informatikai, Kereskedelmi es Szolgaltato Kft</td>
+                                </tr>
+                                
+                                <tr id="pfx-185.63.44.0/22">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="HU" src="/assets/flags/HU.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/185.63.44.0/22">185.63.44.0/22</a></td>
+                                    <td class="smallonmobile nowrap">Pro-M Zrt.</td>
+                                </tr>
+                                
+                                <tr id="pfx-185.143.200.0/23">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="HU" src="/assets/flags/HU.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/185.143.200.0/23">185.143.200.0/23</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-194.39.168.0/22">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="HU" src="/assets/flags/HU.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/194.39.168.0/22">194.39.168.0/22</a></td>
+                                    <td class="smallonmobile nowrap">Pro-M Zrt.</td>
+                                </tr>
+                                
+                                <tr id="pfx-195.170.184.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="HU" src="/assets/flags/HU.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/195.170.184.0/24">195.170.184.0/24</a></td>
+                                    <td class="smallonmobile nowrap">UNION Vienna Insurance Goroup Zrt.</td>
+                                </tr>
+                                
+                                <tr id="pfx-213.181.212.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="HU" src="/assets/flags/HU.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/213.181.212.0/24">213.181.212.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Celldomolki Kabeltelevizio Kft.</td>
+                                </tr>
+                                
+                                <tr id="pfx-45.14.8.0/23">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="HU" src="/assets/flags/HU.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/45.14.8.0/23">45.14.8.0/23</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-45.88.92.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="HU" src="/assets/flags/HU.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/45.88.92.0/24">45.88.92.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Giganet Internet Szolgaltato Kft</td>
+                                </tr>
+                                
+                                <tr id="pfx-45.131.148.0/22">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="HU" src="/assets/flags/HU.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/45.131.148.0/22">45.131.148.0/22</a></td>
+                                    <td class="smallonmobile nowrap">Macronet System Kft</td>
+                                </tr>
+                                
+                                <tr id="pfx-79.121.73.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="HU" src="/assets/flags/HU.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/79.121.73.0/24">79.121.73.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Porion Digital Kft.</td>
+                                </tr>
+                                
+                                <tr id="pfx-79.121.81.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="HU" src="/assets/flags/HU.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/79.121.81.0/24">79.121.81.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Porion Digital Kft.</td>
+                                </tr>
+                                
+                                <tr id="pfx-88.209.218.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="HU" src="/assets/flags/HU.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/88.209.218.0/24">88.209.218.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Szabadhajdu Nonprofit Kft</td>
+                                </tr>
+                                
+                                <tr id="pfx-88.209.250.0/23">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="HU" src="/assets/flags/HU.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/88.209.250.0/23">88.209.250.0/23</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-92.52.192.0/21">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="HU" src="/assets/flags/HU.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/92.52.192.0/21">92.52.192.0/21</a></td>
+                                    <td class="smallonmobile nowrap">Szabadhajdu Nonprofit Kft</td>
+                                </tr>
+                                
+                                <tr id="pfx-92.52.200.0/22">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="HU" src="/assets/flags/HU.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/92.52.200.0/22">92.52.200.0/22</a></td>
+                                    <td class="smallonmobile nowrap">Szabadhajdu Nonprofit Kft</td>
+                                </tr>
+                                
+                                <tr id="pfx-185.47.160.0/22">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="HU" src="/assets/flags/HU.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/185.47.160.0/22">185.47.160.0/22</a></td>
+                                    <td class="smallonmobile nowrap">Macronet System Kft</td>
+                                </tr>
+                                
+                                <tr id="pfx-185.47.184.0/22">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="HU" src="/assets/flags/HU.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/185.47.184.0/22">185.47.184.0/22</a></td>
+                                    <td class="smallonmobile nowrap">Macronet System Kft</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a01:8de0::/33">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="HU" src="/assets/flags/HU.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/2a01:8de0::/33">2a01:8de0::/33</a></td>
+                                    <td class="smallonmobile nowrap">Macronet System Kft</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a01:8de0:8000::/33">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="HU" src="/assets/flags/HU.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/2a01:8de0:8000::/33">2a01:8de0:8000::/33</a></td>
+                                    <td class="smallonmobile nowrap">Macronet System Kft</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a03:3380::/32">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="HU" src="/assets/flags/HU.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/2a03:3380::/32">2a03:3380::/32</a></td>
+                                    <td class="smallonmobile nowrap">Pro-M Zrt.</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a03:3380:2::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="HU" src="/assets/flags/HU.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/2a03:3380:2::/48">2a03:3380:2::/48</a></td>
+                                    <td class="smallonmobile nowrap">Pro-M Zrt.</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div style="display: none" id="connectivity-page">
+
+                        <div class="grid-row">
+                            <dl class="column-third column-third-first">
+                                <dt><a href="#peers">Peers</a></dt>
+                                <dd class="data">42</dd>
+                            </dl><dl class="column-third column-third-mid">
+                                <dt><a href="#upstreams">Upstreams</a></dt>
+                                
+                                <dd class="text data">3</dd>
+                                
+                            </dl>
+                            <dl class="column-third column-third-last">
+                                <dt><a href="#downstreams">Downstreams</a></dt> <dd class="data">21 (Cone: 30)</dd>
+                            </dl>
+
+                        </div>
+
+
+                        <hr>
+                        <h3>Network Policy<img class="flag-img" src="/assets/info.png" style="padding-left: 12px;" title="This info can take up to 2 hours to fully update" alt="This info take up to 2 hours to fully update"/></h3></h3>
+                        <a style="font-size: small;" href="/kb/network-policy">Click here to learn more about what this graph means and what makes up a network policy</a>
+
+                        <select id="netpolicydropdown" class="dropdownmenu">
+                            
+                                <option value="default">Global Aggregation</option>
+                            
+
+                            
+                                
+                            
+                                <option value="59b5da2d639a9e4de3d8f50bfdf33a553538936a300050a5d1da4701">Policy upbeat_buck</option>
+                            
+                                <option value="7b95d092c8d144ecd4ef135301f0d3debdda6b25535bca1553879530">Policy nostalgic_elion</option>
+                            
+                                <option value="e83657d0cbb6c76de8594a65ba88a2e41195b9bc8b75dfe85caaa80b">Policy cranky_kare</option>
+                            
+                                <option value="272ad5316dde04042bbfa7c69df866487527880968b47eaee809c767">Policy stupefied_dirac</option>
+                            
+                                <option value="56dd09dcf86d1b9d1bc07d4bb326c298297455d345217df5149709cc">Policy compassionate_roentgen</option>
+                            
+
+                            
+
+
+                        </select>
+
+                        <script>var netgroups = {"272ad5316dde04042bbfa7c69df866487527880968b47eaee809c767":["2a01:8de0:8000::/33","2a03:3380:2::/48"],"56dd09dcf86d1b9d1bc07d4bb326c298297455d345217df5149709cc":["81.160.128.0/17"],"59b5da2d639a9e4de3d8f50bfdf33a553538936a300050a5d1da4701":["195.170.184.0/24"],"7b95d092c8d144ecd4ef135301f0d3debdda6b25535bca1553879530":["2a03:3380::/32","2a01:8de0::/33"],"e83657d0cbb6c76de8594a65ba88a2e41195b9bc8b75dfe85caaa80b":["45.131.148.0/22","88.209.250.0/23","87.229.43.0/24","79.121.73.0/24","87.229.16.0/22","88.209.218.0/24","92.52.200.0/22","45.153.148.0/22","185.47.184.0/22","93.190.0.0/21","45.10.92.0/23","84.21.4.0/24","45.88.92.0/24","87.229.42.0/24","91.226.79.0/24","5.61.240.0/21","92.52.192.0/21","45.130.240.0/22","79.121.81.0/24","213.181.212.0/24","87.229.39.0/24","45.14.8.0/23","45.144.192.0/22","91.209.114.0/24","80.85.60.0/22","185.11.172.0/22","194.39.168.0/22","185.47.160.0/22","185.143.200.0/23","87.229.107.0/24","87.229.106.0/24","91.213.40.0/24","185.63.44.0/22","87.229.38.0/24"]}</script>
+
+                        <div style="text-align: center;">
+                            <img id="pathimg" usemap="#world" src="">
+                            <div id="world2"></div>
+                        </div>
+
+                        <details>
+                            <summary>Chart Display Options</summary>
+                            <noscript>This requires javascript to work</noscript>
+                            <label for="graphOptionMoreWiggle" style="display: flex;align-items: center;font-size: 20px;">
+                                <input type="checkbox" id="graphOptionMoreWiggle" name="graphOptionMoreWiggle" style="width: 64px; height: 32px;">
+                                    <p id="graphOptionMoreWiggleLabel" style="width: 200%;">Display links using non straight lines</p>
+                            </label>
+                        </details>
+
+                        <h3 style="display: none;" id="PISPBanner">Prefixes in selected policy</h3>
+                        <table id="policytable" class="full-width-table">
+                        </table>
+                        <button style="width:100%;display: none;" id="ShowFullPolicyButton" class="bigButton" onclick="dropdownPoke()">Load all prefixes in policy</button>
+
+                        <script>
+                            !function(a,b){"function"==typeof define&&define.amd?define([],b):"undefined"!=typeof module&&module.exports?module.exports=b():a.ReconnectingWebSocket=b()}(this,function(){function a(b,c,d){function l(a,b){var c=document.createEvent("CustomEvent");return c.initCustomEvent(a,!1,!1,b),c}var e={debug:!1,automaticOpen:!0,reconnectInterval:1e3,maxReconnectInterval:3e4,reconnectDecay:1.5,timeoutInterval:2e3};d||(d={});for(var f in e)this[f]="undefined"!=typeof d[f]?d[f]:e[f];this.url=b,this.reconnectAttempts=0,this.readyState=WebSocket.CONNECTING,this.protocol=null;var h,g=this,i=!1,j=!1,k=document.createElement("div");k.addEventListener("open",function(a){g.onopen(a)}),k.addEventListener("close",function(a){g.onclose(a)}),k.addEventListener("connecting",function(a){g.onconnecting(a)}),k.addEventListener("message",function(a){g.onmessage(a)}),k.addEventListener("error",function(a){g.onerror(a)}),this.addEventListener=k.addEventListener.bind(k),this.removeEventListener=k.removeEventListener.bind(k),this.dispatchEvent=k.dispatchEvent.bind(k),this.open=function(b){h=new WebSocket(g.url,c||[]),b||k.dispatchEvent(l("connecting")),(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","attempt-connect",g.url);var d=h,e=setTimeout(function(){(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","connection-timeout",g.url),j=!0,d.close(),j=!1},g.timeoutInterval);h.onopen=function(){clearTimeout(e),(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","onopen",g.url),g.protocol=h.protocol,g.readyState=WebSocket.OPEN,g.reconnectAttempts=0;var d=l("open");d.isReconnect=b,b=!1,k.dispatchEvent(d)},h.onclose=function(c){if(clearTimeout(e),h=null,i)g.readyState=WebSocket.CLOSED,k.dispatchEvent(l("close"));else{g.readyState=WebSocket.CONNECTING;var d=l("connecting");d.code=c.code,d.reason=c.reason,d.wasClean=c.wasClean,k.dispatchEvent(d),b||j||((g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","onclose",g.url),k.dispatchEvent(l("close")));var e=g.reconnectInterval*Math.pow(g.reconnectDecay,g.reconnectAttempts);setTimeout(function(){g.reconnectAttempts++,g.open(!0)},e>g.maxReconnectInterval?g.maxReconnectInterval:e)}},h.onmessage=function(b){(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","onmessage",g.url,b.data);var c=l("message");c.data=b.data,k.dispatchEvent(c)},h.onerror=function(b){(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","onerror",g.url,b),k.dispatchEvent(l("error"))}},1==this.automaticOpen&&this.open(!1),this.send=function(b){if(h)return(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","send",g.url,b),h.send(b);throw"INVALID_STATE_ERR : Pausing to reconnect websocket"},this.close=function(a,b){"undefined"==typeof a&&(a=1e3),i=!0,h&&h.close(a,b)},this.refresh=function(){h&&h.close()}}return a.prototype.onopen=function(){},a.prototype.onclose=function(){},a.prototype.onconnecting=function(){},a.prototype.onmessage=function(){},a.prototype.onerror=function(){},a.debugAll=!1,a.CONNECTING=WebSocket.CONNECTING,a.OPEN=WebSocket.OPEN,a.CLOSING=WebSocket.CLOSING,a.CLOSED=WebSocket.CLOSED,a});
+                        </script>
+                        
+                        <script>
+                            var prefixinfo = [{"PrefixString":"5.61.240.0/21","WhoisName":"Pro-M Zrt.","WhoisCountry":"HU"},{"PrefixString":"45.10.92.0/23","WhoisName":"-","WhoisCountry":"HU"},{"PrefixString":"45.130.240.0/22","WhoisName":"Techno-Tel Kft","WhoisCountry":"HU"},{"PrefixString":"45.144.192.0/22","WhoisName":"Saghy-Sat Szolgaltato es Kereskedelmi Kft","WhoisCountry":"HU"},{"PrefixString":"45.153.148.0/22","WhoisName":"Pro Media I. Kft.","WhoisCountry":"HU"},{"PrefixString":"80.85.60.0/22","WhoisName":"Novi-Com Kft.","WhoisCountry":"HU"},{"PrefixString":"81.160.128.0/17","WhoisName":"National Infocommunications Service Company Limited b...","WhoisCountry":"HU"},{"PrefixString":"84.21.4.0/24","WhoisName":"Nethun Kft.","WhoisCountry":"HU"},{"PrefixString":"87.229.16.0/22","WhoisName":"Saghy-Sat Kft.","WhoisCountry":"HU"},{"PrefixString":"87.229.38.0/24","WhoisName":"Saghy-Sat Kft.","WhoisCountry":"HU"},{"PrefixString":"87.229.39.0/24","WhoisName":"Saghy-Sat Kft.","WhoisCountry":"HU"},{"PrefixString":"87.229.42.0/24","WhoisName":"Saghy-Sat Kft.","WhoisCountry":"HU"},{"PrefixString":"87.229.43.0/24","WhoisName":"Saghy-Sat Kft.","WhoisCountry":"HU"},{"PrefixString":"87.229.106.0/24","WhoisName":"Saghy-Sat Kft.","WhoisCountry":"HU"},{"PrefixString":"87.229.107.0/24","WhoisName":"Saghy-Sat Kft.","WhoisCountry":"HU"},{"PrefixString":"91.209.114.0/24","WhoisName":"Techno-Tel Kft","WhoisCountry":"HU"},{"PrefixString":"91.213.40.0/24","WhoisName":"Attila Matko","WhoisCountry":"HU"},{"PrefixString":"91.226.79.0/24","WhoisName":"Techno-Tel Kft","WhoisCountry":"HU"},{"PrefixString":"93.190.0.0/21","WhoisName":"Pro-M Zrt.","WhoisCountry":"HU"},{"PrefixString":"185.11.172.0/22","WhoisName":"MOBILLAN-SAT Informatikai, Kereskedelmi es Szolgaltato Kft","WhoisCountry":"HU"},{"PrefixString":"185.63.44.0/22","WhoisName":"Pro-M Zrt.","WhoisCountry":"HU"},{"PrefixString":"185.143.200.0/23","WhoisName":"-","WhoisCountry":"HU"},{"PrefixString":"194.39.168.0/22","WhoisName":"Pro-M Zrt.","WhoisCountry":"HU"},{"PrefixString":"195.170.184.0/24","WhoisName":"UNION Vienna Insurance Goroup Zrt.","WhoisCountry":"HU"},{"PrefixString":"213.181.212.0/24","WhoisName":"Celldomolki Kabeltelevizio Kft.","WhoisCountry":"HU"},{"PrefixString":"45.14.8.0/23","WhoisName":"-","WhoisCountry":"HU"},{"PrefixString":"45.88.92.0/24","WhoisName":"Giganet Internet Szolgaltato Kft","WhoisCountry":"HU"},{"PrefixString":"45.131.148.0/22","WhoisName":"Macronet System Kft","WhoisCountry":"HU"},{"PrefixString":"79.121.73.0/24","WhoisName":"Porion Digital Kft.","WhoisCountry":"HU"},{"PrefixString":"79.121.81.0/24","WhoisName":"Porion Digital Kft.","WhoisCountry":"HU"},{"PrefixString":"88.209.218.0/24","WhoisName":"Szabadhajdu Nonprofit Kft","WhoisCountry":"HU"},{"PrefixString":"88.209.250.0/23","WhoisName":"-","WhoisCountry":"HU"},{"PrefixString":"92.52.192.0/21","WhoisName":"Szabadhajdu Nonprofit Kft","WhoisCountry":"HU"},{"PrefixString":"92.52.200.0/22","WhoisName":"Szabadhajdu Nonprofit Kft","WhoisCountry":"HU"},{"PrefixString":"185.47.160.0/22","WhoisName":"Macronet System Kft","WhoisCountry":"HU"},{"PrefixString":"185.47.184.0/22","WhoisName":"Macronet System Kft","WhoisCountry":"HU"},{"PrefixString":"2a01:8de0::/33","WhoisName":"Macronet System Kft","WhoisCountry":"HU"},{"PrefixString":"2a01:8de0:8000::/33","WhoisName":"Macronet System Kft","WhoisCountry":"HU"},{"PrefixString":"2a03:3380::/32","WhoisName":"Pro-M Zrt.","WhoisCountry":"HU"},{"PrefixString":"2a03:3380:2::/48","WhoisName":"Pro-M Zrt.","WhoisCountry":"HU"}]
+                            var asn =  47169 
+
+                            var pfxExtraString = "";
+
+                            function saveGraphOptionsToLocalStorage() {
+                                localStorage.setItem("pfx-chart-options:wiggle", document.getElementById("graphOptionMoreWiggle").checked);
+                            }
+
+                            function loadGraphOptionsToLocalStorage() {
+                                document.getElementById("graphOptionMoreWiggle").checked = localStorage.getItem("pfx-chart-options:wiggle") == "true";
+                                pfxExtraString= "";
+                                if (document.getElementById("graphOptionMoreWiggle").checked) {
+                                    pfxExtraString = pfxExtraString + "&wiggly";
+                                }
+                            }
+                            loadGraphOptionsToLocalStorage();
+
+                            function graphOptionsChanged() {
+                                saveGraphOptionsToLocalStorage();
+                                handleImageChange();
+                            }
+                            document.getElementById("graphOptionMoreWiggle").addEventListener("click", graphOptionsChanged)
+
+
+                            function handleImageChange() {
+                                loadGraphOptionsToLocalStorage();
+                                
+                                document.getElementById("pathimg").src=("/pathimg/"+asn+ "-" + document.getElementById("netpolicydropdown").value +"?"+pfxExtraString);
+                                var request = new XMLHttpRequest();
+                                request.open('GET', "/pathimg/"+asn+ "-" + document.getElementById("netpolicydropdown").value + "?map=true" + pfxExtraString, true);
+
+                                request.onload = function() {
+                                    if (this.status >= 200 && this.status < 400) {
+                                        
+                                        
+                                        document.getElementById("world2").innerHTML = this.response;
+                                        setTimeout(function(){
+                                            imageMapResize('#world');
+                                        },1000)
+                                    }
+                                };
+                                request.send();
+                                buildPrefixTable();
+                            } 
+
+                            function encodeHTML(s) {
+                                return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
+                            }
+
+                            function dropdownPoke(){
+                                InteractedWithPolicyTableYet=true;
+                                handleImageChange();
+                            }
+
+                            var InteractedWithPolicyTableYet = false;
+                            var OverloadPolicySize = 0;
+                            function buildPrefixTable() {
+                                var policy = document.getElementById("netpolicydropdown").value;
+                                
+                                var cidrs = netgroups[policy];
+                                var ihtml = "<tbody> <tr> <th class=\"nowrap\">  -  </th> <th>Prefix</th> <th class=\"nowrap\">Description</th> </tr>";
+
+                                
+                                var aaa = document.querySelectorAll('#PISPBanner');
+                                var bbb = document.querySelectorAll('#policytable');
+                                var n = 0
+                                if (cidrs) {
+                                    aaa[0].style.display = "";
+                                    bbb[0].style.display = "";
+                                    cidrs.forEach(cidr => {
+                                        var obj = {};
+                                        var dont =false;
+                                        n++;
+                                        
+                                        if (!InteractedWithPolicyTableYet) {
+                                            if (n == 5) {
+                                                dont = true;
+                                            } else if (n > 5) {
+                                                dont = true;
+                                            }
+                                        }
+                                        
+                                        if (!dont) {
+                                            prefixinfo.forEach(el => {
+                                                if(el.PrefixString == cidr) {
+                                                    
+                                                        ihtml += "<tr><td class=\"nowrap ns\"><img class=\"flag-img\" src=\"/assets/flags/"+el.WhoisCountry+".png\" title=\""+el.WhoisCountry+"\"></td>"
+                                                        ihtml += "<td><a href=\"/prefix/"+el.PrefixString+"\">"+el.PrefixString+"</a></td>"
+                                                        ihtml += "<td class=\"nowrap\">"+encodeHTML(el.WhoisName)+"</td></tr>"
+                                                }
+                                            });
+                                        } else {
+                                            OverloadPolicySize++;
+                                        }
+                                    });
+                                    document.getElementById("policytable").innerHTML = ihtml
+                                    var PolButton = document.querySelectorAll('#ShowFullPolicyButton');
+                                    if (!InteractedWithPolicyTableYet && OverloadPolicySize!=0) {
+                                        PolButton[0].style="width:100%";
+                                        PolButton[0].innerHTML = "Load all "+OverloadPolicySize+" prefixes in policy"
+                                    } else {
+                                        PolButton[0].style="display:none;";
+                                    }
+                                    
+                                } else {
+                                    aaa[0].style.display = "none";
+                                    bbb[0].style.display = "none";
+                                }
+                            }
+
+
+                            var pathdropdown = document.querySelectorAll('#netpolicydropdown');
+                            pathdropdown[0].addEventListener("change",dropdownPoke)
+                            handleImageChange()
+                            buildPrefixTable()
+
+                            document.addEventListener("load", function(){
+                                
+                                handleImageChange()
+                            });
+
+                            function uuidv4() {
+                                return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+                                    var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+                                    return v.toString(16);
+                                });
+                            }
+
+                            
+                            let realTimeSocket = new ReconnectingWebSocket("wss://bgp.tools/ws/rt-asn?prefix=AS47169" + "&magic=" + encodeURIComponent("JQEUJX5S5VIEDKEJSFVCH4WD2MUEC3SKEHQICWWDZGZPQFRGHDNA===="));
+                            
+                            realTimeSocket.onmessage = function(event) {
+                                console.log(`[message] Data received from server: ${event.data}`);
+                                if (event.data == "Running.") {
+                                    document.getElementById("ws-status").src = "/assets/connected.png";
+                                    document.getElementById("ws-status").title = "Connected to realtime data";
+                                } else if (event.data == "STOP-CONNECTING") {
+                                    document.getElementById("ws-status").src = disconectedIcon;
+                                    document.getElementById("ws-status").title = "Not connected to realtime data";
+                                    realTimeSocket.maxReconnectAttempts = 1;
+                                    realTimeSocket.close()
+                                } else {
+                                    var obj = JSON.parse(event.data);
+                                    var elm = document.getElementById("pfx-"+obj.Prefix);
+                                    if (!elm && obj.Vis > 6) {
+                                        var tblist = document.getElementById("donotscrapebgptools-prefixlist-tbody");
+                                        var node = document.createElement("tr");                 
+                                        node.outerHTML = '<tr id="pfx-'+obj.Prefix+'"><td class="nowrap"><img class="flag-img" src="/assets/flags/'+obj.Whois.WhoisCountry+'.png" title="'+obj.Whois.WhoisCountry+'"></td><td><a href="/prefix/'+obj.Prefix+'">'+obj.Prefix+'</a></td><td class="smallonmobile nowrap">'+obj.Whois.WhoisName+'</td></tr>';
+                                        tblist.appendChild(node);                              
+                                    }
+                                    if (!elm) {
+                                        elm = document.getElementById("pfx-"+obj.Prefix);
+                                    }
+                                    
+                                    if (obj.Vis > 70) {
+                                        if (elm.style) {
+                                            var es = elm.style;
+                                            if (es.animation.includes("pulse1b")) {
+                                                elm.style = "animation: pulse2b 1s 1;";
+                                            } else if (es.animation.includes("pulse2b")) {
+                                                elm.style = "animation: pulse1b 1s 1;";
+                                            } else {
+                                                elm.style = "animation: pulse1b 1s 1;";
+                                            }
+                                        }
+                                    } else if (obj.Vis < 5) {
+                                        
+                                        var elm = document.getElementById("pfx-"+obj.Prefix);
+                                        if (elm) {
+                                            elm.parentNode.removeChild(elm);
+                                        }
+                                    } else {
+                                        if (elm.style) {
+                                            var es = elm.style;
+                                            if (es.animation.includes("pulse1r")) {
+                                                elm.style = "animation: pulse2r 1s 1;";
+                                            } else if (es.animation.includes("pulse2r")) {
+                                                elm.style = "animation: pulse1r 1s 1;";
+                                            } else {
+                                                elm.style = "animation: pulse1r 1s 1;";
+                                            }
+                                        }
+                                    }
+                                }
+                            };
+                            var disconectedIcon = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAAZlBMVEX/ewBZWVn/ewf/ew5fWljudiP8egp6XVT6eRHodSmVYU6hZEzObjrldCv3eRZ/XlNjWliHX1KrZkngci71eBl1XFXCa0CKYFHydx18XlSQYE+lZUq0aEbJbT3SbzhvXFaLYFG8akLYdYVFAAABQElEQVRIx5XV25KDIAwGYIKASLutqOtZ277/S26xK4ozJea/qRdfajATZaRkd6B6oPoL1d9QphUn+WvXmGF8TfN8yvNrDj6nvNj5Hu8n8HCh9ONiON5PEKuQx55DmFTHC1R9uMOjYkhFERbkEikofw8FGe5t0FWJ+kLvz5H+t8RdGD9k8TeebBXpzwIZT955XyVBtHHeXYzeJy5fhydtoZffZvUMSfvxT4BOeI/G/b9paxH1at8XQF8xNcV8aaQvHQBMhY/XttsdYp5nah3XdvIqui61Cjy+jqLwXp1cx9XLQZ5cR/vx1p8cez2IWrlxYY/T9bNVyCfmdQdbxNgs441FNRAEHS83oe9ahmTw1p88nhHCiAkpeIUeX5eJ6NlM9Gwm+uxO9/3F2PSR597jn1+udCWzUp7150P1jOoZ1f8BGPARG85JosIAAAAASUVORK5CYII=";
+                            realTimeSocket.onerror = function(error) {
+                                document.getElementById("ws-status").src = disconectedIcon;
+                                document.getElementById("ws-status").title = "Not connected to realtime data";
+
+                                console.log(`[error] ${error.message}`);
+                            };
+                            realTimeSocket.onclose = function(error) {
+                                document.getElementById("ws-status").src = disconectedIcon;
+                                document.getElementById("ws-status").title = "Not connected to realtime data";
+
+                                console.log(`[error] ${error.message}`);
+                            };
+                        </script>
+
+<div class="superclearfix">
+    
+</div>
+
+                        <hr>
+                        <a style="font-size: small;" href="/kb/what-is-a-upstream">How are upstreams and downstreams calculated?</a>
+                        <h3 id="upstreams">Upstreams<img class="flag-img" src="/assets/lightning.png" style="padding-left: 12px;" title="This information was fetched live at page load time" alt="This information was fetched live at page load time"/></h3>
+
+
+                        <table id="donotscrapebgptools-upstreamTable" class="full-width-table">
+                            <thead class="sortable">
+                                <tr>
+                                    <th class="nowrap boldpls">  &nbsp;  </th>
+                                    <th data-sort-method='number' class="boldpls">ASN</th>
+                                    <th class="nowrap boldpls">Description</th>
+                                    <th class="nowrap boldpls">IPv4</th>
+                                    <th class="nowrap boldpls">IPv6</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                <tr>
+                                    <td data-sort='SE' class="nowrap ns"><img class="flag-img" src="/assets/flags/SE.png" title="SE">
+                                        
+                                        </td>
+                                    <td data-sort='1299'><a href="/as/1299">AS1299</a></td>
+                                    <td class="smallonmobile nowrap">Arelion (fka. Telia Carrier)</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US">
+                                        
+                                        </td>
+                                    <td data-sort='6453'><a href="/as/6453">AS6453</a></td>
+                                    <td class="smallonmobile nowrap">TATA Communications (America) Inc</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US">
+                                        
+                                        </td>
+                                    <td data-sort='3257'><a href="/as/3257">AS3257</a></td>
+                                    <td class="smallonmobile nowrap">GTT Communications Inc.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+
+                        <hr>
+                        <h3 id="peers">Peers<img class="flag-img" src="/assets/lightning.png" style="padding-left: 12px;" title="This information was fetched live at page load time" alt="This information was fetched live at page load time"/></h3>
+
+
+
+                        <table id="donotscrapebgptools-upstreamTablePeers" class="full-width-table">
+                            <thead class="sortable">
+                                <tr>
+                                    <th class="nowrap boldpls">  &nbsp;  </th>
+                                    <th data-sort-method='number' class="boldpls">ASN</th>
+                                    <th class="nowrap boldpls">Description</th>
+                                    <th class="nowrap boldpls">IPv4</th>
+                                    <th class="nowrap boldpls">IPv6</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                <tr>
+                                    <td data-sort='SE' class="nowrap ns"><img class="flag-img" src="/assets/flags/SE.png" title="SE"></td>
+                                    <td data-sort='1299'><a href="/as/1299">AS1299</a></td>
+                                    <td class="smallonmobile nowrap">Arelion (fka. Telia Carrier)</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='3257'><a href="/as/3257">AS3257</a></td>
+                                    <td class="smallonmobile nowrap">GTT Communications Inc.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='6453'><a href="/as/6453">AS6453</a></td>
+                                    <td class="smallonmobile nowrap">TATA Communications (America) Inc</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='54253'><a href="/as/54253">AS54253</a></td>
+                                    <td class="smallonmobile nowrap">Oracle Corporation</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='6939'><a href="/as/6939">AS6939</a></td>
+                                    <td class="smallonmobile nowrap">Hurricane Electric LLC</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='HU' class="nowrap ns"><img class="flag-img" src="/assets/flags/HU.png" title="HU"></td>
+                                    <td data-sort='42232'><a href="/as/42232">AS42232</a></td>
+                                    <td class="smallonmobile nowrap">PARISAT Tavkozlesi es Szolgaltato Korlatolt Felelosse...</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='HU' class="nowrap ns"><img class="flag-img" src="/assets/flags/HU.png" title="HU"></td>
+                                    <td data-sort='44789'><a href="/as/44789">AS44789</a></td>
+                                    <td class="smallonmobile nowrap">KabelszatNet-2002. Musoreloszto es Kereskedelmi Kft.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='HU' class="nowrap ns"><img class="flag-img" src="/assets/flags/HU.png" title="HU"></td>
+                                    <td data-sort='210114'><a href="/as/210114">AS210114</a></td>
+                                    <td class="smallonmobile nowrap">HungaroControl Pte.Ltd.Co.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='HU' class="nowrap ns"><img class="flag-img" src="/assets/flags/HU.png" title="HU"></td>
+                                    <td data-sort='43928'><a href="/as/43928">AS43928</a></td>
+                                    <td class="smallonmobile nowrap">MVM Information Technology Private Company Limited by...</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='HU' class="nowrap ns"><img class="flag-img" src="/assets/flags/HU.png" title="HU"></td>
+                                    <td data-sort='200076'><a href="/as/200076">AS200076</a></td>
+                                    <td class="smallonmobile nowrap">Klapka Gyorgy Lakasfenntarto Szovetkezet</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='HU' class="nowrap ns"><img class="flag-img" src="/assets/flags/HU.png" title="HU"></td>
+                                    <td data-sort='51438'><a href="/as/51438">AS51438</a></td>
+                                    <td class="smallonmobile nowrap">Boly Varos Onkormanyzat</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='HU' class="nowrap ns"><img class="flag-img" src="/assets/flags/HU.png" title="HU"></td>
+                                    <td data-sort='31297'><a href="/as/31297">AS31297</a></td>
+                                    <td class="smallonmobile nowrap">Axian Kft.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='HU' class="nowrap ns"><img class="flag-img" src="/assets/flags/HU.png" title="HU"></td>
+                                    <td data-sort='42120'><a href="/as/42120">AS42120</a></td>
+                                    <td class="smallonmobile nowrap">MODIT Informatikai Zrt.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='HU' class="nowrap ns"><img class="flag-img" src="/assets/flags/HU.png" title="HU"></td>
+                                    <td data-sort='197523'><a href="/as/197523">AS197523</a></td>
+                                    <td class="smallonmobile nowrap">DV Info Informatikai kft.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='HU' class="nowrap ns"><img class="flag-img" src="/assets/flags/HU.png" title="HU"></td>
+                                    <td data-sort='1955'><a href="/as/1955">AS1955</a></td>
+                                    <td class="smallonmobile nowrap">KIFU (Governmental Info Tech Development Agency)</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='HU' class="nowrap ns"><img class="flag-img" src="/assets/flags/HU.png" title="HU"></td>
+                                    <td data-sort='50031'><a href="/as/50031">AS50031</a></td>
+                                    <td class="smallonmobile nowrap">Zalaszam Informatika Kft.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='DE' class="nowrap ns"><img class="flag-img" src="/assets/flags/DE.png" title="DE"></td>
+                                    <td data-sort='33891'><a href="/as/33891">AS33891</a></td>
+                                    <td class="smallonmobile nowrap">Core-Backbone GmbH</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='HU' class="nowrap ns"><img class="flag-img" src="/assets/flags/HU.png" title="HU"></td>
+                                    <td data-sort='41015'><a href="/as/41015">AS41015</a></td>
+                                    <td class="smallonmobile nowrap">GELKA HIRTECH KFT</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='HU' class="nowrap ns"><img class="flag-img" src="/assets/flags/HU.png" title="HU"></td>
+                                    <td data-sort='49986'><a href="/as/49986">AS49986</a></td>
+                                    <td class="smallonmobile nowrap">Paks II. Ltd.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='HU' class="nowrap ns"><img class="flag-img" src="/assets/flags/HU.png" title="HU"></td>
+                                    <td data-sort='25539'><a href="/as/25539">AS25539</a></td>
+                                    <td class="smallonmobile nowrap">Hungarian Power System Operator Co.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='HU' class="nowrap ns"><img class="flag-img" src="/assets/flags/HU.png" title="HU"></td>
+                                    <td data-sort='208126'><a href="/as/208126">AS208126</a></td>
+                                    <td class="smallonmobile nowrap">ViNetwork Kft.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='HU' class="nowrap ns"><img class="flag-img" src="/assets/flags/HU.png" title="HU"></td>
+                                    <td data-sort='41303'><a href="/as/41303">AS41303</a></td>
+                                    <td class="smallonmobile nowrap">MatraCOMP Kft.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='GB' class="nowrap ns"><img class="flag-img" src="/assets/flags/GB.png" title="GB"></td>
+                                    <td data-sort='9002'><a href="/as/9002">AS9002</a></td>
+                                    <td class="smallonmobile nowrap">RETN Limited</td>
+                                    <td class="nowrap">&#10008;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='HU' class="nowrap ns"><img class="flag-img" src="/assets/flags/HU.png" title="HU"></td>
+                                    <td data-sort='40989'><a href="/as/40989">AS40989</a></td>
+                                    <td class="smallonmobile nowrap">EGIS Pharmaceuticals Plc.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='NL' class="nowrap ns"><img class="flag-img" src="/assets/flags/NL.png" title="NL"></td>
+                                    <td data-sort='49544'><a href="/as/49544">AS49544</a></td>
+                                    <td class="smallonmobile nowrap">i3D.net B.V</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='AT' class="nowrap ns"><img class="flag-img" src="/assets/flags/AT.png" title="AT"></td>
+                                    <td data-sort='47692'><a href="/as/47692">AS47692</a></td>
+                                    <td class="smallonmobile nowrap">Nessus GmbH</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='HU' class="nowrap ns"><img class="flag-img" src="/assets/flags/HU.png" title="HU"></td>
+                                    <td data-sort='44945'><a href="/as/44945">AS44945</a></td>
+                                    <td class="smallonmobile nowrap">Olah es Tarsa Kereskedelmi es Szolgaltato Kft</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CH' class="nowrap ns"><img class="flag-img" src="/assets/flags/CH.png" title="CH"></td>
+                                    <td data-sort='15576'><a href="/as/15576">AS15576</a></td>
+                                    <td class="smallonmobile nowrap">NTS workspace AG</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='BG' class="nowrap ns"><img class="flag-img" src="/assets/flags/BG.png" title="BG"></td>
+                                    <td data-sort='44901'><a href="/as/44901">AS44901</a></td>
+                                    <td class="smallonmobile nowrap">Belcloud LTD</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='HU' class="nowrap ns"><img class="flag-img" src="/assets/flags/HU.png" title="HU"></td>
+                                    <td data-sort='31581'><a href="/as/31581">AS31581</a></td>
+                                    <td class="smallonmobile nowrap">National Infocommunications Service Company Limited b...</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='AT' class="nowrap ns"><img class="flag-img" src="/assets/flags/AT.png" title="AT"></td>
+                                    <td data-sort='40994'><a href="/as/40994">AS40994</a></td>
+                                    <td class="smallonmobile nowrap">Alwyzon (Hohl IT)</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='HU' class="nowrap ns"><img class="flag-img" src="/assets/flags/HU.png" title="HU"></td>
+                                    <td data-sort='24822'><a href="/as/24822">AS24822</a></td>
+                                    <td class="smallonmobile nowrap">OPC Networks Kft.</td>
+                                    <td class="nowrap">&#10008;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='BG' class="nowrap ns"><img class="flag-img" src="/assets/flags/BG.png" title="BG"></td>
+                                    <td data-sort='57344'><a href="/as/57344">AS57344</a></td>
+                                    <td class="smallonmobile nowrap">Telehouse EAD</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='32590'><a href="/as/32590">AS32590</a></td>
+                                    <td class="smallonmobile nowrap">Valve Corporation</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='SI' class="nowrap ns"><img class="flag-img" src="/assets/flags/SI.png" title="SI"></td>
+                                    <td data-sort='34779'><a href="/as/34779">AS34779</a></td>
+                                    <td class="smallonmobile nowrap">T-2, d.o.o.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='RO' class="nowrap ns"><img class="flag-img" src="/assets/flags/RO.png" title="RO"></td>
+                                    <td data-sort='6663'><a href="/as/6663">AS6663</a></td>
+                                    <td class="smallonmobile nowrap">Türk Telekom International</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='RO' class="nowrap ns"><img class="flag-img" src="/assets/flags/RO.png" title="RO"></td>
+                                    <td data-sort='9009'><a href="/as/9009">AS9009</a></td>
+                                    <td class="smallonmobile nowrap">M247 Europe SRL</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='RS' class="nowrap ns"><img class="flag-img" src="/assets/flags/RS.png" title="RS"></td>
+                                    <td data-sort='21215'><a href="/as/21215">AS21215</a></td>
+                                    <td class="smallonmobile nowrap">UNITED GROUP NETWORK INFRASTRUCTURE d.o.o. Beograd</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='HU' class="nowrap ns"><img class="flag-img" src="/assets/flags/HU.png" title="HU"></td>
+                                    <td data-sort='12301'><a href="/as/12301">AS12301</a></td>
+                                    <td class="smallonmobile nowrap">Invitech ICT Services Kft.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='HU' class="nowrap ns"><img class="flag-img" src="/assets/flags/HU.png" title="HU"></td>
+                                    <td data-sort='5483'><a href="/as/5483">AS5483</a></td>
+                                    <td class="smallonmobile nowrap">Magyar Telekom Plc.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='RU' class="nowrap ns"><img class="flag-img" src="/assets/flags/RU.png" title="RU"></td>
+                                    <td data-sort='57304'><a href="/as/57304">AS57304</a></td>
+                                    <td class="smallonmobile nowrap">RETN Russia</td>
+                                    <td class="nowrap">&#10008;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='15169'><a href="/as/15169">AS15169</a></td>
+                                    <td class="smallonmobile nowrap">Google LLC</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+
+
+
+                        <hr>
+                        <h3 id="downstreams">Downstreams<img class="flag-img" src="/assets/lightning.png" style="padding-left: 12px;" title="This information was fetched live at page load time" alt="This information was fetched live at page load time"/></h3>
+                        <table id="donotscrapebgptools-upstreamTableDowns" class="full-width-table">
+                            <thead class="sortable">
+                                
+                                <tr>
+                                    <th class="nowrap boldpls">  &nbsp;  </th>
+                                    <th data-sort-method='number'  class="boldpls">ASN</th>
+                                    <th class="nowrap boldpls">Description</th>
+                                    <th class="nowrap boldpls">IPv4</th>
+                                    <th class="nowrap boldpls">IPv6</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US">
+                                        
+                                        </td>
+                                    <td data-sort='54253'><a href="/as/54253">AS54253</a></td>
+                                    <td class="smallonmobile nowrap">Oracle Corporation</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='HU' class="nowrap ns"><img class="flag-img" src="/assets/flags/HU.png" title="HU">
+                                        
+                                        </td>
+                                    <td data-sort='42232'><a href="/as/42232">AS42232</a></td>
+                                    <td class="smallonmobile nowrap">PARISAT Tavkozlesi es Szolgaltato Korlatolt Felelosse...</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='HU' class="nowrap ns"><img class="flag-img" src="/assets/flags/HU.png" title="HU">
+                                        
+                                        </td>
+                                    <td data-sort='44789'><a href="/as/44789">AS44789</a></td>
+                                    <td class="smallonmobile nowrap">KabelszatNet-2002. Musoreloszto es Kereskedelmi Kft.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='HU' class="nowrap ns"><img class="flag-img" src="/assets/flags/HU.png" title="HU">
+                                        
+                                        </td>
+                                    <td data-sort='210114'><a href="/as/210114">AS210114</a></td>
+                                    <td class="smallonmobile nowrap">HungaroControl Pte.Ltd.Co.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='HU' class="nowrap ns"><img class="flag-img" src="/assets/flags/HU.png" title="HU">
+                                        
+                                        </td>
+                                    <td data-sort='43928'><a href="/as/43928">AS43928</a></td>
+                                    <td class="smallonmobile nowrap">MVM Information Technology Private Company Limited by...</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='HU' class="nowrap ns"><img class="flag-img" src="/assets/flags/HU.png" title="HU">
+                                        
+                                        </td>
+                                    <td data-sort='51438'><a href="/as/51438">AS51438</a></td>
+                                    <td class="smallonmobile nowrap">Boly Varos Onkormanyzat</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='HU' class="nowrap ns"><img class="flag-img" src="/assets/flags/HU.png" title="HU">
+                                        
+                                        </td>
+                                    <td data-sort='200076'><a href="/as/200076">AS200076</a></td>
+                                    <td class="smallonmobile nowrap">Klapka Gyorgy Lakasfenntarto Szovetkezet</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='HU' class="nowrap ns"><img class="flag-img" src="/assets/flags/HU.png" title="HU">
+                                        
+                                        </td>
+                                    <td data-sort='31297'><a href="/as/31297">AS31297</a></td>
+                                    <td class="smallonmobile nowrap">Axian Kft.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='HU' class="nowrap ns"><img class="flag-img" src="/assets/flags/HU.png" title="HU">
+                                        
+                                        </td>
+                                    <td data-sort='197523'><a href="/as/197523">AS197523</a></td>
+                                    <td class="smallonmobile nowrap">DV Info Informatikai kft.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='HU' class="nowrap ns"><img class="flag-img" src="/assets/flags/HU.png" title="HU">
+                                        
+                                        </td>
+                                    <td data-sort='42120'><a href="/as/42120">AS42120</a></td>
+                                    <td class="smallonmobile nowrap">MODIT Informatikai Zrt.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='HU' class="nowrap ns"><img class="flag-img" src="/assets/flags/HU.png" title="HU">
+                                        
+                                        </td>
+                                    <td data-sort='1955'><a href="/as/1955">AS1955</a></td>
+                                    <td class="smallonmobile nowrap">KIFU (Governmental Info Tech Development Agency)</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='HU' class="nowrap ns"><img class="flag-img" src="/assets/flags/HU.png" title="HU">
+                                        
+                                        </td>
+                                    <td data-sort='50031'><a href="/as/50031">AS50031</a></td>
+                                    <td class="smallonmobile nowrap">Zalaszam Informatika Kft.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='HU' class="nowrap ns"><img class="flag-img" src="/assets/flags/HU.png" title="HU">
+                                        
+                                        </td>
+                                    <td data-sort='25539'><a href="/as/25539">AS25539</a></td>
+                                    <td class="smallonmobile nowrap">Hungarian Power System Operator Co.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='HU' class="nowrap ns"><img class="flag-img" src="/assets/flags/HU.png" title="HU">
+                                        
+                                        </td>
+                                    <td data-sort='49986'><a href="/as/49986">AS49986</a></td>
+                                    <td class="smallonmobile nowrap">Paks II. Ltd.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='HU' class="nowrap ns"><img class="flag-img" src="/assets/flags/HU.png" title="HU">
+                                        
+                                        </td>
+                                    <td data-sort='208126'><a href="/as/208126">AS208126</a></td>
+                                    <td class="smallonmobile nowrap">ViNetwork Kft.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='HU' class="nowrap ns"><img class="flag-img" src="/assets/flags/HU.png" title="HU">
+                                        
+                                        </td>
+                                    <td data-sort='41303'><a href="/as/41303">AS41303</a></td>
+                                    <td class="smallonmobile nowrap">MatraCOMP Kft.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='HU' class="nowrap ns"><img class="flag-img" src="/assets/flags/HU.png" title="HU">
+                                        
+                                        </td>
+                                    <td data-sort='40989'><a href="/as/40989">AS40989</a></td>
+                                    <td class="smallonmobile nowrap">EGIS Pharmaceuticals Plc.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='HU' class="nowrap ns"><img class="flag-img" src="/assets/flags/HU.png" title="HU">
+                                        
+                                        </td>
+                                    <td data-sort='44945'><a href="/as/44945">AS44945</a></td>
+                                    <td class="smallonmobile nowrap">Olah es Tarsa Kereskedelmi es Szolgaltato Kft</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='HU' class="nowrap ns"><img class="flag-img" src="/assets/flags/HU.png" title="HU">
+                                        
+                                        </td>
+                                    <td data-sort='31581'><a href="/as/31581">AS31581</a></td>
+                                    <td class="smallonmobile nowrap">National Infocommunications Service Company Limited b...</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='HU' class="nowrap ns"><img class="flag-img" src="/assets/flags/HU.png" title="HU">
+                                        
+                                        </td>
+                                    <td data-sort='24822'><a href="/as/24822">AS24822</a></td>
+                                    <td class="smallonmobile nowrap">OPC Networks Kft.</td>
+                                    <td class="nowrap">&#10008;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='HU' class="nowrap ns"><img class="flag-img" src="/assets/flags/HU.png" title="HU">
+                                        
+                                        </td>
+                                    <td data-sort='41015'><a href="/as/41015">AS41015</a></td>
+                                    <td class="smallonmobile nowrap">GELKA HIRTECH KFT</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+
+                    </div>
+
+                    <div style="display: none" id="whois-page">
+                        
+                        
+                        <pre style="white-space: pre-wrap;">aut-num:        <a href="/AS47169">AS47169</a>
+as-name:        HPC-MVM-AS
+org:            <a href="https://apps.db.ripe.net/db-web-ui/query?searchtext=ORG-HPCL1-RIPE">ORG-HPCL1-RIPE</a>
+remarks:        UPSTREAMS
+remarks:        -- TELIASONERA
+import:         from <a href="/AS1299">AS1299</a> accept ANY
+export:         to <a href="/AS1299">AS1299</a> announce <a href="/as-set/AS-HPC-MVM">AS-HPC-MVM</a>
+mp-import:      afi ipv6.unicast from <a href="/AS1299">AS1299</a> accept ANY
+mp-export:      afi ipv6.unicast to <a href="/AS1299">AS1299</a> announce <a href="/as-set/AS-HPC-MVM">AS-HPC-MVM</a>
+remarks:        -- INTEROUTE
+import:         from <a href="/AS8928">AS8928</a> accept ANY
+export:         to <a href="/AS8928">AS8928</a> announce <a href="/as-set/AS-HPC-MVM">AS-HPC-MVM</a>
+mp-import:      afi ipv6.unicast from <a href="/AS8928">AS8928</a> accept ANY
+mp-export:      afi ipv6.unicast to <a href="/AS8928">AS8928</a> announce <a href="/as-set/AS-HPC-MVM">AS-HPC-MVM</a>
+remarks:        -- GTS
+import:         from <a href="/AS3340">AS3340</a> accept ANY
+export:         to <a href="/AS3340">AS3340</a> announce <a href="/as-set/AS-HPC-MVM">AS-HPC-MVM</a>
+mp-import:      afi ipv6.unicast from <a href="/AS3340">AS3340</a> accept ANY
+mp-export:      afi ipv6.unicast to <a href="/AS3340">AS3340</a> announce <a href="/as-set/AS-HPC-MVM">AS-HPC-MVM</a>
+remarks:        -- RETN
+import:         from <a href="/AS9002">AS9002</a> accept ANY
+export:         to <a href="/AS9002">AS9002</a> announce {93.190.7.0/24}
+remarks:        -- NTT
+import:         from <a href="/AS2914">AS2914</a> accept ANY
+export:         to <a href="/AS2914">AS2914</a> announce <a href="/as-set/AS-HPC-MVM">AS-HPC-MVM</a>
+mp-import:      afi ipv6.unicast from <a href="/AS2914">AS2914</a> accept ANY
+mp-export:      afi ipv6.unicast to <a href="/AS2914">AS2914</a> announce <a href="/as-set/AS-HPC-MVM">AS-HPC-MVM</a>
+remarks:        PEERS
+remarks:        DE-CIX, FRANKFURT
+remarks:        -- DE-CIX
+import:         from <a href="/AS6695">AS6695</a> accept ANY
+export:         to <a href="/AS6695">AS6695</a> announce <a href="/as-set/AS-HPC-MVM">AS-HPC-MVM</a>
+mp-import:      afi ipv6.unicast from <a href="/AS6695">AS6695</a> accept ANY
+mp-export:      afi ipv6.unicast to <a href="/AS6695">AS6695</a> announce <a href="/as-set/AS-HPC-MVM">AS-HPC-MVM</a>
+remarks:        --AKAMAI
+import:         from <a href="/AS20940">AS20940</a> accept ANY
+export:         to <a href="/AS20940">AS20940</a> announce <a href="/as-set/AS-HPC-MVM">AS-HPC-MVM</a>
+mp-import:      afi ipv6.unicast from <a href="/AS20940">AS20940</a> accept ANY
+mp-export:      afi ipv6.unicast to <a href="/AS20940">AS20940</a> announce <a href="/as-set/AS-HPC-MVM">AS-HPC-MVM</a>
+remarks:        --MANDA
+import:         from <a href="/AS8365">AS8365</a> accept ANY
+export:         to <a href="/AS8365">AS8365</a> announce <a href="/as-set/AS-HPC-MVM">AS-HPC-MVM</a>
+mp-import:      afi ipv6.unicast from <a href="/AS8365">AS8365</a> accept ANY
+mp-export:      afi ipv6.unicast to <a href="/AS8365">AS8365</a> announce <a href="/as-set/AS-HPC-MVM">AS-HPC-MVM</a>
+remarks:        --Hurricane Electric
+import:         from <a href="/AS6939">AS6939</a> accept ANY
+export:         to <a href="/AS6939">AS6939</a> announce <a href="/as-set/AS-HPC-MVM">AS-HPC-MVM</a>
+mp-import:      afi ipv6.unicast from <a href="/AS6939">AS6939</a> accept ANY
+mp-export:      afi ipv6.unicast to <a href="/AS6939">AS6939</a> announce <a href="/as-set/AS-HPC-MVM">AS-HPC-MVM</a>
+remarks:        --PT Comunicacoes S.A.
+import:         from <a href="/AS8657">AS8657</a> accept ANY
+export:         to <a href="/AS8657">AS8657</a> announce <a href="/as-set/AS-HPC-MVM">AS-HPC-MVM</a>
+mp-import:      afi ipv6.unicast from <a href="/AS8657">AS8657</a> accept ANY
+mp-export:      afi ipv6.unicast to <a href="/AS8657">AS8657</a> announce <a href="/as-set/AS-HPC-MVM">AS-HPC-MVM</a>
+remarks:        BIX, BUDAPEST
+remarks:        -- BIX
+import:         from <a href="/AS5507">AS5507</a> accept ANY
+export:         to <a href="/AS5507">AS5507</a> announce <a href="/as-set/AS-HPC-MVM">AS-HPC-MVM</a>
+mp-import:      afi ipv6.unicast from <a href="/AS5507">AS5507</a> accept ANY
+mp-export:      afi ipv6.unicast to <a href="/AS5507">AS5507</a> announce <a href="/as-set/AS-HPC-MVM">AS-HPC-MVM</a>
+remarks:        --ORACLE
+import:         from <a href="/AS54253">AS54253</a> accept <a href="/AS54253">AS54253</a>
+export:         to <a href="/AS54253">AS54253</a> announce ANY
+remarks:        CUSTOMERS
+remarks:        -- COMUNIQUE
+import:         from <a href="/AS44651">AS44651</a> accept <a href="/as-set/AS-COMUNIQUE">AS-COMUNIQUE</a>
+export:         to <a href="/AS44651">AS44651</a> announce ANY
+remarks:        -- PARISAT
+import:         from <a href="/AS42232">AS42232</a> accept <a href="/AS42232">AS42232</a> <a href="/AS44945">AS44945</a>
+export:         to <a href="/AS42232">AS42232</a> announce ANY
+remarks:        -- OPTICON
+import:         from <a href="/AS24822">AS24822</a> accept <a href="/as-set/AS-OPTICON">AS-OPTICON</a>
+export:         to <a href="/AS24822">AS24822</a> announce ANY
+remarks:        -- SZARVASNET
+import:         from <a href="/AS44376">AS44376</a> accept <a href="/AS44376">AS44376</a>
+export:         to <a href="/AS44376">AS44376</a> announce ANY
+remarks:        -- TARR
+import:         from <a href="/AS8462">AS8462</a> accept <a href="/AS8462">AS8462</a> <a href="/AS42367">AS42367</a>
+export:         to <a href="/AS8462">AS8462</a> announce ANY
+remarks:        -- BOLY
+import:         from <a href="/AS51438">AS51438</a> accept <a href="/AS51438">AS51438</a>
+export:         to <a href="/AS51438">AS51438</a> announce ANY
+remarks:        -- NISZ
+import:         from <a href="/AS31581">AS31581</a> accept <a href="/as-set/AS-KOPINT">AS-KOPINT</a>
+export:         to <a href="/AS31581">AS31581</a> announce ANY
+remarks:        -- UTDIJ
+import:         from <a href="/AS196958">AS196958</a> accept <a href="/AS196958">AS196958</a>
+export:         to <a href="/AS196958">AS196958</a> announce ANY
+remarks:        -- AXIAN
+import:         from <a href="/AS31297">AS31297</a> accept <a href="/AS31297">AS31297</a> <a href="/AS49818">AS49818</a>
+export:         to <a href="/AS31297">AS31297</a> announce ANY
+remarks:        -- MAVIR
+import:         from <a href="/AS25539">AS25539</a> accept <a href="/AS25539">AS25539</a>
+export:         to <a href="/AS25539">AS25539</a> announce ANY
+remarks:        -- HIR-SAT
+import:         from <a href="/AS44789">AS44789</a> accept <a href="/AS44789">AS44789</a>
+export:         to <a href="/AS44789">AS44789</a> announce ANY
+remarks:        -- Klapka Lakasszovetkezet
+import:         from <a href="/AS200076">AS200076</a> accept <a href="/AS200076">AS200076</a>
+export:         to <a href="/AS200076">AS200076</a> announce ANY
+remarks:        -- OzdKabel-Net
+import:         from <a href="/AS49944">AS49944</a> accept <a href="/AS49944">AS49944</a>
+export:         to <a href="/AS49944">AS49944</a> announce ANY
+remarks:        -- ACE TELECOM
+import:         from <a href="/AS50261">AS50261</a> accept <a href="/AS50261">AS50261</a>
+export:         to <a href="/AS50261">AS50261</a> announce ANY
+remarks:        -- NET-TV
+import:         from <a href="/AS42205">AS42205</a> accept <a href="/AS42205">AS42205</a>
+export:         to <a href="/AS42205">AS42205</a> announce ANY
+remarks:        -- MVM-INFORMATIKA
+import:         from <a href="/AS43928">AS43928</a> accept <a href="/AS43928">AS43928</a>
+export:         to <a href="/AS43928">AS43928</a> announce ANY
+remarks:        -- VAC-KabelTV
+import:         from <a href="/AS44419">AS44419</a> accept <a href="/as-set/AS-VACKTV">AS-VACKTV</a>
+export:         to <a href="/AS44419">AS44419</a> announce ANY
+remarks:        -- Dravanet
+import:         from <a href="/AS197248">AS197248</a> accept <a href="/as-set/AS-DRAVANET">AS-DRAVANET</a>
+export:         to <a href="/AS197248">AS197248</a> announce ANY
+remarks:        -- Novotron
+import:         from <a href="/AS20523">AS20523</a> accept <a href="/as-set/AS-NOVOTRON">AS-NOVOTRON</a>
+export:         to <a href="/AS20523">AS20523</a> announce ANY
+remarks:        -- Modit
+import:         from <a href="/AS42120">AS42120</a> accept <a href="/AS42120">AS42120</a>
+export:         to <a href="/AS42120">AS42120</a> announce ANY
+remarks:        -- ezTrade
+import:         from <a href="/AS200471">AS200471</a> accept <a href="/AS200471">AS200471</a>
+export:         to <a href="/AS200471">AS200471</a> announce ANY
+remarks:        -- Cogitnet
+import:         from <a href="/AS200864">AS200864</a> accept <a href="/AS200864">AS200864</a>
+export:         to <a href="/AS200864">AS200864</a> announce ANY
+remarks:        -- JACSA.NET
+import:         from <a href="/AS197112">AS197112</a> accept <a href="/AS197112">AS197112</a>
+export:         to <a href="/AS197112">AS197112</a> announce ANY
+remarks:        -- IPLUS
+import:         from <a href="/AS207233">AS207233</a> accept <a href="/AS207233">AS207233</a>
+export:         to <a href="/AS207233">AS207233</a> announce ANY
+remarks:        -- Zalaszam
+import:         from <a href="/AS50031">AS50031</a> accept <a href="/AS50031">AS50031</a>
+export:         to <a href="/AS50031">AS50031</a> announce ANY
+remarks:        -- Matracomp
+import:         from <a href="/AS41303">AS41303</a> accept <a href="/AS41303">AS41303</a>
+export:         to <a href="/AS41303">AS41303</a> announce ANY
+remarks:        -- Gelka
+import:         from <a href="/AS41015">AS41015</a> accept <a href="/AS41015">AS41015</a>
+export:         to <a href="/AS41015">AS41015</a> announce ANY
+remarks:        -- PAKS-II
+import:         from <a href="/AS49986">AS49986</a> accept <a href="/AS49986">AS49986</a>
+export:         to <a href="/AS49986">AS49986</a> announce ANY
+remarks:        -- HUNGAROCONTROL
+import:         from <a href="/AS210114">AS210114</a> accept <a href="/AS210114">AS210114</a>
+export:         to <a href="/AS210114">AS210114</a> announce ANY
+remarks:        -- FOGAZ
+import:         from <a href="/AS42185">AS42185</a> accept <a href="/AS42185">AS42185</a>
+export:         to <a href="/AS42185">AS42185</a> announce ANY
+remarks:        -- TelcoNet
+import:         from <a href="/AS60619">AS60619</a> accept <a href="/AS60619">AS60619</a>
+export:         to <a href="/AS60619">AS60619</a> announce ANY
+remarks:        -- BKK-JZT
+import:         from <a href="/AS39679">AS39679</a> accept <a href="/AS39679">AS39679</a>
+export:         to <a href="/AS39679">AS39679</a> announce ANY
+remarks:        -- DV Info
+import:         from <a href="/AS197523">AS197523</a> accept <a href="/AS197523">AS197523</a>
+export:         to <a href="/AS197523">AS197523</a> announce ANY
+remarks:        -- DIGICORP
+import:         from <a href="/AS214275">AS214275</a> accept <a href="/AS214275">AS214275</a>
+export:         to <a href="/AS214275">AS214275</a> announce ANY
+remarks:        KIFU
+import:         from <a href="/AS1955">AS1955</a> accept <a href="/as-set/AS-HBONE">AS-HBONE</a>
+export:         to <a href="/AS1955">AS1955</a> announce ANY
+remarks:        KOZHALO
+import:         from <a href="/AS30904">AS30904</a> accept <a href="/AS30904">AS30904</a>
+export:         to <a href="/AS30904">AS30904</a> announce ANY
+admin-c:        DUMY-RIPE
+tech-c:         DUMY-RIPE
+status:         ASSIGNED
+mnt-by:         HPC-Telecom-NOC-MNT
+mnt-by:         RIPE-NCC-END-MNT
+created:        2008-05-08T09:30:13Z
+last-modified:  2025-10-29T14:33:07Z
+source:         RIPE
+remarks:        ****************************
+remarks:        * THIS OBJECT IS MODIFIED
+remarks:        * Please note that all data that is generally regarded as personal
+remarks:        * data has been removed from this object.
+remarks:        * To view the original object, please query the RIPE Database at:
+remarks:        * http://www.ripe.net/whois
+remarks:        ****************************
+
+
+organisation:   <a href="https://apps.db.ripe.net/db-web-ui/query?searchtext=ORG-HPCL1-RIPE">ORG-HPCL1-RIPE</a>
+org-name:       Pro-M Zrt.
+country:        HU
+org-type:       LIR
+address:        Dummy address for <a href="https://apps.db.ripe.net/db-web-ui/query?searchtext=ORG-HPCL1-RIPE">ORG-HPCL1-RIPE</a>
+mnt-ref:        HPC-Telecom-NOC-MNT
+mnt-ref:        RIPE-NCC-HM-MNT
+mnt-by:         RIPE-NCC-HM-MNT
+mnt-by:         HPC-Telecom-NOC-MNT
+abuse-c:        MNA111-RIPE
+created:        2008-02-27T14:23:41Z
+last-modified:  2025-11-11T11:45:18Z
+source:         RIPE
+# Email removed, Log into bgp.tools to see whois emails
+remarks:        ****************************
+remarks:        * THIS OBJECT IS MODIFIED
+remarks:        * Please note that all data that is generally regarded as personal
+remarks:        * data has been removed from this object.
+remarks:        * To view the original object, please query the RIPE Database at:
+remarks:        * http://www.ripe.net/whois
+remarks:        ****************************
+
+</pre>
+                        
+                        
+                        <a style="font-size: small;">Last Update: 2025-12-07T03:25:25Z UTC </a>
+                        
+                        <hr>
+                        
+                            <h2>Member of the following AS-SETs</h2>
+
+                            <table id="fhTable" class="full-width-table ">
+                                <tbody id="prefixlist-tbody">
+                                    <tr>
+                                        <th class="boldpls nowrap"> - </th>
+                                        <th class="boldpls">Member</th>
+                                        
+                                        <th class="boldpls nowrap">ASN Count</th>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as6695:as-decix-fra-rs-v6">as6695:as-decix-fra-rs-v6</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">1064</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as6695:as-decix-fra-connected">as6695:as-decix-fra-connected</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">1065</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as6695:as-decix-fra-rs">as6695:as-decix-fra-rs</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">1064</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">ALTDB</td>
+                                        
+                                        <td><a href="/as-set/ALTDB::as-jarmtelco">as-jarmtelco</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">649</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-gttcust6">as-gttcust6</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap boldpls"><p style="display: contents;color: red">88761</p></td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-hpc-mvm">as-hpc-mvm</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">68</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-interoute">as-interoute</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap boldpls"><p style="display: contents;color: red">75278</p></td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-gttcust">as-gttcust</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap boldpls"><p style="display: contents;color: red">89329</p></td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                        
+
+                    </div>
+
+                    
+
+                    
+                    <div style="display: none" id="ix-page">
+                        <div class="grid-row">
+                            <dl class="column-two-thirds">
+                                <p style="margin: 0px;"><img style="vertical-align: middle; margin-left: 5px;" class="flag-img" src="/assets/peeringdb-icon.png" title="PeeringDB"><a href="https://www.peeringdb.com/asn/47169">Go to PeeringDB page</a></p>
+                            </dl>
+                            
+                            
+                        </div>
+                        <div class="grid-row">
+                            
+                        
+                        <div class="column-two-thirds">
+                            <dl>
+                                <dt>PeeringDB AS-SET:</dt>
+                                <dd class="text data">
+                                    
+                                    <a href="/as-set/as-hpc-mvm">AS-HPC-MVM</a>
+                                    
+                                </dd>
+                            </dl>
+                        </div>
+                        
+    
+    
+                        <dl class="column-third">
+                            <dt>Suggested Prefix Limits</dt>
+                            <dd class="text data">
+                                
+                                <p style="margin: 0px;"><b>IPv4:</b> 120</p>
+                                
+                                <p style="margin: 0px;"><b>IPv6:</b> 10</p>
+                            </dd>
+                        </dl>
+                        </div>
+
+                        
+
+                        <div id="normalixpsubpage">
+
+
+<h3>Internet Exchange Points</h3>
+
+<div class="scroll-ixp-div-on-small">
+<table id="ixpTable" class="full-width-table table-wide-to-force-scroll-on-mobile">
+    <thead class="sortable">
+        <tr>
+            <th class="nowrap boldpls">  &nbsp;  </th>
+            <th class="boldpls">Name</th>
+            <th class="nowrap boldpls">IPv4</th>
+            <th class="nowrap boldpls">IPv6</th>
+            <th data-sort-method='number' class="nowrap boldpls">Link Speed</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+        
+        <tr>
+            <td data-sort='HU' class="nowrap ns"><img class="flag-img" src="/assets/flags/HU.png" title="HU"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/BiX">BiX</a></td>
+            <td class="smallonmobile">193.188.137.164</a></td>
+            <td class="smallonmobile nowrap">2001:7f8:35::4:7169:3</td>
+            <td data-sort='100000' class="smallonmobile">100 gbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='HU' class="nowrap ns"><img class="flag-img" src="/assets/flags/HU.png" title="HU"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/BiX">BiX</a></td>
+            <td class="smallonmobile">193.188.137.152</a></td>
+            <td class="smallonmobile nowrap">2001:7f8:35::4:7169:4</td>
+            <td data-sort='100000' class="smallonmobile">100 gbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='DE' class="nowrap ns"><img class="flag-img" src="/assets/flags/DE.png" title="DE"><img style="margin-left: 5px;" class="flag-img" src="/assets/icons/juniper.png" title="Detected Vendor: Juniper Networks"><img class="flag-img" src="/assets/tick.png" title="Last seen online 7 mins ago"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/DE-CIX%20Frankfurt">DE-CIX Frankfurt</a></td>
+            <td class="smallonmobile">80.81.195.145</a></td>
+            <td class="smallonmobile nowrap">2001:7f8::b841:0:2</td>
+            <td data-sort='10000' class="smallonmobile"><abbr title="edge03.fra12 -  []">10 gbps</abbr></td>
+        </tr>
+        
+        
+    </tbody>
+</table>
+</div>
+
+
+
+
+
+
+
+
+<a style="font-size: small;">Last Update: 2025-12-10T10:08:19Z UTC</a>
+
+
+                        </div>
+                        <div id="overlapixpsubpage">
+                        </div>
+                    </div>
+                    
+                    
+
+                    
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="superclearfix">
+            
+            <div class="superclearfix">
+                
+            </div>
+
+            <div class="superclearfix">
+                
+            </div>
+
+
+        </div>
+
+
+        <div class="group js-footer" id="footer">
+            <nav>
+                <div>
+                    <ul>
+                        <li><a href="/kb/api" target="_blank">Scripting/API</a></li>
+                        <li><a href="/credits" target="_blank">Credits</a></li>
+                        <li><a href="/pricing" target="_blank">Pricing</a></li>
+                        <li><a href="/kb/contact" target="_blank">Contact Us</a></li>
+                        <li><a href="https://github.com/bgptools/issues" target="_blank">Issue Tracker</a></li>
+                        <li><a href="/kb/setup-sessions" target="">Contribute Data</a></li>
+                        
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <script>
+    
+    var inhash = window.location.hash;
+    if (inhash == "#asinfo") {
+        
+    } else if (inhash == "#prefixes") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#prefix-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#prefixes-page');
+        aaa[0].style.display = "";
+
+    } else if (inhash == "#connectivity" || inhash == "#peers" || inhash == "#upstreams" || inhash == "#downstreams") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#connectivity-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#connectivity-page');
+        aaa[0].style.display = "";
+    } else if (inhash == "#whois") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#whois-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#whois-page');
+        aaa[0].style.display = "";
+    } else if (inhash == "#ix") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#ix-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#ix-page');
+        aaa[0].style.display = "";
+    }</script>
+
+    <script>
+    
+
+
+    ;(function() {
+  'use strict'
+
+  function scaleImageMap() {
+    function resizeMap() {
+      function resizeAreaTag(cachedAreaCoords, idx) {
+        function scale(coord) {
+          var dimension = 1 === (isWidth = 1 - isWidth) ? 'width' : 'height'
+          return (
+            padding[dimension] +
+            Math.floor(Number(coord) * scalingFactor[dimension])
+          )
+        }
+
+        var isWidth = 0
+        areas[idx].coords = cachedAreaCoords
+          .split(',')
+          .map(scale)
+          .join(',')
+      }
+
+      var scalingFactor = {
+        width: image.width / image.naturalWidth,
+        height: image.height / image.naturalHeight,
+      }
+
+      var padding = {
+        width: parseInt(
+          window.getComputedStyle(image, null).getPropertyValue('padding-left'),
+          10
+        ),
+        height: parseInt(
+          window.getComputedStyle(image, null).getPropertyValue('padding-top'),
+          10
+        ),
+      }
+
+      cachedAreaCoordsArray.forEach(resizeAreaTag)
+    }
+
+    function getCoords(e) {
+      
+      return e.coords.replace(/ *, */g, ',').replace(/ +/g, ',')
+    }
+
+    function debounce() {
+      clearTimeout(timer)
+      timer = setTimeout(resizeMap, 250)
+    }
+
+    function start() {
+      if (
+        image.width !== image.naturalWidth ||
+        image.height !== image.naturalHeight
+      ) {
+        resizeMap()
+      }
+    }
+
+    function addEventListeners() {
+      image.addEventListener('load', resizeMap, false) 
+      window.addEventListener('focus', resizeMap, false) 
+      window.addEventListener('resize', debounce, false)
+      window.addEventListener('readystatechange', resizeMap, false)
+      document.addEventListener('fullscreenchange', resizeMap, false)
+    }
+
+    function beenHere() {
+      return 'function' === typeof map._resize
+    }
+
+    function getImg(name) {
+      return document.querySelector('img[usemap="#world"]')
+    }
+
+    function setup() {
+      areas = map.getElementsByTagName('area')
+      cachedAreaCoordsArray = Array.prototype.map.call(areas, getCoords)
+      image = getImg('#' + map.name) || getImg(map.name)
+      map._resize = resizeMap 
+    }
+
+    var  
+      map = this,
+      areas = null,
+      cachedAreaCoordsArray = null,
+      image = null,
+      timer = null
+
+    if (!beenHere()) {
+      setup()
+      addEventListeners()
+      start()
+    } else {
+      map._resize() 
+    }
+  }
+
+  function factory() {
+    function chkMap(element) {
+      if (!element.tagName) {
+        throw new TypeError('Object is not a valid DOM element')
+      } else if ('MAP' !== element.tagName.toUpperCase()) {
+        throw new TypeError(
+          'Expected <MAP> tag, found <' + element.tagName + '>.'
+        )
+      }
+    }
+
+    function init(element) {
+      if (element) {
+        chkMap(element)
+        scaleImageMap.call(element)
+        maps.push(element)
+      }
+    }
+
+    var maps
+
+    return function imageMapResizeF(target) {
+      maps = [] 
+
+      switch (typeof target) {
+        case 'undefined':
+        case 'string':
+          Array.prototype.forEach.call(
+            document.querySelectorAll(target || 'map'),
+            init
+          )
+          break
+        case 'object':
+          init(target)
+          break
+        default:
+          throw new TypeError('Unexpected data type (' + typeof target + ').')
+      }
+
+      return maps
+    }
+  }
+
+  if (typeof define === 'function' && define.amd) {
+    define([], factory)
+  } else if (typeof module === 'object' && typeof module.exports === 'object') {
+    module.exports = factory() 
+  } else {
+    window.imageMapResize = factory()
+  }
+
+  if ('jQuery' in window) {
+    window.jQuery.fn.imageMapResize = function $imageMapResizeF() {
+      return this.filter('map')
+        .each(scaleImageMap)
+        .end()
+    }
+  }
+})()
+    
+    </script>
+    <script>
+        var imgEl = document.getElementById("pathimg");
+        imgEl.addEventListener("mouseover",function() {
+            imageMapResize('#world');
+        })
+    </script>
+    <script src="/assets/tablesort.min.js"></script>
+    <script>
+        addEventListener("load", (event) => {
+            
+            
+            var sort = new Tablesort(document.getElementById('donotscrapebgptools-upstreamTable'));
+            var sort2 = new Tablesort(document.getElementById('donotscrapebgptools-upstreamTablePeers'));
+            
+            var sort3 = new Tablesort(document.getElementById('donotscrapebgptools-upstreamTableDowns'));
+            
+            var sort4 = new Tablesort(document.getElementById('ixpTable'));
+            
+        });
+    </script>
+    
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        setTimeout(function() {
+
+        var beaconHttp = new XMLHttpRequest();
+        var url = '/performance-beacon';
+        var params = JSON.stringify(window.performance)
+        beaconHttp.open('POST', url, true);
+        
+        
+        beaconHttp.setRequestHeader('Content-type', 'application/json');
+        beaconHttp.setRequestHeader('visit-url', "/as/47169");
+        if (navigator.connection) {
+            beaconHttp.setRequestHeader('client-side-rtt', navigator.connection.rtt);
+        } else {
+            beaconHttp.setRequestHeader('client-side-rtt', '-2');
+        }
+        beaconHttp.onreadystatechange = function() {}
+        beaconHttp.send(params);
+        },1000)
+    }, false);
+</script>
+
+</body>
+
+
+</html>
