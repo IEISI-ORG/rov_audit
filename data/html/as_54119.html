@@ -1,0 +1,3232 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="WhiteSky Communications, LLC. (AS54119) is a 14 year old BGP network that is peering with 26 other networks and has 25 upstream carriers">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000">
+    <link rel="search" type="application/opensearchdescription+xml" title="BGP.Tools" href="https://bgp.tools/opensearch.xml">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="theme-color" content="#000000">
+    <link href="https://social.bgp.tools/@bgptools" rel="me">
+    <link rel="canonical" href="https://bgp.tools/as/54119" />
+    <title>AS54119 WhiteSky Communications, LLC. - bgp.tools</title>
+    <link rel="stylesheet" type="text/css" href="/assets/main-new.css?2025-12-09-1723%20UTC">
+</head>
+
+<body>
+    <div id="container">
+        
+<div id="global-header" class="global-header-top">
+    <div class="header-sitewide">
+        <div class="global-header">
+            <div class="header-logo">
+                <a href="/" id="logo" class="content">bgp.tools</a>
+            </div>
+            <form id="search" action="/search" method="get" accept-charset="utf-8" role="search" class="top-search-header js-search-hash">
+                <div class="searchfield">
+                    <input type="search" autocomplete="off" name="q" id="site-search-text" title="Search" value="" placeholder="Start here..." autofocus="autofocus" class="js-search-focus">
+                    <button type="submit" id="search-submit" class="search-submit">Search</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div id="global-header-blob" >
+    <a id="auth-header-text" href="/login">Login</a>
+    
+</div>
+<div id="global-header-bar" >
+    <a id="auth-header-bar-text" href="/login">Login</a>
+    
+</div>
+<div class="small-clearfix"></div>
+
+        <div id="global-container">
+            
+
+
+            
+            <div class="section-tabs js-tabs">
+                <ul>
+                    
+<li class="active">
+    <h1> <a id="viewbutton-tab" href="/as/54119">View</a></h1>
+</li>
+
+<li >
+    <a id="editbutton-tab" href="/edit/as/54119">Edit</a>
+</li>
+
+
+
+
+
+                    <li style="float: right;">
+                        
+                        <img id="ws-status" width="24" height="24" src="/assets/disconnected.png" title="Not Connected To realtime data updates">
+                        
+                    </li>
+                </ul>
+            </div>
+
+            <div id="search-container">
+
+                <div class="column-full-width">
+
+                    <div class="clearfix">
+                        
+                    </div>
+                    
+                    
+
+                    <div class="network-header">
+                        
+                        
+                        
+                        <p id="network-name" class="heading-xlarge">WhiteSky Communications, LLC.</p>
+                        <p id="network-number">
+                            AS Number
+                            <strong id="ASNumberString" pure="54119">54119</strong>
+                            <br>
+                        
+                            Website
+                            <strong><a href="http://www.elauwitnetworks.com" rel="nofollow">http://www.elauwitnetworks.com</a></strong>
+                        
+                        </p>
+
+                    </div>
+
+
+                    <div class="clearfix">
+                        
+                    </div>
+
+
+                    <div class="section-tabs js-tabs">
+                        <ul>
+
+                            <li id="overview-tab-li" class="active">
+                                <a id="overview-tab" href="#asinfo">Overview</a>
+                            </li>
+                            
+                            <li id="prefix-tab-li">
+                                <a id="prefix-tab" href="#prefixes">Prefixes</a>
+                            </li>
+
+                            <li id="connectivity-tab-li">
+                                <a id="connectivity-tab" href="#connectivity">Connectivity</a>
+                            </li>
+                            
+                            <li id="whois-tab-li">
+                                <a id="whois-tab" href="#whois">Whois</a>
+                            </li>
+                        
+                            <li id="ix-tab-li">
+                                <a id="ix-tab" href="#ix">IX</a>
+                            </li>
+                        
+                        
+                        </ul>
+                    </div>
+
+<script>
+    function removeAllActiveTab() {
+        var tabs = [
+            "overview-tab-li", 
+            "prefix-tab-li", 
+            "connectivity-tab-li",
+            "whois-tab-li",
+            "ix-tab-li",
+            "issues-tab-li"
+        ];
+
+        tabs.forEach(element => {
+            var aaa = document.querySelectorAll('#'+element);
+            if(aaa.length != 0) {
+                aaa[0].classList.remove("active")
+            }
+        });
+    }
+
+    function hideAllContent() {
+        var tabs = [
+            "overview-page", 
+            "prefixes-page", 
+            "connectivity-page",
+            "whois-page",
+            "ix-page",
+            "issues-page"
+        ];
+
+        tabs.forEach(element => {
+            var aaa = document.querySelectorAll('#'+element);
+            if(aaa.length != 0) {
+                aaa[0].style.display = "none";
+            }
+        });
+        if (document.getElementById("donotscrapebgptools-prefixlist-tbody")) {
+            var prefixrows = document.getElementById("donotscrapebgptools-prefixlist-tbody").children;
+            for (var i = 0; i < prefixrows.length; i++) {
+                prefixrows[i].style = "";
+            }
+        }
+    }
+
+    var otab = document.querySelectorAll('#overview-tab');
+    otab[0].addEventListener("click", function () {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#overview-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#overview-page');
+        aaa[0].style.display = "";
+    });
+    
+
+    var ptab = document.querySelectorAll('#prefix-tab');
+    ptab[0].addEventListener("click", function () {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#prefix-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#prefixes-page');
+        aaa[0].style.display = "";
+    });
+
+    var ctab = document.querySelectorAll('#connectivity-tab');
+    ctab[0].addEventListener("click", function () {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#connectivity-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#connectivity-page');
+        aaa[0].style.display = "";
+    });
+    
+
+    var wtab = document.querySelectorAll('#whois-tab');
+    wtab[0].addEventListener("click", function () {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#whois-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#whois-page');
+        aaa[0].style.display = "";
+    });
+
+</script>
+
+
+<script>
+var wtab = document.querySelectorAll('#ix-tab');
+wtab[0].addEventListener("click", function () {
+    removeAllActiveTab()
+    hideAllContent()
+    var otab2 = document.querySelectorAll('#ix-tab-li');
+    otab2[0].classList.add("active");
+
+    var aaa = document.querySelectorAll('#ix-page');
+    aaa[0].style.display = "";
+});
+</script>
+
+
+                    
+                    <div id="overview-page">
+
+                        <div class="grid-row">
+                        
+                        <div class="column-two-thirds">
+                            <dl>
+                                <dt>Registered on</dt>
+                                <dd class="text data">
+                                    
+                                     7 Oct 2011 (14 years old)
+                                </dd>
+                            
+                            
+                            <dt>Registered to</dt>
+                            <dd class="text data">
+                                <a href="/rir-owner/ARIN-WCL-100">ARIN-WCL-100</a> (arin)</dd>
+                                
+                                <dd class="text data" id="network-status">
+                                    <a href="/transfer-history/54119">[Transfer History]</a>
+                                </dd>
+                                
+                            
+                            </dl>
+                        </div>
+                        
+    
+                        <dl class="column-third">
+                            <dt>Network status</dt>
+                            <dd class="text data">
+                                
+                                Active, Allocated under ARIN
+                                
+                            </dd>
+                        </dl>
+    
+                        </div>
+    
+                        <div class="grid-row">
+                            <dl class="column-two-thirds">
+                                <dt>Network type</dt>
+                                <dd class="text data">
+                                    Eyeball
+                                </dd>
+                            </dl>
+    
+                            <dl class="column-third">
+                                <dt>Prefixes Originated</dt>
+                                <dd class="data">69 IPv4, 0 IPv6</dd>
+                            </dl>
+                        </div>
+                        <div class="grid-row">
+                            <div class="column-half">
+    
+                                <h2 class="heading-medium"><derp>Upstreams</derp></h2>
+                                <ul>
+                                    
+                                    <li>
+                                        <span id="sic0">
+                                          <a href="/as/62887">AS62887</a> - WhiteSky Communications, LLC.
+                                        </span>
+                                    </li>
+                                    
+                                    <li>
+                                        <span id="sic0">
+                                          <a href="/as/7018">AS7018</a> - AT&amp;T Enterprises, LLC
+                                        </span>
+                                    </li>
+                                    
+                                    <li>
+                                        <span id="sic0">
+                                          <a href="/as/46887">AS46887</a> - Crown Castle Fiber LLC
+                                        </span>
+                                    </li>
+                                    
+                                    <li>
+                                        <span id="sic0">
+                                          <a href="/as/6405">AS6405</a> - American Information Network
+                                        </span>
+                                    </li>
+                                    
+                                    <li>
+                                        <span id="sic0">
+                                          <a href="/as/3257">AS3257</a> - GTT Communications Inc.
+                                        </span>
+                                    </li>
+                                    
+                                    <li>
+                                        <span id="sic0">
+                                          <a href="/as/209">AS209</a> - Lumen (ex. Qwest)
+                                        </span>
+                                    </li>
+                                    
+                                    <li>
+                                        <span id="sic0">
+                                          <a href="/as/30517">AS30517</a> - Great Lakes Comnet, Inc.
+                                        </span>
+                                    </li>
+                                    
+                                    <li>
+                                        <span id="sic0">
+                                          <a href="/as/7459">AS7459</a> - Grande Communications Networks, LLC
+                                        </span>
+                                    </li>
+                                    
+                                </ul>
+    
+                            </div>
+    
+                            <div class="column-half">
+                                
+                                    <h2 class="heading-medium"><derp>Locations of Operation</derp></h2>
+                                    
+                                    <li><span id="sic0">United States</span></li>
+                                    
+                                
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+
+                    <div style="display: none" id="prefixes-page">
+                        
+
+                        
+                        <div style="float:left">
+                            <dt>Prefixes Originated</dt>
+                            <dd class="data">69 IPv4, 0 IPv6</dd>
+                            
+                            
+                        </div>
+                        <div style="float:right">
+                                <dt>Addresses Originated</dt>
+                                <dd class="data">70 /24's of IPv4</dd>
+                                <dd class="data">0 /48's of IPv6</dd>
+                        </div>
+
+                        <div class="clearfix">
+                            
+                        </div>
+
+
+                        <table id="fhTable" class="full-width-table ">
+                            <tbody id="donotscrapebgptools-prefixlist-tbody">
+                                <tr>
+                                    <th class="nowrap">  &nbsp;  </th>
+                                    <th class="boldpls">Prefix</th>
+                                    <th class="nowrap boldpls">Description</th>
+                                </tr>
+                                <p id="readme-if-you-are-human" style="display: none;">If you are scraping this block for the prefixes that a AS originates, please use the data dumps in https://bgp.tools/kb/api and cache them</p>
+                                
+                                <tr id="pfx-67.222.164.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/67.222.164.0/24">67.222.164.0/24</a></td>
+                                    <td class="smallonmobile nowrap">WhiteSky Communications, LLC.</td>
+                                </tr>
+                                
+                                <tr id="pfx-67.222.170.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/67.222.170.0/24">67.222.170.0/24</a></td>
+                                    <td class="smallonmobile nowrap">WhiteSky Communications, LLC.</td>
+                                </tr>
+                                
+                                <tr id="pfx-67.222.171.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/67.222.171.0/24">67.222.171.0/24</a></td>
+                                    <td class="smallonmobile nowrap">WhiteSky Communications, LLC.</td>
+                                </tr>
+                                
+                                <tr id="pfx-96.44.3.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/96.44.3.0/24">96.44.3.0/24</a></td>
+                                    <td class="smallonmobile nowrap">WhiteSky Communications, LLC.</td>
+                                </tr>
+                                
+                                <tr id="pfx-96.44.11.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/96.44.11.0/24">96.44.11.0/24</a></td>
+                                    <td class="smallonmobile nowrap">WhiteSky Communications, LLC.</td>
+                                </tr>
+                                
+                                <tr id="pfx-96.44.23.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/96.44.23.0/24">96.44.23.0/24</a></td>
+                                    <td class="smallonmobile nowrap">WhiteSky Communications, LLC.</td>
+                                </tr>
+                                
+                                <tr id="pfx-96.44.28.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/96.44.28.0/24">96.44.28.0/24</a></td>
+                                    <td class="smallonmobile nowrap">WhiteSky Communications, LLC.</td>
+                                </tr>
+                                
+                                <tr id="pfx-96.44.29.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/96.44.29.0/24">96.44.29.0/24</a></td>
+                                    <td class="smallonmobile nowrap">WhiteSky Communications, LLC.</td>
+                                </tr>
+                                
+                                <tr id="pfx-104.143.164.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/104.143.164.0/24">104.143.164.0/24</a></td>
+                                    <td class="smallonmobile nowrap">WhiteSky Communications, LLC.</td>
+                                </tr>
+                                
+                                <tr id="pfx-104.143.180.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/104.143.180.0/24">104.143.180.0/24</a></td>
+                                    <td class="smallonmobile nowrap">WhiteSky Communications, LLC.</td>
+                                </tr>
+                                
+                                <tr id="pfx-104.167.133.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/104.167.133.0/24">104.167.133.0/24</a></td>
+                                    <td class="smallonmobile nowrap">WhiteSky Communications, LLC.</td>
+                                </tr>
+                                
+                                <tr id="pfx-104.167.147.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/104.167.147.0/24">104.167.147.0/24</a></td>
+                                    <td class="smallonmobile nowrap">WhiteSky Communications, LLC.</td>
+                                </tr>
+                                
+                                <tr id="pfx-104.167.149.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/104.167.149.0/24">104.167.149.0/24</a></td>
+                                    <td class="smallonmobile nowrap">WhiteSky Communications, LLC.</td>
+                                </tr>
+                                
+                                <tr id="pfx-104.167.150.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/104.167.150.0/24">104.167.150.0/24</a></td>
+                                    <td class="smallonmobile nowrap">WhiteSky Communications, LLC.</td>
+                                </tr>
+                                
+                                <tr id="pfx-104.167.151.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/104.167.151.0/24">104.167.151.0/24</a></td>
+                                    <td class="smallonmobile nowrap">WhiteSky Communications, LLC.</td>
+                                </tr>
+                                
+                                <tr id="pfx-104.167.152.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/104.167.152.0/24">104.167.152.0/24</a></td>
+                                    <td class="smallonmobile nowrap">WhiteSky Communications, LLC.</td>
+                                </tr>
+                                
+                                <tr id="pfx-104.167.153.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/104.167.153.0/24">104.167.153.0/24</a></td>
+                                    <td class="smallonmobile nowrap">WhiteSky Communications, LLC.</td>
+                                </tr>
+                                
+                                <tr id="pfx-104.167.156.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/104.167.156.0/24">104.167.156.0/24</a></td>
+                                    <td class="smallonmobile nowrap">WhiteSky Communications, LLC.</td>
+                                </tr>
+                                
+                                <tr id="pfx-104.167.157.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/104.167.157.0/24">104.167.157.0/24</a></td>
+                                    <td class="smallonmobile nowrap">WhiteSky Communications, LLC.</td>
+                                </tr>
+                                
+                                <tr id="pfx-104.167.160.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/104.167.160.0/24">104.167.160.0/24</a></td>
+                                    <td class="smallonmobile nowrap">WhiteSky Communications, LLC.</td>
+                                </tr>
+                                
+                                <tr id="pfx-104.167.161.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/104.167.161.0/24">104.167.161.0/24</a></td>
+                                    <td class="smallonmobile nowrap">WhiteSky Communications, LLC.</td>
+                                </tr>
+                                
+                                <tr id="pfx-104.167.165.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/104.167.165.0/24">104.167.165.0/24</a></td>
+                                    <td class="smallonmobile nowrap">WhiteSky Communications, LLC.</td>
+                                </tr>
+                                
+                                <tr id="pfx-104.167.184.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/104.167.184.0/24">104.167.184.0/24</a></td>
+                                    <td class="smallonmobile nowrap">WhiteSky Communications, LLC.</td>
+                                </tr>
+                                
+                                <tr id="pfx-104.167.185.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/104.167.185.0/24">104.167.185.0/24</a></td>
+                                    <td class="smallonmobile nowrap">WhiteSky Communications, LLC.</td>
+                                </tr>
+                                
+                                <tr id="pfx-104.241.13.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/104.241.13.0/24">104.241.13.0/24</a></td>
+                                    <td class="smallonmobile nowrap">WhiteSky Communications, LLC.</td>
+                                </tr>
+                                
+                                <tr id="pfx-108.169.197.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/108.169.197.0/24">108.169.197.0/24</a></td>
+                                    <td class="smallonmobile nowrap">WhiteSky Communications, LLC.</td>
+                                </tr>
+                                
+                                <tr id="pfx-108.169.198.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/108.169.198.0/24">108.169.198.0/24</a></td>
+                                    <td class="smallonmobile nowrap">WhiteSky Communications, LLC.</td>
+                                </tr>
+                                
+                                <tr id="pfx-108.169.199.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/108.169.199.0/24">108.169.199.0/24</a></td>
+                                    <td class="smallonmobile nowrap">WhiteSky Communications, LLC.</td>
+                                </tr>
+                                
+                                <tr id="pfx-108.169.201.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/108.169.201.0/24">108.169.201.0/24</a></td>
+                                    <td class="smallonmobile nowrap">WhiteSky Communications, LLC.</td>
+                                </tr>
+                                
+                                <tr id="pfx-108.169.202.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/108.169.202.0/24">108.169.202.0/24</a></td>
+                                    <td class="smallonmobile nowrap">WhiteSky Communications, LLC.</td>
+                                </tr>
+                                
+                                <tr id="pfx-108.169.220.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/108.169.220.0/24">108.169.220.0/24</a></td>
+                                    <td class="smallonmobile nowrap">WhiteSky Communications, LLC.</td>
+                                </tr>
+                                
+                                <tr id="pfx-108.169.227.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/108.169.227.0/24">108.169.227.0/24</a></td>
+                                    <td class="smallonmobile nowrap">WhiteSky Communications, LLC.</td>
+                                </tr>
+                                
+                                <tr id="pfx-162.242.3.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/162.242.3.0/24">162.242.3.0/24</a></td>
+                                    <td class="smallonmobile nowrap">WhiteSky Communications, LLC.</td>
+                                </tr>
+                                
+                                <tr id="pfx-162.242.6.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/162.242.6.0/24">162.242.6.0/24</a></td>
+                                    <td class="smallonmobile nowrap">WhiteSky Communications, LLC.</td>
+                                </tr>
+                                
+                                <tr id="pfx-162.242.24.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/162.242.24.0/24">162.242.24.0/24</a></td>
+                                    <td class="smallonmobile nowrap">WhiteSky Communications, LLC.</td>
+                                </tr>
+                                
+                                <tr id="pfx-162.242.25.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/162.242.25.0/24">162.242.25.0/24</a></td>
+                                    <td class="smallonmobile nowrap">WhiteSky Communications, LLC.</td>
+                                </tr>
+                                
+                                <tr id="pfx-162.242.27.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/162.242.27.0/24">162.242.27.0/24</a></td>
+                                    <td class="smallonmobile nowrap">WhiteSky Communications, LLC.</td>
+                                </tr>
+                                
+                                <tr id="pfx-162.242.48.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/162.242.48.0/24">162.242.48.0/24</a></td>
+                                    <td class="smallonmobile nowrap">WhiteSky Communications, LLC.</td>
+                                </tr>
+                                
+                                <tr id="pfx-162.242.56.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/162.242.56.0/24">162.242.56.0/24</a></td>
+                                    <td class="smallonmobile nowrap">WhiteSky Communications, LLC.</td>
+                                </tr>
+                                
+                                <tr id="pfx-162.242.90.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/162.242.90.0/24">162.242.90.0/24</a></td>
+                                    <td class="smallonmobile nowrap">WhiteSky Communications, LLC.</td>
+                                </tr>
+                                
+                                <tr id="pfx-162.242.91.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/162.242.91.0/24">162.242.91.0/24</a></td>
+                                    <td class="smallonmobile nowrap">WhiteSky Communications, LLC.</td>
+                                </tr>
+                                
+                                <tr id="pfx-162.242.105.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/162.242.105.0/24">162.242.105.0/24</a></td>
+                                    <td class="smallonmobile nowrap">WhiteSky Communications, LLC.</td>
+                                </tr>
+                                
+                                <tr id="pfx-162.242.115.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/162.242.115.0/24">162.242.115.0/24</a></td>
+                                    <td class="smallonmobile nowrap">WhiteSky Communications, LLC.</td>
+                                </tr>
+                                
+                                <tr id="pfx-162.242.119.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/162.242.119.0/24">162.242.119.0/24</a></td>
+                                    <td class="smallonmobile nowrap">WhiteSky Communications, LLC.</td>
+                                </tr>
+                                
+                                <tr id="pfx-167.160.130.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/167.160.130.0/24">167.160.130.0/24</a></td>
+                                    <td class="smallonmobile nowrap">WhiteSky Communications, LLC.</td>
+                                </tr>
+                                
+                                <tr id="pfx-167.160.153.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/167.160.153.0/24">167.160.153.0/24</a></td>
+                                    <td class="smallonmobile nowrap">WhiteSky Communications, LLC.</td>
+                                </tr>
+                                
+                                <tr id="pfx-167.160.155.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/cross.png" title="Matches IRR source, but under a different ASN">
+                                    </td>
+                                    <td><a href="/prefix/167.160.155.0/24">167.160.155.0/24</a></td>
+                                    <td class="smallonmobile nowrap">WhiteSky Communications, LLC.</td>
+                                </tr>
+                                
+                                <tr id="pfx-192.232.162.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/192.232.162.0/24">192.232.162.0/24</a></td>
+                                    <td class="smallonmobile nowrap">WhiteSky Communications, LLC.</td>
+                                </tr>
+                                
+                                <tr id="pfx-192.232.180.0/23">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/192.232.180.0/23">192.232.180.0/23</a></td>
+                                    <td class="smallonmobile nowrap">WhiteSky Communications, LLC.</td>
+                                </tr>
+                                
+                                <tr id="pfx-192.236.64.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/192.236.64.0/24">192.236.64.0/24</a></td>
+                                    <td class="smallonmobile nowrap">WhiteSky Communications, LLC.</td>
+                                </tr>
+                                
+                                <tr id="pfx-192.236.66.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/192.236.66.0/24">192.236.66.0/24</a></td>
+                                    <td class="smallonmobile nowrap">WhiteSky Communications, LLC.</td>
+                                </tr>
+                                
+                                <tr id="pfx-192.236.68.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/192.236.68.0/24">192.236.68.0/24</a></td>
+                                    <td class="smallonmobile nowrap">WhiteSky Communications, LLC.</td>
+                                </tr>
+                                
+                                <tr id="pfx-192.236.76.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/192.236.76.0/24">192.236.76.0/24</a></td>
+                                    <td class="smallonmobile nowrap">WhiteSky Communications, LLC.</td>
+                                </tr>
+                                
+                                <tr id="pfx-192.236.120.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/192.236.120.0/24">192.236.120.0/24</a></td>
+                                    <td class="smallonmobile nowrap">WhiteSky Communications, LLC.</td>
+                                </tr>
+                                
+                                <tr id="pfx-192.236.125.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/192.236.125.0/24">192.236.125.0/24</a></td>
+                                    <td class="smallonmobile nowrap">WhiteSky Communications, LLC.</td>
+                                </tr>
+                                
+                                <tr id="pfx-198.90.103.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/198.90.103.0/24">198.90.103.0/24</a></td>
+                                    <td class="smallonmobile nowrap">WhiteSky Communications, LLC.</td>
+                                </tr>
+                                
+                                <tr id="pfx-198.90.104.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/198.90.104.0/24">198.90.104.0/24</a></td>
+                                    <td class="smallonmobile nowrap">WhiteSky Communications, LLC.</td>
+                                </tr>
+                                
+                                <tr id="pfx-198.90.109.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/198.90.109.0/24">198.90.109.0/24</a></td>
+                                    <td class="smallonmobile nowrap">WhiteSky Communications, LLC.</td>
+                                </tr>
+                                
+                                <tr id="pfx-198.90.116.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/198.90.116.0/24">198.90.116.0/24</a></td>
+                                    <td class="smallonmobile nowrap">WhiteSky Communications, LLC.</td>
+                                </tr>
+                                
+                                <tr id="pfx-198.90.119.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/198.90.119.0/24">198.90.119.0/24</a></td>
+                                    <td class="smallonmobile nowrap">WhiteSky Communications, LLC.</td>
+                                </tr>
+                                
+                                <tr id="pfx-198.90.127.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/198.90.127.0/24">198.90.127.0/24</a></td>
+                                    <td class="smallonmobile nowrap">WhiteSky Communications, LLC.</td>
+                                </tr>
+                                
+                                <tr id="pfx-199.48.112.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/199.48.112.0/24">199.48.112.0/24</a></td>
+                                    <td class="smallonmobile nowrap">WhiteSky Communications, LLC.</td>
+                                </tr>
+                                
+                                <tr id="pfx-199.48.116.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/199.48.116.0/24">199.48.116.0/24</a></td>
+                                    <td class="smallonmobile nowrap">WhiteSky Communications, LLC.</td>
+                                </tr>
+                                
+                                <tr id="pfx-209.54.84.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/209.54.84.0/24">209.54.84.0/24</a></td>
+                                    <td class="smallonmobile nowrap">WhiteSky Communications, LLC.</td>
+                                </tr>
+                                
+                                <tr id="pfx-216.106.133.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/216.106.133.0/24">216.106.133.0/24</a></td>
+                                    <td class="smallonmobile nowrap">WhiteSky Communications, LLC.</td>
+                                </tr>
+                                
+                                <tr id="pfx-216.106.134.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/216.106.134.0/24">216.106.134.0/24</a></td>
+                                    <td class="smallonmobile nowrap">WhiteSky Communications, LLC.</td>
+                                </tr>
+                                
+                                <tr id="pfx-216.106.142.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/216.106.142.0/24">216.106.142.0/24</a></td>
+                                    <td class="smallonmobile nowrap">WhiteSky Communications, LLC.</td>
+                                </tr>
+                                
+                                <tr id="pfx-216.106.143.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/216.106.143.0/24">216.106.143.0/24</a></td>
+                                    <td class="smallonmobile nowrap">WhiteSky Communications, LLC.</td>
+                                </tr>
+                                
+                                <tr id="pfx-216.106.152.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/216.106.152.0/24">216.106.152.0/24</a></td>
+                                    <td class="smallonmobile nowrap">WhiteSky Communications, LLC.</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div style="display: none" id="connectivity-page">
+
+                        <div class="grid-row">
+
+                            <dl class="column-two-thirds">
+                                <dt><a href="#upstreams">Upstreams</a></dt>
+                                <dd class="text data">
+                                    25
+                                </dd>
+                            </dl>
+
+                            <dl class="column-third">
+                                <dt><a href="#peers">Peers</a></dt>
+                                <dd class="data">26</dd>
+                            </dl>
+                        </div>
+
+
+                        <hr>
+                        <h3>Network Policy<img class="flag-img" src="/assets/info.png" style="padding-left: 12px;" title="This info can take up to 2 hours to fully update" alt="This info take up to 2 hours to fully update"/></h3></h3>
+                        <a style="font-size: small;" href="/kb/network-policy">Click here to learn more about what this graph means and what makes up a network policy</a>
+
+                        <select id="netpolicydropdown" class="dropdownmenu">
+                            
+                                <option disabled=true value="disabled-default">Global Aggregation (disabled due to size)</option>
+                            
+
+                            
+                                
+                            
+                                
+                                <option value="00083481caf58cc65c26f73b2c7ee0ec0268ebf7d38ad902240102f6">Policy suspicious_morse</option>
+                                
+                            
+                                
+                                <option value="04ec90209e846f24f3a48881cdd7e214cafcb734e1f54d0f3e32c321">Policy focused_hawking</option>
+                                
+                            
+                                
+                                <option value="8d77872df9d8579401229266bb8dd41641daf3170f6a942fa0e28105">Policy crazy_banach</option>
+                                
+                            
+                                
+                                <option value="ac73c56401bdd891d2cb59caccb096f3984d39e896585e66a8c96b08">Policy pensive_wiles</option>
+                                
+                            
+                                
+                                <option value="df3767ff07dac293bf5781256ba76c3a97dd27c9e9d80c3d9e6f1fe4">Policy distracted_volhard</option>
+                                
+                            
+                                
+                                <option value="03f61470445c332c5a4ea5de5e3d18f9fcf783d48dbed9b7c43e8031">Policy brave_faraday</option>
+                                
+                            
+                                
+                                <option value="3049416693a311adb98d098ded5ae0d15986ebb1c0b2157a405d5ba6">Policy jolly_boyd</option>
+                                
+                            
+                                
+                                <option value="530842056f0467f24cc2b0bc1f8d9f12eeca8a4c2e92f677bfa2c5a8">Policy laughing_merkle</option>
+                                
+                            
+                                
+                                <option value="e7d6d597a67b641ec3241a8b6239a9dcc5b9cbb9de7afa82245a9b30">Policy eager_gauss</option>
+                                
+                            
+                                
+                                <option value="82a35d8f50b1c53a8b43a9012e93a5b865ccf830a501fcd210112646">Policy admiring_hodgkin</option>
+                                
+                            
+                                
+                                <option value="9f98b45d3dd14a0e2baaeafd712463fffccb31a70fae2794a613477c">Policy awesome_proskuriakova</option>
+                                
+                            
+                                
+                                <option value="b13d755e2815764f372ed854bbc7dae15d0401abb8ca52997cf49197">Policy hungry_swanson</option>
+                                
+                            
+                                
+                                <option value="b154009c1c49b0d9fe358b664b8f066c62103cf7a8dd250aff571f3e">Policy zealous_albattani</option>
+                                
+                            
+                                
+                                <option value="380f0d48a2676b0dd9dc5f8057e0eff737400f1c217591dccec509fb">Policy eager_greider</option>
+                                
+                            
+                                
+                                <option value="78a769d1339338897a2b27837a598c16a9d931380c9463cbdaa5ada9">Policy lucid_dirac</option>
+                                
+                            
+                                
+                                <option selected value="bd3486800f14c6bde71d69b7d74d8b431d89e913ff529af14c75aec5">Policy objective_tharp</option>
+                                
+                            
+                                
+                                <option value="8e1dac34db111e6e3d73c92ab06ba596c451370e3a80fa6889595263">Policy zen_khayyam</option>
+                                
+                            
+                                
+                                <option value="c939cf8300624a58efb0fe3ff08ee40c6479b84529478714e42a8b0f">Policy focused_varahamihira</option>
+                                
+                            
+                                
+                                <option value="b17709c7cc2cb74d71914aafd0a94b7b34780075129ae8ae07af38c0">Policy competent_vaughan</option>
+                                
+                            
+                                
+                                <option value="e4d4d76d399c9882652fa5a4bdba0d22f533e832177f5f9c2ddfaec2">Policy goofy_elbakyan</option>
+                                
+                            
+                                
+                                <option value="7f700dc5c58b60791ae9552e209026d55886a7d68a8f2a8f5856e12e">Policy sharp_heisenberg</option>
+                                
+                            
+                                
+                                <option value="13b8495927a51046178829d7c5466acc2060a330d9e940f36aa258b4">Policy dreamy_fermi</option>
+                                
+                            
+                                
+                                <option value="45136366fac65d102cfaaff52042b1043decad71d3a51fd1943a8e2f">Policy hardcore_morse</option>
+                                
+                            
+                                
+                                <option value="8e1eb7334fac96092f8d2ddbff85e1f4349f2a860d4b1c7f3bfb124a">Policy mystifying_leakey</option>
+                                
+                            
+                                
+                                <option value="9296244991a2bc933df8139c08faaf31128a789e6175526aeaa1077d">Policy jovial_goldstine</option>
+                                
+                            
+                                
+                                <option value="30972b1b45e618aa7e963bb50046bdcaadc0b664da49226fa69e8ac2">Policy cocky_kirch</option>
+                                
+                            
+                                
+                                <option value="86f44a295c6dcd7517f5d7ebde1792546351c3a429a951d82b19ec38">Policy pensive_wescoff</option>
+                                
+                            
+                                
+                                <option value="c811032fe331bdb45ac24343631623600ed52dad8c2f6ea90ae2eead">Policy inspiring_hodgkin</option>
+                                
+                            
+                                
+                                <option value="cbe4cf25121727a38a37b6082db2211506fa93823ec55e43a3385bfe">Policy magical_borg</option>
+                                
+                            
+                                
+                                <option value="e862e4d4d77159580a1d23b2d91c005487dbdf0272c508e31d45e503">Policy amazing_boyd</option>
+                                
+                            
+
+                            
+
+
+                        </select>
+
+                        <script>var netgroups = {"00083481caf58cc65c26f73b2c7ee0ec0268ebf7d38ad902240102f6":["162.242.105.0/24","167.160.153.0/24","108.169.199.0/24","108.169.220.0/24","199.48.116.0/24","199.48.112.0/24","162.242.115.0/24","96.44.3.0/24","104.167.152.0/24"],"03f61470445c332c5a4ea5de5e3d18f9fcf783d48dbed9b7c43e8031":["216.106.134.0/24"],"04ec90209e846f24f3a48881cdd7e214cafcb734e1f54d0f3e32c321":["96.44.11.0/24"],"13b8495927a51046178829d7c5466acc2060a330d9e940f36aa258b4":["104.167.153.0/24"],"3049416693a311adb98d098ded5ae0d15986ebb1c0b2157a405d5ba6":["108.169.201.0/24"],"30972b1b45e618aa7e963bb50046bdcaadc0b664da49226fa69e8ac2":["96.44.29.0/24","104.167.151.0/24","162.242.27.0/24"],"380f0d48a2676b0dd9dc5f8057e0eff737400f1c217591dccec509fb":["216.106.142.0/24"],"45136366fac65d102cfaaff52042b1043decad71d3a51fd1943a8e2f":["162.242.48.0/24"],"530842056f0467f24cc2b0bc1f8d9f12eeca8a4c2e92f677bfa2c5a8":["216.106.152.0/24"],"78a769d1339338897a2b27837a598c16a9d931380c9463cbdaa5ada9":["104.167.150.0/24"],"7f700dc5c58b60791ae9552e209026d55886a7d68a8f2a8f5856e12e":["216.106.133.0/24"],"82a35d8f50b1c53a8b43a9012e93a5b865ccf830a501fcd210112646":["192.236.68.0/24"],"86f44a295c6dcd7517f5d7ebde1792546351c3a429a951d82b19ec38":["104.143.180.0/24"],"8d77872df9d8579401229266bb8dd41641daf3170f6a942fa0e28105":["162.242.25.0/24","104.167.161.0/24","167.160.130.0/24"],"8e1dac34db111e6e3d73c92ab06ba596c451370e3a80fa6889595263":["96.44.28.0/24"],"8e1eb7334fac96092f8d2ddbff85e1f4349f2a860d4b1c7f3bfb124a":["198.90.103.0/24"],"9296244991a2bc933df8139c08faaf31128a789e6175526aeaa1077d":["192.236.125.0/24"],"9f98b45d3dd14a0e2baaeafd712463fffccb31a70fae2794a613477c":["167.160.155.0/24","96.44.23.0/24","192.236.76.0/24","108.169.202.0/24","108.169.227.0/24"],"ac73c56401bdd891d2cb59caccb096f3984d39e896585e66a8c96b08":["104.167.165.0/24"],"b13d755e2815764f372ed854bbc7dae15d0401abb8ca52997cf49197":["198.90.127.0/24","104.167.133.0/24"],"b154009c1c49b0d9fe358b664b8f066c62103cf7a8dd250aff571f3e":["216.106.143.0/24","209.54.84.0/24"],"b17709c7cc2cb74d71914aafd0a94b7b34780075129ae8ae07af38c0":["104.167.156.0/24"],"bd3486800f14c6bde71d69b7d74d8b431d89e913ff529af14c75aec5":["104.167.160.0/24","104.167.157.0/24","198.90.116.0/24","192.232.180.0/23","198.90.104.0/24","67.222.170.0/24","162.242.119.0/24","198.90.109.0/24","67.222.171.0/24","104.143.164.0/24","198.90.119.0/24","104.167.184.0/24","108.169.198.0/24","67.222.164.0/24","104.167.149.0/24","192.232.162.0/24","162.242.3.0/24"],"c811032fe331bdb45ac24343631623600ed52dad8c2f6ea90ae2eead":["104.167.185.0/24"],"c939cf8300624a58efb0fe3ff08ee40c6479b84529478714e42a8b0f":["104.167.147.0/24","192.236.64.0/24","192.236.66.0/24","162.242.24.0/24"],"cbe4cf25121727a38a37b6082db2211506fa93823ec55e43a3385bfe":["108.169.197.0/24","192.236.120.0/24"],"df3767ff07dac293bf5781256ba76c3a97dd27c9e9d80c3d9e6f1fe4":["162.242.91.0/24","162.242.56.0/24"],"e4d4d76d399c9882652fa5a4bdba0d22f533e832177f5f9c2ddfaec2":["162.242.6.0/24"],"e7d6d597a67b641ec3241a8b6239a9dcc5b9cbb9de7afa82245a9b30":["104.241.13.0/24"],"e862e4d4d77159580a1d23b2d91c005487dbdf0272c508e31d45e503":["162.242.90.0/24"]}</script>
+
+                        <div style="text-align: center;">
+                            <img id="pathimg" usemap="#world" src="">
+                            <div id="world2"></div>
+                        </div>
+
+                        <details>
+                            <summary>Chart Display Options</summary>
+                            <noscript>This requires javascript to work</noscript>
+                            <label for="graphOptionMoreWiggle" style="display: flex;align-items: center;font-size: 20px;">
+                                <input type="checkbox" id="graphOptionMoreWiggle" name="graphOptionMoreWiggle" style="width: 64px; height: 32px;">
+                                    <p id="graphOptionMoreWiggleLabel" style="width: 200%;">Display links using non straight lines</p>
+                            </label>
+                        </details>
+
+                        <h3 style="display: none;" id="PISPBanner">Prefixes in selected policy</h3>
+                        <table id="policytable" class="full-width-table">
+                        </table>
+                        <button style="width:100%;display: none;" id="ShowFullPolicyButton" class="bigButton" onclick="dropdownPoke()">Load all prefixes in policy</button>
+
+                        <script>
+                            !function(a,b){"function"==typeof define&&define.amd?define([],b):"undefined"!=typeof module&&module.exports?module.exports=b():a.ReconnectingWebSocket=b()}(this,function(){function a(b,c,d){function l(a,b){var c=document.createEvent("CustomEvent");return c.initCustomEvent(a,!1,!1,b),c}var e={debug:!1,automaticOpen:!0,reconnectInterval:1e3,maxReconnectInterval:3e4,reconnectDecay:1.5,timeoutInterval:2e3};d||(d={});for(var f in e)this[f]="undefined"!=typeof d[f]?d[f]:e[f];this.url=b,this.reconnectAttempts=0,this.readyState=WebSocket.CONNECTING,this.protocol=null;var h,g=this,i=!1,j=!1,k=document.createElement("div");k.addEventListener("open",function(a){g.onopen(a)}),k.addEventListener("close",function(a){g.onclose(a)}),k.addEventListener("connecting",function(a){g.onconnecting(a)}),k.addEventListener("message",function(a){g.onmessage(a)}),k.addEventListener("error",function(a){g.onerror(a)}),this.addEventListener=k.addEventListener.bind(k),this.removeEventListener=k.removeEventListener.bind(k),this.dispatchEvent=k.dispatchEvent.bind(k),this.open=function(b){h=new WebSocket(g.url,c||[]),b||k.dispatchEvent(l("connecting")),(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","attempt-connect",g.url);var d=h,e=setTimeout(function(){(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","connection-timeout",g.url),j=!0,d.close(),j=!1},g.timeoutInterval);h.onopen=function(){clearTimeout(e),(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","onopen",g.url),g.protocol=h.protocol,g.readyState=WebSocket.OPEN,g.reconnectAttempts=0;var d=l("open");d.isReconnect=b,b=!1,k.dispatchEvent(d)},h.onclose=function(c){if(clearTimeout(e),h=null,i)g.readyState=WebSocket.CLOSED,k.dispatchEvent(l("close"));else{g.readyState=WebSocket.CONNECTING;var d=l("connecting");d.code=c.code,d.reason=c.reason,d.wasClean=c.wasClean,k.dispatchEvent(d),b||j||((g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","onclose",g.url),k.dispatchEvent(l("close")));var e=g.reconnectInterval*Math.pow(g.reconnectDecay,g.reconnectAttempts);setTimeout(function(){g.reconnectAttempts++,g.open(!0)},e>g.maxReconnectInterval?g.maxReconnectInterval:e)}},h.onmessage=function(b){(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","onmessage",g.url,b.data);var c=l("message");c.data=b.data,k.dispatchEvent(c)},h.onerror=function(b){(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","onerror",g.url,b),k.dispatchEvent(l("error"))}},1==this.automaticOpen&&this.open(!1),this.send=function(b){if(h)return(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","send",g.url,b),h.send(b);throw"INVALID_STATE_ERR : Pausing to reconnect websocket"},this.close=function(a,b){"undefined"==typeof a&&(a=1e3),i=!0,h&&h.close(a,b)},this.refresh=function(){h&&h.close()}}return a.prototype.onopen=function(){},a.prototype.onclose=function(){},a.prototype.onconnecting=function(){},a.prototype.onmessage=function(){},a.prototype.onerror=function(){},a.debugAll=!1,a.CONNECTING=WebSocket.CONNECTING,a.OPEN=WebSocket.OPEN,a.CLOSING=WebSocket.CLOSING,a.CLOSED=WebSocket.CLOSED,a});
+                        </script>
+                        
+                        <script>
+                            var prefixinfo = [{"PrefixString":"67.222.164.0/24","WhoisName":"WhiteSky Communications, LLC.","WhoisCountry":"US"},{"PrefixString":"67.222.170.0/24","WhoisName":"WhiteSky Communications, LLC.","WhoisCountry":"US"},{"PrefixString":"67.222.171.0/24","WhoisName":"WhiteSky Communications, LLC.","WhoisCountry":"US"},{"PrefixString":"96.44.3.0/24","WhoisName":"WhiteSky Communications, LLC.","WhoisCountry":"US"},{"PrefixString":"96.44.11.0/24","WhoisName":"WhiteSky Communications, LLC.","WhoisCountry":"US"},{"PrefixString":"96.44.23.0/24","WhoisName":"WhiteSky Communications, LLC.","WhoisCountry":"US"},{"PrefixString":"96.44.28.0/24","WhoisName":"WhiteSky Communications, LLC.","WhoisCountry":"US"},{"PrefixString":"96.44.29.0/24","WhoisName":"WhiteSky Communications, LLC.","WhoisCountry":"US"},{"PrefixString":"104.143.164.0/24","WhoisName":"WhiteSky Communications, LLC.","WhoisCountry":"US"},{"PrefixString":"104.143.180.0/24","WhoisName":"WhiteSky Communications, LLC.","WhoisCountry":"US"},{"PrefixString":"104.167.133.0/24","WhoisName":"WhiteSky Communications, LLC.","WhoisCountry":"US"},{"PrefixString":"104.167.147.0/24","WhoisName":"WhiteSky Communications, LLC.","WhoisCountry":"US"},{"PrefixString":"104.167.149.0/24","WhoisName":"WhiteSky Communications, LLC.","WhoisCountry":"US"},{"PrefixString":"104.167.150.0/24","WhoisName":"WhiteSky Communications, LLC.","WhoisCountry":"US"},{"PrefixString":"104.167.151.0/24","WhoisName":"WhiteSky Communications, LLC.","WhoisCountry":"US"},{"PrefixString":"104.167.152.0/24","WhoisName":"WhiteSky Communications, LLC.","WhoisCountry":"US"},{"PrefixString":"104.167.153.0/24","WhoisName":"WhiteSky Communications, LLC.","WhoisCountry":"US"},{"PrefixString":"104.167.156.0/24","WhoisName":"WhiteSky Communications, LLC.","WhoisCountry":"US"},{"PrefixString":"104.167.157.0/24","WhoisName":"WhiteSky Communications, LLC.","WhoisCountry":"US"},{"PrefixString":"104.167.160.0/24","WhoisName":"WhiteSky Communications, LLC.","WhoisCountry":"US"},{"PrefixString":"104.167.161.0/24","WhoisName":"WhiteSky Communications, LLC.","WhoisCountry":"US"},{"PrefixString":"104.167.165.0/24","WhoisName":"WhiteSky Communications, LLC.","WhoisCountry":"US"},{"PrefixString":"104.167.184.0/24","WhoisName":"WhiteSky Communications, LLC.","WhoisCountry":"US"},{"PrefixString":"104.167.185.0/24","WhoisName":"WhiteSky Communications, LLC.","WhoisCountry":"US"},{"PrefixString":"104.241.13.0/24","WhoisName":"WhiteSky Communications, LLC.","WhoisCountry":"US"},{"PrefixString":"108.169.197.0/24","WhoisName":"WhiteSky Communications, LLC.","WhoisCountry":"US"},{"PrefixString":"108.169.198.0/24","WhoisName":"WhiteSky Communications, LLC.","WhoisCountry":"US"},{"PrefixString":"108.169.199.0/24","WhoisName":"WhiteSky Communications, LLC.","WhoisCountry":"US"},{"PrefixString":"108.169.201.0/24","WhoisName":"WhiteSky Communications, LLC.","WhoisCountry":"US"},{"PrefixString":"108.169.202.0/24","WhoisName":"WhiteSky Communications, LLC.","WhoisCountry":"US"},{"PrefixString":"108.169.220.0/24","WhoisName":"WhiteSky Communications, LLC.","WhoisCountry":"US"},{"PrefixString":"108.169.227.0/24","WhoisName":"WhiteSky Communications, LLC.","WhoisCountry":"US"},{"PrefixString":"162.242.3.0/24","WhoisName":"WhiteSky Communications, LLC.","WhoisCountry":"US"},{"PrefixString":"162.242.6.0/24","WhoisName":"WhiteSky Communications, LLC.","WhoisCountry":"US"},{"PrefixString":"162.242.24.0/24","WhoisName":"WhiteSky Communications, LLC.","WhoisCountry":"US"},{"PrefixString":"162.242.25.0/24","WhoisName":"WhiteSky Communications, LLC.","WhoisCountry":"US"},{"PrefixString":"162.242.27.0/24","WhoisName":"WhiteSky Communications, LLC.","WhoisCountry":"US"},{"PrefixString":"162.242.48.0/24","WhoisName":"WhiteSky Communications, LLC.","WhoisCountry":"US"},{"PrefixString":"162.242.56.0/24","WhoisName":"WhiteSky Communications, LLC.","WhoisCountry":"US"},{"PrefixString":"162.242.90.0/24","WhoisName":"WhiteSky Communications, LLC.","WhoisCountry":"US"},{"PrefixString":"162.242.91.0/24","WhoisName":"WhiteSky Communications, LLC.","WhoisCountry":"US"},{"PrefixString":"162.242.105.0/24","WhoisName":"WhiteSky Communications, LLC.","WhoisCountry":"US"},{"PrefixString":"162.242.115.0/24","WhoisName":"WhiteSky Communications, LLC.","WhoisCountry":"US"},{"PrefixString":"162.242.119.0/24","WhoisName":"WhiteSky Communications, LLC.","WhoisCountry":"US"},{"PrefixString":"167.160.130.0/24","WhoisName":"WhiteSky Communications, LLC.","WhoisCountry":"US"},{"PrefixString":"167.160.153.0/24","WhoisName":"WhiteSky Communications, LLC.","WhoisCountry":"US"},{"PrefixString":"167.160.155.0/24","WhoisName":"WhiteSky Communications, LLC.","WhoisCountry":"US"},{"PrefixString":"192.232.162.0/24","WhoisName":"WhiteSky Communications, LLC.","WhoisCountry":"US"},{"PrefixString":"192.232.180.0/23","WhoisName":"WhiteSky Communications, LLC.","WhoisCountry":"US"},{"PrefixString":"192.236.64.0/24","WhoisName":"WhiteSky Communications, LLC.","WhoisCountry":"US"},{"PrefixString":"192.236.66.0/24","WhoisName":"WhiteSky Communications, LLC.","WhoisCountry":"US"},{"PrefixString":"192.236.68.0/24","WhoisName":"WhiteSky Communications, LLC.","WhoisCountry":"US"},{"PrefixString":"192.236.76.0/24","WhoisName":"WhiteSky Communications, LLC.","WhoisCountry":"US"},{"PrefixString":"192.236.120.0/24","WhoisName":"WhiteSky Communications, LLC.","WhoisCountry":"US"},{"PrefixString":"192.236.125.0/24","WhoisName":"WhiteSky Communications, LLC.","WhoisCountry":"US"},{"PrefixString":"198.90.103.0/24","WhoisName":"WhiteSky Communications, LLC.","WhoisCountry":"US"},{"PrefixString":"198.90.104.0/24","WhoisName":"WhiteSky Communications, LLC.","WhoisCountry":"US"},{"PrefixString":"198.90.109.0/24","WhoisName":"WhiteSky Communications, LLC.","WhoisCountry":"US"},{"PrefixString":"198.90.116.0/24","WhoisName":"WhiteSky Communications, LLC.","WhoisCountry":"US"},{"PrefixString":"198.90.119.0/24","WhoisName":"WhiteSky Communications, LLC.","WhoisCountry":"US"},{"PrefixString":"198.90.127.0/24","WhoisName":"WhiteSky Communications, LLC.","WhoisCountry":"US"},{"PrefixString":"199.48.112.0/24","WhoisName":"WhiteSky Communications, LLC.","WhoisCountry":"US"},{"PrefixString":"199.48.116.0/24","WhoisName":"WhiteSky Communications, LLC.","WhoisCountry":"US"},{"PrefixString":"209.54.84.0/24","WhoisName":"WhiteSky Communications, LLC.","WhoisCountry":"US"},{"PrefixString":"216.106.133.0/24","WhoisName":"WhiteSky Communications, LLC.","WhoisCountry":"US"},{"PrefixString":"216.106.134.0/24","WhoisName":"WhiteSky Communications, LLC.","WhoisCountry":"US"},{"PrefixString":"216.106.142.0/24","WhoisName":"WhiteSky Communications, LLC.","WhoisCountry":"US"},{"PrefixString":"216.106.143.0/24","WhoisName":"WhiteSky Communications, LLC.","WhoisCountry":"US"},{"PrefixString":"216.106.152.0/24","WhoisName":"WhiteSky Communications, LLC.","WhoisCountry":"US"}]
+                            var asn =  54119 
+
+                            var pfxExtraString = "";
+
+                            function saveGraphOptionsToLocalStorage() {
+                                localStorage.setItem("pfx-chart-options:wiggle", document.getElementById("graphOptionMoreWiggle").checked);
+                            }
+
+                            function loadGraphOptionsToLocalStorage() {
+                                document.getElementById("graphOptionMoreWiggle").checked = localStorage.getItem("pfx-chart-options:wiggle") == "true";
+                                pfxExtraString= "";
+                                if (document.getElementById("graphOptionMoreWiggle").checked) {
+                                    pfxExtraString = pfxExtraString + "&wiggly";
+                                }
+                            }
+                            loadGraphOptionsToLocalStorage();
+
+                            function graphOptionsChanged() {
+                                saveGraphOptionsToLocalStorage();
+                                handleImageChange();
+                            }
+                            document.getElementById("graphOptionMoreWiggle").addEventListener("click", graphOptionsChanged)
+
+
+                            function handleImageChange() {
+                                loadGraphOptionsToLocalStorage();
+                                
+                                document.getElementById("pathimg").src=("/pathimg/"+asn+ "-" + document.getElementById("netpolicydropdown").value +"?"+pfxExtraString);
+                                var request = new XMLHttpRequest();
+                                request.open('GET', "/pathimg/"+asn+ "-" + document.getElementById("netpolicydropdown").value + "?map=true" + pfxExtraString, true);
+
+                                request.onload = function() {
+                                    if (this.status >= 200 && this.status < 400) {
+                                        
+                                        
+                                        document.getElementById("world2").innerHTML = this.response;
+                                        setTimeout(function(){
+                                            imageMapResize('#world');
+                                        },1000)
+                                    }
+                                };
+                                request.send();
+                                buildPrefixTable();
+                            } 
+
+                            function encodeHTML(s) {
+                                return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
+                            }
+
+                            function dropdownPoke(){
+                                InteractedWithPolicyTableYet=true;
+                                handleImageChange();
+                            }
+
+                            var InteractedWithPolicyTableYet = false;
+                            var OverloadPolicySize = 0;
+                            function buildPrefixTable() {
+                                var policy = document.getElementById("netpolicydropdown").value;
+                                
+                                var cidrs = netgroups[policy];
+                                var ihtml = "<tbody> <tr> <th class=\"nowrap\">  -  </th> <th>Prefix</th> <th class=\"nowrap\">Description</th> </tr>";
+
+                                
+                                var aaa = document.querySelectorAll('#PISPBanner');
+                                var bbb = document.querySelectorAll('#policytable');
+                                var n = 0
+                                if (cidrs) {
+                                    aaa[0].style.display = "";
+                                    bbb[0].style.display = "";
+                                    cidrs.forEach(cidr => {
+                                        var obj = {};
+                                        var dont =false;
+                                        n++;
+                                        
+                                        if (!InteractedWithPolicyTableYet) {
+                                            if (n == 5) {
+                                                dont = true;
+                                            } else if (n > 5) {
+                                                dont = true;
+                                            }
+                                        }
+                                        
+                                        if (!dont) {
+                                            prefixinfo.forEach(el => {
+                                                if(el.PrefixString == cidr) {
+                                                    
+                                                        ihtml += "<tr><td class=\"nowrap ns\"><img class=\"flag-img\" src=\"/assets/flags/"+el.WhoisCountry+".png\" title=\""+el.WhoisCountry+"\"></td>"
+                                                        ihtml += "<td><a href=\"/prefix/"+el.PrefixString+"\">"+el.PrefixString+"</a></td>"
+                                                        ihtml += "<td class=\"nowrap\">"+encodeHTML(el.WhoisName)+"</td></tr>"
+                                                }
+                                            });
+                                        } else {
+                                            OverloadPolicySize++;
+                                        }
+                                    });
+                                    document.getElementById("policytable").innerHTML = ihtml
+                                    var PolButton = document.querySelectorAll('#ShowFullPolicyButton');
+                                    if (!InteractedWithPolicyTableYet && OverloadPolicySize!=0) {
+                                        PolButton[0].style="width:100%";
+                                        PolButton[0].innerHTML = "Load all "+OverloadPolicySize+" prefixes in policy"
+                                    } else {
+                                        PolButton[0].style="display:none;";
+                                    }
+                                    
+                                } else {
+                                    aaa[0].style.display = "none";
+                                    bbb[0].style.display = "none";
+                                }
+                            }
+
+
+                            var pathdropdown = document.querySelectorAll('#netpolicydropdown');
+                            pathdropdown[0].addEventListener("change",dropdownPoke)
+                            handleImageChange()
+                            buildPrefixTable()
+
+                            document.addEventListener("load", function(){
+                                
+                                handleImageChange()
+                            });
+
+                            function uuidv4() {
+                                return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+                                    var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+                                    return v.toString(16);
+                                });
+                            }
+
+                            
+                            let realTimeSocket = new ReconnectingWebSocket("wss://bgp.tools/ws/rt-asn?prefix=AS54119" + "&magic=" + encodeURIComponent("LAIETDKW6LJVL2WM2T7XV5E5VYTHW3X5WSJ52LOXLYPGYWPLUKYQ===="));
+                            
+                            realTimeSocket.onmessage = function(event) {
+                                console.log(`[message] Data received from server: ${event.data}`);
+                                if (event.data == "Running.") {
+                                    document.getElementById("ws-status").src = "/assets/connected.png";
+                                    document.getElementById("ws-status").title = "Connected to realtime data";
+                                } else if (event.data == "STOP-CONNECTING") {
+                                    document.getElementById("ws-status").src = disconectedIcon;
+                                    document.getElementById("ws-status").title = "Not connected to realtime data";
+                                    realTimeSocket.maxReconnectAttempts = 1;
+                                    realTimeSocket.close()
+                                } else {
+                                    var obj = JSON.parse(event.data);
+                                    var elm = document.getElementById("pfx-"+obj.Prefix);
+                                    if (!elm && obj.Vis > 6) {
+                                        var tblist = document.getElementById("donotscrapebgptools-prefixlist-tbody");
+                                        var node = document.createElement("tr");                 
+                                        node.outerHTML = '<tr id="pfx-'+obj.Prefix+'"><td class="nowrap"><img class="flag-img" src="/assets/flags/'+obj.Whois.WhoisCountry+'.png" title="'+obj.Whois.WhoisCountry+'"></td><td><a href="/prefix/'+obj.Prefix+'">'+obj.Prefix+'</a></td><td class="smallonmobile nowrap">'+obj.Whois.WhoisName+'</td></tr>';
+                                        tblist.appendChild(node);                              
+                                    }
+                                    if (!elm) {
+                                        elm = document.getElementById("pfx-"+obj.Prefix);
+                                    }
+                                    
+                                    if (obj.Vis > 70) {
+                                        if (elm.style) {
+                                            var es = elm.style;
+                                            if (es.animation.includes("pulse1b")) {
+                                                elm.style = "animation: pulse2b 1s 1;";
+                                            } else if (es.animation.includes("pulse2b")) {
+                                                elm.style = "animation: pulse1b 1s 1;";
+                                            } else {
+                                                elm.style = "animation: pulse1b 1s 1;";
+                                            }
+                                        }
+                                    } else if (obj.Vis < 5) {
+                                        
+                                        var elm = document.getElementById("pfx-"+obj.Prefix);
+                                        if (elm) {
+                                            elm.parentNode.removeChild(elm);
+                                        }
+                                    } else {
+                                        if (elm.style) {
+                                            var es = elm.style;
+                                            if (es.animation.includes("pulse1r")) {
+                                                elm.style = "animation: pulse2r 1s 1;";
+                                            } else if (es.animation.includes("pulse2r")) {
+                                                elm.style = "animation: pulse1r 1s 1;";
+                                            } else {
+                                                elm.style = "animation: pulse1r 1s 1;";
+                                            }
+                                        }
+                                    }
+                                }
+                            };
+                            var disconectedIcon = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAAZlBMVEX/ewBZWVn/ewf/ew5fWljudiP8egp6XVT6eRHodSmVYU6hZEzObjrldCv3eRZ/XlNjWliHX1KrZkngci71eBl1XFXCa0CKYFHydx18XlSQYE+lZUq0aEbJbT3SbzhvXFaLYFG8akLYdYVFAAABQElEQVRIx5XV25KDIAwGYIKASLutqOtZ277/S26xK4ozJea/qRdfajATZaRkd6B6oPoL1d9QphUn+WvXmGF8TfN8yvNrDj6nvNj5Hu8n8HCh9ONiON5PEKuQx55DmFTHC1R9uMOjYkhFERbkEikofw8FGe5t0FWJ+kLvz5H+t8RdGD9k8TeebBXpzwIZT955XyVBtHHeXYzeJy5fhydtoZffZvUMSfvxT4BOeI/G/b9paxH1at8XQF8xNcV8aaQvHQBMhY/XttsdYp5nah3XdvIqui61Cjy+jqLwXp1cx9XLQZ5cR/vx1p8cez2IWrlxYY/T9bNVyCfmdQdbxNgs441FNRAEHS83oe9ahmTw1p88nhHCiAkpeIUeX5eJ6NlM9Gwm+uxO9/3F2PSR597jn1+udCWzUp7150P1jOoZ1f8BGPARG85JosIAAAAASUVORK5CYII=";
+                            realTimeSocket.onerror = function(error) {
+                                document.getElementById("ws-status").src = disconectedIcon;
+                                document.getElementById("ws-status").title = "Not connected to realtime data";
+
+                                console.log(`[error] ${error.message}`);
+                            };
+                            realTimeSocket.onclose = function(error) {
+                                document.getElementById("ws-status").src = disconectedIcon;
+                                document.getElementById("ws-status").title = "Not connected to realtime data";
+
+                                console.log(`[error] ${error.message}`);
+                            };
+                        </script>
+
+<div class="superclearfix">
+    
+</div>
+
+                        <hr>
+                        <a style="font-size: small;" href="/kb/what-is-a-upstream">How are upstreams and downstreams calculated?</a>
+                        <h3 id="upstreams">Upstreams<img class="flag-img" src="/assets/lightning.png" style="padding-left: 12px;" title="This information was fetched live at page load time" alt="This information was fetched live at page load time"/></h3>
+
+
+                        <table id="donotscrapebgptools-upstreamTable" class="full-width-table">
+                            <thead class="sortable">
+                                <tr>
+                                    <th class="nowrap boldpls">  &nbsp;  </th>
+                                    <th data-sort-method='number' class="boldpls">ASN</th>
+                                    <th class="nowrap boldpls">Description</th>
+                                    <th class="nowrap boldpls">IPv4</th>
+                                    <th class="nowrap boldpls">IPv6</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US">
+                                        
+                                        </td>
+                                    <td data-sort='62887'><a href="/as/62887">AS62887</a></td>
+                                    <td class="smallonmobile nowrap">WhiteSky Communications, LLC.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US">
+                                        
+                                        </td>
+                                    <td data-sort='7018'><a href="/as/7018">AS7018</a></td>
+                                    <td class="smallonmobile nowrap">AT&amp;T Enterprises, LLC</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US">
+                                        
+                                        </td>
+                                    <td data-sort='46887'><a href="/as/46887">AS46887</a></td>
+                                    <td class="smallonmobile nowrap">Crown Castle Fiber LLC</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US">
+                                        
+                                        </td>
+                                    <td data-sort='6405'><a href="/as/6405">AS6405</a></td>
+                                    <td class="smallonmobile nowrap">American Information Network</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US">
+                                        
+                                        </td>
+                                    <td data-sort='3257'><a href="/as/3257">AS3257</a></td>
+                                    <td class="smallonmobile nowrap">GTT Communications Inc.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US">
+                                        
+                                        </td>
+                                    <td data-sort='209'><a href="/as/209">AS209</a></td>
+                                    <td class="smallonmobile nowrap">Lumen (ex. Qwest)</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US">
+                                        
+                                        </td>
+                                    <td data-sort='30517'><a href="/as/30517">AS30517</a></td>
+                                    <td class="smallonmobile nowrap">Great Lakes Comnet, Inc.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US">
+                                        
+                                        </td>
+                                    <td data-sort='7459'><a href="/as/7459">AS7459</a></td>
+                                    <td class="smallonmobile nowrap">Grande Communications Networks, LLC</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US">
+                                        
+                                        </td>
+                                    <td data-sort='6461'><a href="/as/6461">AS6461</a></td>
+                                    <td class="smallonmobile nowrap">Zayo Bandwidth</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US">
+                                        
+                                        </td>
+                                    <td data-sort='13876'><a href="/as/13876">AS13876</a></td>
+                                    <td class="smallonmobile nowrap">FiberLight, LLC</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US">
+                                        
+                                        </td>
+                                    <td data-sort='3356'><a href="/as/3356">AS3356</a></td>
+                                    <td class="smallonmobile nowrap">Lumen (Level 3)</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US">
+                                        
+                                        </td>
+                                    <td data-sort='15164'><a href="/as/15164">AS15164</a></td>
+                                    <td class="smallonmobile nowrap">Unite Private Networks LLC.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US">
+                                        
+                                        </td>
+                                    <td data-sort='2711'><a href="/as/2711">AS2711</a></td>
+                                    <td class="smallonmobile nowrap">Spirit Communications</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US">
+                                        
+                                        </td>
+                                    <td data-sort='12083'><a href="/as/12083">AS12083</a></td>
+                                    <td class="smallonmobile nowrap">WideOpenWest Finance LLC</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US">
+                                        
+                                        </td>
+                                    <td data-sort='5650'><a href="/as/5650">AS5650</a></td>
+                                    <td class="smallonmobile nowrap">Frontier Communications</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US">
+                                        
+                                        </td>
+                                    <td data-sort='33132'><a href="/as/33132">AS33132</a></td>
+                                    <td class="smallonmobile nowrap">Crown Castle Fiber LLC</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US">
+                                        
+                                        </td>
+                                    <td data-sort='7016'><a href="/as/7016">AS7016</a></td>
+                                    <td class="smallonmobile nowrap">Comcast Cable Communications, LLC</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US">
+                                        
+                                        </td>
+                                    <td data-sort='33668'><a href="/as/33668">AS33668</a></td>
+                                    <td class="smallonmobile nowrap">Comcast Cable Communications, LLC</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US">
+                                        
+                                        </td>
+                                    <td data-sort='33661'><a href="/as/33661">AS33661</a></td>
+                                    <td class="smallonmobile nowrap">Comcast Cable Communications, LLC</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US">
+                                        
+                                        </td>
+                                    <td data-sort='11404'><a href="/as/11404">AS11404</a></td>
+                                    <td class="smallonmobile nowrap">Wave Broadband</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US">
+                                        
+                                        </td>
+                                    <td data-sort='22925'><a href="/as/22925">AS22925</a></td>
+                                    <td class="smallonmobile nowrap">Allied Telecom Group, LLC</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US">
+                                        
+                                        </td>
+                                    <td data-sort='7795'><a href="/as/7795">AS7795</a></td>
+                                    <td class="smallonmobile nowrap">LUMOS Networks, Inc.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US">
+                                        
+                                        </td>
+                                    <td data-sort='14051'><a href="/as/14051">AS14051</a></td>
+                                    <td class="smallonmobile nowrap">Fidium</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US">
+                                        
+                                        </td>
+                                    <td data-sort='11904'><a href="/as/11904">AS11904</a></td>
+                                    <td class="smallonmobile nowrap">AcenTek</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US">
+                                        
+                                        </td>
+                                    <td data-sort='35847'><a href="/as/35847">AS35847</a></td>
+                                    <td class="smallonmobile nowrap">Ezee Fiber</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+
+                        <hr>
+                        <h3 id="peers">Peers<img class="flag-img" src="/assets/lightning.png" style="padding-left: 12px;" title="This information was fetched live at page load time" alt="This information was fetched live at page load time"/></h3>
+
+
+
+                        <table id="donotscrapebgptools-upstreamTablePeers" class="full-width-table">
+                            <thead class="sortable">
+                                <tr>
+                                    <th class="nowrap boldpls">  &nbsp;  </th>
+                                    <th data-sort-method='number' class="boldpls">ASN</th>
+                                    <th class="nowrap boldpls">Description</th>
+                                    <th class="nowrap boldpls">IPv4</th>
+                                    <th class="nowrap boldpls">IPv6</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='62887'><a href="/as/62887">AS62887</a></td>
+                                    <td class="smallonmobile nowrap">WhiteSky Communications, LLC.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='7018'><a href="/as/7018">AS7018</a></td>
+                                    <td class="smallonmobile nowrap">AT&amp;T Enterprises, LLC</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='46887'><a href="/as/46887">AS46887</a></td>
+                                    <td class="smallonmobile nowrap">Crown Castle Fiber LLC</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='3257'><a href="/as/3257">AS3257</a></td>
+                                    <td class="smallonmobile nowrap">GTT Communications Inc.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='6405'><a href="/as/6405">AS6405</a></td>
+                                    <td class="smallonmobile nowrap">American Information Network</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='6461'><a href="/as/6461">AS6461</a></td>
+                                    <td class="smallonmobile nowrap">Zayo Bandwidth</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='209'><a href="/as/209">AS209</a></td>
+                                    <td class="smallonmobile nowrap">Lumen (ex. Qwest)</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='7459'><a href="/as/7459">AS7459</a></td>
+                                    <td class="smallonmobile nowrap">Grande Communications Networks, LLC</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='30517'><a href="/as/30517">AS30517</a></td>
+                                    <td class="smallonmobile nowrap">Great Lakes Comnet, Inc.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='11904'><a href="/as/11904">AS11904</a></td>
+                                    <td class="smallonmobile nowrap">AcenTek</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='5650'><a href="/as/5650">AS5650</a></td>
+                                    <td class="smallonmobile nowrap">Frontier Communications</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='33132'><a href="/as/33132">AS33132</a></td>
+                                    <td class="smallonmobile nowrap">Crown Castle Fiber LLC</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='14051'><a href="/as/14051">AS14051</a></td>
+                                    <td class="smallonmobile nowrap">Fidium</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='11404'><a href="/as/11404">AS11404</a></td>
+                                    <td class="smallonmobile nowrap">Wave Broadband</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='33661'><a href="/as/33661">AS33661</a></td>
+                                    <td class="smallonmobile nowrap">Comcast Cable Communications, LLC</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='13876'><a href="/as/13876">AS13876</a></td>
+                                    <td class="smallonmobile nowrap">FiberLight, LLC</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='7016'><a href="/as/7016">AS7016</a></td>
+                                    <td class="smallonmobile nowrap">Comcast Cable Communications, LLC</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='33668'><a href="/as/33668">AS33668</a></td>
+                                    <td class="smallonmobile nowrap">Comcast Cable Communications, LLC</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='3356'><a href="/as/3356">AS3356</a></td>
+                                    <td class="smallonmobile nowrap">Lumen (Level 3)</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='22925'><a href="/as/22925">AS22925</a></td>
+                                    <td class="smallonmobile nowrap">Allied Telecom Group, LLC</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='2711'><a href="/as/2711">AS2711</a></td>
+                                    <td class="smallonmobile nowrap">Spirit Communications</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='15164'><a href="/as/15164">AS15164</a></td>
+                                    <td class="smallonmobile nowrap">Unite Private Networks LLC.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='7795'><a href="/as/7795">AS7795</a></td>
+                                    <td class="smallonmobile nowrap">LUMOS Networks, Inc.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='12083'><a href="/as/12083">AS12083</a></td>
+                                    <td class="smallonmobile nowrap">WideOpenWest Finance LLC</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='35847'><a href="/as/35847">AS35847</a></td>
+                                    <td class="smallonmobile nowrap">Ezee Fiber</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='8928'><a href="/as/8928">AS8928</a></td>
+                                    <td class="smallonmobile nowrap">GTT Communications Inc.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+
+
+                    </div>
+
+                    <div style="display: none" id="whois-page">
+                        
+                        
+                        <pre style="white-space: pre-wrap;">ASHandle:       <a href="/AS54119">AS54119</a>
+OrgID:          WCL-100
+ASName:         WHITESKY-COMMUNICATIONS-2
+ASNumber:       54119
+RegDate:        2011-10-07
+Comment:        https://whitesky.us
+Updated:        2021-07-01
+Source:         ARIN
+
+
+
+OrgID:          WCL-100
+OrgName:        WhiteSky Communications, LLC.
+CanAllocate:    
+Street:         5710 Watermelon Rd #316
+City:           Northport
+State/Prov:     AL
+Country:        US
+PostalCode:     35476
+RegDate:        2013-09-03
+Updated:        2025-08-21
+OrgAdminHandle: <a href="https://whois.arin.net/rest/poc/NETWO10203-ARIN">NETWO10203-ARIN</a>
+OrgTechHandle:  <a href="https://whois.arin.net/rest/poc/BRADS123-ARIN">BRADS123-ARIN</a>
+OrgTechHandle:  <a href="https://whois.arin.net/rest/poc/COMMU119-ARIN">COMMU119-ARIN</a>
+OrgTechHandle:  <a href="https://whois.arin.net/rest/poc/NETWO10203-ARIN">NETWO10203-ARIN</a>
+OrgTechHandle:  <a href="https://whois.arin.net/rest/poc/STANW9-ARIN">STANW9-ARIN</a>
+OrgAbuseHandle: <a href="https://whois.arin.net/rest/poc/NETWO10203-ARIN">NETWO10203-ARIN</a>
+Source:         ARIN
+
+
+
+
+
+OrgAdminHandle:       <a href="https://whois.arin.net/rest/poc/NETWO10203-ARIN">NETWO10203-ARIN</a>
+OrgAdminName:          Network Engineering
+# Email removed, Log into bgp.tools to see whois emails
+
+
+OrgTechHandle:        <a href="https://whois.arin.net/rest/poc/BRADS123-ARIN">BRADS123-ARIN</a>
+OrgTechName:          Jordan Bradshaw
+# Email removed, Log into bgp.tools to see whois emails
+
+
+OrgTechHandle:        <a href="https://whois.arin.net/rest/poc/COMMU119-ARIN">COMMU119-ARIN</a>
+OrgTechName:          Whitesky Communications
+# Email removed, Log into bgp.tools to see whois emails
+
+
+OrgTechHandle:        <a href="https://whois.arin.net/rest/poc/NETWO10203-ARIN">NETWO10203-ARIN</a>
+OrgTechName:           Network Engineering
+# Email removed, Log into bgp.tools to see whois emails
+
+
+OrgTechHandle:        <a href="https://whois.arin.net/rest/poc/STANW9-ARIN">STANW9-ARIN</a>
+OrgTechName:          Michael Stanway
+# Email removed, Log into bgp.tools to see whois emails
+
+
+OrgAbuseHandle:       <a href="https://whois.arin.net/rest/poc/NETWO10203-ARIN">NETWO10203-ARIN</a>
+OrgAbuseName:          Network Engineering
+# Email removed, Log into bgp.tools to see whois emails
+
+</pre>
+                        
+                        
+                        <a style="font-size: small;">Last Update: 2025-12-10T03:33:58Z UTC </a>
+                        
+                        <hr>
+                        
+                            <h2>Member of the following AS-SETs</h2>
+
+                            <table id="fhTable" class="full-width-table ">
+                                <tbody id="prefixlist-tbody">
+                                    <tr>
+                                        <th class="boldpls nowrap"> - </th>
+                                        <th class="boldpls">Member</th>
+                                         
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as15164:as-customers">as15164:as-customers</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-19009-associated">as-19009-associated</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-pavlov:as-customers">as-pavlov:as-customers</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-ccf">as-ccf</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-ntelos">as-ntelos</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-lumos-transmit">as-lumos-transmit</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-hargray-transit">as-hargray-transit</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">ARIN</td>
+                                        
+                                        <td><a href="/as-set/ARIN::as-fiberx-indianapolis">as-fiberx-indianapolis</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">ARIN</td>
+                                        
+                                        <td><a href="/as-set/ARIN::as-cspire-temp">as-cspire-temp</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-ictx">as-ictx</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-wave-customers">as-wave-customers</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-ccf-test">as-ccf-test</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-allied_telecom">as-allied_telecom</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-cci-ca-cust">as-cci-ca-cust</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-lumos">as-lumos</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">ARIN</td>
+                                        
+                                        <td><a href="/as-set/ARIN::as11904:as-all">as11904:as-all</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">ARIN</td>
+                                        
+                                        <td><a href="/as-set/ARIN::as-naturalwireless">as-naturalwireless</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-windstream-cust">as-windstream-cust</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as16657:as-cust">as16657:as-cust</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as62887:as-customers">as62887:as-customers</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as3491:as-customers-na">as3491:as-customers-na</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-ainet">as-ainet</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as400511:as-cone">as400511:as-cone</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-comcast-edia">as-comcast-edia</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">ARIN</td>
+                                        
+                                        <td><a href="/as-set/ARIN::as1239:as-customers">as1239:as-customers</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as2711:as-customers">as2711:as-customers</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">ARIN</td>
+                                        
+                                        <td><a href="/as-set/ARIN::as-dqecust">as-dqecust</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-transroute-spec">as-transroute-spec</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-frontier">as-frontier</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-hurricane">as-hurricane</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-grande">as-grande</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">ARIN</td>
+                                        
+                                        <td><a href="/as-set/ARIN::as-elauwitnet">as-elauwitnet</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-lsnet">as-lsnet</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-30517-associated">as-30517-associated</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-rr-biz">as-rr-biz</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-gttcust">as-gttcust</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as33132:as-customers">as33132:as-customers</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-dqecust">as-dqecust</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">ALTDB</td>
+                                        
+                                        <td><a href="/as-set/ALTDB::as-jarmtelco">as-jarmtelco</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as54119:as-cone">as54119:as-cone</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">ALTDB</td>
+                                        
+                                        <td><a href="/as-set/ALTDB::as-drix">as-drix</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as27563:as-all">as27563:as-all</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-lumos-transit">as-lumos-transit</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as32425:as-pxf-transit-cust">as32425:as-pxf-transit-cust</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">ARIN</td>
+                                        
+                                        <td><a href="/as-set/ARIN::as400511:as-cone">as400511:as-cone</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">LEVEL3</td>
+                                        
+                                        <td><a href="/as-set/LEVEL3::as-lumen-customers-asns">as-lumen-customers-asns</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">ARIN</td>
+                                        
+                                        <td><a href="/as-set/ARIN::as-cspire-cache">as-cspire-cache</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-xiber">as-xiber</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">ARIN</td>
+                                        
+                                        <td><a href="/as-set/ARIN::as3770:as-all">as3770:as-all</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-pxf-transit-cust">as-pxf-transit-cust</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as13876:as-customers">as13876:as-customers</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">ARIN</td>
+                                        
+                                        <td><a href="/as-set/ARIN::as-telepak-c">as-telepak-c</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-ntelos-transit">as-ntelos-transit</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">ARIN</td>
+                                        
+                                        <td><a href="/as-set/ARIN::as-tvc">as-tvc</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                        
+
+                    </div>
+
+                    
+
+                    
+                    <div style="display: none" id="ix-page">
+                        <div class="grid-row">
+                            <dl class="column-two-thirds">
+                                <p style="margin: 0px;"><img style="vertical-align: middle; margin-left: 5px;" class="flag-img" src="/assets/peeringdb-icon.png" title="PeeringDB"><a href="https://www.peeringdb.com/asn/54119">Go to PeeringDB page</a></p>
+                            </dl>
+                            
+                            
+                        </div>
+                        <div class="grid-row">
+                            
+                        
+                        <div class="column-two-thirds">
+                            <dl>
+                                <dt>PeeringDB AS-SET:</dt>
+                                <dd class="text data">
+                                    
+                                    <a href="/as-set/as-elauwitnet">AS-ELAUWITNET</a>
+                                    
+                                </dd>
+                            </dl>
+                        </div>
+                        
+    
+    
+                        <dl class="column-third">
+                            <dt>Suggested Prefix Limits</dt>
+                            <dd class="text data">
+                                
+                                <p style="margin: 0px;"><b>IPv4:</b> 20</p>
+                                
+                                <p style="margin: 0px;"><b>IPv6:</b> 1</p>
+                            </dd>
+                        </dl>
+                        </div>
+
+                        
+
+                        <div id="normalixpsubpage">
+
+
+<h3>Internet Exchange Points</h3>
+
+<div class="scroll-ixp-div-on-small">
+<table id="ixpTable" class="full-width-table table-wide-to-force-scroll-on-mobile">
+    <thead class="sortable">
+        <tr>
+            <th class="nowrap boldpls">  &nbsp;  </th>
+            <th class="boldpls">Name</th>
+            <th class="nowrap boldpls">IPv4</th>
+            <th class="nowrap boldpls">IPv6</th>
+            <th data-sort-method='number' class="nowrap boldpls">Link Speed</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+        
+        <tr>
+            <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/Equinix%20Dallas">Equinix Dallas</a></td>
+            <td class="smallonmobile">206.223.118.168</a></td>
+            <td class="smallonmobile nowrap"></td>
+            <td data-sort='2000' class="smallonmobile">2 gbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/Digital%20Realty%20Atlanta">Digital Realty Atlanta</a></td>
+            <td class="smallonmobile">206.126.110.170</a></td>
+            <td class="smallonmobile nowrap"></td>
+            <td data-sort='1000' class="smallonmobile">1000 mbps</td>
+        </tr>
+        
+        
+    </tbody>
+</table>
+</div>
+
+
+
+
+
+
+
+
+<a style="font-size: small;">Last Update: 2025-12-09T10:08:19Z UTC</a>
+
+
+                        </div>
+                        <div id="overlapixpsubpage">
+                        </div>
+                    </div>
+                    
+                    
+
+                    
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="superclearfix">
+            
+            <div class="superclearfix">
+                
+            </div>
+
+            <div class="superclearfix">
+                
+            </div>
+
+
+        </div>
+
+
+        <div class="group js-footer" id="footer">
+            <nav>
+                <div>
+                    <ul>
+                        <li><a href="/kb/api" target="_blank">Scripting/API</a></li>
+                        <li><a href="/credits" target="_blank">Credits</a></li>
+                        <li><a href="/pricing" target="_blank">Pricing</a></li>
+                        <li><a href="/kb/contact" target="_blank">Contact Us</a></li>
+                        <li><a href="https://github.com/bgptools/issues" target="_blank">Issue Tracker</a></li>
+                        <li><a href="/kb/setup-sessions" target="">Contribute Data</a></li>
+                        
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <script>
+    
+    var inhash = window.location.hash;
+    if (inhash == "#asinfo") {
+        
+    } else if (inhash == "#prefixes") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#prefix-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#prefixes-page');
+        aaa[0].style.display = "";
+
+    } else if (inhash == "#connectivity" || inhash == "#peers" || inhash == "#upstreams" || inhash == "#downstreams") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#connectivity-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#connectivity-page');
+        aaa[0].style.display = "";
+    } else if (inhash == "#whois") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#whois-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#whois-page');
+        aaa[0].style.display = "";
+    } else if (inhash == "#ix") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#ix-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#ix-page');
+        aaa[0].style.display = "";
+    }</script>
+
+    <script>
+    
+
+
+    ;(function() {
+  'use strict'
+
+  function scaleImageMap() {
+    function resizeMap() {
+      function resizeAreaTag(cachedAreaCoords, idx) {
+        function scale(coord) {
+          var dimension = 1 === (isWidth = 1 - isWidth) ? 'width' : 'height'
+          return (
+            padding[dimension] +
+            Math.floor(Number(coord) * scalingFactor[dimension])
+          )
+        }
+
+        var isWidth = 0
+        areas[idx].coords = cachedAreaCoords
+          .split(',')
+          .map(scale)
+          .join(',')
+      }
+
+      var scalingFactor = {
+        width: image.width / image.naturalWidth,
+        height: image.height / image.naturalHeight,
+      }
+
+      var padding = {
+        width: parseInt(
+          window.getComputedStyle(image, null).getPropertyValue('padding-left'),
+          10
+        ),
+        height: parseInt(
+          window.getComputedStyle(image, null).getPropertyValue('padding-top'),
+          10
+        ),
+      }
+
+      cachedAreaCoordsArray.forEach(resizeAreaTag)
+    }
+
+    function getCoords(e) {
+      
+      return e.coords.replace(/ *, */g, ',').replace(/ +/g, ',')
+    }
+
+    function debounce() {
+      clearTimeout(timer)
+      timer = setTimeout(resizeMap, 250)
+    }
+
+    function start() {
+      if (
+        image.width !== image.naturalWidth ||
+        image.height !== image.naturalHeight
+      ) {
+        resizeMap()
+      }
+    }
+
+    function addEventListeners() {
+      image.addEventListener('load', resizeMap, false) 
+      window.addEventListener('focus', resizeMap, false) 
+      window.addEventListener('resize', debounce, false)
+      window.addEventListener('readystatechange', resizeMap, false)
+      document.addEventListener('fullscreenchange', resizeMap, false)
+    }
+
+    function beenHere() {
+      return 'function' === typeof map._resize
+    }
+
+    function getImg(name) {
+      return document.querySelector('img[usemap="#world"]')
+    }
+
+    function setup() {
+      areas = map.getElementsByTagName('area')
+      cachedAreaCoordsArray = Array.prototype.map.call(areas, getCoords)
+      image = getImg('#' + map.name) || getImg(map.name)
+      map._resize = resizeMap 
+    }
+
+    var  
+      map = this,
+      areas = null,
+      cachedAreaCoordsArray = null,
+      image = null,
+      timer = null
+
+    if (!beenHere()) {
+      setup()
+      addEventListeners()
+      start()
+    } else {
+      map._resize() 
+    }
+  }
+
+  function factory() {
+    function chkMap(element) {
+      if (!element.tagName) {
+        throw new TypeError('Object is not a valid DOM element')
+      } else if ('MAP' !== element.tagName.toUpperCase()) {
+        throw new TypeError(
+          'Expected <MAP> tag, found <' + element.tagName + '>.'
+        )
+      }
+    }
+
+    function init(element) {
+      if (element) {
+        chkMap(element)
+        scaleImageMap.call(element)
+        maps.push(element)
+      }
+    }
+
+    var maps
+
+    return function imageMapResizeF(target) {
+      maps = [] 
+
+      switch (typeof target) {
+        case 'undefined':
+        case 'string':
+          Array.prototype.forEach.call(
+            document.querySelectorAll(target || 'map'),
+            init
+          )
+          break
+        case 'object':
+          init(target)
+          break
+        default:
+          throw new TypeError('Unexpected data type (' + typeof target + ').')
+      }
+
+      return maps
+    }
+  }
+
+  if (typeof define === 'function' && define.amd) {
+    define([], factory)
+  } else if (typeof module === 'object' && typeof module.exports === 'object') {
+    module.exports = factory() 
+  } else {
+    window.imageMapResize = factory()
+  }
+
+  if ('jQuery' in window) {
+    window.jQuery.fn.imageMapResize = function $imageMapResizeF() {
+      return this.filter('map')
+        .each(scaleImageMap)
+        .end()
+    }
+  }
+})()
+    
+    </script>
+    <script>
+        var imgEl = document.getElementById("pathimg");
+        imgEl.addEventListener("mouseover",function() {
+            imageMapResize('#world');
+        })
+    </script>
+    <script src="/assets/tablesort.min.js"></script>
+    <script>
+        addEventListener("load", (event) => {
+            
+            
+            var sort = new Tablesort(document.getElementById('donotscrapebgptools-upstreamTable'));
+            var sort2 = new Tablesort(document.getElementById('donotscrapebgptools-upstreamTablePeers'));
+            
+            
+            var sort4 = new Tablesort(document.getElementById('ixpTable'));
+            
+        });
+    </script>
+    
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        setTimeout(function() {
+
+        var beaconHttp = new XMLHttpRequest();
+        var url = '/performance-beacon';
+        var params = JSON.stringify(window.performance)
+        beaconHttp.open('POST', url, true);
+        
+        
+        beaconHttp.setRequestHeader('Content-type', 'application/json');
+        beaconHttp.setRequestHeader('visit-url', "/as/54119");
+        if (navigator.connection) {
+            beaconHttp.setRequestHeader('client-side-rtt', navigator.connection.rtt);
+        } else {
+            beaconHttp.setRequestHeader('client-side-rtt', '-2');
+        }
+        beaconHttp.onreadystatechange = function() {}
+        beaconHttp.send(params);
+        },1000)
+    }, false);
+</script>
+
+</body>
+
+
+</html>
