@@ -59,5 +59,5 @@ rov_coverage/
 
 * Cached data is not refreshed often or at all
 * There are false negatives and positives: submit an issue to tell me!
-* Fork and contribute as collaborate is very welcome.
+* Fork and contribute as collaboration is very welcome.
 
