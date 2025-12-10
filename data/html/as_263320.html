@@ -1,0 +1,2821 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Sansara Telecom (AS263320) is a 11 year old BGP network that is peering with 48 other networks and has 22 upstream carriers">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000">
+    <link rel="search" type="application/opensearchdescription+xml" title="BGP.Tools" href="https://bgp.tools/opensearch.xml">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="theme-color" content="#000000">
+    <link href="https://social.bgp.tools/@bgptools" rel="me">
+    <link rel="canonical" href="https://bgp.tools/as/263320" />
+    <title>AS263320 Sansara Telecom - bgp.tools</title>
+    <link rel="stylesheet" type="text/css" href="/assets/main-new.css?2025-12-09-1723%20UTC">
+</head>
+
+<body>
+    <div id="container">
+        
+<div id="global-header" class="global-header-top">
+    <div class="header-sitewide">
+        <div class="global-header">
+            <div class="header-logo">
+                <a href="/" id="logo" class="content">bgp.tools</a>
+            </div>
+            <form id="search" action="/search" method="get" accept-charset="utf-8" role="search" class="top-search-header js-search-hash">
+                <div class="searchfield">
+                    <input type="search" autocomplete="off" name="q" id="site-search-text" title="Search" value="" placeholder="Start here..." autofocus="autofocus" class="js-search-focus">
+                    <button type="submit" id="search-submit" class="search-submit">Search</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div id="global-header-blob" >
+    <a id="auth-header-text" href="/login">Login</a>
+    
+</div>
+<div id="global-header-bar" >
+    <a id="auth-header-bar-text" href="/login">Login</a>
+    
+</div>
+<div class="small-clearfix"></div>
+
+        <div id="global-container">
+            
+
+
+            
+            <div class="section-tabs js-tabs">
+                <ul>
+                    
+<li class="active">
+    <h1> <a id="viewbutton-tab" href="/as/263320">View</a></h1>
+</li>
+
+<li >
+    <a id="editbutton-tab" href="/edit/as/263320">Edit</a>
+</li>
+
+
+
+
+
+                    <li style="float: right;">
+                        
+                        <img id="ws-status" width="24" height="24" src="/assets/disconnected.png" title="Not Connected To realtime data updates">
+                        
+                    </li>
+                </ul>
+            </div>
+
+            <div id="search-container">
+
+                <div class="column-full-width">
+
+                    <div class="clearfix">
+                        
+                    </div>
+                    
+                    
+
+                    <div class="network-header">
+                        
+                        <p id="network-name" class="heading-xlarge">Sansara Telecom</p>
+                        <p id="network-number">
+                            AS Number
+                            <strong id="ASNumberString" pure="263320">263320</strong>
+                            <br>
+                        
+                        </p>
+
+                    </div>
+
+
+                    <div class="clearfix">
+                        
+                    </div>
+
+
+                    <div class="section-tabs js-tabs">
+                        <ul>
+
+                            <li id="overview-tab-li" class="active">
+                                <a id="overview-tab" href="#asinfo">Overview</a>
+                            </li>
+                            
+                            <li id="prefix-tab-li">
+                                <a id="prefix-tab" href="#prefixes">Prefixes</a>
+                            </li>
+
+                            <li id="connectivity-tab-li">
+                                <a id="connectivity-tab" href="#connectivity">Connectivity</a>
+                            </li>
+                            
+                            <li id="whois-tab-li">
+                                <a id="whois-tab" href="#whois">Whois</a>
+                            </li>
+                        
+                            <li id="ix-tab-li">
+                                <a id="ix-tab" href="#ix">IX</a>
+                            </li>
+                        
+                        
+                        </ul>
+                    </div>
+
+<script>
+    function removeAllActiveTab() {
+        var tabs = [
+            "overview-tab-li", 
+            "prefix-tab-li", 
+            "connectivity-tab-li",
+            "whois-tab-li",
+            "ix-tab-li",
+            "issues-tab-li"
+        ];
+
+        tabs.forEach(element => {
+            var aaa = document.querySelectorAll('#'+element);
+            if(aaa.length != 0) {
+                aaa[0].classList.remove("active")
+            }
+        });
+    }
+
+    function hideAllContent() {
+        var tabs = [
+            "overview-page", 
+            "prefixes-page", 
+            "connectivity-page",
+            "whois-page",
+            "ix-page",
+            "issues-page"
+        ];
+
+        tabs.forEach(element => {
+            var aaa = document.querySelectorAll('#'+element);
+            if(aaa.length != 0) {
+                aaa[0].style.display = "none";
+            }
+        });
+        if (document.getElementById("donotscrapebgptools-prefixlist-tbody")) {
+            var prefixrows = document.getElementById("donotscrapebgptools-prefixlist-tbody").children;
+            for (var i = 0; i < prefixrows.length; i++) {
+                prefixrows[i].style = "";
+            }
+        }
+    }
+
+    var otab = document.querySelectorAll('#overview-tab');
+    otab[0].addEventListener("click", function () {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#overview-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#overview-page');
+        aaa[0].style.display = "";
+    });
+    
+
+    var ptab = document.querySelectorAll('#prefix-tab');
+    ptab[0].addEventListener("click", function () {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#prefix-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#prefixes-page');
+        aaa[0].style.display = "";
+    });
+
+    var ctab = document.querySelectorAll('#connectivity-tab');
+    ctab[0].addEventListener("click", function () {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#connectivity-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#connectivity-page');
+        aaa[0].style.display = "";
+    });
+    
+
+    var wtab = document.querySelectorAll('#whois-tab');
+    wtab[0].addEventListener("click", function () {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#whois-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#whois-page');
+        aaa[0].style.display = "";
+    });
+
+</script>
+
+
+<script>
+var wtab = document.querySelectorAll('#ix-tab');
+wtab[0].addEventListener("click", function () {
+    removeAllActiveTab()
+    hideAllContent()
+    var otab2 = document.querySelectorAll('#ix-tab-li');
+    otab2[0].classList.add("active");
+
+    var aaa = document.querySelectorAll('#ix-page');
+    aaa[0].style.display = "";
+});
+</script>
+
+
+                    
+                    <div id="overview-page">
+
+                        <div class="grid-row">
+                        
+                        <div class="column-two-thirds">
+                            <dl>
+                                <dt>Registered on</dt>
+                                <dd class="text data">
+                                    
+                                     6 Mar 2014 (11 years old)
+                                </dd>
+                            
+                            
+                            <dt>Registered to</dt>
+                            <dd class="text data">
+                                <a href="/rir-owner/118531">118531</a> (lacnic)</dd>
+                                
+                            
+                            </dl>
+                        </div>
+                        
+    
+                        <dl class="column-third">
+                            <dt>Network status</dt>
+                            <dd class="text data">
+                                
+                                Active, Allocated under NIC.BR
+                                
+                            </dd>
+                        </dl>
+    
+                        </div>
+    
+                        <div class="grid-row">
+                            <dl class="column-two-thirds">
+                                <dt>Network type</dt>
+                                <dd class="text data">
+                                    Eyeball
+                                </dd>
+                            </dl>
+    
+                            <dl class="column-third">
+                                <dt>Prefixes Originated</dt>
+                                <dd class="data">16 IPv4, 16 IPv6</dd>
+                            </dl>
+                        </div>
+                        <div class="grid-row">
+                            <div class="column-half">
+    
+                                <h2 class="heading-medium"><derp>Upstreams</derp></h2>
+                                <ul>
+                                    
+                                    <li>
+                                        <span id="sic0">
+                                          <a href="/as/27693">AS27693</a> - NipBr - NipCable do Brasil Telecom LTDA
+                                        </span>
+                                    </li>
+                                    
+                                    <li>
+                                        <span id="sic0">
+                                          <a href="/as/16735">AS16735</a> - Algar Telecom
+                                        </span>
+                                    </li>
+                                    
+                                    <li>
+                                        <span id="sic0">
+                                          <a href="/as/271206">AS271206</a> - Ch Informatica Ltda
+                                        </span>
+                                    </li>
+                                    
+                                    <li>
+                                        <span id="sic0">
+                                          <a href="/as/269194">AS269194</a> - ST1 INTERNET
+                                        </span>
+                                    </li>
+                                    
+                                    <li>
+                                        <span id="sic0">
+                                          <a href="/as/265175">AS265175</a> - AS SISTEMAS LTDA
+                                        </span>
+                                    </li>
+                                    
+                                    <li>
+                                        <span id="sic0">
+                                          <a href="/as/265130">AS265130</a> - FIBRA EMPRESAS LTDA
+                                        </span>
+                                    </li>
+                                    
+                                    <li>
+                                        <span id="sic0">
+                                          <a href="/as/14840">AS14840</a> - BR.DIGITAL 
+                                        </span>
+                                    </li>
+                                    
+                                    <li>
+                                        <span id="sic0">
+                                          <a href="/as/274614">AS274614</a> - VELOX NETWORK SOLUCOES TECNOLOGICAS LTDA
+                                        </span>
+                                    </li>
+                                    
+                                </ul>
+    
+                            </div>
+    
+                            <div class="column-half">
+                                
+                                    <h2 class="heading-medium"><derp>Locations of Operation</derp></h2>
+                                    
+                                    <li><span id="sic0">Brazil</span></li>
+                                    
+                                
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+
+                    <div style="display: none" id="prefixes-page">
+                        
+
+                        
+                        <div style="float:left">
+                            <dt>Prefixes Originated</dt>
+                            <dd class="data">16 IPv4, 16 IPv6</dd>
+                            
+                            
+                        </div>
+                        <div style="float:right">
+                                <dt>Addresses Originated</dt>
+                                <dd class="data">16 /24's of IPv4</dd>
+                                <dd class="data">65536 /48's of IPv6</dd>
+                        </div>
+
+                        <div class="clearfix">
+                            
+                        </div>
+
+
+                        <table id="fhTable" class="full-width-table ">
+                            <tbody id="donotscrapebgptools-prefixlist-tbody">
+                                <tr>
+                                    <th class="nowrap">  &nbsp;  </th>
+                                    <th class="boldpls">Prefix</th>
+                                    <th class="nowrap boldpls">Description</th>
+                                </tr>
+                                <p id="readme-if-you-are-human" style="display: none;">If you are scraping this block for the prefixes that a AS originates, please use the data dumps in https://bgp.tools/kb/api and cache them</p>
+                                
+                                <tr id="pfx-187.45.133.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="BR" src="/assets/flags/BR.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/cross.png" title="Matches IRR source, but under a different ASN">
+                                    </td>
+                                    <td><a href="/prefix/187.45.133.0/24">187.45.133.0/24</a></td>
+                                    <td class="smallonmobile nowrap">SPACnet - Projetos Avan�ados em Computa��o</td>
+                                </tr>
+                                
+                                <tr id="pfx-191.7.145.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="BR" src="/assets/flags/BR.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/191.7.145.0/24">191.7.145.0/24</a></td>
+                                    <td class="smallonmobile nowrap">MLINK TELECOM LTDA</td>
+                                </tr>
+                                
+                                <tr id="pfx-191.7.146.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="BR" src="/assets/flags/BR.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/191.7.146.0/24">191.7.146.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Sansara Telecom</td>
+                                </tr>
+                                
+                                <tr id="pfx-191.7.147.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="BR" src="/assets/flags/BR.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/191.7.147.0/24">191.7.147.0/24</a></td>
+                                    <td class="smallonmobile nowrap">IN9VE FIBRA</td>
+                                </tr>
+                                
+                                <tr id="pfx-191.7.148.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="BR" src="/assets/flags/BR.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/191.7.148.0/24">191.7.148.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Sansara Telecom</td>
+                                </tr>
+                                
+                                <tr id="pfx-191.7.149.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="BR" src="/assets/flags/BR.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/191.7.149.0/24">191.7.149.0/24</a></td>
+                                    <td class="smallonmobile nowrap">EVOTTEL TELECOM LTDA</td>
+                                </tr>
+                                
+                                <tr id="pfx-191.7.150.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="BR" src="/assets/flags/BR.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/191.7.150.0/24">191.7.150.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Sansara Telecom</td>
+                                </tr>
+                                
+                                <tr id="pfx-191.7.151.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="BR" src="/assets/flags/BR.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/191.7.151.0/24">191.7.151.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Sansara Telecom</td>
+                                </tr>
+                                
+                                <tr id="pfx-191.7.152.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="BR" src="/assets/flags/BR.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/191.7.152.0/24">191.7.152.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Sansara Telecom</td>
+                                </tr>
+                                
+                                <tr id="pfx-191.7.153.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="BR" src="/assets/flags/BR.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/191.7.153.0/24">191.7.153.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Sansara Telecom</td>
+                                </tr>
+                                
+                                <tr id="pfx-191.7.154.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="BR" src="/assets/flags/BR.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/191.7.154.0/24">191.7.154.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Sansara Telecom</td>
+                                </tr>
+                                
+                                <tr id="pfx-191.7.155.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="BR" src="/assets/flags/BR.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/191.7.155.0/24">191.7.155.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Turbo Net Provedor Ltda</td>
+                                </tr>
+                                
+                                <tr id="pfx-191.7.156.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="BR" src="/assets/flags/BR.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/191.7.156.0/24">191.7.156.0/24</a></td>
+                                    <td class="smallonmobile nowrap">GLEE TELECOM LTDA</td>
+                                </tr>
+                                
+                                <tr id="pfx-191.7.157.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="BR" src="/assets/flags/BR.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/191.7.157.0/24">191.7.157.0/24</a></td>
+                                    <td class="smallonmobile nowrap">MAYS TELECOMUNICA��ES LTDA</td>
+                                </tr>
+                                
+                                <tr id="pfx-191.7.158.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="BR" src="/assets/flags/BR.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/191.7.158.0/24">191.7.158.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Sansara Telecom</td>
+                                </tr>
+                                
+                                <tr id="pfx-191.7.159.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="BR" src="/assets/flags/BR.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/191.7.159.0/24">191.7.159.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Sansara Telecom</td>
+                                </tr>
+                                
+                                <tr id="pfx-2804:143c::/32">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="BR" src="/assets/flags/BR.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/2804:143c::/32">2804:143c::/32</a></td>
+                                    <td class="smallonmobile nowrap">Sansara Telecom</td>
+                                </tr>
+                                
+                                <tr id="pfx-2804:143c::/33">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="BR" src="/assets/flags/BR.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/2804:143c::/33">2804:143c::/33</a></td>
+                                    <td class="smallonmobile nowrap">Sansara Telecom</td>
+                                </tr>
+                                
+                                <tr id="pfx-2804:143c:8000::/33">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="BR" src="/assets/flags/BR.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/2804:143c:8000::/33">2804:143c:8000::/33</a></td>
+                                    <td class="smallonmobile nowrap">Sansara Telecom</td>
+                                </tr>
+                                
+                                <tr id="pfx-2804:143c:ff00::/44">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="BR" src="/assets/flags/BR.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/2804:143c:ff00::/44">2804:143c:ff00::/44</a></td>
+                                    <td class="smallonmobile nowrap">Sansara Telecom</td>
+                                </tr>
+                                
+                                <tr id="pfx-2804:143c:ff10::/44">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="BR" src="/assets/flags/BR.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/2804:143c:ff10::/44">2804:143c:ff10::/44</a></td>
+                                    <td class="smallonmobile nowrap">Sansara Telecom</td>
+                                </tr>
+                                
+                                <tr id="pfx-2804:143c:ff18::/46">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="BR" src="/assets/flags/BR.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/2804:143c:ff18::/46">2804:143c:ff18::/46</a></td>
+                                    <td class="smallonmobile nowrap">Sansara Telecom</td>
+                                </tr>
+                                
+                                <tr id="pfx-2804:143c:ff30::/44">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="BR" src="/assets/flags/BR.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/2804:143c:ff30::/44">2804:143c:ff30::/44</a></td>
+                                    <td class="smallonmobile nowrap">Sansara Telecom</td>
+                                </tr>
+                                
+                                <tr id="pfx-2804:143c:ff40::/44">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="BR" src="/assets/flags/BR.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/2804:143c:ff40::/44">2804:143c:ff40::/44</a></td>
+                                    <td class="smallonmobile nowrap">Sansara Telecom</td>
+                                </tr>
+                                
+                                <tr id="pfx-2804:143c:ff50::/46">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="BR" src="/assets/flags/BR.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/2804:143c:ff50::/46">2804:143c:ff50::/46</a></td>
+                                    <td class="smallonmobile nowrap">Sansara Telecom</td>
+                                </tr>
+                                
+                                <tr id="pfx-2804:143c:ff50::/44">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="BR" src="/assets/flags/BR.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/2804:143c:ff50::/44">2804:143c:ff50::/44</a></td>
+                                    <td class="smallonmobile nowrap">Sansara Telecom</td>
+                                </tr>
+                                
+                                <tr id="pfx-2804:143c:ff54::/46">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="BR" src="/assets/flags/BR.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/2804:143c:ff54::/46">2804:143c:ff54::/46</a></td>
+                                    <td class="smallonmobile nowrap">Sansara Telecom</td>
+                                </tr>
+                                
+                                <tr id="pfx-2804:143c:ff60::/44">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="BR" src="/assets/flags/BR.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/2804:143c:ff60::/44">2804:143c:ff60::/44</a></td>
+                                    <td class="smallonmobile nowrap">Sansara Telecom</td>
+                                </tr>
+                                
+                                <tr id="pfx-2804:143c:ffb0::/44">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="BR" src="/assets/flags/BR.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/2804:143c:ffb0::/44">2804:143c:ffb0::/44</a></td>
+                                    <td class="smallonmobile nowrap">Sansara Telecom</td>
+                                </tr>
+                                
+                                <tr id="pfx-2804:143c:ffd0::/45">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="BR" src="/assets/flags/BR.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/2804:143c:ffd0::/45">2804:143c:ffd0::/45</a></td>
+                                    <td class="smallonmobile nowrap">Sansara Telecom</td>
+                                </tr>
+                                
+                                <tr id="pfx-2804:143c:ffd0::/44">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="BR" src="/assets/flags/BR.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/2804:143c:ffd0::/44">2804:143c:ffd0::/44</a></td>
+                                    <td class="smallonmobile nowrap">Sansara Telecom</td>
+                                </tr>
+                                
+                                <tr id="pfx-2804:143c:ffd8::/45">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="BR" src="/assets/flags/BR.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/2804:143c:ffd8::/45">2804:143c:ffd8::/45</a></td>
+                                    <td class="smallonmobile nowrap">Sansara Telecom</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div style="display: none" id="connectivity-page">
+
+                        <div class="grid-row">
+                            <dl class="column-third column-third-first">
+                                <dt><a href="#peers">Peers</a></dt>
+                                <dd class="data">48</dd>
+                            </dl><dl class="column-third column-third-mid">
+                                <dt><a href="#upstreams">Upstreams</a></dt>
+                                
+                                <dd class="text data">22</dd>
+                                
+                            </dl>
+                            <dl class="column-third column-third-last">
+                                <dt><a href="#downstreams">Downstreams</a></dt> <dd class="data">2 (Cone: 3)</dd>
+                            </dl>
+
+                        </div>
+
+
+                        <hr>
+                        <h3>Network Policy<img class="flag-img" src="/assets/info.png" style="padding-left: 12px;" title="This info can take up to 2 hours to fully update" alt="This info take up to 2 hours to fully update"/></h3></h3>
+                        <a style="font-size: small;" href="/kb/network-policy">Click here to learn more about what this graph means and what makes up a network policy</a>
+
+                        <select id="netpolicydropdown" class="dropdownmenu">
+                            
+                                <option disabled=true value="disabled-default">Global Aggregation (disabled due to size)</option>
+                            
+
+                            
+                                
+                            
+                                
+                                <option value="487c11288cafc700cbfcab18cd0cf069a2b32266bbedf138a1cf1a7d">Policy festive_pasteur</option>
+                                
+                            
+                                
+                                <option value="670646eb3359e132cadc814a082f198398d88892f1ad0ed38cfe23e9">Policy flamboyant_shaw</option>
+                                
+                            
+                                
+                                <option value="a3addba1007b785e698556333c983f296af1fcdeacd271e7ac47e48a">Policy ecstatic_boyd</option>
+                                
+                            
+                                
+                                <option value="d4d308f8fde25c29bc9e732d3c59d3e3512a39d5104d7a04fd4a1a0b">Policy goofy_buck</option>
+                                
+                            
+                                
+                                <option value="f12ad30407f3b54f8afb49569520960b95af0b208ddb16d8a2b2e079">Policy trusting_volhard</option>
+                                
+                            
+                                
+                                <option value="02ab63d3f1f98ac236fc6ccd9ca5cadeeb3b7c7be5b94ff9cedccb82">Policy crazy_bohr</option>
+                                
+                            
+                                
+                                <option value="67f49363bf65b36a4b73966627f8fe935f242130137935393489e86a">Policy wizardly_nightingale</option>
+                                
+                            
+                                
+                                <option value="85b51c6faf0acd67a72924b67f8a9f4724fbb86bbec159cb1122a0c9">Policy quirky_moore</option>
+                                
+                            
+                                
+                                <option value="8fb0364802a799fb80b363fc4b73e002a7a327415319beb38a24e8b0">Policy competent_cartwright</option>
+                                
+                            
+                                
+                                <option value="b9f7208f350d6f0a1c33d2520156a034a4526e1a9cb06887ec5cebf0">Policy compassionate_taussig</option>
+                                
+                            
+                                
+                                <option value="c63a9de95ef2cf7f17bd4b61648a09a1b1ac35533ca08173d3b79ab2">Policy lucid_chebyshev</option>
+                                
+                            
+                                
+                                <option value="c948f62b62bb362c03a88d78d3f478ec51d35743c57f9a5cfb8cbdcc">Policy epic_villani</option>
+                                
+                            
+                                
+                                <option value="fda29a175f3f4bb437cbd856f97aac4a8bca228e86a2e065b0e0db41">Policy friendly_heyrovsky</option>
+                                
+                            
+                                
+                                <option value="358a71d26086f5c6e0d2f6aa760a4e48b2e50de34fdae188ffabad71">Policy adoring_goldstine</option>
+                                
+                            
+                                
+                                <option value="695a706132d5a5bbb6bf4fd1ae80ef2f120e4a272a06b67c54dd698f">Policy ecstatic_panini</option>
+                                
+                            
+                                
+                                <option value="80efc3713891df4a5867d05eab64a97d1d80d20b51c8797fa7bf1418">Policy angry_thompson</option>
+                                
+                            
+                                
+                                <option value="85e85bec03640c5902a87dc77771f261be7c1a07ceec5f4219dc7da3">Policy admiring_visvesvaraya</option>
+                                
+                            
+                                
+                                <option value="c36ebe6d6837ae195bcbda24fde952375f5e01e85e47d81dddb1a0d2">Policy sleepy_lichterman</option>
+                                
+                            
+                                
+                                <option selected value="ccd08830644a409f3c7ac2ee3f468b4217415224bc086ec1c90fdfad">Policy serene_franklin</option>
+                                
+                            
+                                
+                                <option value="12fcf421dff5fc78bcce8675c6b400c5cfd28226b403ab8cc0d7b075">Policy epic_proskuriakova</option>
+                                
+                            
+                                
+                                <option value="37df7a3541e15b156236947e3f1a6becec1ddcef87061ee11cce07a3">Policy nervous_mirzakhani</option>
+                                
+                            
+                                
+                                <option value="6c8cbfad351b0d717aa1049d0328b7b412fe45d825b983729ff43978">Policy upbeat_franklin</option>
+                                
+                            
+                                
+                                <option value="793de2c9c3cab3f19f1facde1d543cf1e484bf6dad211945efd257ee">Policy youthful_chatterjee</option>
+                                
+                            
+                                
+                                <option value="9ac0698f6c698a49e40098e438cc1b6c863fe3bf333c642ff08b1dcd">Policy relaxed_brattain</option>
+                                
+                            
+                                
+                                <option value="a3085c3b54ce052f5faacde8c93c5210a1cbda4f24b8544cdbbfaf6e">Policy stoic_boyd</option>
+                                
+                            
+                                
+                                <option value="a67f3dae883e7e0addef0b044d9ad0ff8be1b9225b34a737ee1bfdc9">Policy dazzling_spence</option>
+                                
+                            
+                                
+                                <option value="ac3b481d6ea376399b1d6c46ee853c17b6c5c7434d4f0c9d1f98f508">Policy reverent_germain</option>
+                                
+                            
+                                
+                                <option value="13e84614100ea8af5851cc917cf9aa40fd289a060c22e23e4f6fefc7">Policy clever_lamarr</option>
+                                
+                            
+
+                            
+
+
+                        </select>
+
+                        <script>var netgroups = {"02ab63d3f1f98ac236fc6ccd9ca5cadeeb3b7c7be5b94ff9cedccb82":["191.7.155.0/24"],"12fcf421dff5fc78bcce8675c6b400c5cfd28226b403ab8cc0d7b075":["191.7.148.0/24"],"13e84614100ea8af5851cc917cf9aa40fd289a060c22e23e4f6fefc7":["2804:143c:ff40::/44"],"358a71d26086f5c6e0d2f6aa760a4e48b2e50de34fdae188ffabad71":["2804:143c:ff30::/44"],"37df7a3541e15b156236947e3f1a6becec1ddcef87061ee11cce07a3":["191.7.147.0/24"],"487c11288cafc700cbfcab18cd0cf069a2b32266bbedf138a1cf1a7d":["191.7.151.0/24"],"670646eb3359e132cadc814a082f198398d88892f1ad0ed38cfe23e9":["2804:143c:ff18::/46"],"67f49363bf65b36a4b73966627f8fe935f242130137935393489e86a":["191.7.146.0/24"],"695a706132d5a5bbb6bf4fd1ae80ef2f120e4a272a06b67c54dd698f":["187.45.133.0/24"],"6c8cbfad351b0d717aa1049d0328b7b412fe45d825b983729ff43978":["191.7.149.0/24"],"793de2c9c3cab3f19f1facde1d543cf1e484bf6dad211945efd257ee":["2804:143c:ff00::/44"],"80efc3713891df4a5867d05eab64a97d1d80d20b51c8797fa7bf1418":["191.7.158.0/24"],"85b51c6faf0acd67a72924b67f8a9f4724fbb86bbec159cb1122a0c9":["2804:143c:ff60::/44"],"85e85bec03640c5902a87dc77771f261be7c1a07ceec5f4219dc7da3":["2804:143c:ffd0::/44"],"8fb0364802a799fb80b363fc4b73e002a7a327415319beb38a24e8b0":["2804:143c:ffb0::/44"],"9ac0698f6c698a49e40098e438cc1b6c863fe3bf333c642ff08b1dcd":["191.7.150.0/24"],"a3085c3b54ce052f5faacde8c93c5210a1cbda4f24b8544cdbbfaf6e":["2804:143c:8000::/33","2804:143c::/33"],"a3addba1007b785e698556333c983f296af1fcdeacd271e7ac47e48a":["191.7.152.0/24"],"a67f3dae883e7e0addef0b044d9ad0ff8be1b9225b34a737ee1bfdc9":["191.7.157.0/24"],"ac3b481d6ea376399b1d6c46ee853c17b6c5c7434d4f0c9d1f98f508":["2804:143c::/32"],"b9f7208f350d6f0a1c33d2520156a034a4526e1a9cb06887ec5cebf0":["2804:143c:ff10::/44"],"c36ebe6d6837ae195bcbda24fde952375f5e01e85e47d81dddb1a0d2":["191.7.154.0/24"],"c63a9de95ef2cf7f17bd4b61648a09a1b1ac35533ca08173d3b79ab2":["191.7.145.0/24"],"c948f62b62bb362c03a88d78d3f478ec51d35743c57f9a5cfb8cbdcc":["191.7.159.0/24"],"ccd08830644a409f3c7ac2ee3f468b4217415224bc086ec1c90fdfad":["2804:143c:ff50::/44","2804:143c:ff54::/46","2804:143c:ff50::/46"],"d4d308f8fde25c29bc9e732d3c59d3e3512a39d5104d7a04fd4a1a0b":["191.7.153.0/24"],"f12ad30407f3b54f8afb49569520960b95af0b208ddb16d8a2b2e079":["2804:143c:ffd0::/45","2804:143c:ffd8::/45"],"fda29a175f3f4bb437cbd856f97aac4a8bca228e86a2e065b0e0db41":["191.7.156.0/24"]}</script>
+
+                        <div style="text-align: center;">
+                            <img id="pathimg" usemap="#world" src="">
+                            <div id="world2"></div>
+                        </div>
+
+                        <details>
+                            <summary>Chart Display Options</summary>
+                            <noscript>This requires javascript to work</noscript>
+                            <label for="graphOptionMoreWiggle" style="display: flex;align-items: center;font-size: 20px;">
+                                <input type="checkbox" id="graphOptionMoreWiggle" name="graphOptionMoreWiggle" style="width: 64px; height: 32px;">
+                                    <p id="graphOptionMoreWiggleLabel" style="width: 200%;">Display links using non straight lines</p>
+                            </label>
+                        </details>
+
+                        <h3 style="display: none;" id="PISPBanner">Prefixes in selected policy</h3>
+                        <table id="policytable" class="full-width-table">
+                        </table>
+                        <button style="width:100%;display: none;" id="ShowFullPolicyButton" class="bigButton" onclick="dropdownPoke()">Load all prefixes in policy</button>
+
+                        <script>
+                            !function(a,b){"function"==typeof define&&define.amd?define([],b):"undefined"!=typeof module&&module.exports?module.exports=b():a.ReconnectingWebSocket=b()}(this,function(){function a(b,c,d){function l(a,b){var c=document.createEvent("CustomEvent");return c.initCustomEvent(a,!1,!1,b),c}var e={debug:!1,automaticOpen:!0,reconnectInterval:1e3,maxReconnectInterval:3e4,reconnectDecay:1.5,timeoutInterval:2e3};d||(d={});for(var f in e)this[f]="undefined"!=typeof d[f]?d[f]:e[f];this.url=b,this.reconnectAttempts=0,this.readyState=WebSocket.CONNECTING,this.protocol=null;var h,g=this,i=!1,j=!1,k=document.createElement("div");k.addEventListener("open",function(a){g.onopen(a)}),k.addEventListener("close",function(a){g.onclose(a)}),k.addEventListener("connecting",function(a){g.onconnecting(a)}),k.addEventListener("message",function(a){g.onmessage(a)}),k.addEventListener("error",function(a){g.onerror(a)}),this.addEventListener=k.addEventListener.bind(k),this.removeEventListener=k.removeEventListener.bind(k),this.dispatchEvent=k.dispatchEvent.bind(k),this.open=function(b){h=new WebSocket(g.url,c||[]),b||k.dispatchEvent(l("connecting")),(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","attempt-connect",g.url);var d=h,e=setTimeout(function(){(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","connection-timeout",g.url),j=!0,d.close(),j=!1},g.timeoutInterval);h.onopen=function(){clearTimeout(e),(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","onopen",g.url),g.protocol=h.protocol,g.readyState=WebSocket.OPEN,g.reconnectAttempts=0;var d=l("open");d.isReconnect=b,b=!1,k.dispatchEvent(d)},h.onclose=function(c){if(clearTimeout(e),h=null,i)g.readyState=WebSocket.CLOSED,k.dispatchEvent(l("close"));else{g.readyState=WebSocket.CONNECTING;var d=l("connecting");d.code=c.code,d.reason=c.reason,d.wasClean=c.wasClean,k.dispatchEvent(d),b||j||((g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","onclose",g.url),k.dispatchEvent(l("close")));var e=g.reconnectInterval*Math.pow(g.reconnectDecay,g.reconnectAttempts);setTimeout(function(){g.reconnectAttempts++,g.open(!0)},e>g.maxReconnectInterval?g.maxReconnectInterval:e)}},h.onmessage=function(b){(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","onmessage",g.url,b.data);var c=l("message");c.data=b.data,k.dispatchEvent(c)},h.onerror=function(b){(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","onerror",g.url,b),k.dispatchEvent(l("error"))}},1==this.automaticOpen&&this.open(!1),this.send=function(b){if(h)return(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","send",g.url,b),h.send(b);throw"INVALID_STATE_ERR : Pausing to reconnect websocket"},this.close=function(a,b){"undefined"==typeof a&&(a=1e3),i=!0,h&&h.close(a,b)},this.refresh=function(){h&&h.close()}}return a.prototype.onopen=function(){},a.prototype.onclose=function(){},a.prototype.onconnecting=function(){},a.prototype.onmessage=function(){},a.prototype.onerror=function(){},a.debugAll=!1,a.CONNECTING=WebSocket.CONNECTING,a.OPEN=WebSocket.OPEN,a.CLOSING=WebSocket.CLOSING,a.CLOSED=WebSocket.CLOSED,a});
+                        </script>
+                        
+                        <script>
+                            var prefixinfo = [{"PrefixString":"187.45.133.0/24","WhoisName":"SPACnet - Projetos Avan�ados em Computa��o","WhoisCountry":"BR"},{"PrefixString":"191.7.145.0/24","WhoisName":"MLINK TELECOM LTDA","WhoisCountry":"BR"},{"PrefixString":"191.7.146.0/24","WhoisName":"Sansara Telecom","WhoisCountry":"BR"},{"PrefixString":"191.7.147.0/24","WhoisName":"IN9VE FIBRA","WhoisCountry":"BR"},{"PrefixString":"191.7.148.0/24","WhoisName":"Sansara Telecom","WhoisCountry":"BR"},{"PrefixString":"191.7.149.0/24","WhoisName":"EVOTTEL TELECOM LTDA","WhoisCountry":"BR"},{"PrefixString":"191.7.150.0/24","WhoisName":"Sansara Telecom","WhoisCountry":"BR"},{"PrefixString":"191.7.151.0/24","WhoisName":"Sansara Telecom","WhoisCountry":"BR"},{"PrefixString":"191.7.152.0/24","WhoisName":"Sansara Telecom","WhoisCountry":"BR"},{"PrefixString":"191.7.153.0/24","WhoisName":"Sansara Telecom","WhoisCountry":"BR"},{"PrefixString":"191.7.154.0/24","WhoisName":"Sansara Telecom","WhoisCountry":"BR"},{"PrefixString":"191.7.155.0/24","WhoisName":"Turbo Net Provedor Ltda","WhoisCountry":"BR"},{"PrefixString":"191.7.156.0/24","WhoisName":"GLEE TELECOM LTDA","WhoisCountry":"BR"},{"PrefixString":"191.7.157.0/24","WhoisName":"MAYS TELECOMUNICA��ES LTDA","WhoisCountry":"BR"},{"PrefixString":"191.7.158.0/24","WhoisName":"Sansara Telecom","WhoisCountry":"BR"},{"PrefixString":"191.7.159.0/24","WhoisName":"Sansara Telecom","WhoisCountry":"BR"},{"PrefixString":"2804:143c::/32","WhoisName":"Sansara Telecom","WhoisCountry":"BR"},{"PrefixString":"2804:143c::/33","WhoisName":"Sansara Telecom","WhoisCountry":"BR"},{"PrefixString":"2804:143c:8000::/33","WhoisName":"Sansara Telecom","WhoisCountry":"BR"},{"PrefixString":"2804:143c:ff00::/44","WhoisName":"Sansara Telecom","WhoisCountry":"BR"},{"PrefixString":"2804:143c:ff10::/44","WhoisName":"Sansara Telecom","WhoisCountry":"BR"},{"PrefixString":"2804:143c:ff18::/46","WhoisName":"Sansara Telecom","WhoisCountry":"BR"},{"PrefixString":"2804:143c:ff30::/44","WhoisName":"Sansara Telecom","WhoisCountry":"BR"},{"PrefixString":"2804:143c:ff40::/44","WhoisName":"Sansara Telecom","WhoisCountry":"BR"},{"PrefixString":"2804:143c:ff50::/46","WhoisName":"Sansara Telecom","WhoisCountry":"BR"},{"PrefixString":"2804:143c:ff50::/44","WhoisName":"Sansara Telecom","WhoisCountry":"BR"},{"PrefixString":"2804:143c:ff54::/46","WhoisName":"Sansara Telecom","WhoisCountry":"BR"},{"PrefixString":"2804:143c:ff60::/44","WhoisName":"Sansara Telecom","WhoisCountry":"BR"},{"PrefixString":"2804:143c:ffb0::/44","WhoisName":"Sansara Telecom","WhoisCountry":"BR"},{"PrefixString":"2804:143c:ffd0::/45","WhoisName":"Sansara Telecom","WhoisCountry":"BR"},{"PrefixString":"2804:143c:ffd0::/44","WhoisName":"Sansara Telecom","WhoisCountry":"BR"},{"PrefixString":"2804:143c:ffd8::/45","WhoisName":"Sansara Telecom","WhoisCountry":"BR"}]
+                            var asn =  263320 
+
+                            var pfxExtraString = "";
+
+                            function saveGraphOptionsToLocalStorage() {
+                                localStorage.setItem("pfx-chart-options:wiggle", document.getElementById("graphOptionMoreWiggle").checked);
+                            }
+
+                            function loadGraphOptionsToLocalStorage() {
+                                document.getElementById("graphOptionMoreWiggle").checked = localStorage.getItem("pfx-chart-options:wiggle") == "true";
+                                pfxExtraString= "";
+                                if (document.getElementById("graphOptionMoreWiggle").checked) {
+                                    pfxExtraString = pfxExtraString + "&wiggly";
+                                }
+                            }
+                            loadGraphOptionsToLocalStorage();
+
+                            function graphOptionsChanged() {
+                                saveGraphOptionsToLocalStorage();
+                                handleImageChange();
+                            }
+                            document.getElementById("graphOptionMoreWiggle").addEventListener("click", graphOptionsChanged)
+
+
+                            function handleImageChange() {
+                                loadGraphOptionsToLocalStorage();
+                                
+                                document.getElementById("pathimg").src=("/pathimg/"+asn+ "-" + document.getElementById("netpolicydropdown").value +"?"+pfxExtraString);
+                                var request = new XMLHttpRequest();
+                                request.open('GET', "/pathimg/"+asn+ "-" + document.getElementById("netpolicydropdown").value + "?map=true" + pfxExtraString, true);
+
+                                request.onload = function() {
+                                    if (this.status >= 200 && this.status < 400) {
+                                        
+                                        
+                                        document.getElementById("world2").innerHTML = this.response;
+                                        setTimeout(function(){
+                                            imageMapResize('#world');
+                                        },1000)
+                                    }
+                                };
+                                request.send();
+                                buildPrefixTable();
+                            } 
+
+                            function encodeHTML(s) {
+                                return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
+                            }
+
+                            function dropdownPoke(){
+                                InteractedWithPolicyTableYet=true;
+                                handleImageChange();
+                            }
+
+                            var InteractedWithPolicyTableYet = false;
+                            var OverloadPolicySize = 0;
+                            function buildPrefixTable() {
+                                var policy = document.getElementById("netpolicydropdown").value;
+                                
+                                var cidrs = netgroups[policy];
+                                var ihtml = "<tbody> <tr> <th class=\"nowrap\">  -  </th> <th>Prefix</th> <th class=\"nowrap\">Description</th> </tr>";
+
+                                
+                                var aaa = document.querySelectorAll('#PISPBanner');
+                                var bbb = document.querySelectorAll('#policytable');
+                                var n = 0
+                                if (cidrs) {
+                                    aaa[0].style.display = "";
+                                    bbb[0].style.display = "";
+                                    cidrs.forEach(cidr => {
+                                        var obj = {};
+                                        var dont =false;
+                                        n++;
+                                        
+                                        if (!InteractedWithPolicyTableYet) {
+                                            if (n == 5) {
+                                                dont = true;
+                                            } else if (n > 5) {
+                                                dont = true;
+                                            }
+                                        }
+                                        
+                                        if (!dont) {
+                                            prefixinfo.forEach(el => {
+                                                if(el.PrefixString == cidr) {
+                                                    
+                                                        ihtml += "<tr><td class=\"nowrap ns\"><img class=\"flag-img\" src=\"/assets/flags/"+el.WhoisCountry+".png\" title=\""+el.WhoisCountry+"\"></td>"
+                                                        ihtml += "<td><a href=\"/prefix/"+el.PrefixString+"\">"+el.PrefixString+"</a></td>"
+                                                        ihtml += "<td class=\"nowrap\">"+encodeHTML(el.WhoisName)+"</td></tr>"
+                                                }
+                                            });
+                                        } else {
+                                            OverloadPolicySize++;
+                                        }
+                                    });
+                                    document.getElementById("policytable").innerHTML = ihtml
+                                    var PolButton = document.querySelectorAll('#ShowFullPolicyButton');
+                                    if (!InteractedWithPolicyTableYet && OverloadPolicySize!=0) {
+                                        PolButton[0].style="width:100%";
+                                        PolButton[0].innerHTML = "Load all "+OverloadPolicySize+" prefixes in policy"
+                                    } else {
+                                        PolButton[0].style="display:none;";
+                                    }
+                                    
+                                } else {
+                                    aaa[0].style.display = "none";
+                                    bbb[0].style.display = "none";
+                                }
+                            }
+
+
+                            var pathdropdown = document.querySelectorAll('#netpolicydropdown');
+                            pathdropdown[0].addEventListener("change",dropdownPoke)
+                            handleImageChange()
+                            buildPrefixTable()
+
+                            document.addEventListener("load", function(){
+                                
+                                handleImageChange()
+                            });
+
+                            function uuidv4() {
+                                return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+                                    var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+                                    return v.toString(16);
+                                });
+                            }
+
+                            
+                            let realTimeSocket = new ReconnectingWebSocket("wss://bgp.tools/ws/rt-asn?prefix=AS263320" + "&magic=" + encodeURIComponent("WFUXM6YRTCF3WAOVVWRFI5PPVNELVZKWEAJYRLQJN32ATDVJ525A===="));
+                            
+                            realTimeSocket.onmessage = function(event) {
+                                console.log(`[message] Data received from server: ${event.data}`);
+                                if (event.data == "Running.") {
+                                    document.getElementById("ws-status").src = "/assets/connected.png";
+                                    document.getElementById("ws-status").title = "Connected to realtime data";
+                                } else if (event.data == "STOP-CONNECTING") {
+                                    document.getElementById("ws-status").src = disconectedIcon;
+                                    document.getElementById("ws-status").title = "Not connected to realtime data";
+                                    realTimeSocket.maxReconnectAttempts = 1;
+                                    realTimeSocket.close()
+                                } else {
+                                    var obj = JSON.parse(event.data);
+                                    var elm = document.getElementById("pfx-"+obj.Prefix);
+                                    if (!elm && obj.Vis > 6) {
+                                        var tblist = document.getElementById("donotscrapebgptools-prefixlist-tbody");
+                                        var node = document.createElement("tr");                 
+                                        node.outerHTML = '<tr id="pfx-'+obj.Prefix+'"><td class="nowrap"><img class="flag-img" src="/assets/flags/'+obj.Whois.WhoisCountry+'.png" title="'+obj.Whois.WhoisCountry+'"></td><td><a href="/prefix/'+obj.Prefix+'">'+obj.Prefix+'</a></td><td class="smallonmobile nowrap">'+obj.Whois.WhoisName+'</td></tr>';
+                                        tblist.appendChild(node);                              
+                                    }
+                                    if (!elm) {
+                                        elm = document.getElementById("pfx-"+obj.Prefix);
+                                    }
+                                    
+                                    if (obj.Vis > 70) {
+                                        if (elm.style) {
+                                            var es = elm.style;
+                                            if (es.animation.includes("pulse1b")) {
+                                                elm.style = "animation: pulse2b 1s 1;";
+                                            } else if (es.animation.includes("pulse2b")) {
+                                                elm.style = "animation: pulse1b 1s 1;";
+                                            } else {
+                                                elm.style = "animation: pulse1b 1s 1;";
+                                            }
+                                        }
+                                    } else if (obj.Vis < 5) {
+                                        
+                                        var elm = document.getElementById("pfx-"+obj.Prefix);
+                                        if (elm) {
+                                            elm.parentNode.removeChild(elm);
+                                        }
+                                    } else {
+                                        if (elm.style) {
+                                            var es = elm.style;
+                                            if (es.animation.includes("pulse1r")) {
+                                                elm.style = "animation: pulse2r 1s 1;";
+                                            } else if (es.animation.includes("pulse2r")) {
+                                                elm.style = "animation: pulse1r 1s 1;";
+                                            } else {
+                                                elm.style = "animation: pulse1r 1s 1;";
+                                            }
+                                        }
+                                    }
+                                }
+                            };
+                            var disconectedIcon = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAAZlBMVEX/ewBZWVn/ewf/ew5fWljudiP8egp6XVT6eRHodSmVYU6hZEzObjrldCv3eRZ/XlNjWliHX1KrZkngci71eBl1XFXCa0CKYFHydx18XlSQYE+lZUq0aEbJbT3SbzhvXFaLYFG8akLYdYVFAAABQElEQVRIx5XV25KDIAwGYIKASLutqOtZ277/S26xK4ozJea/qRdfajATZaRkd6B6oPoL1d9QphUn+WvXmGF8TfN8yvNrDj6nvNj5Hu8n8HCh9ONiON5PEKuQx55DmFTHC1R9uMOjYkhFERbkEikofw8FGe5t0FWJ+kLvz5H+t8RdGD9k8TeebBXpzwIZT955XyVBtHHeXYzeJy5fhydtoZffZvUMSfvxT4BOeI/G/b9paxH1at8XQF8xNcV8aaQvHQBMhY/XttsdYp5nah3XdvIqui61Cjy+jqLwXp1cx9XLQZ5cR/vx1p8cez2IWrlxYY/T9bNVyCfmdQdbxNgs441FNRAEHS83oe9ahmTw1p88nhHCiAkpeIUeX5eJ6NlM9Gwm+uxO9/3F2PSR597jn1+udCWzUp7150P1jOoZ1f8BGPARG85JosIAAAAASUVORK5CYII=";
+                            realTimeSocket.onerror = function(error) {
+                                document.getElementById("ws-status").src = disconectedIcon;
+                                document.getElementById("ws-status").title = "Not connected to realtime data";
+
+                                console.log(`[error] ${error.message}`);
+                            };
+                            realTimeSocket.onclose = function(error) {
+                                document.getElementById("ws-status").src = disconectedIcon;
+                                document.getElementById("ws-status").title = "Not connected to realtime data";
+
+                                console.log(`[error] ${error.message}`);
+                            };
+                        </script>
+
+<div class="superclearfix">
+    
+</div>
+
+                        <hr>
+                        <a style="font-size: small;" href="/kb/what-is-a-upstream">How are upstreams and downstreams calculated?</a>
+                        <h3 id="upstreams">Upstreams<img class="flag-img" src="/assets/lightning.png" style="padding-left: 12px;" title="This information was fetched live at page load time" alt="This information was fetched live at page load time"/></h3>
+
+
+                        <table id="donotscrapebgptools-upstreamTable" class="full-width-table">
+                            <thead class="sortable">
+                                <tr>
+                                    <th class="nowrap boldpls">  &nbsp;  </th>
+                                    <th data-sort-method='number' class="boldpls">ASN</th>
+                                    <th class="nowrap boldpls">Description</th>
+                                    <th class="nowrap boldpls">IPv4</th>
+                                    <th class="nowrap boldpls">IPv6</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                <tr>
+                                    <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR">
+                                        
+                                        </td>
+                                    <td data-sort='27693'><a href="/as/27693">AS27693</a></td>
+                                    <td class="smallonmobile nowrap">NipBr - NipCable do Brasil Telecom LTDA</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR">
+                                        
+                                        </td>
+                                    <td data-sort='16735'><a href="/as/16735">AS16735</a></td>
+                                    <td class="smallonmobile nowrap">Algar Telecom</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR">
+                                        
+                                        </td>
+                                    <td data-sort='271206'><a href="/as/271206">AS271206</a></td>
+                                    <td class="smallonmobile nowrap">Ch Informatica Ltda</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR">
+                                        
+                                        </td>
+                                    <td data-sort='269194'><a href="/as/269194">AS269194</a></td>
+                                    <td class="smallonmobile nowrap">ST1 INTERNET</td>
+                                    <td class="nowrap">&#10008;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR">
+                                        
+                                        </td>
+                                    <td data-sort='265175'><a href="/as/265175">AS265175</a></td>
+                                    <td class="smallonmobile nowrap">AS SISTEMAS LTDA</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR">
+                                        
+                                        </td>
+                                    <td data-sort='265130'><a href="/as/265130">AS265130</a></td>
+                                    <td class="smallonmobile nowrap">FIBRA EMPRESAS LTDA</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR">
+                                        
+                                        </td>
+                                    <td data-sort='14840'><a href="/as/14840">AS14840</a></td>
+                                    <td class="smallonmobile nowrap">BR.DIGITAL </td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR">
+                                        
+                                        </td>
+                                    <td data-sort='274614'><a href="/as/274614">AS274614</a></td>
+                                    <td class="smallonmobile nowrap">VELOX NETWORK SOLUCOES TECNOLOGICAS LTDA</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR">
+                                        
+                                        </td>
+                                    <td data-sort='263484'><a href="/as/263484">AS263484</a></td>
+                                    <td class="smallonmobile nowrap">J E Provedor de Rede de Comunicacao Ltda</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR">
+                                        
+                                        </td>
+                                    <td data-sort='266520'><a href="/as/266520">AS266520</a></td>
+                                    <td class="smallonmobile nowrap">VOOB TELECOM</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR">
+                                        
+                                        </td>
+                                    <td data-sort='272661'><a href="/as/272661">AS272661</a></td>
+                                    <td class="smallonmobile nowrap">MAYS TELECOMUNICAÇÕES LTDA</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR">
+                                        
+                                        </td>
+                                    <td data-sort='28126'><a href="/as/28126">AS28126</a></td>
+                                    <td class="smallonmobile nowrap">BRISANET SERVICOS DE TELECOMUNICACOES S.A</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR">
+                                        
+                                        </td>
+                                    <td data-sort='272465'><a href="/as/272465">AS272465</a></td>
+                                    <td class="smallonmobile nowrap">HER CONECTA TELECOMUNICAÇÃO LTDA</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR">
+                                        
+                                        </td>
+                                    <td data-sort='272510'><a href="/as/272510">AS272510</a></td>
+                                    <td class="smallonmobile nowrap">Turbo Net Provedor Ltda</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR">
+                                        
+                                        </td>
+                                    <td data-sort='4230'><a href="/as/4230">AS4230</a></td>
+                                    <td class="smallonmobile nowrap">Claro (Embratel)</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR">
+                                        
+                                        </td>
+                                    <td data-sort='273659'><a href="/as/273659">AS273659</a></td>
+                                    <td class="smallonmobile nowrap">MLINK TELECOM LTDA</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='PA' class="nowrap ns"><img class="flag-img" src="/assets/flags/PA.png" title="PA">
+                                        
+                                        </td>
+                                    <td data-sort='52468'><a href="/as/52468">AS52468</a></td>
+                                    <td class="smallonmobile nowrap">UFINET PANAMA S.A.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR">
+                                        
+                                        </td>
+                                    <td data-sort='271383'><a href="/as/271383">AS271383</a></td>
+                                    <td class="smallonmobile nowrap">CRIATIVA INTERNET</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR">
+                                        
+                                        </td>
+                                    <td data-sort='53167'><a href="/as/53167">AS53167</a></td>
+                                    <td class="smallonmobile nowrap">SEBRATEL TECNOLOGIA LTDA</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR">
+                                        
+                                        </td>
+                                    <td data-sort='270724'><a href="/as/270724">AS270724</a></td>
+                                    <td class="smallonmobile nowrap">CLIENT.CO SERVIÇOS E TELECOMUNICAÇÕES LTDA</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR">
+                                        
+                                        </td>
+                                    <td data-sort='53013'><a href="/as/53013">AS53013</a></td>
+                                    <td class="smallonmobile nowrap">WIXNET DO BRASIL LTDA - ME</td>
+                                    <td class="nowrap">&#10008;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR">
+                                        
+                                        </td>
+                                    <td data-sort='52654'><a href="/as/52654">AS52654</a></td>
+                                    <td class="smallonmobile nowrap">Bi-Link Telecom</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+
+                        <hr>
+                        <h3 id="peers">Peers<img class="flag-img" src="/assets/lightning.png" style="padding-left: 12px;" title="This information was fetched live at page load time" alt="This information was fetched live at page load time"/></h3>
+
+
+
+                        <table id="donotscrapebgptools-upstreamTablePeers" class="full-width-table">
+                            <thead class="sortable">
+                                <tr>
+                                    <th class="nowrap boldpls">  &nbsp;  </th>
+                                    <th data-sort-method='number' class="boldpls">ASN</th>
+                                    <th class="nowrap boldpls">Description</th>
+                                    <th class="nowrap boldpls">IPv4</th>
+                                    <th class="nowrap boldpls">IPv6</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                <tr>
+                                    <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+                                    <td data-sort='27693'><a href="/as/27693">AS27693</a></td>
+                                    <td class="smallonmobile nowrap">NipBr - NipCable do Brasil Telecom LTDA</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+                                    <td data-sort='269194'><a href="/as/269194">AS269194</a></td>
+                                    <td class="smallonmobile nowrap">ST1 INTERNET</td>
+                                    <td class="nowrap">&#10008;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+                                    <td data-sort='271206'><a href="/as/271206">AS271206</a></td>
+                                    <td class="smallonmobile nowrap">Ch Informatica Ltda</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+                                    <td data-sort='266520'><a href="/as/266520">AS266520</a></td>
+                                    <td class="smallonmobile nowrap">VOOB TELECOM</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+                                    <td data-sort='16735'><a href="/as/16735">AS16735</a></td>
+                                    <td class="smallonmobile nowrap">Algar Telecom</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+                                    <td data-sort='14840'><a href="/as/14840">AS14840</a></td>
+                                    <td class="smallonmobile nowrap">BR.DIGITAL </td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+                                    <td data-sort='265175'><a href="/as/265175">AS265175</a></td>
+                                    <td class="smallonmobile nowrap">AS SISTEMAS LTDA</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+                                    <td data-sort='263484'><a href="/as/263484">AS263484</a></td>
+                                    <td class="smallonmobile nowrap">J E Provedor de Rede de Comunicacao Ltda</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+                                    <td data-sort='265130'><a href="/as/265130">AS265130</a></td>
+                                    <td class="smallonmobile nowrap">FIBRA EMPRESAS LTDA</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+                                    <td data-sort='274614'><a href="/as/274614">AS274614</a></td>
+                                    <td class="smallonmobile nowrap">VELOX NETWORK SOLUCOES TECNOLOGICAS LTDA</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+                                    <td data-sort='52654'><a href="/as/52654">AS52654</a></td>
+                                    <td class="smallonmobile nowrap">Bi-Link Telecom</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+                                    <td data-sort='271383'><a href="/as/271383">AS271383</a></td>
+                                    <td class="smallonmobile nowrap">CRIATIVA INTERNET</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+                                    <td data-sort='272465'><a href="/as/272465">AS272465</a></td>
+                                    <td class="smallonmobile nowrap">HER CONECTA TELECOMUNICAÇÃO LTDA</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+                                    <td data-sort='272510'><a href="/as/272510">AS272510</a></td>
+                                    <td class="smallonmobile nowrap">Turbo Net Provedor Ltda</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+                                    <td data-sort='268180'><a href="/as/268180">AS268180</a></td>
+                                    <td class="smallonmobile nowrap">PCNET TELECOM</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+                                    <td data-sort='28126'><a href="/as/28126">AS28126</a></td>
+                                    <td class="smallonmobile nowrap">BRISANET SERVICOS DE TELECOMUNICACOES S.A</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+                                    <td data-sort='272661'><a href="/as/272661">AS272661</a></td>
+                                    <td class="smallonmobile nowrap">MAYS TELECOMUNICAÇÕES LTDA</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+                                    <td data-sort='273659'><a href="/as/273659">AS273659</a></td>
+                                    <td class="smallonmobile nowrap">MLINK TELECOM LTDA</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+                                    <td data-sort='4230'><a href="/as/4230">AS4230</a></td>
+                                    <td class="smallonmobile nowrap">Claro (Embratel)</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='PA' class="nowrap ns"><img class="flag-img" src="/assets/flags/PA.png" title="PA"></td>
+                                    <td data-sort='52468'><a href="/as/52468">AS52468</a></td>
+                                    <td class="smallonmobile nowrap">UFINET PANAMA S.A.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+                                    <td data-sort='268645'><a href="/as/268645">AS268645</a></td>
+                                    <td class="smallonmobile nowrap">FUTURE DIGITAL TECHNOLOGY E TELECOM LTDA EPP</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+                                    <td data-sort='53167'><a href="/as/53167">AS53167</a></td>
+                                    <td class="smallonmobile nowrap">SEBRATEL TECNOLOGIA LTDA</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+                                    <td data-sort='270724'><a href="/as/270724">AS270724</a></td>
+                                    <td class="smallonmobile nowrap">CLIENT.CO SERVIÇOS E TELECOMUNICAÇÕES LTDA</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+                                    <td data-sort='53013'><a href="/as/53013">AS53013</a></td>
+                                    <td class="smallonmobile nowrap">WIXNET DO BRASIL LTDA - ME</td>
+                                    <td class="nowrap">&#10008;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='PT' class="nowrap ns"><img class="flag-img" src="/assets/flags/PT.png" title="PT"></td>
+                                    <td data-sort='6424'><a href="/as/6424">AS6424</a></td>
+                                    <td class="smallonmobile nowrap">EDGOO NETWORKS</td>
+                                    <td class="nowrap">&#10008;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+                                    <td data-sort='214331'><a href="/as/214331">AS214331</a></td>
+                                    <td class="smallonmobile nowrap">Teske Virtual System Ltda</td>
+                                    <td class="nowrap">&#10008;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='2635'><a href="/as/2635">AS2635</a></td>
+                                    <td class="smallonmobile nowrap">Automattic, Inc</td>
+                                    <td class="nowrap">&#10008;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='40776'><a href="/as/40776">AS40776</a></td>
+                                    <td class="smallonmobile nowrap">TaoNet</td>
+                                    <td class="nowrap">&#10008;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+                                    <td data-sort='52999'><a href="/as/52999">AS52999</a></td>
+                                    <td class="smallonmobile nowrap">START TELECOM LTDA</td>
+                                    <td class="nowrap">&#10008;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='14907'><a href="/as/14907">AS14907</a></td>
+                                    <td class="smallonmobile nowrap">Wikimedia Foundation Inc.</td>
+                                    <td class="nowrap">&#10008;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='AT' class="nowrap ns"><img class="flag-img" src="/assets/flags/AT.png" title="AT"></td>
+                                    <td data-sort='42473'><a href="/as/42473">AS42473</a></td>
+                                    <td class="smallonmobile nowrap">Anexia Cloud Solutions GmbH</td>
+                                    <td class="nowrap">&#10008;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='13335'><a href="/as/13335">AS13335</a></td>
+                                    <td class="smallonmobile nowrap">Cloudflare, Inc.</td>
+                                    <td class="nowrap">&#10008;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+                                    <td data-sort='61624'><a href="/as/61624">AS61624</a></td>
+                                    <td class="smallonmobile nowrap">ISPSHIELD (InfNOC Tecnologia)</td>
+                                    <td class="nowrap">&#10008;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='SG' class="nowrap ns"><img class="flag-img" src="/assets/flags/SG.png" title="SG"></td>
+                                    <td data-sort='24482'><a href="/as/24482">AS24482</a></td>
+                                    <td class="smallonmobile nowrap">SG.GS</td>
+                                    <td class="nowrap">&#10008;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+                                    <td data-sort='262287'><a href="/as/262287">AS262287</a></td>
+                                    <td class="smallonmobile nowrap">Latitude.sh LTDA</td>
+                                    <td class="nowrap">&#10008;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+                                    <td data-sort='262589'><a href="/as/262589">AS262589</a></td>
+                                    <td class="smallonmobile nowrap">Megatelecom (Internexa BR)</td>
+                                    <td class="nowrap">&#10008;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='NL' class="nowrap ns"><img class="flag-img" src="/assets/flags/NL.png" title="NL"></td>
+                                    <td data-sort='215248'><a href="/as/215248">AS215248</a></td>
+                                    <td class="smallonmobile nowrap">Bastiaan Mathijs Brink</td>
+                                    <td class="nowrap">&#10008;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+                                    <td data-sort='262832'><a href="/as/262832">AS262832</a></td>
+                                    <td class="smallonmobile nowrap">Link Cariri</td>
+                                    <td class="nowrap">&#10008;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='32590'><a href="/as/32590">AS32590</a></td>
+                                    <td class="smallonmobile nowrap">Valve Corporation</td>
+                                    <td class="nowrap">&#10008;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+                                    <td data-sort='1916'><a href="/as/1916">AS1916</a></td>
+                                    <td class="smallonmobile nowrap">RNP - Rede Nacional de Ensino e Pesquisa</td>
+                                    <td class="nowrap">&#10008;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+                                    <td data-sort='1251'><a href="/as/1251">AS1251</a></td>
+                                    <td class="smallonmobile nowrap">FUNDAÇÃO DE AMPARO À PESQUISA DO ESTADO SÃO PAULO</td>
+                                    <td class="nowrap">&#10008;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+                                    <td data-sort='274676'><a href="/as/274676">AS274676</a></td>
+                                    <td class="smallonmobile nowrap">MULTIWAY COMERCIO E REPRESENTACOES LTDA</td>
+                                    <td class="nowrap">&#10008;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+                                    <td data-sort='60503'><a href="/as/60503">AS60503</a></td>
+                                    <td class="smallonmobile nowrap">FNX Tecnologia LTDA</td>
+                                    <td class="nowrap">&#10008;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+                                    <td data-sort='52888'><a href="/as/52888">AS52888</a></td>
+                                    <td class="smallonmobile nowrap">UNIVERSIDADE FEDERAL DE SAO CARLOS</td>
+                                    <td class="nowrap">&#10008;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='20473'><a href="/as/20473">AS20473</a></td>
+                                    <td class="smallonmobile nowrap">The Constant Company, LLC</td>
+                                    <td class="nowrap">&#10008;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+                                    <td data-sort='262462'><a href="/as/262462">AS262462</a></td>
+                                    <td class="smallonmobile nowrap">Aranet Play</td>
+                                    <td class="nowrap">&#10008;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+                                    <td data-sort='266400'><a href="/as/266400">AS266400</a></td>
+                                    <td class="smallonmobile nowrap">Ferenz Networks</td>
+                                    <td class="nowrap">&#10008;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='36236'><a href="/as/36236">AS36236</a></td>
+                                    <td class="smallonmobile nowrap">NetActuate, Inc</td>
+                                    <td class="nowrap">&#10008;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+
+
+
+                        <hr>
+                        <h3 id="downstreams">Downstreams<img class="flag-img" src="/assets/lightning.png" style="padding-left: 12px;" title="This information was fetched live at page load time" alt="This information was fetched live at page load time"/></h3>
+                        <table id="donotscrapebgptools-upstreamTableDowns" class="full-width-table">
+                            <thead class="sortable">
+                                
+                                <tr>
+                                    <th class="nowrap boldpls">  &nbsp;  </th>
+                                    <th data-sort-method='number'  class="boldpls">ASN</th>
+                                    <th class="nowrap boldpls">Description</th>
+                                    <th class="nowrap boldpls">IPv4</th>
+                                    <th class="nowrap boldpls">IPv6</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                <tr>
+                                    <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR">
+                                        
+                                        </td>
+                                    <td data-sort='268180'><a href="/as/268180">AS268180</a></td>
+                                    <td class="smallonmobile nowrap">PCNET TELECOM</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR">
+                                        
+                                        </td>
+                                    <td data-sort='268645'><a href="/as/268645">AS268645</a></td>
+                                    <td class="smallonmobile nowrap">FUTURE DIGITAL TECHNOLOGY E TELECOM LTDA EPP</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+
+                    </div>
+
+                    <div style="display: none" id="whois-page">
+                        
+                        
+                        <pre style="white-space: pre-wrap;">% IP Client: 2a0c:2f07:9459:443:0:0:0:155
+ % Copyright (c) Nic.br - Use of this data is governed by the Use and
+% Privacy Policy at https://registro.br/upp . Distribution,
+% commercialization, reproduction, and use for advertising or similar
+% purposes are expressly prohibited.
+% 2025-11-20T22:15:10-03:00 - 2a0c:2f07:9459:443::155
+
+aut-num:     <a href="/AS263320">AS263320</a>
+owner:       Sansara Telecom
+ownerid:     <a href="https://portaldatransparencia.gov.br/pessoa-juridica/09566844000179">09.566.844/0001-79</a>
+responsible: Paulo Ramos Correa
+country:     BR
+owner-c:     PARCO220
+routing-c:   PARCO220
+abuse-c:     PARCO220
+created:     20140306
+changed:     20210906
+inetnum:     191.7.144.0/20
+inetnum:     2804:143c::/32
+
+nic-hdl-br:  PARCO220
+person:      Paulo Ramos Corr�a
+# Email removed, Log into bgp.tools to see whois emails
+country:     BR
+created:     20190226
+changed:     20250819
+
+% Security and mail abuse issues should also be addressed to cert.br,
+% respectivelly to cert@cert.br and mail-abuse@cert.br
+%
+% whois.registro.br only accepts exact match queries for domains,
+% registrants, contacts, tickets, providers, IPs, and ASNs.
+
+</pre>
+                        
+                        
+                        <a style="font-size: small;">Last Update: 2025-11-21T01:15:10Z UTC  / <a style="font-size: small;" onclick="requestWhoisReload()" id="whoisReloadButton" href="#whois">(Click here to force a refresh)</a></a>
+                        
+                        <hr>
+                        
+                            <h2>Member of the following AS-SETs</h2>
+
+                            <table id="fhTable" class="full-width-table ">
+                                <tbody id="prefixlist-tbody">
+                                    <tr>
+                                        <th class="boldpls nowrap"> - </th>
+                                        <th class="boldpls">Member</th>
+                                         
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-hurricane">as-hurricane</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">ALTDB</td>
+                                        
+                                        <td><a href="/as-set/ALTDB::as-266520">as-266520</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-53427-tglobal">as-53427-tglobal</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">JPIRR</td>
+                                        
+                                        <td><a href="/as-set/JPIRR::as-bbix-t">as-bbix-t</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-adylnet-customers">as-adylnet-customers</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">ALTDB</td>
+                                        
+                                        <td><a href="/as-set/ALTDB::as-53167-cust">as-53167-cust</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-wiki-customers">as-wiki-customers</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-ufinet-latam-brasil">as-ufinet-latam-brasil</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-embratelnet">as-embratelnet</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-itxbr1">as-itxbr1</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-rocketnetwork-tools">as-rocketnetwork-tools</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-ctbc-customers36">as-ctbc-customers36</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-telium-customers">as-telium-customers</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-upix-customers">as-upix-customers</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-koddos">as-koddos</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-ctbc-customers115">as-ctbc-customers115</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-bbix-t">as-bbix-t</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-nipbr">as-nipbr</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-antel-all">as-antel-all</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as26615:as-customers">as26615:as-customers</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-28124">as-28124</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-flys">as-flys</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-8167_customers">as-8167_customers</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-7738_customers">as-7738_customers</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as53013:as-cone">as53013:as-cone</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-1telecom-customers01">as-1telecom-customers01</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as265175:as-cone">as265175:as-cone</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as14840:as-customers-02">as14840:as-customers-02</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-itxbr">as-itxbr</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-maxihost">as-maxihost</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-e1-automation-customer">as-e1-automation-customer</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-linkfull-corporate">as-linkfull-corporate</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-8167-bgp-customers">as-8167-bgp-customers</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as7545:as-tpgn-customers">as7545:as-tpgn-customers</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as40850:as-customers">as40850:as-customers</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-brisanet-customers">as-brisanet-customers</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-forte-telecom-customer-trial">as-forte-telecom-customer-trial</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-ctbc-customers182">as-ctbc-customers182</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-7738-bgp-customers">as-7738-bgp-customers</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-megatelecom-customers">as-megatelecom-customers</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-267613">as-267613</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-mob-customer-as267464">as-mob-customer-as267464</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-durand1-customer">as-durand1-customer</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-hurricanev6">as-hurricanev6</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-st1-customers">as-st1-customers</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-seaborn-customer">as-seaborn-customer</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">ALTDB</td>
+                                        
+                                        <td><a href="/as-set/ALTDB::as-262903-cust">as-262903-cust</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-americantower-clients-of-clients">as-americantower-clients-of-clients</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as61568:as-aloo-telecom">as61568:as-aloo-telecom</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-bbg-clientes">as-bbg-clientes</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-rocketnetwork-customers">as-rocketnetwork-customers</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-ctbc-tools">as-ctbc-tools</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-stormwall-set">as-stormwall-set</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-fortel-customers">as-fortel-customers</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-hugenet-forte">as-hugenet-forte</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                        
+
+                    </div>
+
+                    
+                    <script>
+                        var reloadingWhois = false;
+                        function requestWhoisReload() {
+                            if (!reloadingWhois) {
+                                reloadingWhois = true; 
+                                document.getElementById("whoisReloadButton").innerHTML = "Reloading Whois..."
+                                var request = new XMLHttpRequest();
+                                request.open('GET', "/internal/reload-whois?k=WRL-AS263320-1765330536!j7zACfvHWVweEnOjRogBoPm5qxThCx6imE9NIZ8qjlQ", true);
+                                request.onload = function() {
+                                    if (this.status >= 200 && this.status < 400) {
+                                        location.reload();
+                                    }
+                                };
+                                request.send();
+                            }
+                        }
+                    </script>
+                    
+
+                    
+                    <div style="display: none" id="ix-page">
+                        <div class="grid-row">
+                            <dl class="column-two-thirds">
+                                <p style="margin: 0px;"><img style="vertical-align: middle; margin-left: 5px;" class="flag-img" src="/assets/peeringdb-icon.png" title="PeeringDB"><a href="https://www.peeringdb.com/asn/263320">Go to PeeringDB page</a></p>
+                            </dl>
+                            
+                            
+                        </div>
+                        <div class="grid-row">
+                            
+                        
+    
+    
+                        <dl class="column-third">
+                            <dt>Suggested Prefix Limits</dt>
+                            <dd class="text data">
+                                
+                                
+                            </dd>
+                        </dl>
+                        </div>
+
+                        
+
+                        <div id="normalixpsubpage">
+
+
+<h3>Internet Exchange Points</h3>
+
+<div class="scroll-ixp-div-on-small">
+<table id="ixpTable" class="full-width-table table-wide-to-force-scroll-on-mobile">
+    <thead class="sortable">
+        <tr>
+            <th class="nowrap boldpls">  &nbsp;  </th>
+            <th class="boldpls">Name</th>
+            <th class="nowrap boldpls">IPv4</th>
+            <th class="nowrap boldpls">IPv6</th>
+            <th data-sort-method='number' class="nowrap boldpls">Link Speed</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+        
+        <tr>
+            <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"><img style="margin-left: 5px;" class="flag-img" src="/assets/icons/huawei.png" title="Detected Vendor: HUAWEI TECHNOLOGIES CO.,LTD"><img class="flag-img" src="/assets/tick.png" title="Last seen online 2 hours ago"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/IX.br%20%28PTT.br%29%20S%c3%a3o%20Paulo">IX.br (PTT.br) São Paulo</a></td>
+            <td class="smallonmobile">187.16.215.180</a></td>
+            <td class="smallonmobile nowrap">2001:12f8::215:180</td>
+            <td data-sort='0' class="smallonmobile">n/a</td>
+        </tr>
+        
+        
+    </tbody>
+</table>
+</div>
+
+
+
+
+
+
+
+
+<a style="font-size: small;">Last Update: 2025-12-09T10:08:19Z UTC</a>
+
+
+                        </div>
+                        <div id="overlapixpsubpage">
+                        </div>
+                    </div>
+                    
+                    
+
+                    
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="superclearfix">
+            
+            <div class="superclearfix">
+                
+            </div>
+
+            <div class="superclearfix">
+                
+            </div>
+
+
+        </div>
+
+
+        <div class="group js-footer" id="footer">
+            <nav>
+                <div>
+                    <ul>
+                        <li><a href="/kb/api" target="_blank">Scripting/API</a></li>
+                        <li><a href="/credits" target="_blank">Credits</a></li>
+                        <li><a href="/pricing" target="_blank">Pricing</a></li>
+                        <li><a href="/kb/contact" target="_blank">Contact Us</a></li>
+                        <li><a href="https://github.com/bgptools/issues" target="_blank">Issue Tracker</a></li>
+                        <li><a href="/kb/setup-sessions" target="">Contribute Data</a></li>
+                        
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <script>
+    
+    var inhash = window.location.hash;
+    if (inhash == "#asinfo") {
+        
+    } else if (inhash == "#prefixes") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#prefix-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#prefixes-page');
+        aaa[0].style.display = "";
+
+    } else if (inhash == "#connectivity" || inhash == "#peers" || inhash == "#upstreams" || inhash == "#downstreams") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#connectivity-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#connectivity-page');
+        aaa[0].style.display = "";
+    } else if (inhash == "#whois") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#whois-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#whois-page');
+        aaa[0].style.display = "";
+    } else if (inhash == "#ix") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#ix-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#ix-page');
+        aaa[0].style.display = "";
+    }</script>
+
+    <script>
+    
+
+
+    ;(function() {
+  'use strict'
+
+  function scaleImageMap() {
+    function resizeMap() {
+      function resizeAreaTag(cachedAreaCoords, idx) {
+        function scale(coord) {
+          var dimension = 1 === (isWidth = 1 - isWidth) ? 'width' : 'height'
+          return (
+            padding[dimension] +
+            Math.floor(Number(coord) * scalingFactor[dimension])
+          )
+        }
+
+        var isWidth = 0
+        areas[idx].coords = cachedAreaCoords
+          .split(',')
+          .map(scale)
+          .join(',')
+      }
+
+      var scalingFactor = {
+        width: image.width / image.naturalWidth,
+        height: image.height / image.naturalHeight,
+      }
+
+      var padding = {
+        width: parseInt(
+          window.getComputedStyle(image, null).getPropertyValue('padding-left'),
+          10
+        ),
+        height: parseInt(
+          window.getComputedStyle(image, null).getPropertyValue('padding-top'),
+          10
+        ),
+      }
+
+      cachedAreaCoordsArray.forEach(resizeAreaTag)
+    }
+
+    function getCoords(e) {
+      
+      return e.coords.replace(/ *, */g, ',').replace(/ +/g, ',')
+    }
+
+    function debounce() {
+      clearTimeout(timer)
+      timer = setTimeout(resizeMap, 250)
+    }
+
+    function start() {
+      if (
+        image.width !== image.naturalWidth ||
+        image.height !== image.naturalHeight
+      ) {
+        resizeMap()
+      }
+    }
+
+    function addEventListeners() {
+      image.addEventListener('load', resizeMap, false) 
+      window.addEventListener('focus', resizeMap, false) 
+      window.addEventListener('resize', debounce, false)
+      window.addEventListener('readystatechange', resizeMap, false)
+      document.addEventListener('fullscreenchange', resizeMap, false)
+    }
+
+    function beenHere() {
+      return 'function' === typeof map._resize
+    }
+
+    function getImg(name) {
+      return document.querySelector('img[usemap="#world"]')
+    }
+
+    function setup() {
+      areas = map.getElementsByTagName('area')
+      cachedAreaCoordsArray = Array.prototype.map.call(areas, getCoords)
+      image = getImg('#' + map.name) || getImg(map.name)
+      map._resize = resizeMap 
+    }
+
+    var  
+      map = this,
+      areas = null,
+      cachedAreaCoordsArray = null,
+      image = null,
+      timer = null
+
+    if (!beenHere()) {
+      setup()
+      addEventListeners()
+      start()
+    } else {
+      map._resize() 
+    }
+  }
+
+  function factory() {
+    function chkMap(element) {
+      if (!element.tagName) {
+        throw new TypeError('Object is not a valid DOM element')
+      } else if ('MAP' !== element.tagName.toUpperCase()) {
+        throw new TypeError(
+          'Expected <MAP> tag, found <' + element.tagName + '>.'
+        )
+      }
+    }
+
+    function init(element) {
+      if (element) {
+        chkMap(element)
+        scaleImageMap.call(element)
+        maps.push(element)
+      }
+    }
+
+    var maps
+
+    return function imageMapResizeF(target) {
+      maps = [] 
+
+      switch (typeof target) {
+        case 'undefined':
+        case 'string':
+          Array.prototype.forEach.call(
+            document.querySelectorAll(target || 'map'),
+            init
+          )
+          break
+        case 'object':
+          init(target)
+          break
+        default:
+          throw new TypeError('Unexpected data type (' + typeof target + ').')
+      }
+
+      return maps
+    }
+  }
+
+  if (typeof define === 'function' && define.amd) {
+    define([], factory)
+  } else if (typeof module === 'object' && typeof module.exports === 'object') {
+    module.exports = factory() 
+  } else {
+    window.imageMapResize = factory()
+  }
+
+  if ('jQuery' in window) {
+    window.jQuery.fn.imageMapResize = function $imageMapResizeF() {
+      return this.filter('map')
+        .each(scaleImageMap)
+        .end()
+    }
+  }
+})()
+    
+    </script>
+    <script>
+        var imgEl = document.getElementById("pathimg");
+        imgEl.addEventListener("mouseover",function() {
+            imageMapResize('#world');
+        })
+    </script>
+    <script src="/assets/tablesort.min.js"></script>
+    <script>
+        addEventListener("load", (event) => {
+            
+            
+            var sort = new Tablesort(document.getElementById('donotscrapebgptools-upstreamTable'));
+            var sort2 = new Tablesort(document.getElementById('donotscrapebgptools-upstreamTablePeers'));
+            
+            var sort3 = new Tablesort(document.getElementById('donotscrapebgptools-upstreamTableDowns'));
+            
+            var sort4 = new Tablesort(document.getElementById('ixpTable'));
+            
+        });
+    </script>
+    
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        setTimeout(function() {
+
+        var beaconHttp = new XMLHttpRequest();
+        var url = '/performance-beacon';
+        var params = JSON.stringify(window.performance)
+        beaconHttp.open('POST', url, true);
+        
+        
+        beaconHttp.setRequestHeader('Content-type', 'application/json');
+        beaconHttp.setRequestHeader('visit-url', "/as/263320");
+        if (navigator.connection) {
+            beaconHttp.setRequestHeader('client-side-rtt', navigator.connection.rtt);
+        } else {
+            beaconHttp.setRequestHeader('client-side-rtt', '-2');
+        }
+        beaconHttp.onreadystatechange = function() {}
+        beaconHttp.send(params);
+        },1000)
+    }, false);
+</script>
+
+</body>
+
+
+</html>
