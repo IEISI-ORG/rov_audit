@@ -1,0 +1,3078 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Orange Mali SA (AS30985) is a 21 year old internet critical network that is peering with 6 other networks and has 3 upstream carriers">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000">
+    <link rel="search" type="application/opensearchdescription+xml" title="BGP.Tools" href="https://bgp.tools/opensearch.xml">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="theme-color" content="#000000">
+    <link href="https://social.bgp.tools/@bgptools" rel="me">
+    <link rel="canonical" href="https://bgp.tools/as/30985" />
+    <title>AS30985 Orange Mali SA - bgp.tools</title>
+    <link rel="stylesheet" type="text/css" href="/assets/main-new.css?2025-12-09-1723%20UTC">
+</head>
+
+<body>
+    <div id="container">
+        
+<div id="global-header" class="global-header-top">
+    <div class="header-sitewide">
+        <div class="global-header">
+            <div class="header-logo">
+                <a href="/" id="logo" class="content">bgp.tools</a>
+            </div>
+            <form id="search" action="/search" method="get" accept-charset="utf-8" role="search" class="top-search-header js-search-hash">
+                <div class="searchfield">
+                    <input type="search" autocomplete="off" name="q" id="site-search-text" title="Search" value="" placeholder="Start here..." autofocus="autofocus" class="js-search-focus">
+                    <button type="submit" id="search-submit" class="search-submit">Search</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div id="global-header-blob" >
+    <a id="auth-header-text" href="/login">Login</a>
+    
+</div>
+<div id="global-header-bar" >
+    <a id="auth-header-bar-text" href="/login">Login</a>
+    
+</div>
+<div class="small-clearfix"></div>
+
+        <div id="global-container">
+            
+
+
+            
+            <div class="section-tabs js-tabs">
+                <ul>
+                    
+<li class="active">
+    <h1> <a id="viewbutton-tab" href="/as/30985">View</a></h1>
+</li>
+
+<li >
+    <a id="editbutton-tab" href="/edit/as/30985">Edit</a>
+</li>
+
+
+
+
+
+                    <li style="float: right;">
+                        
+                        <img id="ws-status" width="24" height="24" src="/assets/disconnected.png" title="Not Connected To realtime data updates">
+                        
+                    </li>
+                </ul>
+            </div>
+
+            <div id="search-container">
+
+                <div class="column-full-width">
+
+                    <div class="clearfix">
+                        
+                    </div>
+                    
+                    
+
+                    <div class="network-header">
+                        
+                        <p id="network-name" class="heading-xlarge">Orange Mali SA</p>
+                        <p id="network-number">
+                            AS Number
+                            <strong id="ASNumberString" pure="30985">30985</strong>
+                            <br>
+                        
+                        </p>
+
+                    </div>
+
+
+                    <div class="clearfix">
+                        
+                    </div>
+
+
+                    <div class="section-tabs js-tabs">
+                        <ul>
+
+                            <li id="overview-tab-li" class="active">
+                                <a id="overview-tab" href="#asinfo">Overview</a>
+                            </li>
+                            
+                            <li id="prefix-tab-li">
+                                <a id="prefix-tab" href="#prefixes">Prefixes</a>
+                            </li>
+
+                            <li id="connectivity-tab-li">
+                                <a id="connectivity-tab" href="#connectivity">Connectivity</a>
+                            </li>
+                            
+                            <li id="whois-tab-li">
+                                <a id="whois-tab" href="#whois">Whois</a>
+                            </li>
+                        
+                        
+                        </ul>
+                    </div>
+
+<script>
+    function removeAllActiveTab() {
+        var tabs = [
+            "overview-tab-li", 
+            "prefix-tab-li", 
+            "connectivity-tab-li",
+            "whois-tab-li",
+            "ix-tab-li",
+            "issues-tab-li"
+        ];
+
+        tabs.forEach(element => {
+            var aaa = document.querySelectorAll('#'+element);
+            if(aaa.length != 0) {
+                aaa[0].classList.remove("active")
+            }
+        });
+    }
+
+    function hideAllContent() {
+        var tabs = [
+            "overview-page", 
+            "prefixes-page", 
+            "connectivity-page",
+            "whois-page",
+            "ix-page",
+            "issues-page"
+        ];
+
+        tabs.forEach(element => {
+            var aaa = document.querySelectorAll('#'+element);
+            if(aaa.length != 0) {
+                aaa[0].style.display = "none";
+            }
+        });
+        if (document.getElementById("donotscrapebgptools-prefixlist-tbody")) {
+            var prefixrows = document.getElementById("donotscrapebgptools-prefixlist-tbody").children;
+            for (var i = 0; i < prefixrows.length; i++) {
+                prefixrows[i].style = "";
+            }
+        }
+    }
+
+    var otab = document.querySelectorAll('#overview-tab');
+    otab[0].addEventListener("click", function () {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#overview-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#overview-page');
+        aaa[0].style.display = "";
+    });
+    
+
+    var ptab = document.querySelectorAll('#prefix-tab');
+    ptab[0].addEventListener("click", function () {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#prefix-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#prefixes-page');
+        aaa[0].style.display = "";
+    });
+
+    var ctab = document.querySelectorAll('#connectivity-tab');
+    ctab[0].addEventListener("click", function () {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#connectivity-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#connectivity-page');
+        aaa[0].style.display = "";
+    });
+    
+
+    var wtab = document.querySelectorAll('#whois-tab');
+    wtab[0].addEventListener("click", function () {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#whois-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#whois-page');
+        aaa[0].style.display = "";
+    });
+
+</script>
+
+
+
+                    
+                    <div id="overview-page">
+
+                        <div class="grid-row">
+                        
+                        <div class="column-two-thirds">
+                            <dl>
+                                <dt>Registered on</dt>
+                                <dd class="text data">
+                                    
+                                     9 Jun 2004 (21 years old)
+                                </dd>
+                            
+                            
+                            <dt>Registered to</dt>
+                            <dd class="text data">
+                                <a href="/rir-owner/F367CD72">F367CD72</a> (afrinic)</dd>
+                                
+                            
+                            </dl>
+                        </div>
+                        
+    
+                        <dl class="column-third">
+                            <dt>Network status</dt>
+                            <dd class="text data">
+                                
+                                Active, Allocated under AFRINIC
+                                
+                            </dd>
+                        </dl>
+    
+                        </div>
+    
+                        <div class="grid-row">
+                            <dl class="column-two-thirds">
+                                <dt>Network type</dt>
+                                <dd class="text data">
+                                    Eyeball
+                                </dd>
+                            </dl>
+    
+                            <dl class="column-third">
+                                <dt>Prefixes Originated</dt>
+                                <dd class="data">127 IPv4, 6 IPv6</dd>
+                            </dl>
+                        </div>
+                        <div class="grid-row">
+                            <div class="column-half">
+    
+                                <h2 class="heading-medium"><derp>Upstreams</derp></h2>
+                                <ul>
+                                    
+                                    <li>
+                                        <span id="sic0">
+                                          <a href="/as/29571">AS29571</a> - Orange Côte d&#39;Ivoire
+                                        </span>
+                                    </li>
+                                    
+                                    <li>
+                                        <span id="sic0">
+                                          <a href="/as/8346">AS8346</a> - SONATEL-AS Autonomous System
+                                        </span>
+                                    </li>
+                                    
+                                    <li>
+                                        <span id="sic0">
+                                          <a href="/as/5511">AS5511</a> - Orange S.A.
+                                        </span>
+                                    </li>
+                                    
+                                </ul>
+    
+                            </div>
+    
+                            <div class="column-half">
+                                
+                                    <h2 class="heading-medium"><derp>Rankings</derp></h2>
+                                    
+                                    <li><span id="sic0">#1 for <a href="/rankings/ML?sort=cone">AS Cone  in Mali</a></span></li>
+                                    
+                                    <li><span id="sic0">#1 for <a href="/rankings/ML?sort=eyeballs">Estimated Eyeballs  in Mali</a></span></li>
+                                    
+                                    <li><span id="sic0">#1 for <a href="/rankings/ML?sort=dns">Unique Domains  in Mali</a></span></li>
+                                    
+                                    <li><span id="sic0">#2 for <a href="/rankings/ML?sort=peering">Known Peers  in Mali</a></span></li>
+                                    
+                                    <li><span id="sic0">#1 for <a href="/rankings/ML?sort=v4">Originated IPv4 Space  in Mali</a></span></li>
+                                    
+                                    <li><span id="sic0">#2 for <a href="/rankings/ML?sort=v6">Originated IPv6 Space  in Mali</a></span></li>
+                                    
+                                
+                            </div>
+                        </div>
+                        
+                        <div class="grid-row" style="padding: 15px;">
+                            <h2 class="heading-medium"><derp>Tags:</derp></h2>
+                            <br>
+                            
+                            <a href="/tags/dsl"><span style="border: 5px solid #F49C23;" class="taglist"> Home ISP </span></a>
+                            
+                            <a href="/tags/icrit"><span style="border: 5px solid #A73F73;" class="taglist"> Internet Critical Infra </span></a>
+                            
+                            <a href="/tags/rpkirov"><span style="border: 5px solid #32A852;" class="taglist"> Validating RPKI ROV </span></a>
+                            
+                        </div>
+                        
+                    </div>
+                    
+
+                    <div style="display: none" id="prefixes-page">
+                        
+
+                        
+                        <div style="float:left">
+                            <dt>Prefixes Originated</dt>
+                            <dd class="data">127 IPv4, 6 IPv6</dd>
+                            
+                            
+                        </div>
+                        <div style="float:right">
+                                <dt>Addresses Originated</dt>
+                                <dd class="data">213 /24's of IPv4</dd>
+                                <dd class="data">65536 /48's of IPv6</dd>
+                        </div>
+
+                        <div class="clearfix">
+                            
+                        </div>
+
+
+                        <table id="fhTable" class="full-width-table ">
+                            <tbody id="donotscrapebgptools-prefixlist-tbody">
+                                <tr>
+                                    <th class="nowrap">  &nbsp;  </th>
+                                    <th class="boldpls">Prefix</th>
+                                    <th class="nowrap boldpls">Description</th>
+                                </tr>
+                                <p id="readme-if-you-are-human" style="display: none;">If you are scraping this block for the prefixes that a AS originates, please use the data dumps in https://bgp.tools/kb/api and cache them</p>
+                                
+                                <tr id="pfx-41.73.96.0/19">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/41.73.96.0/19">41.73.96.0/19</a></td>
+                                    <td class="smallonmobile nowrap">Orange Mali SA</td>
+                                </tr>
+                                
+                                <tr id="pfx-41.73.98.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/41.73.98.0/24">41.73.98.0/24</a></td>
+                                    <td class="smallonmobile nowrap">WIMAX-PPP-OML</td>
+                                </tr>
+                                
+                                <tr id="pfx-41.73.99.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/41.73.99.0/24">41.73.99.0/24</a></td>
+                                    <td class="smallonmobile nowrap">WIMAX-PPP-OML</td>
+                                </tr>
+                                
+                                <tr id="pfx-41.73.100.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/41.73.100.0/24">41.73.100.0/24</a></td>
+                                    <td class="smallonmobile nowrap">WIMAX-PPP-OML-REGIONS</td>
+                                </tr>
+                                
+                                <tr id="pfx-41.73.103.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/41.73.103.0/24">41.73.103.0/24</a></td>
+                                    <td class="smallonmobile nowrap">WIMAX-PPP-OML-BKO10</td>
+                                </tr>
+                                
+                                <tr id="pfx-41.73.104.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/41.73.104.0/24">41.73.104.0/24</a></td>
+                                    <td class="smallonmobile nowrap">WIMAX-PPP-OML-BKO8</td>
+                                </tr>
+                                
+                                <tr id="pfx-41.73.105.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/41.73.105.0/24">41.73.105.0/24</a></td>
+                                    <td class="smallonmobile nowrap">WIMAX-PPP-OML-BKO8-16E</td>
+                                </tr>
+                                
+                                <tr id="pfx-41.73.107.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/41.73.107.0/24">41.73.107.0/24</a></td>
+                                    <td class="smallonmobile nowrap">WIMAX-PPP-OML-BKO8-16E</td>
+                                </tr>
+                                
+                                <tr id="pfx-41.73.109.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/41.73.109.0/24">41.73.109.0/24</a></td>
+                                    <td class="smallonmobile nowrap">WIMAX-PPP-OML-BKO6-16E</td>
+                                </tr>
+                                
+                                <tr id="pfx-41.73.110.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/41.73.110.0/24">41.73.110.0/24</a></td>
+                                    <td class="smallonmobile nowrap">WIMAX-PPP-OML-BKO6-16E</td>
+                                </tr>
+                                
+                                <tr id="pfx-41.73.111.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/41.73.111.0/24">41.73.111.0/24</a></td>
+                                    <td class="smallonmobile nowrap">WIMAX-PPP-OML-BKO6-16E</td>
+                                </tr>
+                                
+                                <tr id="pfx-41.73.112.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/41.73.112.0/24">41.73.112.0/24</a></td>
+                                    <td class="smallonmobile nowrap">WIMAX-PPP-OML-BKO10-16E</td>
+                                </tr>
+                                
+                                <tr id="pfx-41.73.113.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/41.73.113.0/24">41.73.113.0/24</a></td>
+                                    <td class="smallonmobile nowrap">WIMAX-PPP-OML-BKO10-16E</td>
+                                </tr>
+                                
+                                <tr id="pfx-41.73.114.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/41.73.114.0/24">41.73.114.0/24</a></td>
+                                    <td class="smallonmobile nowrap">WIMAX-PPP-OML-BKO10-16E</td>
+                                </tr>
+                                
+                                <tr id="pfx-41.73.115.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/41.73.115.0/24">41.73.115.0/24</a></td>
+                                    <td class="smallonmobile nowrap">WIMAX-PPP-OML-BKO10-16E</td>
+                                </tr>
+                                
+                                <tr id="pfx-41.73.116.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/41.73.116.0/24">41.73.116.0/24</a></td>
+                                    <td class="smallonmobile nowrap">CLIENT-FH-BAMAKO</td>
+                                </tr>
+                                
+                                <tr id="pfx-41.73.117.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/41.73.117.0/24">41.73.117.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Orange Mali SA</td>
+                                </tr>
+                                
+                                <tr id="pfx-41.73.118.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/41.73.118.0/24">41.73.118.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Orange Mali SA</td>
+                                </tr>
+                                
+                                <tr id="pfx-41.73.119.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/41.73.119.0/24">41.73.119.0/24</a></td>
+                                    <td class="smallonmobile nowrap">WIMAX-PPP-OML-BKO8</td>
+                                </tr>
+                                
+                                <tr id="pfx-41.73.120.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/41.73.120.0/24">41.73.120.0/24</a></td>
+                                    <td class="smallonmobile nowrap">WIMAX-PPP-OML-BKO6</td>
+                                </tr>
+                                
+                                <tr id="pfx-41.73.121.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/41.73.121.0/24">41.73.121.0/24</a></td>
+                                    <td class="smallonmobile nowrap">WIMAX-PPP-OML-BKO8</td>
+                                </tr>
+                                
+                                <tr id="pfx-41.73.122.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/41.73.122.0/24">41.73.122.0/24</a></td>
+                                    <td class="smallonmobile nowrap">WIMAX-PPP-OML-BKO8</td>
+                                </tr>
+                                
+                                <tr id="pfx-41.73.123.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/41.73.123.0/24">41.73.123.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Orange-Mali-Service-FTTH</td>
+                                </tr>
+                                
+                                <tr id="pfx-41.73.124.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/41.73.124.0/24">41.73.124.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Orange-Mali-Service-FTTH</td>
+                                </tr>
+                                
+                                <tr id="pfx-41.73.125.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/41.73.125.0/24">41.73.125.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Orange-Mali-Service-FTTH</td>
+                                </tr>
+                                
+                                <tr id="pfx-41.73.127.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/41.73.127.0/24">41.73.127.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Orange-Mali-Service-FTTH</td>
+                                </tr>
+                                
+                                <tr id="pfx-41.221.176.0/20">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/41.221.176.0/20">41.221.176.0/20</a></td>
+                                    <td class="smallonmobile nowrap">IKATEL SA</td>
+                                </tr>
+                                
+                                <tr id="pfx-41.221.178.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/41.221.178.0/24">41.221.178.0/24</a></td>
+                                    <td class="smallonmobile nowrap">IKATEL SA</td>
+                                </tr>
+                                
+                                <tr id="pfx-41.221.179.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/41.221.179.0/24">41.221.179.0/24</a></td>
+                                    <td class="smallonmobile nowrap">IKATEL SA</td>
+                                </tr>
+                                
+                                <tr id="pfx-41.221.180.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/41.221.180.0/24">41.221.180.0/24</a></td>
+                                    <td class="smallonmobile nowrap">IKATEL SA</td>
+                                </tr>
+                                
+                                <tr id="pfx-41.221.181.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/41.221.181.0/24">41.221.181.0/24</a></td>
+                                    <td class="smallonmobile nowrap">IKATEL SA</td>
+                                </tr>
+                                
+                                <tr id="pfx-41.221.182.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/41.221.182.0/24">41.221.182.0/24</a></td>
+                                    <td class="smallonmobile nowrap">IKATEL SA</td>
+                                </tr>
+                                
+                                <tr id="pfx-41.221.183.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/41.221.183.0/24">41.221.183.0/24</a></td>
+                                    <td class="smallonmobile nowrap">IKATEL SA</td>
+                                </tr>
+                                
+                                <tr id="pfx-41.221.184.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/41.221.184.0/24">41.221.184.0/24</a></td>
+                                    <td class="smallonmobile nowrap">IKATEL SA</td>
+                                </tr>
+                                
+                                <tr id="pfx-41.221.186.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/41.221.186.0/24">41.221.186.0/24</a></td>
+                                    <td class="smallonmobile nowrap">IKATEL SA</td>
+                                </tr>
+                                
+                                <tr id="pfx-41.221.187.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/41.221.187.0/24">41.221.187.0/24</a></td>
+                                    <td class="smallonmobile nowrap">IKATEL SA</td>
+                                </tr>
+                                
+                                <tr id="pfx-41.221.188.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/41.221.188.0/24">41.221.188.0/24</a></td>
+                                    <td class="smallonmobile nowrap">IKATEL SA</td>
+                                </tr>
+                                
+                                <tr id="pfx-41.221.189.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/41.221.189.0/24">41.221.189.0/24</a></td>
+                                    <td class="smallonmobile nowrap">IKATEL SA</td>
+                                </tr>
+                                
+                                <tr id="pfx-41.221.190.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/41.221.190.0/24">41.221.190.0/24</a></td>
+                                    <td class="smallonmobile nowrap">IKATEL SA</td>
+                                </tr>
+                                
+                                <tr id="pfx-41.221.191.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/41.221.191.0/24">41.221.191.0/24</a></td>
+                                    <td class="smallonmobile nowrap">IKATEL SA</td>
+                                </tr>
+                                
+                                <tr id="pfx-102.212.72.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="MU" src="/assets/flags/MU.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/102.212.72.0/24">102.212.72.0/24</a></td>
+                                    <td class="smallonmobile nowrap">AfriNIC - www.afrinic.net</td>
+                                </tr>
+                                
+                                <tr id="pfx-102.212.73.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="MU" src="/assets/flags/MU.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/102.212.73.0/24">102.212.73.0/24</a></td>
+                                    <td class="smallonmobile nowrap">AfriNIC - www.afrinic.net</td>
+                                </tr>
+                                
+                                <tr id="pfx-102.212.74.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="MU" src="/assets/flags/MU.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/102.212.74.0/24">102.212.74.0/24</a></td>
+                                    <td class="smallonmobile nowrap">AfriNIC - www.afrinic.net</td>
+                                </tr>
+                                
+                                <tr id="pfx-102.213.136.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="MU" src="/assets/flags/MU.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/102.213.136.0/24">102.213.136.0/24</a></td>
+                                    <td class="smallonmobile nowrap">AfriNIC - www.afrinic.net</td>
+                                </tr>
+                                
+                                <tr id="pfx-102.213.136.0/22">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="MU" src="/assets/flags/MU.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/102.213.136.0/22">102.213.136.0/22</a></td>
+                                    <td class="smallonmobile nowrap">AfriNIC - www.afrinic.net</td>
+                                </tr>
+                                
+                                <tr id="pfx-102.213.137.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="MU" src="/assets/flags/MU.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/102.213.137.0/24">102.213.137.0/24</a></td>
+                                    <td class="smallonmobile nowrap">AfriNIC - www.afrinic.net</td>
+                                </tr>
+                                
+                                <tr id="pfx-102.213.138.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="MU" src="/assets/flags/MU.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/102.213.138.0/24">102.213.138.0/24</a></td>
+                                    <td class="smallonmobile nowrap">AfriNIC - www.afrinic.net</td>
+                                </tr>
+                                
+                                <tr id="pfx-102.217.24.0/22">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/102.217.24.0/22">102.217.24.0/22</a></td>
+                                    <td class="smallonmobile nowrap">Orange Mali SA</td>
+                                </tr>
+                                
+                                <tr id="pfx-102.217.24.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/102.217.24.0/24">102.217.24.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Orange-Mali-Service-FTTH</td>
+                                </tr>
+                                
+                                <tr id="pfx-102.217.25.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/102.217.25.0/24">102.217.25.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Orange-Mali-Service-FTTH</td>
+                                </tr>
+                                
+                                <tr id="pfx-102.217.26.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/102.217.26.0/24">102.217.26.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Orange-Mali-Service-FTTH</td>
+                                </tr>
+                                
+                                <tr id="pfx-102.217.27.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/102.217.27.0/24">102.217.27.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Orange-Mali-Service-FTTH</td>
+                                </tr>
+                                
+                                <tr id="pfx-102.221.132.0/22">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/102.221.132.0/22">102.221.132.0/22</a></td>
+                                    <td class="smallonmobile nowrap">Orange Mali SA</td>
+                                </tr>
+                                
+                                <tr id="pfx-102.221.133.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/102.221.133.0/24">102.221.133.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Orange-Mali-ISP-B2B-B2C</td>
+                                </tr>
+                                
+                                <tr id="pfx-102.221.134.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/102.221.134.0/24">102.221.134.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Orange-Mali-ISP-B2B-B2C</td>
+                                </tr>
+                                
+                                <tr id="pfx-102.221.135.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/102.221.135.0/24">102.221.135.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Orange Mali SA</td>
+                                </tr>
+                                
+                                <tr id="pfx-154.118.128.0/18">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/154.118.128.0/18">154.118.128.0/18</a></td>
+                                    <td class="smallonmobile nowrap">Orange Mali SA</td>
+                                </tr>
+                                
+                                <tr id="pfx-154.118.137.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/154.118.137.0/24">154.118.137.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Assigner-Clients-Entreprises</td>
+                                </tr>
+                                
+                                <tr id="pfx-154.118.140.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/154.118.140.0/24">154.118.140.0/24</a></td>
+                                    <td class="smallonmobile nowrap">RANGE-GOOGLE-CA</td>
+                                </tr>
+                                
+                                <tr id="pfx-154.118.143.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/154.118.143.0/24">154.118.143.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Assigner-Clients-Entreprises-B2C</td>
+                                </tr>
+                                
+                                <tr id="pfx-154.118.144.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/154.118.144.0/24">154.118.144.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Assigner-Clients-Entreprises-B2C</td>
+                                </tr>
+                                
+                                <tr id="pfx-154.118.148.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/154.118.148.0/24">154.118.148.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Assigner-Clients-Entreprises-B2C</td>
+                                </tr>
+                                
+                                <tr id="pfx-154.118.149.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/154.118.149.0/24">154.118.149.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Orange Mali SA</td>
+                                </tr>
+                                
+                                <tr id="pfx-154.118.150.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/154.118.150.0/24">154.118.150.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Assigner-Clients-Entreprises-B2C</td>
+                                </tr>
+                                
+                                <tr id="pfx-154.118.151.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/154.118.151.0/24">154.118.151.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Assigner-Clients-Entreprises-B2C</td>
+                                </tr>
+                                
+                                <tr id="pfx-154.118.152.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/154.118.152.0/24">154.118.152.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Assigner-Clients-Entreprises-B2C</td>
+                                </tr>
+                                
+                                <tr id="pfx-154.118.156.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/154.118.156.0/24">154.118.156.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Orange Mali SA</td>
+                                </tr>
+                                
+                                <tr id="pfx-154.118.159.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/154.118.159.0/24">154.118.159.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Orange Mali SA</td>
+                                </tr>
+                                
+                                <tr id="pfx-154.118.162.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/154.118.162.0/24">154.118.162.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Orange Mali SA</td>
+                                </tr>
+                                
+                                <tr id="pfx-154.118.163.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/154.118.163.0/24">154.118.163.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Assigner-BACKBONE-SERVVICES</td>
+                                </tr>
+                                
+                                <tr id="pfx-154.118.168.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/154.118.168.0/24">154.118.168.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Orange Mali SA</td>
+                                </tr>
+                                
+                                <tr id="pfx-154.118.169.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/154.118.169.0/24">154.118.169.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Assigner-Clients-Entreprises-B2C</td>
+                                </tr>
+                                
+                                <tr id="pfx-154.118.171.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/154.118.171.0/24">154.118.171.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Orange Mali SA</td>
+                                </tr>
+                                
+                                <tr id="pfx-154.118.183.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/154.118.183.0/24">154.118.183.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Assigner-services-Backbone-B2B-B2C</td>
+                                </tr>
+                                
+                                <tr id="pfx-154.118.184.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/154.118.184.0/24">154.118.184.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Assigner-services-Backbone-B2B-B2C</td>
+                                </tr>
+                                
+                                <tr id="pfx-154.118.185.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/154.118.185.0/24">154.118.185.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Assigner-services-Backbone-B2B-B2C</td>
+                                </tr>
+                                
+                                <tr id="pfx-154.118.186.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/154.118.186.0/24">154.118.186.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Assigner-services-Backbone-B2B-B2C</td>
+                                </tr>
+                                
+                                <tr id="pfx-196.10.220.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/196.10.220.0/24">196.10.220.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Agence des Technologies de lnformation et de la Commu...</td>
+                                </tr>
+                                
+                                <tr id="pfx-196.10.221.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/196.10.221.0/24">196.10.221.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Agence des Technologies de lnformation et de la Commu...</td>
+                                </tr>
+                                
+                                <tr id="pfx-196.200.80.0/21">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/196.200.80.0/21">196.200.80.0/21</a></td>
+                                    <td class="smallonmobile nowrap">IKATEL SA</td>
+                                </tr>
+                                
+                                <tr id="pfx-196.200.80.0/20">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/196.200.80.0/20">196.200.80.0/20</a></td>
+                                    <td class="smallonmobile nowrap">IKATEL SA</td>
+                                </tr>
+                                
+                                <tr id="pfx-196.200.81.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/196.200.81.0/24">196.200.81.0/24</a></td>
+                                    <td class="smallonmobile nowrap">IKATEL SA</td>
+                                </tr>
+                                
+                                <tr id="pfx-196.200.87.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/196.200.87.0/24">196.200.87.0/24</a></td>
+                                    <td class="smallonmobile nowrap">IKATEL SA</td>
+                                </tr>
+                                
+                                <tr id="pfx-196.200.89.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/196.200.89.0/24">196.200.89.0/24</a></td>
+                                    <td class="smallonmobile nowrap">IKATEL SA</td>
+                                </tr>
+                                
+                                <tr id="pfx-196.200.92.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/196.200.92.0/24">196.200.92.0/24</a></td>
+                                    <td class="smallonmobile nowrap">IKATEL SA</td>
+                                </tr>
+                                
+                                <tr id="pfx-196.200.93.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/196.200.93.0/24">196.200.93.0/24</a></td>
+                                    <td class="smallonmobile nowrap">IKATEL SA</td>
+                                </tr>
+                                
+                                <tr id="pfx-196.200.95.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/196.200.95.0/24">196.200.95.0/24</a></td>
+                                    <td class="smallonmobile nowrap">IKATEL SA</td>
+                                </tr>
+                                
+                                <tr id="pfx-197.155.128.0/18">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/197.155.128.0/18">197.155.128.0/18</a></td>
+                                    <td class="smallonmobile nowrap">Orange Mali SA</td>
+                                </tr>
+                                
+                                <tr id="pfx-197.155.130.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/197.155.130.0/24">197.155.130.0/24</a></td>
+                                    <td class="smallonmobile nowrap">BLOC-SYSTEM-INFORMATION</td>
+                                </tr>
+                                
+                                <tr id="pfx-197.155.131.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/197.155.131.0/24">197.155.131.0/24</a></td>
+                                    <td class="smallonmobile nowrap">BLOC-SYSTEM-INFORMATION</td>
+                                </tr>
+                                
+                                <tr id="pfx-197.155.132.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/197.155.132.0/24">197.155.132.0/24</a></td>
+                                    <td class="smallonmobile nowrap">CLIENT-WIMAX-RESIDENT</td>
+                                </tr>
+                                
+                                <tr id="pfx-197.155.137.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/197.155.137.0/24">197.155.137.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Orange Mali SA</td>
+                                </tr>
+                                
+                                <tr id="pfx-197.155.138.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/197.155.138.0/24">197.155.138.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Orange Mali SA</td>
+                                </tr>
+                                
+                                <tr id="pfx-197.155.139.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/197.155.139.0/24">197.155.139.0/24</a></td>
+                                    <td class="smallonmobile nowrap">CLIENT-WIMAX-RESIDENT</td>
+                                </tr>
+                                
+                                <tr id="pfx-197.155.141.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/197.155.141.0/24">197.155.141.0/24</a></td>
+                                    <td class="smallonmobile nowrap">CLIENT-WIMAX-RESIDENT SITE3</td>
+                                </tr>
+                                
+                                <tr id="pfx-197.155.142.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/197.155.142.0/24">197.155.142.0/24</a></td>
+                                    <td class="smallonmobile nowrap">CLIENT-WIMAX-RESIDENT SITE3</td>
+                                </tr>
+                                
+                                <tr id="pfx-197.155.145.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/197.155.145.0/24">197.155.145.0/24</a></td>
+                                    <td class="smallonmobile nowrap">CLIENT-WIMAX-RESIDENT SITE4</td>
+                                </tr>
+                                
+                                <tr id="pfx-197.155.151.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/197.155.151.0/24">197.155.151.0/24</a></td>
+                                    <td class="smallonmobile nowrap">CLIENT-WIMAX-RESIDENT SITE4</td>
+                                </tr>
+                                
+                                <tr id="pfx-197.155.152.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/197.155.152.0/24">197.155.152.0/24</a></td>
+                                    <td class="smallonmobile nowrap">CLIENT-WIMAX-BUSINESS SITE1</td>
+                                </tr>
+                                
+                                <tr id="pfx-197.155.155.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/197.155.155.0/24">197.155.155.0/24</a></td>
+                                    <td class="smallonmobile nowrap">CLIENT-WIMAX-BUSINESS SITE1</td>
+                                </tr>
+                                
+                                <tr id="pfx-197.155.156.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/197.155.156.0/24">197.155.156.0/24</a></td>
+                                    <td class="smallonmobile nowrap">CLIENT-WIMAX-BUSINESS SITE1</td>
+                                </tr>
+                                
+                                <tr id="pfx-197.155.157.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/197.155.157.0/24">197.155.157.0/24</a></td>
+                                    <td class="smallonmobile nowrap">CLIENT-WIMAX-BUSINESS SITE1</td>
+                                </tr>
+                                
+                                <tr id="pfx-197.155.159.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/197.155.159.0/24">197.155.159.0/24</a></td>
+                                    <td class="smallonmobile nowrap">CLIENT-WIMAX-BUSINESS SITE1</td>
+                                </tr>
+                                
+                                <tr id="pfx-197.155.160.0/23">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/197.155.160.0/23">197.155.160.0/23</a></td>
+                                    <td class="smallonmobile nowrap">CLIENT-WIMAX-BUSINESS SITE2</td>
+                                </tr>
+                                
+                                <tr id="pfx-197.155.162.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/197.155.162.0/24">197.155.162.0/24</a></td>
+                                    <td class="smallonmobile nowrap">CLIENT-WIMAX-BUSINESS SITE2</td>
+                                </tr>
+                                
+                                <tr id="pfx-197.155.163.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/197.155.163.0/24">197.155.163.0/24</a></td>
+                                    <td class="smallonmobile nowrap">CLIENT-WIMAX-BUSINESS SITE2</td>
+                                </tr>
+                                
+                                <tr id="pfx-197.155.164.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/197.155.164.0/24">197.155.164.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Orange Mali SA</td>
+                                </tr>
+                                
+                                <tr id="pfx-197.155.165.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/197.155.165.0/24">197.155.165.0/24</a></td>
+                                    <td class="smallonmobile nowrap">CLIENT-WIMAX-BUSINESS SITE2</td>
+                                </tr>
+                                
+                                <tr id="pfx-197.155.166.0/23">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/197.155.166.0/23">197.155.166.0/23</a></td>
+                                    <td class="smallonmobile nowrap">CLIENT-WIMAX-BUSINESS SITE2</td>
+                                </tr>
+                                
+                                <tr id="pfx-197.155.168.0/22">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/197.155.168.0/22">197.155.168.0/22</a></td>
+                                    <td class="smallonmobile nowrap">CLIENT-WIMAX-FH</td>
+                                </tr>
+                                
+                                <tr id="pfx-197.155.172.0/23">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/197.155.172.0/23">197.155.172.0/23</a></td>
+                                    <td class="smallonmobile nowrap">CLIENT-WIMAX-FH</td>
+                                </tr>
+                                
+                                <tr id="pfx-197.155.175.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/197.155.175.0/24">197.155.175.0/24</a></td>
+                                    <td class="smallonmobile nowrap">CLIENT-WIMAX-FH</td>
+                                </tr>
+                                
+                                <tr id="pfx-197.155.177.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/197.155.177.0/24">197.155.177.0/24</a></td>
+                                    <td class="smallonmobile nowrap">CLIENT-WIMAX-FH SITE2</td>
+                                </tr>
+                                
+                                <tr id="pfx-197.155.178.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/197.155.178.0/24">197.155.178.0/24</a></td>
+                                    <td class="smallonmobile nowrap">CLIENT-WIMAX-FH SITE2</td>
+                                </tr>
+                                
+                                <tr id="pfx-197.155.179.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/197.155.179.0/24">197.155.179.0/24</a></td>
+                                    <td class="smallonmobile nowrap">CLIENT-WIMAX-FH SITE2</td>
+                                </tr>
+                                
+                                <tr id="pfx-197.155.180.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/197.155.180.0/24">197.155.180.0/24</a></td>
+                                    <td class="smallonmobile nowrap">CLIENT-WIMAX-FH SITE2</td>
+                                </tr>
+                                
+                                <tr id="pfx-197.155.181.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/197.155.181.0/24">197.155.181.0/24</a></td>
+                                    <td class="smallonmobile nowrap">CLIENT-WIMAX-FH SITE2</td>
+                                </tr>
+                                
+                                <tr id="pfx-197.155.182.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/197.155.182.0/24">197.155.182.0/24</a></td>
+                                    <td class="smallonmobile nowrap">CLIENT-WIMAX-FH SITE2</td>
+                                </tr>
+                                
+                                <tr id="pfx-197.155.183.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/197.155.183.0/24">197.155.183.0/24</a></td>
+                                    <td class="smallonmobile nowrap">CLIENT-WIMAX-FH SITE2</td>
+                                </tr>
+                                
+                                <tr id="pfx-197.155.184.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/197.155.184.0/24">197.155.184.0/24</a></td>
+                                    <td class="smallonmobile nowrap">CLIENT-WIMAX-VPN SITE1</td>
+                                </tr>
+                                
+                                <tr id="pfx-197.155.185.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/197.155.185.0/24">197.155.185.0/24</a></td>
+                                    <td class="smallonmobile nowrap">CLIENT-WIMAX-VPN SITE1</td>
+                                </tr>
+                                
+                                <tr id="pfx-197.155.186.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/197.155.186.0/24">197.155.186.0/24</a></td>
+                                    <td class="smallonmobile nowrap">CLIENT-WIMAX-VPN SITE1</td>
+                                </tr>
+                                
+                                <tr id="pfx-197.155.187.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/197.155.187.0/24">197.155.187.0/24</a></td>
+                                    <td class="smallonmobile nowrap">CLIENT-WIMAX-VPN SITE1</td>
+                                </tr>
+                                
+                                <tr id="pfx-197.155.188.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/197.155.188.0/24">197.155.188.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Orange Mali SA</td>
+                                </tr>
+                                
+                                <tr id="pfx-197.155.189.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/197.155.189.0/24">197.155.189.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Orange Mali SA</td>
+                                </tr>
+                                
+                                <tr id="pfx-197.155.191.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/197.155.191.0/24">197.155.191.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Orange Mali SA</td>
+                                </tr>
+                                
+                                <tr id="pfx-217.170.156.0/22">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/217.170.156.0/22">217.170.156.0/22</a></td>
+                                    <td class="smallonmobile nowrap">CEFIB Internet</td>
+                                </tr>
+                                
+                                <tr id="pfx-2001:42c0::/32">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="UNK" src="/assets/flags/UNK.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2001:42c0::/32">2001:42c0::/32</a></td>
+                                    <td class="smallonmobile nowrap"></td>
+                                </tr>
+                                
+                                <tr id="pfx-2001:42c0:3000::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2001:42c0:3000::/48">2001:42c0:3000::/48</a></td>
+                                    <td class="smallonmobile nowrap">Provider Local Registry</td>
+                                </tr>
+                                
+                                <tr id="pfx-2001:42c0:8100::/40">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2001:42c0:8100::/40">2001:42c0:8100::/40</a></td>
+                                    <td class="smallonmobile nowrap">Provider Local Registry</td>
+                                </tr>
+                                
+                                <tr id="pfx-2001:42c0:8200::/40">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2001:42c0:8200::/40">2001:42c0:8200::/40</a></td>
+                                    <td class="smallonmobile nowrap">Provider Local Registry</td>
+                                </tr>
+                                
+                                <tr id="pfx-2001:42c0:8300::/40">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ML" src="/assets/flags/ML.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2001:42c0:8300::/40">2001:42c0:8300::/40</a></td>
+                                    <td class="smallonmobile nowrap">Provider Local Registry</td>
+                                </tr>
+                                
+                                <tr id="pfx-2001:42c0:8f00::/40">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="UNK" src="/assets/flags/UNK.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2001:42c0:8f00::/40">2001:42c0:8f00::/40</a></td>
+                                    <td class="smallonmobile nowrap"></td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div style="display: none" id="connectivity-page">
+
+                        <div class="grid-row">
+                            <dl class="column-third column-third-first">
+                                <dt><a href="#peers">Peers</a></dt>
+                                <dd class="data">6</dd>
+                            </dl><dl class="column-third column-third-mid">
+                                <dt><a href="#upstreams">Upstreams</a></dt>
+                                
+                                <dd class="text data">3</dd>
+                                
+                            </dl>
+                            <dl class="column-third column-third-last">
+                                <dt><a href="#downstreams">Downstreams</a></dt> <dd class="data">3 (Cone: 5)</dd>
+                            </dl>
+
+                        </div>
+
+
+                        <hr>
+                        <h3>Network Policy<img class="flag-img" src="/assets/info.png" style="padding-left: 12px;" title="This info can take up to 2 hours to fully update" alt="This info take up to 2 hours to fully update"/></h3></h3>
+                        <a style="font-size: small;" href="/kb/network-policy">Click here to learn more about what this graph means and what makes up a network policy</a>
+
+                        <select id="netpolicydropdown" class="dropdownmenu">
+                            
+                                <option disabled=true value="disabled-default">Global Aggregation (disabled due to size)</option>
+                            
+
+                            
+                                
+                            
+                                
+                                <option value="2fff9566a84038418a1a12e5f97442335e9e1286b31cb42824483ad3">Policy trusting_nash</option>
+                                
+                            
+                                
+                                <option value="5c0ebaeb16caefda2ec035c57c0322175bc1396caaa4c9a7ea8f28fb">Policy jovial_babbage</option>
+                                
+                            
+                                
+                                <option value="c6230d523f56badec856398e7802729c95982d9ae410b088863b9369">Policy gracious_fermi</option>
+                                
+                            
+                                
+                                <option value="d907d8bc01a27c29b5091be08fd77e7e2cbb474614f9d934327966a0">Policy loving_moore</option>
+                                
+                            
+                                
+                                <option value="e131197cf230bc25df4fc23b10bd0d8bef214511cf6a4c6973d761de">Policy sleepy_pike</option>
+                                
+                            
+                                
+                                <option value="05eebbe89f02b56c1915268158f16327186f513c5dd8c71f8089bb80">Policy nostalgic_bhabha</option>
+                                
+                            
+                                
+                                <option value="3014cb36d01237a2a2fd0d300d3b1ae7a8a066a63836ad19f8b807ce">Policy bold_dirac</option>
+                                
+                            
+                                
+                                <option value="3a2941df2fbec86d55d55f5209a0b8647b76b0891a0ed0141f0e4a6e">Policy wonderful_euclid</option>
+                                
+                            
+                                
+                                <option value="8852905e9d51b4c0b33da0e91cf1e4102b2817aaa5cbae439fbd91e2">Policy sad_sutherland</option>
+                                
+                            
+                                
+                                <option value="b0ee86281166881236e877aabd11cc008879bc25eca5d79ef6bfda9b">Policy infallible_hawking</option>
+                                
+                            
+                                
+                                <option value="bb0f917e5f74848c47dbc5fa7ec9300374d848c2bc3b15c323fc5eda">Policy gifted_zhukovsky</option>
+                                
+                            
+                                
+                                <option value="3091412c7854c56f465655c8fcd1ae0c329f9626c10dc52231bc73cf">Policy magical_dhawan</option>
+                                
+                            
+                                
+                                <option value="49599bad4af8b53d67bf9c81d383d0953a9869c5dbf4884e239e912e">Policy elated_lederberg</option>
+                                
+                            
+                                
+                                <option value="5e89657461e1e2eadd347ddc79238baa0a3f575f124995fd202abedc">Policy suspicious_dijkstra</option>
+                                
+                            
+                                
+                                <option value="76f148c1ed34812c4d49cbf13154c855c2e1bd231cce5cc614cd68f3">Policy modest_hoover</option>
+                                
+                            
+                                
+                                <option value="c73227032868183e1cbeab4fc1ef4e342c1c26ba87a882dd9731f4a2">Policy jolly_banzai</option>
+                                
+                            
+                                
+                                <option selected value="129ecdc8f609d7e9defb837bfd8e750708523978388d31095e0b11ff">Policy friendly_antonelli</option>
+                                
+                            
+                                
+                                <option value="e54cbf64b3e7845a7eb95f7af5fd510acbfcaed4f6a9d64f6c358aea">Policy condescending_ritchie</option>
+                                
+                            
+                                
+                                <option value="fc4ac0239a9106bcaaafa546c80c2dd42b01a7c621977e3800450eca">Policy peaceful_lehmann</option>
+                                
+                            
+                                
+                                <option value="90a621a365229f9527394dc5d56e41f101cfad83728abfffcac8dd86">Policy cocky_bhabha</option>
+                                
+                            
+                                
+                                <option value="44cedcf3a79bcbb9b9305cf058e8207d946380fd8cf6c125a8412aa4">Policy jovial_franklin</option>
+                                
+                            
+                                
+                                <option value="77b7e5d3256a5cbbe9185b2f804554ddf6c5c213cd4b1f076a67960e">Policy loving_gagarin</option>
+                                
+                            
+                                
+                                <option value="a9229a89ea4e4f62e69b4ba97d87b750c61ed451ba402b0148d2aa4d">Policy mystifying_chandrasekhar</option>
+                                
+                            
+                                
+                                <option value="ca338c5637d62952c58e9d7aab4ddb765ed5c8bdf696b28d4e8c8596">Policy sharp_kilby</option>
+                                
+                            
+                                
+                                <option value="e81b2f2db42ec9cf6603a7591c6c5e8b7ce5b357effb6b9dfd562c29">Policy vibrant_northcutt</option>
+                                
+                            
+                                
+                                <option value="14ead2c9abafa3fc5ad5400d4f44fa6a5ee97992d56e65131eee1360">Policy gallant_carson</option>
+                                
+                            
+                                
+                                <option value="5b21ea487741872965fcac8c987741a29a22bdf3f4cce2e69c75a620">Policy relaxed_brown</option>
+                                
+                            
+                                
+                                <option value="7fa0dd469f2ed4d503332397a5a231ad7c8fc043db09bb7a2d6372ba">Policy frosty_torvalds</option>
+                                
+                            
+                                
+                                <option value="31cab412837e7c5a4f31d138787c875a55a04dd273fbed3c85479279">Policy trusting_varahamihira</option>
+                                
+                            
+                                
+                                <option value="53e0dc48e72b1b03ab1921b67bb921e8f00ca3a24e6ca6873d9f7d85">Policy lucid_austin</option>
+                                
+                            
+                                
+                                <option value="7757cc7a55767910c95a111ab7d7ee0c92517ba437bb5801cf7b39fc">Policy zen_boyd</option>
+                                
+                            
+                                
+                                <option value="9ceff8893d90fa450540ca23d9374b055b9696f0c0972f9f3af405f5">Policy priceless_ptolemy</option>
+                                
+                            
+                                
+                                <option value="1adf91a08dd7877e427b59f00692dda87a93c27adc89f9d25d530f9d">Policy happy_shtern</option>
+                                
+                            
+                                
+                                <option value="26502cdffbd5d28cf1529fbc68f0f1fe2a6a603e7d17b95eea554641">Policy admiring_goldwasser</option>
+                                
+                            
+
+                            
+
+
+                        </select>
+
+                        <script>var netgroups = {"05eebbe89f02b56c1915268158f16327186f513c5dd8c71f8089bb80":["41.221.183.0/24","41.73.104.0/24","41.73.117.0/24","41.73.112.0/24","41.73.103.0/24","154.118.162.0/24","41.221.182.0/24"],"129ecdc8f609d7e9defb837bfd8e750708523978388d31095e0b11ff":["197.155.165.0/24","197.155.168.0/22","197.155.159.0/24","197.155.152.0/24","197.155.175.0/24","154.118.185.0/24","197.155.156.0/24","154.118.151.0/24","197.155.178.0/24","154.118.144.0/24","197.155.162.0/24","197.155.164.0/24","154.118.152.0/24","154.118.148.0/24","197.155.183.0/24","197.155.131.0/24","197.155.166.0/23","197.155.179.0/24","41.73.123.0/24","154.118.169.0/24","154.118.183.0/24","197.155.184.0/24","41.221.179.0/24","196.200.93.0/24","154.118.143.0/24","197.155.185.0/24","197.155.145.0/24","197.155.155.0/24","197.155.181.0/24","41.221.187.0/24","197.155.172.0/23","154.118.150.0/24","154.118.140.0/24","197.155.157.0/24","197.155.132.0/24","197.155.180.0/24","197.155.177.0/24","154.118.184.0/24","197.155.151.0/24","154.118.137.0/24","41.221.184.0/24","197.155.138.0/24","196.200.92.0/24","197.155.160.0/23","197.155.163.0/24","197.155.142.0/24"],"14ead2c9abafa3fc5ad5400d4f44fa6a5ee97992d56e65131eee1360":["154.118.149.0/24"],"1adf91a08dd7877e427b59f00692dda87a93c27adc89f9d25d530f9d":["41.73.114.0/24","102.212.74.0/24","41.73.113.0/24","196.10.221.0/24","102.212.73.0/24","196.10.220.0/24","102.212.72.0/24","41.221.186.0/24","154.118.163.0/24"],"26502cdffbd5d28cf1529fbc68f0f1fe2a6a603e7d17b95eea554641":["197.155.130.0/24","41.73.100.0/24","41.73.124.0/24"],"2fff9566a84038418a1a12e5f97442335e9e1286b31cb42824483ad3":["41.73.127.0/24"],"3014cb36d01237a2a2fd0d300d3b1ae7a8a066a63836ad19f8b807ce":["197.155.189.0/24","197.155.141.0/24"],"3091412c7854c56f465655c8fcd1ae0c329f9626c10dc52231bc73cf":["41.221.189.0/24"],"31cab412837e7c5a4f31d138787c875a55a04dd273fbed3c85479279":["2001:42c0:3000::/48"],"3a2941df2fbec86d55d55f5209a0b8647b76b0891a0ed0141f0e4a6e":["41.221.180.0/24","41.221.190.0/24","41.221.191.0/24"],"44cedcf3a79bcbb9b9305cf058e8207d946380fd8cf6c125a8412aa4":["154.118.186.0/24"],"49599bad4af8b53d67bf9c81d383d0953a9869c5dbf4884e239e912e":["154.118.171.0/24"],"53e0dc48e72b1b03ab1921b67bb921e8f00ca3a24e6ca6873d9f7d85":["2001:42c0:8200::/40","2001:42c0:8100::/40"],"5b21ea487741872965fcac8c987741a29a22bdf3f4cce2e69c75a620":["102.217.24.0/22","102.221.132.0/22"],"5c0ebaeb16caefda2ec035c57c0322175bc1396caaa4c9a7ea8f28fb":["41.73.107.0/24"],"5e89657461e1e2eadd347ddc79238baa0a3f575f124995fd202abedc":["41.73.125.0/24"],"76f148c1ed34812c4d49cbf13154c855c2e1bd231cce5cc614cd68f3":["41.73.99.0/24","154.118.159.0/24"],"7757cc7a55767910c95a111ab7d7ee0c92517ba437bb5801cf7b39fc":["41.73.122.0/24","41.73.121.0/24"],"77b7e5d3256a5cbbe9185b2f804554ddf6c5c213cd4b1f076a67960e":["197.155.128.0/18","41.73.96.0/19","154.118.128.0/18"],"7fa0dd469f2ed4d503332397a5a231ad7c8fc043db09bb7a2d6372ba":["41.73.110.0/24"],"8852905e9d51b4c0b33da0e91cf1e4102b2817aaa5cbae439fbd91e2":["41.221.181.0/24"],"90a621a365229f9527394dc5d56e41f101cfad83728abfffcac8dd86":["41.73.119.0/24","197.155.182.0/24","154.118.156.0/24","41.73.118.0/24","196.200.87.0/24","41.73.115.0/24","196.200.89.0/24","196.200.95.0/24"],"9ceff8893d90fa450540ca23d9374b055b9696f0c0972f9f3af405f5":["196.200.81.0/24"],"a9229a89ea4e4f62e69b4ba97d87b750c61ed451ba402b0148d2aa4d":["197.155.188.0/24","197.155.186.0/24","197.155.137.0/24","102.213.136.0/22","197.155.139.0/24","41.73.116.0/24","41.221.178.0/24","197.155.191.0/24","197.155.187.0/24","41.73.111.0/24"],"b0ee86281166881236e877aabd11cc008879bc25eca5d79ef6bfda9b":["2001:42c0:8f00::/40"],"bb0f917e5f74848c47dbc5fa7ec9300374d848c2bc3b15c323fc5eda":["217.170.156.0/22","196.200.80.0/20","41.221.176.0/20"],"c6230d523f56badec856398e7802729c95982d9ae410b088863b9369":["2001:42c0::/32"],"c73227032868183e1cbeab4fc1ef4e342c1c26ba87a882dd9731f4a2":["154.118.168.0/24","41.73.98.0/24"],"ca338c5637d62952c58e9d7aab4ddb765ed5c8bdf696b28d4e8c8596":["102.213.136.0/24","102.221.135.0/24","102.217.24.0/24","102.213.138.0/24","102.221.133.0/24","102.213.137.0/24","102.217.27.0/24","102.217.25.0/24","102.217.26.0/24","102.221.134.0/24"],"d907d8bc01a27c29b5091be08fd77e7e2cbb474614f9d934327966a0":["196.200.80.0/21"],"e131197cf230bc25df4fc23b10bd0d8bef214511cf6a4c6973d761de":["41.221.188.0/24"],"e54cbf64b3e7845a7eb95f7af5fd510acbfcaed4f6a9d64f6c358aea":["41.73.109.0/24"],"e81b2f2db42ec9cf6603a7591c6c5e8b7ce5b357effb6b9dfd562c29":["2001:42c0:8300::/40"],"fc4ac0239a9106bcaaafa546c80c2dd42b01a7c621977e3800450eca":["41.73.120.0/24"]}</script>
+
+                        <div style="text-align: center;">
+                            <img id="pathimg" usemap="#world" src="">
+                            <div id="world2"></div>
+                        </div>
+
+                        <details>
+                            <summary>Chart Display Options</summary>
+                            <noscript>This requires javascript to work</noscript>
+                            <label for="graphOptionMoreWiggle" style="display: flex;align-items: center;font-size: 20px;">
+                                <input type="checkbox" id="graphOptionMoreWiggle" name="graphOptionMoreWiggle" style="width: 64px; height: 32px;">
+                                    <p id="graphOptionMoreWiggleLabel" style="width: 200%;">Display links using non straight lines</p>
+                            </label>
+                        </details>
+
+                        <h3 style="display: none;" id="PISPBanner">Prefixes in selected policy</h3>
+                        <table id="policytable" class="full-width-table">
+                        </table>
+                        <button style="width:100%;display: none;" id="ShowFullPolicyButton" class="bigButton" onclick="dropdownPoke()">Load all prefixes in policy</button>
+
+                        <script>
+                            !function(a,b){"function"==typeof define&&define.amd?define([],b):"undefined"!=typeof module&&module.exports?module.exports=b():a.ReconnectingWebSocket=b()}(this,function(){function a(b,c,d){function l(a,b){var c=document.createEvent("CustomEvent");return c.initCustomEvent(a,!1,!1,b),c}var e={debug:!1,automaticOpen:!0,reconnectInterval:1e3,maxReconnectInterval:3e4,reconnectDecay:1.5,timeoutInterval:2e3};d||(d={});for(var f in e)this[f]="undefined"!=typeof d[f]?d[f]:e[f];this.url=b,this.reconnectAttempts=0,this.readyState=WebSocket.CONNECTING,this.protocol=null;var h,g=this,i=!1,j=!1,k=document.createElement("div");k.addEventListener("open",function(a){g.onopen(a)}),k.addEventListener("close",function(a){g.onclose(a)}),k.addEventListener("connecting",function(a){g.onconnecting(a)}),k.addEventListener("message",function(a){g.onmessage(a)}),k.addEventListener("error",function(a){g.onerror(a)}),this.addEventListener=k.addEventListener.bind(k),this.removeEventListener=k.removeEventListener.bind(k),this.dispatchEvent=k.dispatchEvent.bind(k),this.open=function(b){h=new WebSocket(g.url,c||[]),b||k.dispatchEvent(l("connecting")),(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","attempt-connect",g.url);var d=h,e=setTimeout(function(){(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","connection-timeout",g.url),j=!0,d.close(),j=!1},g.timeoutInterval);h.onopen=function(){clearTimeout(e),(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","onopen",g.url),g.protocol=h.protocol,g.readyState=WebSocket.OPEN,g.reconnectAttempts=0;var d=l("open");d.isReconnect=b,b=!1,k.dispatchEvent(d)},h.onclose=function(c){if(clearTimeout(e),h=null,i)g.readyState=WebSocket.CLOSED,k.dispatchEvent(l("close"));else{g.readyState=WebSocket.CONNECTING;var d=l("connecting");d.code=c.code,d.reason=c.reason,d.wasClean=c.wasClean,k.dispatchEvent(d),b||j||((g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","onclose",g.url),k.dispatchEvent(l("close")));var e=g.reconnectInterval*Math.pow(g.reconnectDecay,g.reconnectAttempts);setTimeout(function(){g.reconnectAttempts++,g.open(!0)},e>g.maxReconnectInterval?g.maxReconnectInterval:e)}},h.onmessage=function(b){(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","onmessage",g.url,b.data);var c=l("message");c.data=b.data,k.dispatchEvent(c)},h.onerror=function(b){(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","onerror",g.url,b),k.dispatchEvent(l("error"))}},1==this.automaticOpen&&this.open(!1),this.send=function(b){if(h)return(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","send",g.url,b),h.send(b);throw"INVALID_STATE_ERR : Pausing to reconnect websocket"},this.close=function(a,b){"undefined"==typeof a&&(a=1e3),i=!0,h&&h.close(a,b)},this.refresh=function(){h&&h.close()}}return a.prototype.onopen=function(){},a.prototype.onclose=function(){},a.prototype.onconnecting=function(){},a.prototype.onmessage=function(){},a.prototype.onerror=function(){},a.debugAll=!1,a.CONNECTING=WebSocket.CONNECTING,a.OPEN=WebSocket.OPEN,a.CLOSING=WebSocket.CLOSING,a.CLOSED=WebSocket.CLOSED,a});
+                        </script>
+                        
+                        <script>
+                            var prefixinfo = [{"PrefixString":"41.73.96.0/19","WhoisName":"Orange Mali SA","WhoisCountry":"ML"},{"PrefixString":"41.73.98.0/24","WhoisName":"WIMAX-PPP-OML","WhoisCountry":"ML"},{"PrefixString":"41.73.99.0/24","WhoisName":"WIMAX-PPP-OML","WhoisCountry":"ML"},{"PrefixString":"41.73.100.0/24","WhoisName":"WIMAX-PPP-OML-REGIONS","WhoisCountry":"ML"},{"PrefixString":"41.73.103.0/24","WhoisName":"WIMAX-PPP-OML-BKO10","WhoisCountry":"ML"},{"PrefixString":"41.73.104.0/24","WhoisName":"WIMAX-PPP-OML-BKO8","WhoisCountry":"ML"},{"PrefixString":"41.73.105.0/24","WhoisName":"WIMAX-PPP-OML-BKO8-16E","WhoisCountry":"ML"},{"PrefixString":"41.73.107.0/24","WhoisName":"WIMAX-PPP-OML-BKO8-16E","WhoisCountry":"ML"},{"PrefixString":"41.73.109.0/24","WhoisName":"WIMAX-PPP-OML-BKO6-16E","WhoisCountry":"ML"},{"PrefixString":"41.73.110.0/24","WhoisName":"WIMAX-PPP-OML-BKO6-16E","WhoisCountry":"ML"},{"PrefixString":"41.73.111.0/24","WhoisName":"WIMAX-PPP-OML-BKO6-16E","WhoisCountry":"ML"},{"PrefixString":"41.73.112.0/24","WhoisName":"WIMAX-PPP-OML-BKO10-16E","WhoisCountry":"ML"},{"PrefixString":"41.73.113.0/24","WhoisName":"WIMAX-PPP-OML-BKO10-16E","WhoisCountry":"ML"},{"PrefixString":"41.73.114.0/24","WhoisName":"WIMAX-PPP-OML-BKO10-16E","WhoisCountry":"ML"},{"PrefixString":"41.73.115.0/24","WhoisName":"WIMAX-PPP-OML-BKO10-16E","WhoisCountry":"ML"},{"PrefixString":"41.73.116.0/24","WhoisName":"CLIENT-FH-BAMAKO","WhoisCountry":"ML"},{"PrefixString":"41.73.117.0/24","WhoisName":"Orange Mali SA","WhoisCountry":"ML"},{"PrefixString":"41.73.118.0/24","WhoisName":"Orange Mali SA","WhoisCountry":"ML"},{"PrefixString":"41.73.119.0/24","WhoisName":"WIMAX-PPP-OML-BKO8","WhoisCountry":"ML"},{"PrefixString":"41.73.120.0/24","WhoisName":"WIMAX-PPP-OML-BKO6","WhoisCountry":"ML"},{"PrefixString":"41.73.121.0/24","WhoisName":"WIMAX-PPP-OML-BKO8","WhoisCountry":"ML"},{"PrefixString":"41.73.122.0/24","WhoisName":"WIMAX-PPP-OML-BKO8","WhoisCountry":"ML"},{"PrefixString":"41.73.123.0/24","WhoisName":"Orange-Mali-Service-FTTH","WhoisCountry":"ML"},{"PrefixString":"41.73.124.0/24","WhoisName":"Orange-Mali-Service-FTTH","WhoisCountry":"ML"},{"PrefixString":"41.73.125.0/24","WhoisName":"Orange-Mali-Service-FTTH","WhoisCountry":"ML"},{"PrefixString":"41.73.127.0/24","WhoisName":"Orange-Mali-Service-FTTH","WhoisCountry":"ML"},{"PrefixString":"41.221.176.0/20","WhoisName":"IKATEL SA","WhoisCountry":"ML"},{"PrefixString":"41.221.178.0/24","WhoisName":"IKATEL SA","WhoisCountry":"ML"},{"PrefixString":"41.221.179.0/24","WhoisName":"IKATEL SA","WhoisCountry":"ML"},{"PrefixString":"41.221.180.0/24","WhoisName":"IKATEL SA","WhoisCountry":"ML"},{"PrefixString":"41.221.181.0/24","WhoisName":"IKATEL SA","WhoisCountry":"ML"},{"PrefixString":"41.221.182.0/24","WhoisName":"IKATEL SA","WhoisCountry":"ML"},{"PrefixString":"41.221.183.0/24","WhoisName":"IKATEL SA","WhoisCountry":"ML"},{"PrefixString":"41.221.184.0/24","WhoisName":"IKATEL SA","WhoisCountry":"ML"},{"PrefixString":"41.221.186.0/24","WhoisName":"IKATEL SA","WhoisCountry":"ML"},{"PrefixString":"41.221.187.0/24","WhoisName":"IKATEL SA","WhoisCountry":"ML"},{"PrefixString":"41.221.188.0/24","WhoisName":"IKATEL SA","WhoisCountry":"ML"},{"PrefixString":"41.221.189.0/24","WhoisName":"IKATEL SA","WhoisCountry":"ML"},{"PrefixString":"41.221.190.0/24","WhoisName":"IKATEL SA","WhoisCountry":"ML"},{"PrefixString":"41.221.191.0/24","WhoisName":"IKATEL SA","WhoisCountry":"ML"},{"PrefixString":"102.212.72.0/24","WhoisName":"AfriNIC - www.afrinic.net","WhoisCountry":"MU"},{"PrefixString":"102.212.73.0/24","WhoisName":"AfriNIC - www.afrinic.net","WhoisCountry":"MU"},{"PrefixString":"102.212.74.0/24","WhoisName":"AfriNIC - www.afrinic.net","WhoisCountry":"MU"},{"PrefixString":"102.213.136.0/24","WhoisName":"AfriNIC - www.afrinic.net","WhoisCountry":"MU"},{"PrefixString":"102.213.136.0/22","WhoisName":"AfriNIC - www.afrinic.net","WhoisCountry":"MU"},{"PrefixString":"102.213.137.0/24","WhoisName":"AfriNIC - www.afrinic.net","WhoisCountry":"MU"},{"PrefixString":"102.213.138.0/24","WhoisName":"AfriNIC - www.afrinic.net","WhoisCountry":"MU"},{"PrefixString":"102.217.24.0/22","WhoisName":"Orange Mali SA","WhoisCountry":"ML"},{"PrefixString":"102.217.24.0/24","WhoisName":"Orange-Mali-Service-FTTH","WhoisCountry":"ML"},{"PrefixString":"102.217.25.0/24","WhoisName":"Orange-Mali-Service-FTTH","WhoisCountry":"ML"},{"PrefixString":"102.217.26.0/24","WhoisName":"Orange-Mali-Service-FTTH","WhoisCountry":"ML"},{"PrefixString":"102.217.27.0/24","WhoisName":"Orange-Mali-Service-FTTH","WhoisCountry":"ML"},{"PrefixString":"102.221.132.0/22","WhoisName":"Orange Mali SA","WhoisCountry":"ML"},{"PrefixString":"102.221.133.0/24","WhoisName":"Orange-Mali-ISP-B2B-B2C","WhoisCountry":"ML"},{"PrefixString":"102.221.134.0/24","WhoisName":"Orange-Mali-ISP-B2B-B2C","WhoisCountry":"ML"},{"PrefixString":"102.221.135.0/24","WhoisName":"Orange Mali SA","WhoisCountry":"ML"},{"PrefixString":"154.118.128.0/18","WhoisName":"Orange Mali SA","WhoisCountry":"ML"},{"PrefixString":"154.118.137.0/24","WhoisName":"Assigner-Clients-Entreprises","WhoisCountry":"ML"},{"PrefixString":"154.118.140.0/24","WhoisName":"RANGE-GOOGLE-CA","WhoisCountry":"ML"},{"PrefixString":"154.118.143.0/24","WhoisName":"Assigner-Clients-Entreprises-B2C","WhoisCountry":"ML"},{"PrefixString":"154.118.144.0/24","WhoisName":"Assigner-Clients-Entreprises-B2C","WhoisCountry":"ML"},{"PrefixString":"154.118.148.0/24","WhoisName":"Assigner-Clients-Entreprises-B2C","WhoisCountry":"ML"},{"PrefixString":"154.118.149.0/24","WhoisName":"Orange Mali SA","WhoisCountry":"ML"},{"PrefixString":"154.118.150.0/24","WhoisName":"Assigner-Clients-Entreprises-B2C","WhoisCountry":"ML"},{"PrefixString":"154.118.151.0/24","WhoisName":"Assigner-Clients-Entreprises-B2C","WhoisCountry":"ML"},{"PrefixString":"154.118.152.0/24","WhoisName":"Assigner-Clients-Entreprises-B2C","WhoisCountry":"ML"},{"PrefixString":"154.118.156.0/24","WhoisName":"Orange Mali SA","WhoisCountry":"ML"},{"PrefixString":"154.118.159.0/24","WhoisName":"Orange Mali SA","WhoisCountry":"ML"},{"PrefixString":"154.118.162.0/24","WhoisName":"Orange Mali SA","WhoisCountry":"ML"},{"PrefixString":"154.118.163.0/24","WhoisName":"Assigner-BACKBONE-SERVVICES","WhoisCountry":"ML"},{"PrefixString":"154.118.168.0/24","WhoisName":"Orange Mali SA","WhoisCountry":"ML"},{"PrefixString":"154.118.169.0/24","WhoisName":"Assigner-Clients-Entreprises-B2C","WhoisCountry":"ML"},{"PrefixString":"154.118.171.0/24","WhoisName":"Orange Mali SA","WhoisCountry":"ML"},{"PrefixString":"154.118.183.0/24","WhoisName":"Assigner-services-Backbone-B2B-B2C","WhoisCountry":"ML"},{"PrefixString":"154.118.184.0/24","WhoisName":"Assigner-services-Backbone-B2B-B2C","WhoisCountry":"ML"},{"PrefixString":"154.118.185.0/24","WhoisName":"Assigner-services-Backbone-B2B-B2C","WhoisCountry":"ML"},{"PrefixString":"154.118.186.0/24","WhoisName":"Assigner-services-Backbone-B2B-B2C","WhoisCountry":"ML"},{"PrefixString":"196.10.220.0/24","WhoisName":"Agence des Technologies de lnformation et de la Commu...","WhoisCountry":"ML"},{"PrefixString":"196.10.221.0/24","WhoisName":"Agence des Technologies de lnformation et de la Commu...","WhoisCountry":"ML"},{"PrefixString":"196.200.80.0/21","WhoisName":"IKATEL SA","WhoisCountry":"ML"},{"PrefixString":"196.200.80.0/20","WhoisName":"IKATEL SA","WhoisCountry":"ML"},{"PrefixString":"196.200.81.0/24","WhoisName":"IKATEL SA","WhoisCountry":"ML"},{"PrefixString":"196.200.87.0/24","WhoisName":"IKATEL SA","WhoisCountry":"ML"},{"PrefixString":"196.200.89.0/24","WhoisName":"IKATEL SA","WhoisCountry":"ML"},{"PrefixString":"196.200.92.0/24","WhoisName":"IKATEL SA","WhoisCountry":"ML"},{"PrefixString":"196.200.93.0/24","WhoisName":"IKATEL SA","WhoisCountry":"ML"},{"PrefixString":"196.200.95.0/24","WhoisName":"IKATEL SA","WhoisCountry":"ML"},{"PrefixString":"197.155.128.0/18","WhoisName":"Orange Mali SA","WhoisCountry":"ML"},{"PrefixString":"197.155.130.0/24","WhoisName":"BLOC-SYSTEM-INFORMATION","WhoisCountry":"ML"},{"PrefixString":"197.155.131.0/24","WhoisName":"BLOC-SYSTEM-INFORMATION","WhoisCountry":"ML"},{"PrefixString":"197.155.132.0/24","WhoisName":"CLIENT-WIMAX-RESIDENT","WhoisCountry":"ML"},{"PrefixString":"197.155.137.0/24","WhoisName":"Orange Mali SA","WhoisCountry":"ML"},{"PrefixString":"197.155.138.0/24","WhoisName":"Orange Mali SA","WhoisCountry":"ML"},{"PrefixString":"197.155.139.0/24","WhoisName":"CLIENT-WIMAX-RESIDENT","WhoisCountry":"ML"},{"PrefixString":"197.155.141.0/24","WhoisName":"CLIENT-WIMAX-RESIDENT SITE3","WhoisCountry":"ML"},{"PrefixString":"197.155.142.0/24","WhoisName":"CLIENT-WIMAX-RESIDENT SITE3","WhoisCountry":"ML"},{"PrefixString":"197.155.145.0/24","WhoisName":"CLIENT-WIMAX-RESIDENT SITE4","WhoisCountry":"ML"},{"PrefixString":"197.155.151.0/24","WhoisName":"CLIENT-WIMAX-RESIDENT SITE4","WhoisCountry":"ML"},{"PrefixString":"197.155.152.0/24","WhoisName":"CLIENT-WIMAX-BUSINESS SITE1","WhoisCountry":"ML"},{"PrefixString":"197.155.155.0/24","WhoisName":"CLIENT-WIMAX-BUSINESS SITE1","WhoisCountry":"ML"},{"PrefixString":"197.155.156.0/24","WhoisName":"CLIENT-WIMAX-BUSINESS SITE1","WhoisCountry":"ML"},{"PrefixString":"197.155.157.0/24","WhoisName":"CLIENT-WIMAX-BUSINESS SITE1","WhoisCountry":"ML"},{"PrefixString":"197.155.159.0/24","WhoisName":"CLIENT-WIMAX-BUSINESS SITE1","WhoisCountry":"ML"},{"PrefixString":"197.155.160.0/23","WhoisName":"CLIENT-WIMAX-BUSINESS SITE2","WhoisCountry":"ML"},{"PrefixString":"197.155.162.0/24","WhoisName":"CLIENT-WIMAX-BUSINESS SITE2","WhoisCountry":"ML"},{"PrefixString":"197.155.163.0/24","WhoisName":"CLIENT-WIMAX-BUSINESS SITE2","WhoisCountry":"ML"},{"PrefixString":"197.155.164.0/24","WhoisName":"Orange Mali SA","WhoisCountry":"ML"},{"PrefixString":"197.155.165.0/24","WhoisName":"CLIENT-WIMAX-BUSINESS SITE2","WhoisCountry":"ML"},{"PrefixString":"197.155.166.0/23","WhoisName":"CLIENT-WIMAX-BUSINESS SITE2","WhoisCountry":"ML"},{"PrefixString":"197.155.168.0/22","WhoisName":"CLIENT-WIMAX-FH","WhoisCountry":"ML"},{"PrefixString":"197.155.172.0/23","WhoisName":"CLIENT-WIMAX-FH","WhoisCountry":"ML"},{"PrefixString":"197.155.175.0/24","WhoisName":"CLIENT-WIMAX-FH","WhoisCountry":"ML"},{"PrefixString":"197.155.177.0/24","WhoisName":"CLIENT-WIMAX-FH SITE2","WhoisCountry":"ML"},{"PrefixString":"197.155.178.0/24","WhoisName":"CLIENT-WIMAX-FH SITE2","WhoisCountry":"ML"},{"PrefixString":"197.155.179.0/24","WhoisName":"CLIENT-WIMAX-FH SITE2","WhoisCountry":"ML"},{"PrefixString":"197.155.180.0/24","WhoisName":"CLIENT-WIMAX-FH SITE2","WhoisCountry":"ML"},{"PrefixString":"197.155.181.0/24","WhoisName":"CLIENT-WIMAX-FH SITE2","WhoisCountry":"ML"},{"PrefixString":"197.155.182.0/24","WhoisName":"CLIENT-WIMAX-FH SITE2","WhoisCountry":"ML"},{"PrefixString":"197.155.183.0/24","WhoisName":"CLIENT-WIMAX-FH SITE2","WhoisCountry":"ML"},{"PrefixString":"197.155.184.0/24","WhoisName":"CLIENT-WIMAX-VPN SITE1","WhoisCountry":"ML"},{"PrefixString":"197.155.185.0/24","WhoisName":"CLIENT-WIMAX-VPN SITE1","WhoisCountry":"ML"},{"PrefixString":"197.155.186.0/24","WhoisName":"CLIENT-WIMAX-VPN SITE1","WhoisCountry":"ML"},{"PrefixString":"197.155.187.0/24","WhoisName":"CLIENT-WIMAX-VPN SITE1","WhoisCountry":"ML"},{"PrefixString":"197.155.188.0/24","WhoisName":"Orange Mali SA","WhoisCountry":"ML"},{"PrefixString":"197.155.189.0/24","WhoisName":"Orange Mali SA","WhoisCountry":"ML"},{"PrefixString":"197.155.191.0/24","WhoisName":"Orange Mali SA","WhoisCountry":"ML"},{"PrefixString":"217.170.156.0/22","WhoisName":"CEFIB Internet","WhoisCountry":"ML"},{"PrefixString":"2001:42c0::/32","WhoisName":"","WhoisCountry":"UNK"},{"PrefixString":"2001:42c0:3000::/48","WhoisName":"Provider Local Registry","WhoisCountry":"ML"},{"PrefixString":"2001:42c0:8100::/40","WhoisName":"Provider Local Registry","WhoisCountry":"ML"},{"PrefixString":"2001:42c0:8200::/40","WhoisName":"Provider Local Registry","WhoisCountry":"ML"},{"PrefixString":"2001:42c0:8300::/40","WhoisName":"Provider Local Registry","WhoisCountry":"ML"},{"PrefixString":"2001:42c0:8f00::/40","WhoisName":"","WhoisCountry":"UNK"}]
+                            var asn =  30985 
+
+                            var pfxExtraString = "";
+
+                            function saveGraphOptionsToLocalStorage() {
+                                localStorage.setItem("pfx-chart-options:wiggle", document.getElementById("graphOptionMoreWiggle").checked);
+                            }
+
+                            function loadGraphOptionsToLocalStorage() {
+                                document.getElementById("graphOptionMoreWiggle").checked = localStorage.getItem("pfx-chart-options:wiggle") == "true";
+                                pfxExtraString= "";
+                                if (document.getElementById("graphOptionMoreWiggle").checked) {
+                                    pfxExtraString = pfxExtraString + "&wiggly";
+                                }
+                            }
+                            loadGraphOptionsToLocalStorage();
+
+                            function graphOptionsChanged() {
+                                saveGraphOptionsToLocalStorage();
+                                handleImageChange();
+                            }
+                            document.getElementById("graphOptionMoreWiggle").addEventListener("click", graphOptionsChanged)
+
+
+                            function handleImageChange() {
+                                loadGraphOptionsToLocalStorage();
+                                
+                                document.getElementById("pathimg").src=("/pathimg/"+asn+ "-" + document.getElementById("netpolicydropdown").value +"?"+pfxExtraString);
+                                var request = new XMLHttpRequest();
+                                request.open('GET', "/pathimg/"+asn+ "-" + document.getElementById("netpolicydropdown").value + "?map=true" + pfxExtraString, true);
+
+                                request.onload = function() {
+                                    if (this.status >= 200 && this.status < 400) {
+                                        
+                                        
+                                        document.getElementById("world2").innerHTML = this.response;
+                                        setTimeout(function(){
+                                            imageMapResize('#world');
+                                        },1000)
+                                    }
+                                };
+                                request.send();
+                                buildPrefixTable();
+                            } 
+
+                            function encodeHTML(s) {
+                                return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
+                            }
+
+                            function dropdownPoke(){
+                                InteractedWithPolicyTableYet=true;
+                                handleImageChange();
+                            }
+
+                            var InteractedWithPolicyTableYet = false;
+                            var OverloadPolicySize = 0;
+                            function buildPrefixTable() {
+                                var policy = document.getElementById("netpolicydropdown").value;
+                                
+                                var cidrs = netgroups[policy];
+                                var ihtml = "<tbody> <tr> <th class=\"nowrap\">  -  </th> <th>Prefix</th> <th class=\"nowrap\">Description</th> </tr>";
+
+                                
+                                var aaa = document.querySelectorAll('#PISPBanner');
+                                var bbb = document.querySelectorAll('#policytable');
+                                var n = 0
+                                if (cidrs) {
+                                    aaa[0].style.display = "";
+                                    bbb[0].style.display = "";
+                                    cidrs.forEach(cidr => {
+                                        var obj = {};
+                                        var dont =false;
+                                        n++;
+                                        
+                                        if (!InteractedWithPolicyTableYet) {
+                                            if (n == 5) {
+                                                dont = true;
+                                            } else if (n > 5) {
+                                                dont = true;
+                                            }
+                                        }
+                                        
+                                        if (!dont) {
+                                            prefixinfo.forEach(el => {
+                                                if(el.PrefixString == cidr) {
+                                                    
+                                                        ihtml += "<tr><td class=\"nowrap ns\"><img class=\"flag-img\" src=\"/assets/flags/"+el.WhoisCountry+".png\" title=\""+el.WhoisCountry+"\"></td>"
+                                                        ihtml += "<td><a href=\"/prefix/"+el.PrefixString+"\">"+el.PrefixString+"</a></td>"
+                                                        ihtml += "<td class=\"nowrap\">"+encodeHTML(el.WhoisName)+"</td></tr>"
+                                                }
+                                            });
+                                        } else {
+                                            OverloadPolicySize++;
+                                        }
+                                    });
+                                    document.getElementById("policytable").innerHTML = ihtml
+                                    var PolButton = document.querySelectorAll('#ShowFullPolicyButton');
+                                    if (!InteractedWithPolicyTableYet && OverloadPolicySize!=0) {
+                                        PolButton[0].style="width:100%";
+                                        PolButton[0].innerHTML = "Load all "+OverloadPolicySize+" prefixes in policy"
+                                    } else {
+                                        PolButton[0].style="display:none;";
+                                    }
+                                    
+                                } else {
+                                    aaa[0].style.display = "none";
+                                    bbb[0].style.display = "none";
+                                }
+                            }
+
+
+                            var pathdropdown = document.querySelectorAll('#netpolicydropdown');
+                            pathdropdown[0].addEventListener("change",dropdownPoke)
+                            handleImageChange()
+                            buildPrefixTable()
+
+                            document.addEventListener("load", function(){
+                                
+                                handleImageChange()
+                            });
+
+                            function uuidv4() {
+                                return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+                                    var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+                                    return v.toString(16);
+                                });
+                            }
+
+                            
+                            let realTimeSocket = new ReconnectingWebSocket("wss://bgp.tools/ws/rt-asn?prefix=AS30985" + "&magic=" + encodeURIComponent("O6LCR5BNHE53A7FIHIXLH5CEFBYKF47CHIUTPWSOBQAADVPL22FQ===="));
+                            
+                            realTimeSocket.onmessage = function(event) {
+                                console.log(`[message] Data received from server: ${event.data}`);
+                                if (event.data == "Running.") {
+                                    document.getElementById("ws-status").src = "/assets/connected.png";
+                                    document.getElementById("ws-status").title = "Connected to realtime data";
+                                } else if (event.data == "STOP-CONNECTING") {
+                                    document.getElementById("ws-status").src = disconectedIcon;
+                                    document.getElementById("ws-status").title = "Not connected to realtime data";
+                                    realTimeSocket.maxReconnectAttempts = 1;
+                                    realTimeSocket.close()
+                                } else {
+                                    var obj = JSON.parse(event.data);
+                                    var elm = document.getElementById("pfx-"+obj.Prefix);
+                                    if (!elm && obj.Vis > 6) {
+                                        var tblist = document.getElementById("donotscrapebgptools-prefixlist-tbody");
+                                        var node = document.createElement("tr");                 
+                                        node.outerHTML = '<tr id="pfx-'+obj.Prefix+'"><td class="nowrap"><img class="flag-img" src="/assets/flags/'+obj.Whois.WhoisCountry+'.png" title="'+obj.Whois.WhoisCountry+'"></td><td><a href="/prefix/'+obj.Prefix+'">'+obj.Prefix+'</a></td><td class="smallonmobile nowrap">'+obj.Whois.WhoisName+'</td></tr>';
+                                        tblist.appendChild(node);                              
+                                    }
+                                    if (!elm) {
+                                        elm = document.getElementById("pfx-"+obj.Prefix);
+                                    }
+                                    
+                                    if (obj.Vis > 70) {
+                                        if (elm.style) {
+                                            var es = elm.style;
+                                            if (es.animation.includes("pulse1b")) {
+                                                elm.style = "animation: pulse2b 1s 1;";
+                                            } else if (es.animation.includes("pulse2b")) {
+                                                elm.style = "animation: pulse1b 1s 1;";
+                                            } else {
+                                                elm.style = "animation: pulse1b 1s 1;";
+                                            }
+                                        }
+                                    } else if (obj.Vis < 5) {
+                                        
+                                        var elm = document.getElementById("pfx-"+obj.Prefix);
+                                        if (elm) {
+                                            elm.parentNode.removeChild(elm);
+                                        }
+                                    } else {
+                                        if (elm.style) {
+                                            var es = elm.style;
+                                            if (es.animation.includes("pulse1r")) {
+                                                elm.style = "animation: pulse2r 1s 1;";
+                                            } else if (es.animation.includes("pulse2r")) {
+                                                elm.style = "animation: pulse1r 1s 1;";
+                                            } else {
+                                                elm.style = "animation: pulse1r 1s 1;";
+                                            }
+                                        }
+                                    }
+                                }
+                            };
+                            var disconectedIcon = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAAZlBMVEX/ewBZWVn/ewf/ew5fWljudiP8egp6XVT6eRHodSmVYU6hZEzObjrldCv3eRZ/XlNjWliHX1KrZkngci71eBl1XFXCa0CKYFHydx18XlSQYE+lZUq0aEbJbT3SbzhvXFaLYFG8akLYdYVFAAABQElEQVRIx5XV25KDIAwGYIKASLutqOtZ277/S26xK4ozJea/qRdfajATZaRkd6B6oPoL1d9QphUn+WvXmGF8TfN8yvNrDj6nvNj5Hu8n8HCh9ONiON5PEKuQx55DmFTHC1R9uMOjYkhFERbkEikofw8FGe5t0FWJ+kLvz5H+t8RdGD9k8TeebBXpzwIZT955XyVBtHHeXYzeJy5fhydtoZffZvUMSfvxT4BOeI/G/b9paxH1at8XQF8xNcV8aaQvHQBMhY/XttsdYp5nah3XdvIqui61Cjy+jqLwXp1cx9XLQZ5cR/vx1p8cez2IWrlxYY/T9bNVyCfmdQdbxNgs441FNRAEHS83oe9ahmTw1p88nhHCiAkpeIUeX5eJ6NlM9Gwm+uxO9/3F2PSR597jn1+udCWzUp7150P1jOoZ1f8BGPARG85JosIAAAAASUVORK5CYII=";
+                            realTimeSocket.onerror = function(error) {
+                                document.getElementById("ws-status").src = disconectedIcon;
+                                document.getElementById("ws-status").title = "Not connected to realtime data";
+
+                                console.log(`[error] ${error.message}`);
+                            };
+                            realTimeSocket.onclose = function(error) {
+                                document.getElementById("ws-status").src = disconectedIcon;
+                                document.getElementById("ws-status").title = "Not connected to realtime data";
+
+                                console.log(`[error] ${error.message}`);
+                            };
+                        </script>
+
+<div class="superclearfix">
+    
+</div>
+
+                        <hr>
+                        <a style="font-size: small;" href="/kb/what-is-a-upstream">How are upstreams and downstreams calculated?</a>
+                        <h3 id="upstreams">Upstreams<img class="flag-img" src="/assets/lightning.png" style="padding-left: 12px;" title="This information was fetched live at page load time" alt="This information was fetched live at page load time"/></h3>
+
+
+                        <table id="donotscrapebgptools-upstreamTable" class="full-width-table">
+                            <thead class="sortable">
+                                <tr>
+                                    <th class="nowrap boldpls">  &nbsp;  </th>
+                                    <th data-sort-method='number' class="boldpls">ASN</th>
+                                    <th class="nowrap boldpls">Description</th>
+                                    <th class="nowrap boldpls">IPv4</th>
+                                    <th class="nowrap boldpls">IPv6</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                <tr>
+                                    <td data-sort='CI' class="nowrap ns"><img class="flag-img" src="/assets/flags/CI.png" title="CI">
+                                        
+                                        </td>
+                                    <td data-sort='29571'><a href="/as/29571">AS29571</a></td>
+                                    <td class="smallonmobile nowrap">Orange Côte d&#39;Ivoire</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='SN' class="nowrap ns"><img class="flag-img" src="/assets/flags/SN.png" title="SN">
+                                        
+                                        </td>
+                                    <td data-sort='8346'><a href="/as/8346">AS8346</a></td>
+                                    <td class="smallonmobile nowrap">SONATEL-AS Autonomous System</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='FR' class="nowrap ns"><img class="flag-img" src="/assets/flags/FR.png" title="FR">
+                                        
+                                        </td>
+                                    <td data-sort='5511'><a href="/as/5511">AS5511</a></td>
+                                    <td class="smallonmobile nowrap">Orange S.A.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+
+                        <hr>
+                        <h3 id="peers">Peers<img class="flag-img" src="/assets/lightning.png" style="padding-left: 12px;" title="This information was fetched live at page load time" alt="This information was fetched live at page load time"/></h3>
+
+
+
+                        <table id="donotscrapebgptools-upstreamTablePeers" class="full-width-table">
+                            <thead class="sortable">
+                                <tr>
+                                    <th class="nowrap boldpls">  &nbsp;  </th>
+                                    <th data-sort-method='number' class="boldpls">ASN</th>
+                                    <th class="nowrap boldpls">Description</th>
+                                    <th class="nowrap boldpls">IPv4</th>
+                                    <th class="nowrap boldpls">IPv6</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                <tr>
+                                    <td data-sort='CI' class="nowrap ns"><img class="flag-img" src="/assets/flags/CI.png" title="CI"></td>
+                                    <td data-sort='29571'><a href="/as/29571">AS29571</a></td>
+                                    <td class="smallonmobile nowrap">Orange Côte d&#39;Ivoire</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='SN' class="nowrap ns"><img class="flag-img" src="/assets/flags/SN.png" title="SN"></td>
+                                    <td data-sort='8346'><a href="/as/8346">AS8346</a></td>
+                                    <td class="smallonmobile nowrap">SONATEL-AS Autonomous System</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='FR' class="nowrap ns"><img class="flag-img" src="/assets/flags/FR.png" title="FR"></td>
+                                    <td data-sort='5511'><a href="/as/5511">AS5511</a></td>
+                                    <td class="smallonmobile nowrap">Orange S.A.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='ML' class="nowrap ns"><img class="flag-img" src="/assets/flags/ML.png" title="ML"></td>
+                                    <td data-sort='328284'><a href="/as/328284">AS328284</a></td>
+                                    <td class="smallonmobile nowrap">Société Malienne de Transmission et de Diffusion</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='ML' class="nowrap ns"><img class="flag-img" src="/assets/flags/ML.png" title="ML"></td>
+                                    <td data-sort='328253'><a href="/as/328253">AS328253</a></td>
+                                    <td class="smallonmobile nowrap">ALPHA TELECOMMUNICATION MALI-ATEL-S.A</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='TN' class="nowrap ns"><img class="flag-img" src="/assets/flags/TN.png" title="TN"></td>
+                                    <td data-sort='328126'><a href="/as/328126">AS328126</a></td>
+                                    <td class="smallonmobile nowrap">Orange Tunisie</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+
+
+
+                        <hr>
+                        <h3 id="downstreams">Downstreams<img class="flag-img" src="/assets/lightning.png" style="padding-left: 12px;" title="This information was fetched live at page load time" alt="This information was fetched live at page load time"/></h3>
+                        <table id="donotscrapebgptools-upstreamTableDowns" class="full-width-table">
+                            <thead class="sortable">
+                                
+                                <tr>
+                                    <th class="nowrap boldpls">  &nbsp;  </th>
+                                    <th data-sort-method='number'  class="boldpls">ASN</th>
+                                    <th class="nowrap boldpls">Description</th>
+                                    <th class="nowrap boldpls">IPv4</th>
+                                    <th class="nowrap boldpls">IPv6</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                <tr>
+                                    <td data-sort='ML' class="nowrap ns"><img class="flag-img" src="/assets/flags/ML.png" title="ML">
+                                        
+                                        </td>
+                                    <td data-sort='328284'><a href="/as/328284">AS328284</a></td>
+                                    <td class="smallonmobile nowrap">Société Malienne de Transmission et de Diffusion</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='TN' class="nowrap ns"><img class="flag-img" src="/assets/flags/TN.png" title="TN">
+                                        
+                                        </td>
+                                    <td data-sort='328126'><a href="/as/328126">AS328126</a></td>
+                                    <td class="smallonmobile nowrap">Orange Tunisie</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='ML' class="nowrap ns"><img class="flag-img" src="/assets/flags/ML.png" title="ML">
+                                        
+                                        </td>
+                                    <td data-sort='328253'><a href="/as/328253">AS328253</a></td>
+                                    <td class="smallonmobile nowrap">ALPHA TELECOMMUNICATION MALI-ATEL-S.A</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+
+                    </div>
+
+                    <div style="display: none" id="whois-page">
+                        
+                        
+                        <pre style="white-space: pre-wrap;">% This is the AfriNIC Whois server.
+% The AFRINIC whois database is subject to  the following terms of Use. See https://afrinic.net/whois/terms
+
+% Note: this output has been filtered.
+%       To receive output for a database update, use the &#34;-B&#34; flag.
+
+% Information related to &#39;AS30985&#39;
+
+% No abuse contact registered for AS30985
+
+aut-num:        AS30985
+as-name:        IKATELNET
+descr:          IKATEL SA. Service Provider in Mali
+status:         ASSIGNED
+admin-c:        ABS3-AFRINIC
+tech-c:         ABS3-AFRINIC
+org:            ORG-IS28-AFRINIC
+mnt-by:         AFRINIC-HM-MNT
+mnt-lower:      MNT-IKATEL
+mnt-routes:     MNT-IKATEL
+remarks:        import:       from AS8346 accept ANY
+remarks:        import:       from AS5511 accept ANY
+remarks:        export:       to AS8346 announce AS30985
+remarks:        export:       to AS5511 announce AS30985
+source:         AFRINIC # Filtered
+export:         to AS29571 announce AS30985
+import:         from AS29571 accept ANY
+
+organisation:   ORG-IS28-AFRINIC
+org-name:       Orange Mali SA
+org-type:       LIR
+country:        ML
+remarks:        data has been transferred from RIPE Whois Database 20050221
+address:        Agence SIEGE
+address:        Immeuble Orange
+address:        Hamdallaye ACI 2000
+address:        B.P. E 3991
+address:        Bamako
+phone:          tel:&#43;223-4999900
+phone:          tel:&#43;223-4999000
+fax-no:         tel:&#43;223-4999001
+admin-c:        ABS3-AFRINIC
+admin-c:        NOC3-AFRINIC
+tech-c:         ABS3-AFRINIC
+tech-c:         NOC3-AFRINIC
+mnt-ref:        AFRINIC-HM-MNT
+mnt-ref:        MNT-IKATEL
+mnt-by:         AFRINIC-HM-MNT
+source:         AFRINIC # Filtered
+
+person:         Alioune Badara SOUMARE
+nic-hdl:        ABS3-AFRINIC
+address:        BPE3991 Orange Mali, immeuble Orange ACI2000, Bamako, Mali.
+address:        Bamako
+address:        Mali
+phone:          tel:&#43;223-44-99-92-82
+mnt-by:         GENERATED-KTIO6KL1YZ0SFHXQJEIMWO33ABUFGDUZ-MNT
+source:         AFRINIC # Filtered
+
+
+
+
+</pre>
+                        
+                        
+                        <a style="font-size: small;">Last Update: 2022-09-17T04:14:40Z UTC  / <a style="font-size: small;" onclick="requestWhoisReload()" id="whoisReloadButton" href="#whois">(Click here to force a refresh)</a></a>
+                        
+                        <hr>
+                        
+                            <h2>Member of the following AS-SETs</h2>
+
+                            <table id="fhTable" class="full-width-table ">
+                                <tbody id="prefixlist-tbody">
+                                    <tr>
+                                        <th class="boldpls nowrap"> - </th>
+                                        <th class="boldpls">Member</th>
+                                        
+                                        <th class="boldpls nowrap">ASN Count</th>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-cit-transit">as-cit-transit</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">18</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">AFRINIC</td>
+                                        
+                                        <td><a href="/as-set/AFRINIC::as-set-30985">as-set-30985</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">1</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">AFRINIC</td>
+                                        
+                                        <td><a href="/as-set/AFRINIC::as-set-oml">as-set-oml</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">1</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">AFRINIC</td>
+                                        
+                                        <td><a href="/as-set/AFRINIC::as-29571">as-29571</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">18</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-ikatelnet">as-ikatelnet</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">2</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-8346-sonatel">as-8346-sonatel</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">22</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">AFRINIC</td>
+                                        
+                                        <td><a href="/as-set/AFRINIC::as-ikatelnet">as-ikatelnet</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">2</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-opentransit">as-opentransit</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap boldpls"><p style="display: contents;color: red">77409</p></td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-cwcit">as-cwcit</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">17</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-mtnbusiness-transit">as-mtnbusiness-transit</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">171</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">AFRINIC</td>
+                                        
+                                        <td><a href="/as-set/AFRINIC::as-cit-ci">as-cit-ci</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">11</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                        
+
+                    </div>
+
+                    
+                    <script>
+                        var reloadingWhois = false;
+                        function requestWhoisReload() {
+                            if (!reloadingWhois) {
+                                reloadingWhois = true; 
+                                document.getElementById("whoisReloadButton").innerHTML = "Reloading Whois..."
+                                var request = new XMLHttpRequest();
+                                request.open('GET', "/internal/reload-whois?k=WRL-AS30985-1765361852!DdT_bConVKeM1mIC03sEXhMRDmAFXMJyVUHEKluMTIM", true);
+                                request.onload = function() {
+                                    if (this.status >= 200 && this.status < 400) {
+                                        location.reload();
+                                    }
+                                };
+                                request.send();
+                            }
+                        }
+                    </script>
+                    
+
+                    
+
+                    
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="superclearfix">
+            
+            <div class="superclearfix">
+                
+            </div>
+
+            <div class="superclearfix">
+                
+            </div>
+
+
+        </div>
+
+
+        <div class="group js-footer" id="footer">
+            <nav>
+                <div>
+                    <ul>
+                        <li><a href="/kb/api" target="_blank">Scripting/API</a></li>
+                        <li><a href="/credits" target="_blank">Credits</a></li>
+                        <li><a href="/pricing" target="_blank">Pricing</a></li>
+                        <li><a href="/kb/contact" target="_blank">Contact Us</a></li>
+                        <li><a href="https://github.com/bgptools/issues" target="_blank">Issue Tracker</a></li>
+                        <li><a href="/kb/setup-sessions" target="">Contribute Data</a></li>
+                        
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <script>
+    
+    var inhash = window.location.hash;
+    if (inhash == "#asinfo") {
+        
+    } else if (inhash == "#prefixes") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#prefix-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#prefixes-page');
+        aaa[0].style.display = "";
+
+    } else if (inhash == "#connectivity" || inhash == "#peers" || inhash == "#upstreams" || inhash == "#downstreams") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#connectivity-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#connectivity-page');
+        aaa[0].style.display = "";
+    } else if (inhash == "#whois") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#whois-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#whois-page');
+        aaa[0].style.display = "";
+    } else if (inhash == "#ix") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#ix-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#ix-page');
+        aaa[0].style.display = "";
+    }</script>
+
+    <script>
+    
+
+
+    ;(function() {
+  'use strict'
+
+  function scaleImageMap() {
+    function resizeMap() {
+      function resizeAreaTag(cachedAreaCoords, idx) {
+        function scale(coord) {
+          var dimension = 1 === (isWidth = 1 - isWidth) ? 'width' : 'height'
+          return (
+            padding[dimension] +
+            Math.floor(Number(coord) * scalingFactor[dimension])
+          )
+        }
+
+        var isWidth = 0
+        areas[idx].coords = cachedAreaCoords
+          .split(',')
+          .map(scale)
+          .join(',')
+      }
+
+      var scalingFactor = {
+        width: image.width / image.naturalWidth,
+        height: image.height / image.naturalHeight,
+      }
+
+      var padding = {
+        width: parseInt(
+          window.getComputedStyle(image, null).getPropertyValue('padding-left'),
+          10
+        ),
+        height: parseInt(
+          window.getComputedStyle(image, null).getPropertyValue('padding-top'),
+          10
+        ),
+      }
+
+      cachedAreaCoordsArray.forEach(resizeAreaTag)
+    }
+
+    function getCoords(e) {
+      
+      return e.coords.replace(/ *, */g, ',').replace(/ +/g, ',')
+    }
+
+    function debounce() {
+      clearTimeout(timer)
+      timer = setTimeout(resizeMap, 250)
+    }
+
+    function start() {
+      if (
+        image.width !== image.naturalWidth ||
+        image.height !== image.naturalHeight
+      ) {
+        resizeMap()
+      }
+    }
+
+    function addEventListeners() {
+      image.addEventListener('load', resizeMap, false) 
+      window.addEventListener('focus', resizeMap, false) 
+      window.addEventListener('resize', debounce, false)
+      window.addEventListener('readystatechange', resizeMap, false)
+      document.addEventListener('fullscreenchange', resizeMap, false)
+    }
+
+    function beenHere() {
+      return 'function' === typeof map._resize
+    }
+
+    function getImg(name) {
+      return document.querySelector('img[usemap="#world"]')
+    }
+
+    function setup() {
+      areas = map.getElementsByTagName('area')
+      cachedAreaCoordsArray = Array.prototype.map.call(areas, getCoords)
+      image = getImg('#' + map.name) || getImg(map.name)
+      map._resize = resizeMap 
+    }
+
+    var  
+      map = this,
+      areas = null,
+      cachedAreaCoordsArray = null,
+      image = null,
+      timer = null
+
+    if (!beenHere()) {
+      setup()
+      addEventListeners()
+      start()
+    } else {
+      map._resize() 
+    }
+  }
+
+  function factory() {
+    function chkMap(element) {
+      if (!element.tagName) {
+        throw new TypeError('Object is not a valid DOM element')
+      } else if ('MAP' !== element.tagName.toUpperCase()) {
+        throw new TypeError(
+          'Expected <MAP> tag, found <' + element.tagName + '>.'
+        )
+      }
+    }
+
+    function init(element) {
+      if (element) {
+        chkMap(element)
+        scaleImageMap.call(element)
+        maps.push(element)
+      }
+    }
+
+    var maps
+
+    return function imageMapResizeF(target) {
+      maps = [] 
+
+      switch (typeof target) {
+        case 'undefined':
+        case 'string':
+          Array.prototype.forEach.call(
+            document.querySelectorAll(target || 'map'),
+            init
+          )
+          break
+        case 'object':
+          init(target)
+          break
+        default:
+          throw new TypeError('Unexpected data type (' + typeof target + ').')
+      }
+
+      return maps
+    }
+  }
+
+  if (typeof define === 'function' && define.amd) {
+    define([], factory)
+  } else if (typeof module === 'object' && typeof module.exports === 'object') {
+    module.exports = factory() 
+  } else {
+    window.imageMapResize = factory()
+  }
+
+  if ('jQuery' in window) {
+    window.jQuery.fn.imageMapResize = function $imageMapResizeF() {
+      return this.filter('map')
+        .each(scaleImageMap)
+        .end()
+    }
+  }
+})()
+    
+    </script>
+    <script>
+        var imgEl = document.getElementById("pathimg");
+        imgEl.addEventListener("mouseover",function() {
+            imageMapResize('#world');
+        })
+    </script>
+    <script src="/assets/tablesort.min.js"></script>
+    <script>
+        addEventListener("load", (event) => {
+            
+            
+            var sort = new Tablesort(document.getElementById('donotscrapebgptools-upstreamTable'));
+            var sort2 = new Tablesort(document.getElementById('donotscrapebgptools-upstreamTablePeers'));
+            
+            var sort3 = new Tablesort(document.getElementById('donotscrapebgptools-upstreamTableDowns'));
+            
+            
+        });
+    </script>
+    
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        setTimeout(function() {
+
+        var beaconHttp = new XMLHttpRequest();
+        var url = '/performance-beacon';
+        var params = JSON.stringify(window.performance)
+        beaconHttp.open('POST', url, true);
+        
+        
+        beaconHttp.setRequestHeader('Content-type', 'application/json');
+        beaconHttp.setRequestHeader('visit-url', "/as/30985");
+        if (navigator.connection) {
+            beaconHttp.setRequestHeader('client-side-rtt', navigator.connection.rtt);
+        } else {
+            beaconHttp.setRequestHeader('client-side-rtt', '-2');
+        }
+        beaconHttp.onreadystatechange = function() {}
+        beaconHttp.send(params);
+        },1000)
+    }, false);
+</script>
+
+</body>
+
+
+</html>
