@@ -1,0 +1,2715 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Developed Methods LLC (AS400519) is a 3 year old BGP network that is peering with 10 other networks and has 3 upstream carriers">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000">
+    <link rel="search" type="application/opensearchdescription+xml" title="BGP.Tools" href="https://bgp.tools/opensearch.xml">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="theme-color" content="#000000">
+    <link href="https://social.bgp.tools/@bgptools" rel="me">
+    <link rel="canonical" href="https://bgp.tools/as/400519" />
+    <title>AS400519 Developed Methods LLC - bgp.tools</title>
+    <link rel="stylesheet" type="text/css" href="/assets/main-new.css?2025-12-09-1723%20UTC">
+</head>
+
+<body>
+    <div id="container">
+        
+<div id="global-header" class="global-header-top">
+    <div class="header-sitewide">
+        <div class="global-header">
+            <div class="header-logo">
+                <a href="/" id="logo" class="content">bgp.tools</a>
+            </div>
+            <form id="search" action="/search" method="get" accept-charset="utf-8" role="search" class="top-search-header js-search-hash">
+                <div class="searchfield">
+                    <input type="search" autocomplete="off" name="q" id="site-search-text" title="Search" value="" placeholder="Start here..." autofocus="autofocus" class="js-search-focus">
+                    <button type="submit" id="search-submit" class="search-submit">Search</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div id="global-header-blob" >
+    <a id="auth-header-text" href="/login">Login</a>
+    
+</div>
+<div id="global-header-bar" >
+    <a id="auth-header-bar-text" href="/login">Login</a>
+    
+</div>
+<div class="small-clearfix"></div>
+
+        <div id="global-container">
+            
+
+
+            
+            <div class="section-tabs js-tabs">
+                <ul>
+                    
+<li class="active">
+    <h1> <a id="viewbutton-tab" href="/as/400519">View</a></h1>
+</li>
+
+<li >
+    <a id="editbutton-tab" href="/edit/as/400519">Edit</a>
+</li>
+
+
+
+
+
+                    <li style="float: right;">
+                        
+                        <img id="ws-status" width="24" height="24" src="/assets/disconnected.png" title="Not Connected To realtime data updates">
+                        
+                    </li>
+                </ul>
+            </div>
+
+            <div id="search-container">
+
+                <div class="column-full-width">
+
+                    <div class="clearfix">
+                        
+                    </div>
+                    
+                    
+
+                    <div class="network-header">
+                        
+                        
+                        <img width="334" height="250" src="/img/400519" alt="The website screenshot for https://playit.gg" >
+                        
+                        
+                        <p id="network-name" class="heading-xlarge">Developed Methods LLC</p>
+                        <p id="network-number">
+                            AS Number
+                            <strong id="ASNumberString" pure="400519">400519</strong>
+                            <br>
+                        
+                            Website
+                            <strong><a href="https://playit.gg" rel="nofollow">https://playit.gg</a></strong>
+                        
+                        </p>
+
+                    </div>
+
+
+                    <div class="clearfix">
+                        
+                    </div>
+
+
+                    <div class="section-tabs js-tabs">
+                        <ul>
+
+                            <li id="overview-tab-li" class="active">
+                                <a id="overview-tab" href="#asinfo">Overview</a>
+                            </li>
+                            
+                            <li id="prefix-tab-li">
+                                <a id="prefix-tab" href="#prefixes">Prefixes</a>
+                            </li>
+
+                            <li id="connectivity-tab-li">
+                                <a id="connectivity-tab" href="#connectivity">Connectivity</a>
+                            </li>
+                            
+                            <li id="whois-tab-li">
+                                <a id="whois-tab" href="#whois">Whois</a>
+                            </li>
+                        
+                        
+                        </ul>
+                    </div>
+
+<script>
+    function removeAllActiveTab() {
+        var tabs = [
+            "overview-tab-li", 
+            "prefix-tab-li", 
+            "connectivity-tab-li",
+            "whois-tab-li",
+            "ix-tab-li",
+            "issues-tab-li"
+        ];
+
+        tabs.forEach(element => {
+            var aaa = document.querySelectorAll('#'+element);
+            if(aaa.length != 0) {
+                aaa[0].classList.remove("active")
+            }
+        });
+    }
+
+    function hideAllContent() {
+        var tabs = [
+            "overview-page", 
+            "prefixes-page", 
+            "connectivity-page",
+            "whois-page",
+            "ix-page",
+            "issues-page"
+        ];
+
+        tabs.forEach(element => {
+            var aaa = document.querySelectorAll('#'+element);
+            if(aaa.length != 0) {
+                aaa[0].style.display = "none";
+            }
+        });
+        if (document.getElementById("donotscrapebgptools-prefixlist-tbody")) {
+            var prefixrows = document.getElementById("donotscrapebgptools-prefixlist-tbody").children;
+            for (var i = 0; i < prefixrows.length; i++) {
+                prefixrows[i].style = "";
+            }
+        }
+    }
+
+    var otab = document.querySelectorAll('#overview-tab');
+    otab[0].addEventListener("click", function () {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#overview-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#overview-page');
+        aaa[0].style.display = "";
+    });
+    
+
+    var ptab = document.querySelectorAll('#prefix-tab');
+    ptab[0].addEventListener("click", function () {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#prefix-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#prefixes-page');
+        aaa[0].style.display = "";
+    });
+
+    var ctab = document.querySelectorAll('#connectivity-tab');
+    ctab[0].addEventListener("click", function () {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#connectivity-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#connectivity-page');
+        aaa[0].style.display = "";
+    });
+    
+
+    var wtab = document.querySelectorAll('#whois-tab');
+    wtab[0].addEventListener("click", function () {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#whois-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#whois-page');
+        aaa[0].style.display = "";
+    });
+
+</script>
+
+
+
+                    
+                    <div id="overview-page">
+
+                        <div class="grid-row">
+                        
+                        <div class="column-two-thirds">
+                            <dl>
+                                <dt>Registered on</dt>
+                                <dd class="text data">
+                                    
+                                    10 Mar 2022 (3 years old)
+                                </dd>
+                            
+                            
+                            <dt>Registered to</dt>
+                            <dd class="text data">
+                                <a href="/rir-owner/ARIN-DML-136">ARIN-DML-136</a> (arin)</dd>
+                                
+                            
+                            </dl>
+                        </div>
+                        
+    
+                        <dl class="column-third">
+                            <dt>Network status</dt>
+                            <dd class="text data">
+                                
+                                Active, Allocated under ARIN
+                                
+                            </dd>
+                        </dl>
+    
+                        </div>
+    
+                        <div class="grid-row">
+                            <dl class="column-two-thirds">
+                                <dt>Network type</dt>
+                                <dd class="text data">
+                                    Content
+                                </dd>
+                            </dl>
+    
+                            <dl class="column-third">
+                                <dt>Prefixes Originated</dt>
+                                <dd class="data">23 IPv4, 69 IPv6</dd>
+                            </dl>
+                        </div>
+                        <div class="grid-row">
+                            <div class="column-half">
+    
+                                <h2 class="heading-medium"><derp>Upstreams</derp></h2>
+                                <ul>
+                                    
+                                    <li>
+                                        <span id="sic0">
+                                          <a href="/as/60068">AS60068</a> - Datacamp Limited (CDN77 / DataPacket)
+                                        </span>
+                                    </li>
+                                    
+                                    <li>
+                                        <span id="sic0">
+                                          <a href="/as/20473">AS20473</a> - The Constant Company, LLC
+                                        </span>
+                                    </li>
+                                    
+                                    <li>
+                                        <span id="sic0">
+                                          <a href="/as/174">AS174</a> - Cogent Communications, LLC
+                                        </span>
+                                    </li>
+                                    
+                                </ul>
+    
+                            </div>
+    
+                            <div class="column-half">
+                                
+                                    <h2 class="heading-medium"><derp>Locations of Operation</derp></h2>
+                                    
+                                    <li><span id="sic0">United States</span></li>
+                                    
+                                
+                            </div>
+                        </div>
+                        
+                        <div class="grid-row" style="padding: 15px;">
+                            <h2 class="heading-medium"><derp>Tags:</derp></h2>
+                            <br>
+                            
+                            <a href="/tags/anycast"><span style="border: 5px solid #C7FA93;" class="taglist"> Anycast </span></a>
+                            
+                        </div>
+                        
+                    </div>
+                    
+
+                    <div style="display: none" id="prefixes-page">
+                        
+
+                        
+                        <div style="float:left">
+                            <dt>Prefixes Originated</dt>
+                            <dd class="data">23 IPv4, 69 IPv6</dd>
+                            <dd class="data"><a href="/as/400519?show-low-vis#prefixes">Show Low Visibility Prefixes</a></dd>
+                            
+                        </div>
+                        <div style="float:right">
+                                <dt>Addresses Originated</dt>
+                                <dd class="data">24 /24's of IPv4</dd>
+                                <dd class="data">1050 /48's of IPv6</dd>
+                        </div>
+
+                        <div class="clearfix">
+                            
+                        </div>
+
+
+                        <table id="fhTable" class="full-width-table ">
+                            <tbody id="donotscrapebgptools-prefixlist-tbody">
+                                <tr>
+                                    <th class="nowrap">  &nbsp;  </th>
+                                    <th class="boldpls">Prefix</th>
+                                    <th class="nowrap boldpls">Description</th>
+                                </tr>
+                                <p id="readme-if-you-are-human" style="display: none;">If you are scraping this block for the prefixes that a AS originates, please use the data dumps in https://bgp.tools/kb/api and cache them</p>
+                                
+                                <tr id="pfx-23.133.216.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/23.133.216.0/24">23.133.216.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Developed Methods LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-69.9.177.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="Anycast Detected" src="/assets/flags/ANY.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/69.9.177.0/24">69.9.177.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Developed Methods LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-69.9.178.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="Anycast Detected" src="/assets/flags/ANY.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/69.9.178.0/24">69.9.178.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Developed Methods LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-69.9.179.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="Anycast Detected" src="/assets/flags/ANY.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/69.9.179.0/24">69.9.179.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Developed Methods LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-69.9.180.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/69.9.180.0/24">69.9.180.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Developed Methods LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-69.9.181.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="Anycast Detected" src="/assets/flags/ANY.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/69.9.181.0/24">69.9.181.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Developed Methods LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-69.9.184.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="Anycast Detected" src="/assets/flags/ANY.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/69.9.184.0/24">69.9.184.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Developed Methods LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-69.9.185.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="Anycast Detected" src="/assets/flags/ANY.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/69.9.185.0/24">69.9.185.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Developed Methods LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-69.9.186.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="Anycast Detected" src="/assets/flags/ANY.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/69.9.186.0/24">69.9.186.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Developed Methods LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-69.9.187.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="Anycast Detected" src="/assets/flags/ANY.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/69.9.187.0/24">69.9.187.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Developed Methods LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-69.9.188.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/69.9.188.0/24">69.9.188.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Developed Methods LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-69.9.190.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/69.9.190.0/24">69.9.190.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Developed Methods LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-69.9.191.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/69.9.191.0/24">69.9.191.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Developed Methods LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-198.22.204.0/23">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="Anycast Detected" src="/assets/flags/ANY.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/198.22.204.0/23">198.22.204.0/23</a></td>
+                                    <td class="smallonmobile nowrap">Developed Methods LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-198.22.205.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="Anycast Detected" src="/assets/flags/ANY.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/198.22.205.0/24">198.22.205.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Developed Methods LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-209.25.140.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="Anycast Detected" src="/assets/flags/ANY.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/209.25.140.0/24">209.25.140.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Developed Methods LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-209.25.140.0/22">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/209.25.140.0/22">209.25.140.0/22</a></td>
+                                    <td class="smallonmobile nowrap">Developed Methods LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-209.25.141.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="Anycast Detected" src="/assets/flags/ANY.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/209.25.141.0/24">209.25.141.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Developed Methods LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-209.25.142.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/209.25.142.0/24">209.25.142.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Developed Methods LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-69.9.176.0/20">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="Anycast Detected" src="/assets/flags/ANY.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/69.9.176.0/20">69.9.176.0/20</a></td>
+                                    <td class="smallonmobile nowrap">Developed Methods LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-69.9.176.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="Anycast Detected" src="/assets/flags/ANY.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/69.9.176.0/24">69.9.176.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Developed Methods LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-147.185.221.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="Anycast Detected" src="/assets/flags/ANY.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/147.185.221.0/24">147.185.221.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Developed Methods LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-209.25.143.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="Anycast Detected" src="/assets/flags/ANY.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/209.25.143.0/24">209.25.143.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Developed Methods LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-2602:fbaf::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="Anycast Detected" src="/assets/flags/ANY.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2602:fbaf::/48">2602:fbaf::/48</a></td>
+                                    <td class="smallonmobile nowrap">Developed Methods LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-2602:fbaf:20b::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2602:fbaf:20b::/48">2602:fbaf:20b::/48</a></td>
+                                    <td class="smallonmobile nowrap">Developed Methods LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-2602:fbaf:210::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2602:fbaf:210::/48">2602:fbaf:210::/48</a></td>
+                                    <td class="smallonmobile nowrap">Developed Methods LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-2602:fbaf:212::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2602:fbaf:212::/48">2602:fbaf:212::/48</a></td>
+                                    <td class="smallonmobile nowrap">Developed Methods LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-2602:fbaf:213::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2602:fbaf:213::/48">2602:fbaf:213::/48</a></td>
+                                    <td class="smallonmobile nowrap">Developed Methods LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-2602:fbaf:214::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2602:fbaf:214::/48">2602:fbaf:214::/48</a></td>
+                                    <td class="smallonmobile nowrap">Developed Methods LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-2602:fbaf:216::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2602:fbaf:216::/48">2602:fbaf:216::/48</a></td>
+                                    <td class="smallonmobile nowrap">Developed Methods LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-2602:fbaf:21c::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2602:fbaf:21c::/48">2602:fbaf:21c::/48</a></td>
+                                    <td class="smallonmobile nowrap">Developed Methods LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-2602:fbaf:220::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2602:fbaf:220::/48">2602:fbaf:220::/48</a></td>
+                                    <td class="smallonmobile nowrap">Developed Methods LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-2602:fbaf:221::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2602:fbaf:221::/48">2602:fbaf:221::/48</a></td>
+                                    <td class="smallonmobile nowrap">Developed Methods LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-2602:fbaf:222::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2602:fbaf:222::/48">2602:fbaf:222::/48</a></td>
+                                    <td class="smallonmobile nowrap">Developed Methods LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-2602:fbaf:224::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2602:fbaf:224::/48">2602:fbaf:224::/48</a></td>
+                                    <td class="smallonmobile nowrap">Developed Methods LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-2602:fbaf:225::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2602:fbaf:225::/48">2602:fbaf:225::/48</a></td>
+                                    <td class="smallonmobile nowrap">Developed Methods LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-2602:fbaf:226::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2602:fbaf:226::/48">2602:fbaf:226::/48</a></td>
+                                    <td class="smallonmobile nowrap">Developed Methods LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-2602:fbaf:227::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2602:fbaf:227::/48">2602:fbaf:227::/48</a></td>
+                                    <td class="smallonmobile nowrap">Developed Methods LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-2602:fbaf:228::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2602:fbaf:228::/48">2602:fbaf:228::/48</a></td>
+                                    <td class="smallonmobile nowrap">Developed Methods LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-2602:fbaf:229::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2602:fbaf:229::/48">2602:fbaf:229::/48</a></td>
+                                    <td class="smallonmobile nowrap">Developed Methods LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-2602:fbaf:22a::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2602:fbaf:22a::/48">2602:fbaf:22a::/48</a></td>
+                                    <td class="smallonmobile nowrap">Developed Methods LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-2602:fbaf:22b::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2602:fbaf:22b::/48">2602:fbaf:22b::/48</a></td>
+                                    <td class="smallonmobile nowrap">Developed Methods LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-2602:fbaf:22c::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2602:fbaf:22c::/48">2602:fbaf:22c::/48</a></td>
+                                    <td class="smallonmobile nowrap">Developed Methods LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-2602:fbaf:22d::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2602:fbaf:22d::/48">2602:fbaf:22d::/48</a></td>
+                                    <td class="smallonmobile nowrap">Developed Methods LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-2602:fbaf:22e::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2602:fbaf:22e::/48">2602:fbaf:22e::/48</a></td>
+                                    <td class="smallonmobile nowrap">Developed Methods LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-2602:fbaf:800::/38">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="Anycast Detected" src="/assets/flags/ANY.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2602:fbaf:800::/38">2602:fbaf:800::/38</a></td>
+                                    <td class="smallonmobile nowrap">Developed Methods LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-2602:fbaf:804::/47">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2602:fbaf:804::/47">2602:fbaf:804::/47</a></td>
+                                    <td class="smallonmobile nowrap">Developed Methods LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-2602:fbaf:804::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="Anycast Detected" src="/assets/flags/ANY.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2602:fbaf:804::/48">2602:fbaf:804::/48</a></td>
+                                    <td class="smallonmobile nowrap">Developed Methods LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-2602:fbaf:808::/47">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2602:fbaf:808::/47">2602:fbaf:808::/47</a></td>
+                                    <td class="smallonmobile nowrap">Developed Methods LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-2602:fbaf:808::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="Anycast Detected" src="/assets/flags/ANY.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2602:fbaf:808::/48">2602:fbaf:808::/48</a></td>
+                                    <td class="smallonmobile nowrap">Developed Methods LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-2602:fbaf:80c::/47">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2602:fbaf:80c::/47">2602:fbaf:80c::/47</a></td>
+                                    <td class="smallonmobile nowrap">Developed Methods LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-2602:fbaf:80c::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="Anycast Detected" src="/assets/flags/ANY.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2602:fbaf:80c::/48">2602:fbaf:80c::/48</a></td>
+                                    <td class="smallonmobile nowrap">Developed Methods LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-2602:fbaf:810::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="Anycast Detected" src="/assets/flags/ANY.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2602:fbaf:810::/48">2602:fbaf:810::/48</a></td>
+                                    <td class="smallonmobile nowrap">Developed Methods LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-2602:fbaf:810::/47">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2602:fbaf:810::/47">2602:fbaf:810::/47</a></td>
+                                    <td class="smallonmobile nowrap">Developed Methods LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-2602:fbaf:814::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="Anycast Detected" src="/assets/flags/ANY.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2602:fbaf:814::/48">2602:fbaf:814::/48</a></td>
+                                    <td class="smallonmobile nowrap">Developed Methods LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-2602:fbaf:814::/47">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2602:fbaf:814::/47">2602:fbaf:814::/47</a></td>
+                                    <td class="smallonmobile nowrap">Developed Methods LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-2602:fbaf:824::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="Anycast Detected" src="/assets/flags/ANY.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2602:fbaf:824::/48">2602:fbaf:824::/48</a></td>
+                                    <td class="smallonmobile nowrap">Developed Methods LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-2602:fbaf:824::/47">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2602:fbaf:824::/47">2602:fbaf:824::/47</a></td>
+                                    <td class="smallonmobile nowrap">Developed Methods LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-2602:fbaf:828::/47">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2602:fbaf:828::/47">2602:fbaf:828::/47</a></td>
+                                    <td class="smallonmobile nowrap">Developed Methods LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-2602:fbaf:828::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="Anycast Detected" src="/assets/flags/ANY.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2602:fbaf:828::/48">2602:fbaf:828::/48</a></td>
+                                    <td class="smallonmobile nowrap">Developed Methods LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-2602:fbaf:82c::/47">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2602:fbaf:82c::/47">2602:fbaf:82c::/47</a></td>
+                                    <td class="smallonmobile nowrap">Developed Methods LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-2602:fbaf:82c::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="Anycast Detected" src="/assets/flags/ANY.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2602:fbaf:82c::/48">2602:fbaf:82c::/48</a></td>
+                                    <td class="smallonmobile nowrap">Developed Methods LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-2602:fbaf:830::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="Anycast Detected" src="/assets/flags/ANY.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2602:fbaf:830::/48">2602:fbaf:830::/48</a></td>
+                                    <td class="smallonmobile nowrap">Developed Methods LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-2602:fbaf:830::/47">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2602:fbaf:830::/47">2602:fbaf:830::/47</a></td>
+                                    <td class="smallonmobile nowrap">Developed Methods LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-2602:fbaf:834::/47">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2602:fbaf:834::/47">2602:fbaf:834::/47</a></td>
+                                    <td class="smallonmobile nowrap">Developed Methods LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-2602:fbaf:834::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="Anycast Detected" src="/assets/flags/ANY.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2602:fbaf:834::/48">2602:fbaf:834::/48</a></td>
+                                    <td class="smallonmobile nowrap">Developed Methods LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-2602:fbaf:838::/47">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2602:fbaf:838::/47">2602:fbaf:838::/47</a></td>
+                                    <td class="smallonmobile nowrap">Developed Methods LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-2602:fbaf:838::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="Anycast Detected" src="/assets/flags/ANY.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2602:fbaf:838::/48">2602:fbaf:838::/48</a></td>
+                                    <td class="smallonmobile nowrap">Developed Methods LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-2602:fbaf:83c::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="Anycast Detected" src="/assets/flags/ANY.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2602:fbaf:83c::/48">2602:fbaf:83c::/48</a></td>
+                                    <td class="smallonmobile nowrap">Developed Methods LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-2602:fbaf:83c::/47">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2602:fbaf:83c::/47">2602:fbaf:83c::/47</a></td>
+                                    <td class="smallonmobile nowrap">Developed Methods LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-2602:fbaf:840::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="Anycast Detected" src="/assets/flags/ANY.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2602:fbaf:840::/48">2602:fbaf:840::/48</a></td>
+                                    <td class="smallonmobile nowrap">Developed Methods LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-2602:fbaf:840::/47">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2602:fbaf:840::/47">2602:fbaf:840::/47</a></td>
+                                    <td class="smallonmobile nowrap">Developed Methods LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-2602:fbaf:844::/47">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2602:fbaf:844::/47">2602:fbaf:844::/47</a></td>
+                                    <td class="smallonmobile nowrap">Developed Methods LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-2602:fbaf:844::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="Anycast Detected" src="/assets/flags/ANY.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2602:fbaf:844::/48">2602:fbaf:844::/48</a></td>
+                                    <td class="smallonmobile nowrap">Developed Methods LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-2602:fbaf:848::/47">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2602:fbaf:848::/47">2602:fbaf:848::/47</a></td>
+                                    <td class="smallonmobile nowrap">Developed Methods LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-2602:fbaf:848::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2602:fbaf:848::/48">2602:fbaf:848::/48</a></td>
+                                    <td class="smallonmobile nowrap">Developed Methods LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-2602:fbaf:84c::/47">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2602:fbaf:84c::/47">2602:fbaf:84c::/47</a></td>
+                                    <td class="smallonmobile nowrap">Developed Methods LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-2602:fbaf:84c::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2602:fbaf:84c::/48">2602:fbaf:84c::/48</a></td>
+                                    <td class="smallonmobile nowrap">Developed Methods LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-2602:fbaf:850::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="Anycast Detected" src="/assets/flags/ANY.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2602:fbaf:850::/48">2602:fbaf:850::/48</a></td>
+                                    <td class="smallonmobile nowrap">Developed Methods LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-2602:fbaf:850::/47">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2602:fbaf:850::/47">2602:fbaf:850::/47</a></td>
+                                    <td class="smallonmobile nowrap">Developed Methods LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-2602:fbaf:854::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="Anycast Detected" src="/assets/flags/ANY.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2602:fbaf:854::/48">2602:fbaf:854::/48</a></td>
+                                    <td class="smallonmobile nowrap">Developed Methods LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-2602:fbaf:854::/47">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2602:fbaf:854::/47">2602:fbaf:854::/47</a></td>
+                                    <td class="smallonmobile nowrap">Developed Methods LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-2602:fbaf:85c::/47">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2602:fbaf:85c::/47">2602:fbaf:85c::/47</a></td>
+                                    <td class="smallonmobile nowrap">Developed Methods LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-2602:fbaf:85c::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="Anycast Detected" src="/assets/flags/ANY.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2602:fbaf:85c::/48">2602:fbaf:85c::/48</a></td>
+                                    <td class="smallonmobile nowrap">Developed Methods LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-2602:fbaf:860::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="Anycast Detected" src="/assets/flags/ANY.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2602:fbaf:860::/48">2602:fbaf:860::/48</a></td>
+                                    <td class="smallonmobile nowrap">Developed Methods LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-2602:fbaf:860::/47">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2602:fbaf:860::/47">2602:fbaf:860::/47</a></td>
+                                    <td class="smallonmobile nowrap">Developed Methods LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-2602:fbaf:864::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="Anycast Detected" src="/assets/flags/ANY.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2602:fbaf:864::/48">2602:fbaf:864::/48</a></td>
+                                    <td class="smallonmobile nowrap">Developed Methods LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-2602:fbaf:864::/47">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2602:fbaf:864::/47">2602:fbaf:864::/47</a></td>
+                                    <td class="smallonmobile nowrap">Developed Methods LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-2602:fbaf:f01::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="Anycast Detected" src="/assets/flags/ANY.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2602:fbaf:f01::/48">2602:fbaf:f01::/48</a></td>
+                                    <td class="smallonmobile nowrap">Developed Methods LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-2602:fbaf:f02::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="Anycast Detected" src="/assets/flags/ANY.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2602:fbaf:f02::/48">2602:fbaf:f02::/48</a></td>
+                                    <td class="smallonmobile nowrap">Developed Methods LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-2602:fbaf:f04::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="Anycast Detected" src="/assets/flags/ANY.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2602:fbaf:f04::/48">2602:fbaf:f04::/48</a></td>
+                                    <td class="smallonmobile nowrap">Developed Methods LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-2602:fbaf:f05::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2602:fbaf:f05::/48">2602:fbaf:f05::/48</a></td>
+                                    <td class="smallonmobile nowrap">Developed Methods LLC</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div style="display: none" id="connectivity-page">
+
+                        <div class="grid-row">
+
+                            <dl class="column-two-thirds">
+                                <dt><a href="#upstreams">Upstreams</a></dt>
+                                <dd class="text data">
+                                    3
+                                </dd>
+                            </dl>
+
+                            <dl class="column-third">
+                                <dt><a href="#peers">Peers</a></dt>
+                                <dd class="data">10</dd>
+                            </dl>
+                        </div>
+
+
+                        <hr>
+                        <h3>Network Policy<img class="flag-img" src="/assets/info.png" style="padding-left: 12px;" title="This info can take up to 2 hours to fully update" alt="This info take up to 2 hours to fully update"/></h3></h3>
+                        <a style="font-size: small;" href="/kb/network-policy">Click here to learn more about what this graph means and what makes up a network policy</a>
+
+                        <select id="netpolicydropdown" class="dropdownmenu">
+                            
+                                <option disabled=true value="disabled-default">Global Aggregation (disabled due to size)</option>
+                            
+
+                            
+                                
+                            
+                                
+                                <option value="1770a076905373355d5645ec76dcf3aaad8f770f140faa221aea6b66">Policy epic_diffie</option>
+                                
+                            
+                                
+                                <option value="6bbbbb0e53fc1a3b5ff11fa1e514c6889d537b600fcc4a3730685836">Policy tender_mahavira</option>
+                                
+                            
+                                
+                                <option value="98656e4ef5b3432d33da8508db41384833abef68d28b17a5dc87e050">Policy musing_kirch</option>
+                                
+                            
+                                
+                                <option value="f52ca3066f91e5d572783a66c8cf5e2e670aefb62e9899fddc26cf5d">Policy peaceful_margulis</option>
+                                
+                            
+                                
+                                <option value="32bc21d893d9a264981c445992cd7d8ed73e68a558d969617dd2d6c0">Policy zen_visvesvaraya</option>
+                                
+                            
+                                
+                                <option value="036ccbabff499f99d90867f406f349a5a2d784cd87c7016f874a47ba">Policy zealous_volhard</option>
+                                
+                            
+                                
+                                <option value="a8db6a2feffa5f14f8897e35464bff38befeb5ef0de4b179760e0585">Policy keen_minsky</option>
+                                
+                            
+                                
+                                <option value="78e3a54e635ea84d7ade35538cb1588c38579066a7563699c0f6c3a9">Policy trusting_wiles</option>
+                                
+                            
+                                
+                                <option value="8edd26b84b722309379f87f7e74916b47a414c1964aa8acbd2f48c19">Policy cranky_swanson</option>
+                                
+                            
+                                
+                                <option value="cf3cb1a4e0045ee5c3026d495ac6e18c3e3919e6bd68b08f11de7531">Policy competent_volhard</option>
+                                
+                            
+                                
+                                <option value="d758383e890152aab1bb82fafff9869ef21bb68b5cc453ca3355c670">Policy relaxed_dewdney</option>
+                                
+                            
+                                
+                                <option value="ef05ed0235f616aade63e23dce8f73ba32275ff2d42e5ab09c3f19e6">Policy modest_lichterman</option>
+                                
+                            
+                                
+                                <option value="4b3dee4d7f0421c2559aae4d1df9f7cf48258c82dc06872cb4781338">Policy sweet_jennings</option>
+                                
+                            
+                                
+                                <option value="1dd2383ed2b2793ced6ffd1f3947dc169566a7885f083692b5314ead">Policy elegant_ritchie</option>
+                                
+                            
+                                
+                                <option value="44ce3a9e00bf38f1dffa6ee4ce8fa3c0bd9b6e86079a3b3bb736247b">Policy tender_chaplygin</option>
+                                
+                            
+                                
+                                <option value="eccb7c1ebb97e40f9be079a39d19c5234c22ef8e9a8be48f59aca92c">Policy gracious_liskov</option>
+                                
+                            
+                                
+                                <option value="9b37701980da9affdd4bc72bcd75690e2e527408dd683967967124a1">Policy naughty_meninsky</option>
+                                
+                            
+                                
+                                <option value="abc06c5a693bf1e135736e60a1f4ce4fe7b2193be76d400367e615a6">Policy affectionate_johnson</option>
+                                
+                            
+                                
+                                <option value="9932d5c5f37bf07440b38589c54adc7b19668e0ab826df95306faccd">Policy reverent_jepsen</option>
+                                
+                            
+                                
+                                <option value="aea9d68748433f29e4bb1785b6496ea2dd0193ddc84a20fc88bb88c7">Policy sad_villani</option>
+                                
+                            
+                                
+                                <option value="b83a684412917e725e65e9372b8d03e5c7efbc0b2a75e4cc9811db2f">Policy magical_jang</option>
+                                
+                            
+                                
+                                <option value="ca948b32bb925adbdff6aa4ee34905a925a62f85ddd1c9dd4faf9770">Policy elated_chaum</option>
+                                
+                            
+                                
+                                <option value="d8ed3373f2fcf42e7d5c274dbf3f843380ae20871d7d22c25316b32b">Policy hardcore_mcclintock</option>
+                                
+                            
+                                
+                                <option value="39d384b6a1a53df5030177ee4624c37cd3292ecfba84f0576d3d2ab1">Policy boring_meitner</option>
+                                
+                            
+                                
+                                <option value="50212728c9db1c3747aac1c2c0bcf4d422814b6923340aeffad8b186">Policy objective_nash</option>
+                                
+                            
+                                
+                                <option value="b3b4b94000ca4f80092cb937d84b4dd2108737756ceb6aad89ecb8c9">Policy jovial_dhawan</option>
+                                
+                            
+                                
+                                <option value="e209d2852b165f011229e15852b7f547663d00e491395c754d9b9a9f">Policy sleepy_ritchie</option>
+                                
+                            
+                                
+                                <option value="ecc1c43192e4b55cc701ee2e1f7e2a8e37b8a675b38dab2d47913fe4">Policy happy_hertz</option>
+                                
+                            
+                                
+                                <option value="fff34874c833f73fa0608b714bc2a9f9fe90636c94327c7ab8c6c59d">Policy modest_jones</option>
+                                
+                            
+                                
+                                <option value="6f58b4beb918ff49ae1743f1b5272d750e68718ce248b5329b7f0275">Policy frosty_montalcini</option>
+                                
+                            
+                                
+                                <option selected value="168f77a21c6b242039a4c4b702b9a73f4723f3041f39b5da288a2850">Policy elated_burnell</option>
+                                
+                            
+                                
+                                <option value="c759354eb1c8afb09ca60eacfea3c678d755e036554e5ec7a842163a">Policy crazy_chaplygin</option>
+                                
+                            
+                                
+                                <option value="ccaad1cf8411a8ef4bb0ec3af27eddbfd8efacc91df8f535da375e9f">Policy relaxed_kapitsa</option>
+                                
+                            
+                                
+                                <option value="150b21d9e97b98d6e500497aa4d40a787fb411262f02432b4036a4f9">Policy eager_khorana</option>
+                                
+                            
+                                
+                                <option value="f9ff4a9a0bc403d4140d1b3eb1304da9db10ddf77b32939cb4baf87d">Policy magical_jennings</option>
+                                
+                            
+                                
+                                <option value="2e34d321167c07ca56dfdb37b1e11b0f3c57d30bdf2f258f21429d7c">Policy unruffled_khayyam</option>
+                                
+                            
+                                
+                                <option value="633bc76868ba0daae71ab8577a85ab485663b4ba5d62a0f474a2a823">Policy flamboyant_beaver</option>
+                                
+                            
+                                
+                                <option value="c373814dd1e130befb49863a241c7b0ba46047164ec5d24a9c2b9641">Policy confident_pike</option>
+                                
+                            
+                                
+                                <option value="364685001f369b4a1dc614a9628af6a3be5d062aafce2ca01c53387d">Policy fervent_feynman</option>
+                                
+                            
+                                
+                                <option value="94f623ffcb9d4f39612c008f6d74c79e2b18fe80d482500acf126a1d">Policy unruffled_gates</option>
+                                
+                            
+                                
+                                <option value="98568c3773de19800742eed12c5eaec28a637864f41cbe1b76e02b19">Policy compassionate_vaughan</option>
+                                
+                            
+                                
+                                <option value="daa927f1d2ff52771c96c01362cc82ae00565f0312435e7a40afdaf6">Policy cool_torvalds</option>
+                                
+                            
+                                
+                                <option value="df37eb72a31baa01354746ae10de3bfd6b4d9886a1b815ac091259f8">Policy frosty_burnell</option>
+                                
+                            
+                                
+                                <option value="e082975715ed09283fbe32ac489f517b7dae289010f0e1bf10ffda91">Policy xenodochial_nightingale</option>
+                                
+                            
+                                
+                                <option value="e952451ed080e6897891d88c6ce26d8b4ddfdceece36a8b274812409">Policy elegant_kapitsa</option>
+                                
+                            
+                                
+                                <option value="1f785a7952983c36439f82608d847a8d91185f100a6c835fcfff7735">Policy sleepy_northcutt</option>
+                                
+                            
+                                
+                                <option value="4962b346bcbddddc99f91f7f857de3853e4570efc1b568f94f4caf0b">Policy mystifying_galois</option>
+                                
+                            
+                                
+                                <option value="1c4faaf6e9b72af585609571d119f345156bbb5a653db1c07eb9b195">Policy charming_fermi</option>
+                                
+                            
+                                
+                                <option value="2101eea28516b0a908e50aa000b0ee86ad80e53538cb7f167bd3cde8">Policy modest_archimedes</option>
+                                
+                            
+                                
+                                <option value="3b31bf8c1a360b063f7435c9634b624ffd9c0c023d36efd7a7e42717">Policy keen_khayyam</option>
+                                
+                            
+                                
+                                <option value="6a98151c973e8d6c6e28248ca868037bc763c6a8ea217ce4e7113a88">Policy focused_torvalds</option>
+                                
+                            
+                                
+                                <option value="add424e0e516d0e03c6c133a7cf7401b8877205ae43d4d4f5f9b8f4f">Policy romantic_napier</option>
+                                
+                            
+                                
+                                <option value="baa722185334c887ec07881e8eb6a41ecc2ebcc99b05ff8a743c1d8e">Policy gifted_pike</option>
+                                
+                            
+                                
+                                <option value="db2e7e99e06b62cb34fff3f1d1b1dd6aacffabf0eb815ef7cba12ba2">Policy competent_morse</option>
+                                
+                            
+                                
+                                <option value="dc314b254a177542c28cca5989b37ab010b147f3a04f7687e1788542">Policy serene_haslett</option>
+                                
+                            
+                                
+                                <option value="30bfaaee6061c55eaac275fcdb0f7b541dceb8720aadc9cb4744ae50">Policy distracted_mclaren</option>
+                                
+                            
+                                
+                                <option value="374ccefae77e12a07fb02f7c6dcd147612d616202b23c8caa5950e3f">Policy determined_cohen</option>
+                                
+                            
+                                
+                                <option value="85864238d6871497a63ebc5231b7953c2d910a6604a3def8377bad50">Policy bold_solomon</option>
+                                
+                            
+                                
+                                <option value="d573995f1c6999d38fc944929bfac822df375881cb82f9dcdd73eec9">Policy goofy_lichterman</option>
+                                
+                            
+                                
+                                <option value="dcb0837dfdde65bfe5d3d0a57a956ecb5f3fdce92cf7f6f163e4fc84">Policy sharp_hoover</option>
+                                
+                            
+                                
+                                <option value="e80b732f7e0d0799a5388faad643b199e1bcc4dc9d0b147d59f02ea5">Policy sad_matsumoto</option>
+                                
+                            
+                                
+                                <option value="ea3a82f814075e3810c48d405b3d43c3b03a336efa5253c796efb930">Policy blissful_volhard</option>
+                                
+                            
+                                
+                                <option value="433ad363ebee46aa4ed0ac6d932c8e51a74207f9f2ccc501b6ee5e38">Policy wizardly_leavitt</option>
+                                
+                            
+                                
+                                <option value="4b8d10bc0ccac4c057c4686c8eda891fac9038fb9959d2c35bdc72d9">Policy mystifying_ardinghelli</option>
+                                
+                            
+                                
+                                <option value="7278682d83ee42df78ba121043ade3663270a22a217aae6bd0a05063">Policy compassionate_kepler</option>
+                                
+                            
+                                
+                                <option value="8757bdf5fa9019dca1558524c9fec8333c6e19b9e95c2afa952b1a86">Policy elastic_elgamal</option>
+                                
+                            
+                                
+                                <option value="b79b939bc3dfbef71865b368d323c3723e25a3c81b7fe48047b85e25">Policy condescending_curran</option>
+                                
+                            
+                                
+                                <option value="25374afa4ea4ed9bc5c67639793464c6e9ad883bba7695f7529321f6">Policy nifty_swanson</option>
+                                
+                            
+                                
+                                <option value="2771cf9ab3da592d553e1e7a4f729b0c21104b72cb7d302c7552efcc">Policy adoring_swartz</option>
+                                
+                            
+                                
+                                <option value="41d85062239b0b406c23f5ac8516255638f6131429a8dd1e1f3c3a28">Policy jolly_galois</option>
+                                
+                            
+                                
+                                <option value="7b4d180c1d119ba702f9da73411cecc5df4e9ba58ac9431f0140ed2a">Policy epic_swirles</option>
+                                
+                            
+
+                            
+
+
+                        </select>
+
+                        <script>var netgroups = {"036ccbabff499f99d90867f406f349a5a2d784cd87c7016f874a47ba":["69.9.177.0/24"],"150b21d9e97b98d6e500497aa4d40a787fb411262f02432b4036a4f9":["2602:fbaf:f05::/48"],"168f77a21c6b242039a4c4b702b9a73f4723f3041f39b5da288a2850":["2602:fbaf:840::/48","2602:fbaf:83c::/47","2602:fbaf:848::/47","2602:fbaf:21c::/48"],"1770a076905373355d5645ec76dcf3aaad8f770f140faa221aea6b66":["69.9.184.0/24"],"1c4faaf6e9b72af585609571d119f345156bbb5a653db1c07eb9b195":["2602:fbaf:22b::/48"],"1dd2383ed2b2793ced6ffd1f3947dc169566a7885f083692b5314ead":["2602:fbaf:226::/48"],"1f785a7952983c36439f82608d847a8d91185f100a6c835fcfff7735":["2602:fbaf:22c::/48"],"2101eea28516b0a908e50aa000b0ee86ad80e53538cb7f167bd3cde8":["2602:fbaf:22a::/48","2602:fbaf:808::/48"],"25374afa4ea4ed9bc5c67639793464c6e9ad883bba7695f7529321f6":["69.9.180.0/24"],"2771cf9ab3da592d553e1e7a4f729b0c21104b72cb7d302c7552efcc":["2602:fbaf:830::/47"],"2e34d321167c07ca56dfdb37b1e11b0f3c57d30bdf2f258f21429d7c":["2602:fbaf:82c::/47","2602:fbaf:82c::/48","2602:fbaf:828::/47"],"30bfaaee6061c55eaac275fcdb0f7b541dceb8720aadc9cb4744ae50":["2602:fbaf:222::/48","2602:fbaf:854::/48"],"32bc21d893d9a264981c445992cd7d8ed73e68a558d969617dd2d6c0":["2602:fbaf:864::/48"],"364685001f369b4a1dc614a9628af6a3be5d062aafce2ca01c53387d":["2602:fbaf:f02::/48","2602:fbaf:f01::/48"],"374ccefae77e12a07fb02f7c6dcd147612d616202b23c8caa5950e3f":["2602:fbaf:213::/48","2602:fbaf:850::/48"],"39d384b6a1a53df5030177ee4624c37cd3292ecfba84f0576d3d2ab1":["2602:fbaf:838::/48"],"3b31bf8c1a360b063f7435c9634b624ffd9c0c023d36efd7a7e42717":["2602:fbaf:810::/47","2602:fbaf:814::/47"],"41d85062239b0b406c23f5ac8516255638f6131429a8dd1e1f3c3a28":["2602:fbaf:854::/47"],"433ad363ebee46aa4ed0ac6d932c8e51a74207f9f2ccc501b6ee5e38":["23.133.216.0/24"],"44ce3a9e00bf38f1dffa6ee4ce8fa3c0bd9b6e86079a3b3bb736247b":["69.9.185.0/24"],"4962b346bcbddddc99f91f7f857de3853e4570efc1b568f94f4caf0b":["2602:fbaf:808::/47"],"4b3dee4d7f0421c2559aae4d1df9f7cf48258c82dc06872cb4781338":["2602:fbaf:22d::/48"],"4b8d10bc0ccac4c057c4686c8eda891fac9038fb9959d2c35bdc72d9":["147.185.221.0/24"],"50212728c9db1c3747aac1c2c0bcf4d422814b6923340aeffad8b186":["2602:fbaf:800::/38"],"633bc76868ba0daae71ab8577a85ab485663b4ba5d62a0f474a2a823":["2602:fbaf:85c::/48"],"6a98151c973e8d6c6e28248ca868037bc763c6a8ea217ce4e7113a88":["2602:fbaf:804::/48"],"6bbbbb0e53fc1a3b5ff11fa1e514c6889d537b600fcc4a3730685836":["2602:fbaf:225::/48","2602:fbaf:828::/48"],"6f58b4beb918ff49ae1743f1b5272d750e68718ce248b5329b7f0275":["2602:fbaf:824::/47"],"7278682d83ee42df78ba121043ade3663270a22a217aae6bd0a05063":["69.9.187.0/24"],"78e3a54e635ea84d7ade35538cb1588c38579066a7563699c0f6c3a9":["2602:fbaf:210::/48","2602:fbaf:84c::/48"],"7b4d180c1d119ba702f9da73411cecc5df4e9ba58ac9431f0140ed2a":["69.9.191.0/24"],"85864238d6871497a63ebc5231b7953c2d910a6604a3def8377bad50":["2602:fbaf:20b::/48"],"8757bdf5fa9019dca1558524c9fec8333c6e19b9e95c2afa952b1a86":["69.9.176.0/20"],"8edd26b84b722309379f87f7e74916b47a414c1964aa8acbd2f48c19":["2602:fbaf:844::/47"],"94f623ffcb9d4f39612c008f6d74c79e2b18fe80d482500acf126a1d":["69.9.181.0/24"],"98568c3773de19800742eed12c5eaec28a637864f41cbe1b76e02b19":["69.9.188.0/24"],"98656e4ef5b3432d33da8508db41384833abef68d28b17a5dc87e050":["2602:fbaf::/48"],"9932d5c5f37bf07440b38589c54adc7b19668e0ab826df95306faccd":["2602:fbaf:850::/47"],"9b37701980da9affdd4bc72bcd75690e2e527408dd683967967124a1":["2602:fbaf:f04::/48"],"a8db6a2feffa5f14f8897e35464bff38befeb5ef0de4b179760e0585":["2602:fbaf:864::/47"],"abc06c5a693bf1e135736e60a1f4ce4fe7b2193be76d400367e615a6":["2602:fbaf:834::/48"],"add424e0e516d0e03c6c133a7cf7401b8877205ae43d4d4f5f9b8f4f":["2602:fbaf:860::/48"],"aea9d68748433f29e4bb1785b6496ea2dd0193ddc84a20fc88bb88c7":["2602:fbaf:214::/48","2602:fbaf:824::/48"],"b3b4b94000ca4f80092cb937d84b4dd2108737756ceb6aad89ecb8c9":["2602:fbaf:229::/48"],"b79b939bc3dfbef71865b368d323c3723e25a3c81b7fe48047b85e25":["2602:fbaf:810::/48"],"b83a684412917e725e65e9372b8d03e5c7efbc0b2a75e4cc9811db2f":["2602:fbaf:860::/47"],"baa722185334c887ec07881e8eb6a41ecc2ebcc99b05ff8a743c1d8e":["2602:fbaf:227::/48"],"c373814dd1e130befb49863a241c7b0ba46047164ec5d24a9c2b9641":["69.9.176.0/24"],"c759354eb1c8afb09ca60eacfea3c678d755e036554e5ec7a842163a":["69.9.178.0/24"],"ca948b32bb925adbdff6aa4ee34905a925a62f85ddd1c9dd4faf9770":["2602:fbaf:84c::/47"],"ccaad1cf8411a8ef4bb0ec3af27eddbfd8efacc91df8f535da375e9f":["2602:fbaf:83c::/48","2602:fbaf:221::/48"],"cf3cb1a4e0045ee5c3026d495ac6e18c3e3919e6bd68b08f11de7531":["2602:fbaf:834::/47"],"d573995f1c6999d38fc944929bfac822df375881cb82f9dcdd73eec9":["209.25.143.0/24"],"d758383e890152aab1bb82fafff9869ef21bb68b5cc453ca3355c670":["209.25.142.0/24"],"d8ed3373f2fcf42e7d5c274dbf3f843380ae20871d7d22c25316b32b":["69.9.179.0/24"],"daa927f1d2ff52771c96c01362cc82ae00565f0312435e7a40afdaf6":["69.9.186.0/24"],"db2e7e99e06b62cb34fff3f1d1b1dd6aacffabf0eb815ef7cba12ba2":["209.25.140.0/22","198.22.204.0/23"],"dc314b254a177542c28cca5989b37ab010b147f3a04f7687e1788542":["2602:fbaf:830::/48","2602:fbaf:224::/48"],"dcb0837dfdde65bfe5d3d0a57a956ecb5f3fdce92cf7f6f163e4fc84":["2602:fbaf:80c::/48"],"df37eb72a31baa01354746ae10de3bfd6b4d9886a1b815ac091259f8":["2602:fbaf:228::/48"],"e082975715ed09283fbe32ac489f517b7dae289010f0e1bf10ffda91":["2602:fbaf:85c::/47"],"e209d2852b165f011229e15852b7f547663d00e491395c754d9b9a9f":["209.25.141.0/24"],"e80b732f7e0d0799a5388faad643b199e1bcc4dc9d0b147d59f02ea5":["2602:fbaf:838::/47"],"e952451ed080e6897891d88c6ce26d8b4ddfdceece36a8b274812409":["69.9.190.0/24"],"ea3a82f814075e3810c48d405b3d43c3b03a336efa5253c796efb930":["2602:fbaf:848::/48","2602:fbaf:212::/48"],"ecc1c43192e4b55cc701ee2e1f7e2a8e37b8a675b38dab2d47913fe4":["2602:fbaf:216::/48"],"eccb7c1ebb97e40f9be079a39d19c5234c22ef8e9a8be48f59aca92c":["2602:fbaf:22e::/48","2602:fbaf:80c::/47","2602:fbaf:814::/48"],"ef05ed0235f616aade63e23dce8f73ba32275ff2d42e5ab09c3f19e6":["209.25.140.0/24"],"f52ca3066f91e5d572783a66c8cf5e2e670aefb62e9899fddc26cf5d":["2602:fbaf:804::/47"],"f9ff4a9a0bc403d4140d1b3eb1304da9db10ddf77b32939cb4baf87d":["2602:fbaf:840::/47","2602:fbaf:220::/48","2602:fbaf:844::/48"],"fff34874c833f73fa0608b714bc2a9f9fe90636c94327c7ab8c6c59d":["198.22.205.0/24"]}</script>
+
+                        <div style="text-align: center;">
+                            <img id="pathimg" usemap="#world" src="">
+                            <div id="world2"></div>
+                        </div>
+
+                        <details>
+                            <summary>Chart Display Options</summary>
+                            <noscript>This requires javascript to work</noscript>
+                            <label for="graphOptionMoreWiggle" style="display: flex;align-items: center;font-size: 20px;">
+                                <input type="checkbox" id="graphOptionMoreWiggle" name="graphOptionMoreWiggle" style="width: 64px; height: 32px;">
+                                    <p id="graphOptionMoreWiggleLabel" style="width: 200%;">Display links using non straight lines</p>
+                            </label>
+                        </details>
+
+                        <h3 style="display: none;" id="PISPBanner">Prefixes in selected policy</h3>
+                        <table id="policytable" class="full-width-table">
+                        </table>
+                        <button style="width:100%;display: none;" id="ShowFullPolicyButton" class="bigButton" onclick="dropdownPoke()">Load all prefixes in policy</button>
+
+                        <script>
+                            !function(a,b){"function"==typeof define&&define.amd?define([],b):"undefined"!=typeof module&&module.exports?module.exports=b():a.ReconnectingWebSocket=b()}(this,function(){function a(b,c,d){function l(a,b){var c=document.createEvent("CustomEvent");return c.initCustomEvent(a,!1,!1,b),c}var e={debug:!1,automaticOpen:!0,reconnectInterval:1e3,maxReconnectInterval:3e4,reconnectDecay:1.5,timeoutInterval:2e3};d||(d={});for(var f in e)this[f]="undefined"!=typeof d[f]?d[f]:e[f];this.url=b,this.reconnectAttempts=0,this.readyState=WebSocket.CONNECTING,this.protocol=null;var h,g=this,i=!1,j=!1,k=document.createElement("div");k.addEventListener("open",function(a){g.onopen(a)}),k.addEventListener("close",function(a){g.onclose(a)}),k.addEventListener("connecting",function(a){g.onconnecting(a)}),k.addEventListener("message",function(a){g.onmessage(a)}),k.addEventListener("error",function(a){g.onerror(a)}),this.addEventListener=k.addEventListener.bind(k),this.removeEventListener=k.removeEventListener.bind(k),this.dispatchEvent=k.dispatchEvent.bind(k),this.open=function(b){h=new WebSocket(g.url,c||[]),b||k.dispatchEvent(l("connecting")),(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","attempt-connect",g.url);var d=h,e=setTimeout(function(){(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","connection-timeout",g.url),j=!0,d.close(),j=!1},g.timeoutInterval);h.onopen=function(){clearTimeout(e),(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","onopen",g.url),g.protocol=h.protocol,g.readyState=WebSocket.OPEN,g.reconnectAttempts=0;var d=l("open");d.isReconnect=b,b=!1,k.dispatchEvent(d)},h.onclose=function(c){if(clearTimeout(e),h=null,i)g.readyState=WebSocket.CLOSED,k.dispatchEvent(l("close"));else{g.readyState=WebSocket.CONNECTING;var d=l("connecting");d.code=c.code,d.reason=c.reason,d.wasClean=c.wasClean,k.dispatchEvent(d),b||j||((g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","onclose",g.url),k.dispatchEvent(l("close")));var e=g.reconnectInterval*Math.pow(g.reconnectDecay,g.reconnectAttempts);setTimeout(function(){g.reconnectAttempts++,g.open(!0)},e>g.maxReconnectInterval?g.maxReconnectInterval:e)}},h.onmessage=function(b){(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","onmessage",g.url,b.data);var c=l("message");c.data=b.data,k.dispatchEvent(c)},h.onerror=function(b){(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","onerror",g.url,b),k.dispatchEvent(l("error"))}},1==this.automaticOpen&&this.open(!1),this.send=function(b){if(h)return(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","send",g.url,b),h.send(b);throw"INVALID_STATE_ERR : Pausing to reconnect websocket"},this.close=function(a,b){"undefined"==typeof a&&(a=1e3),i=!0,h&&h.close(a,b)},this.refresh=function(){h&&h.close()}}return a.prototype.onopen=function(){},a.prototype.onclose=function(){},a.prototype.onconnecting=function(){},a.prototype.onmessage=function(){},a.prototype.onerror=function(){},a.debugAll=!1,a.CONNECTING=WebSocket.CONNECTING,a.OPEN=WebSocket.OPEN,a.CLOSING=WebSocket.CLOSING,a.CLOSED=WebSocket.CLOSED,a});
+                        </script>
+                        
+                        <script>
+                            var prefixinfo = [{"PrefixString":"23.133.216.0/24","WhoisName":"Developed Methods LLC","WhoisCountry":"US"},{"PrefixString":"69.9.177.0/24","WhoisName":"Developed Methods LLC","WhoisCountry":"ANY"},{"PrefixString":"69.9.178.0/24","WhoisName":"Developed Methods LLC","WhoisCountry":"ANY"},{"PrefixString":"69.9.179.0/24","WhoisName":"Developed Methods LLC","WhoisCountry":"ANY"},{"PrefixString":"69.9.180.0/24","WhoisName":"Developed Methods LLC","WhoisCountry":"US"},{"PrefixString":"69.9.181.0/24","WhoisName":"Developed Methods LLC","WhoisCountry":"ANY"},{"PrefixString":"69.9.184.0/24","WhoisName":"Developed Methods LLC","WhoisCountry":"ANY"},{"PrefixString":"69.9.185.0/24","WhoisName":"Developed Methods LLC","WhoisCountry":"ANY"},{"PrefixString":"69.9.186.0/24","WhoisName":"Developed Methods LLC","WhoisCountry":"ANY"},{"PrefixString":"69.9.187.0/24","WhoisName":"Developed Methods LLC","WhoisCountry":"ANY"},{"PrefixString":"69.9.188.0/24","WhoisName":"Developed Methods LLC","WhoisCountry":"US"},{"PrefixString":"69.9.190.0/24","WhoisName":"Developed Methods LLC","WhoisCountry":"US"},{"PrefixString":"69.9.191.0/24","WhoisName":"Developed Methods LLC","WhoisCountry":"US"},{"PrefixString":"198.22.204.0/23","WhoisName":"Developed Methods LLC","WhoisCountry":"ANY"},{"PrefixString":"198.22.205.0/24","WhoisName":"Developed Methods LLC","WhoisCountry":"ANY"},{"PrefixString":"209.25.140.0/24","WhoisName":"Developed Methods LLC","WhoisCountry":"ANY"},{"PrefixString":"209.25.140.0/22","WhoisName":"Developed Methods LLC","WhoisCountry":"US"},{"PrefixString":"209.25.141.0/24","WhoisName":"Developed Methods LLC","WhoisCountry":"ANY"},{"PrefixString":"209.25.142.0/24","WhoisName":"Developed Methods LLC","WhoisCountry":"US"},{"PrefixString":"69.9.176.0/20","WhoisName":"Developed Methods LLC","WhoisCountry":"ANY"},{"PrefixString":"69.9.176.0/24","WhoisName":"Developed Methods LLC","WhoisCountry":"ANY"},{"PrefixString":"147.185.221.0/24","WhoisName":"Developed Methods LLC","WhoisCountry":"ANY"},{"PrefixString":"209.25.143.0/24","WhoisName":"Developed Methods LLC","WhoisCountry":"ANY"},{"PrefixString":"2602:fbaf::/48","WhoisName":"Developed Methods LLC","WhoisCountry":"ANY"},{"PrefixString":"2602:fbaf:20b::/48","WhoisName":"Developed Methods LLC","WhoisCountry":"US"},{"PrefixString":"2602:fbaf:210::/48","WhoisName":"Developed Methods LLC","WhoisCountry":"US"},{"PrefixString":"2602:fbaf:212::/48","WhoisName":"Developed Methods LLC","WhoisCountry":"US"},{"PrefixString":"2602:fbaf:213::/48","WhoisName":"Developed Methods LLC","WhoisCountry":"US"},{"PrefixString":"2602:fbaf:214::/48","WhoisName":"Developed Methods LLC","WhoisCountry":"US"},{"PrefixString":"2602:fbaf:216::/48","WhoisName":"Developed Methods LLC","WhoisCountry":"US"},{"PrefixString":"2602:fbaf:21c::/48","WhoisName":"Developed Methods LLC","WhoisCountry":"US"},{"PrefixString":"2602:fbaf:220::/48","WhoisName":"Developed Methods LLC","WhoisCountry":"US"},{"PrefixString":"2602:fbaf:221::/48","WhoisName":"Developed Methods LLC","WhoisCountry":"US"},{"PrefixString":"2602:fbaf:222::/48","WhoisName":"Developed Methods LLC","WhoisCountry":"US"},{"PrefixString":"2602:fbaf:224::/48","WhoisName":"Developed Methods LLC","WhoisCountry":"US"},{"PrefixString":"2602:fbaf:225::/48","WhoisName":"Developed Methods LLC","WhoisCountry":"US"},{"PrefixString":"2602:fbaf:226::/48","WhoisName":"Developed Methods LLC","WhoisCountry":"US"},{"PrefixString":"2602:fbaf:227::/48","WhoisName":"Developed Methods LLC","WhoisCountry":"US"},{"PrefixString":"2602:fbaf:228::/48","WhoisName":"Developed Methods LLC","WhoisCountry":"US"},{"PrefixString":"2602:fbaf:229::/48","WhoisName":"Developed Methods LLC","WhoisCountry":"US"},{"PrefixString":"2602:fbaf:22a::/48","WhoisName":"Developed Methods LLC","WhoisCountry":"US"},{"PrefixString":"2602:fbaf:22b::/48","WhoisName":"Developed Methods LLC","WhoisCountry":"US"},{"PrefixString":"2602:fbaf:22c::/48","WhoisName":"Developed Methods LLC","WhoisCountry":"US"},{"PrefixString":"2602:fbaf:22d::/48","WhoisName":"Developed Methods LLC","WhoisCountry":"US"},{"PrefixString":"2602:fbaf:22e::/48","WhoisName":"Developed Methods LLC","WhoisCountry":"US"},{"PrefixString":"2602:fbaf:800::/38","WhoisName":"Developed Methods LLC","WhoisCountry":"ANY"},{"PrefixString":"2602:fbaf:804::/47","WhoisName":"Developed Methods LLC","WhoisCountry":"US"},{"PrefixString":"2602:fbaf:804::/48","WhoisName":"Developed Methods LLC","WhoisCountry":"ANY"},{"PrefixString":"2602:fbaf:808::/47","WhoisName":"Developed Methods LLC","WhoisCountry":"US"},{"PrefixString":"2602:fbaf:808::/48","WhoisName":"Developed Methods LLC","WhoisCountry":"ANY"},{"PrefixString":"2602:fbaf:80c::/47","WhoisName":"Developed Methods LLC","WhoisCountry":"US"},{"PrefixString":"2602:fbaf:80c::/48","WhoisName":"Developed Methods LLC","WhoisCountry":"ANY"},{"PrefixString":"2602:fbaf:810::/48","WhoisName":"Developed Methods LLC","WhoisCountry":"ANY"},{"PrefixString":"2602:fbaf:810::/47","WhoisName":"Developed Methods LLC","WhoisCountry":"US"},{"PrefixString":"2602:fbaf:814::/48","WhoisName":"Developed Methods LLC","WhoisCountry":"ANY"},{"PrefixString":"2602:fbaf:814::/47","WhoisName":"Developed Methods LLC","WhoisCountry":"US"},{"PrefixString":"2602:fbaf:824::/48","WhoisName":"Developed Methods LLC","WhoisCountry":"ANY"},{"PrefixString":"2602:fbaf:824::/47","WhoisName":"Developed Methods LLC","WhoisCountry":"US"},{"PrefixString":"2602:fbaf:828::/47","WhoisName":"Developed Methods LLC","WhoisCountry":"US"},{"PrefixString":"2602:fbaf:828::/48","WhoisName":"Developed Methods LLC","WhoisCountry":"ANY"},{"PrefixString":"2602:fbaf:82c::/47","WhoisName":"Developed Methods LLC","WhoisCountry":"US"},{"PrefixString":"2602:fbaf:82c::/48","WhoisName":"Developed Methods LLC","WhoisCountry":"ANY"},{"PrefixString":"2602:fbaf:830::/48","WhoisName":"Developed Methods LLC","WhoisCountry":"ANY"},{"PrefixString":"2602:fbaf:830::/47","WhoisName":"Developed Methods LLC","WhoisCountry":"US"},{"PrefixString":"2602:fbaf:834::/47","WhoisName":"Developed Methods LLC","WhoisCountry":"US"},{"PrefixString":"2602:fbaf:834::/48","WhoisName":"Developed Methods LLC","WhoisCountry":"ANY"},{"PrefixString":"2602:fbaf:838::/47","WhoisName":"Developed Methods LLC","WhoisCountry":"US"},{"PrefixString":"2602:fbaf:838::/48","WhoisName":"Developed Methods LLC","WhoisCountry":"ANY"},{"PrefixString":"2602:fbaf:83c::/48","WhoisName":"Developed Methods LLC","WhoisCountry":"ANY"},{"PrefixString":"2602:fbaf:83c::/47","WhoisName":"Developed Methods LLC","WhoisCountry":"US"},{"PrefixString":"2602:fbaf:840::/48","WhoisName":"Developed Methods LLC","WhoisCountry":"ANY"},{"PrefixString":"2602:fbaf:840::/47","WhoisName":"Developed Methods LLC","WhoisCountry":"US"},{"PrefixString":"2602:fbaf:844::/47","WhoisName":"Developed Methods LLC","WhoisCountry":"US"},{"PrefixString":"2602:fbaf:844::/48","WhoisName":"Developed Methods LLC","WhoisCountry":"ANY"},{"PrefixString":"2602:fbaf:848::/47","WhoisName":"Developed Methods LLC","WhoisCountry":"US"},{"PrefixString":"2602:fbaf:848::/48","WhoisName":"Developed Methods LLC","WhoisCountry":"US"},{"PrefixString":"2602:fbaf:84c::/47","WhoisName":"Developed Methods LLC","WhoisCountry":"US"},{"PrefixString":"2602:fbaf:84c::/48","WhoisName":"Developed Methods LLC","WhoisCountry":"US"},{"PrefixString":"2602:fbaf:850::/48","WhoisName":"Developed Methods LLC","WhoisCountry":"ANY"},{"PrefixString":"2602:fbaf:850::/47","WhoisName":"Developed Methods LLC","WhoisCountry":"US"},{"PrefixString":"2602:fbaf:854::/48","WhoisName":"Developed Methods LLC","WhoisCountry":"ANY"},{"PrefixString":"2602:fbaf:854::/47","WhoisName":"Developed Methods LLC","WhoisCountry":"US"},{"PrefixString":"2602:fbaf:85c::/47","WhoisName":"Developed Methods LLC","WhoisCountry":"US"},{"PrefixString":"2602:fbaf:85c::/48","WhoisName":"Developed Methods LLC","WhoisCountry":"ANY"},{"PrefixString":"2602:fbaf:860::/48","WhoisName":"Developed Methods LLC","WhoisCountry":"ANY"},{"PrefixString":"2602:fbaf:860::/47","WhoisName":"Developed Methods LLC","WhoisCountry":"US"},{"PrefixString":"2602:fbaf:864::/48","WhoisName":"Developed Methods LLC","WhoisCountry":"ANY"},{"PrefixString":"2602:fbaf:864::/47","WhoisName":"Developed Methods LLC","WhoisCountry":"US"},{"PrefixString":"2602:fbaf:f01::/48","WhoisName":"Developed Methods LLC","WhoisCountry":"ANY"},{"PrefixString":"2602:fbaf:f02::/48","WhoisName":"Developed Methods LLC","WhoisCountry":"ANY"},{"PrefixString":"2602:fbaf:f04::/48","WhoisName":"Developed Methods LLC","WhoisCountry":"ANY"},{"PrefixString":"2602:fbaf:f05::/48","WhoisName":"Developed Methods LLC","WhoisCountry":"US"}]
+                            var asn =  400519 
+
+                            var pfxExtraString = "";
+
+                            function saveGraphOptionsToLocalStorage() {
+                                localStorage.setItem("pfx-chart-options:wiggle", document.getElementById("graphOptionMoreWiggle").checked);
+                            }
+
+                            function loadGraphOptionsToLocalStorage() {
+                                document.getElementById("graphOptionMoreWiggle").checked = localStorage.getItem("pfx-chart-options:wiggle") == "true";
+                                pfxExtraString= "";
+                                if (document.getElementById("graphOptionMoreWiggle").checked) {
+                                    pfxExtraString = pfxExtraString + "&wiggly";
+                                }
+                            }
+                            loadGraphOptionsToLocalStorage();
+
+                            function graphOptionsChanged() {
+                                saveGraphOptionsToLocalStorage();
+                                handleImageChange();
+                            }
+                            document.getElementById("graphOptionMoreWiggle").addEventListener("click", graphOptionsChanged)
+
+
+                            function handleImageChange() {
+                                loadGraphOptionsToLocalStorage();
+                                
+                                document.getElementById("pathimg").src=("/pathimg/"+asn+ "-" + document.getElementById("netpolicydropdown").value +"?"+pfxExtraString);
+                                var request = new XMLHttpRequest();
+                                request.open('GET', "/pathimg/"+asn+ "-" + document.getElementById("netpolicydropdown").value + "?map=true" + pfxExtraString, true);
+
+                                request.onload = function() {
+                                    if (this.status >= 200 && this.status < 400) {
+                                        
+                                        
+                                        document.getElementById("world2").innerHTML = this.response;
+                                        setTimeout(function(){
+                                            imageMapResize('#world');
+                                        },1000)
+                                    }
+                                };
+                                request.send();
+                                buildPrefixTable();
+                            } 
+
+                            function encodeHTML(s) {
+                                return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
+                            }
+
+                            function dropdownPoke(){
+                                InteractedWithPolicyTableYet=true;
+                                handleImageChange();
+                            }
+
+                            var InteractedWithPolicyTableYet = false;
+                            var OverloadPolicySize = 0;
+                            function buildPrefixTable() {
+                                var policy = document.getElementById("netpolicydropdown").value;
+                                
+                                var cidrs = netgroups[policy];
+                                var ihtml = "<tbody> <tr> <th class=\"nowrap\">  -  </th> <th>Prefix</th> <th class=\"nowrap\">Description</th> </tr>";
+
+                                
+                                var aaa = document.querySelectorAll('#PISPBanner');
+                                var bbb = document.querySelectorAll('#policytable');
+                                var n = 0
+                                if (cidrs) {
+                                    aaa[0].style.display = "";
+                                    bbb[0].style.display = "";
+                                    cidrs.forEach(cidr => {
+                                        var obj = {};
+                                        var dont =false;
+                                        n++;
+                                        
+                                        if (!InteractedWithPolicyTableYet) {
+                                            if (n == 5) {
+                                                dont = true;
+                                            } else if (n > 5) {
+                                                dont = true;
+                                            }
+                                        }
+                                        
+                                        if (!dont) {
+                                            prefixinfo.forEach(el => {
+                                                if(el.PrefixString == cidr) {
+                                                    
+                                                        ihtml += "<tr><td class=\"nowrap ns\"><img class=\"flag-img\" src=\"/assets/flags/"+el.WhoisCountry+".png\" title=\""+el.WhoisCountry+"\"></td>"
+                                                        ihtml += "<td><a href=\"/prefix/"+el.PrefixString+"\">"+el.PrefixString+"</a></td>"
+                                                        ihtml += "<td class=\"nowrap\">"+encodeHTML(el.WhoisName)+"</td></tr>"
+                                                }
+                                            });
+                                        } else {
+                                            OverloadPolicySize++;
+                                        }
+                                    });
+                                    document.getElementById("policytable").innerHTML = ihtml
+                                    var PolButton = document.querySelectorAll('#ShowFullPolicyButton');
+                                    if (!InteractedWithPolicyTableYet && OverloadPolicySize!=0) {
+                                        PolButton[0].style="width:100%";
+                                        PolButton[0].innerHTML = "Load all "+OverloadPolicySize+" prefixes in policy"
+                                    } else {
+                                        PolButton[0].style="display:none;";
+                                    }
+                                    
+                                } else {
+                                    aaa[0].style.display = "none";
+                                    bbb[0].style.display = "none";
+                                }
+                            }
+
+
+                            var pathdropdown = document.querySelectorAll('#netpolicydropdown');
+                            pathdropdown[0].addEventListener("change",dropdownPoke)
+                            handleImageChange()
+                            buildPrefixTable()
+
+                            document.addEventListener("load", function(){
+                                
+                                handleImageChange()
+                            });
+
+                            function uuidv4() {
+                                return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+                                    var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+                                    return v.toString(16);
+                                });
+                            }
+
+                            
+                            let realTimeSocket = new ReconnectingWebSocket("wss://bgp.tools/ws/rt-asn?prefix=AS400519" + "&magic=" + encodeURIComponent("IQEJOU4AK4PBETUX6YSMDGCGZD25XG4RGFFDU2NMSI6CNOPFDZNA===="));
+                            
+                            realTimeSocket.onmessage = function(event) {
+                                console.log(`[message] Data received from server: ${event.data}`);
+                                if (event.data == "Running.") {
+                                    document.getElementById("ws-status").src = "/assets/connected.png";
+                                    document.getElementById("ws-status").title = "Connected to realtime data";
+                                } else if (event.data == "STOP-CONNECTING") {
+                                    document.getElementById("ws-status").src = disconectedIcon;
+                                    document.getElementById("ws-status").title = "Not connected to realtime data";
+                                    realTimeSocket.maxReconnectAttempts = 1;
+                                    realTimeSocket.close()
+                                } else {
+                                    var obj = JSON.parse(event.data);
+                                    var elm = document.getElementById("pfx-"+obj.Prefix);
+                                    if (!elm && obj.Vis > 6) {
+                                        var tblist = document.getElementById("donotscrapebgptools-prefixlist-tbody");
+                                        var node = document.createElement("tr");                 
+                                        node.outerHTML = '<tr id="pfx-'+obj.Prefix+'"><td class="nowrap"><img class="flag-img" src="/assets/flags/'+obj.Whois.WhoisCountry+'.png" title="'+obj.Whois.WhoisCountry+'"></td><td><a href="/prefix/'+obj.Prefix+'">'+obj.Prefix+'</a></td><td class="smallonmobile nowrap">'+obj.Whois.WhoisName+'</td></tr>';
+                                        tblist.appendChild(node);                              
+                                    }
+                                    if (!elm) {
+                                        elm = document.getElementById("pfx-"+obj.Prefix);
+                                    }
+                                    
+                                    if (obj.Vis > 70) {
+                                        if (elm.style) {
+                                            var es = elm.style;
+                                            if (es.animation.includes("pulse1b")) {
+                                                elm.style = "animation: pulse2b 1s 1;";
+                                            } else if (es.animation.includes("pulse2b")) {
+                                                elm.style = "animation: pulse1b 1s 1;";
+                                            } else {
+                                                elm.style = "animation: pulse1b 1s 1;";
+                                            }
+                                        }
+                                    } else if (obj.Vis < 5) {
+                                        
+                                        var elm = document.getElementById("pfx-"+obj.Prefix);
+                                        if (elm) {
+                                            elm.parentNode.removeChild(elm);
+                                        }
+                                    } else {
+                                        if (elm.style) {
+                                            var es = elm.style;
+                                            if (es.animation.includes("pulse1r")) {
+                                                elm.style = "animation: pulse2r 1s 1;";
+                                            } else if (es.animation.includes("pulse2r")) {
+                                                elm.style = "animation: pulse1r 1s 1;";
+                                            } else {
+                                                elm.style = "animation: pulse1r 1s 1;";
+                                            }
+                                        }
+                                    }
+                                }
+                            };
+                            var disconectedIcon = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAAZlBMVEX/ewBZWVn/ewf/ew5fWljudiP8egp6XVT6eRHodSmVYU6hZEzObjrldCv3eRZ/XlNjWliHX1KrZkngci71eBl1XFXCa0CKYFHydx18XlSQYE+lZUq0aEbJbT3SbzhvXFaLYFG8akLYdYVFAAABQElEQVRIx5XV25KDIAwGYIKASLutqOtZ277/S26xK4ozJea/qRdfajATZaRkd6B6oPoL1d9QphUn+WvXmGF8TfN8yvNrDj6nvNj5Hu8n8HCh9ONiON5PEKuQx55DmFTHC1R9uMOjYkhFERbkEikofw8FGe5t0FWJ+kLvz5H+t8RdGD9k8TeebBXpzwIZT955XyVBtHHeXYzeJy5fhydtoZffZvUMSfvxT4BOeI/G/b9paxH1at8XQF8xNcV8aaQvHQBMhY/XttsdYp5nah3XdvIqui61Cjy+jqLwXp1cx9XLQZ5cR/vx1p8cez2IWrlxYY/T9bNVyCfmdQdbxNgs441FNRAEHS83oe9ahmTw1p88nhHCiAkpeIUeX5eJ6NlM9Gwm+uxO9/3F2PSR597jn1+udCWzUp7150P1jOoZ1f8BGPARG85JosIAAAAASUVORK5CYII=";
+                            realTimeSocket.onerror = function(error) {
+                                document.getElementById("ws-status").src = disconectedIcon;
+                                document.getElementById("ws-status").title = "Not connected to realtime data";
+
+                                console.log(`[error] ${error.message}`);
+                            };
+                            realTimeSocket.onclose = function(error) {
+                                document.getElementById("ws-status").src = disconectedIcon;
+                                document.getElementById("ws-status").title = "Not connected to realtime data";
+
+                                console.log(`[error] ${error.message}`);
+                            };
+                        </script>
+
+<div class="superclearfix">
+    
+</div>
+
+                        <hr>
+                        <a style="font-size: small;" href="/kb/what-is-a-upstream">How are upstreams and downstreams calculated?</a>
+                        <h3 id="upstreams">Upstreams<img class="flag-img" src="/assets/lightning.png" style="padding-left: 12px;" title="This information was fetched live at page load time" alt="This information was fetched live at page load time"/></h3>
+
+
+                        <table id="donotscrapebgptools-upstreamTable" class="full-width-table">
+                            <thead class="sortable">
+                                <tr>
+                                    <th class="nowrap boldpls">  &nbsp;  </th>
+                                    <th data-sort-method='number' class="boldpls">ASN</th>
+                                    <th class="nowrap boldpls">Description</th>
+                                    <th class="nowrap boldpls">IPv4</th>
+                                    <th class="nowrap boldpls">IPv6</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                <tr>
+                                    <td data-sort='GB' class="nowrap ns"><img class="flag-img" src="/assets/flags/GB.png" title="GB">
+                                        
+                                        </td>
+                                    <td data-sort='60068'><a href="/as/60068">AS60068</a></td>
+                                    <td class="smallonmobile nowrap">Datacamp Limited (CDN77 / DataPacket)</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US">
+                                        
+                                        </td>
+                                    <td data-sort='20473'><a href="/as/20473">AS20473</a></td>
+                                    <td class="smallonmobile nowrap">The Constant Company, LLC</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US">
+                                        
+                                        </td>
+                                    <td data-sort='174'><a href="/as/174">AS174</a></td>
+                                    <td class="smallonmobile nowrap">Cogent Communications, LLC</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+
+                        <hr>
+                        <h3 id="peers">Peers<img class="flag-img" src="/assets/lightning.png" style="padding-left: 12px;" title="This information was fetched live at page load time" alt="This information was fetched live at page load time"/></h3>
+
+
+
+                        <table id="donotscrapebgptools-upstreamTablePeers" class="full-width-table">
+                            <thead class="sortable">
+                                <tr>
+                                    <th class="nowrap boldpls">  &nbsp;  </th>
+                                    <th data-sort-method='number' class="boldpls">ASN</th>
+                                    <th class="nowrap boldpls">Description</th>
+                                    <th class="nowrap boldpls">IPv4</th>
+                                    <th class="nowrap boldpls">IPv6</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                <tr>
+                                    <td data-sort='GB' class="nowrap ns"><img class="flag-img" src="/assets/flags/GB.png" title="GB"></td>
+                                    <td data-sort='60068'><a href="/as/60068">AS60068</a></td>
+                                    <td class="smallonmobile nowrap">Datacamp Limited (CDN77 / DataPacket)</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='20473'><a href="/as/20473">AS20473</a></td>
+                                    <td class="smallonmobile nowrap">The Constant Company, LLC</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='174'><a href="/as/174">AS174</a></td>
+                                    <td class="smallonmobile nowrap">Cogent Communications, LLC</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='GB' class="nowrap ns"><img class="flag-img" src="/assets/flags/GB.png" title="GB"></td>
+                                    <td data-sort='52025'><a href="/as/52025">AS52025</a></td>
+                                    <td class="smallonmobile nowrap">ParadoxNetworks Limited</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='214022'><a href="/as/214022">AS214022</a></td>
+                                    <td class="smallonmobile nowrap">Joseph Rawlings trading as Virtnet.bond</td>
+                                    <td class="nowrap">&#10008;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='TH' class="nowrap ns"><img class="flag-img" src="/assets/flags/TH.png" title="TH"></td>
+                                    <td data-sort='133504'><a href="/as/133504">AS133504</a></td>
+                                    <td class="smallonmobile nowrap">PAOCLOUD</td>
+                                    <td class="nowrap">&#10008;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='33760'><a href="/as/33760">AS33760</a></td>
+                                    <td class="smallonmobile nowrap">Ashton Holmes, Sole Proprietorship</td>
+                                    <td class="nowrap">&#10008;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='1239'><a href="/as/1239">AS1239</a></td>
+                                    <td class="smallonmobile nowrap">Sprint Wireline (Cogent)</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='400671'><a href="/as/400671">AS400671</a></td>
+                                    <td class="smallonmobile nowrap">stypr LLC</td>
+                                    <td class="nowrap">&#10008;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='206699'><a href="/as/206699">AS206699</a></td>
+                                    <td class="smallonmobile nowrap">Zoey Mertes</td>
+                                    <td class="nowrap">&#10008;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+
+
+                    </div>
+
+                    <div style="display: none" id="whois-page">
+                        
+                        
+                        <pre style="white-space: pre-wrap;">ASHandle:       <a href="/AS400519">AS400519</a>
+OrgID:          DML-136
+ASName:         PLAYIT-GG
+ASNumber:       400519
+RegDate:        2022-03-10
+Comment:        https://playit.gg
+Updated:        2022-08-31
+Source:         ARIN
+
+
+
+OrgID:          DML-136
+OrgName:        Developed Methods LLC
+CanAllocate:    
+Street:         590 Pearl St.
+Street:         Suite 328
+City:           Eugene
+State/Prov:     OR
+Country:        US
+PostalCode:     97401
+RegDate:        2021-09-28
+Updated:        2025-09-23
+OrgAdminHandle: <a href="https://whois.arin.net/rest/poc/PBL31-ARIN">PBL31-ARIN</a>
+OrgTechHandle:  <a href="https://whois.arin.net/rest/poc/PBL31-ARIN">PBL31-ARIN</a>
+OrgAbuseHandle: <a href="https://whois.arin.net/rest/poc/PBL31-ARIN">PBL31-ARIN</a>
+Source:         ARIN
+
+
+
+
+
+OrgAdminHandle:       <a href="https://whois.arin.net/rest/poc/PBL31-ARIN">PBL31-ARIN</a>
+OrgAdminName:         Patrick Lorio
+# Email removed, Log into bgp.tools to see whois emails
+
+
+OrgTechHandle:        <a href="https://whois.arin.net/rest/poc/PBL31-ARIN">PBL31-ARIN</a>
+OrgTechName:          Patrick Lorio
+# Email removed, Log into bgp.tools to see whois emails
+
+
+OrgAbuseHandle:       <a href="https://whois.arin.net/rest/poc/PBL31-ARIN">PBL31-ARIN</a>
+OrgAbuseName:         Patrick Lorio
+# Email removed, Log into bgp.tools to see whois emails
+
+</pre>
+                        
+                        
+                        <a style="font-size: small;">Last Update: 2025-12-12T03:28:14Z UTC </a>
+                        
+                        <hr>
+                        
+                            <h2>Member of the following AS-SETs</h2>
+
+                            <table id="fhTable" class="full-width-table ">
+                                <tbody id="prefixlist-tbody">
+                                    <tr>
+                                        <th class="boldpls nowrap"> - </th>
+                                        <th class="boldpls">Member</th>
+                                         
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-262672">as-262672</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-e1-automation-customer">as-e1-automation-customer</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-bezeqint">as-bezeqint</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-hurricanev6">as-hurricanev6</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">ARIN</td>
+                                        
+                                        <td><a href="/as-set/ARIN::as400519:as-sea1">as400519:as-sea1</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-telstra-intl-customers">as-telstra-intl-customers</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-telstra-testing-1">as-telstra-testing-1</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-c3">as-c3</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-32098">as-32098</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-bgpexchange-peers">as-bgpexchange-peers</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as20473:as-vultr">as20473:as-vultr</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-cdn77">as-cdn77</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">ARIN</td>
+                                        
+                                        <td><a href="/as-set/ARIN::as-cosmic">as-cosmic</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-kddcustomer2">as-kddcustomer2</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as53667:as-customers">as53667:as-customers</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-28202-customers">as-28202-customers</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-zenlayer">as-zenlayer</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">APNIC</td>
+                                        
+                                        <td><a href="/as-set/APNIC::as1221:as-customers">as1221:as-customers</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-52925">as-52925</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as30456:as-customers">as30456:as-customers</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as26615:as-customers">as26615:as-customers</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-sb-automation-customer">as-sb-automation-customer</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as7545:as-tpgn-customers">as7545:as-tpgn-customers</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                        
+
+                    </div>
+
+                    
+
+                    
+
+                    
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="superclearfix">
+            
+            <div class="superclearfix">
+                
+            </div>
+
+            <div class="superclearfix">
+                
+            </div>
+
+
+        </div>
+
+
+        <div class="group js-footer" id="footer">
+            <nav>
+                <div>
+                    <ul>
+                        <li><a href="/kb/api" target="_blank">Scripting/API</a></li>
+                        <li><a href="/credits" target="_blank">Credits</a></li>
+                        <li><a href="/pricing" target="_blank">Pricing</a></li>
+                        <li><a href="/kb/contact" target="_blank">Contact Us</a></li>
+                        <li><a href="https://github.com/bgptools/issues" target="_blank">Issue Tracker</a></li>
+                        <li><a href="/kb/setup-sessions" target="">Contribute Data</a></li>
+                        
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <script>
+    
+    var inhash = window.location.hash;
+    if (inhash == "#asinfo") {
+        
+    } else if (inhash == "#prefixes") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#prefix-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#prefixes-page');
+        aaa[0].style.display = "";
+
+    } else if (inhash == "#connectivity" || inhash == "#peers" || inhash == "#upstreams" || inhash == "#downstreams") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#connectivity-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#connectivity-page');
+        aaa[0].style.display = "";
+    } else if (inhash == "#whois") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#whois-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#whois-page');
+        aaa[0].style.display = "";
+    } else if (inhash == "#ix") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#ix-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#ix-page');
+        aaa[0].style.display = "";
+    }</script>
+
+    <script>
+    
+
+
+    ;(function() {
+  'use strict'
+
+  function scaleImageMap() {
+    function resizeMap() {
+      function resizeAreaTag(cachedAreaCoords, idx) {
+        function scale(coord) {
+          var dimension = 1 === (isWidth = 1 - isWidth) ? 'width' : 'height'
+          return (
+            padding[dimension] +
+            Math.floor(Number(coord) * scalingFactor[dimension])
+          )
+        }
+
+        var isWidth = 0
+        areas[idx].coords = cachedAreaCoords
+          .split(',')
+          .map(scale)
+          .join(',')
+      }
+
+      var scalingFactor = {
+        width: image.width / image.naturalWidth,
+        height: image.height / image.naturalHeight,
+      }
+
+      var padding = {
+        width: parseInt(
+          window.getComputedStyle(image, null).getPropertyValue('padding-left'),
+          10
+        ),
+        height: parseInt(
+          window.getComputedStyle(image, null).getPropertyValue('padding-top'),
+          10
+        ),
+      }
+
+      cachedAreaCoordsArray.forEach(resizeAreaTag)
+    }
+
+    function getCoords(e) {
+      
+      return e.coords.replace(/ *, */g, ',').replace(/ +/g, ',')
+    }
+
+    function debounce() {
+      clearTimeout(timer)
+      timer = setTimeout(resizeMap, 250)
+    }
+
+    function start() {
+      if (
+        image.width !== image.naturalWidth ||
+        image.height !== image.naturalHeight
+      ) {
+        resizeMap()
+      }
+    }
+
+    function addEventListeners() {
+      image.addEventListener('load', resizeMap, false) 
+      window.addEventListener('focus', resizeMap, false) 
+      window.addEventListener('resize', debounce, false)
+      window.addEventListener('readystatechange', resizeMap, false)
+      document.addEventListener('fullscreenchange', resizeMap, false)
+    }
+
+    function beenHere() {
+      return 'function' === typeof map._resize
+    }
+
+    function getImg(name) {
+      return document.querySelector('img[usemap="#world"]')
+    }
+
+    function setup() {
+      areas = map.getElementsByTagName('area')
+      cachedAreaCoordsArray = Array.prototype.map.call(areas, getCoords)
+      image = getImg('#' + map.name) || getImg(map.name)
+      map._resize = resizeMap 
+    }
+
+    var  
+      map = this,
+      areas = null,
+      cachedAreaCoordsArray = null,
+      image = null,
+      timer = null
+
+    if (!beenHere()) {
+      setup()
+      addEventListeners()
+      start()
+    } else {
+      map._resize() 
+    }
+  }
+
+  function factory() {
+    function chkMap(element) {
+      if (!element.tagName) {
+        throw new TypeError('Object is not a valid DOM element')
+      } else if ('MAP' !== element.tagName.toUpperCase()) {
+        throw new TypeError(
+          'Expected <MAP> tag, found <' + element.tagName + '>.'
+        )
+      }
+    }
+
+    function init(element) {
+      if (element) {
+        chkMap(element)
+        scaleImageMap.call(element)
+        maps.push(element)
+      }
+    }
+
+    var maps
+
+    return function imageMapResizeF(target) {
+      maps = [] 
+
+      switch (typeof target) {
+        case 'undefined':
+        case 'string':
+          Array.prototype.forEach.call(
+            document.querySelectorAll(target || 'map'),
+            init
+          )
+          break
+        case 'object':
+          init(target)
+          break
+        default:
+          throw new TypeError('Unexpected data type (' + typeof target + ').')
+      }
+
+      return maps
+    }
+  }
+
+  if (typeof define === 'function' && define.amd) {
+    define([], factory)
+  } else if (typeof module === 'object' && typeof module.exports === 'object') {
+    module.exports = factory() 
+  } else {
+    window.imageMapResize = factory()
+  }
+
+  if ('jQuery' in window) {
+    window.jQuery.fn.imageMapResize = function $imageMapResizeF() {
+      return this.filter('map')
+        .each(scaleImageMap)
+        .end()
+    }
+  }
+})()
+    
+    </script>
+    <script>
+        var imgEl = document.getElementById("pathimg");
+        imgEl.addEventListener("mouseover",function() {
+            imageMapResize('#world');
+        })
+    </script>
+    <script src="/assets/tablesort.min.js"></script>
+    <script>
+        addEventListener("load", (event) => {
+            
+            
+            var sort = new Tablesort(document.getElementById('donotscrapebgptools-upstreamTable'));
+            var sort2 = new Tablesort(document.getElementById('donotscrapebgptools-upstreamTablePeers'));
+            
+            
+            
+        });
+    </script>
+    
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        setTimeout(function() {
+
+        var beaconHttp = new XMLHttpRequest();
+        var url = '/performance-beacon';
+        var params = JSON.stringify(window.performance)
+        beaconHttp.open('POST', url, true);
+        
+        
+        beaconHttp.setRequestHeader('Content-type', 'application/json');
+        beaconHttp.setRequestHeader('visit-url', "/as/400519");
+        if (navigator.connection) {
+            beaconHttp.setRequestHeader('client-side-rtt', navigator.connection.rtt);
+        } else {
+            beaconHttp.setRequestHeader('client-side-rtt', '-2');
+        }
+        beaconHttp.onreadystatechange = function() {}
+        beaconHttp.send(params);
+        },1000)
+    }, false);
+</script>
+
+</body>
+
+
+</html>

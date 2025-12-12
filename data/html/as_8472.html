@@ -1,0 +1,924 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="British Telecommunications PLC (AS8472) is a inactive BGP network">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000">
+    <link rel="search" type="application/opensearchdescription+xml" title="BGP.Tools" href="https://bgp.tools/opensearch.xml">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="theme-color" content="#000000">
+    <link href="https://social.bgp.tools/@bgptools" rel="me">
+    <link rel="canonical" href="https://bgp.tools/as/8472" />
+    <title>AS8472 British Telecommunications PLC - bgp.tools</title>
+    <link rel="stylesheet" type="text/css" href="/assets/main-new.css?2025-12-09-1723%20UTC">
+</head>
+
+<body>
+    <div id="container">
+        
+<div id="global-header" class="global-header-top">
+    <div class="header-sitewide">
+        <div class="global-header">
+            <div class="header-logo">
+                <a href="/" id="logo" class="content">bgp.tools</a>
+            </div>
+            <form id="search" action="/search" method="get" accept-charset="utf-8" role="search" class="top-search-header js-search-hash">
+                <div class="searchfield">
+                    <input type="search" autocomplete="off" name="q" id="site-search-text" title="Search" value="" placeholder="Start here..." autofocus="autofocus" class="js-search-focus">
+                    <button type="submit" id="search-submit" class="search-submit">Search</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div id="global-header-blob" >
+    <a id="auth-header-text" href="/login">Login</a>
+    
+</div>
+<div id="global-header-bar" >
+    <a id="auth-header-bar-text" href="/login">Login</a>
+    
+</div>
+<div class="small-clearfix"></div>
+
+        <div id="global-container">
+            
+
+
+            
+            <div class="section-tabs js-tabs">
+                <ul>
+                    
+<li class="active">
+    <h1> <a id="viewbutton-tab" href="/as/8472">View</a></h1>
+</li>
+
+<li >
+    <a id="editbutton-tab" href="/edit/as/8472">Edit</a>
+</li>
+
+
+
+
+
+                    <li style="float: right;">
+                        
+                        <img id="ws-status" width="24" height="24" src="/assets/disconnected.png" title="Not Connected To realtime data updates">
+                        
+                    </li>
+                </ul>
+            </div>
+
+            <div id="search-container">
+
+                <div class="column-full-width">
+
+                    <div class="clearfix">
+                        
+                    </div>
+                    
+                    <div class="warningbox">This ASN is not currently in the global routing table</div>
+                    
+                    
+
+                    <div class="network-header">
+                        
+                        <p id="network-name" class="heading-xlarge">British Telecommunications PLC</p>
+                        <p id="network-number">
+                            AS Number
+                            <strong id="ASNumberString" pure="8472">8472</strong>
+                            <br>
+                        
+                        </p>
+
+                    </div>
+
+
+                    <div class="clearfix">
+                        
+                    </div>
+
+
+                    <div class="section-tabs js-tabs">
+                        <ul>
+
+                            <li id="overview-tab-li" class="active">
+                                <a id="overview-tab" href="#asinfo">Overview</a>
+                            </li>
+                            
+                            <li id="whois-tab-li">
+                                <a id="whois-tab" href="#whois">Whois</a>
+                            </li>
+                        
+                        
+                        </ul>
+                    </div>
+
+<script>
+    function removeAllActiveTab() {
+        var tabs = [
+            "overview-tab-li", 
+            "prefix-tab-li", 
+            "connectivity-tab-li",
+            "whois-tab-li",
+            "ix-tab-li",
+            "issues-tab-li"
+        ];
+
+        tabs.forEach(element => {
+            var aaa = document.querySelectorAll('#'+element);
+            if(aaa.length != 0) {
+                aaa[0].classList.remove("active")
+            }
+        });
+    }
+
+    function hideAllContent() {
+        var tabs = [
+            "overview-page", 
+            "prefixes-page", 
+            "connectivity-page",
+            "whois-page",
+            "ix-page",
+            "issues-page"
+        ];
+
+        tabs.forEach(element => {
+            var aaa = document.querySelectorAll('#'+element);
+            if(aaa.length != 0) {
+                aaa[0].style.display = "none";
+            }
+        });
+        if (document.getElementById("donotscrapebgptools-prefixlist-tbody")) {
+            var prefixrows = document.getElementById("donotscrapebgptools-prefixlist-tbody").children;
+            for (var i = 0; i < prefixrows.length; i++) {
+                prefixrows[i].style = "";
+            }
+        }
+    }
+
+    var otab = document.querySelectorAll('#overview-tab');
+    otab[0].addEventListener("click", function () {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#overview-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#overview-page');
+        aaa[0].style.display = "";
+    });
+    
+
+    var wtab = document.querySelectorAll('#whois-tab');
+    wtab[0].addEventListener("click", function () {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#whois-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#whois-page');
+        aaa[0].style.display = "";
+    });
+
+</script>
+
+
+
+                    
+                    <div id="overview-page">
+
+                        <div class="grid-row">
+                        
+                        <div class="column-two-thirds">
+                            <dl>
+                                <dt>Registered on</dt>
+                                <dd class="text data">
+                                    
+                                    17 Sep 2002 (23 years old)
+                                </dd>
+                            
+                            
+                            <dt>Registered to</dt>
+                            <dd class="text data">
+                                <a href="/rir-owner/uk.btgia">uk.btgia</a> (ripe)</dd>
+                                
+                            
+                            </dl>
+                        </div>
+                        
+    
+                        <dl class="column-third">
+                            <dt>Network status</dt>
+                            <dd class="text data">
+                                
+                                Active, Allocated under RIPE
+                                
+                            </dd>
+                        </dl>
+    
+                        </div>
+    
+                        <div class="grid-row">
+                            <dl class="column-two-thirds">
+                                <dt>Network type</dt>
+                                <dd class="text data">
+                                    Unknown
+                                </dd>
+                            </dl>
+    
+                            <dl class="column-third">
+                                <dt>Prefixes Originated</dt>
+                                <dd class="data">0 IPv4, 0 IPv6</dd>
+                            </dl>
+                        </div>
+                        <div class="grid-row">
+                            <div class="column-half">
+    
+                                <h2 class="heading-medium"><derp>Upstreams</derp></h2>
+                                <ul>
+                                    
+                                </ul>
+    
+                            </div>
+    
+                            <div class="column-half">
+                                
+                                    <h2 class="heading-medium"><derp>Locations of Operation</derp></h2>
+                                    
+                                    <li><span id="sic0">United Kingdom</span></li>
+                                    
+                                
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                    <div style="display: none" id="whois-page">
+                        
+                        
+                        <pre style="white-space: pre-wrap;">aut-num:        <a href="/AS8472">AS8472</a>
+as-name:        BT-GERMANY-NGN
+descr:          BT (Germany) NGN Network
+descr:          http://www.bt.com/
+org:            <a href="https://apps.db.ripe.net/db-web-ui/query?searchtext=ORG-CNS3-RIPE">ORG-CNS3-RIPE</a>
+import:         from <a href="/AS5400">AS5400</a> action pref=20; accept ANY AND NOT {0.0.0.0/0}
+export:         to <a href="/AS5400">AS5400</a> announce <a href="/as-set/AS-IGNITE-DE">AS-IGNITE-DE</a>
+import:         from <a href="/AS553">AS553</a> action pref=100; accept <a href="/as-set/AS-BELWUE">AS-BELWUE</a>
+export:         to <a href="/AS553">AS553</a> announce <a href="/as-set/AS-IGNITE-DE">AS-IGNITE-DE</a>
+import:         from <a href="/AS680">AS680</a> action pref=100; accept <a href="/as-set/AS-DFNTOWINISP">AS-DFNTOWINISP</a>
+export:         to <a href="/AS680">AS680</a> announce <a href="/as-set/AS-IGNITE-DE">AS-IGNITE-DE</a>
+import:         from <a href="/AS1273">AS1273</a> action pref=100; accept <a href="/as-set/AS-CW">AS-CW</a>
+export:         to <a href="/AS1273">AS1273</a> announce <a href="/as-set/AS-IGNITE-DE">AS-IGNITE-DE</a>
+import:         from <a href="/AS2686">AS2686</a> action pref=100; accept <a href="/as-set/AS-IGNEMEA">AS-IGNEMEA</a>
+export:         to <a href="/AS2686">AS2686</a> announce <a href="/as-set/AS-IGNITE-DE">AS-IGNITE-DE</a>
+import:         from <a href="/AS2861">AS2861</a> action pref=100; accept <a href="/as-set/AS-STUEBERL">AS-STUEBERL</a>
+export:         to <a href="/AS2861">AS2861</a> announce <a href="/as-set/AS-IGNITE-DE">AS-IGNITE-DE</a>
+import:         from <a href="/AS3209">AS3209</a> action pref=100; accept <a href="/as-set/AS-ARCORGLOBAL">AS-ARCORGLOBAL</a>
+export:         to <a href="/AS3209">AS3209</a> announce <a href="/as-set/AS-IGNITE-DE">AS-IGNITE-DE</a>
+import:         from <a href="/AS3292">AS3292</a> action pref=100; accept <a href="/as-set/AS-TELEDK">AS-TELEDK</a>
+export:         to <a href="/AS3292">AS3292</a> announce <a href="/as-set/AS-IGNITE-DE">AS-IGNITE-DE</a>
+import:         from <a href="/AS4513">AS4513</a> action pref=100; accept <a href="/as-set/AS-GLOBIX">AS-GLOBIX</a>
+export:         to <a href="/AS4513">AS4513</a> announce <a href="/as-set/AS-IGNITE-DE">AS-IGNITE-DE</a>
+import:         from <a href="/AS4589">AS4589</a> action pref=100; accept <a href="/as-set/AS-EASYNET">AS-EASYNET</a>
+export:         to <a href="/AS4589">AS4589</a> announce <a href="/as-set/AS-IGNITE-DE">AS-IGNITE-DE</a>
+import:         from <a href="/AS5427">AS5427</a> action pref=100; accept <a href="/as-set/AS-CONTRIBNET">AS-CONTRIBNET</a>
+export:         to <a href="/AS5427">AS5427</a> announce <a href="/as-set/AS-IGNITE-DE">AS-IGNITE-DE</a>
+import:         from <a href="/AS5430">AS5430</a> action pref=100; accept <a href="/as-set/AS-FREENETDE">AS-FREENETDE</a>
+export:         to <a href="/AS5430">AS5430</a> announce <a href="/as-set/AS-IGNITE-DE">AS-IGNITE-DE</a>
+import:         from <a href="/AS5539">AS5539</a> action pref=100; accept <a href="/as-set/AS-SPACENET">AS-SPACENET</a>
+export:         to <a href="/AS5539">AS5539</a> announce <a href="/as-set/AS-IGNITE-DE">AS-IGNITE-DE</a>
+import:         from <a href="/AS5605">AS5605</a> action pref=100; accept <a href="/as-set/AS-NETUSE">AS-NETUSE</a>
+export:         to <a href="/AS5605">AS5605</a> announce <a href="/as-set/AS-IGNITE-DE">AS-IGNITE-DE</a>
+import:         from <a href="/AS5669">AS5669</a> action pref=100; accept <a href="/as-set/AS-VIA">AS-VIA</a>
+export:         to <a href="/AS5669">AS5669</a> announce <a href="/as-set/AS-IGNITE-DE">AS-IGNITE-DE</a>
+import:         from <a href="/AS6461">AS6461</a> action pref=100; accept <a href="/as-set/AS-ABOVE">AS-ABOVE</a>
+export:         to <a href="/AS6461">AS6461</a> announce <a href="/as-set/AS-IGNITE-DE">AS-IGNITE-DE</a>
+import:         from <a href="/AS6695">AS6695</a> action pref=100; accept <a href="/as-set/AS-DECIX">AS-DECIX</a>
+export:         to <a href="/AS6695">AS6695</a> announce <a href="/as-set/AS-IGNITE-DE">AS-IGNITE-DE</a>
+import:         from <a href="/AS6728">AS6728</a> action pref=100; accept <a href="/as-set/AS-NILDRAM">AS-NILDRAM</a>
+export:         to <a href="/AS6728">AS6728</a> announce <a href="/as-set/AS-IGNITE-DE">AS-IGNITE-DE</a>
+import:         from <a href="/AS6730">AS6730</a> action pref=100; accept <a href="/as-set/AS-GLOBAL">AS-GLOBAL</a> <a href="/as-set/AS-EUROPEAN">AS-EUROPEAN</a>
+export:         to <a href="/AS6730">AS6730</a> announce <a href="/as-set/AS-IGNITE-DE">AS-IGNITE-DE</a>
+import:         from <a href="/AS6735">AS6735</a> action pref=100; accept <a href="/as-set/AS-SDTDECIX">AS-SDTDECIX</a> <a href="/as-set/AS-SDTINXS">AS-SDTINXS</a>
+export:         to <a href="/AS6735">AS6735</a> announce <a href="/as-set/AS-IGNITE-DE">AS-IGNITE-DE</a>
+import:         from <a href="/AS6762">AS6762</a> action pref=100; accept <a href="/as-set/AS-SEABONE">AS-SEABONE</a>
+export:         to <a href="/AS6762">AS6762</a> announce <a href="/as-set/AS-IGNITE-DE">AS-IGNITE-DE</a>
+import:         from <a href="/AS6774">AS6774</a> action pref=100; accept <a href="/as-set/AS-BELBONETOPEERS">AS-BELBONETOPEERS</a>
+export:         to <a href="/AS6774">AS6774</a> announce <a href="/as-set/AS-IGNITE-DE">AS-IGNITE-DE</a>
+import:         from <a href="/AS6805">AS6805</a> action pref=100; accept <a href="/as-set/AS-MWAYS">AS-MWAYS</a>
+export:         to <a href="/AS6805">AS6805</a> announce <a href="/as-set/AS-IGNITE-DE">AS-IGNITE-DE</a>
+import:         from <a href="/AS6900">AS6900</a> action pref=100; accept <a href="/AS6900">AS6900</a>
+export:         to <a href="/AS6900">AS6900</a> announce <a href="/as-set/AS-IGNITE-DE">AS-IGNITE-DE</a>
+import:         from <a href="/AS8196">AS8196</a> action pref=100; accept <a href="/as-set/AS-ESIB">AS-ESIB</a>
+export:         to <a href="/AS8196">AS8196</a> announce <a href="/as-set/AS-IGNITE-DE">AS-IGNITE-DE</a>
+import:         from <a href="/AS8220">AS8220</a> action pref=100; accept <a href="/as-set/AS-COLT">AS-COLT</a>
+export:         to <a href="/AS8220">AS8220</a> announce <a href="/as-set/AS-IGNITE-DE">AS-IGNITE-DE</a>
+import:         from <a href="/AS8222">AS8222</a> action pref=100; accept <a href="/AS8222">AS8222</a>
+export:         to <a href="/AS8222">AS8222</a> announce <a href="/as-set/AS-IGNITE-DE">AS-IGNITE-DE</a>
+import:         from <a href="/AS8319">AS8319</a> action pref=100; accept <a href="/as-set/AS-IXREGIO">AS-IXREGIO</a>
+export:         to <a href="/AS8319">AS8319</a> announce <a href="/as-set/AS-IGNITE-DE">AS-IGNITE-DE</a>
+import:         from <a href="/AS8365">AS8365</a> action pref=100; accept <a href="/as-set/AS-MANDA">AS-MANDA</a>
+export:         to <a href="/AS8365">AS8365</a> announce <a href="/as-set/AS-IGNITE-DE">AS-IGNITE-DE</a>
+import:         from <a href="/AS8437">AS8437</a> action pref=100; accept <a href="/as-set/AS-UTA">AS-UTA</a>
+export:         to <a href="/AS8437">AS8437</a> announce <a href="/as-set/AS-IGNITE-DE">AS-IGNITE-DE</a>
+import:         from <a href="/AS8560">AS8560</a> action pref=100; accept <a href="/as-set/AS-SCHLUND">AS-SCHLUND</a>
+export:         to <a href="/AS8560">AS8560</a> announce <a href="/as-set/AS-IGNITE-DE">AS-IGNITE-DE</a>
+import:         from <a href="/AS8638">AS8638</a> action pref=100; accept <a href="/as-set/AS-CITYCOM">AS-CITYCOM</a>
+export:         to <a href="/AS8638">AS8638</a> announce <a href="/as-set/AS-IGNITE-DE">AS-IGNITE-DE</a>
+import:         from <a href="/AS8656">AS8656</a> action pref=100; accept <a href="/as-set/AS-PSINETEU">AS-PSINETEU</a>
+export:         to <a href="/AS8656">AS8656</a> announce <a href="/as-set/AS-IGNITE-DE">AS-IGNITE-DE</a>
+import:         from <a href="/AS8708">AS8708</a> action pref=100; accept <a href="/as-set/AS-RDSNET">AS-RDSNET</a>
+export:         to <a href="/AS8708">AS8708</a> announce <a href="/as-set/AS-IGNITE-DE">AS-IGNITE-DE</a>
+import:         from <a href="/AS8741">AS8741</a> action pref=100; accept <a href="/as-set/AS-ECORE">AS-ECORE</a>
+export:         to <a href="/AS8741">AS8741</a> announce <a href="/as-set/AS-IGNITE-DE">AS-IGNITE-DE</a>
+import:         from <a href="/AS8767">AS8767</a> action pref=100; accept <a href="/as-set/AS-MNETDE">AS-MNETDE</a>
+export:         to <a href="/AS8767">AS8767</a> announce <a href="/as-set/AS-IGNITE-DE">AS-IGNITE-DE</a>
+import:         from <a href="/AS8881">AS8881</a> action pref=100; accept <a href="/as-set/AS-KOMTEL">AS-KOMTEL</a>
+export:         to <a href="/AS8881">AS8881</a> announce <a href="/as-set/AS-IGNITE-DE">AS-IGNITE-DE</a>
+import:         from <a href="/AS8938">AS8938</a> action pref=190; accept <a href="/as-set/AS-ENERGISPL">AS-ENERGISPL</a>
+export:         to <a href="/AS8938">AS8938</a> announce ANY
+import:         from <a href="/AS9066">AS9066</a> action pref=100; accept <a href="/as-set/AS-BCC">AS-BCC</a>
+export:         to <a href="/AS9066">AS9066</a> announce <a href="/as-set/AS-IGNITE-DE">AS-IGNITE-DE</a>
+import:         from <a href="/AS9132">AS9132</a> action pref=100; accept <a href="/as-set/AS-MEDIASCAPE">AS-MEDIASCAPE</a>
+export:         to <a href="/AS9132">AS9132</a> announce <a href="/as-set/AS-IGNITE-DE">AS-IGNITE-DE</a>
+import:         from <a href="/AS9145">AS9145</a> action pref=100; accept <a href="/as-set/AS-EWETEL">AS-EWETEL</a>
+export:         to <a href="/AS9145">AS9145</a> announce <a href="/as-set/AS-IGNITE-DE">AS-IGNITE-DE</a>
+import:         from <a href="/AS9189">AS9189</a> action pref=100; accept <a href="/as-set/AS-ACCOM">AS-ACCOM</a>
+export:         to <a href="/AS9189">AS9189</a> announce <a href="/as-set/AS-IGNITE-DE">AS-IGNITE-DE</a>
+import:         from <a href="/AS9211">AS9211</a> action pref=100; accept <a href="/as-set/AS-WORK">AS-WORK</a>
+export:         to <a href="/AS9211">AS9211</a> announce <a href="/as-set/AS-IGNITE-DE">AS-IGNITE-DE</a>
+import:         from <a href="/AS12306">AS12306</a> action pref=100; accept <a href="/as-set/AS-PLUSLINE">AS-PLUSLINE</a>
+export:         to <a href="/AS12306">AS12306</a> announce <a href="/as-set/AS-IGNITE-DE">AS-IGNITE-DE</a>
+import:         from <a href="/AS12308">AS12308</a> action pref=100; accept <a href="/as-set/AS-INTERACTIVE">AS-INTERACTIVE</a>
+export:         to <a href="/AS12308">AS12308</a> announce <a href="/as-set/AS-IGNITE-DE">AS-IGNITE-DE</a>
+import:         from <a href="/AS12331">AS12331</a> action pref=190; accept <a href="/AS12331">AS12331</a>
+export:         to <a href="/AS12331">AS12331</a> announce ANY
+import:         from <a href="/AS12337">AS12337</a> action pref=100; accept <a href="/as-set/AS-NORIS">AS-NORIS</a>
+export:         to <a href="/AS12337">AS12337</a> announce <a href="/as-set/AS-IGNITE-DE">AS-IGNITE-DE</a>
+import:         from <a href="/AS12374">AS12374</a> action pref=190; accept <a href="/AS12374">AS12374</a> <a href="/AS12502">AS12502</a> <a href="/AS24766">AS24766</a>
+export:         to <a href="/AS12374">AS12374</a> announce ANY
+import:         from <a href="/AS12407">AS12407</a> action pref=100; accept <a href="/as-set/AS-WESTEND">AS-WESTEND</a>
+export:         to <a href="/AS12407">AS12407</a> announce <a href="/as-set/AS-IGNITE-DE">AS-IGNITE-DE</a>
+import:         from <a href="/AS12440">AS12440</a> action pref=190; accept <a href="/AS12440">AS12440</a>
+export:         to <a href="/AS12440">AS12440</a> announce ANY
+import:         from <a href="/AS12480">AS12480</a> action pref=100; accept <a href="/as-set/AS-ILK">AS-ILK</a>
+export:         to <a href="/AS12480">AS12480</a> announce <a href="/as-set/AS-IGNITE-DE">AS-IGNITE-DE</a>
+import:         from <a href="/AS12502">AS12502</a> action pref=190; accept <a href="/AS12502">AS12502</a>
+export:         to <a href="/AS12502">AS12502</a> announce <a href="/as-set/AS-IGNITE-DE">AS-IGNITE-DE</a>
+import:         from <a href="/AS12595">AS12595</a> action pref=190; accept <a href="/as-set/AS-MOPSNET">AS-MOPSNET</a>
+export:         to <a href="/AS12595">AS12595</a> announce ANY
+import:         from <a href="/AS12611">AS12611</a> action pref=100; accept <a href="/as-set/AS-RKOM">AS-RKOM</a>
+export:         to <a href="/AS12611">AS12611</a> announce <a href="/as-set/AS-IGNITE-DE">AS-IGNITE-DE</a>
+import:         from <a href="/AS12731">AS12731</a> action pref=100; accept <a href="/as-set/AS-IPHH">AS-IPHH</a>
+export:         to <a href="/AS12731">AS12731</a> announce <a href="/as-set/AS-IGNITE-DE">AS-IGNITE-DE</a>
+import:         from <a href="/AS12853">AS12853</a> action pref=190; accept <a href="/AS12853">AS12853</a>
+export:         to <a href="/AS12853">AS12853</a> announce ANY
+import:         from <a href="/AS12897">AS12897</a> action pref=100; accept <a href="/as-set/AS-HEAGMEDIANET">AS-HEAGMEDIANET</a>
+export:         to <a href="/AS12897">AS12897</a> announce <a href="/as-set/AS-IGNITE-DE">AS-IGNITE-DE</a>
+import:         from <a href="/AS12916">AS12916</a> action pref=100; accept <a href="/as-set/AS-FRESHNET">AS-FRESHNET</a>
+export:         to <a href="/AS12916">AS12916</a> announce <a href="/as-set/AS-IGNITE-DE">AS-IGNITE-DE</a>
+import:         from <a href="/AS12931">AS12931</a> action pref=190; accept <a href="/as-set/AS-SPEEDKOM">AS-SPEEDKOM</a>
+export:         to <a href="/AS12931">AS12931</a> announce ANY
+import:         from <a href="/AS13043">AS13043</a> action pref=190; accept <a href="/AS13043">AS13043</a>
+export:         to <a href="/AS13043">AS13043</a> announce ANY
+import:         from <a href="/AS13045">AS13045</a> action pref=190; accept <a href="/as-set/AS-HTP">AS-HTP</a>
+export:         to <a href="/AS13045">AS13045</a> announce ANY
+import:         from <a href="/AS13129">AS13129</a> action pref=100; accept <a href="/as-set/AS-GAT">AS-GAT</a> <a href="/as-set/AS-JIPPII">AS-JIPPII</a>
+export:         to <a href="/AS13129">AS13129</a> announce <a href="/as-set/AS-IGNITE-DE">AS-IGNITE-DE</a>
+import:         from <a href="/AS13132">AS13132</a> action pref=100; accept <a href="/as-set/AS-CYBERWAYS">AS-CYBERWAYS</a>
+export:         to <a href="/AS13132">AS13132</a> announce <a href="/as-set/AS-IGNITE-DE">AS-IGNITE-DE</a>
+import:         from <a href="/AS13184">AS13184</a> action pref=100; accept <a href="/as-set/AS-HANSENET">AS-HANSENET</a>
+export:         to <a href="/AS13184">AS13184</a> announce <a href="/as-set/AS-IGNITE-DE">AS-IGNITE-DE</a>
+import:         from <a href="/AS13237">AS13237</a> action pref=100; accept <a href="/as-set/AS-AS-LNCLINX">AS-AS-LNCLINX</a> <a href="/as-set/AS-LNCDECIX">AS-LNCDECIX</a>
+export:         to <a href="/AS13237">AS13237</a> announce <a href="/as-set/AS-IGNITE-DE">AS-IGNITE-DE</a>
+import:         from <a href="/AS13246">AS13246</a> action pref=100; accept <a href="/as-set/AS-INETWIRE">AS-INETWIRE</a>
+export:         to <a href="/AS13246">AS13246</a> announce <a href="/as-set/AS-IGNITE-DE">AS-IGNITE-DE</a>
+import:         from <a href="/AS15385">AS15385</a> action pref=100; accept <a href="/as-set/AS-CLARANET">AS-CLARANET</a>
+export:         to <a href="/AS15385">AS15385</a> announce <a href="/as-set/AS-IGNITE-DE">AS-IGNITE-DE</a>
+import:         from <a href="/AS15486">AS15486</a> action pref=190; accept <a href="/AS15486">AS15486</a>
+export:         to <a href="/AS15486">AS15486</a> announce ANY
+import:         from <a href="/AS15495">AS15495</a> action pref=190; accept <a href="/AS15495">AS15495</a>
+export:         to <a href="/AS15495">AS15495</a> announce ANY
+import:         from <a href="/AS15499">AS15499</a> action pref=190; accept <a href="/AS15499">AS15499</a>
+export:         to <a href="/AS15499">AS15499</a> announce ANY
+import:         from <a href="/AS15590">AS15590</a> action pref=190; accept <a href="/AS15590">AS15590</a>
+export:         to <a href="/AS15590">AS15590</a> announce ANY
+import:         from <a href="/AS15717">AS15717</a> action pref=100; accept <a href="/as-set/AS-TESION">AS-TESION</a>
+export:         to <a href="/AS15717">AS15717</a> announce <a href="/as-set/AS-IGNITE-DE">AS-IGNITE-DE</a>
+import:         from <a href="/AS15725">AS15725</a> action pref=190; accept <a href="/as-set/AS-IKS">AS-IKS</a>
+export:         to <a href="/AS15725">AS15725</a> announce ANY
+import:         from <a href="/AS15794">AS15794</a> action pref=190; accept <a href="/AS15794">AS15794</a>
+export:         to <a href="/AS15794">AS15794</a> announce ANY
+import:         from <a href="/AS15933">AS15933</a> action pref=100; accept <a href="/as-set/AS-ITH">AS-ITH</a>
+export:         to <a href="/AS15933">AS15933</a> announce <a href="/as-set/AS-IGNITE-DE">AS-IGNITE-DE</a>
+import:         from <a href="/AS16272">AS16272</a> action pref=100; accept <a href="/as-set/AS-EASTLINK">AS-EASTLINK</a>
+export:         to <a href="/AS16272">AS16272</a> announce <a href="/as-set/AS-IGNITE-DE">AS-IGNITE-DE</a>
+import:         from <a href="/AS16277">AS16277</a> action pref=190; accept <a href="/AS16277">AS16277</a>
+export:         to <a href="/AS16277">AS16277</a> announce ANY
+import:         from <a href="/AS16356">AS16356</a> action pref=190; accept <a href="/AS16356">AS16356</a>
+export:         to <a href="/AS16356">AS16356</a> announce ANY
+import:         from <a href="/AS20594">AS20594</a> action pref=190; accept <a href="/AS20594">AS20594</a>
+export:         to <a href="/AS20594">AS20594</a> announce ANY
+import:         from <a href="/AS20595">AS20595</a> action pref=190; accept <a href="/AS20595">AS20595</a>
+export:         to <a href="/AS20595">AS20595</a> announce ANY
+import:         from <a href="/AS20640">AS20640</a> action pref=100; accept <a href="/as-set/AS-TITANNET">AS-TITANNET</a>
+export:         to <a href="/AS20640">AS20640</a> announce <a href="/as-set/AS-IGNITE-DE">AS-IGNITE-DE</a>
+import:         from <a href="/AS20676">AS20676</a> action pref=100; accept <a href="/as-set/AS-QSC">AS-QSC</a>
+export:         to <a href="/AS20676">AS20676</a> announce <a href="/as-set/AS-IGNITE-DE">AS-IGNITE-DE</a>
+import:         from <a href="/AS20805">AS20805</a> action pref=190; accept <a href="/as-set/AS-HFO-OUT">AS-HFO-OUT</a>
+export:         to <a href="/AS20805">AS20805</a> announce ANY
+import:         from <a href="/AS20902">AS20902</a> action pref=190; accept <a href="/as-set/AS-DEGNET">AS-DEGNET</a>
+export:         to <a href="/AS20902">AS20902</a> announce ANY
+import:         from <a href="/AS21150">AS21150</a> action pref=190; accept <a href="/as-set/AS-INAC-DE">AS-INAC-DE</a>
+export:         to <a href="/AS21150">AS21150</a> announce ANY
+import:         from <a href="/AS21207">AS21207</a> action pref=190; accept <a href="/AS21207">AS21207</a>
+export:         to <a href="/AS21207">AS21207</a> announce ANY
+import:         from <a href="/AS21385">AS21385</a> action pref=100; accept <a href="/as-set/AS-TRUSTNET">AS-TRUSTNET</a>
+export:         to <a href="/AS21385">AS21385</a> announce <a href="/as-set/AS-IGNITE-DE">AS-IGNITE-DE</a>
+import:         from <a href="/AS21499">AS21499</a> action pref=190; accept <a href="/AS21499">AS21499</a>
+export:         to <a href="/AS21499">AS21499</a> announce ANY
+import:         from <a href="/AS24635">AS24635</a> action pref=190; accept <a href="/AS24635">AS24635</a>
+export:         to <a href="/AS24635">AS24635</a> announce ANY
+import:         from <a href="/AS24840">AS24840</a> action pref=190; accept <a href="/as-set/AS-NICOS">AS-NICOS</a>
+export:         to <a href="/AS24840">AS24840</a> announce ANY
+import:         from <a href="/AS24933">AS24933</a> action pref=100; accept <a href="/as-set/AS-MINXS">AS-MINXS</a>
+export:         to <a href="/AS24933">AS24933</a> announce <a href="/as-set/AS-IGNITE-DE">AS-IGNITE-DE</a>
+import:         from <a href="/AS24978">AS24978</a> action pref=190; accept <a href="/as-set/AS-TNEC-OUT">AS-TNEC-OUT</a>
+export:         to <a href="/AS24978">AS24978</a> announce ANY
+import:         from <a href="/AS25109">AS25109</a> action pref=190; accept <a href="/AS25109">AS25109</a>
+export:         to <a href="/AS25109">AS25109</a> announce ANY
+import:         from <a href="/AS25054">AS25054</a> action pref=190; accept <a href="/AS25054">AS25054</a>
+export:         to <a href="/AS25054">AS25054</a> announce ANY
+import:         from <a href="/AS25254">AS25254</a> action pref=190; accept <a href="/AS25254">AS25254</a>
+export:         to <a href="/AS25254">AS25254</a> announce ANY
+import:         from <a href="/AS25481">AS25481</a> action pref=190; accept <a href="/AS25481">AS25481</a>
+export:         to <a href="/AS25481">AS25481</a> announce ANY
+import:         from <a href="/AS29413">AS29413</a> action pref=190; accept <a href="/AS29413">AS29413</a>
+export:         to <a href="/AS29413">AS29413</a> announce ANY
+default:        to <a href="/AS5400">AS5400</a> action pref=20; networks ANY
+admin-c:        DUMY-RIPE
+tech-c:         DUMY-RIPE
+status:         ASSIGNED
+mnt-by:         RIPE-NCC-END-MNT
+remarks:
+remarks:        See BNMC-RIPE for NOC/operational/fault contacts, etc
+remarks:
+remarks:        last changes made:
+remarks:        removed old stuff
+remarks:        removed AS9170, AS8939, <a href="/AS15959">AS15959</a> by ipadmin@bt.com
+mnt-by:         IGNITE-DE-MNT
+mnt-by:         CIP-MNT
+created:        2002-09-17T14:36:47Z
+last-modified:  2020-04-17T13:19:38Z
+source:         RIPE
+remarks:        ****************************
+remarks:        * THIS OBJECT IS MODIFIED
+remarks:        * Please note that all data that is generally regarded as personal
+remarks:        * data has been removed from this object.
+remarks:        * To view the original object, please query the RIPE Database at:
+remarks:        * http://www.ripe.net/whois
+remarks:        ****************************
+
+
+organisation:   <a href="https://apps.db.ripe.net/db-web-ui/query?searchtext=ORG-CNS3-RIPE">ORG-CNS3-RIPE</a>
+org-name:       British Telecommunications PLC
+country:        GB
+org-type:       LIR
+address:        Dummy address for <a href="https://apps.db.ripe.net/db-web-ui/query?searchtext=ORG-CNS3-RIPE">ORG-CNS3-RIPE</a>
+# Email removed, Log into bgp.tools to see whois emails
+abuse-c:        AR15037-RIPE
+mnt-ref:        CIP-MNT
+mnt-ref:        RIPE-NCC-HM-MNT
+mnt-by:         RIPE-NCC-HM-MNT
+mnt-by:         CIP-MNT
+created:        2004-04-17T11:18:51Z
+last-modified:  2022-11-25T00:43:19Z
+source:         RIPE
+remarks:        ****************************
+remarks:        * THIS OBJECT IS MODIFIED
+remarks:        * Please note that all data that is generally regarded as personal
+remarks:        * data has been removed from this object.
+remarks:        * To view the original object, please query the RIPE Database at:
+remarks:        * http://www.ripe.net/whois
+remarks:        ****************************
+
+</pre>
+                        
+                        
+                        <a style="font-size: small;">Last Update: 2025-12-11T03:25:00Z UTC </a>
+                        
+                        <hr>
+                        
+                            <h2>Member of the following AS-SETs</h2>
+
+                            <table id="fhTable" class="full-width-table ">
+                                <tbody id="prefixlist-tbody">
+                                    <tr>
+                                        <th class="boldpls nowrap"> - </th>
+                                        <th class="boldpls">Member</th>
+                                        
+                                        <th class="boldpls nowrap">ASN Count</th>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">AFRINIC</td>
+                                        
+                                        <td><a href="/as-set/AFRINIC::as-viag">as-viag</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">87</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-btdev6">as-btdev6</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">4</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">LEVEL3</td>
+                                        
+                                        <td><a href="/as-set/LEVEL3::as-sprint-origins">as-sprint-origins</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">7309</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">LEVEL3</td>
+                                        
+                                        <td><a href="/as-set/LEVEL3::as-level3-transits">as-level3-transits</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">1364</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-bt-de">as-bt-de</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">52</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-viag">as-viag</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">87</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-inxs-muc">as-inxs-muc</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap boldpls"><p style="display: contents;color: red">101556</p></td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-partner">as-partner</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">4</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                        
+
+                    </div>
+
+                    
+
+                    
+
+                    
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="superclearfix">
+            
+            <div class="superclearfix">
+                
+            </div>
+
+            <div class="superclearfix">
+                
+            </div>
+
+
+        </div>
+
+
+        <div class="group js-footer" id="footer">
+            <nav>
+                <div>
+                    <ul>
+                        <li><a href="/kb/api" target="_blank">Scripting/API</a></li>
+                        <li><a href="/credits" target="_blank">Credits</a></li>
+                        <li><a href="/pricing" target="_blank">Pricing</a></li>
+                        <li><a href="/kb/contact" target="_blank">Contact Us</a></li>
+                        <li><a href="https://github.com/bgptools/issues" target="_blank">Issue Tracker</a></li>
+                        <li><a href="/kb/setup-sessions" target="">Contribute Data</a></li>
+                        
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <script>
+    
+    var inhash = window.location.hash;
+    if (inhash == "#asinfo") {
+        
+    } else if (inhash == "#prefixes") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#prefix-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#prefixes-page');
+        aaa[0].style.display = "";
+
+    } else if (inhash == "#connectivity" || inhash == "#peers" || inhash == "#upstreams" || inhash == "#downstreams") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#connectivity-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#connectivity-page');
+        aaa[0].style.display = "";
+    } else if (inhash == "#whois") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#whois-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#whois-page');
+        aaa[0].style.display = "";
+    } else if (inhash == "#ix") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#ix-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#ix-page');
+        aaa[0].style.display = "";
+    }</script>
+
+    <script>
+    
+
+
+    ;(function() {
+  'use strict'
+
+  function scaleImageMap() {
+    function resizeMap() {
+      function resizeAreaTag(cachedAreaCoords, idx) {
+        function scale(coord) {
+          var dimension = 1 === (isWidth = 1 - isWidth) ? 'width' : 'height'
+          return (
+            padding[dimension] +
+            Math.floor(Number(coord) * scalingFactor[dimension])
+          )
+        }
+
+        var isWidth = 0
+        areas[idx].coords = cachedAreaCoords
+          .split(',')
+          .map(scale)
+          .join(',')
+      }
+
+      var scalingFactor = {
+        width: image.width / image.naturalWidth,
+        height: image.height / image.naturalHeight,
+      }
+
+      var padding = {
+        width: parseInt(
+          window.getComputedStyle(image, null).getPropertyValue('padding-left'),
+          10
+        ),
+        height: parseInt(
+          window.getComputedStyle(image, null).getPropertyValue('padding-top'),
+          10
+        ),
+      }
+
+      cachedAreaCoordsArray.forEach(resizeAreaTag)
+    }
+
+    function getCoords(e) {
+      
+      return e.coords.replace(/ *, */g, ',').replace(/ +/g, ',')
+    }
+
+    function debounce() {
+      clearTimeout(timer)
+      timer = setTimeout(resizeMap, 250)
+    }
+
+    function start() {
+      if (
+        image.width !== image.naturalWidth ||
+        image.height !== image.naturalHeight
+      ) {
+        resizeMap()
+      }
+    }
+
+    function addEventListeners() {
+      image.addEventListener('load', resizeMap, false) 
+      window.addEventListener('focus', resizeMap, false) 
+      window.addEventListener('resize', debounce, false)
+      window.addEventListener('readystatechange', resizeMap, false)
+      document.addEventListener('fullscreenchange', resizeMap, false)
+    }
+
+    function beenHere() {
+      return 'function' === typeof map._resize
+    }
+
+    function getImg(name) {
+      return document.querySelector('img[usemap="#world"]')
+    }
+
+    function setup() {
+      areas = map.getElementsByTagName('area')
+      cachedAreaCoordsArray = Array.prototype.map.call(areas, getCoords)
+      image = getImg('#' + map.name) || getImg(map.name)
+      map._resize = resizeMap 
+    }
+
+    var  
+      map = this,
+      areas = null,
+      cachedAreaCoordsArray = null,
+      image = null,
+      timer = null
+
+    if (!beenHere()) {
+      setup()
+      addEventListeners()
+      start()
+    } else {
+      map._resize() 
+    }
+  }
+
+  function factory() {
+    function chkMap(element) {
+      if (!element.tagName) {
+        throw new TypeError('Object is not a valid DOM element')
+      } else if ('MAP' !== element.tagName.toUpperCase()) {
+        throw new TypeError(
+          'Expected <MAP> tag, found <' + element.tagName + '>.'
+        )
+      }
+    }
+
+    function init(element) {
+      if (element) {
+        chkMap(element)
+        scaleImageMap.call(element)
+        maps.push(element)
+      }
+    }
+
+    var maps
+
+    return function imageMapResizeF(target) {
+      maps = [] 
+
+      switch (typeof target) {
+        case 'undefined':
+        case 'string':
+          Array.prototype.forEach.call(
+            document.querySelectorAll(target || 'map'),
+            init
+          )
+          break
+        case 'object':
+          init(target)
+          break
+        default:
+          throw new TypeError('Unexpected data type (' + typeof target + ').')
+      }
+
+      return maps
+    }
+  }
+
+  if (typeof define === 'function' && define.amd) {
+    define([], factory)
+  } else if (typeof module === 'object' && typeof module.exports === 'object') {
+    module.exports = factory() 
+  } else {
+    window.imageMapResize = factory()
+  }
+
+  if ('jQuery' in window) {
+    window.jQuery.fn.imageMapResize = function $imageMapResizeF() {
+      return this.filter('map')
+        .each(scaleImageMap)
+        .end()
+    }
+  }
+})()
+    
+    </script>
+    <script>
+        var imgEl = document.getElementById("pathimg");
+        imgEl.addEventListener("mouseover",function() {
+            imageMapResize('#world');
+        })
+    </script>
+    <script src="/assets/tablesort.min.js"></script>
+    <script>
+        addEventListener("load", (event) => {
+            
+            
+            var sort = new Tablesort(document.getElementById('donotscrapebgptools-upstreamTable'));
+            var sort2 = new Tablesort(document.getElementById('donotscrapebgptools-upstreamTablePeers'));
+            
+            
+            
+        });
+    </script>
+    
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        setTimeout(function() {
+
+        var beaconHttp = new XMLHttpRequest();
+        var url = '/performance-beacon';
+        var params = JSON.stringify(window.performance)
+        beaconHttp.open('POST', url, true);
+        
+        
+        beaconHttp.setRequestHeader('Content-type', 'application/json');
+        beaconHttp.setRequestHeader('visit-url', "/as/8472");
+        if (navigator.connection) {
+            beaconHttp.setRequestHeader('client-side-rtt', navigator.connection.rtt);
+        } else {
+            beaconHttp.setRequestHeader('client-side-rtt', '-2');
+        }
+        beaconHttp.onreadystatechange = function() {}
+        beaconHttp.send(params);
+        },1000)
+    }, false);
+</script>
+
+</body>
+
+
+</html>

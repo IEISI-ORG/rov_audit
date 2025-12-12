@@ -1,0 +1,2562 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="PacketStream Korea (AS139648) is a 6 year old BGP network that is peering with 15 other networks and has 7 upstream carriers">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000">
+    <link rel="search" type="application/opensearchdescription+xml" title="BGP.Tools" href="https://bgp.tools/opensearch.xml">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="theme-color" content="#000000">
+    <link href="https://social.bgp.tools/@bgptools" rel="me">
+    <link rel="canonical" href="https://bgp.tools/as/139648" />
+    <title>AS139648 PacketStream Korea - bgp.tools</title>
+    <link rel="stylesheet" type="text/css" href="/assets/main-new.css?2025-12-09-1723%20UTC">
+</head>
+
+<body>
+    <div id="container">
+        
+<div id="global-header" class="global-header-top">
+    <div class="header-sitewide">
+        <div class="global-header">
+            <div class="header-logo">
+                <a href="/" id="logo" class="content">bgp.tools</a>
+            </div>
+            <form id="search" action="/search" method="get" accept-charset="utf-8" role="search" class="top-search-header js-search-hash">
+                <div class="searchfield">
+                    <input type="search" autocomplete="off" name="q" id="site-search-text" title="Search" value="" placeholder="Start here..." autofocus="autofocus" class="js-search-focus">
+                    <button type="submit" id="search-submit" class="search-submit">Search</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div id="global-header-blob" >
+    <a id="auth-header-text" href="/login">Login</a>
+    
+</div>
+<div id="global-header-bar" >
+    <a id="auth-header-bar-text" href="/login">Login</a>
+    
+</div>
+<div class="small-clearfix"></div>
+
+        <div id="global-container">
+            
+
+
+            
+            <div class="section-tabs js-tabs">
+                <ul>
+                    
+<li class="active">
+    <h1> <a id="viewbutton-tab" href="/as/139648">View</a></h1>
+</li>
+
+<li >
+    <a id="editbutton-tab" href="/edit/as/139648">Edit</a>
+</li>
+
+
+
+
+
+                    <li style="float: right;">
+                        
+                        <img id="ws-status" width="24" height="24" src="/assets/disconnected.png" title="Not Connected To realtime data updates">
+                        
+                    </li>
+                </ul>
+            </div>
+
+            <div id="search-container">
+
+                <div class="column-full-width">
+
+                    <div class="clearfix">
+                        
+                    </div>
+                    
+                    
+
+                    <div class="network-header">
+                        
+                        
+                        <img width="334" height="250" src="/img/139648" alt="The website screenshot for https://packet.stream" >
+                        
+                        
+                        <p id="network-name" class="heading-xlarge">PacketStream Korea</p>
+                        <p id="network-number">
+                            AS Number
+                            <strong id="ASNumberString" pure="139648">139648</strong>
+                            <br>
+                        
+                            Website
+                            <strong><a href="https://packet.stream" rel="nofollow">https://packet.stream</a></strong>
+                        
+                        </p>
+
+                    </div>
+
+
+                    <div class="clearfix">
+                        
+                    </div>
+
+
+                    <div class="section-tabs js-tabs">
+                        <ul>
+
+                            <li id="overview-tab-li" class="active">
+                                <a id="overview-tab" href="#asinfo">Overview</a>
+                            </li>
+                            
+                            <li id="prefix-tab-li">
+                                <a id="prefix-tab" href="#prefixes">Prefixes</a>
+                            </li>
+
+                            <li id="connectivity-tab-li">
+                                <a id="connectivity-tab" href="#connectivity">Connectivity</a>
+                            </li>
+                            
+                            <li id="whois-tab-li">
+                                <a id="whois-tab" href="#whois">Whois</a>
+                            </li>
+                        
+                            <li id="ix-tab-li">
+                                <a id="ix-tab" href="#ix">IX</a>
+                            </li>
+                        
+                        
+                        </ul>
+                    </div>
+
+<script>
+    function removeAllActiveTab() {
+        var tabs = [
+            "overview-tab-li", 
+            "prefix-tab-li", 
+            "connectivity-tab-li",
+            "whois-tab-li",
+            "ix-tab-li",
+            "issues-tab-li"
+        ];
+
+        tabs.forEach(element => {
+            var aaa = document.querySelectorAll('#'+element);
+            if(aaa.length != 0) {
+                aaa[0].classList.remove("active")
+            }
+        });
+    }
+
+    function hideAllContent() {
+        var tabs = [
+            "overview-page", 
+            "prefixes-page", 
+            "connectivity-page",
+            "whois-page",
+            "ix-page",
+            "issues-page"
+        ];
+
+        tabs.forEach(element => {
+            var aaa = document.querySelectorAll('#'+element);
+            if(aaa.length != 0) {
+                aaa[0].style.display = "none";
+            }
+        });
+        if (document.getElementById("donotscrapebgptools-prefixlist-tbody")) {
+            var prefixrows = document.getElementById("donotscrapebgptools-prefixlist-tbody").children;
+            for (var i = 0; i < prefixrows.length; i++) {
+                prefixrows[i].style = "";
+            }
+        }
+    }
+
+    var otab = document.querySelectorAll('#overview-tab');
+    otab[0].addEventListener("click", function () {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#overview-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#overview-page');
+        aaa[0].style.display = "";
+    });
+    
+
+    var ptab = document.querySelectorAll('#prefix-tab');
+    ptab[0].addEventListener("click", function () {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#prefix-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#prefixes-page');
+        aaa[0].style.display = "";
+    });
+
+    var ctab = document.querySelectorAll('#connectivity-tab');
+    ctab[0].addEventListener("click", function () {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#connectivity-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#connectivity-page');
+        aaa[0].style.display = "";
+    });
+    
+
+    var wtab = document.querySelectorAll('#whois-tab');
+    wtab[0].addEventListener("click", function () {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#whois-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#whois-page');
+        aaa[0].style.display = "";
+    });
+
+</script>
+
+
+<script>
+var wtab = document.querySelectorAll('#ix-tab');
+wtab[0].addEventListener("click", function () {
+    removeAllActiveTab()
+    hideAllContent()
+    var otab2 = document.querySelectorAll('#ix-tab-li');
+    otab2[0].classList.add("active");
+
+    var aaa = document.querySelectorAll('#ix-page');
+    aaa[0].style.display = "";
+});
+</script>
+
+
+                    
+                    <div id="overview-page">
+
+                        <div class="grid-row">
+                        
+                        <div class="column-two-thirds">
+                            <dl>
+                                <dt>Registered on</dt>
+                                <dd class="text data">
+                                    
+                                    12 Sep 2019 (6 years old)
+                                </dd>
+                            
+                            
+                            <dt>Registered to</dt>
+                            <dd class="text data">
+                                <a href="/rir-owner/A9168BA2">A9168BA2</a> (apnic)</dd>
+                                
+                            
+                            </dl>
+                        </div>
+                        
+    
+                        <dl class="column-third">
+                            <dt>Network status</dt>
+                            <dd class="text data">
+                                
+                                Active, Allocated under APNIC
+                                
+                            </dd>
+                        </dl>
+    
+                        </div>
+    
+                        <div class="grid-row">
+                            <dl class="column-two-thirds">
+                                <dt>Network type</dt>
+                                <dd class="text data">
+                                    Content
+                                </dd>
+                            </dl>
+    
+                            <dl class="column-third">
+                                <dt>Prefixes Originated</dt>
+                                <dd class="data">53 IPv4, 4 IPv6</dd>
+                            </dl>
+                        </div>
+                        <div class="grid-row">
+                            <div class="column-half">
+    
+                                <h2 class="heading-medium"><derp>Upstreams</derp></h2>
+                                <ul>
+                                    
+                                    <li>
+                                        <span id="sic0">
+                                          <a href="/as/137409">AS137409</a> - GSL Networks Pty LTD
+                                        </span>
+                                    </li>
+                                    
+                                    <li>
+                                        <span id="sic0">
+                                          <a href="/as/4637">AS4637</a> - Telstra Global
+                                        </span>
+                                    </li>
+                                    
+                                    <li>
+                                        <span id="sic0">
+                                          <a href="/as/9318">AS9318</a> - SK Broadband Co Ltd
+                                        </span>
+                                    </li>
+                                    
+                                    <li>
+                                        <span id="sic0">
+                                          <a href="/as/64289">AS64289</a> - Macarne.com
+                                        </span>
+                                    </li>
+                                    
+                                    <li>
+                                        <span id="sic0">
+                                          <a href="/as/138195">AS138195</a> - MOACK.Co.LTD
+                                        </span>
+                                    </li>
+                                    
+                                    <li>
+                                        <span id="sic0">
+                                          <a href="/as/9286">AS9286</a> - KINX
+                                        </span>
+                                    </li>
+                                    
+                                    <li>
+                                        <span id="sic0">
+                                          <a href="/as/60068">AS60068</a> - Datacamp Limited (CDN77 / DataPacket)
+                                        </span>
+                                    </li>
+                                    
+                                </ul>
+    
+                            </div>
+    
+                            <div class="column-half">
+                                
+                                    <h2 class="heading-medium"><derp>Rankings</derp></h2>
+                                    
+                                    <li><span id="sic0">#12 for <a href="/rankings/KR?sort=cone">AS Cone  in South Korea</a></span></li>
+                                    
+                                    <li><span id="sic0">#94 for <a href="/rankings/KR?sort=eyeballs">Estimated Eyeballs  in South Korea</a></span></li>
+                                    
+                                    <li><span id="sic0">#62 for <a href="/rankings/KR?sort=dns">Unique Domains  in South Korea</a></span></li>
+                                    
+                                    <li><span id="sic0">#20 for <a href="/rankings/KR?sort=peering">Known Peers  in South Korea</a></span></li>
+                                    
+                                    <li><span id="sic0">#148 for <a href="/rankings/KR?sort=v4">Originated IPv4 Space  in South Korea</a></span></li>
+                                    
+                                    <li><span id="sic0">#11 for <a href="/rankings/KR?sort=v6">Originated IPv6 Space  in South Korea</a></span></li>
+                                    
+                                
+                            </div>
+                        </div>
+                        
+                        <div class="grid-row" style="padding: 15px;">
+                            <h2 class="heading-medium"><derp>Tags:</derp></h2>
+                            <br>
+                            
+                            <a href="/tags/vpsh"><span style="border: 5px solid #647096;" class="taglist"> Server Hosting </span></a>
+                            
+                            <a href="/tags/vpn"><span style="border: 5px solid #6353D6;" class="taglist"> VPN Host </span></a>
+                            
+                        </div>
+                        
+                    </div>
+                    
+
+                    <div style="display: none" id="prefixes-page">
+                        
+
+                        
+                        <div style="float:left">
+                            <dt>Prefixes Originated</dt>
+                            <dd class="data">53 IPv4, 4 IPv6</dd>
+                            <dd class="data"><a href="/as/139648?show-low-vis#prefixes">Show Low Visibility Prefixes</a></dd>
+                            
+                        </div>
+                        <div style="float:right">
+                                <dt>Addresses Originated</dt>
+                                <dd class="data">53 /24's of IPv4</dd>
+                                <dd class="data">4097 /48's of IPv6</dd>
+                        </div>
+
+                        <div class="clearfix">
+                            
+                        </div>
+
+
+                        <table id="fhTable" class="full-width-table ">
+                            <tbody id="donotscrapebgptools-prefixlist-tbody">
+                                <tr>
+                                    <th class="nowrap">  &nbsp;  </th>
+                                    <th class="boldpls">Prefix</th>
+                                    <th class="nowrap boldpls">Description</th>
+                                </tr>
+                                <p id="readme-if-you-are-human" style="display: none;">If you are scraping this block for the prefixes that a AS originates, please use the data dumps in https://bgp.tools/kb/api and cache them</p>
+                                
+                                <tr id="pfx-45.67.53.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KR" src="/assets/flags/KR.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/45.67.53.0/24">45.67.53.0/24</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-45.67.54.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KR" src="/assets/flags/KR.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/45.67.54.0/24">45.67.54.0/24</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-46.102.179.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KR" src="/assets/flags/KR.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/46.102.179.0/24">46.102.179.0/24</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-46.102.180.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KR" src="/assets/flags/KR.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/46.102.180.0/24">46.102.180.0/24</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-61.107.200.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KR" src="/assets/flags/KR.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/61.107.200.0/24">61.107.200.0/24</a></td>
+                                    <td class="smallonmobile nowrap">DREAMLINE CO.</td>
+                                </tr>
+                                
+                                <tr id="pfx-61.107.201.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KR" src="/assets/flags/KR.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/61.107.201.0/24">61.107.201.0/24</a></td>
+                                    <td class="smallonmobile nowrap">DREAMLINE CO.</td>
+                                </tr>
+                                
+                                <tr id="pfx-61.107.202.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KR" src="/assets/flags/KR.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/61.107.202.0/24">61.107.202.0/24</a></td>
+                                    <td class="smallonmobile nowrap">DREAMLINE CO.</td>
+                                </tr>
+                                
+                                <tr id="pfx-61.107.203.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KR" src="/assets/flags/KR.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/61.107.203.0/24">61.107.203.0/24</a></td>
+                                    <td class="smallonmobile nowrap">DREAMLINE CO.</td>
+                                </tr>
+                                
+                                <tr id="pfx-66.118.0.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/66.118.0.0/24">66.118.0.0/24</a></td>
+                                    <td class="smallonmobile nowrap">PACKETSTREAM LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-66.118.1.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/66.118.1.0/24">66.118.1.0/24</a></td>
+                                    <td class="smallonmobile nowrap">PACKETSTREAM LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-95.214.179.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KR" src="/assets/flags/KR.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/95.214.179.0/24">95.214.179.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Private Customer</td>
+                                </tr>
+                                
+                                <tr id="pfx-103.67.245.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="IN" src="/assets/flags/IN.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/103.67.245.0/24">103.67.245.0/24</a></td>
+                                    <td class="smallonmobile nowrap">IPXO</td>
+                                </tr>
+                                
+                                <tr id="pfx-103.143.32.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KR" src="/assets/flags/KR.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/103.143.32.0/24">103.143.32.0/24</a></td>
+                                    <td class="smallonmobile nowrap">CreativeLab</td>
+                                </tr>
+                                
+                                <tr id="pfx-103.143.33.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KR" src="/assets/flags/KR.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/103.143.33.0/24">103.143.33.0/24</a></td>
+                                    <td class="smallonmobile nowrap">CreativeLab</td>
+                                </tr>
+                                
+                                <tr id="pfx-103.156.22.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KR" src="/assets/flags/KR.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/103.156.22.0/24">103.156.22.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Creativelab Corp.</td>
+                                </tr>
+                                
+                                <tr id="pfx-103.156.23.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KR" src="/assets/flags/KR.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/103.156.23.0/24">103.156.23.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Creativelab Corp.</td>
+                                </tr>
+                                
+                                <tr id="pfx-103.178.34.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KR" src="/assets/flags/KR.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/103.178.34.0/24">103.178.34.0/24</a></td>
+                                    <td class="smallonmobile nowrap">PacketStream Hosting Network</td>
+                                </tr>
+                                
+                                <tr id="pfx-103.178.35.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KR" src="/assets/flags/KR.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/103.178.35.0/24">103.178.35.0/24</a></td>
+                                    <td class="smallonmobile nowrap">PacketStream Hosting Network</td>
+                                </tr>
+                                
+                                <tr id="pfx-103.218.172.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KR" src="/assets/flags/KR.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/103.218.172.0/24">103.218.172.0/24</a></td>
+                                    <td class="smallonmobile nowrap">PacketStream Hosting Network</td>
+                                </tr>
+                                
+                                <tr id="pfx-103.244.116.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CN" src="/assets/flags/CN.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/103.244.116.0/24">103.244.116.0/24</a></td>
+                                    <td class="smallonmobile nowrap">PacketStream Korea</td>
+                                </tr>
+                                
+                                <tr id="pfx-103.244.117.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CN" src="/assets/flags/CN.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/103.244.117.0/24">103.244.117.0/24</a></td>
+                                    <td class="smallonmobile nowrap">PacketStream Korea</td>
+                                </tr>
+                                
+                                <tr id="pfx-103.244.118.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CN" src="/assets/flags/CN.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/103.244.118.0/24">103.244.118.0/24</a></td>
+                                    <td class="smallonmobile nowrap">PacketStream Korea</td>
+                                </tr>
+                                
+                                <tr id="pfx-119.59.0.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KR" src="/assets/flags/KR.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/119.59.0.0/24">119.59.0.0/24</a></td>
+                                    <td class="smallonmobile nowrap">KDDI KOREA</td>
+                                </tr>
+                                
+                                <tr id="pfx-119.59.1.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KR" src="/assets/flags/KR.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/119.59.1.0/24">119.59.1.0/24</a></td>
+                                    <td class="smallonmobile nowrap">KDDI KOREA</td>
+                                </tr>
+                                
+                                <tr id="pfx-119.59.2.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KR" src="/assets/flags/KR.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/119.59.2.0/24">119.59.2.0/24</a></td>
+                                    <td class="smallonmobile nowrap">KDDI KOREA</td>
+                                </tr>
+                                
+                                <tr id="pfx-119.59.3.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KR" src="/assets/flags/KR.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/119.59.3.0/24">119.59.3.0/24</a></td>
+                                    <td class="smallonmobile nowrap">KDDI KOREA</td>
+                                </tr>
+                                
+                                <tr id="pfx-119.59.4.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KR" src="/assets/flags/KR.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/119.59.4.0/24">119.59.4.0/24</a></td>
+                                    <td class="smallonmobile nowrap">KDDI KOREA</td>
+                                </tr>
+                                
+                                <tr id="pfx-119.59.5.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KR" src="/assets/flags/KR.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/119.59.5.0/24">119.59.5.0/24</a></td>
+                                    <td class="smallonmobile nowrap">KDDI KOREA</td>
+                                </tr>
+                                
+                                <tr id="pfx-119.59.6.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KR" src="/assets/flags/KR.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/119.59.6.0/24">119.59.6.0/24</a></td>
+                                    <td class="smallonmobile nowrap">KDDI KOREA</td>
+                                </tr>
+                                
+                                <tr id="pfx-119.59.7.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KR" src="/assets/flags/KR.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/119.59.7.0/24">119.59.7.0/24</a></td>
+                                    <td class="smallonmobile nowrap">KDDI KOREA</td>
+                                </tr>
+                                
+                                <tr id="pfx-119.59.8.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KR" src="/assets/flags/KR.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/119.59.8.0/24">119.59.8.0/24</a></td>
+                                    <td class="smallonmobile nowrap">KDDI KOREA</td>
+                                </tr>
+                                
+                                <tr id="pfx-119.59.9.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KR" src="/assets/flags/KR.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/119.59.9.0/24">119.59.9.0/24</a></td>
+                                    <td class="smallonmobile nowrap">KDDI KOREA</td>
+                                </tr>
+                                
+                                <tr id="pfx-119.59.10.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KR" src="/assets/flags/KR.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/119.59.10.0/24">119.59.10.0/24</a></td>
+                                    <td class="smallonmobile nowrap">KDDI KOREA</td>
+                                </tr>
+                                
+                                <tr id="pfx-119.59.11.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KR" src="/assets/flags/KR.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/119.59.11.0/24">119.59.11.0/24</a></td>
+                                    <td class="smallonmobile nowrap">KDDI KOREA</td>
+                                </tr>
+                                
+                                <tr id="pfx-119.59.12.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KR" src="/assets/flags/KR.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/119.59.12.0/24">119.59.12.0/24</a></td>
+                                    <td class="smallonmobile nowrap">KDDI KOREA</td>
+                                </tr>
+                                
+                                <tr id="pfx-119.59.13.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KR" src="/assets/flags/KR.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/119.59.13.0/24">119.59.13.0/24</a></td>
+                                    <td class="smallonmobile nowrap">KDDI KOREA</td>
+                                </tr>
+                                
+                                <tr id="pfx-119.59.14.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KR" src="/assets/flags/KR.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/119.59.14.0/24">119.59.14.0/24</a></td>
+                                    <td class="smallonmobile nowrap">KDDI KOREA</td>
+                                </tr>
+                                
+                                <tr id="pfx-119.59.15.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KR" src="/assets/flags/KR.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/119.59.15.0/24">119.59.15.0/24</a></td>
+                                    <td class="smallonmobile nowrap">KDDI KOREA</td>
+                                </tr>
+                                
+                                <tr id="pfx-119.59.16.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KR" src="/assets/flags/KR.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/119.59.16.0/24">119.59.16.0/24</a></td>
+                                    <td class="smallonmobile nowrap">KDDI KOREA</td>
+                                </tr>
+                                
+                                <tr id="pfx-119.59.17.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KR" src="/assets/flags/KR.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/119.59.17.0/24">119.59.17.0/24</a></td>
+                                    <td class="smallonmobile nowrap">KDDI KOREA</td>
+                                </tr>
+                                
+                                <tr id="pfx-119.59.18.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KR" src="/assets/flags/KR.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/119.59.18.0/24">119.59.18.0/24</a></td>
+                                    <td class="smallonmobile nowrap">KDDI KOREA</td>
+                                </tr>
+                                
+                                <tr id="pfx-119.59.19.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KR" src="/assets/flags/KR.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/119.59.19.0/24">119.59.19.0/24</a></td>
+                                    <td class="smallonmobile nowrap">KDDI KOREA</td>
+                                </tr>
+                                
+                                <tr id="pfx-119.59.20.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KR" src="/assets/flags/KR.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/119.59.20.0/24">119.59.20.0/24</a></td>
+                                    <td class="smallonmobile nowrap">KDDI KOREA</td>
+                                </tr>
+                                
+                                <tr id="pfx-119.59.21.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KR" src="/assets/flags/KR.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/119.59.21.0/24">119.59.21.0/24</a></td>
+                                    <td class="smallonmobile nowrap">KDDI KOREA</td>
+                                </tr>
+                                
+                                <tr id="pfx-119.59.22.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KR" src="/assets/flags/KR.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/119.59.22.0/24">119.59.22.0/24</a></td>
+                                    <td class="smallonmobile nowrap">KDDI KOREA</td>
+                                </tr>
+                                
+                                <tr id="pfx-119.59.23.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KR" src="/assets/flags/KR.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/119.59.23.0/24">119.59.23.0/24</a></td>
+                                    <td class="smallonmobile nowrap">KDDI KOREA</td>
+                                </tr>
+                                
+                                <tr id="pfx-160.250.11.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KR" src="/assets/flags/KR.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/160.250.11.0/24">160.250.11.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Hongshin, Inc. Korea</td>
+                                </tr>
+                                
+                                <tr id="pfx-194.156.231.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KR" src="/assets/flags/KR.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/194.156.231.0/24">194.156.231.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Think Huge Ltd</td>
+                                </tr>
+                                
+                                <tr id="pfx-66.118.2.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KR" src="/assets/flags/KR.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/66.118.2.0/24">66.118.2.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Private Customer</td>
+                                </tr>
+                                
+                                <tr id="pfx-66.118.3.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KR" src="/assets/flags/KR.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/66.118.3.0/24">66.118.3.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Private Customer</td>
+                                </tr>
+                                
+                                <tr id="pfx-95.214.178.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KR" src="/assets/flags/KR.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/95.214.178.0/24">95.214.178.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Private Customer</td>
+                                </tr>
+                                
+                                <tr id="pfx-141.11.194.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KR" src="/assets/flags/KR.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/141.11.194.0/24">141.11.194.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Packetstream LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-141.11.195.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KR" src="/assets/flags/KR.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/141.11.195.0/24">141.11.195.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Packetstream LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-2001:df1:6c80::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KR" src="/assets/flags/KR.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2001:df1:6c80::/48">2001:df1:6c80::/48</a></td>
+                                    <td class="smallonmobile nowrap">CreativeLab</td>
+                                </tr>
+                                
+                                <tr id="pfx-2602:f88f::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2602:f88f::/48">2602:f88f::/48</a></td>
+                                    <td class="smallonmobile nowrap">PACKETSTREAM LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-2602:f88f::/36">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2602:f88f::/36">2602:f88f::/36</a></td>
+                                    <td class="smallonmobile nowrap">PACKETSTREAM LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-2602:f88f:1::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2602:f88f:1::/48">2602:f88f:1::/48</a></td>
+                                    <td class="smallonmobile nowrap">PACKETSTREAM LLC</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div style="display: none" id="connectivity-page">
+
+                        <div class="grid-row">
+                            <dl class="column-third column-third-first">
+                                <dt><a href="#peers">Peers</a></dt>
+                                <dd class="data">15</dd>
+                            </dl><dl class="column-third column-third-mid">
+                                <dt><a href="#upstreams">Upstreams</a></dt>
+                                
+                                <dd class="text data">7</dd>
+                                
+                            </dl>
+                            <dl class="column-third column-third-last">
+                                <dt><a href="#downstreams">Downstreams</a></dt> <dd class="data">5 (Cone: 16)</dd>
+                            </dl>
+
+                        </div>
+
+
+                        <hr>
+                        <h3>Network Policy<img class="flag-img" src="/assets/info.png" style="padding-left: 12px;" title="This info can take up to 2 hours to fully update" alt="This info take up to 2 hours to fully update"/></h3></h3>
+                        <a style="font-size: small;" href="/kb/network-policy">Click here to learn more about what this graph means and what makes up a network policy</a>
+
+                        <select id="netpolicydropdown" class="dropdownmenu">
+                            
+                                <option disabled=true value="disabled-default">Global Aggregation (disabled due to size)</option>
+                            
+
+                            
+                                
+                            
+                                
+                                <option value="0c9819336b1bc52510f36122b351ab24566cee5176c1af5ff5c998d4">Policy gracious_dubinsky</option>
+                                
+                            
+                                
+                                <option selected value="6adfb73ec8932098df6c619a79a761846c941e34cb30d901b56ae32a">Policy upbeat_gagarin</option>
+                                
+                            
+                                
+                                <option value="73dd2a5f83b9cfcd4e71ce3dca8efc715aac3a7b4d169db64f966f42">Policy confident_lamarr</option>
+                                
+                            
+                                
+                                <option value="a490cb1eef534db2ac8ed02449256006c91596f6b176328fb65d3f2a">Policy loving_pascal</option>
+                                
+                            
+                                
+                                <option value="cb13d1a38e547b4482f8f719b4511fb7e4c6f7ddb9836bd792417295">Policy compassionate_joliot</option>
+                                
+                            
+                                
+                                <option value="05bad2b0ce45cfe4ce0f573a69f31bdc04b7749a40ca361a27895ab1">Policy elastic_kepler</option>
+                                
+                            
+                                
+                                <option value="1b85f898c4aba75bc6eeca8e76d13a80544615df5374f1631cc268f4">Policy elated_newton</option>
+                                
+                            
+                                
+                                <option value="48d725de5d280082ae35eaae750b33d84690ac980addb35c7c85244d">Policy reverent_hugle</option>
+                                
+                            
+                                
+                                <option value="8335b76a410ae09c9272ed6bacf1bf6e8d4e2576ea2c848b8c57171a">Policy laughing_feynman</option>
+                                
+                            
+                                
+                                <option value="9e156adcbc10eaef12e5da503da9185ac4b9fa384d58ca163d81d9b3">Policy reverent_bell</option>
+                                
+                            
+                                
+                                <option value="caa3a9e2667b57ce47b128ac4cdc0aa690735b6f923b4a30c2ca29a8">Policy infallible_gauss</option>
+                                
+                            
+                                
+                                <option value="f030e2b6affd927de197b0d1c881b7ab2ccc84e3240bf3fc52287d72">Policy awesome_noether</option>
+                                
+                            
+                                
+                                <option value="116572b5f988798b4937eefd01080a3988497942653824889b769f84">Policy cranky_austin</option>
+                                
+                            
+                                
+                                <option value="94c1bc2093868b4affb57dcb359c308c973569c7cc3a5362c1ad86cb">Policy adoring_kalam</option>
+                                
+                            
+                                
+                                <option value="9e5b6c395daeffbc58873ebf9131e1cf74a511cc69c62ad11ccd6835">Policy angry_clarke</option>
+                                
+                            
+                                
+                                <option value="bdc63c1f0f3a6ffcb040a867fdf3e49ebbe0212315f0b2a634293d5b">Policy competent_fermi</option>
+                                
+                            
+                                
+                                <option value="cf83542fb85b3e831b4736109f05cadc80c312f19e8fa80979647aca">Policy nervous_roentgen</option>
+                                
+                            
+                                
+                                <option value="48842432382be58442d17b8e44577c2d6dced4eb73065b83e43b1852">Policy dazzling_almeida</option>
+                                
+                            
+                                
+                                <option value="4ad4614c1a54becbed8b8143637dd089c8e0748344988c5d6b8ce920">Policy practical_wing</option>
+                                
+                            
+                                
+                                <option value="a522e74be97f6c093ed1bc1cfec596a5ac5087ff16500175a32abfa1">Policy upbeat_haibt</option>
+                                
+                            
+
+                            
+
+
+                        </select>
+
+                        <script>var netgroups = {"05bad2b0ce45cfe4ce0f573a69f31bdc04b7749a40ca361a27895ab1":["119.59.20.0/24","119.59.23.0/24","119.59.8.0/24","119.59.7.0/24","119.59.11.0/24","119.59.12.0/24","103.244.117.0/24","119.59.17.0/24"],"0c9819336b1bc52510f36122b351ab24566cee5176c1af5ff5c998d4":["45.67.54.0/24","46.102.180.0/24","46.102.179.0/24","45.67.53.0/24"],"116572b5f988798b4937eefd01080a3988497942653824889b769f84":["61.107.200.0/24"],"1b85f898c4aba75bc6eeca8e76d13a80544615df5374f1631cc268f4":["119.59.21.0/24"],"48842432382be58442d17b8e44577c2d6dced4eb73065b83e43b1852":["61.107.202.0/24","61.107.201.0/24"],"48d725de5d280082ae35eaae750b33d84690ac980addb35c7c85244d":["119.59.1.0/24"],"4ad4614c1a54becbed8b8143637dd089c8e0748344988c5d6b8ce920":["119.59.10.0/24","119.59.0.0/24","119.59.18.0/24","141.11.194.0/24","119.59.6.0/24"],"6adfb73ec8932098df6c619a79a761846c941e34cb30d901b56ae32a":["119.59.22.0/24","119.59.3.0/24","119.59.9.0/24","103.244.118.0/24","119.59.14.0/24","119.59.5.0/24","103.143.32.0/24","119.59.4.0/24","103.244.116.0/24","103.143.33.0/24","103.178.35.0/24","119.59.13.0/24","119.59.2.0/24","119.59.16.0/24","103.178.34.0/24"],"73dd2a5f83b9cfcd4e71ce3dca8efc715aac3a7b4d169db64f966f42":["61.107.203.0/24"],"8335b76a410ae09c9272ed6bacf1bf6e8d4e2576ea2c848b8c57171a":["103.156.23.0/24","66.118.0.0/24","103.156.22.0/24","66.118.2.0/24"],"94c1bc2093868b4affb57dcb359c308c973569c7cc3a5362c1ad86cb":["95.214.178.0/24"],"9e156adcbc10eaef12e5da503da9185ac4b9fa384d58ca163d81d9b3":["95.214.179.0/24"],"9e5b6c395daeffbc58873ebf9131e1cf74a511cc69c62ad11ccd6835":["103.218.172.0/24"],"a490cb1eef534db2ac8ed02449256006c91596f6b176328fb65d3f2a":["66.118.1.0/24","66.118.3.0/24"],"a522e74be97f6c093ed1bc1cfec596a5ac5087ff16500175a32abfa1":["2001:df1:6c80::/48"],"bdc63c1f0f3a6ffcb040a867fdf3e49ebbe0212315f0b2a634293d5b":["2602:f88f::/48"],"caa3a9e2667b57ce47b128ac4cdc0aa690735b6f923b4a30c2ca29a8":["2602:f88f::/36"],"cb13d1a38e547b4482f8f719b4511fb7e4c6f7ddb9836bd792417295":["119.59.15.0/24","119.59.19.0/24"],"cf83542fb85b3e831b4736109f05cadc80c312f19e8fa80979647aca":["103.67.245.0/24"],"f030e2b6affd927de197b0d1c881b7ab2ccc84e3240bf3fc52287d72":["2602:f88f:1::/48"]}</script>
+
+                        <div style="text-align: center;">
+                            <img id="pathimg" usemap="#world" src="">
+                            <div id="world2"></div>
+                        </div>
+
+                        <details>
+                            <summary>Chart Display Options</summary>
+                            <noscript>This requires javascript to work</noscript>
+                            <label for="graphOptionMoreWiggle" style="display: flex;align-items: center;font-size: 20px;">
+                                <input type="checkbox" id="graphOptionMoreWiggle" name="graphOptionMoreWiggle" style="width: 64px; height: 32px;">
+                                    <p id="graphOptionMoreWiggleLabel" style="width: 200%;">Display links using non straight lines</p>
+                            </label>
+                        </details>
+
+                        <h3 style="display: none;" id="PISPBanner">Prefixes in selected policy</h3>
+                        <table id="policytable" class="full-width-table">
+                        </table>
+                        <button style="width:100%;display: none;" id="ShowFullPolicyButton" class="bigButton" onclick="dropdownPoke()">Load all prefixes in policy</button>
+
+                        <script>
+                            !function(a,b){"function"==typeof define&&define.amd?define([],b):"undefined"!=typeof module&&module.exports?module.exports=b():a.ReconnectingWebSocket=b()}(this,function(){function a(b,c,d){function l(a,b){var c=document.createEvent("CustomEvent");return c.initCustomEvent(a,!1,!1,b),c}var e={debug:!1,automaticOpen:!0,reconnectInterval:1e3,maxReconnectInterval:3e4,reconnectDecay:1.5,timeoutInterval:2e3};d||(d={});for(var f in e)this[f]="undefined"!=typeof d[f]?d[f]:e[f];this.url=b,this.reconnectAttempts=0,this.readyState=WebSocket.CONNECTING,this.protocol=null;var h,g=this,i=!1,j=!1,k=document.createElement("div");k.addEventListener("open",function(a){g.onopen(a)}),k.addEventListener("close",function(a){g.onclose(a)}),k.addEventListener("connecting",function(a){g.onconnecting(a)}),k.addEventListener("message",function(a){g.onmessage(a)}),k.addEventListener("error",function(a){g.onerror(a)}),this.addEventListener=k.addEventListener.bind(k),this.removeEventListener=k.removeEventListener.bind(k),this.dispatchEvent=k.dispatchEvent.bind(k),this.open=function(b){h=new WebSocket(g.url,c||[]),b||k.dispatchEvent(l("connecting")),(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","attempt-connect",g.url);var d=h,e=setTimeout(function(){(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","connection-timeout",g.url),j=!0,d.close(),j=!1},g.timeoutInterval);h.onopen=function(){clearTimeout(e),(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","onopen",g.url),g.protocol=h.protocol,g.readyState=WebSocket.OPEN,g.reconnectAttempts=0;var d=l("open");d.isReconnect=b,b=!1,k.dispatchEvent(d)},h.onclose=function(c){if(clearTimeout(e),h=null,i)g.readyState=WebSocket.CLOSED,k.dispatchEvent(l("close"));else{g.readyState=WebSocket.CONNECTING;var d=l("connecting");d.code=c.code,d.reason=c.reason,d.wasClean=c.wasClean,k.dispatchEvent(d),b||j||((g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","onclose",g.url),k.dispatchEvent(l("close")));var e=g.reconnectInterval*Math.pow(g.reconnectDecay,g.reconnectAttempts);setTimeout(function(){g.reconnectAttempts++,g.open(!0)},e>g.maxReconnectInterval?g.maxReconnectInterval:e)}},h.onmessage=function(b){(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","onmessage",g.url,b.data);var c=l("message");c.data=b.data,k.dispatchEvent(c)},h.onerror=function(b){(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","onerror",g.url,b),k.dispatchEvent(l("error"))}},1==this.automaticOpen&&this.open(!1),this.send=function(b){if(h)return(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","send",g.url,b),h.send(b);throw"INVALID_STATE_ERR : Pausing to reconnect websocket"},this.close=function(a,b){"undefined"==typeof a&&(a=1e3),i=!0,h&&h.close(a,b)},this.refresh=function(){h&&h.close()}}return a.prototype.onopen=function(){},a.prototype.onclose=function(){},a.prototype.onconnecting=function(){},a.prototype.onmessage=function(){},a.prototype.onerror=function(){},a.debugAll=!1,a.CONNECTING=WebSocket.CONNECTING,a.OPEN=WebSocket.OPEN,a.CLOSING=WebSocket.CLOSING,a.CLOSED=WebSocket.CLOSED,a});
+                        </script>
+                        
+                        <script>
+                            var prefixinfo = [{"PrefixString":"45.67.53.0/24","WhoisName":"-","WhoisCountry":"KR"},{"PrefixString":"45.67.54.0/24","WhoisName":"-","WhoisCountry":"KR"},{"PrefixString":"46.102.179.0/24","WhoisName":"-","WhoisCountry":"KR"},{"PrefixString":"46.102.180.0/24","WhoisName":"-","WhoisCountry":"KR"},{"PrefixString":"61.107.200.0/24","WhoisName":"DREAMLINE CO.","WhoisCountry":"KR"},{"PrefixString":"61.107.201.0/24","WhoisName":"DREAMLINE CO.","WhoisCountry":"KR"},{"PrefixString":"61.107.202.0/24","WhoisName":"DREAMLINE CO.","WhoisCountry":"KR"},{"PrefixString":"61.107.203.0/24","WhoisName":"DREAMLINE CO.","WhoisCountry":"KR"},{"PrefixString":"66.118.0.0/24","WhoisName":"PACKETSTREAM LLC","WhoisCountry":"US"},{"PrefixString":"66.118.1.0/24","WhoisName":"PACKETSTREAM LLC","WhoisCountry":"US"},{"PrefixString":"95.214.179.0/24","WhoisName":"Private Customer","WhoisCountry":"KR"},{"PrefixString":"103.67.245.0/24","WhoisName":"IPXO","WhoisCountry":"IN"},{"PrefixString":"103.143.32.0/24","WhoisName":"CreativeLab","WhoisCountry":"KR"},{"PrefixString":"103.143.33.0/24","WhoisName":"CreativeLab","WhoisCountry":"KR"},{"PrefixString":"103.156.22.0/24","WhoisName":"Creativelab Corp.","WhoisCountry":"KR"},{"PrefixString":"103.156.23.0/24","WhoisName":"Creativelab Corp.","WhoisCountry":"KR"},{"PrefixString":"103.178.34.0/24","WhoisName":"PacketStream Hosting Network","WhoisCountry":"KR"},{"PrefixString":"103.178.35.0/24","WhoisName":"PacketStream Hosting Network","WhoisCountry":"KR"},{"PrefixString":"103.218.172.0/24","WhoisName":"PacketStream Hosting Network","WhoisCountry":"KR"},{"PrefixString":"103.244.116.0/24","WhoisName":"PacketStream Korea","WhoisCountry":"CN"},{"PrefixString":"103.244.117.0/24","WhoisName":"PacketStream Korea","WhoisCountry":"CN"},{"PrefixString":"103.244.118.0/24","WhoisName":"PacketStream Korea","WhoisCountry":"CN"},{"PrefixString":"119.59.0.0/24","WhoisName":"KDDI KOREA","WhoisCountry":"KR"},{"PrefixString":"119.59.1.0/24","WhoisName":"KDDI KOREA","WhoisCountry":"KR"},{"PrefixString":"119.59.2.0/24","WhoisName":"KDDI KOREA","WhoisCountry":"KR"},{"PrefixString":"119.59.3.0/24","WhoisName":"KDDI KOREA","WhoisCountry":"KR"},{"PrefixString":"119.59.4.0/24","WhoisName":"KDDI KOREA","WhoisCountry":"KR"},{"PrefixString":"119.59.5.0/24","WhoisName":"KDDI KOREA","WhoisCountry":"KR"},{"PrefixString":"119.59.6.0/24","WhoisName":"KDDI KOREA","WhoisCountry":"KR"},{"PrefixString":"119.59.7.0/24","WhoisName":"KDDI KOREA","WhoisCountry":"KR"},{"PrefixString":"119.59.8.0/24","WhoisName":"KDDI KOREA","WhoisCountry":"KR"},{"PrefixString":"119.59.9.0/24","WhoisName":"KDDI KOREA","WhoisCountry":"KR"},{"PrefixString":"119.59.10.0/24","WhoisName":"KDDI KOREA","WhoisCountry":"KR"},{"PrefixString":"119.59.11.0/24","WhoisName":"KDDI KOREA","WhoisCountry":"KR"},{"PrefixString":"119.59.12.0/24","WhoisName":"KDDI KOREA","WhoisCountry":"KR"},{"PrefixString":"119.59.13.0/24","WhoisName":"KDDI KOREA","WhoisCountry":"KR"},{"PrefixString":"119.59.14.0/24","WhoisName":"KDDI KOREA","WhoisCountry":"KR"},{"PrefixString":"119.59.15.0/24","WhoisName":"KDDI KOREA","WhoisCountry":"KR"},{"PrefixString":"119.59.16.0/24","WhoisName":"KDDI KOREA","WhoisCountry":"KR"},{"PrefixString":"119.59.17.0/24","WhoisName":"KDDI KOREA","WhoisCountry":"KR"},{"PrefixString":"119.59.18.0/24","WhoisName":"KDDI KOREA","WhoisCountry":"KR"},{"PrefixString":"119.59.19.0/24","WhoisName":"KDDI KOREA","WhoisCountry":"KR"},{"PrefixString":"119.59.20.0/24","WhoisName":"KDDI KOREA","WhoisCountry":"KR"},{"PrefixString":"119.59.21.0/24","WhoisName":"KDDI KOREA","WhoisCountry":"KR"},{"PrefixString":"119.59.22.0/24","WhoisName":"KDDI KOREA","WhoisCountry":"KR"},{"PrefixString":"119.59.23.0/24","WhoisName":"KDDI KOREA","WhoisCountry":"KR"},{"PrefixString":"160.250.11.0/24","WhoisName":"Hongshin, Inc. Korea","WhoisCountry":"KR"},{"PrefixString":"194.156.231.0/24","WhoisName":"Think Huge Ltd","WhoisCountry":"KR"},{"PrefixString":"66.118.2.0/24","WhoisName":"Private Customer","WhoisCountry":"KR"},{"PrefixString":"66.118.3.0/24","WhoisName":"Private Customer","WhoisCountry":"KR"},{"PrefixString":"95.214.178.0/24","WhoisName":"Private Customer","WhoisCountry":"KR"},{"PrefixString":"141.11.194.0/24","WhoisName":"Packetstream LLC","WhoisCountry":"KR"},{"PrefixString":"141.11.195.0/24","WhoisName":"Packetstream LLC","WhoisCountry":"KR"},{"PrefixString":"2001:df1:6c80::/48","WhoisName":"CreativeLab","WhoisCountry":"KR"},{"PrefixString":"2602:f88f::/48","WhoisName":"PACKETSTREAM LLC","WhoisCountry":"US"},{"PrefixString":"2602:f88f::/36","WhoisName":"PACKETSTREAM LLC","WhoisCountry":"US"},{"PrefixString":"2602:f88f:1::/48","WhoisName":"PACKETSTREAM LLC","WhoisCountry":"US"}]
+                            var asn =  139648 
+
+                            var pfxExtraString = "";
+
+                            function saveGraphOptionsToLocalStorage() {
+                                localStorage.setItem("pfx-chart-options:wiggle", document.getElementById("graphOptionMoreWiggle").checked);
+                            }
+
+                            function loadGraphOptionsToLocalStorage() {
+                                document.getElementById("graphOptionMoreWiggle").checked = localStorage.getItem("pfx-chart-options:wiggle") == "true";
+                                pfxExtraString= "";
+                                if (document.getElementById("graphOptionMoreWiggle").checked) {
+                                    pfxExtraString = pfxExtraString + "&wiggly";
+                                }
+                            }
+                            loadGraphOptionsToLocalStorage();
+
+                            function graphOptionsChanged() {
+                                saveGraphOptionsToLocalStorage();
+                                handleImageChange();
+                            }
+                            document.getElementById("graphOptionMoreWiggle").addEventListener("click", graphOptionsChanged)
+
+
+                            function handleImageChange() {
+                                loadGraphOptionsToLocalStorage();
+                                
+                                document.getElementById("pathimg").src=("/pathimg/"+asn+ "-" + document.getElementById("netpolicydropdown").value +"?"+pfxExtraString);
+                                var request = new XMLHttpRequest();
+                                request.open('GET', "/pathimg/"+asn+ "-" + document.getElementById("netpolicydropdown").value + "?map=true" + pfxExtraString, true);
+
+                                request.onload = function() {
+                                    if (this.status >= 200 && this.status < 400) {
+                                        
+                                        
+                                        document.getElementById("world2").innerHTML = this.response;
+                                        setTimeout(function(){
+                                            imageMapResize('#world');
+                                        },1000)
+                                    }
+                                };
+                                request.send();
+                                buildPrefixTable();
+                            } 
+
+                            function encodeHTML(s) {
+                                return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
+                            }
+
+                            function dropdownPoke(){
+                                InteractedWithPolicyTableYet=true;
+                                handleImageChange();
+                            }
+
+                            var InteractedWithPolicyTableYet = false;
+                            var OverloadPolicySize = 0;
+                            function buildPrefixTable() {
+                                var policy = document.getElementById("netpolicydropdown").value;
+                                
+                                var cidrs = netgroups[policy];
+                                var ihtml = "<tbody> <tr> <th class=\"nowrap\">  -  </th> <th>Prefix</th> <th class=\"nowrap\">Description</th> </tr>";
+
+                                
+                                var aaa = document.querySelectorAll('#PISPBanner');
+                                var bbb = document.querySelectorAll('#policytable');
+                                var n = 0
+                                if (cidrs) {
+                                    aaa[0].style.display = "";
+                                    bbb[0].style.display = "";
+                                    cidrs.forEach(cidr => {
+                                        var obj = {};
+                                        var dont =false;
+                                        n++;
+                                        
+                                        if (!InteractedWithPolicyTableYet) {
+                                            if (n == 5) {
+                                                dont = true;
+                                            } else if (n > 5) {
+                                                dont = true;
+                                            }
+                                        }
+                                        
+                                        if (!dont) {
+                                            prefixinfo.forEach(el => {
+                                                if(el.PrefixString == cidr) {
+                                                    
+                                                        ihtml += "<tr><td class=\"nowrap ns\"><img class=\"flag-img\" src=\"/assets/flags/"+el.WhoisCountry+".png\" title=\""+el.WhoisCountry+"\"></td>"
+                                                        ihtml += "<td><a href=\"/prefix/"+el.PrefixString+"\">"+el.PrefixString+"</a></td>"
+                                                        ihtml += "<td class=\"nowrap\">"+encodeHTML(el.WhoisName)+"</td></tr>"
+                                                }
+                                            });
+                                        } else {
+                                            OverloadPolicySize++;
+                                        }
+                                    });
+                                    document.getElementById("policytable").innerHTML = ihtml
+                                    var PolButton = document.querySelectorAll('#ShowFullPolicyButton');
+                                    if (!InteractedWithPolicyTableYet && OverloadPolicySize!=0) {
+                                        PolButton[0].style="width:100%";
+                                        PolButton[0].innerHTML = "Load all "+OverloadPolicySize+" prefixes in policy"
+                                    } else {
+                                        PolButton[0].style="display:none;";
+                                    }
+                                    
+                                } else {
+                                    aaa[0].style.display = "none";
+                                    bbb[0].style.display = "none";
+                                }
+                            }
+
+
+                            var pathdropdown = document.querySelectorAll('#netpolicydropdown');
+                            pathdropdown[0].addEventListener("change",dropdownPoke)
+                            handleImageChange()
+                            buildPrefixTable()
+
+                            document.addEventListener("load", function(){
+                                
+                                handleImageChange()
+                            });
+
+                            function uuidv4() {
+                                return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+                                    var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+                                    return v.toString(16);
+                                });
+                            }
+
+                            
+                            let realTimeSocket = new ReconnectingWebSocket("wss://bgp.tools/ws/rt-asn?prefix=AS139648" + "&magic=" + encodeURIComponent("A5JYRNCT5AL2KGQJVCAB4FIHCZTYUCV626GWDVS3XPB4AIMVN4AA===="));
+                            
+                            realTimeSocket.onmessage = function(event) {
+                                console.log(`[message] Data received from server: ${event.data}`);
+                                if (event.data == "Running.") {
+                                    document.getElementById("ws-status").src = "/assets/connected.png";
+                                    document.getElementById("ws-status").title = "Connected to realtime data";
+                                } else if (event.data == "STOP-CONNECTING") {
+                                    document.getElementById("ws-status").src = disconectedIcon;
+                                    document.getElementById("ws-status").title = "Not connected to realtime data";
+                                    realTimeSocket.maxReconnectAttempts = 1;
+                                    realTimeSocket.close()
+                                } else {
+                                    var obj = JSON.parse(event.data);
+                                    var elm = document.getElementById("pfx-"+obj.Prefix);
+                                    if (!elm && obj.Vis > 6) {
+                                        var tblist = document.getElementById("donotscrapebgptools-prefixlist-tbody");
+                                        var node = document.createElement("tr");                 
+                                        node.outerHTML = '<tr id="pfx-'+obj.Prefix+'"><td class="nowrap"><img class="flag-img" src="/assets/flags/'+obj.Whois.WhoisCountry+'.png" title="'+obj.Whois.WhoisCountry+'"></td><td><a href="/prefix/'+obj.Prefix+'">'+obj.Prefix+'</a></td><td class="smallonmobile nowrap">'+obj.Whois.WhoisName+'</td></tr>';
+                                        tblist.appendChild(node);                              
+                                    }
+                                    if (!elm) {
+                                        elm = document.getElementById("pfx-"+obj.Prefix);
+                                    }
+                                    
+                                    if (obj.Vis > 70) {
+                                        if (elm.style) {
+                                            var es = elm.style;
+                                            if (es.animation.includes("pulse1b")) {
+                                                elm.style = "animation: pulse2b 1s 1;";
+                                            } else if (es.animation.includes("pulse2b")) {
+                                                elm.style = "animation: pulse1b 1s 1;";
+                                            } else {
+                                                elm.style = "animation: pulse1b 1s 1;";
+                                            }
+                                        }
+                                    } else if (obj.Vis < 5) {
+                                        
+                                        var elm = document.getElementById("pfx-"+obj.Prefix);
+                                        if (elm) {
+                                            elm.parentNode.removeChild(elm);
+                                        }
+                                    } else {
+                                        if (elm.style) {
+                                            var es = elm.style;
+                                            if (es.animation.includes("pulse1r")) {
+                                                elm.style = "animation: pulse2r 1s 1;";
+                                            } else if (es.animation.includes("pulse2r")) {
+                                                elm.style = "animation: pulse1r 1s 1;";
+                                            } else {
+                                                elm.style = "animation: pulse1r 1s 1;";
+                                            }
+                                        }
+                                    }
+                                }
+                            };
+                            var disconectedIcon = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAAZlBMVEX/ewBZWVn/ewf/ew5fWljudiP8egp6XVT6eRHodSmVYU6hZEzObjrldCv3eRZ/XlNjWliHX1KrZkngci71eBl1XFXCa0CKYFHydx18XlSQYE+lZUq0aEbJbT3SbzhvXFaLYFG8akLYdYVFAAABQElEQVRIx5XV25KDIAwGYIKASLutqOtZ277/S26xK4ozJea/qRdfajATZaRkd6B6oPoL1d9QphUn+WvXmGF8TfN8yvNrDj6nvNj5Hu8n8HCh9ONiON5PEKuQx55DmFTHC1R9uMOjYkhFERbkEikofw8FGe5t0FWJ+kLvz5H+t8RdGD9k8TeebBXpzwIZT955XyVBtHHeXYzeJy5fhydtoZffZvUMSfvxT4BOeI/G/b9paxH1at8XQF8xNcV8aaQvHQBMhY/XttsdYp5nah3XdvIqui61Cjy+jqLwXp1cx9XLQZ5cR/vx1p8cez2IWrlxYY/T9bNVyCfmdQdbxNgs441FNRAEHS83oe9ahmTw1p88nhHCiAkpeIUeX5eJ6NlM9Gwm+uxO9/3F2PSR597jn1+udCWzUp7150P1jOoZ1f8BGPARG85JosIAAAAASUVORK5CYII=";
+                            realTimeSocket.onerror = function(error) {
+                                document.getElementById("ws-status").src = disconectedIcon;
+                                document.getElementById("ws-status").title = "Not connected to realtime data";
+
+                                console.log(`[error] ${error.message}`);
+                            };
+                            realTimeSocket.onclose = function(error) {
+                                document.getElementById("ws-status").src = disconectedIcon;
+                                document.getElementById("ws-status").title = "Not connected to realtime data";
+
+                                console.log(`[error] ${error.message}`);
+                            };
+                        </script>
+
+<div class="superclearfix">
+    
+</div>
+
+                        <hr>
+                        <a style="font-size: small;" href="/kb/what-is-a-upstream">How are upstreams and downstreams calculated?</a>
+                        <h3 id="upstreams">Upstreams<img class="flag-img" src="/assets/lightning.png" style="padding-left: 12px;" title="This information was fetched live at page load time" alt="This information was fetched live at page load time"/></h3>
+
+
+                        <table id="donotscrapebgptools-upstreamTable" class="full-width-table">
+                            <thead class="sortable">
+                                <tr>
+                                    <th class="nowrap boldpls">  &nbsp;  </th>
+                                    <th data-sort-method='number' class="boldpls">ASN</th>
+                                    <th class="nowrap boldpls">Description</th>
+                                    <th class="nowrap boldpls">IPv4</th>
+                                    <th class="nowrap boldpls">IPv6</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                <tr>
+                                    <td data-sort='AU' class="nowrap ns"><img class="flag-img" src="/assets/flags/AU.png" title="AU">
+                                        
+                                        </td>
+                                    <td data-sort='137409'><a href="/as/137409">AS137409</a></td>
+                                    <td class="smallonmobile nowrap">GSL Networks Pty LTD</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='HK' class="nowrap ns"><img class="flag-img" src="/assets/flags/HK.png" title="HK">
+                                        
+                                        </td>
+                                    <td data-sort='4637'><a href="/as/4637">AS4637</a></td>
+                                    <td class="smallonmobile nowrap">Telstra Global</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='KR' class="nowrap ns"><img class="flag-img" src="/assets/flags/KR.png" title="KR">
+                                        
+                                        </td>
+                                    <td data-sort='9318'><a href="/as/9318">AS9318</a></td>
+                                    <td class="smallonmobile nowrap">SK Broadband Co Ltd</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US">
+                                        
+                                        </td>
+                                    <td data-sort='64289'><a href="/as/64289">AS64289</a></td>
+                                    <td class="smallonmobile nowrap">Macarne.com</td>
+                                    <td class="nowrap">&#10008;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='KR' class="nowrap ns"><img class="flag-img" src="/assets/flags/KR.png" title="KR">
+                                        
+                                        </td>
+                                    <td data-sort='138195'><a href="/as/138195">AS138195</a></td>
+                                    <td class="smallonmobile nowrap">MOACK.Co.LTD</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='KR' class="nowrap ns"><img class="flag-img" src="/assets/flags/KR.png" title="KR">
+                                        
+                                        </td>
+                                    <td data-sort='9286'><a href="/as/9286">AS9286</a></td>
+                                    <td class="smallonmobile nowrap">KINX</td>
+                                    <td class="nowrap">&#10008;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='GB' class="nowrap ns"><img class="flag-img" src="/assets/flags/GB.png" title="GB">
+                                        
+                                        </td>
+                                    <td data-sort='60068'><a href="/as/60068">AS60068</a></td>
+                                    <td class="smallonmobile nowrap">Datacamp Limited (CDN77 / DataPacket)</td>
+                                    <td class="nowrap">&#10008;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+
+                        <hr>
+                        <h3 id="peers">Peers<img class="flag-img" src="/assets/lightning.png" style="padding-left: 12px;" title="This information was fetched live at page load time" alt="This information was fetched live at page load time"/></h3>
+
+
+
+                        <table id="donotscrapebgptools-upstreamTablePeers" class="full-width-table">
+                            <thead class="sortable">
+                                <tr>
+                                    <th class="nowrap boldpls">  &nbsp;  </th>
+                                    <th data-sort-method='number' class="boldpls">ASN</th>
+                                    <th class="nowrap boldpls">Description</th>
+                                    <th class="nowrap boldpls">IPv4</th>
+                                    <th class="nowrap boldpls">IPv6</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                <tr>
+                                    <td data-sort='AU' class="nowrap ns"><img class="flag-img" src="/assets/flags/AU.png" title="AU"></td>
+                                    <td data-sort='137409'><a href="/as/137409">AS137409</a></td>
+                                    <td class="smallonmobile nowrap">GSL Networks Pty LTD</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='53388'><a href="/as/53388">AS53388</a></td>
+                                    <td class="smallonmobile nowrap">Tefexia LC</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='HK' class="nowrap ns"><img class="flag-img" src="/assets/flags/HK.png" title="HK"></td>
+                                    <td data-sort='4637'><a href="/as/4637">AS4637</a></td>
+                                    <td class="smallonmobile nowrap">Telstra Global</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='KR' class="nowrap ns"><img class="flag-img" src="/assets/flags/KR.png" title="KR"></td>
+                                    <td data-sort='9318'><a href="/as/9318">AS9318</a></td>
+                                    <td class="smallonmobile nowrap">SK Broadband Co Ltd</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='394106'><a href="/as/394106">AS394106</a></td>
+                                    <td class="smallonmobile nowrap">BeIdeal LLC</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='46105'><a href="/as/46105">AS46105</a></td>
+                                    <td class="smallonmobile nowrap">Alpaon America LLC</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='64289'><a href="/as/64289">AS64289</a></td>
+                                    <td class="smallonmobile nowrap">Macarne.com</td>
+                                    <td class="nowrap">&#10008;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='KR' class="nowrap ns"><img class="flag-img" src="/assets/flags/KR.png" title="KR"></td>
+                                    <td data-sort='138195'><a href="/as/138195">AS138195</a></td>
+                                    <td class="smallonmobile nowrap">MOACK.Co.LTD</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='20200'><a href="/as/20200">AS20200</a></td>
+                                    <td class="smallonmobile nowrap">Hongshin, Inc.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='KR' class="nowrap ns"><img class="flag-img" src="/assets/flags/KR.png" title="KR"></td>
+                                    <td data-sort='7562'><a href="/as/7562">AS7562</a></td>
+                                    <td class="smallonmobile nowrap">HCN Dongjak</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='KR' class="nowrap ns"><img class="flag-img" src="/assets/flags/KR.png" title="KR"></td>
+                                    <td data-sort='10036'><a href="/as/10036">AS10036</a></td>
+                                    <td class="smallonmobile nowrap">DLIVE</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='KR' class="nowrap ns"><img class="flag-img" src="/assets/flags/KR.png" title="KR"></td>
+                                    <td data-sort='9286'><a href="/as/9286">AS9286</a></td>
+                                    <td class="smallonmobile nowrap">KINX</td>
+                                    <td class="nowrap">&#10008;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='GB' class="nowrap ns"><img class="flag-img" src="/assets/flags/GB.png" title="GB"></td>
+                                    <td data-sort='60068'><a href="/as/60068">AS60068</a></td>
+                                    <td class="smallonmobile nowrap">Datacamp Limited (CDN77 / DataPacket)</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='13383'><a href="/as/13383">AS13383</a></td>
+                                    <td class="smallonmobile nowrap">Phylaxis, Inc.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='46427'><a href="/as/46427">AS46427</a></td>
+                                    <td class="smallonmobile nowrap">SF Innovations Inc.</td>
+                                    <td class="nowrap">&#10008;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+
+
+
+                        <hr>
+                        <h3 id="downstreams">Downstreams<img class="flag-img" src="/assets/lightning.png" style="padding-left: 12px;" title="This information was fetched live at page load time" alt="This information was fetched live at page load time"/></h3>
+                        <table id="donotscrapebgptools-upstreamTableDowns" class="full-width-table">
+                            <thead class="sortable">
+                                
+                                <tr>
+                                    <th class="nowrap boldpls">  &nbsp;  </th>
+                                    <th data-sort-method='number'  class="boldpls">ASN</th>
+                                    <th class="nowrap boldpls">Description</th>
+                                    <th class="nowrap boldpls">IPv4</th>
+                                    <th class="nowrap boldpls">IPv6</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US">
+                                        
+                                        </td>
+                                    <td data-sort='53388'><a href="/as/53388">AS53388</a></td>
+                                    <td class="smallonmobile nowrap">Tefexia LC</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US">
+                                        
+                                        </td>
+                                    <td data-sort='394106'><a href="/as/394106">AS394106</a></td>
+                                    <td class="smallonmobile nowrap">BeIdeal LLC</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US">
+                                        
+                                        </td>
+                                    <td data-sort='46105'><a href="/as/46105">AS46105</a></td>
+                                    <td class="smallonmobile nowrap">Alpaon America LLC</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US">
+                                        
+                                        </td>
+                                    <td data-sort='20200'><a href="/as/20200">AS20200</a></td>
+                                    <td class="smallonmobile nowrap">Hongshin, Inc.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='KR' class="nowrap ns"><img class="flag-img" src="/assets/flags/KR.png" title="KR">
+                                        
+                                        </td>
+                                    <td data-sort='138195'><a href="/as/138195">AS138195</a></td>
+                                    <td class="smallonmobile nowrap">MOACK.Co.LTD</td>
+                                    <td class="nowrap">&#10008;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+
+                    </div>
+
+                    <div style="display: none" id="whois-page">
+                        
+                        
+                        <pre style="white-space: pre-wrap;">aut-num:        <a href="/AS139648">AS139648</a>
+as-name:        <a href="https://wq.apnic.net/apnic-bin/whois.pl?searchtext=PACKETSTREAM-AS-AP&amp;form_type=advanced">PACKETSTREAM-AS-AP</a>
+descr:          PacketStream Korea
+country:        KR
+org:            <a href="https://wq.apnic.net/apnic-bin/whois.pl?searchtext=ORG-CA60-AP&amp;form_type=advanced">ORG-CA60-AP</a>
+admin-c:        <a href="https://wq.apnic.net/apnic-bin/whois.pl?searchtext=PA353-AP&amp;form_type=advanced">PA353-AP</a>
+tech-c:         <a href="https://wq.apnic.net/apnic-bin/whois.pl?searchtext=PA353-AP&amp;form_type=advanced">PA353-AP</a>
+abuse-c:        <a href="https://wq.apnic.net/apnic-bin/whois.pl?searchtext=AP1199-AP&amp;form_type=advanced">AP1199-AP</a>
+mnt-lower:      MAINT-PACKETSTREAM-KR
+mnt-routes:     MAINT-CLOUDNX-KR
+mnt-by:         APNIC-HM
+mnt-irt:        IRT-PACKETSTREAM
+last-modified:  2021-07-24T13:46:25Z
+source:         APNIC
+
+
+organisation:   <a href="https://wq.apnic.net/apnic-bin/whois.pl?searchtext=ORG-CA60-AP&amp;form_type=advanced">ORG-CA60-AP</a>
+org-name:       CloudNX
+org-type:       LIR
+country:        KR
+address:        CloudNX NOC, 4, Bongeunsa-ro 109-gil, Gangnam-gu, Seoul
+phone:          &#43;82-70-8095-2240
+# Email removed, Log into bgp.tools to see whois emails
+mnt-ref:        APNIC-HM
+mnt-by:         APNIC-HM
+last-modified:  2023-09-05T02:17:56Z
+source:         APNIC
+
+</pre>
+                        
+                        
+                        <a style="font-size: small;">Last Update: 2025-12-12T03:22:27Z UTC </a>
+                        
+                        <hr>
+                        
+                            <h2>Member of the following AS-SETs</h2>
+
+                            <table id="fhTable" class="full-width-table ">
+                                <tbody id="prefixlist-tbody">
+                                    <tr>
+                                        <th class="boldpls nowrap"> - </th>
+                                        <th class="boldpls">Member</th>
+                                         
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-sejong">as-sejong</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">ALTDB</td>
+                                        
+                                        <td><a href="/as-set/ALTDB::as-ifog">as-ifog</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as199414:as-neoprotect">as199414:as-neoprotect</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">ARIN</td>
+                                        
+                                        <td><a href="/as-set/ARIN::as13383:as-cone">as13383:as-cone</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-telstra-intl-customers">as-telstra-intl-customers</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-gcore">as-gcore</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-kinx-transit">as-kinx-transit</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-kleyrex-rs">as-kleyrex-rs</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-dacom">as-dacom</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-packet">as-packet</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as56890:as-decix-dus">as56890:as-decix-dus</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-kddcustomer2">as-kddcustomer2</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">ARIN</td>
+                                        
+                                        <td><a href="/as-set/ARIN::as-unji">as-unji</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as199414:as-customers">as199414:as-customers</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-telstra-testing-1">as-telstra-testing-1</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">APNIC</td>
+                                        
+                                        <td><a href="/as-set/APNIC::as58453:as-asiaascust">as58453:as-asiaascust</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">ARIN</td>
+                                        
+                                        <td><a href="/as-set/ARIN::as64289:as-macarne">as64289:as-macarne</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">ARIN</td>
+                                        
+                                        <td><a href="/as-set/ARIN::as1239:as-customers">as1239:as-customers</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-moack">as-moack</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">APNIC</td>
+                                        
+                                        <td><a href="/as-set/APNIC::as58453:as-asiatest2">as58453:as-asiatest2</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-transroute-spec">as-transroute-spec</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as56890:as-decix-dus-connected">as56890:as-decix-dus-connected</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">APNIC</td>
+                                        
+                                        <td><a href="/as-set/APNIC::as139648:as-customers">as139648:as-customers</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">ARIN</td>
+                                        
+                                        <td><a href="/as-set/ARIN::as20200:as-upstreams">as20200:as-upstreams</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as58453:as-asiaascust">as58453:as-asiaascust</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as56890:as-decix-dus-rs">as56890:as-decix-dus-rs</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-cdn77">as-cdn77</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-retn6">as-retn6</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-ifog">as-ifog</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">APNIC</td>
+                                        
+                                        <td><a href="/as-set/APNIC::as58453:as-asiatest">as58453:as-asiatest</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-hurricanev6">as-hurricanev6</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-shinbiro">as-shinbiro</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-retn">as-retn</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as56890:as-decix-dus-rs-v6">as56890:as-decix-dus-rs-v6</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-hurricane">as-hurricane</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as56890:as-decix-dus-v6">as56890:as-decix-dus-v6</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">APNIC</td>
+                                        
+                                        <td><a href="/as-set/APNIC::as151810:as-phylaxis">as151810:as-phylaxis</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">APNIC</td>
+                                        
+                                        <td><a href="/as-set/APNIC::as-packetstream">as-packetstream</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as20473:as-vultr">as20473:as-vultr</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">ARIN</td>
+                                        
+                                        <td><a href="/as-set/ARIN::as53388:as-cone">as53388:as-cone</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as137409:as-mercury">as137409:as-mercury</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">ARIN</td>
+                                        
+                                        <td><a href="/as-set/ARIN::as-4096svcs">as-4096svcs</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-skbroadband">as-skbroadband</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-retn-actual-v6">as-retn-actual-v6</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                        
+
+                    </div>
+
+                    
+
+                    
+                    <div style="display: none" id="ix-page">
+                        <div class="grid-row">
+                            <dl class="column-two-thirds">
+                                <p style="margin: 0px;"><img style="vertical-align: middle; margin-left: 5px;" class="flag-img" src="/assets/peeringdb-icon.png" title="PeeringDB"><a href="https://www.peeringdb.com/asn/139648">Go to PeeringDB page</a></p>
+                            </dl>
+                            
+                            
+                        </div>
+                        <div class="grid-row">
+                            
+                        
+                        <div class="column-two-thirds">
+                            <dl>
+                                <dt>PeeringDB AS-SET:</dt>
+                                <dd class="text data">
+                                    
+                                    <a href="/as-set/as-packetstream">AS-PACKETSTREAM</a>
+                                    
+                                </dd>
+                            </dl>
+                        </div>
+                        
+    
+    
+                        <dl class="column-third">
+                            <dt>Suggested Prefix Limits</dt>
+                            <dd class="text data">
+                                
+                                <p style="margin: 0px;"><b>IPv4:</b> 2000</p>
+                                
+                                <p style="margin: 0px;"><b>IPv6:</b> 200</p>
+                            </dd>
+                        </dl>
+                        </div>
+
+                        
+
+                        <div id="normalixpsubpage">
+
+
+<h3>Internet Exchange Points</h3>
+
+<div class="scroll-ixp-div-on-small">
+<table id="ixpTable" class="full-width-table table-wide-to-force-scroll-on-mobile">
+    <thead class="sortable">
+        <tr>
+            <th class="nowrap boldpls">  &nbsp;  </th>
+            <th class="boldpls">Name</th>
+            <th class="nowrap boldpls">IPv4</th>
+            <th class="nowrap boldpls">IPv6</th>
+            <th data-sort-method='number' class="nowrap boldpls">Link Speed</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+        
+        <tr>
+            <td data-sort='KR' class="nowrap ns"><img class="flag-img" src="/assets/flags/KR.png" title="KR"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/packet:ix">packet:ix</a></td>
+            <td class="smallonmobile">103.244.119.10</a></td>
+            <td class="smallonmobile nowrap">2001:df4:f780::10</td>
+            <td data-sort='100000' class="smallonmobile">100 gbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='KR' class="nowrap ns"><img class="flag-img" src="/assets/flags/KR.png" title="KR"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/packet:ix">packet:ix</a></td>
+            <td class="smallonmobile">103.244.119.11</a></td>
+            <td class="smallonmobile nowrap">2001:df4:f780::11</td>
+            <td data-sort='40000' class="smallonmobile">40 gbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='DE' class="nowrap ns"><img class="flag-img" src="/assets/flags/DE.png" title="DE"><img style="margin-left: 5px;" class="flag-img" src="/assets/icons/private-localadmin.png" title="Detected Vendor: locally administered mac addresses"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/KleyReX">KleyReX</a></td>
+            <td class="smallonmobile">193.189.83.183</a></td>
+            <td class="smallonmobile nowrap">2001:7f8:33::a113:9648:1</td>
+            <td data-sort='100' class="smallonmobile"><abbr title="VPorts - Colofabrik [DE]">100 mbps</abbr></td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='DE' class="nowrap ns"><img class="flag-img" src="/assets/flags/DE.png" title="DE"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/DE-CIX%20Dusseldorf">DE-CIX Dusseldorf</a></td>
+            <td class="smallonmobile">185.1.171.36</a></td>
+            <td class="smallonmobile nowrap">2001:7f8:9e:0:2:2180:0:1</td>
+            <td data-sort='0' class="smallonmobile"><abbr title="edge02.dus1 -  []">n/a</abbr></td>
+        </tr>
+        
+        
+    </tbody>
+</table>
+</div>
+
+
+
+
+
+
+
+
+<a style="font-size: small;">Last Update: 2025-12-12T10:08:19Z UTC</a>
+
+
+                        </div>
+                        <div id="overlapixpsubpage">
+                        </div>
+                    </div>
+                    
+                    
+
+                    
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="superclearfix">
+            
+            <div class="superclearfix">
+                
+            </div>
+
+            <div class="superclearfix">
+                
+            </div>
+
+
+        </div>
+
+
+        <div class="group js-footer" id="footer">
+            <nav>
+                <div>
+                    <ul>
+                        <li><a href="/kb/api" target="_blank">Scripting/API</a></li>
+                        <li><a href="/credits" target="_blank">Credits</a></li>
+                        <li><a href="/pricing" target="_blank">Pricing</a></li>
+                        <li><a href="/kb/contact" target="_blank">Contact Us</a></li>
+                        <li><a href="https://github.com/bgptools/issues" target="_blank">Issue Tracker</a></li>
+                        <li><a href="/kb/setup-sessions" target="">Contribute Data</a></li>
+                        
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <script>
+    
+    var inhash = window.location.hash;
+    if (inhash == "#asinfo") {
+        
+    } else if (inhash == "#prefixes") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#prefix-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#prefixes-page');
+        aaa[0].style.display = "";
+
+    } else if (inhash == "#connectivity" || inhash == "#peers" || inhash == "#upstreams" || inhash == "#downstreams") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#connectivity-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#connectivity-page');
+        aaa[0].style.display = "";
+    } else if (inhash == "#whois") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#whois-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#whois-page');
+        aaa[0].style.display = "";
+    } else if (inhash == "#ix") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#ix-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#ix-page');
+        aaa[0].style.display = "";
+    }</script>
+
+    <script>
+    
+
+
+    ;(function() {
+  'use strict'
+
+  function scaleImageMap() {
+    function resizeMap() {
+      function resizeAreaTag(cachedAreaCoords, idx) {
+        function scale(coord) {
+          var dimension = 1 === (isWidth = 1 - isWidth) ? 'width' : 'height'
+          return (
+            padding[dimension] +
+            Math.floor(Number(coord) * scalingFactor[dimension])
+          )
+        }
+
+        var isWidth = 0
+        areas[idx].coords = cachedAreaCoords
+          .split(',')
+          .map(scale)
+          .join(',')
+      }
+
+      var scalingFactor = {
+        width: image.width / image.naturalWidth,
+        height: image.height / image.naturalHeight,
+      }
+
+      var padding = {
+        width: parseInt(
+          window.getComputedStyle(image, null).getPropertyValue('padding-left'),
+          10
+        ),
+        height: parseInt(
+          window.getComputedStyle(image, null).getPropertyValue('padding-top'),
+          10
+        ),
+      }
+
+      cachedAreaCoordsArray.forEach(resizeAreaTag)
+    }
+
+    function getCoords(e) {
+      
+      return e.coords.replace(/ *, */g, ',').replace(/ +/g, ',')
+    }
+
+    function debounce() {
+      clearTimeout(timer)
+      timer = setTimeout(resizeMap, 250)
+    }
+
+    function start() {
+      if (
+        image.width !== image.naturalWidth ||
+        image.height !== image.naturalHeight
+      ) {
+        resizeMap()
+      }
+    }
+
+    function addEventListeners() {
+      image.addEventListener('load', resizeMap, false) 
+      window.addEventListener('focus', resizeMap, false) 
+      window.addEventListener('resize', debounce, false)
+      window.addEventListener('readystatechange', resizeMap, false)
+      document.addEventListener('fullscreenchange', resizeMap, false)
+    }
+
+    function beenHere() {
+      return 'function' === typeof map._resize
+    }
+
+    function getImg(name) {
+      return document.querySelector('img[usemap="#world"]')
+    }
+
+    function setup() {
+      areas = map.getElementsByTagName('area')
+      cachedAreaCoordsArray = Array.prototype.map.call(areas, getCoords)
+      image = getImg('#' + map.name) || getImg(map.name)
+      map._resize = resizeMap 
+    }
+
+    var  
+      map = this,
+      areas = null,
+      cachedAreaCoordsArray = null,
+      image = null,
+      timer = null
+
+    if (!beenHere()) {
+      setup()
+      addEventListeners()
+      start()
+    } else {
+      map._resize() 
+    }
+  }
+
+  function factory() {
+    function chkMap(element) {
+      if (!element.tagName) {
+        throw new TypeError('Object is not a valid DOM element')
+      } else if ('MAP' !== element.tagName.toUpperCase()) {
+        throw new TypeError(
+          'Expected <MAP> tag, found <' + element.tagName + '>.'
+        )
+      }
+    }
+
+    function init(element) {
+      if (element) {
+        chkMap(element)
+        scaleImageMap.call(element)
+        maps.push(element)
+      }
+    }
+
+    var maps
+
+    return function imageMapResizeF(target) {
+      maps = [] 
+
+      switch (typeof target) {
+        case 'undefined':
+        case 'string':
+          Array.prototype.forEach.call(
+            document.querySelectorAll(target || 'map'),
+            init
+          )
+          break
+        case 'object':
+          init(target)
+          break
+        default:
+          throw new TypeError('Unexpected data type (' + typeof target + ').')
+      }
+
+      return maps
+    }
+  }
+
+  if (typeof define === 'function' && define.amd) {
+    define([], factory)
+  } else if (typeof module === 'object' && typeof module.exports === 'object') {
+    module.exports = factory() 
+  } else {
+    window.imageMapResize = factory()
+  }
+
+  if ('jQuery' in window) {
+    window.jQuery.fn.imageMapResize = function $imageMapResizeF() {
+      return this.filter('map')
+        .each(scaleImageMap)
+        .end()
+    }
+  }
+})()
+    
+    </script>
+    <script>
+        var imgEl = document.getElementById("pathimg");
+        imgEl.addEventListener("mouseover",function() {
+            imageMapResize('#world');
+        })
+    </script>
+    <script src="/assets/tablesort.min.js"></script>
+    <script>
+        addEventListener("load", (event) => {
+            
+            
+            var sort = new Tablesort(document.getElementById('donotscrapebgptools-upstreamTable'));
+            var sort2 = new Tablesort(document.getElementById('donotscrapebgptools-upstreamTablePeers'));
+            
+            var sort3 = new Tablesort(document.getElementById('donotscrapebgptools-upstreamTableDowns'));
+            
+            var sort4 = new Tablesort(document.getElementById('ixpTable'));
+            
+        });
+    </script>
+    
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        setTimeout(function() {
+
+        var beaconHttp = new XMLHttpRequest();
+        var url = '/performance-beacon';
+        var params = JSON.stringify(window.performance)
+        beaconHttp.open('POST', url, true);
+        
+        
+        beaconHttp.setRequestHeader('Content-type', 'application/json');
+        beaconHttp.setRequestHeader('visit-url', "/as/139648");
+        if (navigator.connection) {
+            beaconHttp.setRequestHeader('client-side-rtt', navigator.connection.rtt);
+        } else {
+            beaconHttp.setRequestHeader('client-side-rtt', '-2');
+        }
+        beaconHttp.onreadystatechange = function() {}
+        beaconHttp.send(params);
+        },1000)
+    }, false);
+</script>
+
+</body>
+
+
+</html>

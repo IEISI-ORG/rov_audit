@@ -1,0 +1,1562 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="OOO &#34;MediaSeti&#34; (AS8744) is a small BGP network that is peering with 1 other networks and has 1 upstream carriers">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000">
+    <link rel="search" type="application/opensearchdescription+xml" title="BGP.Tools" href="https://bgp.tools/opensearch.xml">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="theme-color" content="#000000">
+    <link href="https://social.bgp.tools/@bgptools" rel="me">
+    <link rel="canonical" href="https://bgp.tools/as/8744" />
+    <title>AS8744 OOO &#34;MediaSeti&#34; - bgp.tools</title>
+    <link rel="stylesheet" type="text/css" href="/assets/main-new.css?2025-12-09-1723%20UTC">
+</head>
+
+<body>
+    <div id="container">
+        
+<div id="global-header" class="global-header-top">
+    <div class="header-sitewide">
+        <div class="global-header">
+            <div class="header-logo">
+                <a href="/" id="logo" class="content">bgp.tools</a>
+            </div>
+            <form id="search" action="/search" method="get" accept-charset="utf-8" role="search" class="top-search-header js-search-hash">
+                <div class="searchfield">
+                    <input type="search" autocomplete="off" name="q" id="site-search-text" title="Search" value="" placeholder="Start here..." autofocus="autofocus" class="js-search-focus">
+                    <button type="submit" id="search-submit" class="search-submit">Search</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div id="global-header-blob" >
+    <a id="auth-header-text" href="/login">Login</a>
+    
+</div>
+<div id="global-header-bar" >
+    <a id="auth-header-bar-text" href="/login">Login</a>
+    
+</div>
+<div class="small-clearfix"></div>
+
+        <div id="global-container">
+            
+
+
+            
+            <div class="section-tabs js-tabs">
+                <ul>
+                    
+<li class="active">
+    <h1> <a id="viewbutton-tab" href="/as/8744">View</a></h1>
+</li>
+
+<li >
+    <a id="editbutton-tab" href="/edit/as/8744">Edit</a>
+</li>
+
+
+
+
+
+                    <li style="float: right;">
+                        
+                        <img id="ws-status" width="24" height="24" src="/assets/disconnected.png" title="Not Connected To realtime data updates">
+                        
+                    </li>
+                </ul>
+            </div>
+
+            <div id="search-container">
+
+                <div class="column-full-width">
+
+                    <div class="clearfix">
+                        
+                    </div>
+                    
+                    
+
+                    <div class="network-header">
+                        
+                        
+                        
+                        <p id="network-name" class="heading-xlarge">OOO &#34;MediaSeti&#34;</p>
+                        <p id="network-number">
+                            AS Number
+                            <strong id="ASNumberString" pure="8744">8744</strong>
+                            <br>
+                        
+                            Website
+                            <strong><a href="http://www.starttelecom.ru" rel="nofollow">http://www.starttelecom.ru</a></strong>
+                        
+                        </p>
+
+                    </div>
+
+
+                    <div class="clearfix">
+                        
+                    </div>
+
+
+                    <div class="section-tabs js-tabs">
+                        <ul>
+
+                            <li id="overview-tab-li" class="active">
+                                <a id="overview-tab" href="#asinfo">Overview</a>
+                            </li>
+                            
+                            <li id="prefix-tab-li">
+                                <a id="prefix-tab" href="#prefixes">Prefixes</a>
+                            </li>
+
+                            <li id="connectivity-tab-li">
+                                <a id="connectivity-tab" href="#connectivity">Connectivity</a>
+                            </li>
+                            
+                            <li id="whois-tab-li">
+                                <a id="whois-tab" href="#whois">Whois</a>
+                            </li>
+                        
+                        
+                        </ul>
+                    </div>
+
+<script>
+    function removeAllActiveTab() {
+        var tabs = [
+            "overview-tab-li", 
+            "prefix-tab-li", 
+            "connectivity-tab-li",
+            "whois-tab-li",
+            "ix-tab-li",
+            "issues-tab-li"
+        ];
+
+        tabs.forEach(element => {
+            var aaa = document.querySelectorAll('#'+element);
+            if(aaa.length != 0) {
+                aaa[0].classList.remove("active")
+            }
+        });
+    }
+
+    function hideAllContent() {
+        var tabs = [
+            "overview-page", 
+            "prefixes-page", 
+            "connectivity-page",
+            "whois-page",
+            "ix-page",
+            "issues-page"
+        ];
+
+        tabs.forEach(element => {
+            var aaa = document.querySelectorAll('#'+element);
+            if(aaa.length != 0) {
+                aaa[0].style.display = "none";
+            }
+        });
+        if (document.getElementById("donotscrapebgptools-prefixlist-tbody")) {
+            var prefixrows = document.getElementById("donotscrapebgptools-prefixlist-tbody").children;
+            for (var i = 0; i < prefixrows.length; i++) {
+                prefixrows[i].style = "";
+            }
+        }
+    }
+
+    var otab = document.querySelectorAll('#overview-tab');
+    otab[0].addEventListener("click", function () {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#overview-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#overview-page');
+        aaa[0].style.display = "";
+    });
+    
+
+    var ptab = document.querySelectorAll('#prefix-tab');
+    ptab[0].addEventListener("click", function () {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#prefix-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#prefixes-page');
+        aaa[0].style.display = "";
+    });
+
+    var ctab = document.querySelectorAll('#connectivity-tab');
+    ctab[0].addEventListener("click", function () {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#connectivity-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#connectivity-page');
+        aaa[0].style.display = "";
+    });
+    
+
+    var wtab = document.querySelectorAll('#whois-tab');
+    wtab[0].addEventListener("click", function () {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#whois-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#whois-page');
+        aaa[0].style.display = "";
+    });
+
+</script>
+
+
+
+                    
+                    <div id="overview-page">
+
+                        <div class="grid-row">
+                        
+                        <div class="column-two-thirds">
+                            <dl>
+                                <dt>Registered on</dt>
+                                <dd class="text data">
+                                    
+                                     6 May 2002 (23 years old)
+                                </dd>
+                            
+                            
+                            <dt>Registered to</dt>
+                            <dd class="text data">
+                                <a href="/rir-owner/ru.unitline">ru.unitline</a> (ripe)</dd>
+                                
+                                <dd class="text data" id="network-status">
+                                    <a href="/transfer-history/8744">[Transfer History]</a>
+                                </dd>
+                                
+                            
+                            </dl>
+                        </div>
+                        
+    
+                        <dl class="column-third">
+                            <dt>Network status</dt>
+                            <dd class="text data">
+                                
+                                Active, Allocated under RIPE
+                                
+                            </dd>
+                        </dl>
+    
+                        </div>
+    
+                        <div class="grid-row">
+                            <dl class="column-two-thirds">
+                                <dt>Network type</dt>
+                                <dd class="text data">
+                                    Carrier
+                                </dd>
+                            </dl>
+    
+                            <dl class="column-third">
+                                <dt>Prefixes Originated</dt>
+                                <dd class="data">5 IPv4, 0 IPv6</dd>
+                            </dl>
+                        </div>
+                        <div class="grid-row">
+                            <div class="column-half">
+    
+                                <h2 class="heading-medium"><derp>Upstreams</derp></h2>
+                                <ul>
+                                    
+                                    <li>
+                                        <span id="sic0">
+                                          <a href="/as/210928">AS210928</a> - RDB 24, Ltd.
+                                        </span>
+                                    </li>
+                                    
+                                </ul>
+    
+                            </div>
+    
+                            <div class="column-half">
+                                
+                                    <h2 class="heading-medium"><derp>Locations of Operation</derp></h2>
+                                    
+                                    <li><span id="sic0">Russian Federation</span></li>
+                                    
+                                
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+
+                    <div style="display: none" id="prefixes-page">
+                        
+
+                        
+                        <div style="float:left">
+                            <dt>Prefixes Originated</dt>
+                            <dd class="data">5 IPv4, 0 IPv6</dd>
+                            
+                            
+                        </div>
+                        <div style="float:right">
+                                <dt>Addresses Originated</dt>
+                                <dd class="data">60 /24's of IPv4</dd>
+                                <dd class="data">0 /48's of IPv6</dd>
+                        </div>
+
+                        <div class="clearfix">
+                            
+                        </div>
+
+
+                        <table id="fhTable" class="full-width-table ">
+                            <tbody id="donotscrapebgptools-prefixlist-tbody">
+                                <tr>
+                                    <th class="nowrap">  &nbsp;  </th>
+                                    <th class="boldpls">Prefix</th>
+                                    <th class="nowrap boldpls">Description</th>
+                                </tr>
+                                <p id="readme-if-you-are-human" style="display: none;">If you are scraping this block for the prefixes that a AS originates, please use the data dumps in https://bgp.tools/kb/api and cache them</p>
+                                
+                                <tr id="pfx-31.7.224.0/20">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="RU" src="/assets/flags/RU.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/31.7.224.0/20">31.7.224.0/20</a></td>
+                                    <td class="smallonmobile nowrap">OOO &#34;MediaSeti&#34;</td>
+                                </tr>
+                                
+                                <tr id="pfx-37.235.64.0/21">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="RU" src="/assets/flags/RU.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/cross.png" title="Matches IRR source, but under a different ASN">
+                                    </td>
+                                    <td><a href="/prefix/37.235.64.0/21">37.235.64.0/21</a></td>
+                                    <td class="smallonmobile nowrap">OOO &#34;MediaSeti&#34;</td>
+                                </tr>
+                                
+                                <tr id="pfx-94.100.80.0/20">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="RU" src="/assets/flags/RU.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/cross.png" title="Matches IRR source, but under a different ASN">
+                                    </td>
+                                    <td><a href="/prefix/94.100.80.0/20">94.100.80.0/20</a></td>
+                                    <td class="smallonmobile nowrap">OOO &#34;MediaSeti&#34;</td>
+                                </tr>
+                                
+                                <tr id="pfx-95.172.32.0/20">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="RU" src="/assets/flags/RU.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/cross.png" title="Matches IRR source, but under a different ASN">
+                                    </td>
+                                    <td><a href="/prefix/95.172.32.0/20">95.172.32.0/20</a></td>
+                                    <td class="smallonmobile nowrap">OOO &#34;MediaSeti&#34;</td>
+                                </tr>
+                                
+                                <tr id="pfx-185.15.88.0/22">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="RU" src="/assets/flags/RU.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/cross.png" title="Matches IRR source, but under a different ASN">
+                                    </td>
+                                    <td><a href="/prefix/185.15.88.0/22">185.15.88.0/22</a></td>
+                                    <td class="smallonmobile nowrap">OOO &#34;MediaSeti&#34;</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div style="display: none" id="connectivity-page">
+
+                        <div class="grid-row">
+
+                            <dl class="column-two-thirds">
+                                <dt><a href="#upstreams">Upstreams</a></dt>
+                                <dd class="text data">
+                                    1
+                                </dd>
+                            </dl>
+
+                            <dl class="column-third">
+                                <dt><a href="#peers">Peers</a></dt>
+                                <dd class="data">1</dd>
+                            </dl>
+                        </div>
+
+
+                        <hr>
+                        <h3>Network Policy<img class="flag-img" src="/assets/info.png" style="padding-left: 12px;" title="This info can take up to 2 hours to fully update" alt="This info take up to 2 hours to fully update"/></h3></h3>
+                        <a style="font-size: small;" href="/kb/network-policy">Click here to learn more about what this graph means and what makes up a network policy</a>
+
+                        <select id="netpolicydropdown" class="dropdownmenu">
+                            
+                                <option value="default">Global Aggregation</option>
+                            
+
+                            
+                                
+                            
+                                <option value="6f096ad03491bf9d7675135f4c54a1fbfb24f7ae68dca58408d6433e">Policy dazzling_yalow</option>
+                            
+                                <option value="5a000149955e00ad737e3f084261d8e10a39a25648bda9153577a8e4">Policy jolly_wozniak</option>
+                            
+                                <option value="61979c87ae2db14a31c685a56814913c06d1d6ce569eb26a612466bb">Policy dreamy_bose</option>
+                            
+
+                            
+
+
+                        </select>
+
+                        <script>var netgroups = {"5a000149955e00ad737e3f084261d8e10a39a25648bda9153577a8e4":["31.7.224.0/20"],"61979c87ae2db14a31c685a56814913c06d1d6ce569eb26a612466bb":["94.100.80.0/20","37.235.64.0/21","95.172.32.0/20"],"6f096ad03491bf9d7675135f4c54a1fbfb24f7ae68dca58408d6433e":["185.15.88.0/22"]}</script>
+
+                        <div style="text-align: center;">
+                            <img id="pathimg" usemap="#world" src="">
+                            <div id="world2"></div>
+                        </div>
+
+                        <details>
+                            <summary>Chart Display Options</summary>
+                            <noscript>This requires javascript to work</noscript>
+                            <label for="graphOptionMoreWiggle" style="display: flex;align-items: center;font-size: 20px;">
+                                <input type="checkbox" id="graphOptionMoreWiggle" name="graphOptionMoreWiggle" style="width: 64px; height: 32px;">
+                                    <p id="graphOptionMoreWiggleLabel" style="width: 200%;">Display links using non straight lines</p>
+                            </label>
+                        </details>
+
+                        <h3 style="display: none;" id="PISPBanner">Prefixes in selected policy</h3>
+                        <table id="policytable" class="full-width-table">
+                        </table>
+                        <button style="width:100%;display: none;" id="ShowFullPolicyButton" class="bigButton" onclick="dropdownPoke()">Load all prefixes in policy</button>
+
+                        <script>
+                            !function(a,b){"function"==typeof define&&define.amd?define([],b):"undefined"!=typeof module&&module.exports?module.exports=b():a.ReconnectingWebSocket=b()}(this,function(){function a(b,c,d){function l(a,b){var c=document.createEvent("CustomEvent");return c.initCustomEvent(a,!1,!1,b),c}var e={debug:!1,automaticOpen:!0,reconnectInterval:1e3,maxReconnectInterval:3e4,reconnectDecay:1.5,timeoutInterval:2e3};d||(d={});for(var f in e)this[f]="undefined"!=typeof d[f]?d[f]:e[f];this.url=b,this.reconnectAttempts=0,this.readyState=WebSocket.CONNECTING,this.protocol=null;var h,g=this,i=!1,j=!1,k=document.createElement("div");k.addEventListener("open",function(a){g.onopen(a)}),k.addEventListener("close",function(a){g.onclose(a)}),k.addEventListener("connecting",function(a){g.onconnecting(a)}),k.addEventListener("message",function(a){g.onmessage(a)}),k.addEventListener("error",function(a){g.onerror(a)}),this.addEventListener=k.addEventListener.bind(k),this.removeEventListener=k.removeEventListener.bind(k),this.dispatchEvent=k.dispatchEvent.bind(k),this.open=function(b){h=new WebSocket(g.url,c||[]),b||k.dispatchEvent(l("connecting")),(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","attempt-connect",g.url);var d=h,e=setTimeout(function(){(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","connection-timeout",g.url),j=!0,d.close(),j=!1},g.timeoutInterval);h.onopen=function(){clearTimeout(e),(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","onopen",g.url),g.protocol=h.protocol,g.readyState=WebSocket.OPEN,g.reconnectAttempts=0;var d=l("open");d.isReconnect=b,b=!1,k.dispatchEvent(d)},h.onclose=function(c){if(clearTimeout(e),h=null,i)g.readyState=WebSocket.CLOSED,k.dispatchEvent(l("close"));else{g.readyState=WebSocket.CONNECTING;var d=l("connecting");d.code=c.code,d.reason=c.reason,d.wasClean=c.wasClean,k.dispatchEvent(d),b||j||((g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","onclose",g.url),k.dispatchEvent(l("close")));var e=g.reconnectInterval*Math.pow(g.reconnectDecay,g.reconnectAttempts);setTimeout(function(){g.reconnectAttempts++,g.open(!0)},e>g.maxReconnectInterval?g.maxReconnectInterval:e)}},h.onmessage=function(b){(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","onmessage",g.url,b.data);var c=l("message");c.data=b.data,k.dispatchEvent(c)},h.onerror=function(b){(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","onerror",g.url,b),k.dispatchEvent(l("error"))}},1==this.automaticOpen&&this.open(!1),this.send=function(b){if(h)return(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","send",g.url,b),h.send(b);throw"INVALID_STATE_ERR : Pausing to reconnect websocket"},this.close=function(a,b){"undefined"==typeof a&&(a=1e3),i=!0,h&&h.close(a,b)},this.refresh=function(){h&&h.close()}}return a.prototype.onopen=function(){},a.prototype.onclose=function(){},a.prototype.onconnecting=function(){},a.prototype.onmessage=function(){},a.prototype.onerror=function(){},a.debugAll=!1,a.CONNECTING=WebSocket.CONNECTING,a.OPEN=WebSocket.OPEN,a.CLOSING=WebSocket.CLOSING,a.CLOSED=WebSocket.CLOSED,a});
+                        </script>
+                        
+                        <script>
+                            var prefixinfo = [{"PrefixString":"31.7.224.0/20","WhoisName":"OOO \"MediaSeti\"","WhoisCountry":"RU"},{"PrefixString":"37.235.64.0/21","WhoisName":"OOO \"MediaSeti\"","WhoisCountry":"RU"},{"PrefixString":"94.100.80.0/20","WhoisName":"OOO \"MediaSeti\"","WhoisCountry":"RU"},{"PrefixString":"95.172.32.0/20","WhoisName":"OOO \"MediaSeti\"","WhoisCountry":"RU"},{"PrefixString":"185.15.88.0/22","WhoisName":"OOO \"MediaSeti\"","WhoisCountry":"RU"}]
+                            var asn =  8744 
+
+                            var pfxExtraString = "";
+
+                            function saveGraphOptionsToLocalStorage() {
+                                localStorage.setItem("pfx-chart-options:wiggle", document.getElementById("graphOptionMoreWiggle").checked);
+                            }
+
+                            function loadGraphOptionsToLocalStorage() {
+                                document.getElementById("graphOptionMoreWiggle").checked = localStorage.getItem("pfx-chart-options:wiggle") == "true";
+                                pfxExtraString= "";
+                                if (document.getElementById("graphOptionMoreWiggle").checked) {
+                                    pfxExtraString = pfxExtraString + "&wiggly";
+                                }
+                            }
+                            loadGraphOptionsToLocalStorage();
+
+                            function graphOptionsChanged() {
+                                saveGraphOptionsToLocalStorage();
+                                handleImageChange();
+                            }
+                            document.getElementById("graphOptionMoreWiggle").addEventListener("click", graphOptionsChanged)
+
+
+                            function handleImageChange() {
+                                loadGraphOptionsToLocalStorage();
+                                
+                                document.getElementById("pathimg").src=("/pathimg/"+asn+ "-" + document.getElementById("netpolicydropdown").value +"?"+pfxExtraString);
+                                var request = new XMLHttpRequest();
+                                request.open('GET', "/pathimg/"+asn+ "-" + document.getElementById("netpolicydropdown").value + "?map=true" + pfxExtraString, true);
+
+                                request.onload = function() {
+                                    if (this.status >= 200 && this.status < 400) {
+                                        
+                                        
+                                        document.getElementById("world2").innerHTML = this.response;
+                                        setTimeout(function(){
+                                            imageMapResize('#world');
+                                        },1000)
+                                    }
+                                };
+                                request.send();
+                                buildPrefixTable();
+                            } 
+
+                            function encodeHTML(s) {
+                                return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
+                            }
+
+                            function dropdownPoke(){
+                                InteractedWithPolicyTableYet=true;
+                                handleImageChange();
+                            }
+
+                            var InteractedWithPolicyTableYet = false;
+                            var OverloadPolicySize = 0;
+                            function buildPrefixTable() {
+                                var policy = document.getElementById("netpolicydropdown").value;
+                                
+                                var cidrs = netgroups[policy];
+                                var ihtml = "<tbody> <tr> <th class=\"nowrap\">  -  </th> <th>Prefix</th> <th class=\"nowrap\">Description</th> </tr>";
+
+                                
+                                var aaa = document.querySelectorAll('#PISPBanner');
+                                var bbb = document.querySelectorAll('#policytable');
+                                var n = 0
+                                if (cidrs) {
+                                    aaa[0].style.display = "";
+                                    bbb[0].style.display = "";
+                                    cidrs.forEach(cidr => {
+                                        var obj = {};
+                                        var dont =false;
+                                        n++;
+                                        
+                                        if (!InteractedWithPolicyTableYet) {
+                                            if (n == 5) {
+                                                dont = true;
+                                            } else if (n > 5) {
+                                                dont = true;
+                                            }
+                                        }
+                                        
+                                        if (!dont) {
+                                            prefixinfo.forEach(el => {
+                                                if(el.PrefixString == cidr) {
+                                                    
+                                                        ihtml += "<tr><td class=\"nowrap ns\"><img class=\"flag-img\" src=\"/assets/flags/"+el.WhoisCountry+".png\" title=\""+el.WhoisCountry+"\"></td>"
+                                                        ihtml += "<td><a href=\"/prefix/"+el.PrefixString+"\">"+el.PrefixString+"</a></td>"
+                                                        ihtml += "<td class=\"nowrap\">"+encodeHTML(el.WhoisName)+"</td></tr>"
+                                                }
+                                            });
+                                        } else {
+                                            OverloadPolicySize++;
+                                        }
+                                    });
+                                    document.getElementById("policytable").innerHTML = ihtml
+                                    var PolButton = document.querySelectorAll('#ShowFullPolicyButton');
+                                    if (!InteractedWithPolicyTableYet && OverloadPolicySize!=0) {
+                                        PolButton[0].style="width:100%";
+                                        PolButton[0].innerHTML = "Load all "+OverloadPolicySize+" prefixes in policy"
+                                    } else {
+                                        PolButton[0].style="display:none;";
+                                    }
+                                    
+                                } else {
+                                    aaa[0].style.display = "none";
+                                    bbb[0].style.display = "none";
+                                }
+                            }
+
+
+                            var pathdropdown = document.querySelectorAll('#netpolicydropdown');
+                            pathdropdown[0].addEventListener("change",dropdownPoke)
+                            handleImageChange()
+                            buildPrefixTable()
+
+                            document.addEventListener("load", function(){
+                                
+                                handleImageChange()
+                            });
+
+                            function uuidv4() {
+                                return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+                                    var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+                                    return v.toString(16);
+                                });
+                            }
+
+                            
+                            let realTimeSocket = new ReconnectingWebSocket("wss://bgp.tools/ws/rt-asn?prefix=AS8744" + "&magic=" + encodeURIComponent("WY5CLR4XEI4NMU4BJNBBAQNJJXML72IX4LES34PJWDCJOGQXR26A===="));
+                            
+                            realTimeSocket.onmessage = function(event) {
+                                console.log(`[message] Data received from server: ${event.data}`);
+                                if (event.data == "Running.") {
+                                    document.getElementById("ws-status").src = "/assets/connected.png";
+                                    document.getElementById("ws-status").title = "Connected to realtime data";
+                                } else if (event.data == "STOP-CONNECTING") {
+                                    document.getElementById("ws-status").src = disconectedIcon;
+                                    document.getElementById("ws-status").title = "Not connected to realtime data";
+                                    realTimeSocket.maxReconnectAttempts = 1;
+                                    realTimeSocket.close()
+                                } else {
+                                    var obj = JSON.parse(event.data);
+                                    var elm = document.getElementById("pfx-"+obj.Prefix);
+                                    if (!elm && obj.Vis > 6) {
+                                        var tblist = document.getElementById("donotscrapebgptools-prefixlist-tbody");
+                                        var node = document.createElement("tr");                 
+                                        node.outerHTML = '<tr id="pfx-'+obj.Prefix+'"><td class="nowrap"><img class="flag-img" src="/assets/flags/'+obj.Whois.WhoisCountry+'.png" title="'+obj.Whois.WhoisCountry+'"></td><td><a href="/prefix/'+obj.Prefix+'">'+obj.Prefix+'</a></td><td class="smallonmobile nowrap">'+obj.Whois.WhoisName+'</td></tr>';
+                                        tblist.appendChild(node);                              
+                                    }
+                                    if (!elm) {
+                                        elm = document.getElementById("pfx-"+obj.Prefix);
+                                    }
+                                    
+                                    if (obj.Vis > 70) {
+                                        if (elm.style) {
+                                            var es = elm.style;
+                                            if (es.animation.includes("pulse1b")) {
+                                                elm.style = "animation: pulse2b 1s 1;";
+                                            } else if (es.animation.includes("pulse2b")) {
+                                                elm.style = "animation: pulse1b 1s 1;";
+                                            } else {
+                                                elm.style = "animation: pulse1b 1s 1;";
+                                            }
+                                        }
+                                    } else if (obj.Vis < 5) {
+                                        
+                                        var elm = document.getElementById("pfx-"+obj.Prefix);
+                                        if (elm) {
+                                            elm.parentNode.removeChild(elm);
+                                        }
+                                    } else {
+                                        if (elm.style) {
+                                            var es = elm.style;
+                                            if (es.animation.includes("pulse1r")) {
+                                                elm.style = "animation: pulse2r 1s 1;";
+                                            } else if (es.animation.includes("pulse2r")) {
+                                                elm.style = "animation: pulse1r 1s 1;";
+                                            } else {
+                                                elm.style = "animation: pulse1r 1s 1;";
+                                            }
+                                        }
+                                    }
+                                }
+                            };
+                            var disconectedIcon = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAAZlBMVEX/ewBZWVn/ewf/ew5fWljudiP8egp6XVT6eRHodSmVYU6hZEzObjrldCv3eRZ/XlNjWliHX1KrZkngci71eBl1XFXCa0CKYFHydx18XlSQYE+lZUq0aEbJbT3SbzhvXFaLYFG8akLYdYVFAAABQElEQVRIx5XV25KDIAwGYIKASLutqOtZ277/S26xK4ozJea/qRdfajATZaRkd6B6oPoL1d9QphUn+WvXmGF8TfN8yvNrDj6nvNj5Hu8n8HCh9ONiON5PEKuQx55DmFTHC1R9uMOjYkhFERbkEikofw8FGe5t0FWJ+kLvz5H+t8RdGD9k8TeebBXpzwIZT955XyVBtHHeXYzeJy5fhydtoZffZvUMSfvxT4BOeI/G/b9paxH1at8XQF8xNcV8aaQvHQBMhY/XttsdYp5nah3XdvIqui61Cjy+jqLwXp1cx9XLQZ5cR/vx1p8cez2IWrlxYY/T9bNVyCfmdQdbxNgs441FNRAEHS83oe9ahmTw1p88nhHCiAkpeIUeX5eJ6NlM9Gwm+uxO9/3F2PSR597jn1+udCWzUp7150P1jOoZ1f8BGPARG85JosIAAAAASUVORK5CYII=";
+                            realTimeSocket.onerror = function(error) {
+                                document.getElementById("ws-status").src = disconectedIcon;
+                                document.getElementById("ws-status").title = "Not connected to realtime data";
+
+                                console.log(`[error] ${error.message}`);
+                            };
+                            realTimeSocket.onclose = function(error) {
+                                document.getElementById("ws-status").src = disconectedIcon;
+                                document.getElementById("ws-status").title = "Not connected to realtime data";
+
+                                console.log(`[error] ${error.message}`);
+                            };
+                        </script>
+
+<div class="superclearfix">
+    
+</div>
+
+                        <hr>
+                        <a style="font-size: small;" href="/kb/what-is-a-upstream">How are upstreams and downstreams calculated?</a>
+                        <h3 id="upstreams">Upstreams<img class="flag-img" src="/assets/lightning.png" style="padding-left: 12px;" title="This information was fetched live at page load time" alt="This information was fetched live at page load time"/></h3>
+
+
+                        <table id="donotscrapebgptools-upstreamTable" class="full-width-table">
+                            <thead class="sortable">
+                                <tr>
+                                    <th class="nowrap boldpls">  &nbsp;  </th>
+                                    <th data-sort-method='number' class="boldpls">ASN</th>
+                                    <th class="nowrap boldpls">Description</th>
+                                    <th class="nowrap boldpls">IPv4</th>
+                                    <th class="nowrap boldpls">IPv6</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                <tr>
+                                    <td data-sort='RU' class="nowrap ns"><img class="flag-img" src="/assets/flags/RU.png" title="RU">
+                                        
+                                        </td>
+                                    <td data-sort='210928'><a href="/as/210928">AS210928</a></td>
+                                    <td class="smallonmobile nowrap">RDB 24, Ltd.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+
+                        <hr>
+                        <h3 id="peers">Peers<img class="flag-img" src="/assets/lightning.png" style="padding-left: 12px;" title="This information was fetched live at page load time" alt="This information was fetched live at page load time"/></h3>
+
+
+
+                        <table id="donotscrapebgptools-upstreamTablePeers" class="full-width-table">
+                            <thead class="sortable">
+                                <tr>
+                                    <th class="nowrap boldpls">  &nbsp;  </th>
+                                    <th data-sort-method='number' class="boldpls">ASN</th>
+                                    <th class="nowrap boldpls">Description</th>
+                                    <th class="nowrap boldpls">IPv4</th>
+                                    <th class="nowrap boldpls">IPv6</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                <tr>
+                                    <td data-sort='RU' class="nowrap ns"><img class="flag-img" src="/assets/flags/RU.png" title="RU"></td>
+                                    <td data-sort='210928'><a href="/as/210928">AS210928</a></td>
+                                    <td class="smallonmobile nowrap">RDB 24, Ltd.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+
+
+                    </div>
+
+                    <div style="display: none" id="whois-page">
+                        
+                        
+                        <pre style="white-space: pre-wrap;">aut-num:        <a href="/AS8744">AS8744</a>
+as-name:        MegaMax-AS
+descr:          Nizhny Novgorod, RU
+descr:          http://virginconnect.ru
+org:            <a href="https://apps.db.ripe.net/db-web-ui/query?searchtext=ORG-CCM2-RIPE">ORG-CCM2-RIPE</a>
+remarks:        ----------------------------------------------------------------
+remarks:        IPv4 Upstreams (LP=55):
+remarks:        ----------------------------------------------------------------
+import:         { from <a href="/AS8359">AS8359</a> 212.188.11.97 accept ANY; from <a href="/AS20485">AS20485</a> 217.150.41.134 accept ANY; from <a href="/AS12389">AS12389</a> 188.254.43.137 accept ANY; from <a href="/AS1299">AS1299</a> 62.115.11.189 accept ANY; from <a href="/AS31133">AS31133</a> 37.29.16.57 accept ANY; }
+export:         { to <a href="/AS8359">AS8359</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>; to <a href="/AS20485">AS20485</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>; to <a href="/AS12389">AS12389</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>; to <a href="/AS1299">AS1299</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>; to <a href="/AS31133">AS31133</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>; }
+remarks:        ----------------------------------------------------------------
+remarks:        IPv6 Upstreams (LP=55):
+remarks:        ----------------------------------------------------------------
+mp-import:      afi ipv6.unicast from <a href="/AS20485">AS20485</a> 2a00:1e48:1:1::1:2 accept ANY
+mp-import:      afi ipv6.unicast from <a href="/AS1299">AS1299</a> 2001:2000:3080:068a::1 accept ANY
+mp-export:      afi ipv6.unicast to <a href="/AS20485">AS20485</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>
+mp-export:      afi ipv6.unicast to <a href="/AS1299">AS1299</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>
+remarks:        ----------------------------------------------------------------
+remarks:        IPv4 Private Peers (LP=75):
+remarks:        ----------------------------------------------------------------
+import:         { from <a href="/AS29076">AS29076</a> 89.188.100.97 accept <a href="/as-set/AS-CITYTELECOM">AS-CITYTELECOM</a>; from <a href="/AS21219">AS21219</a> 81.16.123.214 accept <a href="/as-set/AS-FF-TRANSIT">AS-FF-TRANSIT</a>; from <a href="/AS3249">AS3249</a> 195.250.170.73 accept <a href="/as-set/AS-ESTPAK">AS-ESTPAK</a>; from <a href="/AS35320">AS35320</a> 81.16.116.202 accept <a href="/as-set/AS-ETT">AS-ETT</a>; from <a href="/AS15169">AS15169</a> 74.125.50.89 accept <a href="/as-set/AS-GOOGLE">AS-GOOGLE</a>; from <a href="/AS196678">AS196678</a> 81.16.123.34 accept <a href="/as-set/AS-HOSTEROV">AS-HOSTEROV</a>; from <a href="/AS49813">AS49813</a> 81.16.122.146 accept <a href="/as-set/AS-INN">AS-INN</a>; from <a href="/AS47764">AS47764</a> 81.16.116.42 accept <a href="/as-set/AS-MAILRU">AS-MAILRU</a>; from <a href="/AS47764">AS47764</a> 81.16.116.158 accept <a href="/as-set/AS-MAILRU">AS-MAILRU</a>; from <a href="/AS25532">AS25532</a> 217.16.17.129 accept <a href="/as-set/AS-MASTERHOST">AS-MASTERHOST</a>; from <a href="/AS42632">AS42632</a> 77.220.168.109 accept <a href="/as-set/AS-MNOGOBYTE">AS-MNOGOBYTE</a>; from <a href="/AS42632">AS42632</a> 77.220.168.157 accept <a href="/as-set/AS-MNOGOBYTE">AS-MNOGOBYTE</a>; from <a href="/AS12714">AS12714</a> 212.1.242.1 accept <a href="/as-set/AS-TI">AS-TI</a>; from <a href="/AS9002">AS9002</a> 87.245.229.101 accept <a href="/as-set/AS-RETN">AS-RETN</a>; from <a href="/AS48061">AS48061</a> 91.207.58.107 accept <a href="/AS48061">AS48061</a>; from <a href="/AS21011">AS21011</a> 81.16.116.30 accept <a href="/as-set/AS21011:AS-EXT">AS21011:AS-EXT</a>; from <a href="/AS3267">AS3267</a> 194.190.254.129 accept <a href="/as-set/AS-RUNNET">AS-RUNNET</a>; from <a href="/AS47541">AS47541</a> 92.246.149.158 accept <a href="/as-set/AS-VKONTAKTE">AS-VKONTAKTE</a>; from <a href="/AS47541">AS47541</a> 92.246.149.162 accept <a href="/as-set/AS-VKONTAKTE">AS-VKONTAKTE</a>; from <a href="/AS47541">AS47541</a> 92.246.149.166 accept <a href="/as-set/AS-VKONTAKTE">AS-VKONTAKTE</a>; from <a href="/AS47541">AS47541</a> 92.246.149.170 accept <a href="/as-set/AS-VKONTAKTE">AS-VKONTAKTE</a>; from <a href="/AS13238">AS13238</a> 81.16.116.206 accept <a href="/as-set/AS-YANDEX">AS-YANDEX</a>; from <a href="/AS35297">AS35297</a> 193.239.74.209 accept <a href="/as-set/AS-DL-WORLD">AS-DL-WORLD</a>; from <a href="/AS9049">AS9049</a> 188.234.131.29 accept <a href="/as-set/AS-ERTH">AS-ERTH</a>; }
+export:         { to <a href="/AS29076">AS29076</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>; to <a href="/AS21219">AS21219</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>; to <a href="/AS3249">AS3249</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>; to <a href="/AS35320">AS35320</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>; to <a href="/AS15169">AS15169</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>; to <a href="/AS196678">AS196678</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>; to <a href="/AS49813">AS49813</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>; to <a href="/AS47764">AS47764</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>; to <a href="/AS25532">AS25532</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>; to <a href="/AS42632">AS42632</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>; to <a href="/AS12714">AS12714</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>; to <a href="/AS9002">AS9002</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>; to <a href="/AS48061">AS48061</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>; to <a href="/AS21011">AS21011</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>; to <a href="/AS3267">AS3267</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>; to <a href="/AS47541">AS47541</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>; to <a href="/AS13238">AS13238</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>; to <a href="/AS35297">AS35297</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>; to <a href="/AS9049">AS9049</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>; }
+remarks:        ----------------------------------------------------------------
+remarks:        IPv6 Private Peers (LP=75):
+remarks:        ----------------------------------------------------------------
+mp-import:      afi ipv6.unicast from <a href="/AS35320">AS35320</a> 2a02:5f0::1:1:15 accept <a href="/as-set/AS-ETT">AS-ETT</a>
+mp-import:      afi ipv6.unicast from <a href="/AS15169">AS15169</a> 2001:4860:1:1:0:2228:: accept <a href="/as-set/AS-GOOGLE">AS-GOOGLE</a>
+mp-import:      afi ipv6.unicast from <a href="/AS9002">AS9002</a> 2a02:2d8:0:c007:232a:: accept <a href="/as-set/AS-RETN">AS-RETN</a>
+mp-import:      afi ipv6.unicast from <a href="/AS47541">AS47541</a> 2a02:2850:0:100::78:10b accept <a href="/as-set/AS-RETN">AS-RETN</a>
+mp-import:      afi ipv6.unicast from <a href="/AS47541">AS47541</a> 2a02:2850:0:100::78:20b accept <a href="/as-set/AS-RETN">AS-RETN</a>
+mp-import:      afi ipv6.unicast from <a href="/AS47541">AS47541</a> 2a02:2850:0:100::78:30b accept <a href="/as-set/AS-RETN">AS-RETN</a>
+mp-import:      afi ipv6.unicast from <a href="/AS47541">AS47541</a> 2a02:2850:0:100::78:40b accept <a href="/as-set/AS-RETN">AS-RETN</a>
+mp-import:      afi ipv6.unicast from <a href="/AS12714">AS12714</a> 2a02:2850:0:100::77:10b accept <a href="/as-set/AS-TI">AS-TI</a>
+mp-import:      afi ipv6.unicast from <a href="/AS13238">AS13238</a> 2a02:2850:0:100::77:30b accept <a href="/as-set/AS-YANDEX">AS-YANDEX</a>
+mp-export:      afi ipv6.unicast to <a href="/AS35320">AS35320</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>
+mp-export:      afi ipv6.unicast to <a href="/AS15169">AS15169</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>
+mp-export:      afi ipv6.unicast to <a href="/AS9002">AS9002</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>
+mp-export:      afi ipv6.unicast to <a href="/AS47541">AS47541</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>
+mp-export:      afi ipv6.unicast to <a href="/AS12714">AS12714</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>
+mp-export:      afi ipv6.unicast to <a href="/AS13238">AS13238</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>
+remarks:        ----------------------------------------------------------------
+remarks:        IPv4 MSK-IX (LP=70):
+remarks:        ----------------------------------------------------------------
+import:         { from <a href="/AS8631">AS8631</a> 193.232.244.100 accept ANY; from <a href="/AS8631">AS8631</a> 193.232.246.100 accept ANY; from <a href="/AS41126">AS41126</a> 193.232.244.28 accept <a href="/as-set/AS-HCRU">AS-HCRU</a>; from <a href="/AS3267">AS3267</a> 193.232.244.44 accept <a href="/as-set/AS-RUNNET">AS-RUNNET</a>; from <a href="/AS8470">AS8470</a> 193.232.244.59 accept <a href="/as-set/AS-MACOMNET">AS-MACOMNET</a>; from <a href="/AS13238">AS13238</a> 193.232.244.93 accept <a href="/as-set/AS-YANDEX">AS-YANDEX</a>; from <a href="/AS13230">AS13230</a> 193.232.244.117 accept <a href="/as-set/AS-NCPORT">AS-NCPORT</a>; from <a href="/AS49342">AS49342</a> 193.232.244.126 accept <a href="/as-set/AS-SPEEDYLINE">AS-SPEEDYLINE</a>; from <a href="/AS20632">AS20632</a> 193.232.244.130 accept <a href="/as-set/AS-PETERSTAR">AS-PETERSTAR</a>; from <a href="/AS8641">AS8641</a> 193.232.244.131 accept <a href="/as-set/AS-NAUKANET">AS-NAUKANET</a>; from <a href="/AS30833">AS30833</a> 193.232.244.143 accept <a href="/as-set/AS-TNC">AS-TNC</a>; from <a href="/AS31500">AS31500</a> 193.232.244.171 accept <a href="/as-set/AS-GLOBAL-NET">AS-GLOBAL-NET</a>; from <a href="/AS8905">AS8905</a> 193.232.244.180 accept <a href="/as-set/AS-SITEK">AS-SITEK</a>; from <a href="/AS34300">AS34300</a> 193.232.244.191 accept <a href="/AS34300">AS34300</a>; from <a href="/AS12976">AS12976</a> 193.232.244.209 accept <a href="/as-set/AS-CWSVYAZ">AS-CWSVYAZ</a>; from <a href="/AS33902">AS33902</a> 193.232.244.212 accept <a href="/as-set/AS-STARNETWORKS">AS-STARNETWORKS</a>; from <a href="/AS25308">AS25308</a> 193.232.244.228 accept <a href="/as-set/AS-CITYLAN">AS-CITYLAN</a>; from <a href="/AS20985">AS20985</a> 193.232.244.237 accept <a href="/as-set/AS-ARTX">AS-ARTX</a>; from <a href="/AS41206">AS41206</a> 193.232.244.242 accept <a href="/as-set/AS-COMMSOL-CLI">AS-COMMSOL-CLI</a>; from <a href="/AS29329">AS29329</a> 193.232.244.252 accept <a href="/as-set/AS-NODEX">AS-NODEX</a>; from <a href="/AS44436">AS44436</a> 193.232.245.3 accept <a href="/as-set/AS-EFFORTEL-MSK-IX">AS-EFFORTEL-MSK-IX</a>; from <a href="/AS41095">AS41095</a> 193.232.245.4 accept <a href="/as-set/AS-IPTP">AS-IPTP</a>; from <a href="/AS31370">AS31370</a> 193.232.245.9 accept <a href="/as-set/AS-MOSLINE">AS-MOSLINE</a>; from <a href="/AS15756">AS15756</a> 193.232.244.208 accept <a href="/as-set/AS-CARAVANRUS">AS-CARAVANRUS</a>; from <a href="/AS6854">AS6854</a> 193.232.244.31 accept <a href="/as-set/AS-SYNTERRA">AS-SYNTERRA</a>; from <a href="/AS41126">AS41126</a> 193.232.246.28 accept <a href="/as-set/AS-HCRU">AS-HCRU</a>; from <a href="/AS3267">AS3267</a> 193.232.246.44 accept <a href="/as-set/AS-RUNNET">AS-RUNNET</a>; from <a href="/AS8470">AS8470</a> 193.232.246.59 accept <a href="/as-set/AS-MACOMNET">AS-MACOMNET</a>; from <a href="/AS20632">AS20632</a> 193.232.246.130 accept <a href="/as-set/AS-PETERSTAR">AS-PETERSTAR</a>; from <a href="/AS30833">AS30833</a> 193.232.246.143 accept <a href="/as-set/AS-TNC">AS-TNC</a>; from <a href="/AS8905">AS8905</a> 193.232.246.180 accept <a href="/as-set/AS-SITEK">AS-SITEK</a>; from <a href="/AS20985">AS20985</a> 193.232.246.237 accept <a href="/as-set/AS-ARTX">AS-ARTX</a>; from <a href="/AS41095">AS41095</a> 193.232.247.4 accept <a href="/as-set/AS-IPTP">AS-IPTP</a>; from <a href="/AS31370">AS31370</a> 193.232.247.9 accept <a href="/as-set/AS-MOSLINE">AS-MOSLINE</a>; from <a href="/AS13230">AS13230</a> 193.232.246.117 accept <a href="/as-set/AS-NCPORT">AS-NCPORT</a>; from <a href="/AS44436">AS44436</a> 193.232.247.3 accept <a href="/as-set/AS-EFFORTEL-MSK-IX">AS-EFFORTEL-MSK-IX</a>; from <a href="/AS33902">AS33902</a> 193.232.246.212 accept <a href="/as-set/AS-STARNETWORKS">AS-STARNETWORKS</a>; from <a href="/AS12976">AS12976</a> 193.232.246.209 accept <a href="/as-set/AS-CWSVYAZ">AS-CWSVYAZ</a>; from <a href="/AS31500">AS31500</a> 193.232.246.171 accept <a href="/as-set/AS-GLOBAL-NET">AS-GLOBAL-NET</a>; from <a href="/AS13238">AS13238</a> 193.232.246.93 accept <a href="/as-set/AS-YANDEX">AS-YANDEX</a>; from <a href="/AS15756">AS15756</a> 193.232.246.208 accept <a href="/as-set/AS-CARAVANRUS">AS-CARAVANRUS</a>; from <a href="/AS6854">AS6854</a> 193.232.246.31 accept <a href="/as-set/AS-SYNTERRA">AS-SYNTERRA</a>; from <a href="/AS9031">AS9031</a> 193.232.244.16 accept <a href="/as-set/AS-EDPNET">AS-EDPNET</a>; from <a href="/AS9031">AS9031</a> 193.232.246.16 accept <a href="/as-set/AS-EDPNET">AS-EDPNET</a>; from <a href="/AS20764">AS20764</a> 193.232.244.223 accept <a href="/as-set/AS-RASCOM">AS-RASCOM</a>; from <a href="/AS20764">AS20764</a> 193.232.246.223 accept <a href="/as-set/AS-RASCOM">AS-RASCOM</a>; from <a href="/AS31133">AS31133</a> 193.232.245.47 accept <a href="/as-set/AS-MF-MGSM">AS-MF-MGSM</a>; from <a href="/AS31133">AS31133</a> 193.232.247.47 accept <a href="/as-set/AS-MF-MGSM">AS-MF-MGSM</a>; from <a href="/AS12076">AS12076</a> 193.232.244.137 accept <a href="/as-set/AS-MICROSOFT">AS-MICROSOFT</a>; from <a href="/AS12076">AS12076</a> 193.232.246.137 accept <a href="/as-set/AS-MICROSOFT">AS-MICROSOFT</a>; from <a href="/AS3327">AS3327</a> 193.232.246.151 accept <a href="/as-set/AS-LINXTELECOM">AS-LINXTELECOM</a>; from <a href="/AS3327">AS3327</a> 193.232.246.151 accept <a href="/as-set/AS-LINXTELECOM">AS-LINXTELECOM</a>; from <a href="/AS15772">AS15772</a> 193.232.245.186 accept <a href="/as-set/AS-WNET">AS-WNET</a>; from <a href="/AS15772">AS15772</a> 193.232.247.186 accept <a href="/as-set/AS-WNET">AS-WNET</a>; }
+export:         { to <a href="/AS8631">AS8631</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>; to <a href="/AS41126">AS41126</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>; to <a href="/AS3267">AS3267</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>; to <a href="/AS8470">AS8470</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>; to <a href="/AS13238">AS13238</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>; to <a href="/AS13230">AS13230</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>; to <a href="/AS49342">AS49342</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>; to <a href="/AS20632">AS20632</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>; to <a href="/AS8641">AS8641</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>; to <a href="/AS30833">AS30833</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>; to <a href="/AS31500">AS31500</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>; to <a href="/AS8905">AS8905</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>; to <a href="/AS34300">AS34300</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>; to <a href="/AS12976">AS12976</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>; to <a href="/AS33902">AS33902</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>; to <a href="/AS25308">AS25308</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>; to <a href="/AS20985">AS20985</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>; to <a href="/AS41206">AS41206</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>; to <a href="/AS29329">AS29329</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>; to <a href="/AS44436">AS44436</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>; to <a href="/AS41095">AS41095</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>; to <a href="/AS31370">AS31370</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>; to <a href="/AS15756">AS15756</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>; to <a href="/AS6854">AS6854</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>; to <a href="/AS9031">AS9031</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>; to <a href="/AS20764">AS20764</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>; to <a href="/AS31133">AS31133</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>; to <a href="/AS12076">AS12076</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>; to <a href="/AS3327">AS3327</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>; to <a href="/AS15772">AS15772</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>; }
+remarks:        ----------------------------------------------------------------
+remarks:        IPv6 MSK-IX (LP=70):
+remarks:        ----------------------------------------------------------------
+mp-import:      afi ipv6.unicast from <a href="/AS8631">AS8631</a> 2001:7F8:20:101::244:100 accept ANY
+mp-import:      afi ipv6.unicast from <a href="/AS8631">AS8631</a> 2001:7F8:20:102::246:100 accept ANY
+mp-import:      afi ipv6.unicast from <a href="/AS3327">AS3327</a> 2001:7f8:20:101::244:151 accept <a href="/as-set/AS-LINXTELECOM">AS-LINXTELECOM</a>
+mp-export:      afi ipv6.unicast to <a href="/AS8631">AS8631</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>
+mp-export:      afi ipv6.unicast to <a href="/AS3327">AS3327</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>
+remarks:        ----------------------------------------------------------------
+remarks:        IPv4 DE-CIX (LP=60):
+remarks:        ----------------------------------------------------------------
+import:         { from <a href="/AS6695">AS6695</a> 80.81.192.157 accept ANY; from <a href="/AS6695">AS6695</a> 80.81.193.157 accept ANY; from <a href="/AS6939">AS6939</a> 80.81.192.172 accept <a href="/as-set/AS-HURRICANE">AS-HURRICANE</a>; from <a href="/AS8447">AS8447</a> 80.81.192.69 accept <a href="/as-set/AS-PTA">AS-PTA</a>; from <a href="/AS8365">AS8365</a> 80.81.192.6 accept <a href="/as-set/AS-MANDA">AS-MANDA</a>; from <a href="/AS8365">AS8365</a> 80.81.193.6 accept <a href="/as-set/AS-MANDA">AS-MANDA</a>; from <a href="/AS33873">AS33873</a> 80.81.192.216 accept <a href="/as-set/AS-ARVATO">AS-ARVATO</a>; from <a href="/AS12874">AS12874</a> 80.81.194.10 accept <a href="/as-set/AS-FASTWEB">AS-FASTWEB</a>; from <a href="/AS8657">AS8657</a> 80.81.192.38 accept <a href="/as-set/AS-CPRM">AS-CPRM</a>; from <a href="/AS13030">AS13030</a> 80.81.192.67 accept <a href="/as-set/AS-INIT7">AS-INIT7</a>; from <a href="/AS13030">AS13030</a> 80.81.193.67 accept <a href="/as-set/AS-INIT7">AS-INIT7</a>; from <a href="/AS21219">AS21219</a> 80.81.192.145 accept <a href="/as-set/AS-FF-TRANSIT">AS-FF-TRANSIT</a>; from <a href="/AS12989">AS12989</a> 80.81.192.224 accept <a href="/as-set/AS-HIGHWINDS">AS-HIGHWINDS</a>; from <a href="/AS8075">AS8075</a> 80.81.194.52 accept <a href="/as-set/AS-MICROSOFTEU">AS-MICROSOFTEU</a>; from <a href="/AS12615">AS12615</a> 80.81.192.169 accept <a href="/as-set/AS-CABLETEL">AS-CABLETEL</a>; from <a href="/AS20940">AS20940</a> 80.81.192.28 accept <a href="/as-set/AS-AKAMAI">AS-AKAMAI</a>; from <a href="/AS20940">AS20940</a> 80.81.192.168 accept <a href="/as-set/AS-AKAMAI">AS-AKAMAI</a>; from <a href="/AS9116">AS9116</a> 80.81.194.65 accept <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>; from <a href="/AS8781">AS8781</a> 80.81.194.11 accept <a href="/as-set/AS-QTEL-SET">AS-QTEL-SET</a>; from <a href="/AS12301">AS12301</a> 80.81.192.70 accept <a href="/AS12301">AS12301</a>; from <a href="/AS32934">AS32934</a> 80.81.195.40 accept <a href="/as-set/AS-FACEBOOK">AS-FACEBOOK</a>; from <a href="/AS32934">AS32934</a> 80.81.194.40 accept <a href="/as-set/AS-FACEBOOK">AS-FACEBOOK</a>; from <a href="/AS1248">AS1248</a> 80.81.194.17 accept <a href="/as-set/AS-NOK">AS-NOK</a>; from <a href="/AS6661">AS6661</a> 80.81.192.204 accept <a href="/as-set/AS-PTLU">AS-PTLU</a>; from <a href="/AS8708">AS8708</a> 80.81.192.87 accept <a href="/as-set/AS-RDSNET">AS-RDSNET</a>; from <a href="/AS9009">AS9009</a> 80.81.192.165 accept <a href="/as-set/AS-GBXS">AS-GBXS</a>; from <a href="/AS19151">AS19151</a> 80.81.192.220 accept <a href="/as-set/AS-BBOI">AS-BBOI</a>; from <a href="/AS49544">AS49544</a> 80.81.194.107 accept <a href="/as-set/AS-INTERACTIVE3D">AS-INTERACTIVE3D</a>; from <a href="/AS20773">AS20773</a> 80.81.192.239 accept <a href="/as-set/AS20773:AS-HOSTEUROPE">AS20773:AS-HOSTEUROPE</a>; from <a href="/AS20773">AS20773</a> 80.81.193.239 accept <a href="/as-set/AS20773:AS-HOSTEUROPE">AS20773:AS-HOSTEUROPE</a>; from <a href="/AS12678">AS12678</a> 80.81.194.162 accept <a href="/as-set/AS-BADOO">AS-BADOO</a>; from <a href="/AS3327">AS3327</a> 80.81.192.192 accept <a href="/as-set/AS-LINXTELECOM">AS-LINXTELECOM</a>; from <a href="/AS5430">AS5430</a> 80.81.192.49 accept <a href="/as-set/AS-FREENETDE">AS-FREENETDE</a>; from <a href="/AS31400">AS31400</a> 80.81.194.50 accept <a href="/as-set/AS-ACCELERATED">AS-ACCELERATED</a>; from <a href="/AS44788">AS44788</a> 80.81.194.93 accept <a href="/as-set/AS-CRITEO-EU">AS-CRITEO-EU</a>; from <a href="/AS56665">AS56665</a> 80.81.194.209 accept <a href="/as-set/AS-TELINDUSLUX">AS-TELINDUSLUX</a>; }
+export:         { to <a href="/AS6695">AS6695</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>; to <a href="/AS6939">AS6939</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>; to <a href="/AS8447">AS8447</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>; to <a href="/AS8365">AS8365</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>; to <a href="/AS33873">AS33873</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>; to <a href="/AS12874">AS12874</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>; to <a href="/AS8657">AS8657</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>; to <a href="/AS13030">AS13030</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>; to <a href="/AS21219">AS21219</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>; to <a href="/AS12989">AS12989</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>; to <a href="/AS8075">AS8075</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>; to <a href="/AS12615">AS12615</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>; to <a href="/AS20940">AS20940</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>; to <a href="/AS9116">AS9116</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>; to <a href="/AS8781">AS8781</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>; to <a href="/AS12301">AS12301</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>; to <a href="/AS32934">AS32934</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>; to <a href="/AS1248">AS1248</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>; to <a href="/AS6661">AS6661</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>; to <a href="/AS8708">AS8708</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>; to <a href="/AS9009">AS9009</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>; to <a href="/AS19151">AS19151</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>; to <a href="/AS49544">AS49544</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>; to <a href="/AS20773">AS20773</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>; to <a href="/AS12678">AS12678</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>; to <a href="/AS3327">AS3327</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>; to <a href="/AS5430">AS5430</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>; to <a href="/AS31400">AS31400</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>; to <a href="/AS44788">AS44788</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>; to <a href="/AS56665">AS56665</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>; }
+remarks:        ----------------------------------------------------------------
+remarks:        IPv6 DE-CIX (LP=60):
+remarks:        ----------------------------------------------------------------
+mp-import:      afi ipv6.unicast from <a href="/AS6695">AS6695</a> 2001:7f8::1a27:5051:c09d accept ANY
+mp-import:      afi ipv6.unicast from <a href="/AS6695">AS6695</a> 2001:7f8::1a27:5051:c19d accept ANY
+mp-import:      afi ipv6.unicast from <a href="/AS6939">AS6939</a> 2001:7f8::1b1b:0:1 accept ANY
+mp-import:      afi ipv6.unicast from <a href="/AS8781">AS8781</a> 2001:7f8::224d:0:1 accept <a href="/as-set/AS-QTEL-SET">AS-QTEL-SET</a>
+mp-import:      afi ipv6.unicast from <a href="/AS12301">AS12301</a> 2001:7f8::300d:0:1 accept <a href="/as-set/AS12301:AS-ROUTES">AS12301:AS-ROUTES</a>
+mp-import:      afi ipv6.unicast from <a href="/AS1248">AS1248</a> 2001:7f8::4e0:0:1 accept <a href="/as-set/AS-NOK">AS-NOK</a>
+mp-import:      afi ipv6.unicast from <a href="/AS8708">AS8708</a> 2001:7f8::2204:0:1 accept <a href="/as-set/AS-RDSNET">AS-RDSNET</a>
+mp-import:      afi ipv6.unicast from <a href="/AS8075">AS8075</a> 2001:7f8::1f8b:0:1 accept <a href="/as-set/AS-MICROSOFTEU">AS-MICROSOFTEU</a>
+mp-import:      afi ipv6.unicast from <a href="/AS32934">AS32934</a> 2001:7f8::80a6:0:2 accept <a href="/as-set/AS-FACEBOOK">AS-FACEBOOK</a>
+mp-import:      afi ipv6.unicast from <a href="/AS32934">AS32934</a> 2001:7f8::80a6:0:1 accept <a href="/as-set/AS-FACEBOOK">AS-FACEBOOK</a>
+mp-import:      afi ipv6.unicast from <a href="/AS8365">AS8365</a> 2001:7f8::20ad:0:2 accept <a href="/as-set/AS-MANDA">AS-MANDA</a>
+mp-import:      afi ipv6.unicast from <a href="/AS8365">AS8365</a> 2001:7f8::20ad:0:1 accept <a href="/as-set/AS-MANDA">AS-MANDA</a>
+mp-import:      afi ipv6.unicast from <a href="/AS9009">AS9009</a> 2001:7f8::2331:0:1 accept <a href="/as-set/AS-GBXS6">AS-GBXS6</a>
+mp-import:      afi ipv6.unicast from <a href="/AS19151">AS19151</a> 2001:7f8::4acf:0:1 accept <a href="/as-set/AS-BBOI">AS-BBOI</a>
+mp-import:      afi ipv6.unicast from <a href="/AS49544">AS49544</a> 2001:7f8::c188:0:1 accept <a href="/as-set/AS-INTERACTIVE3D">AS-INTERACTIVE3D</a>
+mp-import:      afi ipv6.unicast from <a href="/AS20773">AS20773</a> 2001:7f8::5125:f1:1 accept <a href="/as-set/AS20773:AS-HOSTEUROPE">AS20773:AS-HOSTEUROPE</a>
+mp-import:      afi ipv6.unicast from <a href="/AS20773">AS20773</a> 2001:7f8::5125:f2:1 accept <a href="/as-set/AS20773:AS-HOSTEUROPE">AS20773:AS-HOSTEUROPE</a>
+mp-import:      afi ipv6.unicast from <a href="/AS3327">AS3327</a> 2001:7f8::cff:0:1 accept <a href="/as-set/AS-LINXTELECOM">AS-LINXTELECOM</a>
+mp-import:      afi ipv6.unicast from <a href="/AS5430">AS5430</a> 2001:7f8::1536:0:1 accept <a href="/as-set/AS-FREENETDE">AS-FREENETDE</a>
+mp-import:      afi ipv6.unicast from <a href="/AS20940">AS20940</a> 2001:7f8::51cc:0:28 accept <a href="/as-set/AS-AKAMAI">AS-AKAMAI</a>
+mp-import:      afi ipv6.unicast from <a href="/AS20940">AS20940</a> 2001:7f8::51cc:0:168 accept <a href="/as-set/AS-AKAMAI">AS-AKAMAI</a>
+mp-import:      afi ipv6.unicast from <a href="/AS31400">AS31400</a> 2001:7f8::7aa8:0:1 accept <a href="/as-set/AS-AKAMAI">AS-AKAMAI</a>
+mp-import:      afi ipv6.unicast from <a href="/AS44788">AS44788</a> 2001:7f8::aef4:0:1 accept <a href="/as-set/AS-CRITEO-EU-V6">AS-CRITEO-EU-V6</a>
+mp-import:      afi ipv6.unicast from <a href="/AS56665">AS56665</a> 2001:7f8::dd59:0:1 accept <a href="/as-set/AS-TELINDUSLUX">AS-TELINDUSLUX</a>
+mp-export:      afi ipv6.unicast to <a href="/AS6939">AS6939</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>
+mp-export:      afi ipv6.unicast to <a href="/AS8781">AS8781</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>
+mp-export:      afi ipv6.unicast to <a href="/AS12301">AS12301</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>
+mp-export:      afi ipv6.unicast to <a href="/AS1248">AS1248</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>
+mp-export:      afi ipv6.unicast to <a href="/AS8708">AS8708</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>
+mp-export:      afi ipv6.unicast to <a href="/AS8075">AS8075</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>
+mp-export:      afi ipv6.unicast to <a href="/AS32934">AS32934</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>
+mp-export:      afi ipv6.unicast to <a href="/AS8365">AS8365</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>
+mp-export:      afi ipv6.unicast to <a href="/AS9009">AS9009</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>
+mp-export:      afi ipv6.unicast to <a href="/AS19151">AS19151</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>
+mp-export:      afi ipv6.unicast to <a href="/AS49544">AS49544</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>
+mp-export:      afi ipv6.unicast to <a href="/AS20773">AS20773</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>
+mp-export:      afi ipv6.unicast to <a href="/AS3327">AS3327</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>
+mp-export:      afi ipv6.unicast to <a href="/AS5430">AS5430</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>
+mp-export:      afi ipv6.unicast to <a href="/AS20940">AS20940</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>
+mp-export:      afi ipv6.unicast to <a href="/AS31400">AS31400</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>
+mp-export:      afi ipv6.unicast to <a href="/AS44788">AS44788</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>
+mp-export:      afi ipv6.unicast to <a href="/AS56665">AS56665</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>
+remarks:        ----------------------------------------------------------------
+remarks:        IPv4 AMS-IX (LP=60):
+remarks:        ----------------------------------------------------------------
+import:         { from <a href="/AS6777">AS6777</a> 195.69.144.255 accept ANY; from <a href="/AS6777">AS6777</a> 195.69.145.0 accept ANY; from <a href="/AS24904">AS24904</a> 195.69.146.22 accept <a href="/as-set/AS-KWAOO">AS-KWAOO</a>; from <a href="/AS6327">AS6327</a> 195.69.144.148 accept <a href="/as-set/AS-BIGPIPE">AS-BIGPIPE</a>; from <a href="/AS44788">AS44788</a> 195.69.145.151 accept <a href="/as-set/AS-CRITEO-EU">AS-CRITEO-EU</a>; from <a href="/AS56665">AS56665</a> 195.69.146.155 accept <a href="/as-set/AS-TELINDUSLUX">AS-TELINDUSLUX</a>; }
+export:         { to <a href="/AS6777">AS6777</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>; to <a href="/AS24904">AS24904</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>; to <a href="/AS6327">AS6327</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>; to <a href="/AS44788">AS44788</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>; to <a href="/AS56665">AS56665</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>; }
+remarks:        ----------------------------------------------------------------
+remarks:        IPv6 AMS-IX (LP=60):
+remarks:        ----------------------------------------------------------------
+mp-import:      afi ipv6.unicast from <a href="/AS6777">AS6777</a> 2001:7f8:1::a500:6777:1 accept ANY
+mp-import:      afi ipv6.unicast from <a href="/AS6777">AS6777</a> 2001:7f8:1::a500:6777:2 accept ANY
+mp-import:      afi ipv6.unicast from <a href="/AS24904">AS24904</a> 2001:7f8:1::a502:4904:1 accept <a href="/as-set/AS-KWAOO">AS-KWAOO</a>
+mp-import:      afi ipv6.unicast from <a href="/AS6327">AS6327</a> 2001:7f8:1::a500:6327:1 accept <a href="/as-set/AS-BIGPIPE">AS-BIGPIPE</a>
+mp-import:      afi ipv6.unicast from <a href="/AS44788">AS44788</a> 2001:7f8:1::a504:4788:1 accept <a href="/as-set/AS-CRITEO-EU-V6">AS-CRITEO-EU-V6</a>
+mp-import:      afi ipv6.unicast from <a href="/AS56665">AS56665</a> 2001:7f8:1::a505:6665:1 accept <a href="/as-set/AS-TELINDUSLUX">AS-TELINDUSLUX</a>
+mp-export:      afi ipv6.unicast to <a href="/AS6777">AS6777</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>
+mp-export:      afi ipv6.unicast to <a href="/AS24904">AS24904</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>
+mp-export:      afi ipv6.unicast to <a href="/AS6327">AS6327</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>
+mp-export:      afi ipv6.unicast to <a href="/AS44788">AS44788</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>
+mp-export:      afi ipv6.unicast to <a href="/AS56665">AS56665</a> announce <a href="/as-set/AS-WIMAX">AS-WIMAX</a>
+remarks:        &#43;--------------------------------------------------------------&#43;
+remarks:        | BGP COMMUNITIES |
+remarks:        &#43;--------------------------------------------------------------&#43;
+remarks:        | Communities for prefix control |
+remarks:        &#43;--------------------------------------------------------------&#43;
+remarks:        | !!!ATTENTION!!! |
+remarks:        | Using this communities may cause connectivity |
+remarks:        | problems and you must clearly understand what are you |
+remarks:        | doing. StartTelecom does not bear any responsibility |
+remarks:        | if there will be such troubles. |
+remarks:        &#43;--------------------------------------------------------------&#43;
+remarks:        | |
+remarks:        | - To prepend or deny prefix use 8744:5DNNA, where: |
+remarks:        | |
+remarks:        | D - destination of the prepend or deny action: |
+remarks:        | |
+remarks:        | 2 - Upstreams |
+remarks:        | 3 - Russian peers |
+remarks:        | 4 - Foreign peers |
+remarks:        | 9 - Upstreams and Peers |
+remarks:        | |
+remarks:        | NN - Upstream or peer number: |
+remarks:        | |
+remarks:        | Upstreams: |
+remarks:        | |
+remarks:        | 02 - TELIA (AS1299) |
+remarks:        | 04 - TTK (AS20485) |
+remarks:        | 06 - MTS (AS8359) |
+remarks:        | 08 - ROSTELECOM (AS12389) |
+remarks:        | 99 - All Upstreams |
+remarks:        | |
+remarks:        | Russian peers: |
+remarks:        | |
+remarks:        | 01 - MSK-IX (AS8631) |
+remarks:        | 04 - VKONTAKTE (AS47541) |
+remarks:        | 12 - GOOGLE (AS15169) |
+remarks:        | 13 - MAIL.RU (AS47764) |
+remarks:        | 99 - All Russian Peers |
+remarks:        | |
+remarks:        | Foreign peers: |
+remarks:        | |
+remarks:        | 01 - DE-CIX (AS6695) |
+remarks:        | 06 - AMS-IX (AS6777) |
+remarks:        | 99 - All Foreign Peers |
+remarks:        | |
+remarks:        | A - action: |
+remarks:        | |
+remarks:        | 0 - don&#39;t announce prefix |
+remarks:        | 1 - announce with one prepend |
+remarks:        | 2 - announce with two times prepend |
+remarks:        | 4 - announce with four times prepend |
+remarks:        | |
+remarks:        | - To set local preference to 20 use 8744:51010 |
+remarks:        | |
+remarks:        &#43;--------------------------------------------------------------&#43;
+remarks:        | Communities for prefix classification |
+remarks:        &#43;--------------------------------------------------------------&#43;
+remarks:        | |
+remarks:        | All inbound prefixes are marked with BGP communities |
+remarks:        | which describe their source and geographical region. |
+remarks:        | |
+remarks:        | 8744:1 - IP Transit |
+remarks:        | 8744:2 - Peering |
+remarks:        | 8744:3 - Customer |
+remarks:        | 8744:4 - Internal prefixes |
+remarks:        | |
+remarks:        | 8744:1002 - TELIA (AS1299) |
+remarks:        | 8744:1004 - TTK (AS20485) |
+remarks:        | 8744:1006 - MTS (AS8359) |
+remarks:        | 8744:1008 - ROSTELECOM (AS12389) |
+remarks:        | |
+remarks:        | 8744:2001 - MSK-IX (AS8631) |
+remarks:        | 8744:2003 - DE-CIX (AS6695) |
+remarks:        | 8744:2006 - AMS-IX (AS6777) |
+remarks:        | |
+remarks:        | 8744:2101 - MASTERHOST (AS25532) |
+remarks:        | 8744:2102 - TOPNET (AS21011) |
+remarks:        | 8744:2103 - RUNNET (AS3267) |
+remarks:        | 8744:2104 - CITYTELECOM (AS29076) |
+remarks:        | 8744:2105 - ELION (AS3249) |
+remarks:        | 8744:2106 - ETTK (AS35320) |
+remarks:        | 8744:2107 - MNOGOBYTE (AS42632) |
+remarks:        | 8744:2109 - DATALINE (AS35297) |
+remarks:        | 8744:2110 - VKONTAKTE (AS47541) |
+remarks:        | 8744:2111 - ECOTELECOM (AS50473) |
+remarks:        | 8744:2112 - GOOGLE (AS15169) |
+remarks:        | 8744:2113 - MAIL.RU (AS49281) |
+remarks:        | 8744:2114 - INNOVA (AS49813) |
+remarks:        | 8744:2115 - HOSTEROV (AS196678) |
+remarks:        | 8744:2116 - RUTUBE (AS48061) |
+remarks:        | 8744:2117 - RETN (AS9002) |
+remarks:        | 8744:2118 - DATA-GROUP (AS21219) |
+remarks:        | 8744:2119 - NET-BY-NET (AS12714) |
+remarks:        | 8744:2120 - YANDEX (AS13238) |
+remarks:        | 8744:2121 - ER-TELECOM (AS9049) |
+remarks:        | |
+remarks:        &#43;==============================================================&#43;
+remarks:        | |
+remarks:        | To check the routing information on the StartTelecom network |
+remarks:        | please use our Looking Glass at http://lg.starttelecom.ru |
+remarks:        | |
+remarks:        &#43;==============================================================&#43;
+admin-c:        DUMY-RIPE
+tech-c:         DUMY-RIPE
+notify:         ripe-db@vconnect.ru
+status:         ASSIGNED
+mnt-by:         UNITLINE
+mnt-by:         RIPE-NCC-END-MNT
+created:        2002-05-06T05:57:10Z
+last-modified:  2021-09-10T15:52:28Z
+source:         RIPE
+remarks:        ****************************
+remarks:        * THIS OBJECT IS MODIFIED
+remarks:        * Please note that all data that is generally regarded as personal
+remarks:        * data has been removed from this object.
+remarks:        * To view the original object, please query the RIPE Database at:
+remarks:        * http://www.ripe.net/whois
+remarks:        ****************************
+
+
+organisation:   <a href="https://apps.db.ripe.net/db-web-ui/query?searchtext=ORG-CCM2-RIPE">ORG-CCM2-RIPE</a>
+org-name:       OOO &#34;MediaSeti&#34;
+country:        RU
+org-type:       LIR
+address:        Dummy address for <a href="https://apps.db.ripe.net/db-web-ui/query?searchtext=ORG-CCM2-RIPE">ORG-CCM2-RIPE</a>
+# Email removed, Log into bgp.tools to see whois emails
+abuse-c:        AR17023-RIPE
+mnt-ref:        RIPE-NCC-HM-MNT
+mnt-ref:        UNITLINE
+mnt-by:         RIPE-NCC-HM-MNT
+mnt-by:         UNITLINE
+created:        2005-01-24T08:17:43Z
+last-modified:  2025-09-30T11:19:01Z
+source:         RIPE
+remarks:        ****************************
+remarks:        * THIS OBJECT IS MODIFIED
+remarks:        * Please note that all data that is generally regarded as personal
+remarks:        * data has been removed from this object.
+remarks:        * To view the original object, please query the RIPE Database at:
+remarks:        * http://www.ripe.net/whois
+remarks:        ****************************
+
+</pre>
+                        
+                        
+                        <a style="font-size: small;">Last Update: 2025-12-11T03:24:57Z UTC </a>
+                        
+                        <hr>
+                        
+                            <h2>Member of the following AS-SETs</h2>
+
+                            <table id="fhTable" class="full-width-table ">
+                                <tbody id="prefixlist-tbody">
+                                    <tr>
+                                        <th class="boldpls nowrap"> - </th>
+                                        <th class="boldpls">Member</th>
+                                        
+                                        <th class="boldpls nowrap">ASN Count</th>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-btn-customers">as-btn-customers</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">1495</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-kis">as-kis</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">44</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-nnov">as-nnov</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">46</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as209141:as-rucust">as209141:as-rucust</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap boldpls"><p style="display: contents;color: red">67893</p></td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-blocked-ru">as-blocked-ru</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">641</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as47659:as-upstream">as47659:as-upstream</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">3</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">LEVEL3</td>
+                                        
+                                        <td><a href="/as-set/LEVEL3::as-level3-origins-na">as-level3-origins-na</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">0</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-rus-korabl-nahui">as-rus-korabl-nahui</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">641</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-block-set">as-block-set</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">638</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as210928:as-rdb-client">as210928:as-rdb-client</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">5</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as34251:as-rufile">as34251:as-rufile</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">143</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as5413:as-route-server-de-cix">as5413:as-route-server-de-cix</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap boldpls"><p style="display: contents;color: red">42758</p></td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">LEVEL3</td>
+                                        
+                                        <td><a href="/as-set/LEVEL3::as-level3-origins-eu">as-level3-origins-eu</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">0</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-ttknn">as-ttknn</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">190</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-stshpd">as-stshpd</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">50</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-nis">as-nis</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">22</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as50581:as-block">as50581:as-block</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">642</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-megamax">as-megamax</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">22</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-wimax">as-wimax</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">29</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                        
+
+                    </div>
+
+                    
+
+                    
+
+                    
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="superclearfix">
+            
+            <div class="superclearfix">
+                
+            </div>
+
+            <div class="superclearfix">
+                
+            </div>
+
+
+        </div>
+
+
+        <div class="group js-footer" id="footer">
+            <nav>
+                <div>
+                    <ul>
+                        <li><a href="/kb/api" target="_blank">Scripting/API</a></li>
+                        <li><a href="/credits" target="_blank">Credits</a></li>
+                        <li><a href="/pricing" target="_blank">Pricing</a></li>
+                        <li><a href="/kb/contact" target="_blank">Contact Us</a></li>
+                        <li><a href="https://github.com/bgptools/issues" target="_blank">Issue Tracker</a></li>
+                        <li><a href="/kb/setup-sessions" target="">Contribute Data</a></li>
+                        
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <script>
+    
+    var inhash = window.location.hash;
+    if (inhash == "#asinfo") {
+        
+    } else if (inhash == "#prefixes") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#prefix-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#prefixes-page');
+        aaa[0].style.display = "";
+
+    } else if (inhash == "#connectivity" || inhash == "#peers" || inhash == "#upstreams" || inhash == "#downstreams") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#connectivity-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#connectivity-page');
+        aaa[0].style.display = "";
+    } else if (inhash == "#whois") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#whois-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#whois-page');
+        aaa[0].style.display = "";
+    } else if (inhash == "#ix") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#ix-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#ix-page');
+        aaa[0].style.display = "";
+    }</script>
+
+    <script>
+    
+
+
+    ;(function() {
+  'use strict'
+
+  function scaleImageMap() {
+    function resizeMap() {
+      function resizeAreaTag(cachedAreaCoords, idx) {
+        function scale(coord) {
+          var dimension = 1 === (isWidth = 1 - isWidth) ? 'width' : 'height'
+          return (
+            padding[dimension] +
+            Math.floor(Number(coord) * scalingFactor[dimension])
+          )
+        }
+
+        var isWidth = 0
+        areas[idx].coords = cachedAreaCoords
+          .split(',')
+          .map(scale)
+          .join(',')
+      }
+
+      var scalingFactor = {
+        width: image.width / image.naturalWidth,
+        height: image.height / image.naturalHeight,
+      }
+
+      var padding = {
+        width: parseInt(
+          window.getComputedStyle(image, null).getPropertyValue('padding-left'),
+          10
+        ),
+        height: parseInt(
+          window.getComputedStyle(image, null).getPropertyValue('padding-top'),
+          10
+        ),
+      }
+
+      cachedAreaCoordsArray.forEach(resizeAreaTag)
+    }
+
+    function getCoords(e) {
+      
+      return e.coords.replace(/ *, */g, ',').replace(/ +/g, ',')
+    }
+
+    function debounce() {
+      clearTimeout(timer)
+      timer = setTimeout(resizeMap, 250)
+    }
+
+    function start() {
+      if (
+        image.width !== image.naturalWidth ||
+        image.height !== image.naturalHeight
+      ) {
+        resizeMap()
+      }
+    }
+
+    function addEventListeners() {
+      image.addEventListener('load', resizeMap, false) 
+      window.addEventListener('focus', resizeMap, false) 
+      window.addEventListener('resize', debounce, false)
+      window.addEventListener('readystatechange', resizeMap, false)
+      document.addEventListener('fullscreenchange', resizeMap, false)
+    }
+
+    function beenHere() {
+      return 'function' === typeof map._resize
+    }
+
+    function getImg(name) {
+      return document.querySelector('img[usemap="#world"]')
+    }
+
+    function setup() {
+      areas = map.getElementsByTagName('area')
+      cachedAreaCoordsArray = Array.prototype.map.call(areas, getCoords)
+      image = getImg('#' + map.name) || getImg(map.name)
+      map._resize = resizeMap 
+    }
+
+    var  
+      map = this,
+      areas = null,
+      cachedAreaCoordsArray = null,
+      image = null,
+      timer = null
+
+    if (!beenHere()) {
+      setup()
+      addEventListeners()
+      start()
+    } else {
+      map._resize() 
+    }
+  }
+
+  function factory() {
+    function chkMap(element) {
+      if (!element.tagName) {
+        throw new TypeError('Object is not a valid DOM element')
+      } else if ('MAP' !== element.tagName.toUpperCase()) {
+        throw new TypeError(
+          'Expected <MAP> tag, found <' + element.tagName + '>.'
+        )
+      }
+    }
+
+    function init(element) {
+      if (element) {
+        chkMap(element)
+        scaleImageMap.call(element)
+        maps.push(element)
+      }
+    }
+
+    var maps
+
+    return function imageMapResizeF(target) {
+      maps = [] 
+
+      switch (typeof target) {
+        case 'undefined':
+        case 'string':
+          Array.prototype.forEach.call(
+            document.querySelectorAll(target || 'map'),
+            init
+          )
+          break
+        case 'object':
+          init(target)
+          break
+        default:
+          throw new TypeError('Unexpected data type (' + typeof target + ').')
+      }
+
+      return maps
+    }
+  }
+
+  if (typeof define === 'function' && define.amd) {
+    define([], factory)
+  } else if (typeof module === 'object' && typeof module.exports === 'object') {
+    module.exports = factory() 
+  } else {
+    window.imageMapResize = factory()
+  }
+
+  if ('jQuery' in window) {
+    window.jQuery.fn.imageMapResize = function $imageMapResizeF() {
+      return this.filter('map')
+        .each(scaleImageMap)
+        .end()
+    }
+  }
+})()
+    
+    </script>
+    <script>
+        var imgEl = document.getElementById("pathimg");
+        imgEl.addEventListener("mouseover",function() {
+            imageMapResize('#world');
+        })
+    </script>
+    <script src="/assets/tablesort.min.js"></script>
+    <script>
+        addEventListener("load", (event) => {
+            
+            
+            var sort = new Tablesort(document.getElementById('donotscrapebgptools-upstreamTable'));
+            var sort2 = new Tablesort(document.getElementById('donotscrapebgptools-upstreamTablePeers'));
+            
+            
+            
+        });
+    </script>
+    
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        setTimeout(function() {
+
+        var beaconHttp = new XMLHttpRequest();
+        var url = '/performance-beacon';
+        var params = JSON.stringify(window.performance)
+        beaconHttp.open('POST', url, true);
+        
+        
+        beaconHttp.setRequestHeader('Content-type', 'application/json');
+        beaconHttp.setRequestHeader('visit-url', "/as/8744");
+        if (navigator.connection) {
+            beaconHttp.setRequestHeader('client-side-rtt', navigator.connection.rtt);
+        } else {
+            beaconHttp.setRequestHeader('client-side-rtt', '-2');
+        }
+        beaconHttp.onreadystatechange = function() {}
+        beaconHttp.send(params);
+        },1000)
+    }, false);
+</script>
+
+</body>
+
+
+</html>

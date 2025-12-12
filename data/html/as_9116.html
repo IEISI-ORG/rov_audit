@@ -1,0 +1,2782 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Partner Communications Ltd. (AS9116) is a 26 year old BGP network that is peering with 61 other networks and has 0 upstream carriers">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000">
+    <link rel="search" type="application/opensearchdescription+xml" title="BGP.Tools" href="https://bgp.tools/opensearch.xml">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="theme-color" content="#000000">
+    <link href="https://social.bgp.tools/@bgptools" rel="me">
+    <link rel="canonical" href="https://bgp.tools/as/9116" />
+    <title>AS9116 Partner Communications Ltd. - bgp.tools</title>
+    <link rel="stylesheet" type="text/css" href="/assets/main-new.css?2025-12-09-1723%20UTC">
+</head>
+
+<body>
+    <div id="container">
+        
+<div id="global-header" class="global-header-top">
+    <div class="header-sitewide">
+        <div class="global-header">
+            <div class="header-logo">
+                <a href="/" id="logo" class="content">bgp.tools</a>
+            </div>
+            <form id="search" action="/search" method="get" accept-charset="utf-8" role="search" class="top-search-header js-search-hash">
+                <div class="searchfield">
+                    <input type="search" autocomplete="off" name="q" id="site-search-text" title="Search" value="" placeholder="Start here..." autofocus="autofocus" class="js-search-focus">
+                    <button type="submit" id="search-submit" class="search-submit">Search</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div id="global-header-blob" >
+    <a id="auth-header-text" href="/login">Login</a>
+    
+</div>
+<div id="global-header-bar" >
+    <a id="auth-header-bar-text" href="/login">Login</a>
+    
+</div>
+<div class="small-clearfix"></div>
+
+        <div id="global-container">
+            
+
+
+            
+            <div class="section-tabs js-tabs">
+                <ul>
+                    
+<li class="active">
+    <h1> <a id="viewbutton-tab" href="/as/9116">View</a></h1>
+</li>
+
+<li >
+    <a id="editbutton-tab" href="/edit/as/9116">Edit</a>
+</li>
+
+
+
+
+
+                    <li style="float: right;">
+                        
+                        <img id="ws-status" width="24" height="24" src="/assets/disconnected.png" title="Not Connected To realtime data updates">
+                        
+                    </li>
+                </ul>
+            </div>
+
+            <div id="search-container">
+
+                <div class="column-full-width">
+
+                    <div class="clearfix">
+                        
+                    </div>
+                    
+                    
+
+                    <div class="network-header">
+                        
+                        
+                        <img width="334" height="250" src="/img/9116" alt="The website screenshot for http://www.012.net" >
+                        
+                        
+                        <p id="network-name" class="heading-xlarge">Partner Communications Ltd.</p>
+                        <p id="network-number">
+                            AS Number
+                            <strong id="ASNumberString" pure="9116">9116</strong>
+                            <br>
+                        
+                            Website
+                            <strong><a href="http://www.012.net" rel="nofollow">http://www.012.net</a></strong>
+                        
+                        </p>
+
+                    </div>
+
+
+                    <div class="clearfix">
+                        
+                    </div>
+
+
+                    <div class="section-tabs js-tabs">
+                        <ul>
+
+                            <li id="overview-tab-li" class="active">
+                                <a id="overview-tab" href="#asinfo">Overview</a>
+                            </li>
+                            
+                            <li id="prefix-tab-li">
+                                <a id="prefix-tab" href="#prefixes">Prefixes</a>
+                            </li>
+
+                            <li id="connectivity-tab-li">
+                                <a id="connectivity-tab" href="#connectivity">Connectivity</a>
+                            </li>
+                            
+                            <li id="whois-tab-li">
+                                <a id="whois-tab" href="#whois">Whois</a>
+                            </li>
+                        
+                        
+                        </ul>
+                    </div>
+
+<script>
+    function removeAllActiveTab() {
+        var tabs = [
+            "overview-tab-li", 
+            "prefix-tab-li", 
+            "connectivity-tab-li",
+            "whois-tab-li",
+            "ix-tab-li",
+            "issues-tab-li"
+        ];
+
+        tabs.forEach(element => {
+            var aaa = document.querySelectorAll('#'+element);
+            if(aaa.length != 0) {
+                aaa[0].classList.remove("active")
+            }
+        });
+    }
+
+    function hideAllContent() {
+        var tabs = [
+            "overview-page", 
+            "prefixes-page", 
+            "connectivity-page",
+            "whois-page",
+            "ix-page",
+            "issues-page"
+        ];
+
+        tabs.forEach(element => {
+            var aaa = document.querySelectorAll('#'+element);
+            if(aaa.length != 0) {
+                aaa[0].style.display = "none";
+            }
+        });
+        if (document.getElementById("donotscrapebgptools-prefixlist-tbody")) {
+            var prefixrows = document.getElementById("donotscrapebgptools-prefixlist-tbody").children;
+            for (var i = 0; i < prefixrows.length; i++) {
+                prefixrows[i].style = "";
+            }
+        }
+    }
+
+    var otab = document.querySelectorAll('#overview-tab');
+    otab[0].addEventListener("click", function () {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#overview-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#overview-page');
+        aaa[0].style.display = "";
+    });
+    
+
+    var ptab = document.querySelectorAll('#prefix-tab');
+    ptab[0].addEventListener("click", function () {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#prefix-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#prefixes-page');
+        aaa[0].style.display = "";
+    });
+
+    var ctab = document.querySelectorAll('#connectivity-tab');
+    ctab[0].addEventListener("click", function () {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#connectivity-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#connectivity-page');
+        aaa[0].style.display = "";
+    });
+    
+
+    var wtab = document.querySelectorAll('#whois-tab');
+    wtab[0].addEventListener("click", function () {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#whois-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#whois-page');
+        aaa[0].style.display = "";
+    });
+
+</script>
+
+
+
+                    
+                    <div id="overview-page">
+
+                        <div class="grid-row">
+                        
+                        <div class="column-two-thirds">
+                            <dl>
+                                <dt>Registered on</dt>
+                                <dd class="text data">
+                                    
+                                    23 Dec 1998 (26 years old)
+                                </dd>
+                            
+                            
+                            <dt>Registered to</dt>
+                            <dd class="text data">
+                                <a href="/rir-owner/il.partnercom">il.partnercom</a> (ripe)</dd>
+                                
+                                <dd class="text data" id="network-status">
+                                    <a href="/transfer-history/9116">[Transfer History]</a>
+                                </dd>
+                                
+                            
+                            </dl>
+                        </div>
+                        
+    
+                        <dl class="column-third">
+                            <dt>Network status</dt>
+                            <dd class="text data">
+                                
+                                Active, Allocated under RIPE
+                                
+                            </dd>
+                        </dl>
+    
+                        </div>
+    
+                        <div class="grid-row">
+                            <dl class="column-two-thirds">
+                                <dt>Network type</dt>
+                                <dd class="text data">
+                                    Eyeball
+                                </dd>
+                            </dl>
+    
+                            <dl class="column-third">
+                                <dt>Prefixes Originated</dt>
+                                <dd class="data">0 IPv4, 0 IPv6</dd>
+                            </dl>
+                        </div>
+                        <div class="grid-row">
+                            <div class="column-half">
+    
+                                <h2 class="heading-medium"><derp>Upstreams</derp></h2>
+                                <ul>
+                                    
+                                </ul>
+    
+                            </div>
+    
+                            <div class="column-half">
+                                
+                                    <h2 class="heading-medium"><derp>Rankings</derp></h2>
+                                    
+                                    <li><span id="sic0">#5 for <a href="/rankings/IL?sort=cone">AS Cone  in Israel</a></span></li>
+                                    
+                                    <li><span id="sic0">#14 for <a href="/rankings/IL?sort=peering">Known Peers  in Israel</a></span></li>
+                                    
+                                
+                            </div>
+                        </div>
+                        
+                        <div class="grid-row" style="padding: 15px;">
+                            <h2 class="heading-medium"><derp>Tags:</derp></h2>
+                            <br>
+                            
+                            <a href="/tags/dsl"><span style="border: 5px solid #F49C23;" class="taglist"> Home ISP </span></a>
+                            
+                        </div>
+                        
+                    </div>
+                    
+
+                    <div style="display: none" id="prefixes-page">
+                        
+
+                        
+                        <div style="float:left">
+                            <dt>Prefixes Originated</dt>
+                            <dd class="data">0 IPv4, 0 IPv6</dd>
+                            
+                            
+                        </div>
+                        <div style="float:right">
+                                <dt>Addresses Originated</dt>
+                                <dd class="data">0 /24's of IPv4</dd>
+                                <dd class="data">0 /48's of IPv6</dd>
+                        </div>
+
+                        <div class="clearfix">
+                            
+                        </div>
+
+
+                        <table id="fhTable" class="full-width-table ">
+                            <tbody id="donotscrapebgptools-prefixlist-tbody">
+                                <tr>
+                                    <th class="nowrap">  &nbsp;  </th>
+                                    <th class="boldpls">Prefix</th>
+                                    <th class="nowrap boldpls">Description</th>
+                                </tr>
+                                <p id="readme-if-you-are-human" style="display: none;">If you are scraping this block for the prefixes that a AS originates, please use the data dumps in https://bgp.tools/kb/api and cache them</p>
+                                
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div style="display: none" id="connectivity-page">
+
+                        <div class="grid-row">
+                            <dl class="column-third column-third-first">
+                                <dt><a href="#peers">Peers</a></dt>
+                                <dd class="data">61</dd>
+                            </dl><dl class="column-third column-third-mid">
+                                <dt><a href="#upstreams">Upstreams</a></dt>
+                                
+                                <dd class="text data">0</dd>
+                                
+                            </dl>
+                            <dl class="column-third column-third-last">
+                                <dt><a href="#downstreams">Downstreams</a></dt> <dd class="data">1 (Cone: 85)</dd>
+                            </dl>
+
+                        </div>
+
+
+                        <hr>
+                        <h3>Network Policy<img class="flag-img" src="/assets/info.png" style="padding-left: 12px;" title="This info can take up to 2 hours to fully update" alt="This info take up to 2 hours to fully update"/></h3></h3>
+                        <a style="font-size: small;" href="/kb/network-policy">Click here to learn more about what this graph means and what makes up a network policy</a>
+
+                        <select id="netpolicydropdown" class="dropdownmenu">
+                            
+                                <option value="default">Global Aggregation</option>
+                            
+
+                            
+                                
+                            
+
+                            
+
+
+                        </select>
+
+                        <script>var netgroups = {}</script>
+
+                        <div style="text-align: center;">
+                            <img id="pathimg" usemap="#world" src="">
+                            <div id="world2"></div>
+                        </div>
+
+                        <details>
+                            <summary>Chart Display Options</summary>
+                            <noscript>This requires javascript to work</noscript>
+                            <label for="graphOptionMoreWiggle" style="display: flex;align-items: center;font-size: 20px;">
+                                <input type="checkbox" id="graphOptionMoreWiggle" name="graphOptionMoreWiggle" style="width: 64px; height: 32px;">
+                                    <p id="graphOptionMoreWiggleLabel" style="width: 200%;">Display links using non straight lines</p>
+                            </label>
+                        </details>
+
+                        <h3 style="display: none;" id="PISPBanner">Prefixes in selected policy</h3>
+                        <table id="policytable" class="full-width-table">
+                        </table>
+                        <button style="width:100%;display: none;" id="ShowFullPolicyButton" class="bigButton" onclick="dropdownPoke()">Load all prefixes in policy</button>
+
+                        <script>
+                            !function(a,b){"function"==typeof define&&define.amd?define([],b):"undefined"!=typeof module&&module.exports?module.exports=b():a.ReconnectingWebSocket=b()}(this,function(){function a(b,c,d){function l(a,b){var c=document.createEvent("CustomEvent");return c.initCustomEvent(a,!1,!1,b),c}var e={debug:!1,automaticOpen:!0,reconnectInterval:1e3,maxReconnectInterval:3e4,reconnectDecay:1.5,timeoutInterval:2e3};d||(d={});for(var f in e)this[f]="undefined"!=typeof d[f]?d[f]:e[f];this.url=b,this.reconnectAttempts=0,this.readyState=WebSocket.CONNECTING,this.protocol=null;var h,g=this,i=!1,j=!1,k=document.createElement("div");k.addEventListener("open",function(a){g.onopen(a)}),k.addEventListener("close",function(a){g.onclose(a)}),k.addEventListener("connecting",function(a){g.onconnecting(a)}),k.addEventListener("message",function(a){g.onmessage(a)}),k.addEventListener("error",function(a){g.onerror(a)}),this.addEventListener=k.addEventListener.bind(k),this.removeEventListener=k.removeEventListener.bind(k),this.dispatchEvent=k.dispatchEvent.bind(k),this.open=function(b){h=new WebSocket(g.url,c||[]),b||k.dispatchEvent(l("connecting")),(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","attempt-connect",g.url);var d=h,e=setTimeout(function(){(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","connection-timeout",g.url),j=!0,d.close(),j=!1},g.timeoutInterval);h.onopen=function(){clearTimeout(e),(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","onopen",g.url),g.protocol=h.protocol,g.readyState=WebSocket.OPEN,g.reconnectAttempts=0;var d=l("open");d.isReconnect=b,b=!1,k.dispatchEvent(d)},h.onclose=function(c){if(clearTimeout(e),h=null,i)g.readyState=WebSocket.CLOSED,k.dispatchEvent(l("close"));else{g.readyState=WebSocket.CONNECTING;var d=l("connecting");d.code=c.code,d.reason=c.reason,d.wasClean=c.wasClean,k.dispatchEvent(d),b||j||((g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","onclose",g.url),k.dispatchEvent(l("close")));var e=g.reconnectInterval*Math.pow(g.reconnectDecay,g.reconnectAttempts);setTimeout(function(){g.reconnectAttempts++,g.open(!0)},e>g.maxReconnectInterval?g.maxReconnectInterval:e)}},h.onmessage=function(b){(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","onmessage",g.url,b.data);var c=l("message");c.data=b.data,k.dispatchEvent(c)},h.onerror=function(b){(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","onerror",g.url,b),k.dispatchEvent(l("error"))}},1==this.automaticOpen&&this.open(!1),this.send=function(b){if(h)return(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","send",g.url,b),h.send(b);throw"INVALID_STATE_ERR : Pausing to reconnect websocket"},this.close=function(a,b){"undefined"==typeof a&&(a=1e3),i=!0,h&&h.close(a,b)},this.refresh=function(){h&&h.close()}}return a.prototype.onopen=function(){},a.prototype.onclose=function(){},a.prototype.onconnecting=function(){},a.prototype.onmessage=function(){},a.prototype.onerror=function(){},a.debugAll=!1,a.CONNECTING=WebSocket.CONNECTING,a.OPEN=WebSocket.OPEN,a.CLOSING=WebSocket.CLOSING,a.CLOSED=WebSocket.CLOSED,a});
+                        </script>
+                        
+                        <script>
+                            var prefixinfo = []
+                            var asn =  9116 
+
+                            var pfxExtraString = "";
+
+                            function saveGraphOptionsToLocalStorage() {
+                                localStorage.setItem("pfx-chart-options:wiggle", document.getElementById("graphOptionMoreWiggle").checked);
+                            }
+
+                            function loadGraphOptionsToLocalStorage() {
+                                document.getElementById("graphOptionMoreWiggle").checked = localStorage.getItem("pfx-chart-options:wiggle") == "true";
+                                pfxExtraString= "";
+                                if (document.getElementById("graphOptionMoreWiggle").checked) {
+                                    pfxExtraString = pfxExtraString + "&wiggly";
+                                }
+                            }
+                            loadGraphOptionsToLocalStorage();
+
+                            function graphOptionsChanged() {
+                                saveGraphOptionsToLocalStorage();
+                                handleImageChange();
+                            }
+                            document.getElementById("graphOptionMoreWiggle").addEventListener("click", graphOptionsChanged)
+
+
+                            function handleImageChange() {
+                                loadGraphOptionsToLocalStorage();
+                                
+                                document.getElementById("pathimg").src=("/pathimg/"+asn+ "-" + document.getElementById("netpolicydropdown").value +"?"+pfxExtraString);
+                                var request = new XMLHttpRequest();
+                                request.open('GET', "/pathimg/"+asn+ "-" + document.getElementById("netpolicydropdown").value + "?map=true" + pfxExtraString, true);
+
+                                request.onload = function() {
+                                    if (this.status >= 200 && this.status < 400) {
+                                        
+                                        
+                                        document.getElementById("world2").innerHTML = this.response;
+                                        setTimeout(function(){
+                                            imageMapResize('#world');
+                                        },1000)
+                                    }
+                                };
+                                request.send();
+                                buildPrefixTable();
+                            } 
+
+                            function encodeHTML(s) {
+                                return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
+                            }
+
+                            function dropdownPoke(){
+                                InteractedWithPolicyTableYet=true;
+                                handleImageChange();
+                            }
+
+                            var InteractedWithPolicyTableYet = false;
+                            var OverloadPolicySize = 0;
+                            function buildPrefixTable() {
+                                var policy = document.getElementById("netpolicydropdown").value;
+                                
+                                var cidrs = netgroups[policy];
+                                var ihtml = "<tbody> <tr> <th class=\"nowrap\">  -  </th> <th>Prefix</th> <th class=\"nowrap\">Description</th> </tr>";
+
+                                
+                                var aaa = document.querySelectorAll('#PISPBanner');
+                                var bbb = document.querySelectorAll('#policytable');
+                                var n = 0
+                                if (cidrs) {
+                                    aaa[0].style.display = "";
+                                    bbb[0].style.display = "";
+                                    cidrs.forEach(cidr => {
+                                        var obj = {};
+                                        var dont =false;
+                                        n++;
+                                        
+                                        if (!InteractedWithPolicyTableYet) {
+                                            if (n == 5) {
+                                                dont = true;
+                                            } else if (n > 5) {
+                                                dont = true;
+                                            }
+                                        }
+                                        
+                                        if (!dont) {
+                                            prefixinfo.forEach(el => {
+                                                if(el.PrefixString == cidr) {
+                                                    
+                                                        ihtml += "<tr><td class=\"nowrap ns\"><img class=\"flag-img\" src=\"/assets/flags/"+el.WhoisCountry+".png\" title=\""+el.WhoisCountry+"\"></td>"
+                                                        ihtml += "<td><a href=\"/prefix/"+el.PrefixString+"\">"+el.PrefixString+"</a></td>"
+                                                        ihtml += "<td class=\"nowrap\">"+encodeHTML(el.WhoisName)+"</td></tr>"
+                                                }
+                                            });
+                                        } else {
+                                            OverloadPolicySize++;
+                                        }
+                                    });
+                                    document.getElementById("policytable").innerHTML = ihtml
+                                    var PolButton = document.querySelectorAll('#ShowFullPolicyButton');
+                                    if (!InteractedWithPolicyTableYet && OverloadPolicySize!=0) {
+                                        PolButton[0].style="width:100%";
+                                        PolButton[0].innerHTML = "Load all "+OverloadPolicySize+" prefixes in policy"
+                                    } else {
+                                        PolButton[0].style="display:none;";
+                                    }
+                                    
+                                } else {
+                                    aaa[0].style.display = "none";
+                                    bbb[0].style.display = "none";
+                                }
+                            }
+
+
+                            var pathdropdown = document.querySelectorAll('#netpolicydropdown');
+                            pathdropdown[0].addEventListener("change",dropdownPoke)
+                            handleImageChange()
+                            buildPrefixTable()
+
+                            document.addEventListener("load", function(){
+                                
+                                handleImageChange()
+                            });
+
+                            function uuidv4() {
+                                return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+                                    var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+                                    return v.toString(16);
+                                });
+                            }
+
+                            
+                            let realTimeSocket = new ReconnectingWebSocket("wss://bgp.tools/ws/rt-asn?prefix=AS9116" + "&magic=" + encodeURIComponent("C5QIFU53AWAG4TZ3KFYG45KUNDCELPBYOSWPFLKMORBRYTETAZUQ===="));
+                            
+                            realTimeSocket.onmessage = function(event) {
+                                console.log(`[message] Data received from server: ${event.data}`);
+                                if (event.data == "Running.") {
+                                    document.getElementById("ws-status").src = "/assets/connected.png";
+                                    document.getElementById("ws-status").title = "Connected to realtime data";
+                                } else if (event.data == "STOP-CONNECTING") {
+                                    document.getElementById("ws-status").src = disconectedIcon;
+                                    document.getElementById("ws-status").title = "Not connected to realtime data";
+                                    realTimeSocket.maxReconnectAttempts = 1;
+                                    realTimeSocket.close()
+                                } else {
+                                    var obj = JSON.parse(event.data);
+                                    var elm = document.getElementById("pfx-"+obj.Prefix);
+                                    if (!elm && obj.Vis > 6) {
+                                        var tblist = document.getElementById("donotscrapebgptools-prefixlist-tbody");
+                                        var node = document.createElement("tr");                 
+                                        node.outerHTML = '<tr id="pfx-'+obj.Prefix+'"><td class="nowrap"><img class="flag-img" src="/assets/flags/'+obj.Whois.WhoisCountry+'.png" title="'+obj.Whois.WhoisCountry+'"></td><td><a href="/prefix/'+obj.Prefix+'">'+obj.Prefix+'</a></td><td class="smallonmobile nowrap">'+obj.Whois.WhoisName+'</td></tr>';
+                                        tblist.appendChild(node);                              
+                                    }
+                                    if (!elm) {
+                                        elm = document.getElementById("pfx-"+obj.Prefix);
+                                    }
+                                    
+                                    if (obj.Vis > 70) {
+                                        if (elm.style) {
+                                            var es = elm.style;
+                                            if (es.animation.includes("pulse1b")) {
+                                                elm.style = "animation: pulse2b 1s 1;";
+                                            } else if (es.animation.includes("pulse2b")) {
+                                                elm.style = "animation: pulse1b 1s 1;";
+                                            } else {
+                                                elm.style = "animation: pulse1b 1s 1;";
+                                            }
+                                        }
+                                    } else if (obj.Vis < 5) {
+                                        
+                                        var elm = document.getElementById("pfx-"+obj.Prefix);
+                                        if (elm) {
+                                            elm.parentNode.removeChild(elm);
+                                        }
+                                    } else {
+                                        if (elm.style) {
+                                            var es = elm.style;
+                                            if (es.animation.includes("pulse1r")) {
+                                                elm.style = "animation: pulse2r 1s 1;";
+                                            } else if (es.animation.includes("pulse2r")) {
+                                                elm.style = "animation: pulse1r 1s 1;";
+                                            } else {
+                                                elm.style = "animation: pulse1r 1s 1;";
+                                            }
+                                        }
+                                    }
+                                }
+                            };
+                            var disconectedIcon = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAAZlBMVEX/ewBZWVn/ewf/ew5fWljudiP8egp6XVT6eRHodSmVYU6hZEzObjrldCv3eRZ/XlNjWliHX1KrZkngci71eBl1XFXCa0CKYFHydx18XlSQYE+lZUq0aEbJbT3SbzhvXFaLYFG8akLYdYVFAAABQElEQVRIx5XV25KDIAwGYIKASLutqOtZ277/S26xK4ozJea/qRdfajATZaRkd6B6oPoL1d9QphUn+WvXmGF8TfN8yvNrDj6nvNj5Hu8n8HCh9ONiON5PEKuQx55DmFTHC1R9uMOjYkhFERbkEikofw8FGe5t0FWJ+kLvz5H+t8RdGD9k8TeebBXpzwIZT955XyVBtHHeXYzeJy5fhydtoZffZvUMSfvxT4BOeI/G/b9paxH1at8XQF8xNcV8aaQvHQBMhY/XttsdYp5nah3XdvIqui61Cjy+jqLwXp1cx9XLQZ5cR/vx1p8cez2IWrlxYY/T9bNVyCfmdQdbxNgs441FNRAEHS83oe9ahmTw1p88nhHCiAkpeIUeX5eJ6NlM9Gwm+uxO9/3F2PSR597jn1+udCWzUp7150P1jOoZ1f8BGPARG85JosIAAAAASUVORK5CYII=";
+                            realTimeSocket.onerror = function(error) {
+                                document.getElementById("ws-status").src = disconectedIcon;
+                                document.getElementById("ws-status").title = "Not connected to realtime data";
+
+                                console.log(`[error] ${error.message}`);
+                            };
+                            realTimeSocket.onclose = function(error) {
+                                document.getElementById("ws-status").src = disconectedIcon;
+                                document.getElementById("ws-status").title = "Not connected to realtime data";
+
+                                console.log(`[error] ${error.message}`);
+                            };
+                        </script>
+
+<div class="superclearfix">
+    
+</div>
+
+                        <hr>
+                        <a style="font-size: small;" href="/kb/what-is-a-upstream">How are upstreams and downstreams calculated?</a>
+                        <h3 id="upstreams">Upstreams<img class="flag-img" src="/assets/lightning.png" style="padding-left: 12px;" title="This information was fetched live at page load time" alt="This information was fetched live at page load time"/></h3>
+
+
+                        <table id="donotscrapebgptools-upstreamTable" class="full-width-table">
+                            <thead class="sortable">
+                                <tr>
+                                    <th class="nowrap boldpls">  &nbsp;  </th>
+                                    <th data-sort-method='number' class="boldpls">ASN</th>
+                                    <th class="nowrap boldpls">Description</th>
+                                    <th class="nowrap boldpls">IPv4</th>
+                                    <th class="nowrap boldpls">IPv6</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                            </tbody>
+                        </table>
+
+                        <hr>
+                        <h3 id="peers">Peers<img class="flag-img" src="/assets/lightning.png" style="padding-left: 12px;" title="This information was fetched live at page load time" alt="This information was fetched live at page load time"/></h3>
+
+
+
+                        <table id="donotscrapebgptools-upstreamTablePeers" class="full-width-table">
+                            <thead class="sortable">
+                                <tr>
+                                    <th class="nowrap boldpls">  &nbsp;  </th>
+                                    <th data-sort-method='number' class="boldpls">ASN</th>
+                                    <th class="nowrap boldpls">Description</th>
+                                    <th class="nowrap boldpls">IPv4</th>
+                                    <th class="nowrap boldpls">IPv6</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                <tr>
+                                    <td data-sort='IL' class="nowrap ns"><img class="flag-img" src="/assets/flags/IL.png" title="IL"></td>
+                                    <td data-sort='12400'><a href="/as/12400">AS12400</a></td>
+                                    <td class="smallonmobile nowrap">Partner Communications Ltd.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='6461'><a href="/as/6461">AS6461</a></td>
+                                    <td class="smallonmobile nowrap">Zayo Bandwidth</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='RO' class="nowrap ns"><img class="flag-img" src="/assets/flags/RO.png" title="RO"></td>
+                                    <td data-sort='8708'><a href="/as/8708">AS8708</a></td>
+                                    <td class="smallonmobile nowrap">DIGI ROMANIA S.A.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='FR' class="nowrap ns"><img class="flag-img" src="/assets/flags/FR.png" title="FR"></td>
+                                    <td data-sort='8218'><a href="/as/8218">AS8218</a></td>
+                                    <td class="smallonmobile nowrap">Zayo Europe</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='FR' class="nowrap ns"><img class="flag-img" src="/assets/flags/FR.png" title="FR"></td>
+                                    <td data-sort='30781'><a href="/as/30781">AS30781</a></td>
+                                    <td class="smallonmobile nowrap">Free Pro SAS</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='RU' class="nowrap ns"><img class="flag-img" src="/assets/flags/RU.png" title="RU"></td>
+                                    <td data-sort='8359'><a href="/as/8359">AS8359</a></td>
+                                    <td class="smallonmobile nowrap">MTS PJSC</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='1828'><a href="/as/1828">AS1828</a></td>
+                                    <td class="smallonmobile nowrap">Unitas Global</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='DE' class="nowrap ns"><img class="flag-img" src="/assets/flags/DE.png" title="DE"></td>
+                                    <td data-sort='47447'><a href="/as/47447">AS47447</a></td>
+                                    <td class="smallonmobile nowrap">23M GmbH</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='IN' class="nowrap ns"><img class="flag-img" src="/assets/flags/IN.png" title="IN"></td>
+                                    <td data-sort='9498'><a href="/as/9498">AS9498</a></td>
+                                    <td class="smallonmobile nowrap">Bharti Airtel Ltd.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='NO' class="nowrap ns"><img class="flag-img" src="/assets/flags/NO.png" title="NO"></td>
+                                    <td data-sort='2119'><a href="/as/2119">AS2119</a></td>
+                                    <td class="smallonmobile nowrap">Telenor Norge AS</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CH' class="nowrap ns"><img class="flag-img" src="/assets/flags/CH.png" title="CH"></td>
+                                    <td data-sort='3303'><a href="/as/3303">AS3303</a></td>
+                                    <td class="smallonmobile nowrap">Swisscom (Schweiz) AG</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='PT' class="nowrap ns"><img class="flag-img" src="/assets/flags/PT.png" title="PT"></td>
+                                    <td data-sort='8657'><a href="/as/8657">AS8657</a></td>
+                                    <td class="smallonmobile nowrap">MEO International Backbone</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='IT' class="nowrap ns"><img class="flag-img" src="/assets/flags/IT.png" title="IT"></td>
+                                    <td data-sort='12874'><a href="/as/12874">AS12874</a></td>
+                                    <td class="smallonmobile nowrap">Fastweb SpA</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='2686'><a href="/as/2686">AS2686</a></td>
+                                    <td class="smallonmobile nowrap">AT&amp;T Enterprises, LLC</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='RU' class="nowrap ns"><img class="flag-img" src="/assets/flags/RU.png" title="RU"></td>
+                                    <td data-sort='31133'><a href="/as/31133">AS31133</a></td>
+                                    <td class="smallonmobile nowrap">MegaFon PJSC</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='GB' class="nowrap ns"><img class="flag-img" src="/assets/flags/GB.png" title="GB"></td>
+                                    <td data-sort='30844'><a href="/as/30844">AS30844</a></td>
+                                    <td class="smallonmobile nowrap">Liquid Intelligent Technologies </td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='DE' class="nowrap ns"><img class="flag-img" src="/assets/flags/DE.png" title="DE"></td>
+                                    <td data-sort='8365'><a href="/as/8365">AS8365</a></td>
+                                    <td class="smallonmobile nowrap">Man-da.de GmbH</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='DE' class="nowrap ns"><img class="flag-img" src="/assets/flags/DE.png" title="DE"></td>
+                                    <td data-sort='33891'><a href="/as/33891">AS33891</a></td>
+                                    <td class="smallonmobile nowrap">Core-Backbone GmbH</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='SE' class="nowrap ns"><img class="flag-img" src="/assets/flags/SE.png" title="SE"></td>
+                                    <td data-sort='12552'><a href="/as/12552">AS12552</a></td>
+                                    <td class="smallonmobile nowrap">GlobalConnect (IP-Only)</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='32787'><a href="/as/32787">AS32787</a></td>
+                                    <td class="smallonmobile nowrap">Akamai (Prolexic)</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='SE' class="nowrap ns"><img class="flag-img" src="/assets/flags/SE.png" title="SE"></td>
+                                    <td data-sort='42708'><a href="/as/42708">AS42708</a></td>
+                                    <td class="smallonmobile nowrap">Glesys AB</td>
+                                    <td class="nowrap">&#10008;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CH' class="nowrap ns"><img class="flag-img" src="/assets/flags/CH.png" title="CH"></td>
+                                    <td data-sort='15600'><a href="/as/15600">AS15600</a></td>
+                                    <td class="smallonmobile nowrap">Quickline AG</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='RO' class="nowrap ns"><img class="flag-img" src="/assets/flags/RO.png" title="RO"></td>
+                                    <td data-sort='9009'><a href="/as/9009">AS9009</a></td>
+                                    <td class="smallonmobile nowrap">M247 Europe SRL</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='14340'><a href="/as/14340">AS14340</a></td>
+                                    <td class="smallonmobile nowrap">Salesforce.com, Inc.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='DE' class="nowrap ns"><img class="flag-img" src="/assets/flags/DE.png" title="DE"></td>
+                                    <td data-sort='12676'><a href="/as/12676">AS12676</a></td>
+                                    <td class="smallonmobile nowrap">HKN GmbH</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='AE' class="nowrap ns"><img class="flag-img" src="/assets/flags/AE.png" title="AE"></td>
+                                    <td data-sort='15802'><a href="/as/15802">AS15802</a></td>
+                                    <td class="smallonmobile nowrap">Emirates Integrated Telecommunications Company PJSC</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='RU' class="nowrap ns"><img class="flag-img" src="/assets/flags/RU.png" title="RU"></td>
+                                    <td data-sort='20485'><a href="/as/20485">AS20485</a></td>
+                                    <td class="smallonmobile nowrap">JSC TransTeleKom</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='DE' class="nowrap ns"><img class="flag-img" src="/assets/flags/DE.png" title="DE"></td>
+                                    <td data-sort='12731'><a href="/as/12731">AS12731</a></td>
+                                    <td class="smallonmobile nowrap">IPHH Internet Port Hamburg GmbH</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='DE' class="nowrap ns"><img class="flag-img" src="/assets/flags/DE.png" title="DE"></td>
+                                    <td data-sort='8881'><a href="/as/8881">AS8881</a></td>
+                                    <td class="smallonmobile nowrap">1&amp;1 Versatel GmbH</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='AT' class="nowrap ns"><img class="flag-img" src="/assets/flags/AT.png" title="AT"></td>
+                                    <td data-sort='47692'><a href="/as/47692">AS47692</a></td>
+                                    <td class="smallonmobile nowrap">Nessus GmbH</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='29838'><a href="/as/29838">AS29838</a></td>
+                                    <td class="smallonmobile nowrap">Atlantic Metro Communications II, Inc.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='GB' class="nowrap ns"><img class="flag-img" src="/assets/flags/GB.png" title="GB"></td>
+                                    <td data-sort='8426'><a href="/as/8426">AS8426</a></td>
+                                    <td class="smallonmobile nowrap">Claranet Limited</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='36692'><a href="/as/36692">AS36692</a></td>
+                                    <td class="smallonmobile nowrap">Cisco OpenDNS, LLC</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='DE' class="nowrap ns"><img class="flag-img" src="/assets/flags/DE.png" title="DE"></td>
+                                    <td data-sort='44066'><a href="/as/44066">AS44066</a></td>
+                                    <td class="smallonmobile nowrap">firstcolo GmbH</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='IT' class="nowrap ns"><img class="flag-img" src="/assets/flags/IT.png" title="IT"></td>
+                                    <td data-sort='1267'><a href="/as/1267">AS1267</a></td>
+                                    <td class="smallonmobile nowrap">WIND TRE S.P.A.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='36351'><a href="/as/36351">AS36351</a></td>
+                                    <td class="smallonmobile nowrap">IBM Cloud</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='GB' class="nowrap ns"><img class="flag-img" src="/assets/flags/GB.png" title="GB"></td>
+                                    <td data-sort='9002'><a href="/as/9002">AS9002</a></td>
+                                    <td class="smallonmobile nowrap">RETN Limited</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='UA' class="nowrap ns"><img class="flag-img" src="/assets/flags/UA.png" title="UA"></td>
+                                    <td data-sort='35320'><a href="/as/35320">AS35320</a></td>
+                                    <td class="smallonmobile nowrap">Eurotranstelecom Ltd</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='IL' class="nowrap ns"><img class="flag-img" src="/assets/flags/IL.png" title="IL"></td>
+                                    <td data-sort='8551'><a href="/as/8551">AS8551</a></td>
+                                    <td class="smallonmobile nowrap">Bezeq International Ltd.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='QA' class="nowrap ns"><img class="flag-img" src="/assets/flags/QA.png" title="QA"></td>
+                                    <td data-sort='8781'><a href="/as/8781">AS8781</a></td>
+                                    <td class="smallonmobile nowrap">Ooredoo Q.S.C.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='BG' class="nowrap ns"><img class="flag-img" src="/assets/flags/BG.png" title="BG"></td>
+                                    <td data-sort='8717'><a href="/as/8717">AS8717</a></td>
+                                    <td class="smallonmobile nowrap">A1 Bulgaria EAD</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='RO' class="nowrap ns"><img class="flag-img" src="/assets/flags/RO.png" title="RO"></td>
+                                    <td data-sort='9050'><a href="/as/9050">AS9050</a></td>
+                                    <td class="smallonmobile nowrap">Orange Romania S.A.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CZ' class="nowrap ns"><img class="flag-img" src="/assets/flags/CZ.png" title="CZ"></td>
+                                    <td data-sort='29208'><a href="/as/29208">AS29208</a></td>
+                                    <td class="smallonmobile nowrap">Quantcom, a.s.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='BG' class="nowrap ns"><img class="flag-img" src="/assets/flags/BG.png" title="BG"></td>
+                                    <td data-sort='34224'><a href="/as/34224">AS34224</a></td>
+                                    <td class="smallonmobile nowrap">Neterra Ltd.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='BG' class="nowrap ns"><img class="flag-img" src="/assets/flags/BG.png" title="BG"></td>
+                                    <td data-sort='57344'><a href="/as/57344">AS57344</a></td>
+                                    <td class="smallonmobile nowrap">Telehouse EAD</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='GB' class="nowrap ns"><img class="flag-img" src="/assets/flags/GB.png" title="GB"></td>
+                                    <td data-sort='41095'><a href="/as/41095">AS41095</a></td>
+                                    <td class="smallonmobile nowrap">IPTP LTD</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='DE' class="nowrap ns"><img class="flag-img" src="/assets/flags/DE.png" title="DE"></td>
+                                    <td data-sort='8767'><a href="/as/8767">AS8767</a></td>
+                                    <td class="smallonmobile nowrap">M-net Telekommunikations GmbH</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='15169'><a href="/as/15169">AS15169</a></td>
+                                    <td class="smallonmobile nowrap">Google LLC</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='PL' class="nowrap ns"><img class="flag-img" src="/assets/flags/PL.png" title="PL"></td>
+                                    <td data-sort='24724'><a href="/as/24724">AS24724</a></td>
+                                    <td class="smallonmobile nowrap">Atman Sp. z o.o.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='GR' class="nowrap ns"><img class="flag-img" src="/assets/flags/GR.png" title="GR"></td>
+                                    <td data-sort='12713'><a href="/as/12713">AS12713</a></td>
+                                    <td class="smallonmobile nowrap">Ote SA (Hellenic Telecommunications Organisation)</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='LU' class="nowrap ns"><img class="flag-img" src="/assets/flags/LU.png" title="LU"></td>
+                                    <td data-sort='6661'><a href="/as/6661">AS6661</a></td>
+                                    <td class="smallonmobile nowrap">POST Luxembourg</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='AT' class="nowrap ns"><img class="flag-img" src="/assets/flags/AT.png" title="AT"></td>
+                                    <td data-sort='8447'><a href="/as/8447">AS8447</a></td>
+                                    <td class="smallonmobile nowrap">A1 Telekom Austria AG</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='DE' class="nowrap ns"><img class="flag-img" src="/assets/flags/DE.png" title="DE"></td>
+                                    <td data-sort='8648'><a href="/as/8648">AS8648</a></td>
+                                    <td class="smallonmobile nowrap">dogado GmbH</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='NL' class="nowrap ns"><img class="flag-img" src="/assets/flags/NL.png" title="NL"></td>
+                                    <td data-sort='8455'><a href="/as/8455">AS8455</a></td>
+                                    <td class="smallonmobile nowrap">atom86 BV</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='DE' class="nowrap ns"><img class="flag-img" src="/assets/flags/DE.png" title="DE"></td>
+                                    <td data-sort='12337'><a href="/as/12337">AS12337</a></td>
+                                    <td class="smallonmobile nowrap">noris network AG</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='BE' class="nowrap ns"><img class="flag-img" src="/assets/flags/BE.png" title="BE"></td>
+                                    <td data-sort='31449'><a href="/as/31449">AS31449</a></td>
+                                    <td class="smallonmobile nowrap">BELCENTER SA</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='DE' class="nowrap ns"><img class="flag-img" src="/assets/flags/DE.png" title="DE"></td>
+                                    <td data-sort='9145'><a href="/as/9145">AS9145</a></td>
+                                    <td class="smallonmobile nowrap">EWE TEL GmbH</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='UA' class="nowrap ns"><img class="flag-img" src="/assets/flags/UA.png" title="UA"></td>
+                                    <td data-sort='13249'><a href="/as/13249">AS13249</a></td>
+                                    <td class="smallonmobile nowrap">PRIVATE JOINT STOCK COMPANY &#34;DATAGROUP&#34;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='DE' class="nowrap ns"><img class="flag-img" src="/assets/flags/DE.png" title="DE"></td>
+                                    <td data-sort='41692'><a href="/as/41692">AS41692</a></td>
+                                    <td class="smallonmobile nowrap">OpenCarrier eG</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='DE' class="nowrap ns"><img class="flag-img" src="/assets/flags/DE.png" title="DE"></td>
+                                    <td data-sort='20676'><a href="/as/20676">AS20676</a></td>
+                                    <td class="smallonmobile nowrap">Plusnet GmbH</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='PL' class="nowrap ns"><img class="flag-img" src="/assets/flags/PL.png" title="PL"></td>
+                                    <td data-sort='8308'><a href="/as/8308">AS8308</a></td>
+                                    <td class="smallonmobile nowrap">NAUKOWA I AKADEMICKA SIEC KOMPUTEROWA - PANSTWOWY INS...</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+
+
+
+                        <hr>
+                        <h3 id="downstreams">Downstreams<img class="flag-img" src="/assets/lightning.png" style="padding-left: 12px;" title="This information was fetched live at page load time" alt="This information was fetched live at page load time"/></h3>
+                        <table id="donotscrapebgptools-upstreamTableDowns" class="full-width-table">
+                            <thead class="sortable">
+                                
+                                <tr>
+                                    <th class="nowrap boldpls">  &nbsp;  </th>
+                                    <th data-sort-method='number'  class="boldpls">ASN</th>
+                                    <th class="nowrap boldpls">Description</th>
+                                    <th class="nowrap boldpls">IPv4</th>
+                                    <th class="nowrap boldpls">IPv6</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                <tr>
+                                    <td data-sort='IL' class="nowrap ns"><img class="flag-img" src="/assets/flags/IL.png" title="IL">
+                                        
+                                        </td>
+                                    <td data-sort='12400'><a href="/as/12400">AS12400</a></td>
+                                    <td class="smallonmobile nowrap">Partner Communications Ltd.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+
+                    </div>
+
+                    <div style="display: none" id="whois-page">
+                        
+                        
+                        <pre style="white-space: pre-wrap;">aut-num:        <a href="/AS9116">AS9116</a>
+as-name:        GOLDENLINES-ASN
+org:            <a href="https://apps.db.ripe.net/db-web-ui/query?searchtext=ORG-PCL2-RIPE">ORG-PCL2-RIPE</a>
+descr:          Partner Communications Main Autonomous System
+descr:          Hasivim 25 Petach-Tikva, Israel
+remarks:        -------------------------------------------------
+remarks:        IPv4 PEERING`
+remarks:        -------------------------------------------------
+import:         from <a href="/AS42475">AS42475</a> accept <a href="/AS42475">AS42475</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS42475">AS42475</a> announce ANY
+export:         to <a href="/AS30744">AS30744</a> announce ANY
+export:         to <a href="/AS44060">AS44060</a> announce ANY
+export:         to <a href="/AS12802">AS12802</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+export:         to <a href="/AS16061">AS16061</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+export:         to <a href="/AS30744">AS30744</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+export:         to <a href="/AS42994">AS42994</a> announce ANY
+export:         to <a href="/AS25237">AS25237</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+export:         to <a href="/AS42994">AS42994</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+export:         to <a href="/AS44060">AS44060</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+export:         to <a href="/AS43842">AS43842</a> announce ANY
+export:         to <a href="/AS57259">AS57259</a> announce ANY
+import:         from <a href="/AS57259">AS57259</a> accept <a href="/AS57259">AS57259</a> AND NOT {0.0.0.0/0}
+import:         from <a href="/AS30744">AS30744</a> accept <a href="/AS30744">AS30744</a> AND NOT {0.0.0.0/0}
+import:         from <a href="/AS44060">AS44060</a> accept <a href="/AS44060">AS44060</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS43194">AS43194</a> announce ANY
+export:         to <a href="/AS43194">AS43194</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS43194">AS43194</a> accept <a href="/AS43194">AS43194</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS27435">AS27435</a> announce ANY
+export:         to <a href="/AS42475">AS42475</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+export:         to <a href="/AS57259">AS57259</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+export:         to <a href="/AS50365">AS50365</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+export:         to <a href="/AS34583">AS34583</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+export:         to <a href="/AS47770">AS47770</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+export:         to <a href="/AS3356">AS3356</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+export:         to <a href="/AS201093">AS201093</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+export:         to <a href="/AS27435">AS27435</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+export:         to <a href="/AS34583">AS34583</a> announce ANY
+import:         from <a href="/AS27435">AS27435</a> accept <a href="/AS27435">AS27435</a> AND NOT {0.0.0.0/0}
+import:         from <a href="/AS29585">AS29585</a> accept <a href="/AS29585">AS29585</a> AND NOT {0.0.0.0/0}
+import:         from <a href="/AS61102">AS61102</a> accept <a href="/AS61102">AS61102</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS29585">AS29585</a> announce ANY
+export:         to <a href="/AS61102">AS61102</a> announce ANY
+export:         to <a href="/AS29585">AS29585</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+export:         to <a href="/AS61102">AS61102</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS702">AS702</a> action pref=100; accept ANY
+import:         from <a href="/AS35758">AS35758</a> action pref=100; accept ANY
+import:         from <a href="/AS50237">AS50237</a> accept <a href="/AS50237">AS50237</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS47155">AS47155</a> announce ANY
+export:         to <a href="/AS50237">AS50237</a> announce ANY
+export:         to <a href="/AS50237">AS50237</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+export:         to <a href="/AS43165">AS43165</a> announce ANY
+import:         from <a href="/AS43165">AS43165</a> accept <a href="/AS43165">AS43165</a> AND NOT {0.0.0.0/0}
+import:         from <a href="/AS3257">AS3257</a> action pref=100; accept ANY
+import:         from <a href="/AS3356">AS3356</a> action pref=100; accept ANY
+import:         from <a href="/AS5585">AS5585</a> action pref=100; accept ANY
+import:         from <a href="/AS6762">AS6762</a> action pref=100; accept ANY
+import:         from <a href="/AS3491">AS3491</a> action pref=100; accept ANY
+import:         from <a href="/AS5486">AS5486</a> accept ANY
+import:         from <a href="/AS109">AS109</a> accept <a href="/AS109">AS109</a> AND NOT {0.0.0.0/0}
+import:         from <a href="/AS47155">AS47155</a> accept ANY AND NOT {0.0.0.0/0}
+import:         from <a href="/AS42994">AS42994</a> accept <a href="/AS42994">AS42994</a> AND NOT {0.0.0.0/0}
+import:         from <a href="/AS12400">AS12400</a> accept <a href="/AS12400">AS12400</a> AND NOT {0.0.0.0/0}
+import:         from <a href="/AS1628">AS1628</a> accept <a href="/AS1628">AS1628</a> AND NOT {0.0.0.0/0}
+import:         from <a href="/AS3381">AS3381</a> accept <a href="/AS3381">AS3381</a> AND NOT {0.0.0.0/0}
+import:         from <a href="/AS31092">AS31092</a> accept <a href="/AS31092">AS31092</a> AND NOT {0.0.0.0/0}
+import:         from <a href="/AS4148">AS4148</a> accept <a href="/as-set/AS-ACTCOM">AS-ACTCOM</a> AND NOT {0.0.0.0/0}
+import:         from <a href="/AS4983">AS4983</a> accept <a href="/AS4983">AS4983</a> AND NOT {0.0.0.0/0}
+import:         from <a href="/AS5540">AS5540</a> accept <a href="/AS5540">AS5540</a> AND NOT {0.0.0.0/0}
+import:         from <a href="/AS6888">AS6888</a> accept <a href="/AS6888">AS6888</a> AND NOT {0.0.0.0/0}
+import:         from <a href="/AS7762">AS7762</a> accept <a href="/AS7762">AS7762</a> AND NOT {0.0.0.0/0}
+import:         from <a href="/AS8203">AS8203</a> accept <a href="/AS8203">AS8203</a> AND NOT {0.0.0.0/0}
+import:         from <a href="/AS8376">AS8376</a> accept ANY AND NOT {0.0.0.0/0}
+import:         from <a href="/AS8513">AS8513</a> accept ANY AND NOT {0.0.0.0/0}
+import:         from <a href="/AS8697">AS8697</a> accept ANY AND NOT {0.0.0.0/0}
+import:         from <a href="/AS8738">AS8738</a> accept ANY AND NOT {0.0.0.0/0}
+import:         from <a href="/AS8867">AS8867</a> accept ANY AND NOT {0.0.0.0/0}
+import:         from <a href="/AS8894">AS8894</a> accept ANY AND NOT {0.0.0.0/0}
+import:         from <a href="/AS62571">AS62571</a> accept ANY AND NOT {0.0.0.0/0}
+import:         from <a href="/AS8934">AS8934</a> accept ANY AND NOT {0.0.0.0/0}
+import:         from <a href="/AS8944">AS8944</a> accept ANY AND NOT {0.0.0.0/0}
+import:         from <a href="/AS8958">AS8958</a> accept ANY AND NOT {0.0.0.0/0}
+import:         from <a href="/AS9038">AS9038</a> accept ANY AND NOT {0.0.0.0/0}
+import:         from <a href="/AS9079">AS9079</a> accept ANY AND NOT {0.0.0.0/0}
+import:         from <a href="/AS9117">AS9117</a> accept ANY AND NOT {0.0.0.0/0}
+import:         from <a href="/AS12441">AS12441</a> accept <a href="/AS12441">AS12441</a> AND NOT {0.0.0.0/0}
+import:         from <a href="/AS12491">AS12491</a> accept ANY AND NOT {0.0.0.0/0}
+import:         from <a href="/AS12524">AS12524</a> accept ANY AND NOT {0.0.0.0/0}
+import:         from <a href="/AS12619">AS12619</a> accept ANY AND NOT {0.0.0.0/0}
+import:         from <a href="/AS12671">AS12671</a> accept ANY AND NOT {0.0.0.0/0}
+import:         from <a href="/AS12736">AS12736</a> accept ANY AND NOT {0.0.0.0/0}
+import:         from <a href="/AS12749">AS12749</a> accept ANY AND NOT {0.0.0.0/0}
+import:         from <a href="/AS12753">AS12753</a> accept ANY AND NOT {0.0.0.0/0}
+import:         from <a href="/AS12849">AS12849</a> accept ANY AND NOT {0.0.0.0/0}
+import:         from <a href="/AS12975">AS12975</a> accept ANY AND NOT {0.0.0.0/0}
+import:         from <a href="/AS15445">AS15445</a> accept ANY AND NOT {0.0.0.0/0}
+import:         from <a href="/AS15466">AS15466</a> accept ANY AND NOT {0.0.0.0/0}
+import:         from <a href="/AS15484">AS15484</a> accept ANY AND NOT {0.0.0.0/0}
+import:         from <a href="/AS15686">AS15686</a> accept ANY AND NOT {0.0.0.0/0}
+import:         from <a href="/AS15708">AS15708</a> accept ANY AND NOT {0.0.0.0/0}
+import:         from <a href="/AS15707">AS15707</a> accept ANY AND NOT {0.0.0.0/0}
+import:         from <a href="/AS16248">AS16248</a> accept ANY AND NOT {0.0.0.0/0}
+import:         from <a href="/AS16240">AS16240</a> accept <a href="/AS16240">AS16240</a> AND NOT {0.0.0.0/0}
+import:         from <a href="/AS19239">AS19239</a> accept ANY AND NOT {0.0.0.0/0}
+import:         from <a href="/AS20480">AS20480</a> accept ANY AND NOT {0.0.0.0/0}
+import:         from <a href="/AS20645">AS20645</a> accept <a href="/AS20645">AS20645</a> AND NOT {0.0.0.0/0}
+import:         from <a href="/AS21088">AS21088</a> accept ANY AND NOT {0.0.0.0/0}
+import:         from <a href="/AS21133">AS21133</a> accept <a href="/AS21133">AS21133</a> AND NOT {0.0.0.0/0}
+import:         from <a href="/AS21350">AS21350</a> accept ANY AND NOT {0.0.0.0/0}
+import:         from <a href="/AS21363">AS21363</a> accept ANY AND NOT {0.0.0.0/0}
+import:         from <a href="/AS21486">AS21486</a> accept ANY AND NOT {0.0.0.0/0}
+import:         from <a href="/AS24652">AS24652</a> accept ANY AND NOT {0.0.0.0/0}
+import:         from <a href="/AS25003">AS25003</a> accept ANY AND NOT {0.0.0.0/0}
+import:         from <a href="/AS25046">AS25046</a> accept <a href="/AS25046">AS25046</a> AND NOT {0.0.0.0/0}
+import:         from <a href="/AS25080">AS25080</a> accept <a href="/AS25080">AS25080</a> AND NOT {0.0.0.0/0}
+import:         from <a href="/AS25125">AS25125</a> accept <a href="/AS25125">AS25125</a> AND NOT {0.0.0.0/0}
+import:         from <a href="/AS34583">AS34583</a> accept <a href="/AS34583">AS34583</a> AND NOT {0.0.0.0/0}
+import:         from <a href="/AS25237">AS25237</a> accept <a href="/AS25237">AS25237</a> AND NOT {0.0.0.0/0}
+import:         from <a href="/AS25380">AS25380</a> accept <a href="/AS25380">AS25380</a> AND NOT {0.0.0.0/0}
+import:         from <a href="/AS25565">AS25565</a> accept <a href="/AS25565">AS25565</a> AND NOT {0.0.0.0/0}
+import:         from <a href="/AS16159">AS16159</a> accept <a href="/AS16159">AS16159</a> AND NOT {0.0.0.0/0}
+import:         from <a href="/AS25586">AS25586</a> accept <a href="/AS25586">AS25586</a> AND NOT {0.0.0.0/0}
+import:         from <a href="/AS29310">AS29310</a> accept <a href="/AS29310">AS29310</a> AND NOT {0.0.0.0/0}
+import:         from <a href="/AS31057">AS31057</a> accept <a href="/AS31057">AS31057</a> AND NOT {0.0.0.0/0}
+import:         from <a href="/AS31092">AS31092</a> accept <a href="/AS31092">AS31092</a> AND NOT {0.0.0.0/0}
+import:         from <a href="/AS12802">AS12802</a> accept <a href="/AS12802">AS12802</a> AND NOT {0.0.0.0/0}
+import:         from <a href="/AS31578">AS31578</a> accept <a href="/AS31578">AS31578</a> AND NOT {0.0.0.0/0}
+import:         from <a href="/AS34380">AS34380</a> accept <a href="/AS34380">AS34380</a> AND NOT {0.0.0.0/0}
+import:         from <a href="/AS34598">AS34598</a> accept <a href="/AS34598">AS34598</a> AND NOT {0.0.0.0/0}
+import:         from <a href="/AS34886">AS34886</a> accept <a href="/AS34886">AS34886</a> AND NOT {0.0.0.0/0}
+import:         from <a href="/AS35532">AS35532</a> accept <a href="/AS35532">AS35532</a> AND NOT {0.0.0.0/0}
+import:         from <a href="/AS35553">AS35553</a> accept <a href="/AS35553">AS35553</a> AND NOT {0.0.0.0/0}
+import:         from <a href="/AS39213">AS39213</a> accept <a href="/AS39213">AS39213</a> AND NOT {0.0.0.0/0}
+import:         from <a href="/AS41923">AS41923</a> accept <a href="/AS41923">AS41923</a> AND NOT {0.0.0.0/0}
+import:         from <a href="/AS41924">AS41924</a> accept <a href="/AS41924">AS41924</a> AND NOT {0.0.0.0/0}
+import:         from <a href="/AS42384">AS42384</a> accept <a href="/AS42384">AS42384</a> AND NOT {0.0.0.0/0}
+import:         from <a href="/AS43423">AS43423</a> accept <a href="/AS43423">AS43423</a> AND NOT {0.0.0.0/0}
+import:         from <a href="/AS43597">AS43597</a> accept <a href="/AS43597">AS43597</a> AND NOT {0.0.0.0/0}
+import:         from <a href="/AS43871">AS43871</a> accept <a href="/AS43871">AS43871</a> AND NOT {0.0.0.0/0}
+import:         from <a href="/AS44024">AS44024</a> accept <a href="/AS44024">AS44024</a> AND NOT {0.0.0.0/0}
+import:         from <a href="/AS44367">AS44367</a> accept <a href="/AS44367">AS44367</a> AND NOT {0.0.0.0/0}
+import:         from <a href="/AS44435">AS44435</a> accept <a href="/AS44435">AS44435</a> AND NOT {0.0.0.0/0}
+import:         from <a href="/AS44669">AS44669</a> accept <a href="/AS44669">AS44669</a> AND NOT {0.0.0.0/0}
+import:         from <a href="/AS47135">AS47135</a> accept <a href="/AS47135">AS47135</a> AND NOT {0.0.0.0/0}
+import:         from <a href="/AS47177">AS47177</a> accept <a href="/AS47177">AS47177</a> AND NOT {0.0.0.0/0}
+import:         from <a href="/AS47492">AS47492</a> accept <a href="/AS47492">AS47492</a> AND NOT {0.0.0.0/0}
+import:         from <a href="/AS47766">AS47766</a> accept <a href="/AS47766">AS47766</a> AND NOT {0.0.0.0/0}
+import:         from <a href="/AS60933">AS60933</a> accept <a href="/AS60933">AS60933</a> AND NOT {0.0.0.0/0}
+import:         from <a href="/AS47665">AS47665</a> accept <a href="/AS47665">AS47665</a> AND NOT {0.0.0.0/0}
+import:         from <a href="/AS47956">AS47956</a> accept <a href="/AS47956">AS47956</a> AND NOT {0.0.0.0/0}
+import:         from <a href="/AS48627">AS48627</a> accept <a href="/AS48627">AS48627</a> AND NOT {0.0.0.0/0}
+import:         from <a href="/AS35392">AS35392</a> accept <a href="/AS35392">AS35392</a> AND NOT {0.0.0.0/0}
+import:         from <a href="/AS43739">AS43739</a> accept <a href="/AS43739">AS43739</a> AND NOT {0.0.0.0/0}
+import:         from <a href="/AS48300">AS48300</a> accept <a href="/AS48300">AS48300</a> AND NOT {0.0.0.0/0}
+import:         from <a href="/AS49484">AS49484</a> accept <a href="/AS49484">AS49484</a> AND NOT {0.0.0.0/0}
+import:         from <a href="/AS13073">AS13073</a> accept <a href="/AS13073">AS13073</a> AND NOT {0.0.0.0/0}
+import:         from <a href="/AS49308">AS49308</a> accept <a href="/AS49308">AS49308</a> AND NOT {0.0.0.0/0}
+import:         from <a href="/AS6907">AS6907</a> accept <a href="/AS6907">AS6907</a> AND NOT {0.0.0.0/0}
+import:         from <a href="/AS39274">AS39274</a> accept <a href="/AS39274">AS39274</a> AND NOT {0.0.0.0/0}
+import:         from <a href="/AS15976">AS15976</a> accept <a href="/AS15976">AS15976</a> AND NOT {0.0.0.0/0}
+import:         from <a href="/AS42243">AS42243</a> accept <a href="/AS42243">AS42243</a> AND NOT {0.0.0.0/0}
+import:         from <a href="/AS43381">AS43381</a> accept <a href="/AS43381">AS43381</a> AND NOT {0.0.0.0/0}
+import:         from <a href="/AS49716">AS49716</a> accept <a href="/AS49716">AS49716</a> AND NOT {0.0.0.0/0}
+import:         from <a href="/AS49771">AS49771</a> accept <a href="/AS49771">AS49771</a> AND NOT {0.0.0.0/0}
+import:         from <a href="/AS28799">AS28799</a> accept <a href="/AS28799">AS28799</a> AND NOT {0.0.0.0/0}
+import:         from <a href="/AS50365">AS50365</a> accept <a href="/AS50365">AS50365</a> AND NOT {0.0.0.0/0}
+import:         from <a href="/AS50463">AS50463</a> accept <a href="/AS50463">AS50463</a> AND NOT {0.0.0.0/0}
+import:         from <a href="/AS49954">AS49954</a> accept <a href="/AS49954">AS49954</a> AND NOT {0.0.0.0/0}
+import:         from <a href="/AS51304">AS51304</a> accept <a href="/AS51304">AS51304</a> AND NOT {0.0.0.0/0}
+import:         from <a href="/AS47770">AS47770</a> accept ANY AND NOT {0.0.0.0/0}
+import:         from <a href="/AS22753">AS22753</a> accept <a href="/AS22753">AS22753</a> AND NOT {0.0.0.0/0}
+import:         from <a href="/AS51651">AS51651</a> accept <a href="/AS51651">AS51651</a> AND NOT {0.0.0.0/0}
+import:         from <a href="/AS51617">AS51617</a> accept <a href="/AS51617">AS51617</a> AND NOT {0.0.0.0/0}
+import:         from <a href="/AS197538">AS197538</a> accept <a href="/AS51651">AS51651</a> AND NOT {0.0.0.0/0}
+import:         from <a href="/AS714">AS714</a> accept <a href="/AS714">AS714</a> AND NOT {0.0.0.0/0}
+import:         from <a href="/AS16061">AS16061</a> accept <a href="/AS16061">AS16061</a> AND NOT {0.0.0.0/0}
+import:         from <a href="/AS13093">AS13093</a> accept <a href="/AS13093">AS13093</a> AND NOT {0.0.0.0/0}
+import:         from <a href="/AS201093">AS201093</a> accept <a href="/AS201093">AS201093</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS200107">AS200107</a> announce ANY
+export:         to <a href="/AS200107">AS200107</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS200107">AS200107</a> accept <a href="/AS200107">AS200107</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS42925">AS42925</a> announce ANY
+export:         to <a href="/AS42925">AS42925</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS42925">AS42925</a> accept <a href="/AS42925">AS42925</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS210515">AS210515</a> announce ANY
+export:         to <a href="/AS210515">AS210515</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS19527">AS19527</a> accept <a href="/AS19527">AS19527</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS19527">AS19527</a> announce ANY
+export:         to <a href="/AS19527">AS19527</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS393262">AS393262</a> accept <a href="/AS393262">AS393262</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS393262">AS393262</a> announce ANY
+export:         to <a href="/AS393262">AS393262</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS203020">AS203020</a> accept <a href="/AS203020">AS203020</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS203020">AS203020</a> announce ANY
+export:         to <a href="/AS203020">AS203020</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS62651">AS62651</a> accept <a href="/AS62651">AS62651</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS62651">AS62651</a> announce ANY
+export:         to <a href="/AS62651">AS62651</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS39343">AS39343</a> accept <a href="/AS39343">AS39343</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS39343">AS39343</a> announce ANY
+export:         to <a href="/AS39343">AS39343</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS20841">AS20841</a> accept <a href="/AS20841">AS20841</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS20841">AS20841</a> announce ANY
+export:         to <a href="/AS20841">AS20841</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS21363">AS21363</a> accept <a href="/AS21363">AS21363</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS21363">AS21363</a> announce ANY
+export:         to <a href="/AS21363">AS21363</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS212644">AS212644</a> accept <a href="/AS212644">AS212644</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS212644">AS212644</a> announce ANY
+export:         to <a href="/AS212644">AS212644</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS205484">AS205484</a> accept <a href="/AS205484">AS205484</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS205484">AS205484</a> announce ANY
+export:         to <a href="/AS205484">AS205484</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS207007">AS207007</a> accept <a href="/AS207007">AS207007</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS207007">AS207007</a> announce ANY
+export:         to <a href="/AS207007">AS207007</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS203110">AS203110</a> accept <a href="/AS203110">AS203110</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS203110">AS203110</a> announce ANY
+export:         to <a href="/AS203110">AS203110</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS504401">AS504401</a> accept <a href="/AS50440">AS50440</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS50440">AS50440</a> announce ANY
+export:         to <a href="/AS50440">AS50440</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS212361">AS212361</a> accept <a href="/AS212361">AS212361</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS212361">AS212361</a> announce ANY
+export:         to <a href="/AS212361">AS212361</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS396982">AS396982</a>  accept <a href="/AS396982">AS396982</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS396982">AS396982</a>  announce ANY
+export:         to <a href="/AS396982">AS396982</a>  announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS207987">AS207987</a> accept <a href="/AS207987">AS207987</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS207987">AS207987</a> announce ANY
+export:         to <a href="/AS207987">AS207987</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS207444">AS207444</a> accept <a href="/AS207444">AS207444</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS207444">AS207444</a> announce ANY
+export:         to <a href="/AS207444">AS207444</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS14778">AS14778</a> accept <a href="/AS14778">AS14778</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS14778">AS14778</a> announce ANY
+export:         to <a href="/AS14778">AS14778</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS208465">AS208465</a> accept <a href="/AS208465">AS208465</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS208465">AS208465</a> announce ANY
+export:         to <a href="/AS208465">AS208465</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS210515">AS210515</a> accept <a href="/AS210515">AS210515</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS206950">AS206950</a> announce ANY
+export:         to <a href="/AS206950">AS206950</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS206950">AS206950</a> accept <a href="/AS206950">AS206950</a> AND NOT {0.0.0.0/0}
+remarks:        ---------------------------------------------
+export:         to <a href="/AS702">AS702</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+export:         to <a href="/AS3257">AS3257</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+export:         to <a href="/AS5585">AS5585</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+export:         to <a href="/AS6762">AS6762</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+export:         to <a href="/AS3491">AS3491</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+export:         to <a href="/AS5486">AS5486</a> announce ANY
+export:         to <a href="/AS12400">AS12400</a> announce ANY
+export:         to <a href="/AS109">AS109</a> announce ANY
+export:         to <a href="/AS1628">AS1628</a> announce ANY
+export:         to <a href="/AS3381">AS3381</a> announce ANY
+export:         to <a href="/AS4148">AS4148</a> announce ANY
+export:         to <a href="/AS62571">AS62571</a> announce ANY
+export:         to <a href="/AS31092">AS31092</a> announce ANY
+export:         to <a href="/AS4983">AS4983</a> announce ANY
+export:         to <a href="/AS5540">AS5540</a> announce ANY
+export:         to <a href="/AS6888">AS6888</a> announce ANY
+export:         to <a href="/AS7762">AS7762</a> announce ANY
+export:         to <a href="/AS8203">AS8203</a> announce ANY
+export:         to <a href="/AS8376">AS8376</a> announce ANY
+export:         to <a href="/AS8513">AS8513</a> announce ANY
+export:         to <a href="/AS8697">AS8697</a> announce ANY
+export:         to <a href="/AS8738">AS8738</a> announce ANY
+export:         to <a href="/AS8867">AS8867</a> announce ANY
+export:         to <a href="/AS8894">AS8894</a> announce ANY
+export:         to <a href="/AS8934">AS8934</a> announce ANY
+export:         to <a href="/AS43381">AS43381</a> announce ANY
+export:         to <a href="/AS8944">AS8944</a> announce ANY
+export:         to <a href="/AS8958">AS8958</a> announce ANY
+export:         to <a href="/AS9038">AS9038</a> announce ANY
+export:         to <a href="/AS9079">AS9079</a> announce ANY
+export:         to <a href="/AS9117">AS9117</a> announce ANY
+export:         to <a href="/AS12441">AS12441</a> announce ANY
+export:         to <a href="/AS16159">AS16159</a> announce ANY
+export:         to <a href="/AS12491">AS12491</a> announce ANY
+export:         to <a href="/AS12524">AS12524</a> announce ANY
+export:         to <a href="/AS12619">AS12619</a> announce ANY
+export:         to <a href="/AS12671">AS12671</a> announce ANY
+export:         to <a href="/AS12736">AS12736</a> announce ANY
+export:         to <a href="/AS12749">AS12749</a> announce ANY
+export:         to <a href="/AS12753">AS12753</a> announce ANY
+export:         to <a href="/AS12802">AS12802</a> announce ANY
+export:         to <a href="/AS12849">AS12849</a> announce ANY
+export:         to <a href="/AS12975">AS12975</a> announce ANY
+export:         to <a href="/AS15445">AS15445</a> announce ANY
+export:         to <a href="/AS15466">AS15466</a> announce ANY
+export:         to <a href="/AS15484">AS15484</a> announce ANY
+export:         to <a href="/AS15686">AS15686</a> announce ANY
+export:         to <a href="/AS15708">AS15708</a> announce ANY
+export:         to <a href="/AS15707">AS15707</a> announce ANY
+export:         to <a href="/AS16248">AS16248</a> announce ANY
+export:         to <a href="/AS16240">AS16240</a> announce ANY
+export:         to <a href="/AS19239">AS19239</a> announce ANY
+export:         to <a href="/AS20480">AS20480</a> announce ANY
+export:         to <a href="/AS20645">AS20645</a> announce ANY
+export:         to <a href="/AS21088">AS21088</a> announce ANY
+export:         to <a href="/AS21133">AS21133</a> announce ANY
+export:         to <a href="/AS21350">AS21350</a> announce ANY
+export:         to <a href="/AS21363">AS21363</a> announce ANY
+export:         to <a href="/AS21486">AS21486</a> announce ANY
+export:         to <a href="/AS24652">AS24652</a> announce ANY
+export:         to <a href="/AS25003">AS25003</a> announce ANY
+export:         to <a href="/AS25046">AS25046</a> announce ANY
+export:         to <a href="/AS25080">AS25080</a> announce ANY
+export:         to <a href="/AS25125">AS25125</a> announce ANY
+export:         to <a href="/AS25237">AS25237</a> announce ANY
+export:         to <a href="/AS25380">AS25380</a> announce ANY
+export:         to <a href="/AS25565">AS25565</a> announce ANY
+export:         to <a href="/AS25586">AS25586</a> announce ANY
+export:         to <a href="/AS60933">AS60933</a> announce ANY
+export:         to <a href="/AS29310">AS29310</a> announce ANY
+export:         to <a href="/AS31057">AS31057</a> announce ANY
+export:         to <a href="/AS31092">AS31092</a> announce ANY
+export:         to <a href="/AS31578">AS31578</a> announce ANY
+export:         to <a href="/AS34380">AS34380</a> announce ANY
+export:         to <a href="/AS34598">AS34598</a> announce ANY
+export:         to <a href="/AS34886">AS34886</a> announce ANY
+export:         to <a href="/AS35532">AS35532</a> announce ANY
+export:         to <a href="/AS35553">AS35553</a> announce ANY
+export:         to <a href="/AS39213">AS39213</a> announce ANY
+export:         to <a href="/AS41923">AS41923</a> announce ANY
+export:         to <a href="/AS41924">AS41924</a> announce ANY
+export:         to <a href="/AS42384">AS42384</a> announce ANY
+export:         to <a href="/AS43423">AS43423</a> announce ANY
+export:         to <a href="/AS43597">AS43597</a> announce ANY
+export:         to <a href="/AS43871">AS43871</a> announce ANY
+export:         to <a href="/AS44024">AS44024</a> announce ANY
+export:         to <a href="/AS44367">AS44367</a> announce ANY
+export:         to <a href="/AS44435">AS44435</a> announce ANY
+export:         to <a href="/AS44669">AS44669</a> announce ANY
+export:         to <a href="/AS47135">AS47135</a> announce ANY
+export:         to <a href="/AS47177">AS47177</a> announce ANY
+export:         to <a href="/AS47492">AS47492</a> announce ANY
+export:         to <a href="/AS47766">AS47766</a> announce ANY
+export:         to <a href="/AS47665">AS47665</a> announce ANY
+export:         to <a href="/AS47956">AS47956</a> announce ANY
+export:         to <a href="/AS48627">AS48627</a> announce ANY
+export:         to <a href="/AS35392">AS35392</a> announce ANY
+export:         to <a href="/AS43739">AS43739</a> announce ANY
+export:         to <a href="/AS48300">AS48300</a> announce ANY
+export:         to <a href="/AS49484">AS49484</a> announce ANY
+export:         to <a href="/AS13073">AS13073</a> announce ANY
+export:         to <a href="/AS49308">AS49308</a> announce ANY
+export:         to <a href="/AS6907">AS6907</a> announce ANY
+export:         to <a href="/AS39274">AS39274</a> announce ANY
+export:         to <a href="/AS15976">AS15976</a> announce ANY
+export:         to <a href="/AS42243">AS42243</a> announce ANY
+export:         to <a href="/AS49716">AS49716</a> announce ANY
+export:         to <a href="/AS49771">AS49771</a> announce ANY
+export:         to <a href="/AS28799">AS28799</a> announce ANY
+export:         to <a href="/AS50365">AS50365</a> announce ANY
+export:         to <a href="/AS50463">AS50463</a> announce ANY
+export:         to <a href="/AS49954">AS49954</a> announce ANY
+export:         to <a href="/AS51304">AS51304</a> announce ANY
+export:         to <a href="/AS47770">AS47770</a> announce ANY
+export:         to <a href="/AS22753">AS22753</a> announce ANY
+export:         to <a href="/AS51651">AS51651</a> announce ANY
+export:         to <a href="/AS51617">AS51617</a> announce ANY
+export:         to <a href="/AS197538">AS197538</a> announce ANY
+export:         to <a href="/AS714">AS714</a> announce ANY
+export:         to <a href="/AS16061">AS16061</a> announce ANY
+export:         to <a href="/AS13093">AS13093</a> announce ANY
+export:         to <a href="/AS201093">AS201093</a> announce ANY
+export:         to <a href="/AS210371">AS210371</a> announce ANY
+export:         to <a href="/AS210371">AS210371</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS210371">AS210371</a> accept <a href="/AS210371">AS210371</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS43438">AS43438</a> announce ANY
+export:         to <a href="/AS43438">AS43438</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS43438">AS43438</a> accept <a href="/AS43438">AS43438</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS47961">AS47961</a> announce ANY
+export:         to <a href="/AS47961">AS47961</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS47961">AS47961</a> accept <a href="/AS47961">AS47961</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS199524">AS199524</a> announce <a href="/as-set/AS-GCORE">AS-GCORE</a>
+import:         from <a href="/AS199524">AS199524</a> accept <a href="/AS199524">AS199524</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS34919">AS34919</a> announce ANY
+export:         to <a href="/AS34919">AS34919</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS34919">AS34919</a> accept <a href="/AS34919">AS34919</a> AND NOT {0.0.0.0/0}
+remarks:        -------------------------------------------------
+remarks:        IPv6 PEERING
+remarks:        -------------------------------------------------
+mp-import:      afi ipv6.unicast from <a href="/AS702">AS702</a> action pref=100; accept ANY
+mp-import:      afi ipv6.unicast from <a href="/AS3356">AS3356</a> action pref=100; accept ANY
+mp-import:      afi ipv6.unicast from <a href="/AS3257">AS3257</a> action pref=100; accept ANY
+mp-import:      afi ipv6.unicast from <a href="/AS5585">AS5585</a> action pref=100; accept ANY
+mp-import:      afi ipv6.unicast from <a href="/AS6762">AS6762</a> action pref=100; accept ANY
+mp-import:      afi ipv6.unicast from <a href="/AS3491">AS3491</a> action pref=100; accept ANY
+mp-import:      afi ipv6.unicast from <a href="/AS5486">AS5486</a> action pref=100; accept ANY
+mp-import:      afi ipv6.unicast from <a href="/AS35758">AS35758</a> action pref=100; accept ANY
+remarks:        ---------------------------------------------
+mp-export:      afi ipv6.unicast to <a href="/AS702">AS702</a> announce <a href="/as-set/AS9116:AS-V6">AS9116:AS-V6</a>
+mp-export:      afi ipv6.unicast to <a href="/AS35758">AS35758</a> announce <a href="/as-set/AS9116:AS-V6">AS9116:AS-V6</a>
+mp-export:      afi ipv6.unicast to <a href="/AS3356">AS3356</a> announce <a href="/as-set/AS9116:AS-V6">AS9116:AS-V6</a>
+mp-export:      afi ipv6.unicast to <a href="/AS3257">AS3257</a> announce <a href="/as-set/AS9116:AS-V6">AS9116:AS-V6</a>
+mp-export:      afi ipv6.unicast to <a href="/AS5585">AS5585</a> announce <a href="/as-set/AS9116:AS-V6">AS9116:AS-V6</a>
+mp-export:      afi ipv6.unicast to <a href="/AS6762">AS6762</a> announce <a href="/as-set/AS9116:AS-V6">AS9116:AS-V6</a>
+mp-export:      afi ipv6.unicast to <a href="/AS3491">AS3491</a> announce <a href="/as-set/AS9116:AS-V6">AS9116:AS-V6</a>
+mp-export:      afi ipv6.unicast to <a href="/AS5486">AS5486</a> announce <a href="/as-set/AS9116:AS-V6">AS9116:AS-V6</a>
+remarks:        -------------------------------------------------
+remarks:        LINX PEERING (London Internet Exchange)
+remarks:        -------------------------------------------------
+import:         from <a href="/AS8714">AS8714</a> accept ANY AND NOT {0.0.0.0/0}
+export:         to <a href="/AS8714">AS8714</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS5459">AS5459</a> accept <a href="/as-set/AS-LINX">AS-LINX</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS5459">AS5459</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS32934">AS32934</a> accept <a href="/as-set/AS-FACEBOOK">AS-FACEBOOK</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS32934">AS32934</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS30094">AS30094</a> accept <a href="/as-set/AS-GIGANEWS-ALL">AS-GIGANEWS-ALL</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS30094">AS30094</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS24851">AS24851</a> accept <a href="/as-set/AS-NETCETERA">AS-NETCETERA</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS24851">AS24851</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+export:         to <a href="/AS16159">AS16159</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+export:         to <a href="/AS31092">AS31092</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS15773">AS15773</a> accept <a href="/as-set/AS-INCLARITY">AS-INCLARITY</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS15773">AS15773</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS35916">AS35916</a> accept <a href="/AS35916">AS35916</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS35916">AS35916</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS9002">AS9002</a> accept <a href="/as-set/AS-RETN">AS-RETN</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS9002">AS9002</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS39326">AS39326</a> accept <a href="/as-set/AS-GOSCOMB">AS-GOSCOMB</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS39326">AS39326</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS44654">AS44654</a> accept <a href="/as-set/AS-MNS">AS-MNS</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS44654">AS44654</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS12337">AS12337</a> accept <a href="/as-set/AS-NORIS">AS-NORIS</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS12337">AS12337</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS15830">AS15830</a> accept <a href="/as-set/AS-TELECITYGROUP">AS-TELECITYGROUP</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS15830">AS15830</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS6894">AS6894</a> accept <a href="/as-set/AS-KDDIEU">AS-KDDIEU</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS6894">AS6894</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS5089">AS5089</a> accept <a href="/as-set/AS-NTLI">AS-NTLI</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS5089">AS5089</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS20547">AS20547</a> accept <a href="/as-set/AS-UKS">AS-UKS</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS20547">AS20547</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS8068">AS8068</a> accept <a href="/as-set/AS-MICROSOFT">AS-MICROSOFT</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS8068">AS8068</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS6939">AS6939</a> accept <a href="/as-set/AS-HURRICANE">AS-HURRICANE</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS6939">AS6939</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS8560">AS8560</a> accept <a href="/as-set/AS-1AND1">AS-1AND1</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS8560">AS8560</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS15533">AS15533</a> accept <a href="/as-set/AS-SASEUROPE">AS-SASEUROPE</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS15533">AS15533</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS22212">AS22212</a> accept <a href="/as-set/AS-INTERNAP">AS-INTERNAP</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS22212">AS22212</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS16265">AS16265</a> accept <a href="/as-set/AS-LEASEWEB">AS-LEASEWEB</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS16265">AS16265</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS36408">AS36408</a> accept <a href="/as-set/AS-PANTHER">AS-PANTHER</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS36408">AS36408</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS2119">AS2119</a> accept <a href="/as-set/AS-TELENOR">AS-TELENOR</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS2119">AS2119</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS44042">AS44042</a> accept <a href="/as-set/AS-ROOT">AS-ROOT</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS44042">AS44042</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS16353">AS16353</a> accept <a href="/as-set/AS-MERULA">AS-MERULA</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS16353">AS16353</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS13445">AS13445</a> accept <a href="/AS13445">AS13445</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS13445">AS13445</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS9498">AS9498</a> accept <a href="/AS9498">AS9498</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS9498">AS9498</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS20940">AS20940</a> accept <a href="/as-set/AS-AKAMAI">AS-AKAMAI</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS20940">AS20940</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS5580">AS5580</a> accept <a href="/as-set/AS-ATRATO">AS-ATRATO</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS5580">AS5580</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS20485">AS20485</a> accept <a href="/as-set/AS-TTK">AS-TTK</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS20485">AS20485</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS34655">AS34655</a> accept <a href="/as-set/AS-DOCLER">AS-DOCLER</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS34655">AS34655</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS6661">AS6661</a> accept <a href="/as-set/AS-PTLU">AS-PTLU</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS6661">AS6661</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS39792">AS39792</a> accept <a href="/as-set/AS-ANDERS">AS-ANDERS</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS39792">AS39792</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS9318">AS9318</a> accept <a href="/AS9318">AS9318</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS9318">AS9318</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS12874">AS12874</a> accept <a href="/as-set/AS-FASTWEB-GLOBAL">AS-FASTWEB-GLOBAL</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS12874">AS12874</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS29208">AS29208</a> accept <a href="/as-set/AS-DIALTELECOM">AS-DIALTELECOM</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS29208">AS29208</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS12859">AS12859</a> accept <a href="/as-set/AS-BIT">AS-BIT</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS12859">AS12859</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS8422">AS8422</a> accept <a href="/as-set/AS-NETCOLOGNE">AS-NETCOLOGNE</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS8422">AS8422</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS13030">AS13030</a> accept <a href="/as-set/AS-INIT7">AS-INIT7</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS13030">AS13030</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS5588">AS5588</a> accept <a href="/as-set/AS-GTS-CE">AS-GTS-CE</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS5588">AS5588</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS12399">AS12399</a> accept <a href="/as-set/AS-SPXS">AS-SPXS</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS12399">AS12399</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS24931">AS24931</a> accept <a href="/as-set/AS-DEDIPOWER">AS-DEDIPOWER</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS24931">AS24931</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS12989">AS12989</a> accept <a href="/as-set/AS-HIGHWINDS">AS-HIGHWINDS</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS12989">AS12989</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS8657">AS8657</a> accept <a href="/as-set/AS-CPRM">AS-CPRM</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS8657">AS8657</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS41690">AS41690</a> accept <a href="/as-set/AS-DAILYMOTION">AS-DAILYMOTION</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS41690">AS41690</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS31500">AS31500</a> accept <a href="/as-set/AS-GLOBAL-NET">AS-GLOBAL-NET</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS31500">AS31500</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS10310">AS10310</a> accept <a href="/as-set/AS-YAHOO">AS-YAHOO</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS10310">AS10310</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS46786">AS46786</a> accept <a href="/as-set/AS-IPTRANSIT">AS-IPTRANSIT</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS46786">AS46786</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS6677">AS6677</a> accept <a href="/as-set/AS-ICENET">AS-ICENET</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS6677">AS6677</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS35228">AS35228</a> accept <a href="/AS35228">AS35228</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS35228">AS35228</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS15133">AS15133</a> accept <a href="/as-set/AS-EDGECAST">AS-EDGECAST</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS15133">AS15133</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS34309">AS34309</a> accept <a href="/as-set/AS-LINK11">AS-LINK11</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS34309">AS34309</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS8586">AS8586</a> accept <a href="/as-set/AS-OBSL">AS-OBSL</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS8586">AS8586</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS3303">AS3303</a> accept <a href="/as-set/AS-SWCMGLOBAL">AS-SWCMGLOBAL</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS3303">AS3303</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS9044">AS9044</a> accept <a href="/as-set/AS-SOLNET">AS-SOLNET</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS9044">AS9044</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS28929">AS28929</a> accept <a href="/as-set/AS-ASDASD">AS-ASDASD</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS28929">AS28929</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS20976">AS20976</a> accept <a href="/as-set/AS-HOTLINKS-LINX">AS-HOTLINKS-LINX</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS20976">AS20976</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS34245">AS34245</a> accept <a href="/as-set/AS-MAGNETLOCAL">AS-MAGNETLOCAL</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS34245">AS34245</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS32787">AS32787</a> accept <a href="/as-set/AS-PROLE">AS-PROLE</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS32787">AS32787</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS38082">AS38082</a> accept <a href="/AS38082">AS38082</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS38082">AS38082</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS31727">AS31727</a> accept <a href="/as-set/AS-NODE4">AS-NODE4</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS31727">AS31727</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS12715">AS12715</a> accept <a href="/as-set/AS-JAZZTRANS">AS-JAZZTRANS</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS12715">AS12715</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS6656">AS6656</a> accept <a href="/as-set/AS-STG">AS-STG</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS6656">AS6656</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS30914">AS30914</a> accept <a href="/as-set/AS-IOKO">AS-IOKO</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS30914">AS30914</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS64597">AS64597</a> accept <a href="/as-set/AS-IOKO">AS-IOKO</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS64597">AS64597</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS15766">AS15766</a> accept <a href="/as-set/AS-DOMICILIUM">AS-DOMICILIUM</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS15766">AS15766</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS3741">AS3741</a> accept <a href="/as-set/AS-IS">AS-IS</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS3741">AS3741</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS41197">AS41197</a> accept <a href="/as-set/AS-SWITCHMEDIA">AS-SWITCHMEDIA</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS41197">AS41197</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS8190">AS8190</a> accept <a href="/as-set/AS-VIATEL">AS-VIATEL</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS8190">AS8190</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS25577">AS25577</a> accept <a href="/as-set/AS-C4L">AS-C4L</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS25577">AS25577</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS6327">AS6327</a> accept <a href="/AS6327">AS6327</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS6327">AS6327</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS22822">AS22822</a> accept <a href="/as-set/AS-LLNW">AS-LLNW</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS22822">AS22822</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS49629">AS49629</a> accept <a href="/AS49629">AS49629</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS49629">AS49629</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS35751">AS35751</a> accept <a href="/as-set/AS-WFCS">AS-WFCS</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS35751">AS35751</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS14076">AS14076</a> accept <a href="/as-set/AS-FATTOC">AS-FATTOC</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS14076">AS14076</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS5564">AS5564</a> accept <a href="/AS5564">AS5564</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS5564">AS5564</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS5430">AS5430</a> accept <a href="/as-set/AS-FREENETDE">AS-FREENETDE</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS5430">AS5430</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS21396">AS21396</a> accept <a href="/as-set/AS-NETCONNEX">AS-NETCONNEX</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS21396">AS21396</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS16276">AS16276</a> accept <a href="/as-set/AS-OVH">AS-OVH</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS16276">AS16276</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS34305">AS34305</a> accept <a href="/as-set/AS-EUROACCESS">AS-EUROACCESS</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS34305">AS34305</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS39757">AS39757</a> accept <a href="/as-set/AS-UKGRID">AS-UKGRID</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS39757">AS39757</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS8881">AS8881</a> accept <a href="/as-set/AS-VT-TRANSIT">AS-VT-TRANSIT</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS8881">AS8881</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS13285">AS13285</a> accept <a href="/as-set/AS-OPAL">AS-OPAL</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS13285">AS13285</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS8897">AS8897</a> accept <a href="/as-set/AS-MISTRAL">AS-MISTRAL</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS8897">AS8897</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS34816">AS34816</a> accept <a href="/as-set/AS-AEG">AS-AEG</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS34816">AS34816</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS15444">AS15444</a> accept <a href="/as-set/AS-NETSERVICES">AS-NETSERVICES</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS15444">AS15444</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS21844">AS21844</a> accept <a href="/as-set/AS-THEPLANET">AS-THEPLANET</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS21844">AS21844</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS11666">AS11666</a> accept <a href="/as-set/AS-NEXICOM">AS-NEXICOM</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS11666">AS11666</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS2603">AS2603</a> accept <a href="/as-set/AS-NORDUNET">AS-NORDUNET</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS2603">AS2603</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS42689">AS42689</a> accept <a href="/as-set/AS-INUK">AS-INUK</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS42689">AS42689</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS20500">AS20500</a> accept <a href="/as-set/AS-GRIFFIN">AS-GRIFFIN</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS20500">AS20500</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS8781">AS8781</a> accept <a href="/as-set/AS-QTEL-SET">AS-QTEL-SET</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS8781">AS8781</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS31715">AS31715</a> accept <a href="/as-set/AS-NETRINO">AS-NETRINO</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS31715">AS31715</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS3213">AS3213</a> accept <a href="/as-set/AS-BOGONS">AS-BOGONS</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS3213">AS3213</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS8553">AS8553</a> accept <a href="/as-set/AS-AVENSYS">AS-AVENSYS</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS8553">AS8553</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS12552">AS12552</a> accept <a href="/as-set/AS-IPO">AS-IPO</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS12552">AS12552</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS9145">AS9145</a> accept <a href="/as-set/AS-EWETEL">AS-EWETEL</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS9145">AS9145</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS6871">AS6871</a> accept <a href="/as-set/AS-PLUSNETUK">AS-PLUSNETUK</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS6871">AS6871</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS9191">AS9191</a> accept <a href="/as-set/AS-NEWNET">AS-NEWNET</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS9191">AS9191</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS42">AS42</a> accept <a href="/as-set/AS-PCH">AS-PCH</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS42">AS42</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS3856">AS3856</a> accept <a href="/as-set/AS-PCH">AS-PCH</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS3856">AS3856</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS12350">AS12350</a> accept <a href="/as-set/AS-VTX">AS-VTX</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS12350">AS12350</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS6854">AS6854</a> accept <a href="/as-set/AS-SYNTERRA">AS-SYNTERRA</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS6854">AS6854</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS19151">AS19151</a> accept <a href="/as-set/AS-BBOI">AS-BBOI</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS19151">AS19151</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS29527">AS29527</a> accept <a href="/as-set/AS-OTHELLOTECH">AS-OTHELLOTECH</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS29527">AS29527</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS25061">AS25061</a> accept <a href="/as-set/AS-ANLX">AS-ANLX</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS225061">AS225061</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+remarks:        -------------------------------------------------
+remarks:        DE-CIX PEERING (German Internet Exchange)
+remarks:        -------------------------------------------------
+import:         from <a href="/AS6695">AS6695</a> accept <a href="/as-set/AS-DECIX">AS-DECIX</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS6695">AS6695</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS21336">AS21336</a> accept <a href="/as-set/AS-IR">AS-IR</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS21336">AS21336</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS12874">AS12874</a> accept <a href="/as-set/AS-FASTWEB-GLOBAL">AS-FASTWEB-GLOBAL</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS12874">AS12874</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS6724">AS6724</a> accept <a href="/as-set/AS-STRATORZ">AS-STRATORZ</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS6724">AS6724</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS29208">AS29208</a> accept <a href="/as-set/AS-DIALTELECOM">AS-DIALTELECOM</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS29208">AS29208</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS24724">AS24724</a> accept <a href="/as-set/AS24724:AS-FOREIGN">AS24724:AS-FOREIGN</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS24724">AS24724</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS42416">AS42416</a> accept <a href="/as-set/AS-COMNET">AS-COMNET</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS42416">AS42416</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS8365">AS8365</a> accept <a href="/as-set/AS-MANDA">AS-MANDA</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS8365">AS8365</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS47195">AS47195</a> accept <a href="/as-set/AS-GAMEFORGE">AS-GAMEFORGE</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS47195">AS47195</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS36408">AS36408</a> accept <a href="/as-set/AS-PANTHER">AS-PANTHER</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS36408">AS36408</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS5605">AS5605</a> accept <a href="/as-set/AS-NETUSE">AS-NETUSE</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS5605">AS5605</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS12859">AS12859</a> accept <a href="/as-set/AS-BIT">AS-BIT</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS12859">AS12859</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS8422">AS8422</a> accept <a href="/as-set/AS-NETCOLOGNE">AS-NETCOLOGNE</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS8422">AS8422</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS201152">AS201152</a> accept <a href="/AS201152">AS201152</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS201152">AS201152</a> announce ANY
+export:         to <a href="/AS201152">AS201152</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS33891">AS33891</a> accept <a href="/as-set/AS-CORE-BACKBONE">AS-CORE-BACKBONE</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS33891">AS33891</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS13030">AS13030</a> accept <a href="/as-set/AS-INIT7">AS-INIT7</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS13030">AS13030</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS5588">AS5588</a> accept <a href="/as-set/AS-GTS-CE">AS-GTS-CE</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS5588">AS5588</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS5580">AS5580</a> accept <a href="/as-set/AS-ATRATO">AS-ATRATO</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS5580">AS5580</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS20940">AS20940</a> accept <a href="/as-set/AS-AKAMAI">AS-AKAMAI</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS20940">AS20940</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS29686">AS29686</a> accept <a href="/as-set/AS-PROBENETWORKS">AS-PROBENETWORKS</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS29686">AS29686</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS12615">AS12615</a> accept <a href="/as-set/AS-CABLETEL">AS-CABLETEL</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS12615">AS12615</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS12399">AS12399</a> accept <a href="/as-set/AS-SPXS">AS-SPXS</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS12399">AS12399</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS9063">AS9063</a> accept <a href="/as-set/AS-SAARGATE">AS-SAARGATE</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS9063">AS9063</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS12611">AS12611</a> accept <a href="/as-set/AS-RKOM">AS-RKOM</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS12611">AS12611</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS33873">AS33873</a> accept <a href="/as-set/AS-ARVATO">AS-ARVATO</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS33873">AS33873</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS39257">AS39257</a> accept <a href="/as-set/AS-INC">AS-INC</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS39257">AS39257</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS15830">AS15830</a> accept <a href="/as-set/AS-TELECITYGROUP">AS-TELECITYGROUP</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS15830">AS15830</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS41692">AS41692</a> accept <a href="/as-set/AS-OPENCARRIER">AS-OPENCARRIER</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS41692">AS41692</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS12989">AS12989</a> accept <a href="/as-set/AS-HIGHWINDS">AS-HIGHWINDS</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS12989">AS12989</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS20764">AS20764</a> accept <a href="/as-set/AS-RASCOM">AS-RASCOM</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS20764">AS20764</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS8657">AS8657</a> accept <a href="/as-set/AS-CPRM">AS-CPRM</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS8657">AS8657</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS41690">AS41690</a> accept <a href="/as-set/AS-DAILYMOTION">AS-DAILYMOTION</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS41690">AS41690</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS31500">AS31500</a> accept <a href="/as-set/AS-GLOBAL-NET">AS-GLOBAL-NET</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS31500">AS31500</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS10310">AS10310</a> accept <a href="/as-set/AS-YAHOO">AS-YAHOO</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS10310">AS10310</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS15133">AS15133</a> accept <a href="/as-set/AS-EDGECAST">AS-EDGECAST</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS15133">AS15133</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS9002">AS9002</a> accept <a href="/as-set/AS-RETN">AS-RETN</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS9002">AS9002</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS9211">AS9211</a> accept <a href="/as-set/AS-WORK">AS-WORK</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS9211">AS9211</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS20886">AS20886</a> accept <a href="/as-set/AS-BLATZ">AS-BLATZ</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS20886">AS20886</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS15743">AS15743</a> accept <a href="/as-set/AS-IPH">AS-IPH</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS15743">AS15743</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS553">AS553</a> accept <a href="/as-set/AS-BELWUE">AS-BELWUE</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS553">AS553</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS21011">AS21011</a> accept <a href="/as-set/AS21011:AS-EXT">AS21011:AS-EXT</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS21011">AS21011</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS42456">AS42456</a> accept <a href="/as-set/AS-CHMURTZ-DECIX">AS-CHMURTZ-DECIX</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS42456">AS42456</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS34309">AS34309</a> accept <a href="/as-set/AS-LINK11">AS-LINK11</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS34309">AS34309</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS8586">AS8586</a> accept <a href="/as-set/AS-OBSL">AS-OBSL</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS8586">AS8586</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS8648">AS8648</a> accept <a href="/as-set/AS-KAMP">AS-KAMP</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS8648">AS8648</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS3303">AS3303</a> accept <a href="/as-set/AS-SWCMGLOBAL">AS-SWCMGLOBAL</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS3303">AS3303</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS5577">AS5577</a> accept <a href="/as-set/AS-ROOT">AS-ROOT</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS5577">AS5577</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS34224">AS34224</a> accept <a href="/as-set/AS-NETERRA-INT">AS-NETERRA-INT</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS34224">AS34224</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS8560">AS8560</a> accept <a href="/as-set/AS-1AND1">AS-1AND1</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS8560">AS8560</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS9189">AS9189</a> accept <a href="/as-set/AS-ACCOM">AS-ACCOM</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS9189">AS9189</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS9044">AS9044</a> accept <a href="/as-set/AS-SOLNET">AS-SOLNET</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS9044">AS9044</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS8767">AS8767</a> accept <a href="/as-set/AS-MNETDE">AS-MNETDE</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS8767">AS8767</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS12348">AS12348</a> accept <a href="/as-set/AS-ODNDE">AS-ODNDE</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS12348">AS12348</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS22212">AS22212</a> accept <a href="/as-set/AS-INTERNAP">AS-INTERNAP</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS22212">AS22212</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS48484">AS48484</a> accept <a href="/as-set/AS-IGNEL">AS-IGNEL</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS48484">AS48484</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS8732">AS8732</a> accept <a href="/as-set/AS-COMCOR">AS-COMCOR</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS8732">AS8732</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS8442">AS8442</a> accept <a href="/as-set/AS-DIG">AS-DIG</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS8442">AS8442</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS31400">AS31400</a> accept <a href="/as-set/AS-ACCELERATED">AS-ACCELERATED</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS31400">AS31400</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS8190">AS8190</a> accept <a href="/as-set/AS-VIATEL">AS-VIATEL</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS8190">AS8190</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS22822">AS22822</a> accept <a href="/as-set/AS-LLNW">AS-LLNW</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS22822">AS22822</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS8879">AS8879</a> accept <a href="/as-set/AS-DTS">AS-DTS</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS8879">AS8879</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS25279">AS25279</a> accept <a href="/as-set/AS-TREML-STURM">AS-TREML-STURM</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS25279">AS25279</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS5430">AS5430</a> accept <a href="/as-set/AS-FREENETDE">AS-FREENETDE</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS5430">AS5430</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS44066">AS44066</a> accept <a href="/as-set/AS-FIRSTCOLO">AS-FIRSTCOLO</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS44066">AS44066</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS16276">AS16276</a> accept <a href="/as-set/AS-OVH">AS-OVH</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS16276">AS16276</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS34305">AS34305</a> accept <a href="/as-set/AS-EUROACCESS">AS-EUROACCESS</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS34305">AS34305</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS44654">AS44654</a> accept <a href="/as-set/AS-MNS">AS-MNS</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS44654">AS44654</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS8763">AS8763</a> accept <a href="/as-set/AS-DENIC">AS-DENIC</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS8763">AS8763</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS31529">AS31529</a> accept <a href="/AS31529">AS31529</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS31529">AS31529</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS8881">AS8881</a> accept <a href="/as-set/AS-VT-TRANSIT">AS-VT-TRANSIT</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS8881">AS8881</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS12337">AS12337</a> accept <a href="/as-set/AS-NORIS">AS-NORIS</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS12337">AS12337</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS13285">AS13285</a> accept <a href="/as-set/AS-OPAL">AS-OPAL</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS13285">AS13285</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS21219">AS21219</a> accept <a href="/as-set/AS-FF-TRANSIT">AS-FF-TRANSIT</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS21219">AS21219</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS15444">AS15444</a> accept <a href="/as-set/AS-NETSERVICES">AS-NETSERVICES</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS15444">AS15444</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS6939">AS6939</a> accept <a href="/as-set/AS-HURRICANE">AS-HURRICANE</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS6939">AS6939</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS6661">AS6661</a> accept <a href="/as-set/AS-PTLU">AS-PTLU</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS6661">AS6661</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS39912">AS39912</a> accept <a href="/as-set/AS-I3B">AS-I3B</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS39912">AS39912</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS29140">AS29140</a> accept <a href="/as-set/AS-HOSTSERVER">AS-HOSTSERVER</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS29140">AS29140</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS21385">AS21385</a> accept <a href="/as-set/AS-TNIB">AS-TNIB</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS21385">AS21385</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS8781">AS8781</a> accept <a href="/as-set/AS-QTEL-SET">AS-QTEL-SET</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS8781">AS8781</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS9145">AS9145</a> accept <a href="/as-set/AS-EWETEL">AS-EWETEL</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS9145">AS9145</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS12695">AS12695</a> accept <a href="/as-set/AS-DINET">AS-DINET</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS12695">AS12695</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS8866">AS8866</a> accept <a href="/as-set/AS-BTC-UP">AS-BTC-UP</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS8866">AS8866</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS42">AS42</a> accept <a href="/as-set/AS-PCH">AS-PCH</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS42">AS42</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS3856">AS3856</a> accept <a href="/as-set/AS-PCH">AS-PCH</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS3856">AS3856</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS8859">AS8859</a> accept <a href="/as-set/AS-OSN">AS-OSN</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS8859">AS8859</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS6854">AS6854</a> accept <a href="/as-set/AS-SYNTERRA">AS-SYNTERRA</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS6854">AS6854</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+export:         to <a href="/AS49794">AS49794</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS13184">AS13184</a> accept <a href="/as-set/AS-HANSENET">AS-HANSENET</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS13184">AS13184</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS19151">AS19151</a> accept <a href="/as-set/AS-BBOI">AS-BBOI</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS19151">AS19151</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+export:         to <a href="/AS16240">AS16240</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+export:         to <a href="/AS57035">AS57035</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+export:         to <a href="/AS198087">AS198087</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+export:         to <a href="/AS142243">AS142243</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+export:         to <a href="/AS13035">AS13035</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+export:         to <a href="/AS39213">AS39213</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+export:         to <a href="/AS15708">AS15708</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+export:         to <a href="/AS49921">AS49921</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+export:         to <a href="/AS34598">AS34598</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+export:         to <a href="/AS43842">AS43842</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+export:         to <a href="/AS12988">AS12988</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+export:         to <a href="/AS51825">AS51825</a> announce ANY
+export:         to <a href="/AS51385">AS51385</a> announce ANY
+export:         to <a href="/AS41264">AS41264</a> announce ANY
+export:         to <a href="/AS41264">AS41264</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+export:         to <a href="/AS34852">AS34852</a> announce ANY
+export:         to <a href="/AS34852">AS34852</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS12988">AS12988</a> accept <a href="/AS12988">AS12988</a> AND NOT {0.0.0.0/0}
+import:         from <a href="/AS49794">AS49794</a> accept <a href="/AS49794">AS49794</a> AND NOT {0.0.0.0/0}
+import:         from <a href="/AS57035">AS57035</a> accept <a href="/AS57035">AS57035</a> AND NOT {0.0.0.0/0}
+import:         from <a href="/AS198087">AS198087</a> accept <a href="/AS198087">AS198087</a> AND NOT {0.0.0.0/0}
+import:         from <a href="/AS13035">AS13035</a> accept <a href="/AS13035">AS13035</a> AND NOT {0.0.0.0/0}
+import:         from <a href="/AS49921">AS49921</a> accept <a href="/AS49921">AS49921</a> AND NOT {0.0.0.0/0}
+import:         from <a href="/AS43842">AS43842</a> accept <a href="/AS43842">AS43842</a> AND NOT {0.0.0.0/0}
+import:         from <a href="/AS51825">AS51825</a> accept <a href="/AS51825">AS51825</a> AND NOT {0.0.0.0/0}
+import:         from <a href="/AS51385">AS51385</a> accept ANY AND NOT {0.0.0.0/0}
+import:         from <a href="/AS41264">AS41264</a> accept <a href="/AS41264">AS41264</a> AND NOT {0.0.0.0/0}
+import:         from <a href="/AS34852">AS34852</a> accept <a href="/AS34852">AS34852</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS57727">AS57727</a> announce ANY
+export:         to <a href="/AS57727">AS57727</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+export:         to <a href="/AS199391">AS199391</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+export:         to <a href="/AS199391">AS199391</a> announce ANY
+export:         to <a href="/AS49921">AS49921</a> announce ANY
+export:         to <a href="/AS196828">AS196828</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+export:         to <a href="/AS196828">AS196828</a> announce ANY
+export:         to <a href="/AS14857">AS14857</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+export:         to <a href="/AS14857">AS14857</a> announce ANY
+export:         to <a href="/AS20623">AS20623</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+export:         to <a href="/AS20623">AS20623</a> announce ANY
+export:         to <a href="/AS198087">AS198087</a> announce ANY
+export:         to <a href="/AS15823">AS15823</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+export:         to <a href="/AS50865">AS50865</a> announce ANY
+import:         from <a href="/AS50865">AS50865</a> accept <a href="/AS50865">AS50865</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS50865">AS50865</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+export:         to <a href="/AS15823">AS15823</a> announce ANY
+export:         to <a href="/AS201073">AS201073</a> announce ANY
+export:         to <a href="/AS201073">AS201073</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS57727">AS57727</a> accept <a href="/AS57727">AS57727</a> AND NOT {0.0.0.0/0}
+import:         from <a href="/AS199391">AS199391</a> accept <a href="/AS199391">AS199391</a> AND NOT {0.0.0.0/0}
+import:         from <a href="/AS196828">AS196828</a> accept <a href="/AS196828">AS196828</a> AND NOT {0.0.0.0/0}
+import:         from <a href="/AS14857">AS14857</a> accept <a href="/AS14857">AS14857</a> AND NOT {0.0.0.0/0}
+import:         from <a href="/AS20623">AS20623</a> accept <a href="/AS20623">AS20623</a> AND NOT {0.0.0.0/0}
+import:         from <a href="/AS15823">AS15823</a> accept <a href="/AS15823">AS15823</a> AND NOT {0.0.0.0/0}
+import:         from <a href="/AS201073">AS201073</a> accept <a href="/AS201073">AS201073</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS15643">AS15643</a> announce ANY
+export:         to <a href="/AS15643">AS15643</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS15643">AS15643</a> accept <a href="/AS15643">AS15643</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS12517">AS12517</a> announce ANY
+export:         to <a href="/AS12517">AS12517</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS12517">AS12517</a> accept <a href="/AS12517">AS12517</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS206039">AS206039</a> announce ANY
+export:         to <a href="/AS206039">AS206039</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS206039">AS206039</a> accept <a href="/AS206039">AS206039</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS56596">AS56596</a> announce ANY
+export:         to <a href="/AS56596">AS56596</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS56596">AS56596</a> accept <a href="/AS56596">AS56596</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS50079">AS50079</a> announce ANY
+export:         to <a href="/AS50079">AS50079</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS50079">AS50079</a> accept <a href="/AS50079">AS50079</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS9071">AS9071</a> announce ANY
+export:         to <a href="/AS9071">AS9071</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS9071">AS9071</a> accept <a href="/AS9071">AS9071</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS21145">AS21145</a> announce ANY
+export:         to <a href="/AS21145">AS21145</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS21145">AS21145</a> accept <a href="/AS21145">AS21145</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS204831">AS204831</a> announce ANY
+export:         to <a href="/AS204831">AS204831</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS204831">AS204831</a> accept <a href="/AS204831">AS204831</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS202597">AS202597</a> announce ANY
+export:         to <a href="/AS202597">AS202597</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS202597">AS202597</a> accept <a href="/AS202597">AS202597</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS20800">AS20800</a> announce ANY
+export:         to <a href="/AS20800">AS20800</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS20800">AS20800</a> accept <a href="/AS20800">AS20800</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS202940">AS202940</a> announce ANY
+export:         to <a href="/AS202940">AS202940</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS202940">AS202940</a> accept <a href="/AS202940">AS202940</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS43181">AS43181</a> announce ANY
+export:         to <a href="/AS43181">AS43181</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS43181">AS43181</a> accept <a href="/AS43181">AS43181</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS198425">AS198425</a> announce ANY
+export:         to <a href="/AS198425">AS198425</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS198425">AS198425</a> accept <a href="/AS198425">AS198425</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS203276">AS203276</a> announce ANY
+export:         to <a href="/AS203276">AS203276</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS203276">AS203276</a> accept <a href="/AS203276">AS203276</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS44846">AS44846</a> announce ANY
+export:         to <a href="/AS44846">AS44846</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS44846">AS44846</a> accept <a href="/AS44846">AS44846</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS25888">AS25888</a> announce ANY
+export:         to <a href="/AS25888">AS25888</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS25888">AS25888</a> accept <a href="/AS25888">AS25888</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS8948">AS8948</a> announce ANY
+export:         to <a href="/AS8948">AS8948</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS8948">AS8948</a> accept <a href="/AS8948">AS8948</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS51680">AS51680</a> announce ANY
+export:         to <a href="/AS51680">AS51680</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS51680">AS51680</a> accept <a href="/AS51680">AS51680</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS35142">AS35142</a> announce ANY
+export:         to <a href="/AS35142">AS35142</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS35142">AS35142</a> accept <a href="/AS35142">AS35142</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS49501">AS49501</a> announce ANY
+export:         to <a href="/AS49501">AS49501</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS30383">AS30383</a> accept <a href="/AS30383">AS30383</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS30383">AS30383</a> announce ANY
+export:         to <a href="/AS30383">AS30383</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS49501">AS49501</a> accept <a href="/AS49501">AS49501</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS201415">AS201415</a> announce ANY
+export:         to <a href="/AS201415">AS201415</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS201415">AS201415</a> accept <a href="/AS201415">AS201415</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS51587">AS51587</a> announce ANY
+export:         to <a href="/AS51587">AS51587</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS51587">AS51587</a> accept <a href="/AS51587">AS51587</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS29410">AS29410</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+export:         to <a href="/AS29410">AS29410</a> announce ANY
+import:         from <a href="/AS29410">AS29410</a> accept <a href="/AS29410">AS29410</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS43514">AS43514</a> announce ANY
+export:         to <a href="/AS43514">AS43514</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS43514">AS43514</a> accept <a href="/AS43514">AS43514</a> AND NOT {0.0.0.0/0}
+import:         from <a href="/AS25003">AS25003</a> accept <a href="/AS25003">AS25003</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS25003">AS25003</a> announce ANY
+export:         to <a href="/AS25003">AS25003</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+export:         to <a href="/AS209028">AS209028</a> announce ANY
+export:         to <a href="/AS209028">AS209028</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS209028">AS209028</a> accept <a href="/AS209028">AS209028</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS207605">AS207605</a> announce ANY
+export:         to <a href="/AS207605">AS207605</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS207605">AS207605</a> accept <a href="/AS207605">AS207605</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS210208">AS210208</a> announce ANY
+export:         to <a href="/AS210208">AS210208</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS210208">AS210208</a> accept <a href="/AS210208">AS210208</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS209622">AS209622</a> announce ANY
+export:         to <a href="/AS209622">AS209622</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS209622">AS209622</a> accept <a href="/AS209622">AS209622</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS44709">AS44709</a> announce ANY
+export:         to <a href="/AS44709">AS44709</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS44709">AS44709</a> accept <a href="/AS44709">AS44709</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS13074">AS13074</a> announce ANY
+export:         to <a href="/AS13074">AS13074</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS13074">AS13074</a> accept <a href="/AS13074">AS13074</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS213176">AS213176</a> announce ANY
+export:         to <a href="/AS213176">AS213176</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS213176">AS213176</a> accept <a href="/AS213176">AS213176</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS35758">AS35758</a> announce ANY
+export:         to <a href="/AS35758">AS35758</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS35758">AS35758</a> accept <a href="/AS35758">AS35758</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS204257">AS204257</a> announce ANY
+export:         to <a href="/AS204257">AS204257</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS204257">AS204257</a> accept <a href="/AS204257">AS204257</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS207591">AS207591</a> announce ANY
+export:         to <a href="/AS207591">AS207591</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS207591">AS207591</a> accept <a href="/AS207591">AS207591</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS198949">AS198949</a> announce ANY
+export:         to <a href="/AS198949">AS198949</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS198949">AS198949</a> accept <a href="/AS198949">AS198949</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS42316">AS42316</a> announce ANY
+export:         to <a href="/AS42316">AS42316</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS42316">AS42316</a> accept <a href="/AS42316">AS42316</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS198986">AS198986</a> announce ANY
+export:         to <a href="/AS198986">AS198986</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS198986">AS198986</a> accept <a href="/AS198986">AS198986</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS48851">AS48851</a> announce ANY
+export:         to <a href="/AS48851">AS48851</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS48851">AS48851</a> accept <a href="/AS48851">AS48851</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS205650">AS205650</a> announce ANY
+export:         to <a href="/AS205650">AS205650</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS205650">AS205650</a> accept <a href="/AS205650">AS205650</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS206531">AS206531</a> announce ANY
+export:         to <a href="/AS206531">AS206531</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS206531">AS206531</a> accept <a href="/AS206531">AS206531</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS31898">AS31898</a> announce ANY
+export:         to <a href="/AS31898">AS31898</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS31898">AS31898</a> accept <a href="/AS31898">AS31898</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS201076">AS201076</a> announce ANY
+export:         to <a href="/AS201076">AS201076</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS201076">AS201076</a> accept <a href="/AS50237">AS50237</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS212466">AS212466</a> announce ANY
+export:         to <a href="/AS212466">AS212466</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS212466">AS212466</a> accept <a href="/AS212466">AS212466</a> AND NOT {0.0.0.0/0}
+import:         from <a href="/AS16158">AS16158</a> accept <a href="/AS16158">AS16158</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS16158">AS16158</a> announce ANY
+export:         to <a href="/AS16158">AS16158</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS396259">AS396259</a> accept <a href="/AS16158">AS16158</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS396259">AS396259</a> announce ANY
+export:         to <a href="/AS396259">AS396259</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS49069">AS49069</a> accept <a href="/AS49069">AS49069</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS49069">AS49069</a> announce ANY
+export:         to <a href="/AS49069">AS49069</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS206446">AS206446</a> accept <a href="/AS206446">AS206446</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS206446">AS206446</a> announce ANY
+export:         to <a href="/AS206446">AS206446</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS207106">AS207106</a> accept <a href="/AS207106">AS207106</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS207106">AS207106</a> announce ANY
+export:         to <a href="/AS207106">AS207106</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS65496">AS65496</a> accept <a href="/AS65496">AS65496</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS65496">AS65496</a> announce ANY
+export:         to <a href="/AS65496">AS65496</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+export:         to <a href="/AS13684">AS13684</a> announce ANY
+export:         to <a href="/AS513684">AS513684</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS13684">AS13684</a> accept <a href="/AS51680">AS51680</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS44576">AS44576</a> announce ANY
+export:         to <a href="/AS44576">AS44576</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+import:         from <a href="/AS44576">AS44576</a> accept <a href="/AS44576">AS44576</a> AND NOT {0.0.0.0/0}
+import:         from <a href="/AS211367">AS211367</a> accept <a href="/AS211367">AS211367</a> AND NOT {0.0.0.0/0}
+export:         to <a href="/AS211367">AS211367</a> announce ANY
+export:         to <a href="/AS211367">AS211367</a> announce <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+remarks:        -------------------------------------------------
+remarks:        Role: E-Mail:
+remarks:        DNS &amp; RIPE dnsreg@012.net.il
+remarks:        Business support isp@012.net
+remarks:        Abuse abuse@012.net.il
+remarks:        Peering peering@012.net
+remarks:        PeeringDB http://as9116.peeringdb.com
+remarks:        -------------------------------------------------
+admin-c:        DUMY-RIPE
+tech-c:         DUMY-RIPE
+status:         ASSIGNED
+mnt-by:         RIPE-NCC-END-MNT
+mnt-by:         AS9116-MNT
+created:        1970-01-01T00:00:00Z
+last-modified:  2025-09-08T09:01:12Z
+source:         RIPE
+remarks:        ****************************
+remarks:        * THIS OBJECT IS MODIFIED
+remarks:        * Please note that all data that is generally regarded as personal
+remarks:        * data has been removed from this object.
+remarks:        * To view the original object, please query the RIPE Database at:
+remarks:        * http://www.ripe.net/whois
+remarks:        ****************************
+
+
+organisation:   <a href="https://apps.db.ripe.net/db-web-ui/query?searchtext=ORG-PCL2-RIPE">ORG-PCL2-RIPE</a>
+org-name:       Partner Communications Ltd.
+country:        IL
+org-type:       LIR
+address:        Dummy address for <a href="https://apps.db.ripe.net/db-web-ui/query?searchtext=ORG-PCL2-RIPE">ORG-PCL2-RIPE</a>
+abuse-c:        AR15575-RIPE
+mnt-ref:        RIPE-NCC-HM-MNT
+mnt-ref:        AS9116-MNT
+mnt-by:         RIPE-NCC-HM-MNT
+mnt-by:         AS9116-MNT
+created:        2004-04-17T11:27:53Z
+last-modified:  2024-01-14T12:24:27Z
+source:         RIPE
+# Email removed, Log into bgp.tools to see whois emails
+remarks:        ****************************
+remarks:        * THIS OBJECT IS MODIFIED
+remarks:        * Please note that all data that is generally regarded as personal
+remarks:        * data has been removed from this object.
+remarks:        * To view the original object, please query the RIPE Database at:
+remarks:        * http://www.ripe.net/whois
+remarks:        ****************************
+
+</pre>
+                        
+                        
+                        <a style="font-size: small;">Last Update: 2025-12-11T03:24:58Z UTC </a>
+                        
+                        <hr>
+                        
+                            <h2>Member of the following AS-SETs</h2>
+
+                            <table id="fhTable" class="full-width-table ">
+                                <tbody id="prefixlist-tbody">
+                                    <tr>
+                                        <th class="boldpls nowrap"> - </th>
+                                        <th class="boldpls">Member</th>
+                                         
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-manda-decix-peers-v4">as-manda-decix-peers-v4</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-liquid-linxpeers">as-liquid-linxpeers</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as12491:as-ipplanet">as12491:as-ipplanet</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">LEVEL3</td>
+                                        
+                                        <td><a href="/as-set/LEVEL3::as-sprint-origins">as-sprint-origins</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as35280:as-defense">as35280:as-defense</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as3491:as-customers-eu">as3491:as-customers-eu</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-plusnetuk:as-linx-peers-pri">as-plusnetuk:as-linx-peers-pri</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-4d-dc-linx">as-4d-dc-linx</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-manda-decix-peers-v6">as-manda-decix-peers-v6</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">LEVEL3</td>
+                                        
+                                        <td><a href="/as-set/LEVEL3::as-level3-origins-na">as-level3-origins-na</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as12491:as-gilat-telecom">as12491:as-gilat-telecom</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as9116:as-v6">as9116:as-v6</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-set-purepeak">as-set-purepeak</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-cwcusteu">as-cwcusteu</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-kpn">as-kpn</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-iixpeers">as-iixpeers</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as6894:as-peers">as6894:as-peers</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as31122:as-all-peers">as31122:as-all-peers</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as3303:as-swcmpeers">as3303:as-swcmpeers</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-seabonecustmeaf">as-seabonecustmeaf</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-seabone-v6">as-seabone-v6</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-golden">as-golden</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-cais6">as-cais6</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-finecom-peers-decix">as-finecom-peers-decix</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-defense">as-defense</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">LEVEL3</td>
+                                        
+                                        <td><a href="/as-set/LEVEL3::as-level3-origins-eu">as-level3-origins-eu</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-ormat">as-ormat</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as8308:as-peerings">as8308:as-peerings</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                        
+
+                    </div>
+
+                    
+
+                    
+
+                    
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="superclearfix">
+            
+            <div class="superclearfix">
+                
+            </div>
+
+            <div class="superclearfix">
+                
+            </div>
+
+
+        </div>
+
+
+        <div class="group js-footer" id="footer">
+            <nav>
+                <div>
+                    <ul>
+                        <li><a href="/kb/api" target="_blank">Scripting/API</a></li>
+                        <li><a href="/credits" target="_blank">Credits</a></li>
+                        <li><a href="/pricing" target="_blank">Pricing</a></li>
+                        <li><a href="/kb/contact" target="_blank">Contact Us</a></li>
+                        <li><a href="https://github.com/bgptools/issues" target="_blank">Issue Tracker</a></li>
+                        <li><a href="/kb/setup-sessions" target="">Contribute Data</a></li>
+                        
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <script>
+    
+    var inhash = window.location.hash;
+    if (inhash == "#asinfo") {
+        
+    } else if (inhash == "#prefixes") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#prefix-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#prefixes-page');
+        aaa[0].style.display = "";
+
+    } else if (inhash == "#connectivity" || inhash == "#peers" || inhash == "#upstreams" || inhash == "#downstreams") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#connectivity-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#connectivity-page');
+        aaa[0].style.display = "";
+    } else if (inhash == "#whois") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#whois-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#whois-page');
+        aaa[0].style.display = "";
+    } else if (inhash == "#ix") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#ix-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#ix-page');
+        aaa[0].style.display = "";
+    }</script>
+
+    <script>
+    
+
+
+    ;(function() {
+  'use strict'
+
+  function scaleImageMap() {
+    function resizeMap() {
+      function resizeAreaTag(cachedAreaCoords, idx) {
+        function scale(coord) {
+          var dimension = 1 === (isWidth = 1 - isWidth) ? 'width' : 'height'
+          return (
+            padding[dimension] +
+            Math.floor(Number(coord) * scalingFactor[dimension])
+          )
+        }
+
+        var isWidth = 0
+        areas[idx].coords = cachedAreaCoords
+          .split(',')
+          .map(scale)
+          .join(',')
+      }
+
+      var scalingFactor = {
+        width: image.width / image.naturalWidth,
+        height: image.height / image.naturalHeight,
+      }
+
+      var padding = {
+        width: parseInt(
+          window.getComputedStyle(image, null).getPropertyValue('padding-left'),
+          10
+        ),
+        height: parseInt(
+          window.getComputedStyle(image, null).getPropertyValue('padding-top'),
+          10
+        ),
+      }
+
+      cachedAreaCoordsArray.forEach(resizeAreaTag)
+    }
+
+    function getCoords(e) {
+      
+      return e.coords.replace(/ *, */g, ',').replace(/ +/g, ',')
+    }
+
+    function debounce() {
+      clearTimeout(timer)
+      timer = setTimeout(resizeMap, 250)
+    }
+
+    function start() {
+      if (
+        image.width !== image.naturalWidth ||
+        image.height !== image.naturalHeight
+      ) {
+        resizeMap()
+      }
+    }
+
+    function addEventListeners() {
+      image.addEventListener('load', resizeMap, false) 
+      window.addEventListener('focus', resizeMap, false) 
+      window.addEventListener('resize', debounce, false)
+      window.addEventListener('readystatechange', resizeMap, false)
+      document.addEventListener('fullscreenchange', resizeMap, false)
+    }
+
+    function beenHere() {
+      return 'function' === typeof map._resize
+    }
+
+    function getImg(name) {
+      return document.querySelector('img[usemap="#world"]')
+    }
+
+    function setup() {
+      areas = map.getElementsByTagName('area')
+      cachedAreaCoordsArray = Array.prototype.map.call(areas, getCoords)
+      image = getImg('#' + map.name) || getImg(map.name)
+      map._resize = resizeMap 
+    }
+
+    var  
+      map = this,
+      areas = null,
+      cachedAreaCoordsArray = null,
+      image = null,
+      timer = null
+
+    if (!beenHere()) {
+      setup()
+      addEventListeners()
+      start()
+    } else {
+      map._resize() 
+    }
+  }
+
+  function factory() {
+    function chkMap(element) {
+      if (!element.tagName) {
+        throw new TypeError('Object is not a valid DOM element')
+      } else if ('MAP' !== element.tagName.toUpperCase()) {
+        throw new TypeError(
+          'Expected <MAP> tag, found <' + element.tagName + '>.'
+        )
+      }
+    }
+
+    function init(element) {
+      if (element) {
+        chkMap(element)
+        scaleImageMap.call(element)
+        maps.push(element)
+      }
+    }
+
+    var maps
+
+    return function imageMapResizeF(target) {
+      maps = [] 
+
+      switch (typeof target) {
+        case 'undefined':
+        case 'string':
+          Array.prototype.forEach.call(
+            document.querySelectorAll(target || 'map'),
+            init
+          )
+          break
+        case 'object':
+          init(target)
+          break
+        default:
+          throw new TypeError('Unexpected data type (' + typeof target + ').')
+      }
+
+      return maps
+    }
+  }
+
+  if (typeof define === 'function' && define.amd) {
+    define([], factory)
+  } else if (typeof module === 'object' && typeof module.exports === 'object') {
+    module.exports = factory() 
+  } else {
+    window.imageMapResize = factory()
+  }
+
+  if ('jQuery' in window) {
+    window.jQuery.fn.imageMapResize = function $imageMapResizeF() {
+      return this.filter('map')
+        .each(scaleImageMap)
+        .end()
+    }
+  }
+})()
+    
+    </script>
+    <script>
+        var imgEl = document.getElementById("pathimg");
+        imgEl.addEventListener("mouseover",function() {
+            imageMapResize('#world');
+        })
+    </script>
+    <script src="/assets/tablesort.min.js"></script>
+    <script>
+        addEventListener("load", (event) => {
+            
+            
+            var sort = new Tablesort(document.getElementById('donotscrapebgptools-upstreamTable'));
+            var sort2 = new Tablesort(document.getElementById('donotscrapebgptools-upstreamTablePeers'));
+            
+            var sort3 = new Tablesort(document.getElementById('donotscrapebgptools-upstreamTableDowns'));
+            
+            
+        });
+    </script>
+    
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        setTimeout(function() {
+
+        var beaconHttp = new XMLHttpRequest();
+        var url = '/performance-beacon';
+        var params = JSON.stringify(window.performance)
+        beaconHttp.open('POST', url, true);
+        
+        
+        beaconHttp.setRequestHeader('Content-type', 'application/json');
+        beaconHttp.setRequestHeader('visit-url', "/as/9116");
+        if (navigator.connection) {
+            beaconHttp.setRequestHeader('client-side-rtt', navigator.connection.rtt);
+        } else {
+            beaconHttp.setRequestHeader('client-side-rtt', '-2');
+        }
+        beaconHttp.onreadystatechange = function() {}
+        beaconHttp.send(params);
+        },1000)
+    }, false);
+</script>
+
+</body>
+
+
+</html>
