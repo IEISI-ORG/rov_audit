@@ -1,0 +1,1664 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="TDF SASU (AS43646) is a small BGP network that is peering with 2 other networks and has 2 upstream carriers">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000">
+    <link rel="search" type="application/opensearchdescription+xml" title="BGP.Tools" href="https://bgp.tools/opensearch.xml">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="theme-color" content="#000000">
+    <link href="https://social.bgp.tools/@bgptools" rel="me">
+    <link rel="canonical" href="https://bgp.tools/as/43646" />
+    <title>AS43646 TDF SASU - bgp.tools</title>
+    <link rel="stylesheet" type="text/css" href="/assets/main-new.css?2025-12-09-1723%20UTC">
+</head>
+
+<body>
+    <div id="container">
+        
+<div id="global-header" class="global-header-top">
+    <div class="header-sitewide">
+        <div class="global-header">
+            <div class="header-logo">
+                <a href="/" id="logo" class="content">bgp.tools</a>
+            </div>
+            <form id="search" action="/search" method="get" accept-charset="utf-8" role="search" class="top-search-header js-search-hash">
+                <div class="searchfield">
+                    <input type="search" autocomplete="off" name="q" id="site-search-text" title="Search" value="" placeholder="Start here..." autofocus="autofocus" class="js-search-focus">
+                    <button type="submit" id="search-submit" class="search-submit">Search</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div id="global-header-blob" >
+    <a id="auth-header-text" href="/login">Login</a>
+    
+</div>
+<div id="global-header-bar" >
+    <a id="auth-header-bar-text" href="/login">Login</a>
+    
+</div>
+<div class="small-clearfix"></div>
+
+        <div id="global-container">
+            
+
+
+            
+            <div class="section-tabs js-tabs">
+                <ul>
+                    
+<li class="active">
+    <h1> <a id="viewbutton-tab" href="/as/43646">View</a></h1>
+</li>
+
+<li >
+    <a id="editbutton-tab" href="/edit/as/43646">Edit</a>
+</li>
+
+
+
+
+
+                    <li style="float: right;">
+                        
+                        <img id="ws-status" width="24" height="24" src="/assets/disconnected.png" title="Not Connected To realtime data updates">
+                        
+                    </li>
+                </ul>
+            </div>
+
+            <div id="search-container">
+
+                <div class="column-full-width">
+
+                    <div class="clearfix">
+                        
+                    </div>
+                    
+                    
+
+                    <div class="network-header">
+                        
+                        
+                        <img width="334" height="250" src="/img/43646" alt="The website screenshot for http://www.tdf.fr" >
+                        
+                        
+                        <p id="network-name" class="heading-xlarge">TDF SASU</p>
+                        <p id="network-number">
+                            AS Number
+                            <strong id="ASNumberString" pure="43646">43646</strong>
+                            <br>
+                        
+                            Website
+                            <strong><a href="http://www.tdf.fr" rel="nofollow">http://www.tdf.fr</a></strong>
+                        
+                        </p>
+
+                    </div>
+
+
+                    <div class="clearfix">
+                        
+                    </div>
+
+
+                    <div class="section-tabs js-tabs">
+                        <ul>
+
+                            <li id="overview-tab-li" class="active">
+                                <a id="overview-tab" href="#asinfo">Overview</a>
+                            </li>
+                            
+                            <li id="prefix-tab-li">
+                                <a id="prefix-tab" href="#prefixes">Prefixes</a>
+                            </li>
+
+                            <li id="connectivity-tab-li">
+                                <a id="connectivity-tab" href="#connectivity">Connectivity</a>
+                            </li>
+                            
+                            <li id="whois-tab-li">
+                                <a id="whois-tab" href="#whois">Whois</a>
+                            </li>
+                        
+                        
+                        </ul>
+                    </div>
+
+<script>
+    function removeAllActiveTab() {
+        var tabs = [
+            "overview-tab-li", 
+            "prefix-tab-li", 
+            "connectivity-tab-li",
+            "whois-tab-li",
+            "ix-tab-li",
+            "issues-tab-li"
+        ];
+
+        tabs.forEach(element => {
+            var aaa = document.querySelectorAll('#'+element);
+            if(aaa.length != 0) {
+                aaa[0].classList.remove("active")
+            }
+        });
+    }
+
+    function hideAllContent() {
+        var tabs = [
+            "overview-page", 
+            "prefixes-page", 
+            "connectivity-page",
+            "whois-page",
+            "ix-page",
+            "issues-page"
+        ];
+
+        tabs.forEach(element => {
+            var aaa = document.querySelectorAll('#'+element);
+            if(aaa.length != 0) {
+                aaa[0].style.display = "none";
+            }
+        });
+        if (document.getElementById("donotscrapebgptools-prefixlist-tbody")) {
+            var prefixrows = document.getElementById("donotscrapebgptools-prefixlist-tbody").children;
+            for (var i = 0; i < prefixrows.length; i++) {
+                prefixrows[i].style = "";
+            }
+        }
+    }
+
+    var otab = document.querySelectorAll('#overview-tab');
+    otab[0].addEventListener("click", function () {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#overview-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#overview-page');
+        aaa[0].style.display = "";
+    });
+    
+
+    var ptab = document.querySelectorAll('#prefix-tab');
+    ptab[0].addEventListener("click", function () {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#prefix-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#prefixes-page');
+        aaa[0].style.display = "";
+    });
+
+    var ctab = document.querySelectorAll('#connectivity-tab');
+    ctab[0].addEventListener("click", function () {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#connectivity-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#connectivity-page');
+        aaa[0].style.display = "";
+    });
+    
+
+    var wtab = document.querySelectorAll('#whois-tab');
+    wtab[0].addEventListener("click", function () {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#whois-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#whois-page');
+        aaa[0].style.display = "";
+    });
+
+</script>
+
+
+
+                    
+                    <div id="overview-page">
+
+                        <div class="grid-row">
+                        
+                        <div class="column-two-thirds">
+                            <dl>
+                                <dt>Registered on</dt>
+                                <dd class="text data">
+                                    
+                                     6 Sep 2007 (18 years old)
+                                </dd>
+                            
+                            
+                            <dt>Registered to</dt>
+                            <dd class="text data">
+                                <a href="/rir-owner/fr.tdf">fr.tdf</a> (ripe)</dd>
+                                
+                                <dd class="text data" id="network-status">
+                                    <a href="/transfer-history/43646">[Transfer History]</a>
+                                </dd>
+                                
+                            
+                            </dl>
+                        </div>
+                        
+    
+                        <dl class="column-third">
+                            <dt>Network status</dt>
+                            <dd class="text data">
+                                
+                                Active, Allocated under RIPE
+                                
+                            </dd>
+                        </dl>
+    
+                        </div>
+    
+                        <div class="grid-row">
+                            <dl class="column-two-thirds">
+                                <dt>Network type</dt>
+                                <dd class="text data">
+                                    Content
+                                </dd>
+                            </dl>
+    
+                            <dl class="column-third">
+                                <dt>Prefixes Originated</dt>
+                                <dd class="data">7 IPv4, 4 IPv6</dd>
+                            </dl>
+                        </div>
+                        <div class="grid-row">
+                            <div class="column-half">
+    
+                                <h2 class="heading-medium"><derp>Upstreams</derp></h2>
+                                <ul>
+                                    
+                                    <li>
+                                        <span id="sic0">
+                                          <a href="/as/1299">AS1299</a> - Arelion (fka. Telia Carrier)
+                                        </span>
+                                    </li>
+                                    
+                                    <li>
+                                        <span id="sic0">
+                                          <a href="/as/174">AS174</a> - Cogent Communications, LLC
+                                        </span>
+                                    </li>
+                                    
+                                </ul>
+    
+                            </div>
+    
+                            <div class="column-half">
+                                
+                                    <h2 class="heading-medium"><derp>Rankings</derp></h2>
+                                    
+                                    <li><span id="sic0">#50 for <a href="/rankings/FR?sort=v4">Originated IPv4 Space  in France</a></span></li>
+                                    
+                                    <li><span id="sic0">#23 for <a href="/rankings/FR?sort=v6">Originated IPv6 Space  in France</a></span></li>
+                                    
+                                
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+
+                    <div style="display: none" id="prefixes-page">
+                        
+
+                        
+                        <div style="float:left">
+                            <dt>Prefixes Originated</dt>
+                            <dd class="data">7 IPv4, 4 IPv6</dd>
+                            
+                            
+                        </div>
+                        <div style="float:right">
+                                <dt>Addresses Originated</dt>
+                                <dd class="data">124 /24's of IPv4</dd>
+                                <dd class="data">720896 /48's of IPv6</dd>
+                        </div>
+
+                        <div class="clearfix">
+                            
+                        </div>
+
+
+                        <table id="fhTable" class="full-width-table ">
+                            <tbody id="donotscrapebgptools-prefixlist-tbody">
+                                <tr>
+                                    <th class="nowrap">  &nbsp;  </th>
+                                    <th class="boldpls">Prefix</th>
+                                    <th class="nowrap boldpls">Description</th>
+                                </tr>
+                                <p id="readme-if-you-are-human" style="display: none;">If you are scraping this block for the prefixes that a AS originates, please use the data dumps in https://bgp.tools/kb/api and cache them</p>
+                                
+                                <tr id="pfx-91.197.164.0/22">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="FR" src="/assets/flags/FR.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/91.197.164.0/22">91.197.164.0/22</a></td>
+                                    <td class="smallonmobile nowrap">TDF SASU</td>
+                                </tr>
+                                
+                                <tr id="pfx-94.247.232.0/21">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="FR" src="/assets/flags/FR.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/94.247.232.0/21">94.247.232.0/21</a></td>
+                                    <td class="smallonmobile nowrap">TDF SASU</td>
+                                </tr>
+                                
+                                <tr id="pfx-95.81.128.0/18">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="FR" src="/assets/flags/FR.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/95.81.128.0/18">95.81.128.0/18</a></td>
+                                    <td class="smallonmobile nowrap">TDF SASU</td>
+                                </tr>
+                                
+                                <tr id="pfx-185.215.136.0/22">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="FR" src="/assets/flags/FR.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/185.215.136.0/22">185.215.136.0/22</a></td>
+                                    <td class="smallonmobile nowrap">TDF SASU</td>
+                                </tr>
+                                
+                                <tr id="pfx-185.241.96.0/22">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="FR" src="/assets/flags/FR.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/185.241.96.0/22">185.241.96.0/22</a></td>
+                                    <td class="smallonmobile nowrap">TDF SASU</td>
+                                </tr>
+                                
+                                <tr id="pfx-213.205.96.0/19">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="FR" src="/assets/flags/FR.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/213.205.96.0/19">213.205.96.0/19</a></td>
+                                    <td class="smallonmobile nowrap">TDF BRANE CLOUD</td>
+                                </tr>
+                                
+                                <tr id="pfx-217.71.208.0/21">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="FR" src="/assets/flags/FR.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/217.71.208.0/21">217.71.208.0/21</a></td>
+                                    <td class="smallonmobile nowrap">TDF SASU</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a00:1080::/32">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="FR" src="/assets/flags/FR.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a00:1080::/32">2a00:1080::/32</a></td>
+                                    <td class="smallonmobile nowrap">TDF SASU</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a02:3e8::/32">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="FR" src="/assets/flags/FR.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a02:3e8::/32">2a02:3e8::/32</a></td>
+                                    <td class="smallonmobile nowrap">TDF SASU</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a02:e10::/32">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="FR" src="/assets/flags/FR.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a02:e10::/32">2a02:e10::/32</a></td>
+                                    <td class="smallonmobile nowrap">TDF SASU</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a0c:a080::/29">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="FR" src="/assets/flags/FR.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a0c:a080::/29">2a0c:a080::/29</a></td>
+                                    <td class="smallonmobile nowrap">TDF SASU</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div style="display: none" id="connectivity-page">
+
+                        <div class="grid-row">
+
+                            <dl class="column-two-thirds">
+                                <dt><a href="#upstreams">Upstreams</a></dt>
+                                <dd class="text data">
+                                    2
+                                </dd>
+                            </dl>
+
+                            <dl class="column-third">
+                                <dt><a href="#peers">Peers</a></dt>
+                                <dd class="data">2</dd>
+                            </dl>
+                        </div>
+
+
+                        <hr>
+                        <h3>Network Policy<img class="flag-img" src="/assets/info.png" style="padding-left: 12px;" title="This info can take up to 2 hours to fully update" alt="This info take up to 2 hours to fully update"/></h3></h3>
+                        <a style="font-size: small;" href="/kb/network-policy">Click here to learn more about what this graph means and what makes up a network policy</a>
+
+                        <select id="netpolicydropdown" class="dropdownmenu">
+                            
+                                <option value="default">Global Aggregation</option>
+                            
+
+                            
+                                
+                            
+                                <option value="bbb0da578dbb9108e25266c61f812d6b0f3337845fb9dd5cd144e749">Policy gifted_benz</option>
+                            
+                                <option value="3c98b3ca28a3e4fdefe3ff2d649c9c1bafd16d9551c0c271cbbe83a1">Policy determined_tereshkova</option>
+                            
+                                <option value="4b0fbcc594aa9a04a3f4fdd210e109a9ca69190aa630e1a4dabfbbd7">Policy hardcore_varahamihira</option>
+                            
+                                <option value="4be3910cd43f7898c48aa3059ee381c08f3d4b695a5ebf6b07f11f69">Policy lucid_shannon</option>
+                            
+                                <option value="68e11a4109c427f6154311501ba8a961fa7fb8bd2f1e6d2154042115">Policy compassionate_feynman</option>
+                            
+
+                            
+
+
+                        </select>
+
+                        <script>var netgroups = {"3c98b3ca28a3e4fdefe3ff2d649c9c1bafd16d9551c0c271cbbe83a1":["185.241.96.0/22"],"4b0fbcc594aa9a04a3f4fdd210e109a9ca69190aa630e1a4dabfbbd7":["217.71.208.0/21","91.197.164.0/22","185.215.136.0/22","95.81.128.0/18","213.205.96.0/19","94.247.232.0/21"],"4be3910cd43f7898c48aa3059ee381c08f3d4b695a5ebf6b07f11f69":["2a0c:a080::/29"],"68e11a4109c427f6154311501ba8a961fa7fb8bd2f1e6d2154042115":["2a02:3e8::/32"],"bbb0da578dbb9108e25266c61f812d6b0f3337845fb9dd5cd144e749":["2a02:e10::/32","2a00:1080::/32"]}</script>
+
+                        <div style="text-align: center;">
+                            <img id="pathimg" usemap="#world" src="">
+                            <div id="world2"></div>
+                        </div>
+
+                        <details>
+                            <summary>Chart Display Options</summary>
+                            <noscript>This requires javascript to work</noscript>
+                            <label for="graphOptionMoreWiggle" style="display: flex;align-items: center;font-size: 20px;">
+                                <input type="checkbox" id="graphOptionMoreWiggle" name="graphOptionMoreWiggle" style="width: 64px; height: 32px;">
+                                    <p id="graphOptionMoreWiggleLabel" style="width: 200%;">Display links using non straight lines</p>
+                            </label>
+                        </details>
+
+                        <h3 style="display: none;" id="PISPBanner">Prefixes in selected policy</h3>
+                        <table id="policytable" class="full-width-table">
+                        </table>
+                        <button style="width:100%;display: none;" id="ShowFullPolicyButton" class="bigButton" onclick="dropdownPoke()">Load all prefixes in policy</button>
+
+                        <script>
+                            !function(a,b){"function"==typeof define&&define.amd?define([],b):"undefined"!=typeof module&&module.exports?module.exports=b():a.ReconnectingWebSocket=b()}(this,function(){function a(b,c,d){function l(a,b){var c=document.createEvent("CustomEvent");return c.initCustomEvent(a,!1,!1,b),c}var e={debug:!1,automaticOpen:!0,reconnectInterval:1e3,maxReconnectInterval:3e4,reconnectDecay:1.5,timeoutInterval:2e3};d||(d={});for(var f in e)this[f]="undefined"!=typeof d[f]?d[f]:e[f];this.url=b,this.reconnectAttempts=0,this.readyState=WebSocket.CONNECTING,this.protocol=null;var h,g=this,i=!1,j=!1,k=document.createElement("div");k.addEventListener("open",function(a){g.onopen(a)}),k.addEventListener("close",function(a){g.onclose(a)}),k.addEventListener("connecting",function(a){g.onconnecting(a)}),k.addEventListener("message",function(a){g.onmessage(a)}),k.addEventListener("error",function(a){g.onerror(a)}),this.addEventListener=k.addEventListener.bind(k),this.removeEventListener=k.removeEventListener.bind(k),this.dispatchEvent=k.dispatchEvent.bind(k),this.open=function(b){h=new WebSocket(g.url,c||[]),b||k.dispatchEvent(l("connecting")),(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","attempt-connect",g.url);var d=h,e=setTimeout(function(){(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","connection-timeout",g.url),j=!0,d.close(),j=!1},g.timeoutInterval);h.onopen=function(){clearTimeout(e),(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","onopen",g.url),g.protocol=h.protocol,g.readyState=WebSocket.OPEN,g.reconnectAttempts=0;var d=l("open");d.isReconnect=b,b=!1,k.dispatchEvent(d)},h.onclose=function(c){if(clearTimeout(e),h=null,i)g.readyState=WebSocket.CLOSED,k.dispatchEvent(l("close"));else{g.readyState=WebSocket.CONNECTING;var d=l("connecting");d.code=c.code,d.reason=c.reason,d.wasClean=c.wasClean,k.dispatchEvent(d),b||j||((g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","onclose",g.url),k.dispatchEvent(l("close")));var e=g.reconnectInterval*Math.pow(g.reconnectDecay,g.reconnectAttempts);setTimeout(function(){g.reconnectAttempts++,g.open(!0)},e>g.maxReconnectInterval?g.maxReconnectInterval:e)}},h.onmessage=function(b){(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","onmessage",g.url,b.data);var c=l("message");c.data=b.data,k.dispatchEvent(c)},h.onerror=function(b){(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","onerror",g.url,b),k.dispatchEvent(l("error"))}},1==this.automaticOpen&&this.open(!1),this.send=function(b){if(h)return(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","send",g.url,b),h.send(b);throw"INVALID_STATE_ERR : Pausing to reconnect websocket"},this.close=function(a,b){"undefined"==typeof a&&(a=1e3),i=!0,h&&h.close(a,b)},this.refresh=function(){h&&h.close()}}return a.prototype.onopen=function(){},a.prototype.onclose=function(){},a.prototype.onconnecting=function(){},a.prototype.onmessage=function(){},a.prototype.onerror=function(){},a.debugAll=!1,a.CONNECTING=WebSocket.CONNECTING,a.OPEN=WebSocket.OPEN,a.CLOSING=WebSocket.CLOSING,a.CLOSED=WebSocket.CLOSED,a});
+                        </script>
+                        
+                        <script>
+                            var prefixinfo = [{"PrefixString":"91.197.164.0/22","WhoisName":"TDF SASU","WhoisCountry":"FR"},{"PrefixString":"94.247.232.0/21","WhoisName":"TDF SASU","WhoisCountry":"FR"},{"PrefixString":"95.81.128.0/18","WhoisName":"TDF SASU","WhoisCountry":"FR"},{"PrefixString":"185.215.136.0/22","WhoisName":"TDF SASU","WhoisCountry":"FR"},{"PrefixString":"185.241.96.0/22","WhoisName":"TDF SASU","WhoisCountry":"FR"},{"PrefixString":"213.205.96.0/19","WhoisName":"TDF BRANE CLOUD","WhoisCountry":"FR"},{"PrefixString":"217.71.208.0/21","WhoisName":"TDF SASU","WhoisCountry":"FR"},{"PrefixString":"2a00:1080::/32","WhoisName":"TDF SASU","WhoisCountry":"FR"},{"PrefixString":"2a02:3e8::/32","WhoisName":"TDF SASU","WhoisCountry":"FR"},{"PrefixString":"2a02:e10::/32","WhoisName":"TDF SASU","WhoisCountry":"FR"},{"PrefixString":"2a0c:a080::/29","WhoisName":"TDF SASU","WhoisCountry":"FR"}]
+                            var asn =  43646 
+
+                            var pfxExtraString = "";
+
+                            function saveGraphOptionsToLocalStorage() {
+                                localStorage.setItem("pfx-chart-options:wiggle", document.getElementById("graphOptionMoreWiggle").checked);
+                            }
+
+                            function loadGraphOptionsToLocalStorage() {
+                                document.getElementById("graphOptionMoreWiggle").checked = localStorage.getItem("pfx-chart-options:wiggle") == "true";
+                                pfxExtraString= "";
+                                if (document.getElementById("graphOptionMoreWiggle").checked) {
+                                    pfxExtraString = pfxExtraString + "&wiggly";
+                                }
+                            }
+                            loadGraphOptionsToLocalStorage();
+
+                            function graphOptionsChanged() {
+                                saveGraphOptionsToLocalStorage();
+                                handleImageChange();
+                            }
+                            document.getElementById("graphOptionMoreWiggle").addEventListener("click", graphOptionsChanged)
+
+
+                            function handleImageChange() {
+                                loadGraphOptionsToLocalStorage();
+                                
+                                document.getElementById("pathimg").src=("/pathimg/"+asn+ "-" + document.getElementById("netpolicydropdown").value +"?"+pfxExtraString);
+                                var request = new XMLHttpRequest();
+                                request.open('GET', "/pathimg/"+asn+ "-" + document.getElementById("netpolicydropdown").value + "?map=true" + pfxExtraString, true);
+
+                                request.onload = function() {
+                                    if (this.status >= 200 && this.status < 400) {
+                                        
+                                        
+                                        document.getElementById("world2").innerHTML = this.response;
+                                        setTimeout(function(){
+                                            imageMapResize('#world');
+                                        },1000)
+                                    }
+                                };
+                                request.send();
+                                buildPrefixTable();
+                            } 
+
+                            function encodeHTML(s) {
+                                return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
+                            }
+
+                            function dropdownPoke(){
+                                InteractedWithPolicyTableYet=true;
+                                handleImageChange();
+                            }
+
+                            var InteractedWithPolicyTableYet = false;
+                            var OverloadPolicySize = 0;
+                            function buildPrefixTable() {
+                                var policy = document.getElementById("netpolicydropdown").value;
+                                
+                                var cidrs = netgroups[policy];
+                                var ihtml = "<tbody> <tr> <th class=\"nowrap\">  -  </th> <th>Prefix</th> <th class=\"nowrap\">Description</th> </tr>";
+
+                                
+                                var aaa = document.querySelectorAll('#PISPBanner');
+                                var bbb = document.querySelectorAll('#policytable');
+                                var n = 0
+                                if (cidrs) {
+                                    aaa[0].style.display = "";
+                                    bbb[0].style.display = "";
+                                    cidrs.forEach(cidr => {
+                                        var obj = {};
+                                        var dont =false;
+                                        n++;
+                                        
+                                        if (!InteractedWithPolicyTableYet) {
+                                            if (n == 5) {
+                                                dont = true;
+                                            } else if (n > 5) {
+                                                dont = true;
+                                            }
+                                        }
+                                        
+                                        if (!dont) {
+                                            prefixinfo.forEach(el => {
+                                                if(el.PrefixString == cidr) {
+                                                    
+                                                        ihtml += "<tr><td class=\"nowrap ns\"><img class=\"flag-img\" src=\"/assets/flags/"+el.WhoisCountry+".png\" title=\""+el.WhoisCountry+"\"></td>"
+                                                        ihtml += "<td><a href=\"/prefix/"+el.PrefixString+"\">"+el.PrefixString+"</a></td>"
+                                                        ihtml += "<td class=\"nowrap\">"+encodeHTML(el.WhoisName)+"</td></tr>"
+                                                }
+                                            });
+                                        } else {
+                                            OverloadPolicySize++;
+                                        }
+                                    });
+                                    document.getElementById("policytable").innerHTML = ihtml
+                                    var PolButton = document.querySelectorAll('#ShowFullPolicyButton');
+                                    if (!InteractedWithPolicyTableYet && OverloadPolicySize!=0) {
+                                        PolButton[0].style="width:100%";
+                                        PolButton[0].innerHTML = "Load all "+OverloadPolicySize+" prefixes in policy"
+                                    } else {
+                                        PolButton[0].style="display:none;";
+                                    }
+                                    
+                                } else {
+                                    aaa[0].style.display = "none";
+                                    bbb[0].style.display = "none";
+                                }
+                            }
+
+
+                            var pathdropdown = document.querySelectorAll('#netpolicydropdown');
+                            pathdropdown[0].addEventListener("change",dropdownPoke)
+                            handleImageChange()
+                            buildPrefixTable()
+
+                            document.addEventListener("load", function(){
+                                
+                                handleImageChange()
+                            });
+
+                            function uuidv4() {
+                                return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+                                    var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+                                    return v.toString(16);
+                                });
+                            }
+
+                            
+                            let realTimeSocket = new ReconnectingWebSocket("wss://bgp.tools/ws/rt-asn?prefix=AS43646" + "&magic=" + encodeURIComponent("6BYRJ4ECCT7V6XSHL7MAC6AWUVSVHU7H4EJV24GXCJZXSFWQW3UA===="));
+                            
+                            realTimeSocket.onmessage = function(event) {
+                                console.log(`[message] Data received from server: ${event.data}`);
+                                if (event.data == "Running.") {
+                                    document.getElementById("ws-status").src = "/assets/connected.png";
+                                    document.getElementById("ws-status").title = "Connected to realtime data";
+                                } else if (event.data == "STOP-CONNECTING") {
+                                    document.getElementById("ws-status").src = disconectedIcon;
+                                    document.getElementById("ws-status").title = "Not connected to realtime data";
+                                    realTimeSocket.maxReconnectAttempts = 1;
+                                    realTimeSocket.close()
+                                } else {
+                                    var obj = JSON.parse(event.data);
+                                    var elm = document.getElementById("pfx-"+obj.Prefix);
+                                    if (!elm && obj.Vis > 6) {
+                                        var tblist = document.getElementById("donotscrapebgptools-prefixlist-tbody");
+                                        var node = document.createElement("tr");                 
+                                        node.outerHTML = '<tr id="pfx-'+obj.Prefix+'"><td class="nowrap"><img class="flag-img" src="/assets/flags/'+obj.Whois.WhoisCountry+'.png" title="'+obj.Whois.WhoisCountry+'"></td><td><a href="/prefix/'+obj.Prefix+'">'+obj.Prefix+'</a></td><td class="smallonmobile nowrap">'+obj.Whois.WhoisName+'</td></tr>';
+                                        tblist.appendChild(node);                              
+                                    }
+                                    if (!elm) {
+                                        elm = document.getElementById("pfx-"+obj.Prefix);
+                                    }
+                                    
+                                    if (obj.Vis > 70) {
+                                        if (elm.style) {
+                                            var es = elm.style;
+                                            if (es.animation.includes("pulse1b")) {
+                                                elm.style = "animation: pulse2b 1s 1;";
+                                            } else if (es.animation.includes("pulse2b")) {
+                                                elm.style = "animation: pulse1b 1s 1;";
+                                            } else {
+                                                elm.style = "animation: pulse1b 1s 1;";
+                                            }
+                                        }
+                                    } else if (obj.Vis < 5) {
+                                        
+                                        var elm = document.getElementById("pfx-"+obj.Prefix);
+                                        if (elm) {
+                                            elm.parentNode.removeChild(elm);
+                                        }
+                                    } else {
+                                        if (elm.style) {
+                                            var es = elm.style;
+                                            if (es.animation.includes("pulse1r")) {
+                                                elm.style = "animation: pulse2r 1s 1;";
+                                            } else if (es.animation.includes("pulse2r")) {
+                                                elm.style = "animation: pulse1r 1s 1;";
+                                            } else {
+                                                elm.style = "animation: pulse1r 1s 1;";
+                                            }
+                                        }
+                                    }
+                                }
+                            };
+                            var disconectedIcon = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAAZlBMVEX/ewBZWVn/ewf/ew5fWljudiP8egp6XVT6eRHodSmVYU6hZEzObjrldCv3eRZ/XlNjWliHX1KrZkngci71eBl1XFXCa0CKYFHydx18XlSQYE+lZUq0aEbJbT3SbzhvXFaLYFG8akLYdYVFAAABQElEQVRIx5XV25KDIAwGYIKASLutqOtZ277/S26xK4ozJea/qRdfajATZaRkd6B6oPoL1d9QphUn+WvXmGF8TfN8yvNrDj6nvNj5Hu8n8HCh9ONiON5PEKuQx55DmFTHC1R9uMOjYkhFERbkEikofw8FGe5t0FWJ+kLvz5H+t8RdGD9k8TeebBXpzwIZT955XyVBtHHeXYzeJy5fhydtoZffZvUMSfvxT4BOeI/G/b9paxH1at8XQF8xNcV8aaQvHQBMhY/XttsdYp5nah3XdvIqui61Cjy+jqLwXp1cx9XLQZ5cR/vx1p8cez2IWrlxYY/T9bNVyCfmdQdbxNgs441FNRAEHS83oe9ahmTw1p88nhHCiAkpeIUeX5eJ6NlM9Gwm+uxO9/3F2PSR597jn1+udCWzUp7150P1jOoZ1f8BGPARG85JosIAAAAASUVORK5CYII=";
+                            realTimeSocket.onerror = function(error) {
+                                document.getElementById("ws-status").src = disconectedIcon;
+                                document.getElementById("ws-status").title = "Not connected to realtime data";
+
+                                console.log(`[error] ${error.message}`);
+                            };
+                            realTimeSocket.onclose = function(error) {
+                                document.getElementById("ws-status").src = disconectedIcon;
+                                document.getElementById("ws-status").title = "Not connected to realtime data";
+
+                                console.log(`[error] ${error.message}`);
+                            };
+                        </script>
+
+<div class="superclearfix">
+    
+</div>
+
+                        <hr>
+                        <a style="font-size: small;" href="/kb/what-is-a-upstream">How are upstreams and downstreams calculated?</a>
+                        <h3 id="upstreams">Upstreams<img class="flag-img" src="/assets/lightning.png" style="padding-left: 12px;" title="This information was fetched live at page load time" alt="This information was fetched live at page load time"/></h3>
+
+
+                        <table id="donotscrapebgptools-upstreamTable" class="full-width-table">
+                            <thead class="sortable">
+                                <tr>
+                                    <th class="nowrap boldpls">  &nbsp;  </th>
+                                    <th data-sort-method='number' class="boldpls">ASN</th>
+                                    <th class="nowrap boldpls">Description</th>
+                                    <th class="nowrap boldpls">IPv4</th>
+                                    <th class="nowrap boldpls">IPv6</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                <tr>
+                                    <td data-sort='SE' class="nowrap ns"><img class="flag-img" src="/assets/flags/SE.png" title="SE">
+                                        
+                                        </td>
+                                    <td data-sort='1299'><a href="/as/1299">AS1299</a></td>
+                                    <td class="smallonmobile nowrap">Arelion (fka. Telia Carrier)</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US">
+                                        
+                                        </td>
+                                    <td data-sort='174'><a href="/as/174">AS174</a></td>
+                                    <td class="smallonmobile nowrap">Cogent Communications, LLC</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+
+                        <hr>
+                        <h3 id="peers">Peers<img class="flag-img" src="/assets/lightning.png" style="padding-left: 12px;" title="This information was fetched live at page load time" alt="This information was fetched live at page load time"/></h3>
+
+
+
+                        <table id="donotscrapebgptools-upstreamTablePeers" class="full-width-table">
+                            <thead class="sortable">
+                                <tr>
+                                    <th class="nowrap boldpls">  &nbsp;  </th>
+                                    <th data-sort-method='number' class="boldpls">ASN</th>
+                                    <th class="nowrap boldpls">Description</th>
+                                    <th class="nowrap boldpls">IPv4</th>
+                                    <th class="nowrap boldpls">IPv6</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                <tr>
+                                    <td data-sort='SE' class="nowrap ns"><img class="flag-img" src="/assets/flags/SE.png" title="SE"></td>
+                                    <td data-sort='1299'><a href="/as/1299">AS1299</a></td>
+                                    <td class="smallonmobile nowrap">Arelion (fka. Telia Carrier)</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='174'><a href="/as/174">AS174</a></td>
+                                    <td class="smallonmobile nowrap">Cogent Communications, LLC</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+
+
+                    </div>
+
+                    <div style="display: none" id="whois-page">
+                        
+                        
+                        <pre style="white-space: pre-wrap;">aut-num:        <a href="/AS43646">AS43646</a>
+as-name:        TDF
+org:            <a href="https://apps.db.ripe.net/db-web-ui/query?searchtext=ORG-TA1221-RIPE">ORG-TA1221-RIPE</a>
+remarks:        =======================================================
+remarks:        Transits
+remarks:        =======================================================
+remarks:        - Cogent Communcations (FR)
+mp-import:      afi ipv4.unicast,ipv6.unicast from <a href="/AS174">AS174</a> accept ANY
+mp-export:      afi ipv4.unicast,ipv6.unicast to <a href="/AS174">AS174</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+remarks:        - Teliasonera IC (FR-DE-FI)
+mp-import:      afi ipv4.unicast,ipv6.unicast from <a href="/AS1299">AS1299</a> accept ANY
+mp-export:      afi ipv4.unicast,ipv6.unicast to <a href="/AS1299">AS1299</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+remarks:        - Level(3) Communcations (FR-DE-FI)
+mp-import:      afi ipv4.unicast,ipv6.unicast from <a href="/AS3356">AS3356</a> accept ANY
+mp-export:      afi ipv4.unicast,ipv6.unicast to <a href="/AS3356">AS3356</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+remarks:        =======================================================
+remarks:        Peerings
+remarks:        =======================================================
+mp-import:      afi ipv4.unicast,ipv6.unicast from <a href="/AS42">AS42</a> accept <a href="/as-set/AS-PCH">AS-PCH</a>
+mp-import:      afi ipv4.unicast,ipv6.unicast from <a href="/AS719">AS719</a> accept <a href="/as-set/AS-KOLOMBUS">AS-KOLOMBUS</a>
+mp-import:      afi ipv4.unicast from <a href="/AS1267">AS1267</a> accept <a href="/as-set/AS-INFOSTRADA">AS-INFOSTRADA</a>
+mp-import:      afi ipv4.unicast,ipv6.unicast from <a href="/AS1741">AS1741</a> accept <a href="/as-set/AS-FUNET">AS-FUNET</a>
+mp-import:      afi ipv4.unicast,ipv6.unicast from <a href="/AS1764">AS1764</a> accept <a href="/as-set/AS-NEXTLAYER">AS-NEXTLAYER</a>
+mp-import:      afi ipv4.unicast,ipv6.unicast from <a href="/AS2119">AS2119</a> accept <a href="/as-set/AS-TELENOR">AS-TELENOR</a>
+mp-import:      afi ipv4.unicast,ipv6.unicast from <a href="/AS2200">AS2200</a> accept <a href="/as-set/AS-RENATER">AS-RENATER</a>
+mp-import:      afi ipv4.unicast,ipv6.unicast from <a href="/AS2483">AS2483</a> accept <a href="/AS2483">AS2483</a>
+mp-import:      afi ipv4.unicast,ipv6.unicast from <a href="/AS2486">AS2486</a> accept <a href="/AS2483">AS2483</a>
+mp-import:      afi ipv4.unicast,ipv6.unicast from <a href="/AS2603">AS2603</a> accept <a href="/AS2603">AS2603</a>
+mp-import:      afi ipv4.unicast,ipv6.unicast from <a href="/AS2857">AS2857</a> accept <a href="/as-set/AS-RLP-NET">AS-RLP-NET</a>
+mp-import:      afi ipv4.unicast from <a href="/AS3215">AS3215</a> accept <a href="/as-set/AS-FTFR">AS-FTFR</a>
+mp-import:      afi ipv4.unicast from <a href="/AS3216">AS3216</a> accept <a href="/as-set/AS-SOVAM">AS-SOVAM</a>
+mp-import:      afi ipv4.unicast,ipv6.unicast from <a href="/AS3292">AS3292</a> accept <a href="/as-set/AS-TDCNET">AS-TDCNET</a> <a href="/as-set/AS-TDCNET-IPV6">AS-TDCNET-IPV6</a>
+mp-import:      afi ipv4.unicast,ipv6.unicast from <a href="/AS3303">AS3303</a> accept <a href="/as-set/AS-SWCMGLOBAL">AS-SWCMGLOBAL</a>
+mp-import:      afi ipv4.unicast,ipv6.unicast from <a href="/AS3320">AS3320</a> accept <a href="/as-set/AS3320:AS-DTAG">AS3320:AS-DTAG</a>
+mp-import:      afi ipv4.unicast from <a href="/AS3491">AS3491</a> accept <a href="/as-set/AS-CAIS">AS-CAIS</a>
+mp-import:      afi ipv4.unicast,ipv6.unicast from <a href="/AS3856">AS3856</a> accept <a href="/as-set/AS-PCH">AS-PCH</a>
+mp-import:      afi ipv4.unicast,ipv6.unicast from <a href="/AS4589">AS4589</a> accept <a href="/as-set/AS-EASYNET">AS-EASYNET</a>
+mp-import:      afi ipv4.unicast,ipv6.unicast from <a href="/AS5410">AS5410</a> accept <a href="/as-set/AS-BOUYGTEL-ISP">AS-BOUYGTEL-ISP</a>
+mp-import:      afi ipv4.unicast from <a href="/AS5430">AS5430</a> accept <a href="/as-set/AS-FREENETDE">AS-FREENETDE</a>
+mp-import:      afi ipv4.unicast from <a href="/AS5483">AS5483</a> accept <a href="/as-set/AS-MAGYARTELEKOM">AS-MAGYARTELEKOM</a>
+mp-import:      afi ipv4.unicast from <a href="/AS5507">AS5507</a> accept <a href="/as-set/AS-BIX">AS-BIX</a>
+mp-import:      afi ipv4.unicast from <a href="/AS5555">AS5555</a> accept <a href="/as-set/AS-SOHONET-UK">AS-SOHONET-UK</a>
+mp-import:      afi ipv4.unicast,ipv6.unicast from <a href="/AS5577">AS5577</a> accept <a href="/as-set/AS-ROOT">AS-ROOT</a>
+mp-import:      afi ipv4.unicast,ipv6.unicast from <a href="/AS5580">AS5580</a> accept <a href="/as-set/AS-ATRATO">AS-ATRATO</a>
+mp-import:      afi ipv4.unicast from <a href="/AS5588">AS5588</a> accept <a href="/as-set/AS-GTS-CE">AS-GTS-CE</a>
+mp-import:      afi ipv4.unicast,ipv6.unicast from <a href="/AS5605">AS5605</a> accept <a href="/as-set/AS-NETUSE">AS-NETUSE</a>
+mp-import:      afi ipv4.unicast from <a href="/AS6461">AS6461</a> accept <a href="/as-set/AS-MFNX">AS-MFNX</a>
+mp-import:      afi ipv4.unicast,ipv6.unicast from <a href="/AS8075">AS8075</a> accept <a href="/as-set/AS-MICROSOFT">AS-MICROSOFT</a>
+mp-import:      afi ipv4.unicast,ipv6.unicast from <a href="/AS8218">AS8218</a> accept <a href="/as-set/AS-NEOT">AS-NEOT</a> <a href="/as-set/AS-NEOT6">AS-NEOT6</a>
+mp-import:      afi ipv4.unicast,ipv6.unicast from <a href="/AS8220">AS8220</a> accept <a href="/as-set/AS-COLT">AS-COLT</a>
+mp-import:      afi ipv4.unicast from <a href="/AS8304">AS8304</a> accept <a href="/as-set/AS-ECRITEL">AS-ECRITEL</a>
+mp-import:      afi ipv4.unicast from <a href="/AS8319">AS8319</a> accept <a href="/as-set/AS-NETHINKS">AS-NETHINKS</a>
+mp-import:      afi ipv4.unicast,ipv6.unicast from <a href="/AS8365">AS8365</a> accept <a href="/as-set/AS-MANDA">AS-MANDA</a>
+mp-import:      afi ipv4.unicast,ipv6.unicast from <a href="/AS8426">AS8426</a> accept <a href="/as-set/AS-CLARANET">AS-CLARANET</a>
+mp-import:      afi ipv4.unicast from <a href="/AS8492">AS8492</a> accept <a href="/as-set/AS-OBIT">AS-OBIT</a>
+mp-import:      afi ipv4.unicast,ipv6.unicast from <a href="/AS8551">AS8551</a> accept <a href="/as-set/AS-BEZEQINT">AS-BEZEQINT</a>
+mp-import:      afi ipv4.unicast,ipv6.unicast from <a href="/AS8554">AS8554</a> accept <a href="/as-set/AS-TAS">AS-TAS</a>
+mp-import:      afi ipv4.unicast,ipv6.unicast from <a href="/AS8560">AS8560</a> accept <a href="/as-set/AS-1AND1">AS-1AND1</a>
+mp-import:      afi ipv4.unicast,ipv6.unicast from <a href="/AS8586">AS8586</a> accept <a href="/as-set/AS-OBSL">AS-OBSL</a>
+mp-import:      afi ipv4.unicast,ipv6.unicast from <a href="/AS8596">AS8596</a> accept <a href="/as-set/AS-HOTZE">AS-HOTZE</a> <a href="/as-set/AS-HOTZE-V6">AS-HOTZE-V6</a>
+mp-import:      afi ipv4.unicast from <a href="/AS8641">AS8641</a> accept <a href="/as-set/AS-NAUKANET">AS-NAUKANET</a>
+mp-import:      afi ipv4.unicast,ipv6.unicast from <a href="/AS8657">AS8657</a> accept <a href="/as-set/AS-CPRM">AS-CPRM</a>
+mp-import:      afi ipv4.unicast from <a href="/AS8708">AS8708</a> accept <a href="/as-set/AS-RDSNET">AS-RDSNET</a>
+mp-import:      afi ipv4.unicast from <a href="/AS8781">AS8781</a> accept <a href="/as-set/AS-QTEL-SET">AS-QTEL-SET</a>
+mp-import:      afi ipv4.unicast,ipv6.unicast from <a href="/AS8859">AS8859</a> accept <a href="/as-set/AS-OSN">AS-OSN</a>
+mp-import:      afi ipv4.unicast from <a href="/AS8879">AS8879</a> accept <a href="/as-set/AS-DTS">AS-DTS</a>
+mp-import:      afi ipv4.unicast,ipv6.unicast from <a href="/AS8966">AS8966</a> accept <a href="/as-set/AS-EMIX">AS-EMIX</a>
+mp-import:      afi ipv4.unicast from <a href="/AS8990">AS8990</a> accept ANY
+mp-import:      afi ipv4.unicast,ipv6.unicast from <a href="/AS9002">AS9002</a> accept <a href="/as-set/AS-RETN">AS-RETN</a> <a href="/as-set/AS-RETN6">AS-RETN6</a>
+mp-import:      afi ipv4.unicast,ipv6.unicast from <a href="/AS9031">AS9031</a> accept <a href="/as-set/AS-EDPNET">AS-EDPNET</a> <a href="/as-set/AS-EDPNET-V6">AS-EDPNET-V6</a>
+mp-import:      afi ipv4.unicast from <a href="/AS9044">AS9044</a> accept <a href="/as-set/AS-SOLNET">AS-SOLNET</a>
+mp-import:      afi ipv4.unicast from <a href="/AS9063">AS9063</a> accept <a href="/as-set/AS-SAARGATE">AS-SAARGATE</a>
+mp-import:      afi ipv4.unicast from <a href="/AS9116">AS9116</a> accept <a href="/as-set/AS-GOLDEN">AS-GOLDEN</a>
+mp-import:      afi ipv4.unicast from <a href="/AS12312">AS12312</a> accept <a href="/as-set/AS-ECOTEL">AS-ECOTEL</a>
+mp-import:      afi ipv4.unicast from <a href="/AS12322">AS12322</a> accept <a href="/as-set/AS-PROXAD">AS-PROXAD</a>
+mp-import:      afi ipv4.unicast,ipv6.unicast from <a href="/AS12350">AS12350</a> accept <a href="/as-set/AS-VTX">AS-VTX</a>
+mp-import:      afi ipv4.unicast from <a href="/AS12399">AS12399</a> accept <a href="/as-set/AS-SPXS">AS-SPXS</a>
+mp-import:      afi ipv4.unicast,ipv6.unicast from <a href="/AS12552">AS12552</a> accept <a href="/as-set/AS-IPO">AS-IPO</a>
+mp-import:      afi ipv4.unicast,ipv6.unicast from <a href="/AS12611">AS12611</a> accept <a href="/as-set/AS-RKOM">AS-RKOM</a>
+mp-import:      afi ipv4.unicast from <a href="/AS12695">AS12695</a> accept <a href="/as-set/AS-DINET">AS-DINET</a>
+mp-import:      afi ipv4.unicast,ipv6.unicast from <a href="/AS12713">AS12713</a> accept <a href="/as-set/AS-OTEGLOBE">AS-OTEGLOBE</a>
+mp-import:      afi ipv4.unicast,ipv6.unicast from <a href="/AS12859">AS12859</a> accept <a href="/as-set/AS-BIT">AS-BIT</a> <a href="/as-set/AS-BIT6">AS-BIT6</a>
+mp-import:      afi ipv4.unicast from <a href="/AS12897">AS12897</a> accept <a href="/as-set/AS-HEAGMEDIANET">AS-HEAGMEDIANET</a>
+mp-import:      afi ipv4.unicast,ipv6.unicast from <a href="/AS12989">AS12989</a> accept <a href="/as-set/AS-HWNG">AS-HWNG</a>
+mp-import:      afi ipv4.unicast,ipv6.unicast from <a href="/AS13030">AS13030</a> accept <a href="/as-set/AS-INIT7">AS-INIT7</a>
+mp-import:      afi ipv4.unicast,ipv6.unicast from <a href="/AS13193">AS13193</a> accept <a href="/as-set/AS-NERIM">AS-NERIM</a>
+mp-import:      afi ipv4.unicast,ipv6.unicast from <a href="/AS13237">AS13237</a> accept <a href="/as-set/AS-LAMBDANET">AS-LAMBDANET</a>
+mp-import:      afi ipv4.unicast from <a href="/AS15133">AS15133</a> accept <a href="/as-set/AS-EDGECAST">AS-EDGECAST</a>
+mp-import:      afi ipv4.unicast from <a href="/AS15422">AS15422</a> accept <a href="/as-set/AS-PPR">AS-PPR</a>
+mp-import:      afi ipv4.unicast,ipv6.unicast from <a href="/AS15436">AS15436</a> accept <a href="/as-set/AS-WITBE">AS-WITBE</a>
+mp-import:      afi ipv4.unicast from <a href="/AS15557">AS15557</a> accept <a href="/as-set/AS-LDCOMNET">AS-LDCOMNET</a>
+mp-import:      afi ipv4.unicast,ipv6.unicast from <a href="/AS15830">AS15830</a> accept <a href="/as-set/AS-TELECITYGROUP">AS-TELECITYGROUP</a>
+mp-import:      afi ipv4.unicast,ipv6.unicast from <a href="/AS15925">AS15925</a> accept <a href="/as-set/AS-MEGA">AS-MEGA</a>
+mp-import:      afi ipv4.unicast,ipv6.unicast from <a href="/AS16086">AS16086</a> accept <a href="/as-set/AS-DNA">AS-DNA</a>
+mp-import:      afi ipv4.unicast from <a href="/AS16276">AS16276</a> accept <a href="/as-set/AS-OVH">AS-OVH</a>
+mp-import:      afi ipv4.unicast,ipv6.unicast from <a href="/AS16347">AS16347</a> accept <a href="/as-set/AS-RMI">AS-RMI</a>
+mp-import:      afi ipv4.unicast,ipv6.unicast from <a href="/AS16509">AS16509</a> accept <a href="/as-set/AS-AMAZON">AS-AMAZON</a>
+mp-import:      afi ipv4.unicast,ipv6.unicast from <a href="/AS19151">AS19151</a> accept <a href="/as-set/AS-BBOI">AS-BBOI</a>
+mp-import:      afi ipv4.unicast,ipv6.unicast from <a href="/AS20569">AS20569</a> accept <a href="/as-set/AS-AINAIP">AS-AINAIP</a>
+mp-import:      afi ipv4.unicast from <a href="/AS20640">AS20640</a> accept <a href="/as-set/AS-TITANNET">AS-TITANNET</a>
+mp-import:      afi ipv4.unicast from <a href="/AS20764">AS20764</a> accept <a href="/as-set/AS-RASCOM">AS-RASCOM</a>
+mp-import:      afi ipv4.unicast,ipv6.unicast from <a href="/AS20811">AS20811</a> accept <a href="/as-set/AS-BCOMIT">AS-BCOMIT</a>
+mp-import:      afi ipv4.unicast,ipv6.unicast from <a href="/AS20940">AS20940</a> accept <a href="/as-set/AS-AKAMAI">AS-AKAMAI</a>
+mp-import:      afi ipv4.unicast from <a href="/AS21011">AS21011</a> accept <a href="/as-set/AS21011:AS-EXT">AS21011:AS-EXT</a>
+mp-import:      afi ipv4.unicast,ipv6.unicast from <a href="/AS21263">AS21263</a> accept <a href="/as-set/AS-TELEDATA">AS-TELEDATA</a>
+mp-import:      afi ipv4.unicast from <a href="/AS21336">AS21336</a> accept <a href="/as-set/AS-IR">AS-IR</a>
+mp-import:      afi ipv4.unicast,ipv6.unicast from <a href="/AS21385">AS21385</a> accept <a href="/as-set/AS-TNIB">AS-TNIB</a>
+mp-import:      afi ipv4.unicast from <a href="/AS21409">AS21409</a> accept <a href="/as-set/AS-IKOULA">AS-IKOULA</a>
+mp-import:      afi ipv4.unicast from <a href="/AS21502">AS21502</a> accept <a href="/as-set/AS-NUMERICABLE">AS-NUMERICABLE</a>
+mp-import:      afi ipv4.unicast from <a href="/AS22822">AS22822</a> accept <a href="/as-set/AS-LLNW">AS-LLNW</a>
+mp-import:      afi ipv4.unicast from <a href="/AS23148">AS23148</a> accept <a href="/as-set/AS-TWW">AS-TWW</a>
+mp-import:      afi ipv4.unicast,ipv6.unicast from <a href="/AS24115">AS24115</a> accept ANY # Equinix RS
+mp-import:      afi ipv4.unicast,ipv6.unicast from <a href="/AS24724">AS24724</a> accept <a href="/as-set/AS24724:AS-FOREIGN">AS24724:AS-FOREIGN</a>
+mp-import:      afi ipv4.unicast from <a href="/AS24751">AS24751</a> accept <a href="/as-set/AS-MULTIFI">AS-MULTIFI</a>
+mp-import:      afi ipv4.unicast,ipv6.unicast from <a href="/AS25220">AS25220</a> accept <a href="/as-set/AS-GLOBALNOC6">AS-GLOBALNOC6</a> <a href="/as-set/AS-GLOBALNOC6">AS-GLOBALNOC6</a>
+mp-import:      afi ipv4.unicast,ipv6.unicast from <a href="/AS25279">AS25279</a> accept <a href="/as-set/AS-TREML-STURM">AS-TREML-STURM</a>
+mp-import:      afi ipv4.unicast,ipv6.unicast from <a href="/AS28877">AS28877</a> accept <a href="/as-set/AS-AZURIA">AS-AZURIA</a>
+mp-import:      afi ipv4.unicast from <a href="/AS29076">AS29076</a> accept <a href="/as-set/AS-CITYTELECOM">AS-CITYTELECOM</a>
+mp-import:      afi ipv4.unicast,ipv6.unicast from <a href="/AS29154">AS29154</a> accept <a href="/as-set/AS-ACADEMICAFI">AS-ACADEMICAFI</a>
+mp-import:      afi ipv4.unicast,ipv6.unicast from <a href="/AS29208">AS29208</a> accept <a href="/as-set/AS-DIALTELECOM">AS-DIALTELECOM</a>
+mp-import:      afi ipv4.unicast,ipv6.unicast from <a href="/AS29422">AS29422</a> accept <a href="/as-set/AS-NBLNETFI">AS-NBLNETFI</a>
+mp-import:      afi ipv4.unicast from <a href="/AS29608">AS29608</a> accept <a href="/as-set/AS-W2MY">AS-W2MY</a>
+mp-import:      afi ipv4.unicast,ipv6.unicast from <a href="/AS30781">AS30781</a> accept <a href="/as-set/AS-JAGUAR">AS-JAGUAR</a> <a href="/as-set/AS-JAGUAR-V6">AS-JAGUAR-V6</a>
+mp-import:      afi ipv4.unicast from <a href="/AS30889">AS30889</a> accept <a href="/as-set/AS-WAYCOM">AS-WAYCOM</a>
+mp-import:      afi ipv4.unicast from <a href="/AS30890">AS30890</a> accept <a href="/as-set/AS-EVOLVA">AS-EVOLVA</a>
+mp-import:      afi ipv4.unicast,ipv6.unicast from <a href="/AS31252">AS31252</a> accept <a href="/as-set/AS-STARNET">AS-STARNET</a>
+mp-import:      afi ipv4.unicast from <a href="/AS31400">AS31400</a> accept <a href="/as-set/AS-ACCELERATED">AS-ACCELERATED</a>
+mp-import:      afi ipv4.unicast from <a href="/AS31500">AS31500</a> accept <a href="/as-set/AS-GLOBAL-NET">AS-GLOBAL-NET</a>
+mp-import:      afi ipv4.unicast from <a href="/AS31529">AS31529</a> accept <a href="/as-set/AS-DENIC-ANY">AS-DENIC-ANY</a>
+mp-import:      afi ipv4.unicast,ipv6.unicast from <a href="/AS31688">AS31688</a> accept <a href="/AS31688">AS31688</a>
+mp-import:      afi ipv4.unicast,ipv6.unicast from <a href="/AS32934">AS32934</a> accept <a href="/as-set/AS-FACEBOOK">AS-FACEBOOK</a>
+mp-import:      afi ipv4.unicast,ipv6.unicast from <a href="/AS33873">AS33873</a> accept <a href="/as-set/AS-ARVATO">AS-ARVATO</a>
+mp-import:      afi ipv4.unicast,ipv6.unicast from <a href="/AS33891">AS33891</a> accept <a href="/as-set/AS-CORE-BACKBONE">AS-CORE-BACKBONE</a>
+mp-import:      afi ipv4.unicast from <a href="/AS34006">AS34006</a> accept <a href="/AS34006">AS34006</a>
+mp-import:      afi ipv4.unicast from <a href="/AS34655">AS34655</a> accept <a href="/as-set/AS-DOCLER">AS-DOCLER</a>
+mp-import:      afi ipv4.unicast,ipv6.unicast from <a href="/AS34695">AS34695</a> accept <a href="/AS34695">AS34695</a> <a href="/as-set/AS34695:AS-TRANSIT">AS34695:AS-TRANSIT</a>
+mp-import:      afi ipv4.unicast,ipv6.unicast from <a href="/AS34913">AS34913</a> accept <a href="/as-set/AS-RENTABILIWEB-TELECOM">AS-RENTABILIWEB-TELECOM</a>
+mp-import:      afi ipv4.unicast,ipv6.unicast from <a href="/AS34953">AS34953</a> accept <a href="/as-set/AS-RELAIX">AS-RELAIX</a> <a href="/as-set/AS-RELAIXV6">AS-RELAIXV6</a>
+mp-import:      afi ipv4.unicast from <a href="/AS36408">AS36408</a> accept <a href="/AS36408">AS36408</a>
+mp-import:      afi ipv4.unicast,ipv6.unicast from <a href="/AS39257">AS39257</a> accept <a href="/AS39257">AS39257</a>
+mp-import:      afi ipv4.unicast from <a href="/AS39792">AS39792</a> accept <a href="/as-set/AS-ANDERS">AS-ANDERS</a>
+mp-import:      afi ipv4.unicast,ipv6.unicast from <a href="/AS39912">AS39912</a> accept <a href="/as-set/AS-I3B-TRANSIT-V4">AS-I3B-TRANSIT-V4</a> <a href="/as-set/AS-I3B-TRANSIT-V6">AS-I3B-TRANSIT-V6</a>
+mp-import:      afi ipv4.unicast,ipv6.unicast from <a href="/AS41692">AS41692</a> accept <a href="/as-set/AS-OPENCARRIER">AS-OPENCARRIER</a> <a href="/as-set/AS-OPENCARRIER6">AS-OPENCARRIER6</a>
+mp-import:      afi ipv4.unicast from <a href="/AS42366">AS42366</a> accept <a href="/as-set/AS-TERRATRANSIT">AS-TERRATRANSIT</a>
+mp-import:      afi ipv4.unicast from <a href="/AS42416">AS42416</a> accept <a href="/AS416">AS416</a>
+mp-import:      afi ipv4.unicast,ipv6.unicast from <a href="/AS42456">AS42456</a> accept <a href="/as-set/AS-CHMURTZ">AS-CHMURTZ</a> <a href="/as-set/AS-CHMURTZ-IPV6">AS-CHMURTZ-IPV6</a>
+mp-import:      afi ipv4.unicast from <a href="/AS42459">AS42459</a> accept <a href="/as-set/AS-FOBUL">AS-FOBUL</a>
+mp-import:      afi ipv4.unicast from <a href="/AS42652">AS42652</a> accept <a href="/as-set/AS-DELUNET">AS-DELUNET</a>
+mp-import:      afi ipv4.unicast,ipv6.unicast from <a href="/AS42708">AS42708</a> accept <a href="/as-set/AS-PORTLANE">AS-PORTLANE</a>
+mp-import:      afi ipv4.unicast,ipv6.unicast from <a href="/AS44654">AS44654</a> accept <a href="/as-set/AS-MNS">AS-MNS</a>
+mp-import:      afi ipv4.unicast,ipv6.unicast from <a href="/AS44788">AS44788</a> accept <a href="/as-set/AS-CRITEO-EU">AS-CRITEO-EU</a>
+mp-import:      afi ipv4.unicast,ipv6.unicast from <a href="/AS47447">AS47447</a> accept <a href="/as-set/AS-23MEDIA">AS-23MEDIA</a>
+mp-import:      afi ipv4.unicast,ipv6.unicast from <a href="/AS47605">AS47605</a> accept <a href="/AS47605">AS47605</a>
+mp-import:      afi ipv4.unicast,ipv6.unicast from <a href="/AS49544">AS49544</a> accept <a href="/as-set/AS-INTERACTIVE3D">AS-INTERACTIVE3D</a>
+mp-import:      afi ipv4.unicast,ipv6.unicast from <a href="/AS49594">AS49594</a> accept <a href="/as-set/AS-AIE">AS-AIE</a>
+mp-import:      afi ipv4.unicast,ipv6.unicast from <a href="/AS51706">AS51706</a> accept ANY # FranceIX RS
+mp-import:      afi ipv4.unicast,ipv6.unicast from <a href="/AS52075">AS52075</a> accept <a href="/as-set/AS-WIFIRST">AS-WIFIRST</a>
+mp-import:      afi ipv4.unicast from <a href="/AS197500">AS197500</a> accept <a href="/AS197500">AS197500</a>
+remarks:        =======================================================
+mp-export:      afi ipv4.unicast,ipv6.unicast to <a href="/AS42">AS42</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast,ipv6.unicast to <a href="/AS719">AS719</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast to <a href="/AS1267">AS1267</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast,ipv6.unicast to <a href="/AS1741">AS1741</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast,ipv6.unicast to <a href="/AS1764">AS1764</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast,ipv6.unicast to <a href="/AS2119">AS2119</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast,ipv6.unicast to <a href="/AS2200">AS2200</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast,ipv6.unicast to <a href="/AS2483">AS2483</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast,ipv6.unicast to <a href="/AS2486">AS2486</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast,ipv6.unicast to <a href="/AS2603">AS2603</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast,ipv6.unicast to <a href="/AS2857">AS2857</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast,ipv6.unicast to <a href="/AS3215">AS3215</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast to <a href="/AS3216">AS3216</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast,ipv6.unicast to <a href="/AS3292">AS3292</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast,ipv6.unicast to <a href="/AS3303">AS3303</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast,ipv6.unicast to <a href="/AS3320">AS3320</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast to <a href="/AS3491">AS3491</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast,ipv6.unicast to <a href="/AS3856">AS3856</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast,ipv6.unicast to <a href="/AS4589">AS4589</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast,ipv6.unicast to <a href="/AS5410">AS5410</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast to <a href="/AS5430">AS5430</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast to <a href="/AS5483">AS5483</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast to <a href="/AS5507">AS5507</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast to <a href="/AS5555">AS5555</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast,ipv6.unicast to <a href="/AS5577">AS5577</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast,ipv6.unicast to <a href="/AS5580">AS5580</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast to <a href="/AS5588">AS5588</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast,ipv6.unicast to <a href="/AS5605">AS5605</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast to <a href="/AS6461">AS6461</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast,ipv6.unicast to <a href="/AS8075">AS8075</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast,ipv6.unicast to <a href="/AS8218">AS8218</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast,ipv6.unicast to <a href="/AS8220">AS8220</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast to <a href="/AS8304">AS8304</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast to <a href="/AS8319">AS8319</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast,ipv6.unicast to <a href="/AS8365">AS8365</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast,ipv6.unicast to <a href="/AS8426">AS8426</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast to <a href="/AS8492">AS8492</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast,ipv6.unicast to <a href="/AS8551">AS8551</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast,ipv6.unicast to <a href="/AS8554">AS8554</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast,ipv6.unicast to <a href="/AS8560">AS8560</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast,ipv6.unicast to <a href="/AS8586">AS8586</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast,ipv6.unicast to <a href="/AS8596">AS8596</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast to <a href="/AS8641">AS8641</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast,ipv6.unicast to <a href="/AS8657">AS8657</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast to <a href="/AS8708">AS8708</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast to <a href="/AS8781">AS8781</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast,ipv6.unicast to <a href="/AS8859">AS8859</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast,ipv6.unicast to <a href="/AS8879">AS8879</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast,ipv6.unicast to <a href="/AS8966">AS8966</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast to <a href="/AS8990">AS8990</a> announce ANY
+mp-export:      afi ipv4.unicast,ipv6.unicast to <a href="/AS9002">AS9002</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast,ipv6.unicast to <a href="/AS9031">AS9031</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast to <a href="/AS9044">AS9044</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast to <a href="/AS9063">AS9063</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast to <a href="/AS9116">AS9116</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast to <a href="/AS12312">AS12312</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast to <a href="/AS12322">AS12322</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast,ipv6.unicast to <a href="/AS12350">AS12350</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast to <a href="/AS12399">AS12399</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast,ipv6.unicast to <a href="/AS12552">AS12552</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast,ipv6.unicast to <a href="/AS12611">AS12611</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast to <a href="/AS12695">AS12695</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast,ipv6.unicast to <a href="/AS12713">AS12713</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast,ipv6.unicast to <a href="/AS12859">AS12859</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast to <a href="/AS12897">AS12897</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast,ipv6.unicast to <a href="/AS12989">AS12989</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast,ipv6.unicast to <a href="/AS13030">AS13030</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast,ipv6.unicast to <a href="/AS13193">AS13193</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast,ipv6.unicast to <a href="/AS13237">AS13237</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast to <a href="/AS15133">AS15133</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast to <a href="/AS15422">AS15422</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast,ipv6.unicast to <a href="/AS15436">AS15436</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast to <a href="/AS15557">AS15557</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast,ipv6.unicast to <a href="/AS15830">AS15830</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast,ipv6.unicast to <a href="/AS15925">AS15925</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast,ipv6.unicast to <a href="/AS16086">AS16086</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast to <a href="/AS16276">AS16276</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast,ipv6.unicast to <a href="/AS16347">AS16347</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast,ipv6.unicast to <a href="/AS16509">AS16509</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast,ipv6.unicast to <a href="/AS19151">AS19151</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast,ipv6.unicast to <a href="/AS20569">AS20569</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast to <a href="/AS20640">AS20640</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast to <a href="/AS20764">AS20764</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast,ipv6.unicast to <a href="/AS20811">AS20811</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast,ipv6.unicast to <a href="/AS20940">AS20940</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast to <a href="/AS21011">AS21011</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast,ipv6.unicast to <a href="/AS21263">AS21263</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast to <a href="/AS21336">AS21336</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast,ipv6.unicast to <a href="/AS21385">AS21385</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast to <a href="/AS21409">AS21409</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast to <a href="/AS21502">AS21502</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast to <a href="/AS22822">AS22822</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast to <a href="/AS23148">AS23148</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast,ipv6.unicast to <a href="/AS24115">AS24115</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast,ipv6.unicast to <a href="/AS24724">AS24724</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast to <a href="/AS24751">AS24751</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast,ipv6.unicast to <a href="/AS25220">AS25220</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast,ipv6.unicast to <a href="/AS25279">AS25279</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast,ipv6.unicast to <a href="/AS28877">AS28877</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast to <a href="/AS29076">AS29076</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast,ipv6.unicast to <a href="/AS29154">AS29154</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast,ipv6.unicast to <a href="/AS29208">AS29208</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast,ipv6.unicast to <a href="/AS29422">AS29422</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast to <a href="/AS29608">AS29608</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast,ipv6.unicast to <a href="/AS30781">AS30781</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast to <a href="/AS30889">AS30889</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast to <a href="/AS30890">AS30890</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast,ipv6.unicast to <a href="/AS31252">AS31252</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast to <a href="/AS31400">AS31400</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast to <a href="/AS31500">AS31500</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast to <a href="/AS31529">AS31529</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast,ipv6.unicast to <a href="/AS31688">AS31688</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast,ipv6.unicast to <a href="/AS32934">AS32934</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast,ipv6.unicast to <a href="/AS33873">AS33873</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast,ipv6.unicast to <a href="/AS33891">AS33891</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast to <a href="/AS34006">AS34006</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast to <a href="/AS34655">AS34655</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast,ipv6.unicast to <a href="/AS34695">AS34695</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast,ipv6.unicast to <a href="/AS34913">AS34913</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast,ipv6.unicast to <a href="/AS34953">AS34953</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast to <a href="/AS36408">AS36408</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast,ipv6.unicast to <a href="/AS39257">AS39257</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast to <a href="/AS39792">AS39792</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast,ipv6.unicast to <a href="/AS39912">AS39912</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast,ipv6.unicast to <a href="/AS41692">AS41692</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast to <a href="/AS42366">AS42366</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast to <a href="/AS42416">AS42416</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast,ipv6.unicast to <a href="/AS42456">AS42456</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast to <a href="/AS42459">AS42459</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast to <a href="/AS42652">AS42652</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast,ipv6.unicast to <a href="/AS42708">AS42708</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast,ipv6.unicast to <a href="/AS43646">AS43646</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast,ipv6.unicast to <a href="/AS44654">AS44654</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast,ipv6.unicast to <a href="/AS44788">AS44788</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast,ipv6.unicast to <a href="/AS47447">AS47447</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast,ipv6.unicast to <a href="/AS47605">AS47605</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast,ipv6.unicast to <a href="/AS49544">AS49544</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast,ipv6.unicast to <a href="/AS49594">AS49594</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast,ipv6.unicast to <a href="/AS51706">AS51706</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast,ipv6.unicast to <a href="/AS52075">AS52075</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+mp-export:      afi ipv4.unicast to <a href="/AS197500">AS197500</a> announce <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a>
+remarks:        =======================================================
+remarks:        BGP Customers
+remarks:        =======================================================
+remarks:        <a href="/AS112">AS112</a>
+mp-import:      afi ipv4.unicast,ipv6.unicast from <a href="/AS112">AS112</a> accept <a href="/AS112">AS112</a>
+mp-export:      afi ipv4.unicast,ipv6.unicast to <a href="/AS112">AS112</a> announce ANY
+remarks:        - Sipartech
+mp-export:      afi ipv4.unicast to <a href="/AS8309">AS8309</a> announce ANY
+mp-import:      afi ipv4.unicast from <a href="/AS8309">AS8309</a> accept <a href="/as-set/AS-SPH">AS-SPH</a>
+remarks:        - Comfm
+mp-export:      afi ipv4.unicast to <a href="/AS15674">AS15674</a> announce ANY
+mp-import:      afi ipv4.unicast from <a href="/AS15674">AS15674</a> accept <a href="/AS15674">AS15674</a>
+remarks:        - Antenna Hungaria
+mp-export:      afi ipv4.unicast to <a href="/AS20568">AS20568</a> announce ANY
+mp-import:      afi ipv4.unicast from <a href="/AS20568">AS20568</a> accept ANY # also local-as AHRT
+remarks:        - Yacast Media
+mp-export:      afi ipv4.unicast,ipv6.unicast to <a href="/AS24963">AS24963</a> announce ANY
+mp-import:      afi ipv4.unicast,ipv6.unicast from <a href="/AS24963">AS24963</a> accept ANY # local-as Yacast over DE-CIX (for unresponsive peers...)
+remarks:        - Infosat
+mp-export:      afi ipv4.unicast to <a href="/AS33835">AS33835</a> announce ANY
+mp-import:      afi ipv4.unicast,ipv6.unicast from <a href="/AS33835">AS33835</a> accept <a href="/AS33835">AS33835</a>
+remarks:        - Hivane
+mp-export:      afi ipv4.unicast,ipv6.unicast to <a href="/AS34019">AS34019</a> announce ANY
+mp-import:      afi ipv4.unicast,ipv6.unicast from <a href="/AS34019">AS34019</a> accept <a href="/as-set/AS-HIVANE">AS-HIVANE</a>
+remarks:        - QBrick
+mp-export:      afi ipv4.unicast,ipv6.unicast to <a href="/AS35742">AS35742</a> announce ANY
+mp-import:      afi ipv4.unicast,ipv6.unicast from <a href="/AS35742">AS35742</a> accept <a href="/as-set/AS-QBRICK">AS-QBRICK</a>
+remarks:        - Digita Oy
+mp-export:      afi ipv4.unicast,ipv6.unicast to <a href="/AS48299">AS48299</a> announce ANY
+mp-import:      afi ipv4.unicast,ipv6.unicast from <a href="/AS48299">AS48299</a> accept <a href="/AS48299">AS48299</a>
+remarks:        - Enix
+mp-export:      afi ipv4.unicast to <a href="/AS48813">AS48813</a> announce ANY
+mp-import:      afi ipv4.unicast from <a href="/AS48813">AS48813</a> accept <a href="/as-set/AS-ENIX">AS-ENIX</a>
+remarks:        - Evolix
+mp-export:      afi ipv4.unicast,ipv6.unicast to <a href="/AS197696">AS197696</a> announce ANY
+mp-import:      afi ipv4.unicast,ipv6.unicast from <a href="/AS197696">AS197696</a> accept <a href="/as-set/AS-EVOLIX">AS-EVOLIX</a>
+remarks:        - Plugit
+mp-export:      afi ipv4.unicast to <a href="/AS60001">AS60001</a> announce ANY
+mp-import:      afi ipv4.unicast from <a href="/AS60001">AS60001</a> accept <a href="/AS60001">AS60001</a>
+remarks:        - CMA
+mp-export:      afi ipv4.unicast to <a href="/AS21203">AS21203</a> announce ANY
+mp-import:      afi ipv4.unicast from <a href="/AS21203">AS21203</a> accept <a href="/AS21203">AS21203</a>
+remarks:        - WDR
+mp-export:      afi ipv4.unicast to <a href="/AS8303">AS8303</a> announce ANY
+mp-import:      afi ipv4.unicast from <a href="/AS8303">AS8303</a> accept <a href="/AS8303">AS8303</a>
+remarks:        - SIB
+mp-export:      afi ipv4.unicast to <a href="/AS52039">AS52039</a> announce ANY
+mp-import:      afi ipv4.unicast from <a href="/AS52039">AS52039</a> accept <a href="/AS52039">AS52039</a>
+remarks:        AZNETWORK
+mp-import:      afi ipv4.unicast,ipv6.unicast from <a href="/AS199167">AS199167</a> accept <a href="/as-set/AS-AZNETWORK">AS-AZNETWORK</a>
+mp-export:      afi ipv4.unicast,ipv6.unicast to <a href="/AS199167">AS199167</a> announce ANY
+remarks:        NORDNET
+mp-import:      afi ipv4.unicast,ipv6.unicast from <a href="/AS8362">AS8362</a> accept <a href="/AS8362">AS8362</a>
+mp-export:      afi ipv4.unicast,ipv6.unicast to <a href="/AS8362">AS8362</a> announce ANY
+remarks:        OPTIMADSI
+mp-import:      afi ipv4.unicast,ipv6.unicast from <a href="/AS205147">AS205147</a> accept <a href="/AS205147">AS205147</a>
+mp-export:      afi ipv4.unicast,ipv6.unicast to <a href="/AS205147">AS205147</a> announce ANY
+remarks:        AGELIA
+mp-import:      afi ipv4.unicast,ipv6.unicast from <a href="/AS16057">AS16057</a> accept <a href="/AS16057">AS16057</a>
+mp-export:      afi ipv4.unicast,ipv6.unicast to <a href="/AS16057">AS16057</a> announce ANY
+remarks:        SIB
+mp-import:      afi ipv4.unicast,ipv6.unicast from <a href="/AS52039">AS52039</a> accept <a href="/AS52039">AS52039</a>
+mp-export:      afi ipv4.unicast,ipv6.unicast to <a href="/AS52039">AS52039</a> announce ANY
+remarks:        =======================================================
+remarks:        Information: http://www.as43646.net
+remarks:        Looking glass : http://www.as43646.net/tools
+remarks:        PeeringDB : http://as43646.peeringdb.com
+remarks:        =======================================================
+remarks:        You can peer with Smartjog at the following IXes (Route-server enabled where available, and preferred for low traffic ASNs):
+remarks:        - BIX (Budapest)
+remarks:        - DE-CIX (Frankfurt)
+remarks:        - Equinix (Paris)
+remarks:        - FICIX (Helsinki)
+remarks:        - FranceIX (Paris)
+remarks:        - FranceIX (Marseille)
+remarks:        =======================================================
+remarks:        Smartjog PNI Facilities (10G);
+remarks:        - Ancotel Frankfurt - DE
+remarks:        - Dataplex Budapest - HU
+remarks:        - InterXion2 (Paris) - FR
+remarks:        - ISZT (Budapest) - HU
+remarks:        - Coresite LA2 (Los Angeles) - US
+remarks:        - Level(3) Paris Capitole - FR
+remarks:        - Pasila Broadcasting Tower (Helsinki) - FI
+remarks:        - SFR Bordeaux - FR
+remarks:        - SFR Cesson - FR
+remarks:        - SFR Lille - FR
+remarks:        - SFR Marseille - FR
+remarks:        - SFR Lyon-Venissieux - FR
+remarks:        - SFR Strasbourg - FR
+remarks:        - TDF Fort de Romainville - FR
+remarks:        - Telecity2 Amsterdam - NL
+remarks:        - Telehouse 2 Paris - FR
+remarks:        =======================================================
+admin-c:        DUMY-RIPE
+tech-c:         DUMY-RIPE
+status:         ASSIGNED
+notify:         ripe@as43646.net
+mnt-by:         RIPE-NCC-END-MNT
+mnt-by:         SMARTJOG-MNT
+created:        2007-09-06T07:27:48Z
+last-modified:  2023-11-24T08:55:03Z
+source:         RIPE
+remarks:        ****************************
+remarks:        * THIS OBJECT IS MODIFIED
+remarks:        * Please note that all data that is generally regarded as personal
+remarks:        * data has been removed from this object.
+remarks:        * To view the original object, please query the RIPE Database at:
+remarks:        * http://www.ripe.net/whois
+remarks:        ****************************
+
+
+organisation:   <a href="https://apps.db.ripe.net/db-web-ui/query?searchtext=ORG-TA1221-RIPE">ORG-TA1221-RIPE</a>
+org-name:       TDF SASU
+country:        FR
+org-type:       LIR
+address:        Dummy address for <a href="https://apps.db.ripe.net/db-web-ui/query?searchtext=ORG-TA1221-RIPE">ORG-TA1221-RIPE</a>
+# Email removed, Log into bgp.tools to see whois emails
+abuse-c:        AR44652-RIPE
+mnt-ref:        SMARTJOG-MNT
+mnt-by:         RIPE-NCC-HM-MNT
+mnt-by:         SMARTJOG-MNT
+created:        2018-01-12T09:55:15Z
+last-modified:  2024-04-26T12:28:38Z
+source:         RIPE
+remarks:        ****************************
+remarks:        * THIS OBJECT IS MODIFIED
+remarks:        * Please note that all data that is generally regarded as personal
+remarks:        * data has been removed from this object.
+remarks:        * To view the original object, please query the RIPE Database at:
+remarks:        * http://www.ripe.net/whois
+remarks:        ****************************
+
+</pre>
+                        
+                        
+                        <a style="font-size: small;">Last Update: 2025-12-11T03:25:20Z UTC </a>
+                        
+                        <hr>
+                        
+                            <h2>Member of the following AS-SETs</h2>
+
+                            <table id="fhTable" class="full-width-table ">
+                                <tbody id="prefixlist-tbody">
+                                    <tr>
+                                        <th class="boldpls nowrap"> - </th>
+                                        <th class="boldpls">Member</th>
+                                        
+                                        <th class="boldpls nowrap">ASN Count</th>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as51706:as-members:as-mrs-rs">as51706:as-members:as-mrs-rs</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">66</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-titandecix">as-titandecix</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">133</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-tdfpmm">as-tdfpmm</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">98</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as24904:as-franceix-peers">as24904:as-franceix-peers</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">25</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-jaguar-peering-v6-france-ix-marseille">as-jaguar-peering-v6-france-ix-marseille</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">5</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-qbrick">as-qbrick</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">3</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                        
+
+                    </div>
+
+                    
+
+                    
+
+                    
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="superclearfix">
+            
+            <div class="superclearfix">
+                
+            </div>
+
+            <div class="superclearfix">
+                
+            </div>
+
+
+        </div>
+
+
+        <div class="group js-footer" id="footer">
+            <nav>
+                <div>
+                    <ul>
+                        <li><a href="/kb/api" target="_blank">Scripting/API</a></li>
+                        <li><a href="/credits" target="_blank">Credits</a></li>
+                        <li><a href="/pricing" target="_blank">Pricing</a></li>
+                        <li><a href="/kb/contact" target="_blank">Contact Us</a></li>
+                        <li><a href="https://github.com/bgptools/issues" target="_blank">Issue Tracker</a></li>
+                        <li><a href="/kb/setup-sessions" target="">Contribute Data</a></li>
+                        
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <script>
+    
+    var inhash = window.location.hash;
+    if (inhash == "#asinfo") {
+        
+    } else if (inhash == "#prefixes") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#prefix-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#prefixes-page');
+        aaa[0].style.display = "";
+
+    } else if (inhash == "#connectivity" || inhash == "#peers" || inhash == "#upstreams" || inhash == "#downstreams") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#connectivity-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#connectivity-page');
+        aaa[0].style.display = "";
+    } else if (inhash == "#whois") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#whois-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#whois-page');
+        aaa[0].style.display = "";
+    } else if (inhash == "#ix") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#ix-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#ix-page');
+        aaa[0].style.display = "";
+    }</script>
+
+    <script>
+    
+
+
+    ;(function() {
+  'use strict'
+
+  function scaleImageMap() {
+    function resizeMap() {
+      function resizeAreaTag(cachedAreaCoords, idx) {
+        function scale(coord) {
+          var dimension = 1 === (isWidth = 1 - isWidth) ? 'width' : 'height'
+          return (
+            padding[dimension] +
+            Math.floor(Number(coord) * scalingFactor[dimension])
+          )
+        }
+
+        var isWidth = 0
+        areas[idx].coords = cachedAreaCoords
+          .split(',')
+          .map(scale)
+          .join(',')
+      }
+
+      var scalingFactor = {
+        width: image.width / image.naturalWidth,
+        height: image.height / image.naturalHeight,
+      }
+
+      var padding = {
+        width: parseInt(
+          window.getComputedStyle(image, null).getPropertyValue('padding-left'),
+          10
+        ),
+        height: parseInt(
+          window.getComputedStyle(image, null).getPropertyValue('padding-top'),
+          10
+        ),
+      }
+
+      cachedAreaCoordsArray.forEach(resizeAreaTag)
+    }
+
+    function getCoords(e) {
+      
+      return e.coords.replace(/ *, */g, ',').replace(/ +/g, ',')
+    }
+
+    function debounce() {
+      clearTimeout(timer)
+      timer = setTimeout(resizeMap, 250)
+    }
+
+    function start() {
+      if (
+        image.width !== image.naturalWidth ||
+        image.height !== image.naturalHeight
+      ) {
+        resizeMap()
+      }
+    }
+
+    function addEventListeners() {
+      image.addEventListener('load', resizeMap, false) 
+      window.addEventListener('focus', resizeMap, false) 
+      window.addEventListener('resize', debounce, false)
+      window.addEventListener('readystatechange', resizeMap, false)
+      document.addEventListener('fullscreenchange', resizeMap, false)
+    }
+
+    function beenHere() {
+      return 'function' === typeof map._resize
+    }
+
+    function getImg(name) {
+      return document.querySelector('img[usemap="#world"]')
+    }
+
+    function setup() {
+      areas = map.getElementsByTagName('area')
+      cachedAreaCoordsArray = Array.prototype.map.call(areas, getCoords)
+      image = getImg('#' + map.name) || getImg(map.name)
+      map._resize = resizeMap 
+    }
+
+    var  
+      map = this,
+      areas = null,
+      cachedAreaCoordsArray = null,
+      image = null,
+      timer = null
+
+    if (!beenHere()) {
+      setup()
+      addEventListeners()
+      start()
+    } else {
+      map._resize() 
+    }
+  }
+
+  function factory() {
+    function chkMap(element) {
+      if (!element.tagName) {
+        throw new TypeError('Object is not a valid DOM element')
+      } else if ('MAP' !== element.tagName.toUpperCase()) {
+        throw new TypeError(
+          'Expected <MAP> tag, found <' + element.tagName + '>.'
+        )
+      }
+    }
+
+    function init(element) {
+      if (element) {
+        chkMap(element)
+        scaleImageMap.call(element)
+        maps.push(element)
+      }
+    }
+
+    var maps
+
+    return function imageMapResizeF(target) {
+      maps = [] 
+
+      switch (typeof target) {
+        case 'undefined':
+        case 'string':
+          Array.prototype.forEach.call(
+            document.querySelectorAll(target || 'map'),
+            init
+          )
+          break
+        case 'object':
+          init(target)
+          break
+        default:
+          throw new TypeError('Unexpected data type (' + typeof target + ').')
+      }
+
+      return maps
+    }
+  }
+
+  if (typeof define === 'function' && define.amd) {
+    define([], factory)
+  } else if (typeof module === 'object' && typeof module.exports === 'object') {
+    module.exports = factory() 
+  } else {
+    window.imageMapResize = factory()
+  }
+
+  if ('jQuery' in window) {
+    window.jQuery.fn.imageMapResize = function $imageMapResizeF() {
+      return this.filter('map')
+        .each(scaleImageMap)
+        .end()
+    }
+  }
+})()
+    
+    </script>
+    <script>
+        var imgEl = document.getElementById("pathimg");
+        imgEl.addEventListener("mouseover",function() {
+            imageMapResize('#world');
+        })
+    </script>
+    <script src="/assets/tablesort.min.js"></script>
+    <script>
+        addEventListener("load", (event) => {
+            
+            
+            var sort = new Tablesort(document.getElementById('donotscrapebgptools-upstreamTable'));
+            var sort2 = new Tablesort(document.getElementById('donotscrapebgptools-upstreamTablePeers'));
+            
+            
+            
+        });
+    </script>
+    
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        setTimeout(function() {
+
+        var beaconHttp = new XMLHttpRequest();
+        var url = '/performance-beacon';
+        var params = JSON.stringify(window.performance)
+        beaconHttp.open('POST', url, true);
+        
+        
+        beaconHttp.setRequestHeader('Content-type', 'application/json');
+        beaconHttp.setRequestHeader('visit-url', "/as/43646");
+        if (navigator.connection) {
+            beaconHttp.setRequestHeader('client-side-rtt', navigator.connection.rtt);
+        } else {
+            beaconHttp.setRequestHeader('client-side-rtt', '-2');
+        }
+        beaconHttp.onreadystatechange = function() {}
+        beaconHttp.send(params);
+        },1000)
+    }, false);
+</script>
+
+</body>
+
+
+</html>

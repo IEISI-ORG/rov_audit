@@ -1,0 +1,2900 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="SITA (AS205080) is a 8 year old BGP network that is peering with 32 other networks and has 31 upstream carriers">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000">
+    <link rel="search" type="application/opensearchdescription+xml" title="BGP.Tools" href="https://bgp.tools/opensearch.xml">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="theme-color" content="#000000">
+    <link href="https://social.bgp.tools/@bgptools" rel="me">
+    <link rel="canonical" href="https://bgp.tools/as/205080" />
+    <title>AS205080 SITA - bgp.tools</title>
+    <link rel="stylesheet" type="text/css" href="/assets/main-new.css?2025-12-09-1723%20UTC">
+</head>
+
+<body>
+    <div id="container">
+        
+<div id="global-header" class="global-header-top">
+    <div class="header-sitewide">
+        <div class="global-header">
+            <div class="header-logo">
+                <a href="/" id="logo" class="content">bgp.tools</a>
+            </div>
+            <form id="search" action="/search" method="get" accept-charset="utf-8" role="search" class="top-search-header js-search-hash">
+                <div class="searchfield">
+                    <input type="search" autocomplete="off" name="q" id="site-search-text" title="Search" value="" placeholder="Start here..." autofocus="autofocus" class="js-search-focus">
+                    <button type="submit" id="search-submit" class="search-submit">Search</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div id="global-header-blob" >
+    <a id="auth-header-text" href="/login">Login</a>
+    
+</div>
+<div id="global-header-bar" >
+    <a id="auth-header-bar-text" href="/login">Login</a>
+    
+</div>
+<div class="small-clearfix"></div>
+
+        <div id="global-container">
+            
+
+
+            
+            <div class="section-tabs js-tabs">
+                <ul>
+                    
+<li class="active">
+    <h1> <a id="viewbutton-tab" href="/as/205080">View</a></h1>
+</li>
+
+<li >
+    <a id="editbutton-tab" href="/edit/as/205080">Edit</a>
+</li>
+
+
+
+
+
+                    <li style="float: right;">
+                        
+                        <img id="ws-status" width="24" height="24" src="/assets/disconnected.png" title="Not Connected To realtime data updates">
+                        
+                    </li>
+                </ul>
+            </div>
+
+            <div id="search-container">
+
+                <div class="column-full-width">
+
+                    <div class="clearfix">
+                        
+                    </div>
+                    
+                    
+
+                    <div class="network-header">
+                        
+                        
+                        <img width="334" height="250" src="/img/205080" alt="The website screenshot for https://www.sita.aero/" >
+                        
+                        
+                        <p id="network-name" class="heading-xlarge">SITA</p>
+                        <p id="network-number">
+                            AS Number
+                            <strong id="ASNumberString" pure="205080">205080</strong>
+                            <br>
+                        
+                            Website
+                            <strong><a href="https://www.sita.aero/" rel="nofollow">https://www.sita.aero/</a></strong>
+                        
+                        </p>
+
+                    </div>
+
+
+                    <div class="clearfix">
+                        
+                    </div>
+
+
+                    <div class="section-tabs js-tabs">
+                        <ul>
+
+                            <li id="overview-tab-li" class="active">
+                                <a id="overview-tab" href="#asinfo">Overview</a>
+                            </li>
+                            
+                            <li id="prefix-tab-li">
+                                <a id="prefix-tab" href="#prefixes">Prefixes</a>
+                            </li>
+
+                            <li id="connectivity-tab-li">
+                                <a id="connectivity-tab" href="#connectivity">Connectivity</a>
+                            </li>
+                            
+                            <li id="whois-tab-li">
+                                <a id="whois-tab" href="#whois">Whois</a>
+                            </li>
+                        
+                        
+                        </ul>
+                    </div>
+
+<script>
+    function removeAllActiveTab() {
+        var tabs = [
+            "overview-tab-li", 
+            "prefix-tab-li", 
+            "connectivity-tab-li",
+            "whois-tab-li",
+            "ix-tab-li",
+            "issues-tab-li"
+        ];
+
+        tabs.forEach(element => {
+            var aaa = document.querySelectorAll('#'+element);
+            if(aaa.length != 0) {
+                aaa[0].classList.remove("active")
+            }
+        });
+    }
+
+    function hideAllContent() {
+        var tabs = [
+            "overview-page", 
+            "prefixes-page", 
+            "connectivity-page",
+            "whois-page",
+            "ix-page",
+            "issues-page"
+        ];
+
+        tabs.forEach(element => {
+            var aaa = document.querySelectorAll('#'+element);
+            if(aaa.length != 0) {
+                aaa[0].style.display = "none";
+            }
+        });
+        if (document.getElementById("donotscrapebgptools-prefixlist-tbody")) {
+            var prefixrows = document.getElementById("donotscrapebgptools-prefixlist-tbody").children;
+            for (var i = 0; i < prefixrows.length; i++) {
+                prefixrows[i].style = "";
+            }
+        }
+    }
+
+    var otab = document.querySelectorAll('#overview-tab');
+    otab[0].addEventListener("click", function () {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#overview-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#overview-page');
+        aaa[0].style.display = "";
+    });
+    
+
+    var ptab = document.querySelectorAll('#prefix-tab');
+    ptab[0].addEventListener("click", function () {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#prefix-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#prefixes-page');
+        aaa[0].style.display = "";
+    });
+
+    var ctab = document.querySelectorAll('#connectivity-tab');
+    ctab[0].addEventListener("click", function () {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#connectivity-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#connectivity-page');
+        aaa[0].style.display = "";
+    });
+    
+
+    var wtab = document.querySelectorAll('#whois-tab');
+    wtab[0].addEventListener("click", function () {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#whois-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#whois-page');
+        aaa[0].style.display = "";
+    });
+
+</script>
+
+
+
+                    
+                    <div id="overview-page">
+
+                        <div class="grid-row">
+                        
+                        <div class="column-two-thirds">
+                            <dl>
+                                <dt>Registered on</dt>
+                                <dd class="text data">
+                                    
+                                     9 Nov 2017 (8 years old)
+                                </dd>
+                            
+                            
+                            <dt>Registered to</dt>
+                            <dd class="text data">
+                                <a href="/rir-owner/be.sita">be.sita</a> (ripe)</dd>
+                                
+                            
+                            </dl>
+                        </div>
+                        
+    
+                        <dl class="column-third">
+                            <dt>Network status</dt>
+                            <dd class="text data">
+                                
+                                Active, Allocated under RIPE
+                                
+                            </dd>
+                        </dl>
+    
+                        </div>
+    
+                        <div class="grid-row">
+                            <dl class="column-two-thirds">
+                                <dt>Network type</dt>
+                                <dd class="text data">
+                                    Unknown
+                                </dd>
+                            </dl>
+    
+                            <dl class="column-third">
+                                <dt>Prefixes Originated</dt>
+                                <dd class="data">29 IPv4, 17 IPv6</dd>
+                            </dl>
+                        </div>
+                        <div class="grid-row">
+                            <div class="column-half">
+    
+                                <h2 class="heading-medium"><derp>Upstreams</derp></h2>
+                                <ul>
+                                    
+                                    <li>
+                                        <span id="sic0">
+                                          <a href="/as/8220">AS8220</a> - COLT
+                                        </span>
+                                    </li>
+                                    
+                                    <li>
+                                        <span id="sic0">
+                                          <a href="/as/9498">AS9498</a> - Bharti Airtel Ltd.
+                                        </span>
+                                    </li>
+                                    
+                                    <li>
+                                        <span id="sic0">
+                                          <a href="/as/22652">AS22652</a> - Videotron Ltee
+                                        </span>
+                                    </li>
+                                    
+                                    <li>
+                                        <span id="sic0">
+                                          <a href="/as/9255">AS9255</a> - Singapore Telecom
+                                        </span>
+                                    </li>
+                                    
+                                    <li>
+                                        <span id="sic0">
+                                          <a href="/as/3215">AS3215</a> - Orange S.A.
+                                        </span>
+                                    </li>
+                                    
+                                    <li>
+                                        <span id="sic0">
+                                          <a href="/as/10796">AS10796</a> - Charter Communications Inc
+                                        </span>
+                                    </li>
+                                    
+                                    <li>
+                                        <span id="sic0">
+                                          <a href="/as/5631">AS5631</a> - Telcom Networks Limited
+                                        </span>
+                                    </li>
+                                    
+                                    <li>
+                                        <span id="sic0">
+                                          <a href="/as/6461">AS6461</a> - Zayo Bandwidth
+                                        </span>
+                                    </li>
+                                    
+                                </ul>
+    
+                            </div>
+    
+                            <div class="column-half">
+                                
+                                    <h2 class="heading-medium"><derp>Rankings</derp></h2>
+                                    
+                                    <li><span id="sic0">#52 for <a href="/rankings/BE?sort=eyeballs">Estimated Eyeballs  in Belgium</a></span></li>
+                                    
+                                    <li><span id="sic0">#103 for <a href="/rankings/BE?sort=dns">Unique Domains  in Belgium</a></span></li>
+                                    
+                                    <li><span id="sic0">#46 for <a href="/rankings/BE?sort=peering">Known Peers  in Belgium</a></span></li>
+                                    
+                                    <li><span id="sic0">#26 for <a href="/rankings/BE?sort=v4">Originated IPv4 Space  in Belgium</a></span></li>
+                                    
+                                    <li><span id="sic0">#31 for <a href="/rankings/BE?sort=v6">Originated IPv6 Space  in Belgium</a></span></li>
+                                    
+                                
+                            </div>
+                        </div>
+                        
+                        <div class="grid-row" style="padding: 15px;">
+                            <h2 class="heading-medium"><derp>Tags:</derp></h2>
+                            <br>
+                            
+                            <a href="/tags/corp"><span style="border: 5px solid #D9D9D9;" class="taglist"> Corporate/Enterprise </span></a>
+                            
+                        </div>
+                        
+                    </div>
+                    
+
+                    <div style="display: none" id="prefixes-page">
+                        
+
+                        
+                        <div style="float:left">
+                            <dt>Prefixes Originated</dt>
+                            <dd class="data">29 IPv4, 17 IPv6</dd>
+                            
+                            
+                        </div>
+                        <div style="float:right">
+                                <dt>Addresses Originated</dt>
+                                <dd class="data">35 /24's of IPv4</dd>
+                                <dd class="data">78 /48's of IPv6</dd>
+                        </div>
+
+                        <div class="clearfix">
+                            
+                        </div>
+
+
+                        <table id="fhTable" class="full-width-table ">
+                            <tbody id="donotscrapebgptools-prefixlist-tbody">
+                                <tr>
+                                    <th class="nowrap">  &nbsp;  </th>
+                                    <th class="boldpls">Prefix</th>
+                                    <th class="nowrap boldpls">Description</th>
+                                </tr>
+                                <p id="readme-if-you-are-human" style="display: none;">If you are scraping this block for the prefixes that a AS originates, please use the data dumps in https://bgp.tools/kb/api and cache them</p>
+                                
+                                <tr id="pfx-57.188.4.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="JO" src="/assets/flags/JO.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/57.188.4.0/24">57.188.4.0/24</a></td>
+                                    <td class="smallonmobile nowrap">SITA, King Hussein Business Park, Amman</td>
+                                </tr>
+                                
+                                <tr id="pfx-57.188.7.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="DE" src="/assets/flags/DE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/57.188.7.0/24">57.188.7.0/24</a></td>
+                                    <td class="smallonmobile nowrap">SITA, Ludwig Erhard Strasse, Eschborn, Frankfurt</td>
+                                </tr>
+                                
+                                <tr id="pfx-57.188.8.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CZ" src="/assets/flags/CZ.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/57.188.8.0/24">57.188.8.0/24</a></td>
+                                    <td class="smallonmobile nowrap">SITA V Parku 2323/14, Prague Czech Republic, 14800</td>
+                                </tr>
+                                
+                                <tr id="pfx-57.188.11.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="IE" src="/assets/flags/IE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/57.188.11.0/24">57.188.11.0/24</a></td>
+                                    <td class="smallonmobile nowrap">SITA, Carnamuggagh Cl., Letterkenny, Co. Donegal</td>
+                                </tr>
+                                
+                                <tr id="pfx-57.188.12.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ES" src="/assets/flags/ES.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/57.188.12.0/24">57.188.12.0/24</a></td>
+                                    <td class="smallonmobile nowrap">SITA, Carrer de Pallars 200, 08018 Barcelona, Spain</td>
+                                </tr>
+                                
+                                <tr id="pfx-57.188.14.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="IT" src="/assets/flags/IT.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/57.188.14.0/24">57.188.14.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Da Vinci Business Center, 13 Viale Alexandre Gustave ...</td>
+                                </tr>
+                                
+                                <tr id="pfx-57.188.15.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="DE" src="/assets/flags/DE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/57.188.15.0/24">57.188.15.0/24</a></td>
+                                    <td class="smallonmobile nowrap">SITA IPS Robert-Schumann Str 20 D 44263 Dortmund, Germany</td>
+                                </tr>
+                                
+                                <tr id="pfx-57.188.16.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="EG" src="/assets/flags/EG.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/57.188.16.0/24">57.188.16.0/24</a></td>
+                                    <td class="smallonmobile nowrap">SITA, 2 Makrem Ebeid Ext, Masaken Al Mohandesin, Nasr...</td>
+                                </tr>
+                                
+                                <tr id="pfx-57.188.17.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="BE" src="/assets/flags/BE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/57.188.17.0/24">57.188.17.0/24</a></td>
+                                    <td class="smallonmobile nowrap">SITA, Avenue des Olympiades 2, Brussels, Belgium</td>
+                                </tr>
+                                
+                                <tr id="pfx-57.188.19.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="SA" src="/assets/flags/SA.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/57.188.19.0/24">57.188.19.0/24</a></td>
+                                    <td class="smallonmobile nowrap">SITA, Hussein Center, Bazerji Street, Jeddah, Saudi Arabia</td>
+                                </tr>
+                                
+                                <tr id="pfx-57.188.20.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ES" src="/assets/flags/ES.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/57.188.20.0/24">57.188.20.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Avda. Sur del Aeropuerto Barajas 38 | CP 28042 | Madr...</td>
+                                </tr>
+                                
+                                <tr id="pfx-57.188.21.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ES" src="/assets/flags/ES.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/57.188.21.0/24">57.188.21.0/24</a></td>
+                                    <td class="smallonmobile nowrap">SITA, Carrer de Pallars, 193-205, Barcelona</td>
+                                </tr>
+                                
+                                <tr id="pfx-57.188.22.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="NL" src="/assets/flags/NL.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/57.188.22.0/24">57.188.22.0/24</a></td>
+                                    <td class="smallonmobile nowrap">SITA, Blaak 555, 3011 GB, Rotterdam</td>
+                                </tr>
+                                
+                                <tr id="pfx-57.188.23.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="FR" src="/assets/flags/FR.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/57.188.23.0/24">57.188.23.0/24</a></td>
+                                    <td class="smallonmobile nowrap">SITA, 31-35 Rue de la Fédération, 75015 Paris, France</td>
+                                </tr>
+                                
+                                <tr id="pfx-57.188.24.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ZA" src="/assets/flags/ZA.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/57.188.24.0/24">57.188.24.0/24</a></td>
+                                    <td class="smallonmobile nowrap">SITA, First Floor Wembley Building, The Campus , 57 S...</td>
+                                </tr>
+                                
+                                <tr id="pfx-57.188.25.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="RO" src="/assets/flags/RO.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/57.188.25.0/24">57.188.25.0/24</a></td>
+                                    <td class="smallonmobile nowrap">21 Decembrie 4th Floor, 1989 Boulevard, no. 77, Cluj ...</td>
+                                </tr>
+                                
+                                <tr id="pfx-57.188.26.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CH" src="/assets/flags/CH.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/57.188.26.0/24">57.188.26.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Link, 10, chemin de Blandonnet 1214, Vernier,GE Switzerland</td>
+                                </tr>
+                                
+                                <tr id="pfx-57.188.27.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="GB" src="/assets/flags/GB.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/57.188.27.0/24">57.188.27.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Apex Reading Apex A/C, Level 5 Forbury Road Reading R...</td>
+                                </tr>
+                                
+                                <tr id="pfx-57.188.28.0/22">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="GB" src="/assets/flags/GB.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/57.188.28.0/22">57.188.28.0/22</a></td>
+                                    <td class="smallonmobile nowrap">SITA Corporate EMEA Gateway</td>
+                                </tr>
+                                
+                                <tr id="pfx-57.188.32.0/22">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/57.188.32.0/22">57.188.32.0/22</a></td>
+                                    <td class="smallonmobile nowrap">SITA Corporate AMER Gateway</td>
+                                </tr>
+                                
+                                <tr id="pfx-57.188.37.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/57.188.37.0/24">57.188.37.0/24</a></td>
+                                    <td class="smallonmobile nowrap">SITA, 55 Orville Drive, Islip, Bohemia, NY</td>
+                                </tr>
+                                
+                                <tr id="pfx-57.188.38.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/57.188.38.0/24">57.188.38.0/24</a></td>
+                                    <td class="smallonmobile nowrap">SITA, 770 Rue Sherbrooke Ouest, Montreal, QC</td>
+                                </tr>
+                                
+                                <tr id="pfx-57.188.40.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/57.188.40.0/24">57.188.40.0/24</a></td>
+                                    <td class="smallonmobile nowrap">SITA, 3728 Benner Road, Miamisburg, OH, United States...</td>
+                                </tr>
+                                
+                                <tr id="pfx-57.188.42.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="BR" src="/assets/flags/BR.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/57.188.42.0/24">57.188.42.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Alameda dos Arapanes 1441 Suite 42 4 floor Indianopol...</td>
+                                </tr>
+                                
+                                <tr id="pfx-57.188.52.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="IN" src="/assets/flags/IN.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/57.188.52.0/24">57.188.52.0/24</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-57.188.55.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="MY" src="/assets/flags/MY.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/57.188.55.0/24">57.188.55.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Jalan Lagoon Selatan 47500 Subang Jaya Selangor Darul...</td>
+                                </tr>
+                                
+                                <tr id="pfx-57.188.56.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="IN" src="/assets/flags/IN.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/57.188.56.0/24">57.188.56.0/24</a></td>
+                                    <td class="smallonmobile nowrap">SITA, Lok Bharati Complex, Marol, Mumbai</td>
+                                </tr>
+                                
+                                <tr id="pfx-57.188.57.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="IN" src="/assets/flags/IN.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/57.188.57.0/24">57.188.57.0/24</a></td>
+                                    <td class="smallonmobile nowrap">SRL Connect, 1st Floor, Block 20, Jakkur New Airport ...</td>
+                                </tr>
+                                
+                                <tr id="pfx-57.188.61.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="SG" src="/assets/flags/SG.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/57.188.61.0/24">57.188.61.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Loyang Way, Singapore</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a0a:90c0:1000::/42">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="BE" src="/assets/flags/BE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a0a:90c0:1000::/42">2a0a:90c0:1000::/42</a></td>
+                                    <td class="smallonmobile nowrap">Societe Internationale de Telecommunications Aeronautiques</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a0a:90c0:1003::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a0a:90c0:1003::/48">2a0a:90c0:1003::/48</a></td>
+                                    <td class="smallonmobile nowrap">SITA, 3728 Benner Road, Miamisburg, OH, United States...</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a0a:90c0:1010::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a0a:90c0:1010::/48">2a0a:90c0:1010::/48</a></td>
+                                    <td class="smallonmobile nowrap">SITA, 770 Rue Sherbrooke Ouest, Montreal, QC</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a0a:90c0:1043::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="GB" src="/assets/flags/GB.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a0a:90c0:1043::/48">2a0a:90c0:1043::/48</a></td>
+                                    <td class="smallonmobile nowrap">Apex Reading Apex A/C, Level 5 Forbury Road Reading R...</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a0a:90c0:1047::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="GB" src="/assets/flags/GB.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a0a:90c0:1047::/48">2a0a:90c0:1047::/48</a></td>
+                                    <td class="smallonmobile nowrap">SITA Corporate EMEA Gateway</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a0a:90c0:1049::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CH" src="/assets/flags/CH.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a0a:90c0:1049::/48">2a0a:90c0:1049::/48</a></td>
+                                    <td class="smallonmobile nowrap">Link, 10, chemin de Blandonnet 1214, Vernier,GE Switzerland</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a0a:90c0:104c::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="IE" src="/assets/flags/IE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a0a:90c0:104c::/48">2a0a:90c0:104c::/48</a></td>
+                                    <td class="smallonmobile nowrap">SITA, Carnamuggagh Cl., Letterkenny, Co. Donegal</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a0a:90c0:1052::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="FR" src="/assets/flags/FR.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a0a:90c0:1052::/48">2a0a:90c0:1052::/48</a></td>
+                                    <td class="smallonmobile nowrap">SITA, 31-35 Rue de la Fédération, 75015 Paris, France</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a0a:90c0:1058::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="BE" src="/assets/flags/BE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a0a:90c0:1058::/48">2a0a:90c0:1058::/48</a></td>
+                                    <td class="smallonmobile nowrap">SITA, Avenue des Olympiades 2, Brussels, Belgium</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a0a:90c0:105c::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="DE" src="/assets/flags/DE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a0a:90c0:105c::/48">2a0a:90c0:105c::/48</a></td>
+                                    <td class="smallonmobile nowrap">SITA, Ludwig Erhard Strasse, Eschborn, Frankfurt</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a0a:90c0:1062::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="NL" src="/assets/flags/NL.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a0a:90c0:1062::/48">2a0a:90c0:1062::/48</a></td>
+                                    <td class="smallonmobile nowrap">SITA, Blaak 555, 3011 GB, Rotterdam</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a0a:90c0:1068::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ES" src="/assets/flags/ES.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a0a:90c0:1068::/48">2a0a:90c0:1068::/48</a></td>
+                                    <td class="smallonmobile nowrap">SITA, Carrer de Pallars 200, 08018 Barcelona, Spain</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a0a:90c0:1070::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="RO" src="/assets/flags/RO.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a0a:90c0:1070::/48">2a0a:90c0:1070::/48</a></td>
+                                    <td class="smallonmobile nowrap">21 Decembrie 4th Floor, 1989 Boulevard, no. 77, Cluj ...</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a0a:90c0:1084::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="IN" src="/assets/flags/IN.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a0a:90c0:1084::/48">2a0a:90c0:1084::/48</a></td>
+                                    <td class="smallonmobile nowrap">SITA, Lok Bharati Complex, Marol, Mumbai</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a0a:90c0:1085::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="IN" src="/assets/flags/IN.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a0a:90c0:1085::/48">2a0a:90c0:1085::/48</a></td>
+                                    <td class="smallonmobile nowrap">SITA office-Cyber Greens, Server Room,Cyber Greens, D...</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a0a:90c0:1090::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="SA" src="/assets/flags/SA.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a0a:90c0:1090::/48">2a0a:90c0:1090::/48</a></td>
+                                    <td class="smallonmobile nowrap">SITA, Hussein Center, Bazerji Street, Jeddah, Saudi Arabia</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a0a:90c0:10c1::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="SG" src="/assets/flags/SG.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a0a:90c0:10c1::/48">2a0a:90c0:10c1::/48</a></td>
+                                    <td class="smallonmobile nowrap">Loyang Way, Singapore</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div style="display: none" id="connectivity-page">
+
+                        <div class="grid-row">
+
+                            <dl class="column-two-thirds">
+                                <dt><a href="#upstreams">Upstreams</a></dt>
+                                <dd class="text data">
+                                    31
+                                </dd>
+                            </dl>
+
+                            <dl class="column-third">
+                                <dt><a href="#peers">Peers</a></dt>
+                                <dd class="data">32</dd>
+                            </dl>
+                        </div>
+
+
+                        <hr>
+                        <h3>Network Policy<img class="flag-img" src="/assets/info.png" style="padding-left: 12px;" title="This info can take up to 2 hours to fully update" alt="This info take up to 2 hours to fully update"/></h3></h3>
+                        <a style="font-size: small;" href="/kb/network-policy">Click here to learn more about what this graph means and what makes up a network policy</a>
+
+                        <select id="netpolicydropdown" class="dropdownmenu">
+                            
+                                <option disabled=true value="disabled-default">Global Aggregation (disabled due to size)</option>
+                            
+
+                            
+                                
+                            
+                                
+                                <option value="00092122e4e82c938918a040fc614f106f4aaa2098fcef5957dffc9e">Policy jovial_mcnulty</option>
+                                
+                            
+                                
+                                <option value="08e209b92a31ffa814b1aa7c134cf079de0401e961a2ac05ea03ac9b">Policy adoring_poincare</option>
+                                
+                            
+                                
+                                <option value="2e6d2b5536b4ae6e8c9cd83c38fdbf09e738e60a9249b97dc14767c6">Policy gallant_mendel</option>
+                                
+                            
+                                
+                                <option value="3cffdc946386d91b356abe947cb8d74901e1c0b16d7d6b362e5c5b75">Policy distracted_spence</option>
+                                
+                            
+                                
+                                <option value="6ea2a8b0f7924b0394dd9bb7f144ea4cda3d24d41d3c9b4f9f5f0973">Policy tender_margulis</option>
+                                
+                            
+                                
+                                <option value="8fb7ed567244370f9e97b7514c4c7440aacde3936da9623e84f8553a">Policy brave_payne</option>
+                                
+                            
+                                
+                                <option value="a5ef1c023a7d4884fccf32c1821e1ee5a0484c1d0f4527c707328842">Policy condescending_bohr</option>
+                                
+                            
+                                
+                                <option value="c7b9a38ba90edfd76973b9074767384e02c5cb460af0935a4f0387e2">Policy stupefied_rubin</option>
+                                
+                            
+                                
+                                <option value="231129dd29a6c32ac236b440498e3fe1ba716f31862899cd4c74a844">Policy pedantic_johnson</option>
+                                
+                            
+                                
+                                <option value="5fd3a001deadef38d21e645400988f2f8d37740f77ef3d3b38e1962b">Policy vigilant_mclean</option>
+                                
+                            
+                                
+                                <option value="8c1df0320dee62ad94a006931870786a0517c80330e2b3d05ca79a7c">Policy compassionate_ritchie</option>
+                                
+                            
+                                
+                                <option value="9470ae6da6a883b7bb9a89933bff7e8dbf7bed8a53ec805289f3709c">Policy wonderful_hypatia</option>
+                                
+                            
+                                
+                                <option value="023d67443770bf83c5fc4a8c4530c1a9f348022dd8bede30baa82074">Policy thirsty_brahmagupta</option>
+                                
+                            
+                                
+                                <option value="7db34a27292a3131f5f935966c1a8ba0599f258cecd71ee916112718">Policy zealous_bohr</option>
+                                
+                            
+                                
+                                <option value="80a476175d2513e9a68c710211239e7f4a5c45b1f409a6eba973363a">Policy awesome_pike</option>
+                                
+                            
+                                
+                                <option value="a9a008fc96f1e1535c3348c4330febd2da72fc02329145e6dc7b997e">Policy naughty_brahmagupta</option>
+                                
+                            
+                                
+                                <option value="aa0f5fddae0f5543225a27cbb945a66860790824586d65c05ebdc9c1">Policy amazing_lederberg</option>
+                                
+                            
+                                
+                                <option value="bbefaeaf170517f35257bb15d5af5217c5bec8e35cfc76c7de2d93b9">Policy gallant_payne</option>
+                                
+                            
+                                
+                                <option value="bdfc1c7321db60deffd7c7b48a8eb1354d7ee7c078ff7e34ae6be4a0">Policy happy_payne</option>
+                                
+                            
+                                
+                                <option selected value="cc08f106cc1eeb3c044462621e7ad040d18d6df7e77881c358b16a76">Policy distracted_pasteur</option>
+                                
+                            
+                                
+                                <option value="0188551b195148cbe64ead448ac8376491d718cc2ae5863c0de8f305">Policy sharp_feynman</option>
+                                
+                            
+                                
+                                <option value="c08bfc85a085d3c1bec207a7acc1d0dbda4c135ad7c528ffa2580bae">Policy modest_fermi</option>
+                                
+                            
+                                
+                                <option value="e4698963a50bd45a23d5a6a780649345c4a0c1dfa7ef029c17a33a74">Policy pedantic_mcclintock</option>
+                                
+                            
+                                
+                                <option value="ea5120a12d8f8eb406ccac73b1d26eaa170d66b6f2de01509684ff80">Policy infallible_tu</option>
+                                
+                            
+                                
+                                <option value="f5ffe02a588f2f16e479c6bc7b396f46421c83231288e85fb125ec80">Policy boring_dijkstra</option>
+                                
+                            
+                                
+                                <option value="30d51abdd3dbdc860c6dbd93b67f3dcdd18dff64312d386960ea5291">Policy trusting_ishizaka</option>
+                                
+                            
+                                
+                                <option value="6a0e0a5208cba8e84bf37f61cd7b79fbd51ae8e4b58112aeb2d320c0">Policy serene_beaver</option>
+                                
+                            
+                                
+                                <option value="6e5db41bdfc48497cfff8f10a0d0e9d89ff95864fe5af63eb2956330">Policy epic_kepler</option>
+                                
+                            
+                                
+                                <option value="7b57f33e8befdd41ebbc52af4674e6e9c1fd7bc92741b271c5450b21">Policy unruffled_leavitt</option>
+                                
+                            
+                                
+                                <option value="f4bc8004e2e2c7463b89f31d7e57cdd29e80948042043bcb9258b708">Policy cool_brown</option>
+                                
+                            
+                                
+                                <option value="9226d087f130e2ef38fb0d3acd01995dd82e56e9413b187c2fd52c62">Policy optimistic_poincare</option>
+                                
+                            
+                                
+                                <option value="933003b3ddb96e0508bc633f69f672fdd607c3a80888aaeb1caf2772">Policy compassionate_carson</option>
+                                
+                            
+                                
+                                <option value="a388cba72195f61e214ce279b98c410f744314816fab33e2fec15ed5">Policy infallible_visvesvaraya</option>
+                                
+                            
+                                
+                                <option value="da09736d2e3d439d4e7590b0c8eaa89f4800356b9ba0a84eafea99c6">Policy sleepy_banach</option>
+                                
+                            
+                                
+                                <option value="eec946d4ff54a3eb2c2a6ce15d3a7c5ad2c47a6002a7621813072344">Policy practical_bardeen</option>
+                                
+                            
+                                
+                                <option value="8e8c61741d6fc0435467bc29b55ecdac1da63780ffa2030d623ae977">Policy stoic_noyce</option>
+                                
+                            
+                                
+                                <option value="961353afdee77e3b1e6cd5d1006e6e5aa8e769988a3aa32faeeba572">Policy sleepy_ptolemy</option>
+                                
+                            
+                                
+                                <option value="ca6bf273f9a967e882af3794f33f1bee8cd20bd52387536402e0dc87">Policy gracious_lovelace</option>
+                                
+                            
+                                
+                                <option value="f8d30c8c1fe2b72f0ba6c14b107669540d4c792b3c9b14fa1c023601">Policy dreamy_robinson</option>
+                                
+                            
+                                
+                                <option value="3389da425384fa5bb440c0549ff7692617ace82a07646cb8068d215c">Policy peaceful_panini</option>
+                                
+                            
+                                
+                                <option value="65ada9ab9ac4114408de82cc22583bd386f1af69d75c4e73816fe09e">Policy wonderful_benz</option>
+                                
+                            
+                                
+                                <option value="714e419693d0c43cc99c77afae17eefe906d96d89c5b4f23f1521d48">Policy fervent_meitner</option>
+                                
+                            
+                                
+                                <option value="75ebde35d2b851de71f2d3c377ad3607d56de3b34464e06491ca603d">Policy vigilant_napier</option>
+                                
+                            
+                                
+                                <option value="b1bb3bb3ac8baf4beae73a270ae42fbed59054d6191db083bd9b4d79">Policy cool_chaplygin</option>
+                                
+                            
+
+                            
+
+
+                        </select>
+
+                        <script>var netgroups = {"00092122e4e82c938918a040fc614f106f4aaa2098fcef5957dffc9e":["57.188.37.0/24"],"0188551b195148cbe64ead448ac8376491d718cc2ae5863c0de8f305":["57.188.8.0/24"],"023d67443770bf83c5fc4a8c4530c1a9f348022dd8bede30baa82074":["2a0a:90c0:1084::/48"],"08e209b92a31ffa814b1aa7c134cf079de0401e961a2ac05ea03ac9b":["2a0a:90c0:10c1::/48"],"231129dd29a6c32ac236b440498e3fe1ba716f31862899cd4c74a844":["57.188.20.0/24"],"2e6d2b5536b4ae6e8c9cd83c38fdbf09e738e60a9249b97dc14767c6":["2a0a:90c0:1090::/48"],"30d51abdd3dbdc860c6dbd93b67f3dcdd18dff64312d386960ea5291":["57.188.42.0/24"],"3389da425384fa5bb440c0549ff7692617ace82a07646cb8068d215c":["2a0a:90c0:1070::/48"],"3cffdc946386d91b356abe947cb8d74901e1c0b16d7d6b362e5c5b75":["57.188.61.0/24"],"5fd3a001deadef38d21e645400988f2f8d37740f77ef3d3b38e1962b":["57.188.55.0/24"],"65ada9ab9ac4114408de82cc22583bd386f1af69d75c4e73816fe09e":["57.188.56.0/24"],"6a0e0a5208cba8e84bf37f61cd7b79fbd51ae8e4b58112aeb2d320c0":["57.188.52.0/24"],"6e5db41bdfc48497cfff8f10a0d0e9d89ff95864fe5af63eb2956330":["2a0a:90c0:1062::/48"],"6ea2a8b0f7924b0394dd9bb7f144ea4cda3d24d41d3c9b4f9f5f0973":["2a0a:90c0:1049::/48"],"714e419693d0c43cc99c77afae17eefe906d96d89c5b4f23f1521d48":["2a0a:90c0:1047::/48"],"75ebde35d2b851de71f2d3c377ad3607d56de3b34464e06491ca603d":["57.188.26.0/24"],"7b57f33e8befdd41ebbc52af4674e6e9c1fd7bc92741b271c5450b21":["57.188.4.0/24"],"7db34a27292a3131f5f935966c1a8ba0599f258cecd71ee916112718":["57.188.23.0/24"],"80a476175d2513e9a68c710211239e7f4a5c45b1f409a6eba973363a":["2a0a:90c0:105c::/48"],"8c1df0320dee62ad94a006931870786a0517c80330e2b3d05ca79a7c":["2a0a:90c0:1043::/48"],"8e8c61741d6fc0435467bc29b55ecdac1da63780ffa2030d623ae977":["57.188.15.0/24"],"8fb7ed567244370f9e97b7514c4c7440aacde3936da9623e84f8553a":["2a0a:90c0:1010::/48"],"9226d087f130e2ef38fb0d3acd01995dd82e56e9413b187c2fd52c62":["57.188.12.0/24"],"933003b3ddb96e0508bc633f69f672fdd607c3a80888aaeb1caf2772":["57.188.28.0/22"],"9470ae6da6a883b7bb9a89933bff7e8dbf7bed8a53ec805289f3709c":["57.188.57.0/24"],"961353afdee77e3b1e6cd5d1006e6e5aa8e769988a3aa32faeeba572":["57.188.19.0/24"],"a388cba72195f61e214ce279b98c410f744314816fab33e2fec15ed5":["57.188.27.0/24"],"a5ef1c023a7d4884fccf32c1821e1ee5a0484c1d0f4527c707328842":["2a0a:90c0:1068::/48"],"a9a008fc96f1e1535c3348c4330febd2da72fc02329145e6dc7b997e":["57.188.32.0/22"],"aa0f5fddae0f5543225a27cbb945a66860790824586d65c05ebdc9c1":["57.188.7.0/24"],"b1bb3bb3ac8baf4beae73a270ae42fbed59054d6191db083bd9b4d79":["2a0a:90c0:1085::/48"],"bbefaeaf170517f35257bb15d5af5217c5bec8e35cfc76c7de2d93b9":["57.188.11.0/24"],"bdfc1c7321db60deffd7c7b48a8eb1354d7ee7c078ff7e34ae6be4a0":["57.188.16.0/24"],"c08bfc85a085d3c1bec207a7acc1d0dbda4c135ad7c528ffa2580bae":["57.188.25.0/24"],"c7b9a38ba90edfd76973b9074767384e02c5cb460af0935a4f0387e2":["2a0a:90c0:104c::/48"],"ca6bf273f9a967e882af3794f33f1bee8cd20bd52387536402e0dc87":["2a0a:90c0:1000::/42"],"cc08f106cc1eeb3c044462621e7ad040d18d6df7e77881c358b16a76":["57.188.21.0/24","57.188.17.0/24","57.188.14.0/24"],"da09736d2e3d439d4e7590b0c8eaa89f4800356b9ba0a84eafea99c6":["57.188.40.0/24"],"e4698963a50bd45a23d5a6a780649345c4a0c1dfa7ef029c17a33a74":["57.188.22.0/24"],"ea5120a12d8f8eb406ccac73b1d26eaa170d66b6f2de01509684ff80":["2a0a:90c0:1052::/48"],"eec946d4ff54a3eb2c2a6ce15d3a7c5ad2c47a6002a7621813072344":["57.188.38.0/24"],"f4bc8004e2e2c7463b89f31d7e57cdd29e80948042043bcb9258b708":["2a0a:90c0:1058::/48"],"f5ffe02a588f2f16e479c6bc7b396f46421c83231288e85fb125ec80":["2a0a:90c0:1003::/48"],"f8d30c8c1fe2b72f0ba6c14b107669540d4c792b3c9b14fa1c023601":["57.188.24.0/24"]}</script>
+
+                        <div style="text-align: center;">
+                            <img id="pathimg" usemap="#world" src="">
+                            <div id="world2"></div>
+                        </div>
+
+                        <details>
+                            <summary>Chart Display Options</summary>
+                            <noscript>This requires javascript to work</noscript>
+                            <label for="graphOptionMoreWiggle" style="display: flex;align-items: center;font-size: 20px;">
+                                <input type="checkbox" id="graphOptionMoreWiggle" name="graphOptionMoreWiggle" style="width: 64px; height: 32px;">
+                                    <p id="graphOptionMoreWiggleLabel" style="width: 200%;">Display links using non straight lines</p>
+                            </label>
+                        </details>
+
+                        <h3 style="display: none;" id="PISPBanner">Prefixes in selected policy</h3>
+                        <table id="policytable" class="full-width-table">
+                        </table>
+                        <button style="width:100%;display: none;" id="ShowFullPolicyButton" class="bigButton" onclick="dropdownPoke()">Load all prefixes in policy</button>
+
+                        <script>
+                            !function(a,b){"function"==typeof define&&define.amd?define([],b):"undefined"!=typeof module&&module.exports?module.exports=b():a.ReconnectingWebSocket=b()}(this,function(){function a(b,c,d){function l(a,b){var c=document.createEvent("CustomEvent");return c.initCustomEvent(a,!1,!1,b),c}var e={debug:!1,automaticOpen:!0,reconnectInterval:1e3,maxReconnectInterval:3e4,reconnectDecay:1.5,timeoutInterval:2e3};d||(d={});for(var f in e)this[f]="undefined"!=typeof d[f]?d[f]:e[f];this.url=b,this.reconnectAttempts=0,this.readyState=WebSocket.CONNECTING,this.protocol=null;var h,g=this,i=!1,j=!1,k=document.createElement("div");k.addEventListener("open",function(a){g.onopen(a)}),k.addEventListener("close",function(a){g.onclose(a)}),k.addEventListener("connecting",function(a){g.onconnecting(a)}),k.addEventListener("message",function(a){g.onmessage(a)}),k.addEventListener("error",function(a){g.onerror(a)}),this.addEventListener=k.addEventListener.bind(k),this.removeEventListener=k.removeEventListener.bind(k),this.dispatchEvent=k.dispatchEvent.bind(k),this.open=function(b){h=new WebSocket(g.url,c||[]),b||k.dispatchEvent(l("connecting")),(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","attempt-connect",g.url);var d=h,e=setTimeout(function(){(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","connection-timeout",g.url),j=!0,d.close(),j=!1},g.timeoutInterval);h.onopen=function(){clearTimeout(e),(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","onopen",g.url),g.protocol=h.protocol,g.readyState=WebSocket.OPEN,g.reconnectAttempts=0;var d=l("open");d.isReconnect=b,b=!1,k.dispatchEvent(d)},h.onclose=function(c){if(clearTimeout(e),h=null,i)g.readyState=WebSocket.CLOSED,k.dispatchEvent(l("close"));else{g.readyState=WebSocket.CONNECTING;var d=l("connecting");d.code=c.code,d.reason=c.reason,d.wasClean=c.wasClean,k.dispatchEvent(d),b||j||((g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","onclose",g.url),k.dispatchEvent(l("close")));var e=g.reconnectInterval*Math.pow(g.reconnectDecay,g.reconnectAttempts);setTimeout(function(){g.reconnectAttempts++,g.open(!0)},e>g.maxReconnectInterval?g.maxReconnectInterval:e)}},h.onmessage=function(b){(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","onmessage",g.url,b.data);var c=l("message");c.data=b.data,k.dispatchEvent(c)},h.onerror=function(b){(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","onerror",g.url,b),k.dispatchEvent(l("error"))}},1==this.automaticOpen&&this.open(!1),this.send=function(b){if(h)return(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","send",g.url,b),h.send(b);throw"INVALID_STATE_ERR : Pausing to reconnect websocket"},this.close=function(a,b){"undefined"==typeof a&&(a=1e3),i=!0,h&&h.close(a,b)},this.refresh=function(){h&&h.close()}}return a.prototype.onopen=function(){},a.prototype.onclose=function(){},a.prototype.onconnecting=function(){},a.prototype.onmessage=function(){},a.prototype.onerror=function(){},a.debugAll=!1,a.CONNECTING=WebSocket.CONNECTING,a.OPEN=WebSocket.OPEN,a.CLOSING=WebSocket.CLOSING,a.CLOSED=WebSocket.CLOSED,a});
+                        </script>
+                        
+                        <script>
+                            var prefixinfo = [{"PrefixString":"57.188.4.0/24","WhoisName":"SITA, King Hussein Business Park, Amman","WhoisCountry":"JO"},{"PrefixString":"57.188.7.0/24","WhoisName":"SITA, Ludwig Erhard Strasse, Eschborn, Frankfurt","WhoisCountry":"DE"},{"PrefixString":"57.188.8.0/24","WhoisName":"SITA V Parku 2323/14, Prague Czech Republic, 14800","WhoisCountry":"CZ"},{"PrefixString":"57.188.11.0/24","WhoisName":"SITA, Carnamuggagh Cl., Letterkenny, Co. Donegal","WhoisCountry":"IE"},{"PrefixString":"57.188.12.0/24","WhoisName":"SITA, Carrer de Pallars 200, 08018 Barcelona, Spain","WhoisCountry":"ES"},{"PrefixString":"57.188.14.0/24","WhoisName":"Da Vinci Business Center, 13 Viale Alexandre Gustave ...","WhoisCountry":"IT"},{"PrefixString":"57.188.15.0/24","WhoisName":"SITA IPS Robert-Schumann Str 20 D 44263 Dortmund, Germany","WhoisCountry":"DE"},{"PrefixString":"57.188.16.0/24","WhoisName":"SITA, 2 Makrem Ebeid Ext, Masaken Al Mohandesin, Nasr...","WhoisCountry":"EG"},{"PrefixString":"57.188.17.0/24","WhoisName":"SITA, Avenue des Olympiades 2, Brussels, Belgium","WhoisCountry":"BE"},{"PrefixString":"57.188.19.0/24","WhoisName":"SITA, Hussein Center, Bazerji Street, Jeddah, Saudi Arabia","WhoisCountry":"SA"},{"PrefixString":"57.188.20.0/24","WhoisName":"Avda. Sur del Aeropuerto Barajas 38 | CP 28042 | Madr...","WhoisCountry":"ES"},{"PrefixString":"57.188.21.0/24","WhoisName":"SITA, Carrer de Pallars, 193-205, Barcelona","WhoisCountry":"ES"},{"PrefixString":"57.188.22.0/24","WhoisName":"SITA, Blaak 555, 3011 GB, Rotterdam","WhoisCountry":"NL"},{"PrefixString":"57.188.23.0/24","WhoisName":"SITA, 31-35 Rue de la Fédération, 75015 Paris, France","WhoisCountry":"FR"},{"PrefixString":"57.188.24.0/24","WhoisName":"SITA, First Floor Wembley Building, The Campus , 57 S...","WhoisCountry":"ZA"},{"PrefixString":"57.188.25.0/24","WhoisName":"21 Decembrie 4th Floor, 1989 Boulevard, no. 77, Cluj ...","WhoisCountry":"RO"},{"PrefixString":"57.188.26.0/24","WhoisName":"Link, 10, chemin de Blandonnet 1214, Vernier,GE Switzerland","WhoisCountry":"CH"},{"PrefixString":"57.188.27.0/24","WhoisName":"Apex Reading Apex A/C, Level 5 Forbury Road Reading R...","WhoisCountry":"GB"},{"PrefixString":"57.188.28.0/22","WhoisName":"SITA Corporate EMEA Gateway","WhoisCountry":"GB"},{"PrefixString":"57.188.32.0/22","WhoisName":"SITA Corporate AMER Gateway","WhoisCountry":"US"},{"PrefixString":"57.188.37.0/24","WhoisName":"SITA, 55 Orville Drive, Islip, Bohemia, NY","WhoisCountry":"US"},{"PrefixString":"57.188.38.0/24","WhoisName":"SITA, 770 Rue Sherbrooke Ouest, Montreal, QC","WhoisCountry":"CA"},{"PrefixString":"57.188.40.0/24","WhoisName":"SITA, 3728 Benner Road, Miamisburg, OH, United States...","WhoisCountry":"US"},{"PrefixString":"57.188.42.0/24","WhoisName":"Alameda dos Arapanes 1441 Suite 42 4 floor Indianopol...","WhoisCountry":"BR"},{"PrefixString":"57.188.52.0/24","WhoisName":"-","WhoisCountry":"IN"},{"PrefixString":"57.188.55.0/24","WhoisName":"Jalan Lagoon Selatan 47500 Subang Jaya Selangor Darul...","WhoisCountry":"MY"},{"PrefixString":"57.188.56.0/24","WhoisName":"SITA, Lok Bharati Complex, Marol, Mumbai","WhoisCountry":"IN"},{"PrefixString":"57.188.57.0/24","WhoisName":"SRL Connect, 1st Floor, Block 20, Jakkur New Airport ...","WhoisCountry":"IN"},{"PrefixString":"57.188.61.0/24","WhoisName":"Loyang Way, Singapore","WhoisCountry":"SG"},{"PrefixString":"2a0a:90c0:1000::/42","WhoisName":"Societe Internationale de Telecommunications Aeronautiques","WhoisCountry":"BE"},{"PrefixString":"2a0a:90c0:1003::/48","WhoisName":"SITA, 3728 Benner Road, Miamisburg, OH, United States...","WhoisCountry":"US"},{"PrefixString":"2a0a:90c0:1010::/48","WhoisName":"SITA, 770 Rue Sherbrooke Ouest, Montreal, QC","WhoisCountry":"CA"},{"PrefixString":"2a0a:90c0:1043::/48","WhoisName":"Apex Reading Apex A/C, Level 5 Forbury Road Reading R...","WhoisCountry":"GB"},{"PrefixString":"2a0a:90c0:1047::/48","WhoisName":"SITA Corporate EMEA Gateway","WhoisCountry":"GB"},{"PrefixString":"2a0a:90c0:1049::/48","WhoisName":"Link, 10, chemin de Blandonnet 1214, Vernier,GE Switzerland","WhoisCountry":"CH"},{"PrefixString":"2a0a:90c0:104c::/48","WhoisName":"SITA, Carnamuggagh Cl., Letterkenny, Co. Donegal","WhoisCountry":"IE"},{"PrefixString":"2a0a:90c0:1052::/48","WhoisName":"SITA, 31-35 Rue de la Fédération, 75015 Paris, France","WhoisCountry":"FR"},{"PrefixString":"2a0a:90c0:1058::/48","WhoisName":"SITA, Avenue des Olympiades 2, Brussels, Belgium","WhoisCountry":"BE"},{"PrefixString":"2a0a:90c0:105c::/48","WhoisName":"SITA, Ludwig Erhard Strasse, Eschborn, Frankfurt","WhoisCountry":"DE"},{"PrefixString":"2a0a:90c0:1062::/48","WhoisName":"SITA, Blaak 555, 3011 GB, Rotterdam","WhoisCountry":"NL"},{"PrefixString":"2a0a:90c0:1068::/48","WhoisName":"SITA, Carrer de Pallars 200, 08018 Barcelona, Spain","WhoisCountry":"ES"},{"PrefixString":"2a0a:90c0:1070::/48","WhoisName":"21 Decembrie 4th Floor, 1989 Boulevard, no. 77, Cluj ...","WhoisCountry":"RO"},{"PrefixString":"2a0a:90c0:1084::/48","WhoisName":"SITA, Lok Bharati Complex, Marol, Mumbai","WhoisCountry":"IN"},{"PrefixString":"2a0a:90c0:1085::/48","WhoisName":"SITA office-Cyber Greens, Server Room,Cyber Greens, D...","WhoisCountry":"IN"},{"PrefixString":"2a0a:90c0:1090::/48","WhoisName":"SITA, Hussein Center, Bazerji Street, Jeddah, Saudi Arabia","WhoisCountry":"SA"},{"PrefixString":"2a0a:90c0:10c1::/48","WhoisName":"Loyang Way, Singapore","WhoisCountry":"SG"}]
+                            var asn =  205080 
+
+                            var pfxExtraString = "";
+
+                            function saveGraphOptionsToLocalStorage() {
+                                localStorage.setItem("pfx-chart-options:wiggle", document.getElementById("graphOptionMoreWiggle").checked);
+                            }
+
+                            function loadGraphOptionsToLocalStorage() {
+                                document.getElementById("graphOptionMoreWiggle").checked = localStorage.getItem("pfx-chart-options:wiggle") == "true";
+                                pfxExtraString= "";
+                                if (document.getElementById("graphOptionMoreWiggle").checked) {
+                                    pfxExtraString = pfxExtraString + "&wiggly";
+                                }
+                            }
+                            loadGraphOptionsToLocalStorage();
+
+                            function graphOptionsChanged() {
+                                saveGraphOptionsToLocalStorage();
+                                handleImageChange();
+                            }
+                            document.getElementById("graphOptionMoreWiggle").addEventListener("click", graphOptionsChanged)
+
+
+                            function handleImageChange() {
+                                loadGraphOptionsToLocalStorage();
+                                
+                                document.getElementById("pathimg").src=("/pathimg/"+asn+ "-" + document.getElementById("netpolicydropdown").value +"?"+pfxExtraString);
+                                var request = new XMLHttpRequest();
+                                request.open('GET', "/pathimg/"+asn+ "-" + document.getElementById("netpolicydropdown").value + "?map=true" + pfxExtraString, true);
+
+                                request.onload = function() {
+                                    if (this.status >= 200 && this.status < 400) {
+                                        
+                                        
+                                        document.getElementById("world2").innerHTML = this.response;
+                                        setTimeout(function(){
+                                            imageMapResize('#world');
+                                        },1000)
+                                    }
+                                };
+                                request.send();
+                                buildPrefixTable();
+                            } 
+
+                            function encodeHTML(s) {
+                                return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
+                            }
+
+                            function dropdownPoke(){
+                                InteractedWithPolicyTableYet=true;
+                                handleImageChange();
+                            }
+
+                            var InteractedWithPolicyTableYet = false;
+                            var OverloadPolicySize = 0;
+                            function buildPrefixTable() {
+                                var policy = document.getElementById("netpolicydropdown").value;
+                                
+                                var cidrs = netgroups[policy];
+                                var ihtml = "<tbody> <tr> <th class=\"nowrap\">  -  </th> <th>Prefix</th> <th class=\"nowrap\">Description</th> </tr>";
+
+                                
+                                var aaa = document.querySelectorAll('#PISPBanner');
+                                var bbb = document.querySelectorAll('#policytable');
+                                var n = 0
+                                if (cidrs) {
+                                    aaa[0].style.display = "";
+                                    bbb[0].style.display = "";
+                                    cidrs.forEach(cidr => {
+                                        var obj = {};
+                                        var dont =false;
+                                        n++;
+                                        
+                                        if (!InteractedWithPolicyTableYet) {
+                                            if (n == 5) {
+                                                dont = true;
+                                            } else if (n > 5) {
+                                                dont = true;
+                                            }
+                                        }
+                                        
+                                        if (!dont) {
+                                            prefixinfo.forEach(el => {
+                                                if(el.PrefixString == cidr) {
+                                                    
+                                                        ihtml += "<tr><td class=\"nowrap ns\"><img class=\"flag-img\" src=\"/assets/flags/"+el.WhoisCountry+".png\" title=\""+el.WhoisCountry+"\"></td>"
+                                                        ihtml += "<td><a href=\"/prefix/"+el.PrefixString+"\">"+el.PrefixString+"</a></td>"
+                                                        ihtml += "<td class=\"nowrap\">"+encodeHTML(el.WhoisName)+"</td></tr>"
+                                                }
+                                            });
+                                        } else {
+                                            OverloadPolicySize++;
+                                        }
+                                    });
+                                    document.getElementById("policytable").innerHTML = ihtml
+                                    var PolButton = document.querySelectorAll('#ShowFullPolicyButton');
+                                    if (!InteractedWithPolicyTableYet && OverloadPolicySize!=0) {
+                                        PolButton[0].style="width:100%";
+                                        PolButton[0].innerHTML = "Load all "+OverloadPolicySize+" prefixes in policy"
+                                    } else {
+                                        PolButton[0].style="display:none;";
+                                    }
+                                    
+                                } else {
+                                    aaa[0].style.display = "none";
+                                    bbb[0].style.display = "none";
+                                }
+                            }
+
+
+                            var pathdropdown = document.querySelectorAll('#netpolicydropdown');
+                            pathdropdown[0].addEventListener("change",dropdownPoke)
+                            handleImageChange()
+                            buildPrefixTable()
+
+                            document.addEventListener("load", function(){
+                                
+                                handleImageChange()
+                            });
+
+                            function uuidv4() {
+                                return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+                                    var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+                                    return v.toString(16);
+                                });
+                            }
+
+                            
+                            let realTimeSocket = new ReconnectingWebSocket("wss://bgp.tools/ws/rt-asn?prefix=AS205080" + "&magic=" + encodeURIComponent("AKR2QOHWW4BH2AJ6WV3BW5IJ7PYYO5HWSULHQRQUG5DSGREFXX3A===="));
+                            
+                            realTimeSocket.onmessage = function(event) {
+                                console.log(`[message] Data received from server: ${event.data}`);
+                                if (event.data == "Running.") {
+                                    document.getElementById("ws-status").src = "/assets/connected.png";
+                                    document.getElementById("ws-status").title = "Connected to realtime data";
+                                } else if (event.data == "STOP-CONNECTING") {
+                                    document.getElementById("ws-status").src = disconectedIcon;
+                                    document.getElementById("ws-status").title = "Not connected to realtime data";
+                                    realTimeSocket.maxReconnectAttempts = 1;
+                                    realTimeSocket.close()
+                                } else {
+                                    var obj = JSON.parse(event.data);
+                                    var elm = document.getElementById("pfx-"+obj.Prefix);
+                                    if (!elm && obj.Vis > 6) {
+                                        var tblist = document.getElementById("donotscrapebgptools-prefixlist-tbody");
+                                        var node = document.createElement("tr");                 
+                                        node.outerHTML = '<tr id="pfx-'+obj.Prefix+'"><td class="nowrap"><img class="flag-img" src="/assets/flags/'+obj.Whois.WhoisCountry+'.png" title="'+obj.Whois.WhoisCountry+'"></td><td><a href="/prefix/'+obj.Prefix+'">'+obj.Prefix+'</a></td><td class="smallonmobile nowrap">'+obj.Whois.WhoisName+'</td></tr>';
+                                        tblist.appendChild(node);                              
+                                    }
+                                    if (!elm) {
+                                        elm = document.getElementById("pfx-"+obj.Prefix);
+                                    }
+                                    
+                                    if (obj.Vis > 70) {
+                                        if (elm.style) {
+                                            var es = elm.style;
+                                            if (es.animation.includes("pulse1b")) {
+                                                elm.style = "animation: pulse2b 1s 1;";
+                                            } else if (es.animation.includes("pulse2b")) {
+                                                elm.style = "animation: pulse1b 1s 1;";
+                                            } else {
+                                                elm.style = "animation: pulse1b 1s 1;";
+                                            }
+                                        }
+                                    } else if (obj.Vis < 5) {
+                                        
+                                        var elm = document.getElementById("pfx-"+obj.Prefix);
+                                        if (elm) {
+                                            elm.parentNode.removeChild(elm);
+                                        }
+                                    } else {
+                                        if (elm.style) {
+                                            var es = elm.style;
+                                            if (es.animation.includes("pulse1r")) {
+                                                elm.style = "animation: pulse2r 1s 1;";
+                                            } else if (es.animation.includes("pulse2r")) {
+                                                elm.style = "animation: pulse1r 1s 1;";
+                                            } else {
+                                                elm.style = "animation: pulse1r 1s 1;";
+                                            }
+                                        }
+                                    }
+                                }
+                            };
+                            var disconectedIcon = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAAZlBMVEX/ewBZWVn/ewf/ew5fWljudiP8egp6XVT6eRHodSmVYU6hZEzObjrldCv3eRZ/XlNjWliHX1KrZkngci71eBl1XFXCa0CKYFHydx18XlSQYE+lZUq0aEbJbT3SbzhvXFaLYFG8akLYdYVFAAABQElEQVRIx5XV25KDIAwGYIKASLutqOtZ277/S26xK4ozJea/qRdfajATZaRkd6B6oPoL1d9QphUn+WvXmGF8TfN8yvNrDj6nvNj5Hu8n8HCh9ONiON5PEKuQx55DmFTHC1R9uMOjYkhFERbkEikofw8FGe5t0FWJ+kLvz5H+t8RdGD9k8TeebBXpzwIZT955XyVBtHHeXYzeJy5fhydtoZffZvUMSfvxT4BOeI/G/b9paxH1at8XQF8xNcV8aaQvHQBMhY/XttsdYp5nah3XdvIqui61Cjy+jqLwXp1cx9XLQZ5cR/vx1p8cez2IWrlxYY/T9bNVyCfmdQdbxNgs441FNRAEHS83oe9ahmTw1p88nhHCiAkpeIUeX5eJ6NlM9Gwm+uxO9/3F2PSR597jn1+udCWzUp7150P1jOoZ1f8BGPARG85JosIAAAAASUVORK5CYII=";
+                            realTimeSocket.onerror = function(error) {
+                                document.getElementById("ws-status").src = disconectedIcon;
+                                document.getElementById("ws-status").title = "Not connected to realtime data";
+
+                                console.log(`[error] ${error.message}`);
+                            };
+                            realTimeSocket.onclose = function(error) {
+                                document.getElementById("ws-status").src = disconectedIcon;
+                                document.getElementById("ws-status").title = "Not connected to realtime data";
+
+                                console.log(`[error] ${error.message}`);
+                            };
+                        </script>
+
+<div class="superclearfix">
+    
+</div>
+
+                        <hr>
+                        <a style="font-size: small;" href="/kb/what-is-a-upstream">How are upstreams and downstreams calculated?</a>
+                        <h3 id="upstreams">Upstreams<img class="flag-img" src="/assets/lightning.png" style="padding-left: 12px;" title="This information was fetched live at page load time" alt="This information was fetched live at page load time"/></h3>
+
+
+                        <table id="donotscrapebgptools-upstreamTable" class="full-width-table">
+                            <thead class="sortable">
+                                <tr>
+                                    <th class="nowrap boldpls">  &nbsp;  </th>
+                                    <th data-sort-method='number' class="boldpls">ASN</th>
+                                    <th class="nowrap boldpls">Description</th>
+                                    <th class="nowrap boldpls">IPv4</th>
+                                    <th class="nowrap boldpls">IPv6</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                <tr>
+                                    <td data-sort='GB' class="nowrap ns"><img class="flag-img" src="/assets/flags/GB.png" title="GB">
+                                        
+                                        </td>
+                                    <td data-sort='8220'><a href="/as/8220">AS8220</a></td>
+                                    <td class="smallonmobile nowrap">COLT</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='IN' class="nowrap ns"><img class="flag-img" src="/assets/flags/IN.png" title="IN">
+                                        
+                                        </td>
+                                    <td data-sort='9498'><a href="/as/9498">AS9498</a></td>
+                                    <td class="smallonmobile nowrap">Bharti Airtel Ltd.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA">
+                                        
+                                        </td>
+                                    <td data-sort='22652'><a href="/as/22652">AS22652</a></td>
+                                    <td class="smallonmobile nowrap">Videotron Ltee</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='SG' class="nowrap ns"><img class="flag-img" src="/assets/flags/SG.png" title="SG">
+                                        
+                                        </td>
+                                    <td data-sort='9255'><a href="/as/9255">AS9255</a></td>
+                                    <td class="smallonmobile nowrap">Singapore Telecom</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='FR' class="nowrap ns"><img class="flag-img" src="/assets/flags/FR.png" title="FR">
+                                        
+                                        </td>
+                                    <td data-sort='3215'><a href="/as/3215">AS3215</a></td>
+                                    <td class="smallonmobile nowrap">Orange S.A.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US">
+                                        
+                                        </td>
+                                    <td data-sort='10796'><a href="/as/10796">AS10796</a></td>
+                                    <td class="smallonmobile nowrap">Charter Communications Inc</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='GB' class="nowrap ns"><img class="flag-img" src="/assets/flags/GB.png" title="GB">
+                                        
+                                        </td>
+                                    <td data-sort='5631'><a href="/as/5631">AS5631</a></td>
+                                    <td class="smallonmobile nowrap">Telcom Networks Limited</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US">
+                                        
+                                        </td>
+                                    <td data-sort='6461'><a href="/as/6461">AS6461</a></td>
+                                    <td class="smallonmobile nowrap">Zayo Bandwidth</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='SA' class="nowrap ns"><img class="flag-img" src="/assets/flags/SA.png" title="SA">
+                                        
+                                        </td>
+                                    <td data-sort='25019'><a href="/as/25019">AS25019</a></td>
+                                    <td class="smallonmobile nowrap">Saudi Telecom Company JSC</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='RO' class="nowrap ns"><img class="flag-img" src="/assets/flags/RO.png" title="RO">
+                                        
+                                        </td>
+                                    <td data-sort='9050'><a href="/as/9050">AS9050</a></td>
+                                    <td class="smallonmobile nowrap">Orange Romania S.A.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='IE' class="nowrap ns"><img class="flag-img" src="/assets/flags/IE.png" title="IE">
+                                        
+                                        </td>
+                                    <td data-sort='5466'><a href="/as/5466">AS5466</a></td>
+                                    <td class="smallonmobile nowrap">Eircom Limited</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='ES' class="nowrap ns"><img class="flag-img" src="/assets/flags/ES.png" title="ES">
+                                        
+                                        </td>
+                                    <td data-sort='35699'><a href="/as/35699">AS35699</a></td>
+                                    <td class="smallonmobile nowrap">Adamo Telecom Iberia S.A.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CH' class="nowrap ns"><img class="flag-img" src="/assets/flags/CH.png" title="CH">
+                                        
+                                        </td>
+                                    <td data-sort='20932'><a href="/as/20932">AS20932</a></td>
+                                    <td class="smallonmobile nowrap">Services Industriels de Geneve</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='SK' class="nowrap ns"><img class="flag-img" src="/assets/flags/SK.png" title="SK">
+                                        
+                                        </td>
+                                    <td data-sort='6855'><a href="/as/6855">AS6855</a></td>
+                                    <td class="smallonmobile nowrap">Slovak Telekom, a.s.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='EG' class="nowrap ns"><img class="flag-img" src="/assets/flags/EG.png" title="EG">
+                                        
+                                        </td>
+                                    <td data-sort='20928'><a href="/as/20928">AS20928</a></td>
+                                    <td class="smallonmobile nowrap">The Noor Group</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='JO' class="nowrap ns"><img class="flag-img" src="/assets/flags/JO.png" title="JO">
+                                        
+                                        </td>
+                                    <td data-sort='9038'><a href="/as/9038">AS9038</a></td>
+                                    <td class="smallonmobile nowrap">Batelco Jordan</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='ES' class="nowrap ns"><img class="flag-img" src="/assets/flags/ES.png" title="ES">
+                                        
+                                        </td>
+                                    <td data-sort='3262'><a href="/as/3262">AS3262</a></td>
+                                    <td class="smallonmobile nowrap">SAREnet, S.A.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US">
+                                        
+                                        </td>
+                                    <td data-sort='54004'><a href="/as/54004">AS54004</a></td>
+                                    <td class="smallonmobile nowrap">Optimum WiFi</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='MY' class="nowrap ns"><img class="flag-img" src="/assets/flags/MY.png" title="MY">
+                                        
+                                        </td>
+                                    <td data-sort='4788'><a href="/as/4788">AS4788</a></td>
+                                    <td class="smallonmobile nowrap">TM Technology Services Sdn. Bhd.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='GB' class="nowrap ns"><img class="flag-img" src="/assets/flags/GB.png" title="GB">
+                                        
+                                        </td>
+                                    <td data-sort='30844'><a href="/as/30844">AS30844</a></td>
+                                    <td class="smallonmobile nowrap">Liquid Intelligent Technologies </td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR">
+                                        
+                                        </td>
+                                    <td data-sort='17222'><a href="/as/17222">AS17222</a></td>
+                                    <td class="smallonmobile nowrap">MUNDIVOX DO BRASIL LTDA</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='SE' class="nowrap ns"><img class="flag-img" src="/assets/flags/SE.png" title="SE">
+                                        
+                                        </td>
+                                    <td data-sort='1299'><a href="/as/1299">AS1299</a></td>
+                                    <td class="smallonmobile nowrap">Arelion (fka. Telia Carrier)</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='DE' class="nowrap ns"><img class="flag-img" src="/assets/flags/DE.png" title="DE">
+                                        
+                                        </td>
+                                    <td data-sort='15763'><a href="/as/15763">AS15763</a></td>
+                                    <td class="smallonmobile nowrap">DOKOM Gesellschaft fuer Telekommunikation mbH</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='IN' class="nowrap ns"><img class="flag-img" src="/assets/flags/IN.png" title="IN">
+                                        
+                                        </td>
+                                    <td data-sort='45820'><a href="/as/45820">AS45820</a></td>
+                                    <td class="smallonmobile nowrap">Tata Teleservices ISP</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US">
+                                        
+                                        </td>
+                                    <td data-sort='6939'><a href="/as/6939">AS6939</a></td>
+                                    <td class="smallonmobile nowrap">Hurricane Electric LLC</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='RO' class="nowrap ns"><img class="flag-img" src="/assets/flags/RO.png" title="RO">
+                                        
+                                        </td>
+                                    <td data-sort='12310'><a href="/as/12310">AS12310</a></td>
+                                    <td class="smallonmobile nowrap">iNES GROUP SRL</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='DE' class="nowrap ns"><img class="flag-img" src="/assets/flags/DE.png" title="DE">
+                                        
+                                        </td>
+                                    <td data-sort='13237'><a href="/as/13237">AS13237</a></td>
+                                    <td class="smallonmobile nowrap">euNetworks GmbH</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='DE' class="nowrap ns"><img class="flag-img" src="/assets/flags/DE.png" title="DE">
+                                        
+                                        </td>
+                                    <td data-sort='8881'><a href="/as/8881">AS8881</a></td>
+                                    <td class="smallonmobile nowrap">1&amp;1 Versatel GmbH</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US">
+                                        
+                                        </td>
+                                    <td data-sort='701'><a href="/as/701">AS701</a></td>
+                                    <td class="smallonmobile nowrap">Verizon Business</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='GB' class="nowrap ns"><img class="flag-img" src="/assets/flags/GB.png" title="GB">
+                                        
+                                        </td>
+                                    <td data-sort='31631'><a href="/as/31631">AS31631</a></td>
+                                    <td class="smallonmobile nowrap">Telcom Networks Limited</td>
+                                    <td class="nowrap">&#10008;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='EG' class="nowrap ns"><img class="flag-img" src="/assets/flags/EG.png" title="EG">
+                                        
+                                        </td>
+                                    <td data-sort='8452'><a href="/as/8452">AS8452</a></td>
+                                    <td class="smallonmobile nowrap">Telecom Egypt</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+
+                        <hr>
+                        <h3 id="peers">Peers<img class="flag-img" src="/assets/lightning.png" style="padding-left: 12px;" title="This information was fetched live at page load time" alt="This information was fetched live at page load time"/></h3>
+
+
+
+                        <table id="donotscrapebgptools-upstreamTablePeers" class="full-width-table">
+                            <thead class="sortable">
+                                <tr>
+                                    <th class="nowrap boldpls">  &nbsp;  </th>
+                                    <th data-sort-method='number' class="boldpls">ASN</th>
+                                    <th class="nowrap boldpls">Description</th>
+                                    <th class="nowrap boldpls">IPv4</th>
+                                    <th class="nowrap boldpls">IPv6</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                <tr>
+                                    <td data-sort='GB' class="nowrap ns"><img class="flag-img" src="/assets/flags/GB.png" title="GB"></td>
+                                    <td data-sort='8220'><a href="/as/8220">AS8220</a></td>
+                                    <td class="smallonmobile nowrap">COLT</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='IN' class="nowrap ns"><img class="flag-img" src="/assets/flags/IN.png" title="IN"></td>
+                                    <td data-sort='9498'><a href="/as/9498">AS9498</a></td>
+                                    <td class="smallonmobile nowrap">Bharti Airtel Ltd.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='6939'><a href="/as/6939">AS6939</a></td>
+                                    <td class="smallonmobile nowrap">Hurricane Electric LLC</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='10796'><a href="/as/10796">AS10796</a></td>
+                                    <td class="smallonmobile nowrap">Charter Communications Inc</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='SG' class="nowrap ns"><img class="flag-img" src="/assets/flags/SG.png" title="SG"></td>
+                                    <td data-sort='9255'><a href="/as/9255">AS9255</a></td>
+                                    <td class="smallonmobile nowrap">Singapore Telecom</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA"></td>
+                                    <td data-sort='22652'><a href="/as/22652">AS22652</a></td>
+                                    <td class="smallonmobile nowrap">Videotron Ltee</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='SA' class="nowrap ns"><img class="flag-img" src="/assets/flags/SA.png" title="SA"></td>
+                                    <td data-sort='25019'><a href="/as/25019">AS25019</a></td>
+                                    <td class="smallonmobile nowrap">Saudi Telecom Company JSC</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='IE' class="nowrap ns"><img class="flag-img" src="/assets/flags/IE.png" title="IE"></td>
+                                    <td data-sort='5466'><a href="/as/5466">AS5466</a></td>
+                                    <td class="smallonmobile nowrap">Eircom Limited</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='FR' class="nowrap ns"><img class="flag-img" src="/assets/flags/FR.png" title="FR"></td>
+                                    <td data-sort='3215'><a href="/as/3215">AS3215</a></td>
+                                    <td class="smallonmobile nowrap">Orange S.A.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='6461'><a href="/as/6461">AS6461</a></td>
+                                    <td class="smallonmobile nowrap">Zayo Bandwidth</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='RO' class="nowrap ns"><img class="flag-img" src="/assets/flags/RO.png" title="RO"></td>
+                                    <td data-sort='9050'><a href="/as/9050">AS9050</a></td>
+                                    <td class="smallonmobile nowrap">Orange Romania S.A.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='GB' class="nowrap ns"><img class="flag-img" src="/assets/flags/GB.png" title="GB"></td>
+                                    <td data-sort='5631'><a href="/as/5631">AS5631</a></td>
+                                    <td class="smallonmobile nowrap">Telcom Networks Limited</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CH' class="nowrap ns"><img class="flag-img" src="/assets/flags/CH.png" title="CH"></td>
+                                    <td data-sort='20932'><a href="/as/20932">AS20932</a></td>
+                                    <td class="smallonmobile nowrap">Services Industriels de Geneve</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='ES' class="nowrap ns"><img class="flag-img" src="/assets/flags/ES.png" title="ES"></td>
+                                    <td data-sort='35699'><a href="/as/35699">AS35699</a></td>
+                                    <td class="smallonmobile nowrap">Adamo Telecom Iberia S.A.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='RO' class="nowrap ns"><img class="flag-img" src="/assets/flags/RO.png" title="RO"></td>
+                                    <td data-sort='12310'><a href="/as/12310">AS12310</a></td>
+                                    <td class="smallonmobile nowrap">iNES GROUP SRL</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+                                    <td data-sort='17222'><a href="/as/17222">AS17222</a></td>
+                                    <td class="smallonmobile nowrap">MUNDIVOX DO BRASIL LTDA</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='GB' class="nowrap ns"><img class="flag-img" src="/assets/flags/GB.png" title="GB"></td>
+                                    <td data-sort='30844'><a href="/as/30844">AS30844</a></td>
+                                    <td class="smallonmobile nowrap">Liquid Intelligent Technologies </td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='JO' class="nowrap ns"><img class="flag-img" src="/assets/flags/JO.png" title="JO"></td>
+                                    <td data-sort='9038'><a href="/as/9038">AS9038</a></td>
+                                    <td class="smallonmobile nowrap">Batelco Jordan</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='MY' class="nowrap ns"><img class="flag-img" src="/assets/flags/MY.png" title="MY"></td>
+                                    <td data-sort='4788'><a href="/as/4788">AS4788</a></td>
+                                    <td class="smallonmobile nowrap">TM Technology Services Sdn. Bhd.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='SK' class="nowrap ns"><img class="flag-img" src="/assets/flags/SK.png" title="SK"></td>
+                                    <td data-sort='6855'><a href="/as/6855">AS6855</a></td>
+                                    <td class="smallonmobile nowrap">Slovak Telekom, a.s.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='ES' class="nowrap ns"><img class="flag-img" src="/assets/flags/ES.png" title="ES"></td>
+                                    <td data-sort='3262'><a href="/as/3262">AS3262</a></td>
+                                    <td class="smallonmobile nowrap">SAREnet, S.A.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='54004'><a href="/as/54004">AS54004</a></td>
+                                    <td class="smallonmobile nowrap">Optimum WiFi</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='EG' class="nowrap ns"><img class="flag-img" src="/assets/flags/EG.png" title="EG"></td>
+                                    <td data-sort='20928'><a href="/as/20928">AS20928</a></td>
+                                    <td class="smallonmobile nowrap">The Noor Group</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='DE' class="nowrap ns"><img class="flag-img" src="/assets/flags/DE.png" title="DE"></td>
+                                    <td data-sort='15763'><a href="/as/15763">AS15763</a></td>
+                                    <td class="smallonmobile nowrap">DOKOM Gesellschaft fuer Telekommunikation mbH</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='DE' class="nowrap ns"><img class="flag-img" src="/assets/flags/DE.png" title="DE"></td>
+                                    <td data-sort='13237'><a href="/as/13237">AS13237</a></td>
+                                    <td class="smallonmobile nowrap">euNetworks GmbH</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='SE' class="nowrap ns"><img class="flag-img" src="/assets/flags/SE.png" title="SE"></td>
+                                    <td data-sort='1299'><a href="/as/1299">AS1299</a></td>
+                                    <td class="smallonmobile nowrap">Arelion (fka. Telia Carrier)</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='IN' class="nowrap ns"><img class="flag-img" src="/assets/flags/IN.png" title="IN"></td>
+                                    <td data-sort='45820'><a href="/as/45820">AS45820</a></td>
+                                    <td class="smallonmobile nowrap">Tata Teleservices ISP</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='DE' class="nowrap ns"><img class="flag-img" src="/assets/flags/DE.png" title="DE"></td>
+                                    <td data-sort='8881'><a href="/as/8881">AS8881</a></td>
+                                    <td class="smallonmobile nowrap">1&amp;1 Versatel GmbH</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='GB' class="nowrap ns"><img class="flag-img" src="/assets/flags/GB.png" title="GB"></td>
+                                    <td data-sort='31631'><a href="/as/31631">AS31631</a></td>
+                                    <td class="smallonmobile nowrap">Telcom Networks Limited</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='701'><a href="/as/701">AS701</a></td>
+                                    <td class="smallonmobile nowrap">Verizon Business</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='EG' class="nowrap ns"><img class="flag-img" src="/assets/flags/EG.png" title="EG"></td>
+                                    <td data-sort='8452'><a href="/as/8452">AS8452</a></td>
+                                    <td class="smallonmobile nowrap">Telecom Egypt</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='RO' class="nowrap ns"><img class="flag-img" src="/assets/flags/RO.png" title="RO"></td>
+                                    <td data-sort='24745'><a href="/as/24745">AS24745</a></td>
+                                    <td class="smallonmobile nowrap">Orange Romania S.A.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+
+
+                    </div>
+
+                    <div style="display: none" id="whois-page">
+                        
+                        
+                        <pre style="white-space: pre-wrap;">aut-num:        <a href="/AS205080">AS205080</a>
+as-name:        SITA-CORPORATE
+org:            <a href="https://apps.db.ripe.net/db-web-ui/query?searchtext=ORG-SIDT4-RIPE">ORG-SIDT4-RIPE</a>
+remarks:        -------------------------------------------------------------------
+remarks:        --- IPv4 Providers ---
+remarks:        -------------------------------------------------------------------
+import:         from <a href="/AS174">AS174</a> accept ANY
+export:         to <a href="/AS174">AS174</a> announce <a href="/AS205080">AS205080</a>
+import:         from <a href="/AS701">AS701</a> accept ANY
+export:         to <a href="/AS701">AS701</a> announce <a href="/AS205080">AS205080</a>
+import:         from <a href="/AS2854">AS2854</a> accept ANY
+export:         to <a href="/AS2854">AS2854</a> announce <a href="/AS205080">AS205080</a>
+import:         from <a href="/AS2856">AS2856</a> accept ANY
+export:         to <a href="/AS2856">AS2856</a> announce <a href="/AS205080">AS205080</a>
+import:         from <a href="/AS3303">AS3303</a> accept ANY
+export:         to <a href="/AS3303">AS3303</a> announce <a href="/AS205080">AS205080</a>
+import:         from <a href="/AS3356">AS3356</a> accept ANY
+export:         to <a href="/AS3356">AS3356</a> announce <a href="/AS205080">AS205080</a>
+import:         from <a href="/AS5466">AS5466</a> accept ANY
+export:         to <a href="/AS5466">AS5466</a> announce <a href="/AS205080">AS205080</a>
+import:         from <a href="/AS5588">AS5588</a> accept ANY
+export:         to <a href="/AS5588">AS5588</a> announce <a href="/AS205080">AS205080</a>
+import:         from <a href="/AS7029">AS7029</a> accept ANY
+export:         to <a href="/AS7029">AS7029</a> announce <a href="/AS205080">AS205080</a>
+import:         from <a href="/AS8220">AS8220</a> accept ANY
+export:         to <a href="/AS8220">AS8220</a> announce <a href="/AS205080">AS205080</a>
+import:         from <a href="/AS9038">AS9038</a> accept ANY
+export:         to <a href="/AS9038">AS9038</a> announce <a href="/AS205080">AS205080</a>
+import:         from <a href="/AS9255">AS9255</a> accept ANY
+export:         to <a href="/AS9255">AS9255</a> announce <a href="/AS205080">AS205080</a>
+import:         from <a href="/AS9498">AS9498</a> accept ANY
+export:         to <a href="/AS9498">AS9498</a> announce <a href="/AS205080">AS205080</a>
+import:         from <a href="/AS9730">AS9730</a> accept ANY
+export:         to <a href="/AS9730">AS9730</a> announce <a href="/AS205080">AS205080</a>
+import:         from <a href="/AS10796">AS10796</a> accept ANY
+export:         to <a href="/AS10796">AS10796</a> announce <a href="/AS205080">AS205080</a>
+import:         from <a href="/AS11427">AS11427</a> accept ANY
+export:         to <a href="/AS11427">AS11427</a> announce <a href="/AS205080">AS205080</a>
+import:         from <a href="/AS22652">AS22652</a> accept ANY
+export:         to <a href="/AS22652">AS22652</a> announce <a href="/AS205080">AS205080</a>
+import:         from <a href="/AS25019">AS25019</a> accept ANY
+export:         to <a href="/AS25019">AS25019</a> announce <a href="/AS205080">AS205080</a>
+import:         from <a href="/AS45820">AS45820</a> accept ANY
+export:         to <a href="/AS45820">AS45820</a> announce <a href="/AS205080">AS205080</a>
+import:         from <a href="/AS3215">AS3215</a> accept ANY
+export:         to <a href="/AS3215">AS3215</a> announce <a href="/AS205080">AS205080</a>
+import:         from <a href="/AS30844">AS30844</a> accept ANY
+export:         to <a href="/AS30844">AS30844</a> announce <a href="/AS205080">AS205080</a>
+import:         from <a href="/AS9050">AS9050</a> accept ANY
+export:         to <a href="/AS9050">AS9050</a> announce <a href="/AS205080">AS205080</a>
+import:         from <a href="/AS12310">AS12310</a> accept ANY
+export:         to <a href="/AS12310">AS12310</a> announce <a href="/AS205080">AS205080</a>
+import:         from <a href="/AS9051">AS9051</a> accept ANY
+export:         to <a href="/AS9051">AS9051</a> announce <a href="/AS205080">AS205080</a>
+import:         from <a href="/AS20932">AS20932</a> accept ANY
+export:         to <a href="/AS20932">AS20932</a> announce <a href="/AS205080">AS205080</a>
+import:         from <a href="/AS35699">AS35699</a> accept ANY
+export:         to <a href="/AS35699">AS35699</a> announce <a href="/AS205080">AS205080</a>
+import:         from <a href="/AS31631">AS31631</a> accept ANY
+export:         to <a href="/AS31631">AS31631</a> announce <a href="/AS205080">AS205080</a>
+import:         from <a href="/AS15763">AS15763</a> accept ANY
+export:         to <a href="/AS15763">AS15763</a> announce <a href="/AS205080">AS205080</a>
+import:         from <a href="/AS3262">AS3262</a> accept ANY
+export:         to <a href="/AS3262">AS3262</a> announce <a href="/AS205080">AS205080</a>
+import:         from <a href="/AS5610">AS5610</a> accept ANY
+export:         to <a href="/AS5610">AS5610</a> announce <a href="/AS205080">AS205080</a>
+import:         from <a href="/AS6855">AS6855</a> accept ANY
+export:         to <a href="/AS6855">AS6855</a> announce <a href="/AS205080">AS205080</a>
+import:         from <a href="/AS4788">AS4788</a> accept ANY
+export:         to <a href="/AS4788">AS4788</a> announce <a href="/AS205080">AS205080</a>
+import:         from <a href="/AS17222">AS17222</a> accept ANY
+export:         to <a href="/AS17222">AS17222</a> announce <a href="/AS205080">AS205080</a>
+remarks:        -------------------------------------------------------------------
+remarks:        --- IPv6 Providers ---
+remarks:        -------------------------------------------------------------------
+mp-import:      afi ipv6 from <a href="/AS174">AS174</a> accept ANY
+mp-export:      afi ipv6 to <a href="/AS174">AS174</a> announce <a href="/AS205080">AS205080</a>
+mp-import:      afi ipv6 from <a href="/AS701">AS701</a> accept ANY
+mp-export:      afi ipv6 to <a href="/AS701">AS701</a> announce <a href="/AS205080">AS205080</a>
+mp-import:      afi ipv6 from <a href="/AS2854">AS2854</a> accept ANY
+mp-export:      afi ipv6 to <a href="/AS2854">AS2854</a> announce <a href="/AS205080">AS205080</a>
+mp-import:      afi ipv6 from <a href="/AS2856">AS2856</a> accept ANY
+mp-export:      afi ipv6 to <a href="/AS2856">AS2856</a> announce <a href="/AS205080">AS205080</a>
+mp-import:      afi ipv6 from <a href="/AS3303">AS3303</a> accept ANY
+mp-export:      afi ipv6 to <a href="/AS3303">AS3303</a> announce <a href="/AS205080">AS205080</a>
+mp-import:      afi ipv6 from <a href="/AS3356">AS3356</a> accept ANY
+mp-export:      afi ipv6 to <a href="/AS3356">AS3356</a> announce <a href="/AS205080">AS205080</a>
+mp-import:      afi ipv6 from <a href="/AS5466">AS5466</a> accept ANY
+mp-export:      afi ipv6 to <a href="/AS5466">AS5466</a> announce <a href="/AS205080">AS205080</a>
+mp-import:      afi ipv6 from <a href="/AS5588">AS5588</a> accept ANY
+mp-export:      afi ipv6 to <a href="/AS5588">AS5588</a> announce <a href="/AS205080">AS205080</a>
+mp-import:      afi ipv6 from <a href="/AS7029">AS7029</a> accept ANY
+mp-export:      afi ipv6 to <a href="/AS7029">AS7029</a> announce <a href="/AS205080">AS205080</a>
+mp-import:      afi ipv6 from <a href="/AS8220">AS8220</a> accept ANY
+mp-export:      afi ipv6 to <a href="/AS8220">AS8220</a> announce <a href="/AS205080">AS205080</a>
+mp-import:      afi ipv6 from <a href="/AS9038">AS9038</a> accept ANY
+mp-export:      afi ipv6 to <a href="/AS9038">AS9038</a> announce <a href="/AS205080">AS205080</a>
+mp-import:      afi ipv6 from <a href="/AS9255">AS9255</a> accept ANY
+mp-export:      afi ipv6 to <a href="/AS9255">AS9255</a> announce <a href="/AS205080">AS205080</a>
+mp-import:      afi ipv6 from <a href="/AS9498">AS9498</a> accept ANY
+mp-export:      afi ipv6 to <a href="/AS9498">AS9498</a> announce <a href="/AS205080">AS205080</a>
+mp-import:      afi ipv6 from <a href="/AS9730">AS9730</a> accept ANY
+mp-export:      afi ipv6 to <a href="/AS9730">AS9730</a> announce <a href="/AS205080">AS205080</a>
+mp-import:      afi ipv6 from <a href="/AS10796">AS10796</a> accept ANY
+mp-export:      afi ipv6 to <a href="/AS10796">AS10796</a> announce <a href="/AS205080">AS205080</a>
+mp-import:      afi ipv6 from <a href="/AS11427">AS11427</a> accept ANY
+mp-export:      afi ipv6 to <a href="/AS11427">AS11427</a> announce <a href="/AS205080">AS205080</a>
+mp-import:      afi ipv6 from <a href="/AS22652">AS22652</a> accept ANY
+mp-export:      afi ipv6 to <a href="/AS22652">AS22652</a> announce <a href="/AS205080">AS205080</a>
+mp-import:      afi ipv6 from <a href="/AS25019">AS25019</a> accept ANY
+mp-export:      afi ipv6 to <a href="/AS25019">AS25019</a> announce <a href="/AS205080">AS205080</a>
+mp-import:      afi ipv6 from <a href="/AS45820">AS45820</a> accept ANY
+mp-export:      afi ipv6 to <a href="/AS45820">AS45820</a> announce <a href="/AS205080">AS205080</a>
+mp-import:      afi ipv6 from <a href="/AS3215">AS3215</a> accept ANY
+mp-export:      afi ipv6 to <a href="/AS3215">AS3215</a> announce <a href="/AS205080">AS205080</a>
+mp-import:      afi ipv6 from <a href="/AS30844">AS30844</a> accept ANY
+mp-export:      afi ipv6 to <a href="/AS30844">AS30844</a> announce <a href="/AS205080">AS205080</a>
+mp-import:      afi ipv6 from <a href="/AS9050">AS9050</a> accept ANY
+mp-export:      afi ipv6 to <a href="/AS9050">AS9050</a> announce <a href="/AS205080">AS205080</a>
+mp-import:      afi ipv6 from <a href="/AS12310">AS12310</a> accept ANY
+mp-export:      afi ipv6 to <a href="/AS12310">AS12310</a> announce <a href="/AS205080">AS205080</a>
+mp-import:      afi ipv6 from <a href="/AS9051">AS9051</a> accept ANY
+mp-export:      afi ipv6 to <a href="/AS9051">AS9051</a> announce <a href="/AS205080">AS205080</a>
+mp-import:      afi ipv6 from <a href="/AS20932">AS20932</a> accept ANY
+mp-export:      afi ipv6 to <a href="/AS20932">AS20932</a> announce <a href="/AS205080">AS205080</a>
+mp-import:      afi ipv6 from <a href="/AS35699">AS35699</a> accept ANY
+mp-export:      afi ipv6 to <a href="/AS35699">AS35699</a> announce <a href="/AS205080">AS205080</a>
+mp-import:      afi ipv6 from <a href="/AS31631">AS31631</a> accept ANY
+mp-export:      afi ipv6 to <a href="/AS31631">AS31631</a> announce <a href="/AS205080">AS205080</a>
+mp-import:      afi ipv6 from <a href="/AS15763">AS15763</a> accept ANY
+mp-export:      afi ipv6 to <a href="/AS15763">AS15763</a> announce <a href="/AS205080">AS205080</a>
+mp-import:      afi ipv6 from <a href="/AS3262">AS3262</a> accept ANY
+mp-export:      afi ipv6 to <a href="/AS3262">AS3262</a> announce <a href="/AS205080">AS205080</a>
+mp-import:      afi ipv6 from <a href="/AS5610">AS5610</a> accept ANY
+mp-export:      afi ipv6 to <a href="/AS5610">AS5610</a> announce <a href="/AS205080">AS205080</a>
+mp-import:      afi ipv6 from <a href="/AS6855">AS6855</a> accept ANY
+mp-export:      afi ipv6 to <a href="/AS6855">AS6855</a> announce <a href="/AS205080">AS205080</a>
+mp-import:      afi ipv6 from <a href="/AS4788">AS4788</a> accept ANY
+mp-export:      afi ipv6 to <a href="/AS4788">AS4788</a> announce <a href="/AS205080">AS205080</a>
+mp-import:      afi ipv6 from <a href="/AS17222">AS17222</a> accept ANY
+mp-export:      afi ipv6 to <a href="/AS17222">AS17222</a> announce <a href="/AS205080">AS205080</a>
+admin-c:        DUMY-RIPE
+tech-c:         DUMY-RIPE
+status:         ASSIGNED
+mnt-by:         RIPE-NCC-END-MNT
+mnt-by:         SITA-MNT
+created:        2017-11-09T15:44:29Z
+last-modified:  2025-10-17T09:14:43Z
+source:         RIPE
+remarks:        ****************************
+remarks:        * THIS OBJECT IS MODIFIED
+remarks:        * Please note that all data that is generally regarded as personal
+remarks:        * data has been removed from this object.
+remarks:        * To view the original object, please query the RIPE Database at:
+remarks:        * http://www.ripe.net/whois
+remarks:        ****************************
+
+
+organisation:   <a href="https://apps.db.ripe.net/db-web-ui/query?searchtext=ORG-SIDT4-RIPE">ORG-SIDT4-RIPE</a>
+org-name:       Societe Internationale de Telecommunications Aeronautiques
+country:        BE
+org-type:       LIR
+address:        Dummy address for <a href="https://apps.db.ripe.net/db-web-ui/query?searchtext=ORG-SIDT4-RIPE">ORG-SIDT4-RIPE</a>
+# Email removed, Log into bgp.tools to see whois emails
+abuse-c:        SITA
+mnt-ref:        RIPE-NCC-HM-MNT
+mnt-ref:        SITA-MNT
+mnt-by:         RIPE-NCC-HM-MNT
+mnt-by:         SITA-MNT
+created:        2015-06-10T15:19:37Z
+last-modified:  2024-10-11T18:55:31Z
+source:         RIPE
+remarks:        ****************************
+remarks:        * THIS OBJECT IS MODIFIED
+remarks:        * Please note that all data that is generally regarded as personal
+remarks:        * data has been removed from this object.
+remarks:        * To view the original object, please query the RIPE Database at:
+remarks:        * http://www.ripe.net/whois
+remarks:        ****************************
+
+</pre>
+                        
+                        
+                        <a style="font-size: small;">Last Update: 2025-12-11T03:25:56Z UTC </a>
+                        
+                        <hr>
+                        
+                            <h2>Member of the following AS-SETs</h2>
+
+                            <table id="fhTable" class="full-width-table ">
+                                <tbody id="prefixlist-tbody">
+                                    <tr>
+                                        <th class="boldpls nowrap"> - </th>
+                                        <th class="boldpls">Member</th>
+                                         
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-e1-automation-customer">as-e1-automation-customer</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-liquid">as-liquid</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-rr-biz">as-rr-biz</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-ctiol">as-ctiol</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-kddcustomer2">as-kddcustomer2</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-btgb-cust">as-btgb-cust</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-transroute-spec">as-transroute-spec</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as8220:as-coltes">as8220:as-coltes</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">AFRINIC</td>
+                                        
+                                        <td><a href="/as-set/AFRINIC::as-tedata">as-tedata</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as8220:as-coltde">as8220:as-coltde</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">APNIC</td>
+                                        
+                                        <td><a href="/as-set/APNIC::as45820:as-ttsl">as45820:as-ttsl</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-rtd">as-rtd</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-sig-telecom-v6-cust">as-sig-telecom-v6-cust</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as8220:as-coltit">as8220:as-coltit</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-hurricanev6">as-hurricanev6</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-ines:as-a-transit">as-ines:as-a-transit</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-telstra-intl-customers">as-telstra-intl-customers</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-rosprint">as-rosprint</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-sarenet">as-sarenet</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as8220:as-coltch">as8220:as-coltch</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-retn-actual-v6">as-retn-actual-v6</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-retn-actual-v4">as-retn-actual-v4</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">AFRINIC</td>
+                                        
+                                        <td><a href="/as-set/AFRINIC::as-noor">as-noor</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-tmnet-customers">as-tmnet-customers</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-9038">as-9038</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as1299:as-twelve99-eu-v4">as1299:as-twelve99-eu-v4</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-eunnl">as-eunnl</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as1299:as-twelve99-eu-v6">as1299:as-twelve99-eu-v6</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-eircom">as-eircom</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-transit-etpi">as-transit-etpi</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-adamoeu">as-adamoeu</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-dokom21cust">as-dokom21cust</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as8220:as-coltbe">as8220:as-coltbe</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-windstream-cust">as-windstream-cust</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-telcom-networks">as-telcom-networks</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">ARIN</td>
+                                        
+                                        <td><a href="/as-set/ARIN::as6128:as-customers">as6128:as-customers</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-retelit">as-retelit</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-sig-telecom-cust">as-sig-telecom-cust</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-mundivox-customers">as-mundivox-customers</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-hurricane">as-hurricane</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-idm">as-idm</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-igw-set">as-igw-set</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as5631:as-customers">as5631:as-customers</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-saudinet-set">as-saudinet-set</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-vt-transit">as-vt-transit</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-telstra-testing-1">as-telstra-testing-1</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-embratelnet">as-embratelnet</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as8220:as-coltnl">as8220:as-coltnl</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">ARIN</td>
+                                        
+                                        <td><a href="/as-set/ARIN::as22652:as-customers">as22652:as-customers</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-gtscz-cust">as-gtscz-cust</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                        
+
+                    </div>
+
+                    
+
+                    
+
+                    
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="superclearfix">
+            
+            <div class="superclearfix">
+                
+            </div>
+
+            <div class="superclearfix">
+                
+            </div>
+
+
+        </div>
+
+
+        <div class="group js-footer" id="footer">
+            <nav>
+                <div>
+                    <ul>
+                        <li><a href="/kb/api" target="_blank">Scripting/API</a></li>
+                        <li><a href="/credits" target="_blank">Credits</a></li>
+                        <li><a href="/pricing" target="_blank">Pricing</a></li>
+                        <li><a href="/kb/contact" target="_blank">Contact Us</a></li>
+                        <li><a href="https://github.com/bgptools/issues" target="_blank">Issue Tracker</a></li>
+                        <li><a href="/kb/setup-sessions" target="">Contribute Data</a></li>
+                        
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <script>
+    
+    var inhash = window.location.hash;
+    if (inhash == "#asinfo") {
+        
+    } else if (inhash == "#prefixes") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#prefix-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#prefixes-page');
+        aaa[0].style.display = "";
+
+    } else if (inhash == "#connectivity" || inhash == "#peers" || inhash == "#upstreams" || inhash == "#downstreams") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#connectivity-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#connectivity-page');
+        aaa[0].style.display = "";
+    } else if (inhash == "#whois") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#whois-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#whois-page');
+        aaa[0].style.display = "";
+    } else if (inhash == "#ix") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#ix-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#ix-page');
+        aaa[0].style.display = "";
+    }</script>
+
+    <script>
+    
+
+
+    ;(function() {
+  'use strict'
+
+  function scaleImageMap() {
+    function resizeMap() {
+      function resizeAreaTag(cachedAreaCoords, idx) {
+        function scale(coord) {
+          var dimension = 1 === (isWidth = 1 - isWidth) ? 'width' : 'height'
+          return (
+            padding[dimension] +
+            Math.floor(Number(coord) * scalingFactor[dimension])
+          )
+        }
+
+        var isWidth = 0
+        areas[idx].coords = cachedAreaCoords
+          .split(',')
+          .map(scale)
+          .join(',')
+      }
+
+      var scalingFactor = {
+        width: image.width / image.naturalWidth,
+        height: image.height / image.naturalHeight,
+      }
+
+      var padding = {
+        width: parseInt(
+          window.getComputedStyle(image, null).getPropertyValue('padding-left'),
+          10
+        ),
+        height: parseInt(
+          window.getComputedStyle(image, null).getPropertyValue('padding-top'),
+          10
+        ),
+      }
+
+      cachedAreaCoordsArray.forEach(resizeAreaTag)
+    }
+
+    function getCoords(e) {
+      
+      return e.coords.replace(/ *, */g, ',').replace(/ +/g, ',')
+    }
+
+    function debounce() {
+      clearTimeout(timer)
+      timer = setTimeout(resizeMap, 250)
+    }
+
+    function start() {
+      if (
+        image.width !== image.naturalWidth ||
+        image.height !== image.naturalHeight
+      ) {
+        resizeMap()
+      }
+    }
+
+    function addEventListeners() {
+      image.addEventListener('load', resizeMap, false) 
+      window.addEventListener('focus', resizeMap, false) 
+      window.addEventListener('resize', debounce, false)
+      window.addEventListener('readystatechange', resizeMap, false)
+      document.addEventListener('fullscreenchange', resizeMap, false)
+    }
+
+    function beenHere() {
+      return 'function' === typeof map._resize
+    }
+
+    function getImg(name) {
+      return document.querySelector('img[usemap="#world"]')
+    }
+
+    function setup() {
+      areas = map.getElementsByTagName('area')
+      cachedAreaCoordsArray = Array.prototype.map.call(areas, getCoords)
+      image = getImg('#' + map.name) || getImg(map.name)
+      map._resize = resizeMap 
+    }
+
+    var  
+      map = this,
+      areas = null,
+      cachedAreaCoordsArray = null,
+      image = null,
+      timer = null
+
+    if (!beenHere()) {
+      setup()
+      addEventListeners()
+      start()
+    } else {
+      map._resize() 
+    }
+  }
+
+  function factory() {
+    function chkMap(element) {
+      if (!element.tagName) {
+        throw new TypeError('Object is not a valid DOM element')
+      } else if ('MAP' !== element.tagName.toUpperCase()) {
+        throw new TypeError(
+          'Expected <MAP> tag, found <' + element.tagName + '>.'
+        )
+      }
+    }
+
+    function init(element) {
+      if (element) {
+        chkMap(element)
+        scaleImageMap.call(element)
+        maps.push(element)
+      }
+    }
+
+    var maps
+
+    return function imageMapResizeF(target) {
+      maps = [] 
+
+      switch (typeof target) {
+        case 'undefined':
+        case 'string':
+          Array.prototype.forEach.call(
+            document.querySelectorAll(target || 'map'),
+            init
+          )
+          break
+        case 'object':
+          init(target)
+          break
+        default:
+          throw new TypeError('Unexpected data type (' + typeof target + ').')
+      }
+
+      return maps
+    }
+  }
+
+  if (typeof define === 'function' && define.amd) {
+    define([], factory)
+  } else if (typeof module === 'object' && typeof module.exports === 'object') {
+    module.exports = factory() 
+  } else {
+    window.imageMapResize = factory()
+  }
+
+  if ('jQuery' in window) {
+    window.jQuery.fn.imageMapResize = function $imageMapResizeF() {
+      return this.filter('map')
+        .each(scaleImageMap)
+        .end()
+    }
+  }
+})()
+    
+    </script>
+    <script>
+        var imgEl = document.getElementById("pathimg");
+        imgEl.addEventListener("mouseover",function() {
+            imageMapResize('#world');
+        })
+    </script>
+    <script src="/assets/tablesort.min.js"></script>
+    <script>
+        addEventListener("load", (event) => {
+            
+            
+            var sort = new Tablesort(document.getElementById('donotscrapebgptools-upstreamTable'));
+            var sort2 = new Tablesort(document.getElementById('donotscrapebgptools-upstreamTablePeers'));
+            
+            
+            
+        });
+    </script>
+    
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        setTimeout(function() {
+
+        var beaconHttp = new XMLHttpRequest();
+        var url = '/performance-beacon';
+        var params = JSON.stringify(window.performance)
+        beaconHttp.open('POST', url, true);
+        
+        
+        beaconHttp.setRequestHeader('Content-type', 'application/json');
+        beaconHttp.setRequestHeader('visit-url', "/as/205080");
+        if (navigator.connection) {
+            beaconHttp.setRequestHeader('client-side-rtt', navigator.connection.rtt);
+        } else {
+            beaconHttp.setRequestHeader('client-side-rtt', '-2');
+        }
+        beaconHttp.onreadystatechange = function() {}
+        beaconHttp.send(params);
+        },1000)
+    }, false);
+</script>
+
+</body>
+
+
+</html>

@@ -1,0 +1,2584 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Jefferies LLC (AS20249) is a 6 year old BGP network that is peering with 22 other networks and has 21 upstream carriers">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000">
+    <link rel="search" type="application/opensearchdescription+xml" title="BGP.Tools" href="https://bgp.tools/opensearch.xml">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="theme-color" content="#000000">
+    <link href="https://social.bgp.tools/@bgptools" rel="me">
+    <link rel="canonical" href="https://bgp.tools/as/20249" />
+    <title>AS20249 Jefferies LLC - bgp.tools</title>
+    <link rel="stylesheet" type="text/css" href="/assets/main-new.css?2025-12-09-1723%20UTC">
+</head>
+
+<body>
+    <div id="container">
+        
+<div id="global-header" class="global-header-top">
+    <div class="header-sitewide">
+        <div class="global-header">
+            <div class="header-logo">
+                <a href="/" id="logo" class="content">bgp.tools</a>
+            </div>
+            <form id="search" action="/search" method="get" accept-charset="utf-8" role="search" class="top-search-header js-search-hash">
+                <div class="searchfield">
+                    <input type="search" autocomplete="off" name="q" id="site-search-text" title="Search" value="" placeholder="Start here..." autofocus="autofocus" class="js-search-focus">
+                    <button type="submit" id="search-submit" class="search-submit">Search</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div id="global-header-blob" >
+    <a id="auth-header-text" href="/login">Login</a>
+    
+</div>
+<div id="global-header-bar" >
+    <a id="auth-header-bar-text" href="/login">Login</a>
+    
+</div>
+<div class="small-clearfix"></div>
+
+        <div id="global-container">
+            
+
+
+            
+            <div class="section-tabs js-tabs">
+                <ul>
+                    
+<li class="active">
+    <h1> <a id="viewbutton-tab" href="/as/20249">View</a></h1>
+</li>
+
+<li >
+    <a id="editbutton-tab" href="/edit/as/20249">Edit</a>
+</li>
+
+
+
+
+
+                    <li style="float: right;">
+                        
+                        <img id="ws-status" width="24" height="24" src="/assets/disconnected.png" title="Not Connected To realtime data updates">
+                        
+                    </li>
+                </ul>
+            </div>
+
+            <div id="search-container">
+
+                <div class="column-full-width">
+
+                    <div class="clearfix">
+                        
+                    </div>
+                    
+                    
+
+                    <div class="network-header">
+                        
+                        
+                        <img width="334" height="250" src="/img/20249" alt="The website screenshot for http://Jefferies.com" >
+                        
+                        
+                        <p id="network-name" class="heading-xlarge">Jefferies LLC</p>
+                        <p id="network-number">
+                            AS Number
+                            <strong id="ASNumberString" pure="20249">20249</strong>
+                            <br>
+                        
+                            Website
+                            <strong><a href="http://Jefferies.com" rel="nofollow">http://Jefferies.com</a></strong>
+                        
+                        </p>
+
+                    </div>
+
+
+                    <div class="clearfix">
+                        
+                    </div>
+
+
+                    <div class="section-tabs js-tabs">
+                        <ul>
+
+                            <li id="overview-tab-li" class="active">
+                                <a id="overview-tab" href="#asinfo">Overview</a>
+                            </li>
+                            
+                            <li id="prefix-tab-li">
+                                <a id="prefix-tab" href="#prefixes">Prefixes</a>
+                            </li>
+
+                            <li id="connectivity-tab-li">
+                                <a id="connectivity-tab" href="#connectivity">Connectivity</a>
+                            </li>
+                            
+                            <li id="whois-tab-li">
+                                <a id="whois-tab" href="#whois">Whois</a>
+                            </li>
+                        
+                        
+                        </ul>
+                    </div>
+
+<script>
+    function removeAllActiveTab() {
+        var tabs = [
+            "overview-tab-li", 
+            "prefix-tab-li", 
+            "connectivity-tab-li",
+            "whois-tab-li",
+            "ix-tab-li",
+            "issues-tab-li"
+        ];
+
+        tabs.forEach(element => {
+            var aaa = document.querySelectorAll('#'+element);
+            if(aaa.length != 0) {
+                aaa[0].classList.remove("active")
+            }
+        });
+    }
+
+    function hideAllContent() {
+        var tabs = [
+            "overview-page", 
+            "prefixes-page", 
+            "connectivity-page",
+            "whois-page",
+            "ix-page",
+            "issues-page"
+        ];
+
+        tabs.forEach(element => {
+            var aaa = document.querySelectorAll('#'+element);
+            if(aaa.length != 0) {
+                aaa[0].style.display = "none";
+            }
+        });
+        if (document.getElementById("donotscrapebgptools-prefixlist-tbody")) {
+            var prefixrows = document.getElementById("donotscrapebgptools-prefixlist-tbody").children;
+            for (var i = 0; i < prefixrows.length; i++) {
+                prefixrows[i].style = "";
+            }
+        }
+    }
+
+    var otab = document.querySelectorAll('#overview-tab');
+    otab[0].addEventListener("click", function () {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#overview-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#overview-page');
+        aaa[0].style.display = "";
+    });
+    
+
+    var ptab = document.querySelectorAll('#prefix-tab');
+    ptab[0].addEventListener("click", function () {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#prefix-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#prefixes-page');
+        aaa[0].style.display = "";
+    });
+
+    var ctab = document.querySelectorAll('#connectivity-tab');
+    ctab[0].addEventListener("click", function () {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#connectivity-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#connectivity-page');
+        aaa[0].style.display = "";
+    });
+    
+
+    var wtab = document.querySelectorAll('#whois-tab');
+    wtab[0].addEventListener("click", function () {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#whois-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#whois-page');
+        aaa[0].style.display = "";
+    });
+
+</script>
+
+
+
+                    
+                    <div id="overview-page">
+
+                        <div class="grid-row">
+                        
+                        <div class="column-two-thirds">
+                            <dl>
+                                <dt>Registered on</dt>
+                                <dd class="text data">
+                                    
+                                     8 Jul 2019 (6 years old)
+                                </dd>
+                            
+                            
+                            <dt>Registered to</dt>
+                            <dd class="text data">
+                                <a href="/rir-owner/ARIN-JEFFER-2">ARIN-JEFFER-2</a> (arin)</dd>
+                                
+                            
+                            </dl>
+                        </div>
+                        
+    
+                        <dl class="column-third">
+                            <dt>Network status</dt>
+                            <dd class="text data">
+                                
+                                Active, Allocated under ARIN
+                                
+                            </dd>
+                        </dl>
+    
+                        </div>
+    
+                        <div class="grid-row">
+                            <dl class="column-two-thirds">
+                                <dt>Network type</dt>
+                                <dd class="text data">
+                                    Unknown
+                                </dd>
+                            </dl>
+    
+                            <dl class="column-third">
+                                <dt>Prefixes Originated</dt>
+                                <dd class="data">52 IPv4, 0 IPv6</dd>
+                            </dl>
+                        </div>
+                        <div class="grid-row">
+                            <div class="column-half">
+    
+                                <h2 class="heading-medium"><derp>Upstreams</derp></h2>
+                                <ul>
+                                    
+                                    <li>
+                                        <span id="sic0">
+                                          <a href="/as/13335">AS13335</a> - Cloudflare, Inc.
+                                        </span>
+                                    </li>
+                                    
+                                    <li>
+                                        <span id="sic0">
+                                          <a href="/as/3356">AS3356</a> - Lumen (Level 3)
+                                        </span>
+                                    </li>
+                                    
+                                    <li>
+                                        <span id="sic0">
+                                          <a href="/as/2914">AS2914</a> - NTT America, Inc.
+                                        </span>
+                                    </li>
+                                    
+                                    <li>
+                                        <span id="sic0">
+                                          <a href="/as/15830">AS15830</a> - Equinix, Inc.
+                                        </span>
+                                    </li>
+                                    
+                                    <li>
+                                        <span id="sic0">
+                                          <a href="/as/15570">AS15570</a> - PACKETFABRIC (UK) LTD
+                                        </span>
+                                    </li>
+                                    
+                                    <li>
+                                        <span id="sic0">
+                                          <a href="/as/3257">AS3257</a> - GTT Communications Inc.
+                                        </span>
+                                    </li>
+                                    
+                                    <li>
+                                        <span id="sic0">
+                                          <a href="/as/7018">AS7018</a> - AT&amp;T Enterprises, LLC
+                                        </span>
+                                    </li>
+                                    
+                                    <li>
+                                        <span id="sic0">
+                                          <a href="/as/3491">AS3491</a> - PCCW Global, Inc.
+                                        </span>
+                                    </li>
+                                    
+                                </ul>
+    
+                            </div>
+    
+                            <div class="column-half">
+                                
+                                    <h2 class="heading-medium"><derp>Locations of Operation</derp></h2>
+                                    
+                                    <li><span id="sic0">United States</span></li>
+                                    
+                                
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+
+                    <div style="display: none" id="prefixes-page">
+                        
+
+                        
+                        <div style="float:left">
+                            <dt>Prefixes Originated</dt>
+                            <dd class="data">52 IPv4, 0 IPv6</dd>
+                            <dd class="data"><a href="/as/20249?show-low-vis#prefixes">Show Low Visibility Prefixes</a></dd>
+                            
+                        </div>
+                        <div style="float:right">
+                                <dt>Addresses Originated</dt>
+                                <dd class="data">140 /24's of IPv4</dd>
+                                <dd class="data">0 /48's of IPv6</dd>
+                        </div>
+
+                        <div class="clearfix">
+                            
+                        </div>
+
+
+                        <table id="fhTable" class="full-width-table ">
+                            <tbody id="donotscrapebgptools-prefixlist-tbody">
+                                <tr>
+                                    <th class="nowrap">  &nbsp;  </th>
+                                    <th class="boldpls">Prefix</th>
+                                    <th class="nowrap boldpls">Description</th>
+                                </tr>
+                                <p id="readme-if-you-are-human" style="display: none;">If you are scraping this block for the prefixes that a AS originates, please use the data dumps in https://bgp.tools/kb/api and cache them</p>
+                                
+                                <tr id="pfx-169.196.0.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/169.196.0.0/24">169.196.0.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Jefferies LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-169.196.0.0/23">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/169.196.0.0/23">169.196.0.0/23</a></td>
+                                    <td class="smallonmobile nowrap">Jefferies LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-169.196.1.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/169.196.1.0/24">169.196.1.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Jefferies LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-169.196.2.0/23">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/169.196.2.0/23">169.196.2.0/23</a></td>
+                                    <td class="smallonmobile nowrap">Jefferies LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-169.196.2.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/169.196.2.0/24">169.196.2.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Jefferies LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-169.196.3.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/169.196.3.0/24">169.196.3.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Jefferies LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-169.196.18.0/23">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/169.196.18.0/23">169.196.18.0/23</a></td>
+                                    <td class="smallonmobile nowrap">Jefferies LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-169.196.18.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/169.196.18.0/24">169.196.18.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Jefferies LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-169.196.19.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/169.196.19.0/24">169.196.19.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Jefferies LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-169.196.48.0/23">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/169.196.48.0/23">169.196.48.0/23</a></td>
+                                    <td class="smallonmobile nowrap">Jefferies LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-169.196.52.0/23">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/169.196.52.0/23">169.196.52.0/23</a></td>
+                                    <td class="smallonmobile nowrap">Jefferies LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-169.196.55.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/169.196.55.0/24">169.196.55.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Jefferies LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-169.196.56.0/23">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/169.196.56.0/23">169.196.56.0/23</a></td>
+                                    <td class="smallonmobile nowrap">Jefferies LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-169.196.65.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/169.196.65.0/24">169.196.65.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Jefferies LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-169.196.67.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/169.196.67.0/24">169.196.67.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Jefferies LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-169.196.68.0/23">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/169.196.68.0/23">169.196.68.0/23</a></td>
+                                    <td class="smallonmobile nowrap">Jefferies LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-169.196.71.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/169.196.71.0/24">169.196.71.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Jefferies LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-169.196.72.0/23">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/169.196.72.0/23">169.196.72.0/23</a></td>
+                                    <td class="smallonmobile nowrap">Jefferies LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-169.196.72.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/169.196.72.0/24">169.196.72.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Jefferies LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-169.196.73.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/169.196.73.0/24">169.196.73.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Jefferies LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-169.196.76.0/22">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/169.196.76.0/22">169.196.76.0/22</a></td>
+                                    <td class="smallonmobile nowrap">Jefferies LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-169.196.96.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/169.196.96.0/24">169.196.96.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Jefferies LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-169.196.96.0/23">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/169.196.96.0/23">169.196.96.0/23</a></td>
+                                    <td class="smallonmobile nowrap">Jefferies LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-169.196.97.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/169.196.97.0/24">169.196.97.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Jefferies LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-169.196.110.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/169.196.110.0/24">169.196.110.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Jefferies LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-169.196.116.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/169.196.116.0/24">169.196.116.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Jefferies LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-169.196.119.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/169.196.119.0/24">169.196.119.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Jefferies LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-169.196.128.0/18">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/169.196.128.0/18">169.196.128.0/18</a></td>
+                                    <td class="smallonmobile nowrap">Jefferies LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-169.196.156.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/169.196.156.0/24">169.196.156.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Jefferies LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-169.196.160.0/19">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/169.196.160.0/19">169.196.160.0/19</a></td>
+                                    <td class="smallonmobile nowrap">Jefferies LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-169.196.160.0/20">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/169.196.160.0/20">169.196.160.0/20</a></td>
+                                    <td class="smallonmobile nowrap">Jefferies LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-169.196.176.0/20">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/169.196.176.0/20">169.196.176.0/20</a></td>
+                                    <td class="smallonmobile nowrap">Jefferies LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-169.196.196.0/23">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/169.196.196.0/23">169.196.196.0/23</a></td>
+                                    <td class="smallonmobile nowrap">Jefferies LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-169.196.196.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/169.196.196.0/24">169.196.196.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Jefferies LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-169.196.197.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/169.196.197.0/24">169.196.197.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Jefferies LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-169.196.198.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/169.196.198.0/24">169.196.198.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Jefferies LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-169.196.198.0/23">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/169.196.198.0/23">169.196.198.0/23</a></td>
+                                    <td class="smallonmobile nowrap">Jefferies LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-169.196.199.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/169.196.199.0/24">169.196.199.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Jefferies LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-169.196.202.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/169.196.202.0/24">169.196.202.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Jefferies LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-169.196.202.0/23">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/169.196.202.0/23">169.196.202.0/23</a></td>
+                                    <td class="smallonmobile nowrap">Jefferies LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-169.196.203.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/169.196.203.0/24">169.196.203.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Jefferies LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-169.196.219.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/169.196.219.0/24">169.196.219.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Jefferies LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-169.196.220.0/22">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/169.196.220.0/22">169.196.220.0/22</a></td>
+                                    <td class="smallonmobile nowrap">Jefferies LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-169.196.240.0/21">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/169.196.240.0/21">169.196.240.0/21</a></td>
+                                    <td class="smallonmobile nowrap">Jefferies LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-169.196.240.0/20">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/169.196.240.0/20">169.196.240.0/20</a></td>
+                                    <td class="smallonmobile nowrap">Jefferies LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-169.196.248.0/21">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/169.196.248.0/21">169.196.248.0/21</a></td>
+                                    <td class="smallonmobile nowrap">Jefferies LLC</td>
+                                </tr>
+                                
+                                <tr id="pfx-185.55.132.0/22">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="GB" src="/assets/flags/GB.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/185.55.132.0/22">185.55.132.0/22</a></td>
+                                    <td class="smallonmobile nowrap">Jefferies International Limited</td>
+                                </tr>
+                                
+                                <tr id="pfx-185.55.132.0/23">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="GB" src="/assets/flags/GB.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/185.55.132.0/23">185.55.132.0/23</a></td>
+                                    <td class="smallonmobile nowrap">Jefferies International Limited</td>
+                                </tr>
+                                
+                                <tr id="pfx-185.55.134.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="GB" src="/assets/flags/GB.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/185.55.134.0/24">185.55.134.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Jefferies International Limited</td>
+                                </tr>
+                                
+                                <tr id="pfx-185.55.134.0/23">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="GB" src="/assets/flags/GB.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/185.55.134.0/23">185.55.134.0/23</a></td>
+                                    <td class="smallonmobile nowrap">Jefferies International Limited</td>
+                                </tr>
+                                
+                                <tr id="pfx-185.55.135.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="GB" src="/assets/flags/GB.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/185.55.135.0/24">185.55.135.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Jefferies International Limited</td>
+                                </tr>
+                                
+                                <tr id="pfx-169.196.224.0/19">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="US" src="/assets/flags/US.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/169.196.224.0/19">169.196.224.0/19</a></td>
+                                    <td class="smallonmobile nowrap">Jefferies LLC</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div style="display: none" id="connectivity-page">
+
+                        <div class="grid-row">
+
+                            <dl class="column-two-thirds">
+                                <dt><a href="#upstreams">Upstreams</a></dt>
+                                <dd class="text data">
+                                    21
+                                </dd>
+                            </dl>
+
+                            <dl class="column-third">
+                                <dt><a href="#peers">Peers</a></dt>
+                                <dd class="data">22</dd>
+                            </dl>
+                        </div>
+
+
+                        <hr>
+                        <h3>Network Policy<img class="flag-img" src="/assets/info.png" style="padding-left: 12px;" title="This info can take up to 2 hours to fully update" alt="This info take up to 2 hours to fully update"/></h3></h3>
+                        <a style="font-size: small;" href="/kb/network-policy">Click here to learn more about what this graph means and what makes up a network policy</a>
+
+                        <select id="netpolicydropdown" class="dropdownmenu">
+                            
+                                <option disabled=true value="disabled-default">Global Aggregation (disabled due to size)</option>
+                            
+
+                            
+                                
+                            
+                                
+                                <option value="321bbddebcdb30f5411d5127bfc35266729aa14b41750e6004eff52d">Policy heuristic_neumann</option>
+                                
+                            
+                                
+                                <option value="7b2921eb11dd3017d3844d114bee737c9f547b2f2a64b963b061c1cf">Policy stoic_roentgen</option>
+                                
+                            
+                                
+                                <option value="7d7100bdcfcc2212ccac7104e46c411f754978a4cd3c94a88a07d103">Policy dreamy_golick</option>
+                                
+                            
+                                
+                                <option value="a978a3259c37bea654701fdb56c125af2348b500df78481abdb74f76">Policy blissful_murdock</option>
+                                
+                            
+                                
+                                <option value="bc8344e858ea386e249f86f4519b9c0580092793fe1d37a2091fe287">Policy stupefied_almeida</option>
+                                
+                            
+                                
+                                <option selected value="f6477926b899b7ba41fcfa3143ade62e7dbfc3795a2a78cebb948b2f">Policy cranky_clifford</option>
+                                
+                            
+                                
+                                <option value="021ae82fb5cda6611ebc7303abd3f67a92cbf79f0a8fe92202cf886b">Policy stupefied_rosalind</option>
+                                
+                            
+                                
+                                <option value="30484e705f904c795608f375558566352038ed138e1fa2b2df3cb86e">Policy competent_shirley</option>
+                                
+                            
+                                
+                                <option value="4f03f74aec83d7841bec8bf85843438cc9ee00aad4aa211100cf77b7">Policy determined_montalcini</option>
+                                
+                            
+                                
+                                <option value="8485ac404cb5b7d7c261a462120a978ad1b87b1072ec152e455f2d66">Policy magical_zhukovsky</option>
+                                
+                            
+                                
+                                <option value="a7211d9112018bde1afcf66d3820ad41bf7461375adca29c63902b1b">Policy modest_hugle</option>
+                                
+                            
+                                
+                                <option value="d3ac2aa6c02e8321e982a1e6c7b549b011bec66d8645dd585749d0ef">Policy determined_wright</option>
+                                
+                            
+                                
+                                <option value="e1a1921a4e89854a55dba91b39d35aaa376c8954c95f5d6b14a0b0b2">Policy hungry_varahamihira</option>
+                                
+                            
+                                
+                                <option value="1503aa94a5114a50fe78d710a91057499f8fa23c25e5f97c1a19e580">Policy epic_panini</option>
+                                
+                            
+                                
+                                <option value="a053e37ea3c7ab3e33b445904d0d5186fca5bba659d2a0bf2b3c2c52">Policy romantic_carson</option>
+                                
+                            
+                                
+                                <option value="b536f8419725fa0cb1bc845bc6688e752b23a0f85b5693f8a49b1552">Policy wizardly_panini</option>
+                                
+                            
+                                
+                                <option value="e2b804e7de98a91d430a07551d75abaec3debf4d3d1bba82cab0666d">Policy youthful_blackburn</option>
+                                
+                            
+                                
+                                <option value="e72704c0f16d87a1b5a249ad4f62ea51fe50c0c8ea84499a1a42e738">Policy cocky_lichterman</option>
+                                
+                            
+                                
+                                <option value="f43944dcf026403a35aab0eb2b18e2d307c40877ba73ed322d3470e3">Policy eloquent_beaver</option>
+                                
+                            
+                                
+                                <option value="ffed6ef754110f75531871d669212cf44d6d6fb556d5a50b102b790a">Policy zealous_bohr</option>
+                                
+                            
+                                
+                                <option value="538d63b376919052dcb2d56f42003f3d60e746ee7cca904a7c5a2596">Policy unruffled_johnson</option>
+                                
+                            
+                                
+                                <option value="ee250974f2b508f55e1c0e40304e2fd77c447828b354752b2c25f325">Policy affectionate_goldberg</option>
+                                
+                            
+                                
+                                <option value="15120d35e95fb38d9a58500351380ea4035b2f82b8e6186099aeff64">Policy musing_stonebraker</option>
+                                
+                            
+
+                            
+
+
+                        </select>
+
+                        <script>var netgroups = {"021ae82fb5cda6611ebc7303abd3f67a92cbf79f0a8fe92202cf886b":["169.196.116.0/24"],"1503aa94a5114a50fe78d710a91057499f8fa23c25e5f97c1a19e580":["169.196.65.0/24"],"15120d35e95fb38d9a58500351380ea4035b2f82b8e6186099aeff64":["169.196.48.0/23"],"30484e705f904c795608f375558566352038ed138e1fa2b2df3cb86e":["169.196.119.0/24"],"321bbddebcdb30f5411d5127bfc35266729aa14b41750e6004eff52d":["169.196.220.0/22","169.196.224.0/19","169.196.128.0/18"],"4f03f74aec83d7841bec8bf85843438cc9ee00aad4aa211100cf77b7":["169.196.55.0/24","169.196.110.0/24"],"538d63b376919052dcb2d56f42003f3d60e746ee7cca904a7c5a2596":["169.196.68.0/23"],"7b2921eb11dd3017d3844d114bee737c9f547b2f2a64b963b061c1cf":["169.196.52.0/23"],"7d7100bdcfcc2212ccac7104e46c411f754978a4cd3c94a88a07d103":["169.196.156.0/24"],"8485ac404cb5b7d7c261a462120a978ad1b87b1072ec152e455f2d66":["185.55.132.0/22","169.196.76.0/22","185.55.132.0/23"],"a053e37ea3c7ab3e33b445904d0d5186fca5bba659d2a0bf2b3c2c52":["169.196.196.0/23"],"a7211d9112018bde1afcf66d3820ad41bf7461375adca29c63902b1b":["169.196.240.0/20","169.196.160.0/19"],"a978a3259c37bea654701fdb56c125af2348b500df78481abdb74f76":["169.196.67.0/24"],"b536f8419725fa0cb1bc845bc6688e752b23a0f85b5693f8a49b1552":["169.196.96.0/23"],"bc8344e858ea386e249f86f4519b9c0580092793fe1d37a2091fe287":["185.55.134.0/23","169.196.198.0/23","169.196.72.0/23"],"d3ac2aa6c02e8321e982a1e6c7b549b011bec66d8645dd585749d0ef":["169.196.0.0/23"],"e1a1921a4e89854a55dba91b39d35aaa376c8954c95f5d6b14a0b0b2":["169.196.2.0/23"],"e2b804e7de98a91d430a07551d75abaec3debf4d3d1bba82cab0666d":["169.196.71.0/24"],"e72704c0f16d87a1b5a249ad4f62ea51fe50c0c8ea84499a1a42e738":["169.196.18.0/23"],"ee250974f2b508f55e1c0e40304e2fd77c447828b354752b2c25f325":["169.196.219.0/24"],"f43944dcf026403a35aab0eb2b18e2d307c40877ba73ed322d3470e3":["169.196.56.0/23"],"f6477926b899b7ba41fcfa3143ade62e7dbfc3795a2a78cebb948b2f":["169.196.3.0/24","169.196.197.0/24","169.196.73.0/24","169.196.0.0/24","169.196.248.0/21","185.55.134.0/24","169.196.18.0/24","169.196.176.0/20","169.196.202.0/24","169.196.160.0/20","169.196.19.0/24","169.196.96.0/24","169.196.203.0/24","169.196.196.0/24","169.196.72.0/24","169.196.240.0/21","169.196.1.0/24","169.196.97.0/24","169.196.2.0/24","185.55.135.0/24","169.196.199.0/24","169.196.198.0/24"],"ffed6ef754110f75531871d669212cf44d6d6fb556d5a50b102b790a":["169.196.202.0/23"]}</script>
+
+                        <div style="text-align: center;">
+                            <img id="pathimg" usemap="#world" src="">
+                            <div id="world2"></div>
+                        </div>
+
+                        <details>
+                            <summary>Chart Display Options</summary>
+                            <noscript>This requires javascript to work</noscript>
+                            <label for="graphOptionMoreWiggle" style="display: flex;align-items: center;font-size: 20px;">
+                                <input type="checkbox" id="graphOptionMoreWiggle" name="graphOptionMoreWiggle" style="width: 64px; height: 32px;">
+                                    <p id="graphOptionMoreWiggleLabel" style="width: 200%;">Display links using non straight lines</p>
+                            </label>
+                        </details>
+
+                        <h3 style="display: none;" id="PISPBanner">Prefixes in selected policy</h3>
+                        <table id="policytable" class="full-width-table">
+                        </table>
+                        <button style="width:100%;display: none;" id="ShowFullPolicyButton" class="bigButton" onclick="dropdownPoke()">Load all prefixes in policy</button>
+
+                        <script>
+                            !function(a,b){"function"==typeof define&&define.amd?define([],b):"undefined"!=typeof module&&module.exports?module.exports=b():a.ReconnectingWebSocket=b()}(this,function(){function a(b,c,d){function l(a,b){var c=document.createEvent("CustomEvent");return c.initCustomEvent(a,!1,!1,b),c}var e={debug:!1,automaticOpen:!0,reconnectInterval:1e3,maxReconnectInterval:3e4,reconnectDecay:1.5,timeoutInterval:2e3};d||(d={});for(var f in e)this[f]="undefined"!=typeof d[f]?d[f]:e[f];this.url=b,this.reconnectAttempts=0,this.readyState=WebSocket.CONNECTING,this.protocol=null;var h,g=this,i=!1,j=!1,k=document.createElement("div");k.addEventListener("open",function(a){g.onopen(a)}),k.addEventListener("close",function(a){g.onclose(a)}),k.addEventListener("connecting",function(a){g.onconnecting(a)}),k.addEventListener("message",function(a){g.onmessage(a)}),k.addEventListener("error",function(a){g.onerror(a)}),this.addEventListener=k.addEventListener.bind(k),this.removeEventListener=k.removeEventListener.bind(k),this.dispatchEvent=k.dispatchEvent.bind(k),this.open=function(b){h=new WebSocket(g.url,c||[]),b||k.dispatchEvent(l("connecting")),(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","attempt-connect",g.url);var d=h,e=setTimeout(function(){(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","connection-timeout",g.url),j=!0,d.close(),j=!1},g.timeoutInterval);h.onopen=function(){clearTimeout(e),(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","onopen",g.url),g.protocol=h.protocol,g.readyState=WebSocket.OPEN,g.reconnectAttempts=0;var d=l("open");d.isReconnect=b,b=!1,k.dispatchEvent(d)},h.onclose=function(c){if(clearTimeout(e),h=null,i)g.readyState=WebSocket.CLOSED,k.dispatchEvent(l("close"));else{g.readyState=WebSocket.CONNECTING;var d=l("connecting");d.code=c.code,d.reason=c.reason,d.wasClean=c.wasClean,k.dispatchEvent(d),b||j||((g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","onclose",g.url),k.dispatchEvent(l("close")));var e=g.reconnectInterval*Math.pow(g.reconnectDecay,g.reconnectAttempts);setTimeout(function(){g.reconnectAttempts++,g.open(!0)},e>g.maxReconnectInterval?g.maxReconnectInterval:e)}},h.onmessage=function(b){(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","onmessage",g.url,b.data);var c=l("message");c.data=b.data,k.dispatchEvent(c)},h.onerror=function(b){(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","onerror",g.url,b),k.dispatchEvent(l("error"))}},1==this.automaticOpen&&this.open(!1),this.send=function(b){if(h)return(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","send",g.url,b),h.send(b);throw"INVALID_STATE_ERR : Pausing to reconnect websocket"},this.close=function(a,b){"undefined"==typeof a&&(a=1e3),i=!0,h&&h.close(a,b)},this.refresh=function(){h&&h.close()}}return a.prototype.onopen=function(){},a.prototype.onclose=function(){},a.prototype.onconnecting=function(){},a.prototype.onmessage=function(){},a.prototype.onerror=function(){},a.debugAll=!1,a.CONNECTING=WebSocket.CONNECTING,a.OPEN=WebSocket.OPEN,a.CLOSING=WebSocket.CLOSING,a.CLOSED=WebSocket.CLOSED,a});
+                        </script>
+                        
+                        <script>
+                            var prefixinfo = [{"PrefixString":"169.196.0.0/24","WhoisName":"Jefferies LLC","WhoisCountry":"US"},{"PrefixString":"169.196.0.0/23","WhoisName":"Jefferies LLC","WhoisCountry":"US"},{"PrefixString":"169.196.1.0/24","WhoisName":"Jefferies LLC","WhoisCountry":"US"},{"PrefixString":"169.196.2.0/23","WhoisName":"Jefferies LLC","WhoisCountry":"US"},{"PrefixString":"169.196.2.0/24","WhoisName":"Jefferies LLC","WhoisCountry":"US"},{"PrefixString":"169.196.3.0/24","WhoisName":"Jefferies LLC","WhoisCountry":"US"},{"PrefixString":"169.196.18.0/23","WhoisName":"Jefferies LLC","WhoisCountry":"US"},{"PrefixString":"169.196.18.0/24","WhoisName":"Jefferies LLC","WhoisCountry":"US"},{"PrefixString":"169.196.19.0/24","WhoisName":"Jefferies LLC","WhoisCountry":"US"},{"PrefixString":"169.196.48.0/23","WhoisName":"Jefferies LLC","WhoisCountry":"US"},{"PrefixString":"169.196.52.0/23","WhoisName":"Jefferies LLC","WhoisCountry":"US"},{"PrefixString":"169.196.55.0/24","WhoisName":"Jefferies LLC","WhoisCountry":"US"},{"PrefixString":"169.196.56.0/23","WhoisName":"Jefferies LLC","WhoisCountry":"US"},{"PrefixString":"169.196.65.0/24","WhoisName":"Jefferies LLC","WhoisCountry":"US"},{"PrefixString":"169.196.67.0/24","WhoisName":"Jefferies LLC","WhoisCountry":"US"},{"PrefixString":"169.196.68.0/23","WhoisName":"Jefferies LLC","WhoisCountry":"US"},{"PrefixString":"169.196.71.0/24","WhoisName":"Jefferies LLC","WhoisCountry":"US"},{"PrefixString":"169.196.72.0/23","WhoisName":"Jefferies LLC","WhoisCountry":"US"},{"PrefixString":"169.196.72.0/24","WhoisName":"Jefferies LLC","WhoisCountry":"US"},{"PrefixString":"169.196.73.0/24","WhoisName":"Jefferies LLC","WhoisCountry":"US"},{"PrefixString":"169.196.76.0/22","WhoisName":"Jefferies LLC","WhoisCountry":"US"},{"PrefixString":"169.196.96.0/24","WhoisName":"Jefferies LLC","WhoisCountry":"US"},{"PrefixString":"169.196.96.0/23","WhoisName":"Jefferies LLC","WhoisCountry":"US"},{"PrefixString":"169.196.97.0/24","WhoisName":"Jefferies LLC","WhoisCountry":"US"},{"PrefixString":"169.196.110.0/24","WhoisName":"Jefferies LLC","WhoisCountry":"US"},{"PrefixString":"169.196.116.0/24","WhoisName":"Jefferies LLC","WhoisCountry":"US"},{"PrefixString":"169.196.119.0/24","WhoisName":"Jefferies LLC","WhoisCountry":"US"},{"PrefixString":"169.196.128.0/18","WhoisName":"Jefferies LLC","WhoisCountry":"US"},{"PrefixString":"169.196.156.0/24","WhoisName":"Jefferies LLC","WhoisCountry":"US"},{"PrefixString":"169.196.160.0/19","WhoisName":"Jefferies LLC","WhoisCountry":"US"},{"PrefixString":"169.196.160.0/20","WhoisName":"Jefferies LLC","WhoisCountry":"US"},{"PrefixString":"169.196.176.0/20","WhoisName":"Jefferies LLC","WhoisCountry":"US"},{"PrefixString":"169.196.196.0/23","WhoisName":"Jefferies LLC","WhoisCountry":"US"},{"PrefixString":"169.196.196.0/24","WhoisName":"Jefferies LLC","WhoisCountry":"US"},{"PrefixString":"169.196.197.0/24","WhoisName":"Jefferies LLC","WhoisCountry":"US"},{"PrefixString":"169.196.198.0/24","WhoisName":"Jefferies LLC","WhoisCountry":"US"},{"PrefixString":"169.196.198.0/23","WhoisName":"Jefferies LLC","WhoisCountry":"US"},{"PrefixString":"169.196.199.0/24","WhoisName":"Jefferies LLC","WhoisCountry":"US"},{"PrefixString":"169.196.202.0/24","WhoisName":"Jefferies LLC","WhoisCountry":"US"},{"PrefixString":"169.196.202.0/23","WhoisName":"Jefferies LLC","WhoisCountry":"US"},{"PrefixString":"169.196.203.0/24","WhoisName":"Jefferies LLC","WhoisCountry":"US"},{"PrefixString":"169.196.219.0/24","WhoisName":"Jefferies LLC","WhoisCountry":"US"},{"PrefixString":"169.196.220.0/22","WhoisName":"Jefferies LLC","WhoisCountry":"US"},{"PrefixString":"169.196.240.0/21","WhoisName":"Jefferies LLC","WhoisCountry":"US"},{"PrefixString":"169.196.240.0/20","WhoisName":"Jefferies LLC","WhoisCountry":"US"},{"PrefixString":"169.196.248.0/21","WhoisName":"Jefferies LLC","WhoisCountry":"US"},{"PrefixString":"185.55.132.0/22","WhoisName":"Jefferies International Limited","WhoisCountry":"GB"},{"PrefixString":"185.55.132.0/23","WhoisName":"Jefferies International Limited","WhoisCountry":"GB"},{"PrefixString":"185.55.134.0/24","WhoisName":"Jefferies International Limited","WhoisCountry":"GB"},{"PrefixString":"185.55.134.0/23","WhoisName":"Jefferies International Limited","WhoisCountry":"GB"},{"PrefixString":"185.55.135.0/24","WhoisName":"Jefferies International Limited","WhoisCountry":"GB"},{"PrefixString":"169.196.224.0/19","WhoisName":"Jefferies LLC","WhoisCountry":"US"}]
+                            var asn =  20249 
+
+                            var pfxExtraString = "";
+
+                            function saveGraphOptionsToLocalStorage() {
+                                localStorage.setItem("pfx-chart-options:wiggle", document.getElementById("graphOptionMoreWiggle").checked);
+                            }
+
+                            function loadGraphOptionsToLocalStorage() {
+                                document.getElementById("graphOptionMoreWiggle").checked = localStorage.getItem("pfx-chart-options:wiggle") == "true";
+                                pfxExtraString= "";
+                                if (document.getElementById("graphOptionMoreWiggle").checked) {
+                                    pfxExtraString = pfxExtraString + "&wiggly";
+                                }
+                            }
+                            loadGraphOptionsToLocalStorage();
+
+                            function graphOptionsChanged() {
+                                saveGraphOptionsToLocalStorage();
+                                handleImageChange();
+                            }
+                            document.getElementById("graphOptionMoreWiggle").addEventListener("click", graphOptionsChanged)
+
+
+                            function handleImageChange() {
+                                loadGraphOptionsToLocalStorage();
+                                
+                                document.getElementById("pathimg").src=("/pathimg/"+asn+ "-" + document.getElementById("netpolicydropdown").value +"?"+pfxExtraString);
+                                var request = new XMLHttpRequest();
+                                request.open('GET', "/pathimg/"+asn+ "-" + document.getElementById("netpolicydropdown").value + "?map=true" + pfxExtraString, true);
+
+                                request.onload = function() {
+                                    if (this.status >= 200 && this.status < 400) {
+                                        
+                                        
+                                        document.getElementById("world2").innerHTML = this.response;
+                                        setTimeout(function(){
+                                            imageMapResize('#world');
+                                        },1000)
+                                    }
+                                };
+                                request.send();
+                                buildPrefixTable();
+                            } 
+
+                            function encodeHTML(s) {
+                                return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
+                            }
+
+                            function dropdownPoke(){
+                                InteractedWithPolicyTableYet=true;
+                                handleImageChange();
+                            }
+
+                            var InteractedWithPolicyTableYet = false;
+                            var OverloadPolicySize = 0;
+                            function buildPrefixTable() {
+                                var policy = document.getElementById("netpolicydropdown").value;
+                                
+                                var cidrs = netgroups[policy];
+                                var ihtml = "<tbody> <tr> <th class=\"nowrap\">  -  </th> <th>Prefix</th> <th class=\"nowrap\">Description</th> </tr>";
+
+                                
+                                var aaa = document.querySelectorAll('#PISPBanner');
+                                var bbb = document.querySelectorAll('#policytable');
+                                var n = 0
+                                if (cidrs) {
+                                    aaa[0].style.display = "";
+                                    bbb[0].style.display = "";
+                                    cidrs.forEach(cidr => {
+                                        var obj = {};
+                                        var dont =false;
+                                        n++;
+                                        
+                                        if (!InteractedWithPolicyTableYet) {
+                                            if (n == 5) {
+                                                dont = true;
+                                            } else if (n > 5) {
+                                                dont = true;
+                                            }
+                                        }
+                                        
+                                        if (!dont) {
+                                            prefixinfo.forEach(el => {
+                                                if(el.PrefixString == cidr) {
+                                                    
+                                                        ihtml += "<tr><td class=\"nowrap ns\"><img class=\"flag-img\" src=\"/assets/flags/"+el.WhoisCountry+".png\" title=\""+el.WhoisCountry+"\"></td>"
+                                                        ihtml += "<td><a href=\"/prefix/"+el.PrefixString+"\">"+el.PrefixString+"</a></td>"
+                                                        ihtml += "<td class=\"nowrap\">"+encodeHTML(el.WhoisName)+"</td></tr>"
+                                                }
+                                            });
+                                        } else {
+                                            OverloadPolicySize++;
+                                        }
+                                    });
+                                    document.getElementById("policytable").innerHTML = ihtml
+                                    var PolButton = document.querySelectorAll('#ShowFullPolicyButton');
+                                    if (!InteractedWithPolicyTableYet && OverloadPolicySize!=0) {
+                                        PolButton[0].style="width:100%";
+                                        PolButton[0].innerHTML = "Load all "+OverloadPolicySize+" prefixes in policy"
+                                    } else {
+                                        PolButton[0].style="display:none;";
+                                    }
+                                    
+                                } else {
+                                    aaa[0].style.display = "none";
+                                    bbb[0].style.display = "none";
+                                }
+                            }
+
+
+                            var pathdropdown = document.querySelectorAll('#netpolicydropdown');
+                            pathdropdown[0].addEventListener("change",dropdownPoke)
+                            handleImageChange()
+                            buildPrefixTable()
+
+                            document.addEventListener("load", function(){
+                                
+                                handleImageChange()
+                            });
+
+                            function uuidv4() {
+                                return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+                                    var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+                                    return v.toString(16);
+                                });
+                            }
+
+                            
+                            let realTimeSocket = new ReconnectingWebSocket("wss://bgp.tools/ws/rt-asn?prefix=AS20249" + "&magic=" + encodeURIComponent("EOKKDWF6DNN6WUP6UDZHLXZEHB4AILQAJVE5MGJKERFKTR56DO6Q===="));
+                            
+                            realTimeSocket.onmessage = function(event) {
+                                console.log(`[message] Data received from server: ${event.data}`);
+                                if (event.data == "Running.") {
+                                    document.getElementById("ws-status").src = "/assets/connected.png";
+                                    document.getElementById("ws-status").title = "Connected to realtime data";
+                                } else if (event.data == "STOP-CONNECTING") {
+                                    document.getElementById("ws-status").src = disconectedIcon;
+                                    document.getElementById("ws-status").title = "Not connected to realtime data";
+                                    realTimeSocket.maxReconnectAttempts = 1;
+                                    realTimeSocket.close()
+                                } else {
+                                    var obj = JSON.parse(event.data);
+                                    var elm = document.getElementById("pfx-"+obj.Prefix);
+                                    if (!elm && obj.Vis > 6) {
+                                        var tblist = document.getElementById("donotscrapebgptools-prefixlist-tbody");
+                                        var node = document.createElement("tr");                 
+                                        node.outerHTML = '<tr id="pfx-'+obj.Prefix+'"><td class="nowrap"><img class="flag-img" src="/assets/flags/'+obj.Whois.WhoisCountry+'.png" title="'+obj.Whois.WhoisCountry+'"></td><td><a href="/prefix/'+obj.Prefix+'">'+obj.Prefix+'</a></td><td class="smallonmobile nowrap">'+obj.Whois.WhoisName+'</td></tr>';
+                                        tblist.appendChild(node);                              
+                                    }
+                                    if (!elm) {
+                                        elm = document.getElementById("pfx-"+obj.Prefix);
+                                    }
+                                    
+                                    if (obj.Vis > 70) {
+                                        if (elm.style) {
+                                            var es = elm.style;
+                                            if (es.animation.includes("pulse1b")) {
+                                                elm.style = "animation: pulse2b 1s 1;";
+                                            } else if (es.animation.includes("pulse2b")) {
+                                                elm.style = "animation: pulse1b 1s 1;";
+                                            } else {
+                                                elm.style = "animation: pulse1b 1s 1;";
+                                            }
+                                        }
+                                    } else if (obj.Vis < 5) {
+                                        
+                                        var elm = document.getElementById("pfx-"+obj.Prefix);
+                                        if (elm) {
+                                            elm.parentNode.removeChild(elm);
+                                        }
+                                    } else {
+                                        if (elm.style) {
+                                            var es = elm.style;
+                                            if (es.animation.includes("pulse1r")) {
+                                                elm.style = "animation: pulse2r 1s 1;";
+                                            } else if (es.animation.includes("pulse2r")) {
+                                                elm.style = "animation: pulse1r 1s 1;";
+                                            } else {
+                                                elm.style = "animation: pulse1r 1s 1;";
+                                            }
+                                        }
+                                    }
+                                }
+                            };
+                            var disconectedIcon = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAAZlBMVEX/ewBZWVn/ewf/ew5fWljudiP8egp6XVT6eRHodSmVYU6hZEzObjrldCv3eRZ/XlNjWliHX1KrZkngci71eBl1XFXCa0CKYFHydx18XlSQYE+lZUq0aEbJbT3SbzhvXFaLYFG8akLYdYVFAAABQElEQVRIx5XV25KDIAwGYIKASLutqOtZ277/S26xK4ozJea/qRdfajATZaRkd6B6oPoL1d9QphUn+WvXmGF8TfN8yvNrDj6nvNj5Hu8n8HCh9ONiON5PEKuQx55DmFTHC1R9uMOjYkhFERbkEikofw8FGe5t0FWJ+kLvz5H+t8RdGD9k8TeebBXpzwIZT955XyVBtHHeXYzeJy5fhydtoZffZvUMSfvxT4BOeI/G/b9paxH1at8XQF8xNcV8aaQvHQBMhY/XttsdYp5nah3XdvIqui61Cjy+jqLwXp1cx9XLQZ5cR/vx1p8cez2IWrlxYY/T9bNVyCfmdQdbxNgs441FNRAEHS83oe9ahmTw1p88nhHCiAkpeIUeX5eJ6NlM9Gwm+uxO9/3F2PSR597jn1+udCWzUp7150P1jOoZ1f8BGPARG85JosIAAAAASUVORK5CYII=";
+                            realTimeSocket.onerror = function(error) {
+                                document.getElementById("ws-status").src = disconectedIcon;
+                                document.getElementById("ws-status").title = "Not connected to realtime data";
+
+                                console.log(`[error] ${error.message}`);
+                            };
+                            realTimeSocket.onclose = function(error) {
+                                document.getElementById("ws-status").src = disconectedIcon;
+                                document.getElementById("ws-status").title = "Not connected to realtime data";
+
+                                console.log(`[error] ${error.message}`);
+                            };
+                        </script>
+
+<div class="superclearfix">
+    
+</div>
+
+                        <hr>
+                        <a style="font-size: small;" href="/kb/what-is-a-upstream">How are upstreams and downstreams calculated?</a>
+                        <h3 id="upstreams">Upstreams<img class="flag-img" src="/assets/lightning.png" style="padding-left: 12px;" title="This information was fetched live at page load time" alt="This information was fetched live at page load time"/></h3>
+
+
+                        <table id="donotscrapebgptools-upstreamTable" class="full-width-table">
+                            <thead class="sortable">
+                                <tr>
+                                    <th class="nowrap boldpls">  &nbsp;  </th>
+                                    <th data-sort-method='number' class="boldpls">ASN</th>
+                                    <th class="nowrap boldpls">Description</th>
+                                    <th class="nowrap boldpls">IPv4</th>
+                                    <th class="nowrap boldpls">IPv6</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US">
+                                        
+                                        </td>
+                                    <td data-sort='13335'><a href="/as/13335">AS13335</a></td>
+                                    <td class="smallonmobile nowrap">Cloudflare, Inc.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US">
+                                        
+                                        </td>
+                                    <td data-sort='3356'><a href="/as/3356">AS3356</a></td>
+                                    <td class="smallonmobile nowrap">Lumen (Level 3)</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US">
+                                        
+                                        </td>
+                                    <td data-sort='2914'><a href="/as/2914">AS2914</a></td>
+                                    <td class="smallonmobile nowrap">NTT America, Inc.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='NL' class="nowrap ns"><img class="flag-img" src="/assets/flags/NL.png" title="NL">
+                                        
+                                        </td>
+                                    <td data-sort='15830'><a href="/as/15830">AS15830</a></td>
+                                    <td class="smallonmobile nowrap">Equinix, Inc.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='GB' class="nowrap ns"><img class="flag-img" src="/assets/flags/GB.png" title="GB">
+                                        
+                                        </td>
+                                    <td data-sort='15570'><a href="/as/15570">AS15570</a></td>
+                                    <td class="smallonmobile nowrap">PACKETFABRIC (UK) LTD</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US">
+                                        
+                                        </td>
+                                    <td data-sort='3257'><a href="/as/3257">AS3257</a></td>
+                                    <td class="smallonmobile nowrap">GTT Communications Inc.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US">
+                                        
+                                        </td>
+                                    <td data-sort='7018'><a href="/as/7018">AS7018</a></td>
+                                    <td class="smallonmobile nowrap">AT&amp;T Enterprises, LLC</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US">
+                                        
+                                        </td>
+                                    <td data-sort='3491'><a href="/as/3491">AS3491</a></td>
+                                    <td class="smallonmobile nowrap">PCCW Global, Inc.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US">
+                                        
+                                        </td>
+                                    <td data-sort='1828'><a href="/as/1828">AS1828</a></td>
+                                    <td class="smallonmobile nowrap">Unitas Global</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US">
+                                        
+                                        </td>
+                                    <td data-sort='701'><a href="/as/701">AS701</a></td>
+                                    <td class="smallonmobile nowrap">Verizon Business</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US">
+                                        
+                                        </td>
+                                    <td data-sort='2686'><a href="/as/2686">AS2686</a></td>
+                                    <td class="smallonmobile nowrap">AT&amp;T Enterprises, LLC</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US">
+                                        
+                                        </td>
+                                    <td data-sort='10913'><a href="/as/10913">AS10913</a></td>
+                                    <td class="smallonmobile nowrap">Unitas Global</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US">
+                                        
+                                        </td>
+                                    <td data-sort='6461'><a href="/as/6461">AS6461</a></td>
+                                    <td class="smallonmobile nowrap">Zayo Bandwidth</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='IN' class="nowrap ns"><img class="flag-img" src="/assets/flags/IN.png" title="IN">
+                                        
+                                        </td>
+                                    <td data-sort='9498'><a href="/as/9498">AS9498</a></td>
+                                    <td class="smallonmobile nowrap">Bharti Airtel Ltd.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US">
+                                        
+                                        </td>
+                                    <td data-sort='13789'><a href="/as/13789">AS13789</a></td>
+                                    <td class="smallonmobile nowrap">Unitas Global</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='GB' class="nowrap ns"><img class="flag-img" src="/assets/flags/GB.png" title="GB">
+                                        
+                                        </td>
+                                    <td data-sort='8220'><a href="/as/8220">AS8220</a></td>
+                                    <td class="smallonmobile nowrap">COLT</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US">
+                                        
+                                        </td>
+                                    <td data-sort='54004'><a href="/as/54004">AS54004</a></td>
+                                    <td class="smallonmobile nowrap">Optimum WiFi</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US">
+                                        
+                                        </td>
+                                    <td data-sort='21859'><a href="/as/21859">AS21859</a></td>
+                                    <td class="smallonmobile nowrap">Zenlayer Inc</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='JP' class="nowrap ns"><img class="flag-img" src="/assets/flags/JP.png" title="JP">
+                                        
+                                        </td>
+                                    <td data-sort='17675'><a href="/as/17675">AS17675</a></td>
+                                    <td class="smallonmobile nowrap">PacketFabric (Japan) Co., Ltd.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='HK' class="nowrap ns"><img class="flag-img" src="/assets/flags/HK.png" title="HK">
+                                        
+                                        </td>
+                                    <td data-sort='133012'><a href="/as/133012">AS133012</a></td>
+                                    <td class="smallonmobile nowrap">Cocoa Oriental Network Limited</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='IN' class="nowrap ns"><img class="flag-img" src="/assets/flags/IN.png" title="IN">
+                                        
+                                        </td>
+                                    <td data-sort='4755'><a href="/as/4755">AS4755</a></td>
+                                    <td class="smallonmobile nowrap">TATA Communications (formerly VSNL)</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+
+                        <hr>
+                        <h3 id="peers">Peers<img class="flag-img" src="/assets/lightning.png" style="padding-left: 12px;" title="This information was fetched live at page load time" alt="This information was fetched live at page load time"/></h3>
+
+
+
+                        <table id="donotscrapebgptools-upstreamTablePeers" class="full-width-table">
+                            <thead class="sortable">
+                                <tr>
+                                    <th class="nowrap boldpls">  &nbsp;  </th>
+                                    <th data-sort-method='number' class="boldpls">ASN</th>
+                                    <th class="nowrap boldpls">Description</th>
+                                    <th class="nowrap boldpls">IPv4</th>
+                                    <th class="nowrap boldpls">IPv6</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='13335'><a href="/as/13335">AS13335</a></td>
+                                    <td class="smallonmobile nowrap">Cloudflare, Inc.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='GB' class="nowrap ns"><img class="flag-img" src="/assets/flags/GB.png" title="GB"></td>
+                                    <td data-sort='15570'><a href="/as/15570">AS15570</a></td>
+                                    <td class="smallonmobile nowrap">PACKETFABRIC (UK) LTD</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='3356'><a href="/as/3356">AS3356</a></td>
+                                    <td class="smallonmobile nowrap">Lumen (Level 3)</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='1828'><a href="/as/1828">AS1828</a></td>
+                                    <td class="smallonmobile nowrap">Unitas Global</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='2914'><a href="/as/2914">AS2914</a></td>
+                                    <td class="smallonmobile nowrap">NTT America, Inc.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='NL' class="nowrap ns"><img class="flag-img" src="/assets/flags/NL.png" title="NL"></td>
+                                    <td data-sort='15830'><a href="/as/15830">AS15830</a></td>
+                                    <td class="smallonmobile nowrap">Equinix, Inc.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='10913'><a href="/as/10913">AS10913</a></td>
+                                    <td class="smallonmobile nowrap">Unitas Global</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='13789'><a href="/as/13789">AS13789</a></td>
+                                    <td class="smallonmobile nowrap">Unitas Global</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='3257'><a href="/as/3257">AS3257</a></td>
+                                    <td class="smallonmobile nowrap">GTT Communications Inc.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='6461'><a href="/as/6461">AS6461</a></td>
+                                    <td class="smallonmobile nowrap">Zayo Bandwidth</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='7018'><a href="/as/7018">AS7018</a></td>
+                                    <td class="smallonmobile nowrap">AT&amp;T Enterprises, LLC</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='2686'><a href="/as/2686">AS2686</a></td>
+                                    <td class="smallonmobile nowrap">AT&amp;T Enterprises, LLC</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='3491'><a href="/as/3491">AS3491</a></td>
+                                    <td class="smallonmobile nowrap">PCCW Global, Inc.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='GB' class="nowrap ns"><img class="flag-img" src="/assets/flags/GB.png" title="GB"></td>
+                                    <td data-sort='8220'><a href="/as/8220">AS8220</a></td>
+                                    <td class="smallonmobile nowrap">COLT</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='IN' class="nowrap ns"><img class="flag-img" src="/assets/flags/IN.png" title="IN"></td>
+                                    <td data-sort='9498'><a href="/as/9498">AS9498</a></td>
+                                    <td class="smallonmobile nowrap">Bharti Airtel Ltd.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='JP' class="nowrap ns"><img class="flag-img" src="/assets/flags/JP.png" title="JP"></td>
+                                    <td data-sort='17675'><a href="/as/17675">AS17675</a></td>
+                                    <td class="smallonmobile nowrap">PacketFabric (Japan) Co., Ltd.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='701'><a href="/as/701">AS701</a></td>
+                                    <td class="smallonmobile nowrap">Verizon Business</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='21859'><a href="/as/21859">AS21859</a></td>
+                                    <td class="smallonmobile nowrap">Zenlayer Inc</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='54004'><a href="/as/54004">AS54004</a></td>
+                                    <td class="smallonmobile nowrap">Optimum WiFi</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='HK' class="nowrap ns"><img class="flag-img" src="/assets/flags/HK.png" title="HK"></td>
+                                    <td data-sort='133012'><a href="/as/133012">AS133012</a></td>
+                                    <td class="smallonmobile nowrap">Cocoa Oriental Network Limited</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='IN' class="nowrap ns"><img class="flag-img" src="/assets/flags/IN.png" title="IN"></td>
+                                    <td data-sort='4755'><a href="/as/4755">AS4755</a></td>
+                                    <td class="smallonmobile nowrap">TATA Communications (formerly VSNL)</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA"></td>
+                                    <td data-sort='398999'><a href="/as/398999">AS398999</a></td>
+                                    <td class="smallonmobile nowrap">Sucura Networks Inc</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+
+
+                    </div>
+
+                    <div style="display: none" id="whois-page">
+                        
+                        
+                        <pre style="white-space: pre-wrap;">ASHandle:       <a href="/AS20249">AS20249</a>
+OrgID:          JEFFER-2
+ASName:         <a href="/AS20249">AS20249</a>
+ASNumber:       20249
+RegDate:        2019-07-08
+Updated:        2020-10-05
+TechHandle:     <a href="https://whois.arin.net/rest/poc/NETWO6562-ARIN">NETWO6562-ARIN</a>
+AbuseHandle:    <a href="https://whois.arin.net/rest/poc/NETWO6562-ARIN">NETWO6562-ARIN</a>
+NOCHandle:      <a href="https://whois.arin.net/rest/poc/NETWO6562-ARIN">NETWO6562-ARIN</a>
+Source:         ARIN
+
+
+
+OrgID:          JEFFER-2
+OrgName:        Jefferies LLC
+CanAllocate:    
+Street:         520 Madison Avenue
+Street:         10th Floor
+City:           New York City
+State/Prov:     NY
+Country:        US
+PostalCode:     10022
+RegDate:        1995-02-23
+Updated:        2024-01-24
+OrgAdminHandle: <a href="https://whois.arin.net/rest/poc/NETWO6562-ARIN">NETWO6562-ARIN</a>
+OrgTechHandle:  <a href="https://whois.arin.net/rest/poc/NETWO6562-ARIN">NETWO6562-ARIN</a>
+OrgTechHandle:  <a href="https://whois.arin.net/rest/poc/NEVAT-ARIN">NEVAT-ARIN</a>
+OrgTechHandle:  <a href="https://whois.arin.net/rest/poc/ROBAY16-ARIN">ROBAY16-ARIN</a>
+OrgAbuseHandle: <a href="https://whois.arin.net/rest/poc/NETWO6562-ARIN">NETWO6562-ARIN</a>
+OrgNOCHandle:   <a href="https://whois.arin.net/rest/poc/NETWO6562-ARIN">NETWO6562-ARIN</a>
+Source:         ARIN
+
+
+
+
+
+OrgAdminHandle:       <a href="https://whois.arin.net/rest/poc/NETWO6562-ARIN">NETWO6562-ARIN</a>
+OrgAdminName:          Network Engineering
+# Email removed, Log into bgp.tools to see whois emails
+
+
+OrgTechHandle:        <a href="https://whois.arin.net/rest/poc/NETWO6562-ARIN">NETWO6562-ARIN</a>
+OrgTechName:           Network Engineering
+# Email removed, Log into bgp.tools to see whois emails
+
+
+OrgTechHandle:        <a href="https://whois.arin.net/rest/poc/NEVAT-ARIN">NEVAT-ARIN</a>
+OrgTechName:          Anup Nevatia
+# Email removed, Log into bgp.tools to see whois emails
+
+
+OrgTechHandle:        <a href="https://whois.arin.net/rest/poc/ROBAY16-ARIN">ROBAY16-ARIN</a>
+OrgTechName:          Fernando Robayo
+# Email removed, Log into bgp.tools to see whois emails
+
+
+OrgAbuseHandle:       <a href="https://whois.arin.net/rest/poc/NETWO6562-ARIN">NETWO6562-ARIN</a>
+OrgAbuseName:          Network Engineering
+# Email removed, Log into bgp.tools to see whois emails
+
+
+OrgNOCHandle:         <a href="https://whois.arin.net/rest/poc/NETWO6562-ARIN">NETWO6562-ARIN</a>
+OrgNOCName:            Network Engineering
+# Email removed, Log into bgp.tools to see whois emails
+
+
+TechHandle:           <a href="https://whois.arin.net/rest/poc/NETWO6562-ARIN">NETWO6562-ARIN</a>
+TechName:              Network Engineering
+# Email removed, Log into bgp.tools to see whois emails
+
+
+AbuseHandle:          <a href="https://whois.arin.net/rest/poc/NETWO6562-ARIN">NETWO6562-ARIN</a>
+AbuseName:             Network Engineering
+# Email removed, Log into bgp.tools to see whois emails
+
+
+NOCHandle:            <a href="https://whois.arin.net/rest/poc/NETWO6562-ARIN">NETWO6562-ARIN</a>
+NOCName:               Network Engineering
+# Email removed, Log into bgp.tools to see whois emails
+
+</pre>
+                        
+                        
+                        <a style="font-size: small;">Last Update: 2025-12-12T03:31:04Z UTC </a>
+                        
+                        <hr>
+                        
+                            <h2>Member of the following AS-SETs</h2>
+
+                            <table id="fhTable" class="full-width-table ">
+                                <tbody id="prefixlist-tbody">
+                                    <tr>
+                                        <th class="boldpls nowrap"> - </th>
+                                        <th class="boldpls">Member</th>
+                                         
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-kdd">as-kdd</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-gttcust">as-gttcust</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-hibernia-e">as-hibernia-e</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-ec-dc">as-ec-dc</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-telstra-intl-customers">as-telstra-intl-customers</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-nwn-transit">as-nwn-transit</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-equinix-hk">as-equinix-hk</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-telstra-intl-customers-4637">as-telstra-intl-customers-4637</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as16631:as-cogc-005">as16631:as-cogc-005</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-comcast-edia">as-comcast-edia</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">ALTDB</td>
+                                        
+                                        <td><a href="/as-set/ALTDB::as-voxel">as-voxel</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-itxbr1">as-itxbr1</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-pnaphkg001">as-pnaphkg001</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">ARIN</td>
+                                        
+                                        <td><a href="/as-set/ARIN::as6128:as-customers">as6128:as-customers</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-kddi6">as-kddi6</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-140224">as-140224</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-zenlayer">as-zenlayer</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-ec-ny">as-ec-ny</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-hgc-intl">as-hgc-intl</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">LEVEL3</td>
+                                        
+                                        <td><a href="/as-set/LEVEL3::as-lumen-customers-asns">as-lumen-customers-asns</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-equinix-ty">as-equinix-ty</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-pnapnym">as-pnapnym</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-pnaplon">as-pnaplon</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">JPIRR</td>
+                                        
+                                        <td><a href="/as-set/JPIRR::as-gigainfra">as-gigainfra</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">APNIC</td>
+                                        
+                                        <td><a href="/as-set/APNIC::as1221:as-customers">as1221:as-customers</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-pnaptok">as-pnaptok</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as8220:as-colthk">as8220:as-colthk</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-unitas-customers">as-unitas-customers</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-pnapsyd001">as-pnapsyd001</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-telstra-testing-1">as-telstra-testing-1</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">NTTCOM</td>
+                                        
+                                        <td><a href="/as-set/NTTCOM::as-equinix-ap">as-equinix-ap</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">ARIN</td>
+                                        
+                                        <td><a href="/as-set/ARIN::as13335:as-customers">as13335:as-customers</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-18186">as-18186</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as3491:as-customers-ap">as3491:as-customers-ap</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-ignemea">as-ignemea</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-c3">as-c3</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-equinix-ld">as-equinix-ld</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-pnapwdc002">as-pnapwdc002</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-kddcustomer2">as-kddcustomer2</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">ARIN</td>
+                                        
+                                        <td><a href="/as-set/ARIN::as-xo">as-xo</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">NTTCOM</td>
+                                        
+                                        <td><a href="/as-set/NTTCOM::as2914:as-asia">as2914:as-asia</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as198949:as-sd">as198949:as-sd</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">ARIN</td>
+                                        
+                                        <td><a href="/as-set/ARIN::as-xo-b">as-xo-b</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-133012">as-133012</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">NTTCOM</td>
+                                        
+                                        <td><a href="/as-set/NTTCOM::as2914:as-asia-v6">as2914:as-asia-v6</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-hibernia">as-hibernia</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-gigainfra">as-gigainfra</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-vsnl-in">as-vsnl-in</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-ccf">as-ccf</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                        
+
+                    </div>
+
+                    
+
+                    
+
+                    
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="superclearfix">
+            
+            <div class="superclearfix">
+                
+            </div>
+
+            <div class="superclearfix">
+                
+            </div>
+
+
+        </div>
+
+
+        <div class="group js-footer" id="footer">
+            <nav>
+                <div>
+                    <ul>
+                        <li><a href="/kb/api" target="_blank">Scripting/API</a></li>
+                        <li><a href="/credits" target="_blank">Credits</a></li>
+                        <li><a href="/pricing" target="_blank">Pricing</a></li>
+                        <li><a href="/kb/contact" target="_blank">Contact Us</a></li>
+                        <li><a href="https://github.com/bgptools/issues" target="_blank">Issue Tracker</a></li>
+                        <li><a href="/kb/setup-sessions" target="">Contribute Data</a></li>
+                        
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <script>
+    
+    var inhash = window.location.hash;
+    if (inhash == "#asinfo") {
+        
+    } else if (inhash == "#prefixes") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#prefix-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#prefixes-page');
+        aaa[0].style.display = "";
+
+    } else if (inhash == "#connectivity" || inhash == "#peers" || inhash == "#upstreams" || inhash == "#downstreams") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#connectivity-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#connectivity-page');
+        aaa[0].style.display = "";
+    } else if (inhash == "#whois") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#whois-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#whois-page');
+        aaa[0].style.display = "";
+    } else if (inhash == "#ix") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#ix-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#ix-page');
+        aaa[0].style.display = "";
+    }</script>
+
+    <script>
+    
+
+
+    ;(function() {
+  'use strict'
+
+  function scaleImageMap() {
+    function resizeMap() {
+      function resizeAreaTag(cachedAreaCoords, idx) {
+        function scale(coord) {
+          var dimension = 1 === (isWidth = 1 - isWidth) ? 'width' : 'height'
+          return (
+            padding[dimension] +
+            Math.floor(Number(coord) * scalingFactor[dimension])
+          )
+        }
+
+        var isWidth = 0
+        areas[idx].coords = cachedAreaCoords
+          .split(',')
+          .map(scale)
+          .join(',')
+      }
+
+      var scalingFactor = {
+        width: image.width / image.naturalWidth,
+        height: image.height / image.naturalHeight,
+      }
+
+      var padding = {
+        width: parseInt(
+          window.getComputedStyle(image, null).getPropertyValue('padding-left'),
+          10
+        ),
+        height: parseInt(
+          window.getComputedStyle(image, null).getPropertyValue('padding-top'),
+          10
+        ),
+      }
+
+      cachedAreaCoordsArray.forEach(resizeAreaTag)
+    }
+
+    function getCoords(e) {
+      
+      return e.coords.replace(/ *, */g, ',').replace(/ +/g, ',')
+    }
+
+    function debounce() {
+      clearTimeout(timer)
+      timer = setTimeout(resizeMap, 250)
+    }
+
+    function start() {
+      if (
+        image.width !== image.naturalWidth ||
+        image.height !== image.naturalHeight
+      ) {
+        resizeMap()
+      }
+    }
+
+    function addEventListeners() {
+      image.addEventListener('load', resizeMap, false) 
+      window.addEventListener('focus', resizeMap, false) 
+      window.addEventListener('resize', debounce, false)
+      window.addEventListener('readystatechange', resizeMap, false)
+      document.addEventListener('fullscreenchange', resizeMap, false)
+    }
+
+    function beenHere() {
+      return 'function' === typeof map._resize
+    }
+
+    function getImg(name) {
+      return document.querySelector('img[usemap="#world"]')
+    }
+
+    function setup() {
+      areas = map.getElementsByTagName('area')
+      cachedAreaCoordsArray = Array.prototype.map.call(areas, getCoords)
+      image = getImg('#' + map.name) || getImg(map.name)
+      map._resize = resizeMap 
+    }
+
+    var  
+      map = this,
+      areas = null,
+      cachedAreaCoordsArray = null,
+      image = null,
+      timer = null
+
+    if (!beenHere()) {
+      setup()
+      addEventListeners()
+      start()
+    } else {
+      map._resize() 
+    }
+  }
+
+  function factory() {
+    function chkMap(element) {
+      if (!element.tagName) {
+        throw new TypeError('Object is not a valid DOM element')
+      } else if ('MAP' !== element.tagName.toUpperCase()) {
+        throw new TypeError(
+          'Expected <MAP> tag, found <' + element.tagName + '>.'
+        )
+      }
+    }
+
+    function init(element) {
+      if (element) {
+        chkMap(element)
+        scaleImageMap.call(element)
+        maps.push(element)
+      }
+    }
+
+    var maps
+
+    return function imageMapResizeF(target) {
+      maps = [] 
+
+      switch (typeof target) {
+        case 'undefined':
+        case 'string':
+          Array.prototype.forEach.call(
+            document.querySelectorAll(target || 'map'),
+            init
+          )
+          break
+        case 'object':
+          init(target)
+          break
+        default:
+          throw new TypeError('Unexpected data type (' + typeof target + ').')
+      }
+
+      return maps
+    }
+  }
+
+  if (typeof define === 'function' && define.amd) {
+    define([], factory)
+  } else if (typeof module === 'object' && typeof module.exports === 'object') {
+    module.exports = factory() 
+  } else {
+    window.imageMapResize = factory()
+  }
+
+  if ('jQuery' in window) {
+    window.jQuery.fn.imageMapResize = function $imageMapResizeF() {
+      return this.filter('map')
+        .each(scaleImageMap)
+        .end()
+    }
+  }
+})()
+    
+    </script>
+    <script>
+        var imgEl = document.getElementById("pathimg");
+        imgEl.addEventListener("mouseover",function() {
+            imageMapResize('#world');
+        })
+    </script>
+    <script src="/assets/tablesort.min.js"></script>
+    <script>
+        addEventListener("load", (event) => {
+            
+            
+            var sort = new Tablesort(document.getElementById('donotscrapebgptools-upstreamTable'));
+            var sort2 = new Tablesort(document.getElementById('donotscrapebgptools-upstreamTablePeers'));
+            
+            
+            
+        });
+    </script>
+    
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        setTimeout(function() {
+
+        var beaconHttp = new XMLHttpRequest();
+        var url = '/performance-beacon';
+        var params = JSON.stringify(window.performance)
+        beaconHttp.open('POST', url, true);
+        
+        
+        beaconHttp.setRequestHeader('Content-type', 'application/json');
+        beaconHttp.setRequestHeader('visit-url', "/as/20249");
+        if (navigator.connection) {
+            beaconHttp.setRequestHeader('client-side-rtt', navigator.connection.rtt);
+        } else {
+            beaconHttp.setRequestHeader('client-side-rtt', '-2');
+        }
+        beaconHttp.onreadystatechange = function() {}
+        beaconHttp.send(params);
+        },1000)
+    }, false);
+</script>
+
+</body>
+
+
+</html>

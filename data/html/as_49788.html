@@ -1,0 +1,2615 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Nexthop AS (AS49788) is a 16 year old BGP network that is peering with 66 other networks and has 4 upstream carriers">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000">
+    <link rel="search" type="application/opensearchdescription+xml" title="BGP.Tools" href="https://bgp.tools/opensearch.xml">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="theme-color" content="#000000">
+    <link href="https://social.bgp.tools/@bgptools" rel="me">
+    <link rel="canonical" href="https://bgp.tools/as/49788" />
+    <title>AS49788 Nexthop AS - bgp.tools</title>
+    <link rel="stylesheet" type="text/css" href="/assets/main-new.css?2025-12-09-1723%20UTC">
+</head>
+
+<body>
+    <div id="container">
+        
+<div id="global-header" class="global-header-top">
+    <div class="header-sitewide">
+        <div class="global-header">
+            <div class="header-logo">
+                <a href="/" id="logo" class="content">bgp.tools</a>
+            </div>
+            <form id="search" action="/search" method="get" accept-charset="utf-8" role="search" class="top-search-header js-search-hash">
+                <div class="searchfield">
+                    <input type="search" autocomplete="off" name="q" id="site-search-text" title="Search" value="" placeholder="Start here..." autofocus="autofocus" class="js-search-focus">
+                    <button type="submit" id="search-submit" class="search-submit">Search</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div id="global-header-blob" >
+    <a id="auth-header-text" href="/login">Login</a>
+    
+</div>
+<div id="global-header-bar" >
+    <a id="auth-header-bar-text" href="/login">Login</a>
+    
+</div>
+<div class="small-clearfix"></div>
+
+        <div id="global-container">
+            
+
+
+            
+            <div class="section-tabs js-tabs">
+                <ul>
+                    
+<li class="active">
+    <h1> <a id="viewbutton-tab" href="/as/49788">View</a></h1>
+</li>
+
+<li >
+    <a id="editbutton-tab" href="/edit/as/49788">Edit</a>
+</li>
+
+
+
+
+
+                    <li style="float: right;">
+                        
+                        <img id="ws-status" width="24" height="24" src="/assets/disconnected.png" title="Not Connected To realtime data updates">
+                        
+                    </li>
+                </ul>
+            </div>
+
+            <div id="search-container">
+
+                <div class="column-full-width">
+
+                    <div class="clearfix">
+                        
+                    </div>
+                    
+                    
+
+                    <div class="network-header">
+                        
+                        
+                        <img width="334" height="250" src="/img/49788" alt="The website screenshot for https://nexthop.no/" >
+                        
+                        
+                        <p id="network-name" class="heading-xlarge">Nexthop AS</p>
+                        <p id="network-number">
+                            AS Number
+                            <strong id="ASNumberString" pure="49788">49788</strong>
+                            <br>
+                        
+                            Website
+                            <strong><a href="https://nexthop.no/" rel="nofollow">https://nexthop.no/</a></strong>
+                        
+                        </p>
+
+                    </div>
+
+
+                    <div class="clearfix">
+                        
+                    </div>
+
+
+                    <div class="section-tabs js-tabs">
+                        <ul>
+
+                            <li id="overview-tab-li" class="active">
+                                <a id="overview-tab" href="#asinfo">Overview</a>
+                            </li>
+                            
+                            <li id="prefix-tab-li">
+                                <a id="prefix-tab" href="#prefixes">Prefixes</a>
+                            </li>
+
+                            <li id="connectivity-tab-li">
+                                <a id="connectivity-tab" href="#connectivity">Connectivity</a>
+                            </li>
+                            
+                            <li id="whois-tab-li">
+                                <a id="whois-tab" href="#whois">Whois</a>
+                            </li>
+                        
+                            <li id="ix-tab-li">
+                                <a id="ix-tab" href="#ix">IX</a>
+                            </li>
+                        
+                        
+                        </ul>
+                    </div>
+
+<script>
+    function removeAllActiveTab() {
+        var tabs = [
+            "overview-tab-li", 
+            "prefix-tab-li", 
+            "connectivity-tab-li",
+            "whois-tab-li",
+            "ix-tab-li",
+            "issues-tab-li"
+        ];
+
+        tabs.forEach(element => {
+            var aaa = document.querySelectorAll('#'+element);
+            if(aaa.length != 0) {
+                aaa[0].classList.remove("active")
+            }
+        });
+    }
+
+    function hideAllContent() {
+        var tabs = [
+            "overview-page", 
+            "prefixes-page", 
+            "connectivity-page",
+            "whois-page",
+            "ix-page",
+            "issues-page"
+        ];
+
+        tabs.forEach(element => {
+            var aaa = document.querySelectorAll('#'+element);
+            if(aaa.length != 0) {
+                aaa[0].style.display = "none";
+            }
+        });
+        if (document.getElementById("donotscrapebgptools-prefixlist-tbody")) {
+            var prefixrows = document.getElementById("donotscrapebgptools-prefixlist-tbody").children;
+            for (var i = 0; i < prefixrows.length; i++) {
+                prefixrows[i].style = "";
+            }
+        }
+    }
+
+    var otab = document.querySelectorAll('#overview-tab');
+    otab[0].addEventListener("click", function () {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#overview-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#overview-page');
+        aaa[0].style.display = "";
+    });
+    
+
+    var ptab = document.querySelectorAll('#prefix-tab');
+    ptab[0].addEventListener("click", function () {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#prefix-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#prefixes-page');
+        aaa[0].style.display = "";
+    });
+
+    var ctab = document.querySelectorAll('#connectivity-tab');
+    ctab[0].addEventListener("click", function () {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#connectivity-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#connectivity-page');
+        aaa[0].style.display = "";
+    });
+    
+
+    var wtab = document.querySelectorAll('#whois-tab');
+    wtab[0].addEventListener("click", function () {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#whois-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#whois-page');
+        aaa[0].style.display = "";
+    });
+
+</script>
+
+
+<script>
+var wtab = document.querySelectorAll('#ix-tab');
+wtab[0].addEventListener("click", function () {
+    removeAllActiveTab()
+    hideAllContent()
+    var otab2 = document.querySelectorAll('#ix-tab-li');
+    otab2[0].classList.add("active");
+
+    var aaa = document.querySelectorAll('#ix-page');
+    aaa[0].style.display = "";
+});
+</script>
+
+
+                    
+                    <div id="overview-page">
+
+                        <div class="grid-row">
+                        
+                        <div class="column-two-thirds">
+                            <dl>
+                                <dt>Registered on</dt>
+                                <dd class="text data">
+                                    
+                                    10 Sep 2009 (16 years old)
+                                </dd>
+                            
+                            
+                            <dt>Registered to</dt>
+                            <dd class="text data">
+                                <a href="/rir-owner/no.nexthop">no.nexthop</a> (ripe)</dd>
+                                
+                            
+                            </dl>
+                        </div>
+                        
+    
+                        <dl class="column-third">
+                            <dt>Network status</dt>
+                            <dd class="text data">
+                                
+                                Active, Allocated under RIPE
+                                
+                            </dd>
+                        </dl>
+    
+                        </div>
+    
+                        <div class="grid-row">
+                            <dl class="column-two-thirds">
+                                <dt>Network type</dt>
+                                <dd class="text data">
+                                    Content
+                                </dd>
+                            </dl>
+    
+                            <dl class="column-third">
+                                <dt>Prefixes Originated</dt>
+                                <dd class="data">24 IPv4, 6 IPv6</dd>
+                            </dl>
+                        </div>
+                        <div class="grid-row">
+                            <div class="column-half">
+    
+                                <h2 class="heading-medium"><derp>Upstreams</derp></h2>
+                                <ul>
+                                    
+                                    <li>
+                                        <span id="sic0">
+                                          <a href="/as/1299">AS1299</a> - Arelion (fka. Telia Carrier)
+                                        </span>
+                                    </li>
+                                    
+                                    <li>
+                                        <span id="sic0">
+                                          <a href="/as/174">AS174</a> - Cogent Communications, LLC
+                                        </span>
+                                    </li>
+                                    
+                                    <li>
+                                        <span id="sic0">
+                                          <a href="/as/12552">AS12552</a> - GlobalConnect (IP-Only)
+                                        </span>
+                                    </li>
+                                    
+                                    <li>
+                                        <span id="sic0">
+                                          <a href="/as/6939">AS6939</a> - Hurricane Electric LLC
+                                        </span>
+                                    </li>
+                                    
+                                </ul>
+    
+                            </div>
+    
+                            <div class="column-half">
+                                
+                                    <h2 class="heading-medium"><derp>Rankings</derp></h2>
+                                    
+                                    <li><span id="sic0">#7 for <a href="/rankings/NO?sort=cone">AS Cone  in Norway</a></span></li>
+                                    
+                                    <li><span id="sic0">#65 for <a href="/rankings/NO?sort=eyeballs">Estimated Eyeballs  in Norway</a></span></li>
+                                    
+                                    <li><span id="sic0">#9 for <a href="/rankings/NO?sort=dns">Unique Domains  in Norway</a></span></li>
+                                    
+                                    <li><span id="sic0">#12 for <a href="/rankings/NO?sort=peering">Known Peers  in Norway</a></span></li>
+                                    
+                                    <li><span id="sic0">#23 for <a href="/rankings/NO?sort=v4">Originated IPv4 Space  in Norway</a></span></li>
+                                    
+                                    <li><span id="sic0">#5 for <a href="/rankings/NO?sort=v6">Originated IPv6 Space  in Norway</a></span></li>
+                                    
+                                
+                            </div>
+                        </div>
+                        
+                        <div class="grid-row" style="padding: 15px;">
+                            <h2 class="heading-medium"><derp>Tags:</derp></h2>
+                            <br>
+                            
+                            <a href="/tags/vpsh"><span style="border: 5px solid #647096;" class="taglist"> Server Hosting </span></a>
+                            
+                        </div>
+                        
+                    </div>
+                    
+
+                    <div style="display: none" id="prefixes-page">
+                        
+
+                        
+                        <div style="float:left">
+                            <dt>Prefixes Originated</dt>
+                            <dd class="data">24 IPv4, 6 IPv6</dd>
+                            <dd class="data"><a href="/as/49788?show-low-vis#prefixes">Show Low Visibility Prefixes</a></dd>
+                            
+                        </div>
+                        <div style="float:right">
+                                <dt>Addresses Originated</dt>
+                                <dd class="data">184 /24's of IPv4</dd>
+                                <dd class="data">1638402 /48's of IPv6</dd>
+                        </div>
+
+                        <div class="clearfix">
+                            
+                        </div>
+
+
+                        <table id="fhTable" class="full-width-table ">
+                            <tbody id="donotscrapebgptools-prefixlist-tbody">
+                                <tr>
+                                    <th class="nowrap">  &nbsp;  </th>
+                                    <th class="boldpls">Prefix</th>
+                                    <th class="nowrap boldpls">Description</th>
+                                </tr>
+                                <p id="readme-if-you-are-human" style="display: none;">If you are scraping this block for the prefixes that a AS originates, please use the data dumps in https://bgp.tools/kb/api and cache them</p>
+                                
+                                <tr id="pfx-45.153.104.0/22">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="NO" src="/assets/flags/NO.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/45.153.104.0/22">45.153.104.0/22</a></td>
+                                    <td class="smallonmobile nowrap">Nexthop AS</td>
+                                </tr>
+                                
+                                <tr id="pfx-64.239.19.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="NO" src="/assets/flags/NO.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/64.239.19.0/24">64.239.19.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Webspesialisten AS</td>
+                                </tr>
+                                
+                                <tr id="pfx-79.141.96.0/20">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="NO" src="/assets/flags/NO.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/79.141.96.0/20">79.141.96.0/20</a></td>
+                                    <td class="smallonmobile nowrap">Nexthop AS</td>
+                                </tr>
+                                
+                                <tr id="pfx-84.243.128.0/18">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="NO" src="/assets/flags/NO.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/84.243.128.0/18">84.243.128.0/18</a></td>
+                                    <td class="smallonmobile nowrap">HOSTINGSERVICE.NO AS</td>
+                                </tr>
+                                
+                                <tr id="pfx-91.90.104.0/21">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="NO" src="/assets/flags/NO.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/91.90.104.0/21">91.90.104.0/21</a></td>
+                                    <td class="smallonmobile nowrap">Nexthop AS</td>
+                                </tr>
+                                
+                                <tr id="pfx-91.189.120.0/21">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="NO" src="/assets/flags/NO.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/91.189.120.0/21">91.189.120.0/21</a></td>
+                                    <td class="smallonmobile nowrap">Nexthop AS</td>
+                                </tr>
+                                
+                                <tr id="pfx-91.193.0.0/22">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="NO" src="/assets/flags/NO.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/91.193.0.0/22">91.193.0.0/22</a></td>
+                                    <td class="smallonmobile nowrap">Nexthop AS</td>
+                                </tr>
+                                
+                                <tr id="pfx-91.218.184.0/22">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="NO" src="/assets/flags/NO.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/91.218.184.0/22">91.218.184.0/22</a></td>
+                                    <td class="smallonmobile nowrap">Nexthop AS</td>
+                                </tr>
+                                
+                                <tr id="pfx-91.220.165.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="NO" src="/assets/flags/NO.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/91.220.165.0/24">91.220.165.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Nexthop AS</td>
+                                </tr>
+                                
+                                <tr id="pfx-91.221.130.0/23">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="NO" src="/assets/flags/NO.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/91.221.130.0/23">91.221.130.0/23</a></td>
+                                    <td class="smallonmobile nowrap">Nexthop AS</td>
+                                </tr>
+                                
+                                <tr id="pfx-91.225.60.0/22">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="NO" src="/assets/flags/NO.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/91.225.60.0/22">91.225.60.0/22</a></td>
+                                    <td class="smallonmobile nowrap">Nexthop AS</td>
+                                </tr>
+                                
+                                <tr id="pfx-91.232.32.0/23">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="NO" src="/assets/flags/NO.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/91.232.32.0/23">91.232.32.0/23</a></td>
+                                    <td class="smallonmobile nowrap">OSLOTECH AS</td>
+                                </tr>
+                                
+                                <tr id="pfx-91.242.200.0/21">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="NO" src="/assets/flags/NO.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/91.242.200.0/21">91.242.200.0/21</a></td>
+                                    <td class="smallonmobile nowrap">Blackbird AS</td>
+                                </tr>
+                                
+                                <tr id="pfx-93.184.112.0/21">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="NO" src="/assets/flags/NO.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/93.184.112.0/21">93.184.112.0/21</a></td>
+                                    <td class="smallonmobile nowrap">Nexthop AS</td>
+                                </tr>
+                                
+                                <tr id="pfx-151.252.8.0/21">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="NO" src="/assets/flags/NO.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/151.252.8.0/21">151.252.8.0/21</a></td>
+                                    <td class="smallonmobile nowrap">Nexthop AS</td>
+                                </tr>
+                                
+                                <tr id="pfx-185.7.192.0/22">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="NO" src="/assets/flags/NO.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/185.7.192.0/22">185.7.192.0/22</a></td>
+                                    <td class="smallonmobile nowrap">Nexthop AS</td>
+                                </tr>
+                                
+                                <tr id="pfx-185.57.252.0/22">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="NO" src="/assets/flags/NO.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/185.57.252.0/22">185.57.252.0/22</a></td>
+                                    <td class="smallonmobile nowrap">HOSTINGSERVICE.NO AS</td>
+                                </tr>
+                                
+                                <tr id="pfx-185.80.180.0/22">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="NO" src="/assets/flags/NO.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/185.80.180.0/22">185.80.180.0/22</a></td>
+                                    <td class="smallonmobile nowrap">Nexthop AS</td>
+                                </tr>
+                                
+                                <tr id="pfx-185.102.108.0/22">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="NO" src="/assets/flags/NO.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/185.102.108.0/22">185.102.108.0/22</a></td>
+                                    <td class="smallonmobile nowrap">Bridge Technologies CO AS</td>
+                                </tr>
+                                
+                                <tr id="pfx-185.114.56.0/22">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="NO" src="/assets/flags/NO.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/185.114.56.0/22">185.114.56.0/22</a></td>
+                                    <td class="smallonmobile nowrap">NordkappNett AS</td>
+                                </tr>
+                                
+                                <tr id="pfx-185.168.72.0/22">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="NO" src="/assets/flags/NO.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/185.168.72.0/22">185.168.72.0/22</a></td>
+                                    <td class="smallonmobile nowrap">Nexthop AS</td>
+                                </tr>
+                                
+                                <tr id="pfx-193.0.222.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="NO" src="/assets/flags/NO.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/193.0.222.0/24">193.0.222.0/24</a></td>
+                                    <td class="smallonmobile nowrap">SFIH CONSULTING NETWORK</td>
+                                </tr>
+                                
+                                <tr id="pfx-193.202.115.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="NO" src="/assets/flags/NO.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/193.202.115.0/24">193.202.115.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Nexthop AS</td>
+                                </tr>
+                                
+                                <tr id="pfx-217.170.128.0/20">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="NO" src="/assets/flags/NO.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/217.170.128.0/20">217.170.128.0/20</a></td>
+                                    <td class="smallonmobile nowrap">Absnet AS</td>
+                                </tr>
+                                
+                                <tr id="pfx-2001:67c:230::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="NO" src="/assets/flags/NO.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2001:67c:230::/48">2001:67c:230::/48</a></td>
+                                    <td class="smallonmobile nowrap">Nexthop AS</td>
+                                </tr>
+                                
+                                <tr id="pfx-2001:67c:206c::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="NO" src="/assets/flags/NO.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2001:67c:206c::/48">2001:67c:206c::/48</a></td>
+                                    <td class="smallonmobile nowrap">Nexthop AS</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a02:d140::/29">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="NO" src="/assets/flags/NO.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a02:d140::/29">2a02:d140::/29</a></td>
+                                    <td class="smallonmobile nowrap">Nexthop AS</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a06:2400::/29">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="NO" src="/assets/flags/NO.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/2a06:2400::/29">2a06:2400::/29</a></td>
+                                    <td class="smallonmobile nowrap">Bridge Technologies CO AS</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a06:6dc0::/29">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="NO" src="/assets/flags/NO.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/2a06:6dc0::/29">2a06:6dc0::/29</a></td>
+                                    <td class="smallonmobile nowrap">NordkappNett AS</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a0b:f200::/32">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="NO" src="/assets/flags/NO.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a0b:f200::/32">2a0b:f200::/32</a></td>
+                                    <td class="smallonmobile nowrap">Nexthop AS</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div style="display: none" id="connectivity-page">
+
+                        <div class="grid-row">
+                            <dl class="column-third column-third-first">
+                                <dt><a href="#peers">Peers</a></dt>
+                                <dd class="data">66</dd>
+                            </dl><dl class="column-third column-third-mid">
+                                <dt><a href="#upstreams">Upstreams</a></dt>
+                                
+                                <dd class="text data">4</dd>
+                                
+                            </dl>
+                            <dl class="column-third column-third-last">
+                                <dt><a href="#downstreams">Downstreams</a></dt> <dd class="data">19 (Cone: 30)</dd>
+                            </dl>
+
+                        </div>
+
+
+                        <hr>
+                        <h3>Network Policy<img class="flag-img" src="/assets/info.png" style="padding-left: 12px;" title="This info can take up to 2 hours to fully update" alt="This info take up to 2 hours to fully update"/></h3></h3>
+                        <a style="font-size: small;" href="/kb/network-policy">Click here to learn more about what this graph means and what makes up a network policy</a>
+
+                        <select id="netpolicydropdown" class="dropdownmenu">
+                            
+                                <option value="default">Global Aggregation</option>
+                            
+
+                            
+                                
+                            
+                                <option value="01cabadfe81f726adfa8d2e0eb8a9fb5ba3c61b2883075f0f2f61b63">Policy stupefied_liskov</option>
+                            
+                                <option value="7be2b1524ade703b622919139cc706bfca679f4a82d9aa0f03290384">Policy cocky_wright</option>
+                            
+                                <option value="9718cdcab80cc05198bb9a3568fc6c5b9b0cddd62ea8bd556e690995">Policy quirky_benz</option>
+                            
+                                <option value="b56f9f85e996bee8306073b4d688dac7863687a50e7f7473301613d8">Policy charming_tesla</option>
+                            
+                                <option value="151067f4075139a0bb91a0005b6c849213de454cc96e76f4d87067ee">Policy keen_chaum</option>
+                            
+                                <option value="263330dc1a1b8dabab7055387e85af8f715314592c5d5827a80adaf9">Policy serene_keller</option>
+                            
+                                <option value="3f4335791286cb7575dcce3118d376de6fb0d841cfb1d449f6f09610">Policy compassionate_murdock</option>
+                            
+                                <option value="4ea657bf6d8ff054a5d73d5f3177618295b0189ff3b40dc9eaeb4cd1">Policy quirky_booth</option>
+                            
+                                <option value="b72cade6f577612bca074c765dc1b4177ac2cddc642bc504beb5c4f7">Policy charming_sanderson</option>
+                            
+
+                            
+
+
+                        </select>
+
+                        <script>var netgroups = {"01cabadfe81f726adfa8d2e0eb8a9fb5ba3c61b2883075f0f2f61b63":["2a0b:f200::/32"],"151067f4075139a0bb91a0005b6c849213de454cc96e76f4d87067ee":["185.102.108.0/22"],"263330dc1a1b8dabab7055387e85af8f715314592c5d5827a80adaf9":["2a06:2400::/29"],"3f4335791286cb7575dcce3118d376de6fb0d841cfb1d449f6f09610":["185.80.180.0/22","93.184.112.0/21","91.220.165.0/24","151.252.8.0/21","193.202.115.0/24","45.153.104.0/22","91.218.184.0/22","91.193.0.0/22","91.225.60.0/22","185.7.192.0/22","91.189.120.0/21","193.0.222.0/24","91.221.130.0/23","91.90.104.0/21","79.141.96.0/20"],"4ea657bf6d8ff054a5d73d5f3177618295b0189ff3b40dc9eaeb4cd1":["2a06:6dc0::/29"],"7be2b1524ade703b622919139cc706bfca679f4a82d9aa0f03290384":["91.242.200.0/21"],"9718cdcab80cc05198bb9a3568fc6c5b9b0cddd62ea8bd556e690995":["185.168.72.0/22"],"b56f9f85e996bee8306073b4d688dac7863687a50e7f7473301613d8":["217.170.128.0/20","84.243.128.0/18","185.114.56.0/22","64.239.19.0/24","185.57.252.0/22"],"b72cade6f577612bca074c765dc1b4177ac2cddc642bc504beb5c4f7":["2001:67c:206c::/48","2001:67c:230::/48","2a02:d140::/29"]}</script>
+
+                        <div style="text-align: center;">
+                            <img id="pathimg" usemap="#world" src="">
+                            <div id="world2"></div>
+                        </div>
+
+                        <details>
+                            <summary>Chart Display Options</summary>
+                            <noscript>This requires javascript to work</noscript>
+                            <label for="graphOptionMoreWiggle" style="display: flex;align-items: center;font-size: 20px;">
+                                <input type="checkbox" id="graphOptionMoreWiggle" name="graphOptionMoreWiggle" style="width: 64px; height: 32px;">
+                                    <p id="graphOptionMoreWiggleLabel" style="width: 200%;">Display links using non straight lines</p>
+                            </label>
+                        </details>
+
+                        <h3 style="display: none;" id="PISPBanner">Prefixes in selected policy</h3>
+                        <table id="policytable" class="full-width-table">
+                        </table>
+                        <button style="width:100%;display: none;" id="ShowFullPolicyButton" class="bigButton" onclick="dropdownPoke()">Load all prefixes in policy</button>
+
+                        <script>
+                            !function(a,b){"function"==typeof define&&define.amd?define([],b):"undefined"!=typeof module&&module.exports?module.exports=b():a.ReconnectingWebSocket=b()}(this,function(){function a(b,c,d){function l(a,b){var c=document.createEvent("CustomEvent");return c.initCustomEvent(a,!1,!1,b),c}var e={debug:!1,automaticOpen:!0,reconnectInterval:1e3,maxReconnectInterval:3e4,reconnectDecay:1.5,timeoutInterval:2e3};d||(d={});for(var f in e)this[f]="undefined"!=typeof d[f]?d[f]:e[f];this.url=b,this.reconnectAttempts=0,this.readyState=WebSocket.CONNECTING,this.protocol=null;var h,g=this,i=!1,j=!1,k=document.createElement("div");k.addEventListener("open",function(a){g.onopen(a)}),k.addEventListener("close",function(a){g.onclose(a)}),k.addEventListener("connecting",function(a){g.onconnecting(a)}),k.addEventListener("message",function(a){g.onmessage(a)}),k.addEventListener("error",function(a){g.onerror(a)}),this.addEventListener=k.addEventListener.bind(k),this.removeEventListener=k.removeEventListener.bind(k),this.dispatchEvent=k.dispatchEvent.bind(k),this.open=function(b){h=new WebSocket(g.url,c||[]),b||k.dispatchEvent(l("connecting")),(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","attempt-connect",g.url);var d=h,e=setTimeout(function(){(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","connection-timeout",g.url),j=!0,d.close(),j=!1},g.timeoutInterval);h.onopen=function(){clearTimeout(e),(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","onopen",g.url),g.protocol=h.protocol,g.readyState=WebSocket.OPEN,g.reconnectAttempts=0;var d=l("open");d.isReconnect=b,b=!1,k.dispatchEvent(d)},h.onclose=function(c){if(clearTimeout(e),h=null,i)g.readyState=WebSocket.CLOSED,k.dispatchEvent(l("close"));else{g.readyState=WebSocket.CONNECTING;var d=l("connecting");d.code=c.code,d.reason=c.reason,d.wasClean=c.wasClean,k.dispatchEvent(d),b||j||((g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","onclose",g.url),k.dispatchEvent(l("close")));var e=g.reconnectInterval*Math.pow(g.reconnectDecay,g.reconnectAttempts);setTimeout(function(){g.reconnectAttempts++,g.open(!0)},e>g.maxReconnectInterval?g.maxReconnectInterval:e)}},h.onmessage=function(b){(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","onmessage",g.url,b.data);var c=l("message");c.data=b.data,k.dispatchEvent(c)},h.onerror=function(b){(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","onerror",g.url,b),k.dispatchEvent(l("error"))}},1==this.automaticOpen&&this.open(!1),this.send=function(b){if(h)return(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","send",g.url,b),h.send(b);throw"INVALID_STATE_ERR : Pausing to reconnect websocket"},this.close=function(a,b){"undefined"==typeof a&&(a=1e3),i=!0,h&&h.close(a,b)},this.refresh=function(){h&&h.close()}}return a.prototype.onopen=function(){},a.prototype.onclose=function(){},a.prototype.onconnecting=function(){},a.prototype.onmessage=function(){},a.prototype.onerror=function(){},a.debugAll=!1,a.CONNECTING=WebSocket.CONNECTING,a.OPEN=WebSocket.OPEN,a.CLOSING=WebSocket.CLOSING,a.CLOSED=WebSocket.CLOSED,a});
+                        </script>
+                        
+                        <script>
+                            var prefixinfo = [{"PrefixString":"45.153.104.0/22","WhoisName":"Nexthop AS","WhoisCountry":"NO"},{"PrefixString":"64.239.19.0/24","WhoisName":"Webspesialisten AS","WhoisCountry":"NO"},{"PrefixString":"79.141.96.0/20","WhoisName":"Nexthop AS","WhoisCountry":"NO"},{"PrefixString":"84.243.128.0/18","WhoisName":"HOSTINGSERVICE.NO AS","WhoisCountry":"NO"},{"PrefixString":"91.90.104.0/21","WhoisName":"Nexthop AS","WhoisCountry":"NO"},{"PrefixString":"91.189.120.0/21","WhoisName":"Nexthop AS","WhoisCountry":"NO"},{"PrefixString":"91.193.0.0/22","WhoisName":"Nexthop AS","WhoisCountry":"NO"},{"PrefixString":"91.218.184.0/22","WhoisName":"Nexthop AS","WhoisCountry":"NO"},{"PrefixString":"91.220.165.0/24","WhoisName":"Nexthop AS","WhoisCountry":"NO"},{"PrefixString":"91.221.130.0/23","WhoisName":"Nexthop AS","WhoisCountry":"NO"},{"PrefixString":"91.225.60.0/22","WhoisName":"Nexthop AS","WhoisCountry":"NO"},{"PrefixString":"91.232.32.0/23","WhoisName":"OSLOTECH AS","WhoisCountry":"NO"},{"PrefixString":"91.242.200.0/21","WhoisName":"Blackbird AS","WhoisCountry":"NO"},{"PrefixString":"93.184.112.0/21","WhoisName":"Nexthop AS","WhoisCountry":"NO"},{"PrefixString":"151.252.8.0/21","WhoisName":"Nexthop AS","WhoisCountry":"NO"},{"PrefixString":"185.7.192.0/22","WhoisName":"Nexthop AS","WhoisCountry":"NO"},{"PrefixString":"185.57.252.0/22","WhoisName":"HOSTINGSERVICE.NO AS","WhoisCountry":"NO"},{"PrefixString":"185.80.180.0/22","WhoisName":"Nexthop AS","WhoisCountry":"NO"},{"PrefixString":"185.102.108.0/22","WhoisName":"Bridge Technologies CO AS","WhoisCountry":"NO"},{"PrefixString":"185.114.56.0/22","WhoisName":"NordkappNett AS","WhoisCountry":"NO"},{"PrefixString":"185.168.72.0/22","WhoisName":"Nexthop AS","WhoisCountry":"NO"},{"PrefixString":"193.0.222.0/24","WhoisName":"SFIH CONSULTING NETWORK","WhoisCountry":"NO"},{"PrefixString":"193.202.115.0/24","WhoisName":"Nexthop AS","WhoisCountry":"NO"},{"PrefixString":"217.170.128.0/20","WhoisName":"Absnet AS","WhoisCountry":"NO"},{"PrefixString":"2001:67c:230::/48","WhoisName":"Nexthop AS","WhoisCountry":"NO"},{"PrefixString":"2001:67c:206c::/48","WhoisName":"Nexthop AS","WhoisCountry":"NO"},{"PrefixString":"2a02:d140::/29","WhoisName":"Nexthop AS","WhoisCountry":"NO"},{"PrefixString":"2a06:2400::/29","WhoisName":"Bridge Technologies CO AS","WhoisCountry":"NO"},{"PrefixString":"2a06:6dc0::/29","WhoisName":"NordkappNett AS","WhoisCountry":"NO"},{"PrefixString":"2a0b:f200::/32","WhoisName":"Nexthop AS","WhoisCountry":"NO"}]
+                            var asn =  49788 
+
+                            var pfxExtraString = "";
+
+                            function saveGraphOptionsToLocalStorage() {
+                                localStorage.setItem("pfx-chart-options:wiggle", document.getElementById("graphOptionMoreWiggle").checked);
+                            }
+
+                            function loadGraphOptionsToLocalStorage() {
+                                document.getElementById("graphOptionMoreWiggle").checked = localStorage.getItem("pfx-chart-options:wiggle") == "true";
+                                pfxExtraString= "";
+                                if (document.getElementById("graphOptionMoreWiggle").checked) {
+                                    pfxExtraString = pfxExtraString + "&wiggly";
+                                }
+                            }
+                            loadGraphOptionsToLocalStorage();
+
+                            function graphOptionsChanged() {
+                                saveGraphOptionsToLocalStorage();
+                                handleImageChange();
+                            }
+                            document.getElementById("graphOptionMoreWiggle").addEventListener("click", graphOptionsChanged)
+
+
+                            function handleImageChange() {
+                                loadGraphOptionsToLocalStorage();
+                                
+                                document.getElementById("pathimg").src=("/pathimg/"+asn+ "-" + document.getElementById("netpolicydropdown").value +"?"+pfxExtraString);
+                                var request = new XMLHttpRequest();
+                                request.open('GET', "/pathimg/"+asn+ "-" + document.getElementById("netpolicydropdown").value + "?map=true" + pfxExtraString, true);
+
+                                request.onload = function() {
+                                    if (this.status >= 200 && this.status < 400) {
+                                        
+                                        
+                                        document.getElementById("world2").innerHTML = this.response;
+                                        setTimeout(function(){
+                                            imageMapResize('#world');
+                                        },1000)
+                                    }
+                                };
+                                request.send();
+                                buildPrefixTable();
+                            } 
+
+                            function encodeHTML(s) {
+                                return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
+                            }
+
+                            function dropdownPoke(){
+                                InteractedWithPolicyTableYet=true;
+                                handleImageChange();
+                            }
+
+                            var InteractedWithPolicyTableYet = false;
+                            var OverloadPolicySize = 0;
+                            function buildPrefixTable() {
+                                var policy = document.getElementById("netpolicydropdown").value;
+                                
+                                var cidrs = netgroups[policy];
+                                var ihtml = "<tbody> <tr> <th class=\"nowrap\">  -  </th> <th>Prefix</th> <th class=\"nowrap\">Description</th> </tr>";
+
+                                
+                                var aaa = document.querySelectorAll('#PISPBanner');
+                                var bbb = document.querySelectorAll('#policytable');
+                                var n = 0
+                                if (cidrs) {
+                                    aaa[0].style.display = "";
+                                    bbb[0].style.display = "";
+                                    cidrs.forEach(cidr => {
+                                        var obj = {};
+                                        var dont =false;
+                                        n++;
+                                        
+                                        if (!InteractedWithPolicyTableYet) {
+                                            if (n == 5) {
+                                                dont = true;
+                                            } else if (n > 5) {
+                                                dont = true;
+                                            }
+                                        }
+                                        
+                                        if (!dont) {
+                                            prefixinfo.forEach(el => {
+                                                if(el.PrefixString == cidr) {
+                                                    
+                                                        ihtml += "<tr><td class=\"nowrap ns\"><img class=\"flag-img\" src=\"/assets/flags/"+el.WhoisCountry+".png\" title=\""+el.WhoisCountry+"\"></td>"
+                                                        ihtml += "<td><a href=\"/prefix/"+el.PrefixString+"\">"+el.PrefixString+"</a></td>"
+                                                        ihtml += "<td class=\"nowrap\">"+encodeHTML(el.WhoisName)+"</td></tr>"
+                                                }
+                                            });
+                                        } else {
+                                            OverloadPolicySize++;
+                                        }
+                                    });
+                                    document.getElementById("policytable").innerHTML = ihtml
+                                    var PolButton = document.querySelectorAll('#ShowFullPolicyButton');
+                                    if (!InteractedWithPolicyTableYet && OverloadPolicySize!=0) {
+                                        PolButton[0].style="width:100%";
+                                        PolButton[0].innerHTML = "Load all "+OverloadPolicySize+" prefixes in policy"
+                                    } else {
+                                        PolButton[0].style="display:none;";
+                                    }
+                                    
+                                } else {
+                                    aaa[0].style.display = "none";
+                                    bbb[0].style.display = "none";
+                                }
+                            }
+
+
+                            var pathdropdown = document.querySelectorAll('#netpolicydropdown');
+                            pathdropdown[0].addEventListener("change",dropdownPoke)
+                            handleImageChange()
+                            buildPrefixTable()
+
+                            document.addEventListener("load", function(){
+                                
+                                handleImageChange()
+                            });
+
+                            function uuidv4() {
+                                return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+                                    var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+                                    return v.toString(16);
+                                });
+                            }
+
+                            
+                            let realTimeSocket = new ReconnectingWebSocket("wss://bgp.tools/ws/rt-asn?prefix=AS49788" + "&magic=" + encodeURIComponent("QTY3CVNQ2J3F5IJCNQWFHZWCY33K3CZGCBT42DMLHXTDGZTJU5KA===="));
+                            
+                            realTimeSocket.onmessage = function(event) {
+                                console.log(`[message] Data received from server: ${event.data}`);
+                                if (event.data == "Running.") {
+                                    document.getElementById("ws-status").src = "/assets/connected.png";
+                                    document.getElementById("ws-status").title = "Connected to realtime data";
+                                } else if (event.data == "STOP-CONNECTING") {
+                                    document.getElementById("ws-status").src = disconectedIcon;
+                                    document.getElementById("ws-status").title = "Not connected to realtime data";
+                                    realTimeSocket.maxReconnectAttempts = 1;
+                                    realTimeSocket.close()
+                                } else {
+                                    var obj = JSON.parse(event.data);
+                                    var elm = document.getElementById("pfx-"+obj.Prefix);
+                                    if (!elm && obj.Vis > 6) {
+                                        var tblist = document.getElementById("donotscrapebgptools-prefixlist-tbody");
+                                        var node = document.createElement("tr");                 
+                                        node.outerHTML = '<tr id="pfx-'+obj.Prefix+'"><td class="nowrap"><img class="flag-img" src="/assets/flags/'+obj.Whois.WhoisCountry+'.png" title="'+obj.Whois.WhoisCountry+'"></td><td><a href="/prefix/'+obj.Prefix+'">'+obj.Prefix+'</a></td><td class="smallonmobile nowrap">'+obj.Whois.WhoisName+'</td></tr>';
+                                        tblist.appendChild(node);                              
+                                    }
+                                    if (!elm) {
+                                        elm = document.getElementById("pfx-"+obj.Prefix);
+                                    }
+                                    
+                                    if (obj.Vis > 70) {
+                                        if (elm.style) {
+                                            var es = elm.style;
+                                            if (es.animation.includes("pulse1b")) {
+                                                elm.style = "animation: pulse2b 1s 1;";
+                                            } else if (es.animation.includes("pulse2b")) {
+                                                elm.style = "animation: pulse1b 1s 1;";
+                                            } else {
+                                                elm.style = "animation: pulse1b 1s 1;";
+                                            }
+                                        }
+                                    } else if (obj.Vis < 5) {
+                                        
+                                        var elm = document.getElementById("pfx-"+obj.Prefix);
+                                        if (elm) {
+                                            elm.parentNode.removeChild(elm);
+                                        }
+                                    } else {
+                                        if (elm.style) {
+                                            var es = elm.style;
+                                            if (es.animation.includes("pulse1r")) {
+                                                elm.style = "animation: pulse2r 1s 1;";
+                                            } else if (es.animation.includes("pulse2r")) {
+                                                elm.style = "animation: pulse1r 1s 1;";
+                                            } else {
+                                                elm.style = "animation: pulse1r 1s 1;";
+                                            }
+                                        }
+                                    }
+                                }
+                            };
+                            var disconectedIcon = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAAZlBMVEX/ewBZWVn/ewf/ew5fWljudiP8egp6XVT6eRHodSmVYU6hZEzObjrldCv3eRZ/XlNjWliHX1KrZkngci71eBl1XFXCa0CKYFHydx18XlSQYE+lZUq0aEbJbT3SbzhvXFaLYFG8akLYdYVFAAABQElEQVRIx5XV25KDIAwGYIKASLutqOtZ277/S26xK4ozJea/qRdfajATZaRkd6B6oPoL1d9QphUn+WvXmGF8TfN8yvNrDj6nvNj5Hu8n8HCh9ONiON5PEKuQx55DmFTHC1R9uMOjYkhFERbkEikofw8FGe5t0FWJ+kLvz5H+t8RdGD9k8TeebBXpzwIZT955XyVBtHHeXYzeJy5fhydtoZffZvUMSfvxT4BOeI/G/b9paxH1at8XQF8xNcV8aaQvHQBMhY/XttsdYp5nah3XdvIqui61Cjy+jqLwXp1cx9XLQZ5cR/vx1p8cez2IWrlxYY/T9bNVyCfmdQdbxNgs441FNRAEHS83oe9ahmTw1p88nhHCiAkpeIUeX5eJ6NlM9Gwm+uxO9/3F2PSR597jn1+udCWzUp7150P1jOoZ1f8BGPARG85JosIAAAAASUVORK5CYII=";
+                            realTimeSocket.onerror = function(error) {
+                                document.getElementById("ws-status").src = disconectedIcon;
+                                document.getElementById("ws-status").title = "Not connected to realtime data";
+
+                                console.log(`[error] ${error.message}`);
+                            };
+                            realTimeSocket.onclose = function(error) {
+                                document.getElementById("ws-status").src = disconectedIcon;
+                                document.getElementById("ws-status").title = "Not connected to realtime data";
+
+                                console.log(`[error] ${error.message}`);
+                            };
+                        </script>
+
+<div class="superclearfix">
+    
+</div>
+
+                        <hr>
+                        <a style="font-size: small;" href="/kb/what-is-a-upstream">How are upstreams and downstreams calculated?</a>
+                        <h3 id="upstreams">Upstreams<img class="flag-img" src="/assets/lightning.png" style="padding-left: 12px;" title="This information was fetched live at page load time" alt="This information was fetched live at page load time"/></h3>
+
+
+                        <table id="donotscrapebgptools-upstreamTable" class="full-width-table">
+                            <thead class="sortable">
+                                <tr>
+                                    <th class="nowrap boldpls">  &nbsp;  </th>
+                                    <th data-sort-method='number' class="boldpls">ASN</th>
+                                    <th class="nowrap boldpls">Description</th>
+                                    <th class="nowrap boldpls">IPv4</th>
+                                    <th class="nowrap boldpls">IPv6</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                <tr>
+                                    <td data-sort='SE' class="nowrap ns"><img class="flag-img" src="/assets/flags/SE.png" title="SE">
+                                        
+                                        </td>
+                                    <td data-sort='1299'><a href="/as/1299">AS1299</a></td>
+                                    <td class="smallonmobile nowrap">Arelion (fka. Telia Carrier)</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US">
+                                        
+                                        </td>
+                                    <td data-sort='174'><a href="/as/174">AS174</a></td>
+                                    <td class="smallonmobile nowrap">Cogent Communications, LLC</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='SE' class="nowrap ns"><img class="flag-img" src="/assets/flags/SE.png" title="SE">
+                                        
+                                        </td>
+                                    <td data-sort='12552'><a href="/as/12552">AS12552</a></td>
+                                    <td class="smallonmobile nowrap">GlobalConnect (IP-Only)</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US">
+                                        
+                                        </td>
+                                    <td data-sort='6939'><a href="/as/6939">AS6939</a></td>
+                                    <td class="smallonmobile nowrap">Hurricane Electric LLC</td>
+                                    <td class="nowrap">&#10008;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+
+                        <hr>
+                        <h3 id="peers">Peers<img class="flag-img" src="/assets/lightning.png" style="padding-left: 12px;" title="This information was fetched live at page load time" alt="This information was fetched live at page load time"/></h3>
+
+
+
+                        <table id="donotscrapebgptools-upstreamTablePeers" class="full-width-table">
+                            <thead class="sortable">
+                                <tr>
+                                    <th class="nowrap boldpls">  &nbsp;  </th>
+                                    <th data-sort-method='number' class="boldpls">ASN</th>
+                                    <th class="nowrap boldpls">Description</th>
+                                    <th class="nowrap boldpls">IPv4</th>
+                                    <th class="nowrap boldpls">IPv6</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                <tr>
+                                    <td data-sort='NO' class="nowrap ns"><img class="flag-img" src="/assets/flags/NO.png" title="NO"></td>
+                                    <td data-sort='212514'><a href="/as/212514">AS212514</a></td>
+                                    <td class="smallonmobile nowrap">SpanningNetworks AS</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='SE' class="nowrap ns"><img class="flag-img" src="/assets/flags/SE.png" title="SE"></td>
+                                    <td data-sort='12552'><a href="/as/12552">AS12552</a></td>
+                                    <td class="smallonmobile nowrap">GlobalConnect (IP-Only)</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='6939'><a href="/as/6939">AS6939</a></td>
+                                    <td class="smallonmobile nowrap">Hurricane Electric LLC</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='SE' class="nowrap ns"><img class="flag-img" src="/assets/flags/SE.png" title="SE"></td>
+                                    <td data-sort='1299'><a href="/as/1299">AS1299</a></td>
+                                    <td class="smallonmobile nowrap">Arelion (fka. Telia Carrier)</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='174'><a href="/as/174">AS174</a></td>
+                                    <td class="smallonmobile nowrap">Cogent Communications, LLC</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='NO' class="nowrap ns"><img class="flag-img" src="/assets/flags/NO.png" title="NO"></td>
+                                    <td data-sort='21119'><a href="/as/21119">AS21119</a></td>
+                                    <td class="smallonmobile nowrap">iteam Braathe AS</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='NO' class="nowrap ns"><img class="flag-img" src="/assets/flags/NO.png" title="NO"></td>
+                                    <td data-sort='60717'><a href="/as/60717">AS60717</a></td>
+                                    <td class="smallonmobile nowrap">Nexthop AS</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='NO' class="nowrap ns"><img class="flag-img" src="/assets/flags/NO.png" title="NO"></td>
+                                    <td data-sort='34989'><a href="/as/34989">AS34989</a></td>
+                                    <td class="smallonmobile nowrap">ServeTheWorld AS</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='NO' class="nowrap ns"><img class="flag-img" src="/assets/flags/NO.png" title="NO"></td>
+                                    <td data-sort='60130'><a href="/as/60130">AS60130</a></td>
+                                    <td class="smallonmobile nowrap">Nexthop AS</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='NO' class="nowrap ns"><img class="flag-img" src="/assets/flags/NO.png" title="NO"></td>
+                                    <td data-sort='16065'><a href="/as/16065">AS16065</a></td>
+                                    <td class="smallonmobile nowrap">Bryhni.com AS</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='NO' class="nowrap ns"><img class="flag-img" src="/assets/flags/NO.png" title="NO"></td>
+                                    <td data-sort='44654'><a href="/as/44654">AS44654</a></td>
+                                    <td class="smallonmobile nowrap">VIXLY AS</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='NO' class="nowrap ns"><img class="flag-img" src="/assets/flags/NO.png" title="NO"></td>
+                                    <td data-sort='29300'><a href="/as/29300">AS29300</a></td>
+                                    <td class="smallonmobile nowrap">BAHNHOF AS</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='NO' class="nowrap ns"><img class="flag-img" src="/assets/flags/NO.png" title="NO"></td>
+                                    <td data-sort='35754'><a href="/as/35754">AS35754</a></td>
+                                    <td class="smallonmobile nowrap">IMC AS</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='NO' class="nowrap ns"><img class="flag-img" src="/assets/flags/NO.png" title="NO"></td>
+                                    <td data-sort='50531'><a href="/as/50531">AS50531</a></td>
+                                    <td class="smallonmobile nowrap">ABAX as</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='NO' class="nowrap ns"><img class="flag-img" src="/assets/flags/NO.png" title="NO"></td>
+                                    <td data-sort='61227'><a href="/as/61227">AS61227</a></td>
+                                    <td class="smallonmobile nowrap">Nexthop AS</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='NO' class="nowrap ns"><img class="flag-img" src="/assets/flags/NO.png" title="NO"></td>
+                                    <td data-sort='57423'><a href="/as/57423">AS57423</a></td>
+                                    <td class="smallonmobile nowrap">Sigterm AS</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='NO' class="nowrap ns"><img class="flag-img" src="/assets/flags/NO.png" title="NO"></td>
+                                    <td data-sort='39236'><a href="/as/39236">AS39236</a></td>
+                                    <td class="smallonmobile nowrap">Nedre Romerike vann- og avlopsselskap IKS</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='NO' class="nowrap ns"><img class="flag-img" src="/assets/flags/NO.png" title="NO"></td>
+                                    <td data-sort='209903'><a href="/as/209903">AS209903</a></td>
+                                    <td class="smallonmobile nowrap">Conscia Norge AS</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='16509'><a href="/as/16509">AS16509</a></td>
+                                    <td class="smallonmobile nowrap">Amazon.com, Inc.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='NO' class="nowrap ns"><img class="flag-img" src="/assets/flags/NO.png" title="NO"></td>
+                                    <td data-sort='50562'><a href="/as/50562">AS50562</a></td>
+                                    <td class="smallonmobile nowrap">IT PAYS AS</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='NO' class="nowrap ns"><img class="flag-img" src="/assets/flags/NO.png" title="NO"></td>
+                                    <td data-sort='64424'><a href="/as/64424">AS64424</a></td>
+                                    <td class="smallonmobile nowrap">NETSECURITY AS</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='DK' class="nowrap ns"><img class="flag-img" src="/assets/flags/DK.png" title="DK"></td>
+                                    <td data-sort='2603'><a href="/as/2603">AS2603</a></td>
+                                    <td class="smallonmobile nowrap">NORDUnet</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='8075'><a href="/as/8075">AS8075</a></td>
+                                    <td class="smallonmobile nowrap">Microsoft Corporation</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='SE' class="nowrap ns"><img class="flag-img" src="/assets/flags/SE.png" title="SE"></td>
+                                    <td data-sort='3399'><a href="/as/3399">AS3399</a></td>
+                                    <td class="smallonmobile nowrap">Obenet AB</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='NO' class="nowrap ns"><img class="flag-img" src="/assets/flags/NO.png" title="NO"></td>
+                                    <td data-sort='209404'><a href="/as/209404">AS209404</a></td>
+                                    <td class="smallonmobile nowrap">Cyberon Security AS</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='NO' class="nowrap ns"><img class="flag-img" src="/assets/flags/NO.png" title="NO"></td>
+                                    <td data-sort='35120'><a href="/as/35120">AS35120</a></td>
+                                    <td class="smallonmobile nowrap">WORKING GROUP TWO AS</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='13335'><a href="/as/13335">AS13335</a></td>
+                                    <td class="smallonmobile nowrap">Cloudflare, Inc.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='SE' class="nowrap ns"><img class="flag-img" src="/assets/flags/SE.png" title="SE"></td>
+                                    <td data-sort='42708'><a href="/as/42708">AS42708</a></td>
+                                    <td class="smallonmobile nowrap">Glesys AB</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='NO' class="nowrap ns"><img class="flag-img" src="/assets/flags/NO.png" title="NO"></td>
+                                    <td data-sort='59562'><a href="/as/59562">AS59562</a></td>
+                                    <td class="smallonmobile nowrap">Sensio AS</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='NL' class="nowrap ns"><img class="flag-img" src="/assets/flags/NL.png" title="NL"></td>
+                                    <td data-sort='49544'><a href="/as/49544">AS49544</a></td>
+                                    <td class="smallonmobile nowrap">i3D.net B.V</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='NO' class="nowrap ns"><img class="flag-img" src="/assets/flags/NO.png" title="NO"></td>
+                                    <td data-sort='2119'><a href="/as/2119">AS2119</a></td>
+                                    <td class="smallonmobile nowrap">Telenor Norge AS</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='NL' class="nowrap ns"><img class="flag-img" src="/assets/flags/NL.png" title="NL"></td>
+                                    <td data-sort='20940'><a href="/as/20940">AS20940</a></td>
+                                    <td class="smallonmobile nowrap">Akamai International B.V.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='NO' class="nowrap ns"><img class="flag-img" src="/assets/flags/NO.png" title="NO"></td>
+                                    <td data-sort='56655'><a href="/as/56655">AS56655</a></td>
+                                    <td class="smallonmobile nowrap">Gigahost AS</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='NO' class="nowrap ns"><img class="flag-img" src="/assets/flags/NO.png" title="NO"></td>
+                                    <td data-sort='2116'><a href="/as/2116">AS2116</a></td>
+                                    <td class="smallonmobile nowrap">GLOBALCONNECT AS</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='NO' class="nowrap ns"><img class="flag-img" src="/assets/flags/NO.png" title="NO"></td>
+                                    <td data-sort='50304'><a href="/as/50304">AS50304</a></td>
+                                    <td class="smallonmobile nowrap">Blix Solutions AS</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='NO' class="nowrap ns"><img class="flag-img" src="/assets/flags/NO.png" title="NO"></td>
+                                    <td data-sort='29695'><a href="/as/29695">AS29695</a></td>
+                                    <td class="smallonmobile nowrap">Lyse Tele AS</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='NO' class="nowrap ns"><img class="flag-img" src="/assets/flags/NO.png" title="NO"></td>
+                                    <td data-sort='34087'><a href="/as/34087">AS34087</a></td>
+                                    <td class="smallonmobile nowrap">NTE TELEKOM AS</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='SE' class="nowrap ns"><img class="flag-img" src="/assets/flags/SE.png" title="SE"></td>
+                                    <td data-sort='21485'><a href="/as/21485">AS21485</a></td>
+                                    <td class="smallonmobile nowrap">IP Excess AB</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='42'><a href="/as/42">AS42</a></td>
+                                    <td class="smallonmobile nowrap">WoodyNet, Inc.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='NO' class="nowrap ns"><img class="flag-img" src="/assets/flags/NO.png" title="NO"></td>
+                                    <td data-sort='203779'><a href="/as/203779">AS203779</a></td>
+                                    <td class="smallonmobile nowrap">NORDFIBER AS</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='DK' class="nowrap ns"><img class="flag-img" src="/assets/flags/DK.png" title="DK"></td>
+                                    <td data-sort='51468'><a href="/as/51468">AS51468</a></td>
+                                    <td class="smallonmobile nowrap">One.com A/S</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='NO' class="nowrap ns"><img class="flag-img" src="/assets/flags/NO.png" title="NO"></td>
+                                    <td data-sort='224'><a href="/as/224">AS224</a></td>
+                                    <td class="smallonmobile nowrap">Sikt (Uninett)</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='NO' class="nowrap ns"><img class="flag-img" src="/assets/flags/NO.png" title="NO"></td>
+                                    <td data-sort='8896'><a href="/as/8896">AS8896</a></td>
+                                    <td class="smallonmobile nowrap">GLOBALCONNECT AS</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='NO' class="nowrap ns"><img class="flag-img" src="/assets/flags/NO.png" title="NO"></td>
+                                    <td data-sort='25148'><a href="/as/25148">AS25148</a></td>
+                                    <td class="smallonmobile nowrap">ORANGE BUSINESS DIGITAL NORWAY AS</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='NO' class="nowrap ns"><img class="flag-img" src="/assets/flags/NO.png" title="NO"></td>
+                                    <td data-sort='16186'><a href="/as/16186">AS16186</a></td>
+                                    <td class="smallonmobile nowrap">IP Group AS</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='19679'><a href="/as/19679">AS19679</a></td>
+                                    <td class="smallonmobile nowrap">Dropbox, Inc.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='LU' class="nowrap ns"><img class="flag-img" src="/assets/flags/LU.png" title="LU"></td>
+                                    <td data-sort='199524'><a href="/as/199524">AS199524</a></td>
+                                    <td class="smallonmobile nowrap">Gcore S.A.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='NO' class="nowrap ns"><img class="flag-img" src="/assets/flags/NO.png" title="NO"></td>
+                                    <td data-sort='12996'><a href="/as/12996">AS12996</a></td>
+                                    <td class="smallonmobile nowrap">Domeneshop AS</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='NO' class="nowrap ns"><img class="flag-img" src="/assets/flags/NO.png" title="NO"></td>
+                                    <td data-sort='39783'><a href="/as/39783">AS39783</a></td>
+                                    <td class="smallonmobile nowrap">Webhuset AS</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='2874'><a href="/as/2874">AS2874</a></td>
+                                    <td class="smallonmobile nowrap">ORANGE BUSINESS SERVICES U.S. Inc.</td>
+                                    <td class="nowrap">&#10008;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='SE' class="nowrap ns"><img class="flag-img" src="/assets/flags/SE.png" title="SE"></td>
+                                    <td data-sort='8674'><a href="/as/8674">AS8674</a></td>
+                                    <td class="smallonmobile nowrap">Netnod AB</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='NO' class="nowrap ns"><img class="flag-img" src="/assets/flags/NO.png" title="NO"></td>
+                                    <td data-sort='56828'><a href="/as/56828">AS56828</a></td>
+                                    <td class="smallonmobile nowrap">Norsk Helsenett SF</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='NO' class="nowrap ns"><img class="flag-img" src="/assets/flags/NO.png" title="NO"></td>
+                                    <td data-sort='200781'><a href="/as/200781">AS200781</a></td>
+                                    <td class="smallonmobile nowrap">Tampnet AS</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='26415'><a href="/as/26415">AS26415</a></td>
+                                    <td class="smallonmobile nowrap">VeriSign Global Registry Services</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='NO' class="nowrap ns"><img class="flag-img" src="/assets/flags/NO.png" title="NO"></td>
+                                    <td data-sort='50270'><a href="/as/50270">AS50270</a></td>
+                                    <td class="smallonmobile nowrap">Nasjonal kommunikasjonsmyndighet</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='NO' class="nowrap ns"><img class="flag-img" src="/assets/flags/NO.png" title="NO"></td>
+                                    <td data-sort='31726'><a href="/as/31726">AS31726</a></td>
+                                    <td class="smallonmobile nowrap">Telefiber AS</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='NO' class="nowrap ns"><img class="flag-img" src="/assets/flags/NO.png" title="NO"></td>
+                                    <td data-sort='5619'><a href="/as/5619">AS5619</a></td>
+                                    <td class="smallonmobile nowrap">TIETOEVRY NORWAY AS</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='NO' class="nowrap ns"><img class="flag-img" src="/assets/flags/NO.png" title="NO"></td>
+                                    <td data-sort='50272'><a href="/as/50272">AS50272</a></td>
+                                    <td class="smallonmobile nowrap">AVUR AS</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='NO' class="nowrap ns"><img class="flag-img" src="/assets/flags/NO.png" title="NO"></td>
+                                    <td data-sort='39029'><a href="/as/39029">AS39029</a></td>
+                                    <td class="smallonmobile nowrap">Redpill Linpro AS</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='NO' class="nowrap ns"><img class="flag-img" src="/assets/flags/NO.png" title="NO"></td>
+                                    <td data-sort='15659'><a href="/as/15659">AS15659</a></td>
+                                    <td class="smallonmobile nowrap">NextGenTel AS</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='NO' class="nowrap ns"><img class="flag-img" src="/assets/flags/NO.png" title="NO"></td>
+                                    <td data-sort='57829'><a href="/as/57829">AS57829</a></td>
+                                    <td class="smallonmobile nowrap">IVER</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='NO' class="nowrap ns"><img class="flag-img" src="/assets/flags/NO.png" title="NO"></td>
+                                    <td data-sort='21293'><a href="/as/21293">AS21293</a></td>
+                                    <td class="smallonmobile nowrap">Norsk Rikskringkasting AS</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='NO' class="nowrap ns"><img class="flag-img" src="/assets/flags/NO.png" title="NO"></td>
+                                    <td data-sort='57660'><a href="/as/57660">AS57660</a></td>
+                                    <td class="smallonmobile nowrap">Com4 AS</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='3856'><a href="/as/3856">AS3856</a></td>
+                                    <td class="smallonmobile nowrap">Packet Clearing House, Inc.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='1239'><a href="/as/1239">AS1239</a></td>
+                                    <td class="smallonmobile nowrap">Sprint Wireline (Cogent)</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='DK' class="nowrap ns"><img class="flag-img" src="/assets/flags/DK.png" title="DK"></td>
+                                    <td data-sort='41741'><a href="/as/41741">AS41741</a></td>
+                                    <td class="smallonmobile nowrap">Nets Denmark A/S</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+
+
+
+                        <hr>
+                        <h3 id="downstreams">Downstreams<img class="flag-img" src="/assets/lightning.png" style="padding-left: 12px;" title="This information was fetched live at page load time" alt="This information was fetched live at page load time"/></h3>
+                        <table id="donotscrapebgptools-upstreamTableDowns" class="full-width-table">
+                            <thead class="sortable">
+                                
+                                <tr>
+                                    <th class="nowrap boldpls">  &nbsp;  </th>
+                                    <th data-sort-method='number'  class="boldpls">ASN</th>
+                                    <th class="nowrap boldpls">Description</th>
+                                    <th class="nowrap boldpls">IPv4</th>
+                                    <th class="nowrap boldpls">IPv6</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                <tr>
+                                    <td data-sort='NO' class="nowrap ns"><img class="flag-img" src="/assets/flags/NO.png" title="NO">
+                                        
+                                        </td>
+                                    <td data-sort='212514'><a href="/as/212514">AS212514</a></td>
+                                    <td class="smallonmobile nowrap">SpanningNetworks AS</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='NO' class="nowrap ns"><img class="flag-img" src="/assets/flags/NO.png" title="NO">
+                                        
+                                        </td>
+                                    <td data-sort='21119'><a href="/as/21119">AS21119</a></td>
+                                    <td class="smallonmobile nowrap">iteam Braathe AS</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='NO' class="nowrap ns"><img class="flag-img" src="/assets/flags/NO.png" title="NO">
+                                        
+                                        </td>
+                                    <td data-sort='60717'><a href="/as/60717">AS60717</a></td>
+                                    <td class="smallonmobile nowrap">Nexthop AS</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='NO' class="nowrap ns"><img class="flag-img" src="/assets/flags/NO.png" title="NO">
+                                        
+                                        </td>
+                                    <td data-sort='34989'><a href="/as/34989">AS34989</a></td>
+                                    <td class="smallonmobile nowrap">ServeTheWorld AS</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='NO' class="nowrap ns"><img class="flag-img" src="/assets/flags/NO.png" title="NO">
+                                        
+                                        </td>
+                                    <td data-sort='60130'><a href="/as/60130">AS60130</a></td>
+                                    <td class="smallonmobile nowrap">Nexthop AS</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='NO' class="nowrap ns"><img class="flag-img" src="/assets/flags/NO.png" title="NO">
+                                        
+                                        </td>
+                                    <td data-sort='16065'><a href="/as/16065">AS16065</a></td>
+                                    <td class="smallonmobile nowrap">Bryhni.com AS</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='NO' class="nowrap ns"><img class="flag-img" src="/assets/flags/NO.png" title="NO">
+                                        
+                                        </td>
+                                    <td data-sort='44654'><a href="/as/44654">AS44654</a></td>
+                                    <td class="smallonmobile nowrap">VIXLY AS</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='NO' class="nowrap ns"><img class="flag-img" src="/assets/flags/NO.png" title="NO">
+                                        
+                                        </td>
+                                    <td data-sort='35754'><a href="/as/35754">AS35754</a></td>
+                                    <td class="smallonmobile nowrap">IMC AS</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='NO' class="nowrap ns"><img class="flag-img" src="/assets/flags/NO.png" title="NO">
+                                        
+                                        </td>
+                                    <td data-sort='29300'><a href="/as/29300">AS29300</a></td>
+                                    <td class="smallonmobile nowrap">BAHNHOF AS</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='NO' class="nowrap ns"><img class="flag-img" src="/assets/flags/NO.png" title="NO">
+                                        
+                                        </td>
+                                    <td data-sort='50531'><a href="/as/50531">AS50531</a></td>
+                                    <td class="smallonmobile nowrap">ABAX as</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='NO' class="nowrap ns"><img class="flag-img" src="/assets/flags/NO.png" title="NO">
+                                        
+                                        </td>
+                                    <td data-sort='209903'><a href="/as/209903">AS209903</a></td>
+                                    <td class="smallonmobile nowrap">Conscia Norge AS</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='NO' class="nowrap ns"><img class="flag-img" src="/assets/flags/NO.png" title="NO">
+                                        
+                                        </td>
+                                    <td data-sort='39236'><a href="/as/39236">AS39236</a></td>
+                                    <td class="smallonmobile nowrap">Nedre Romerike vann- og avlopsselskap IKS</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='NO' class="nowrap ns"><img class="flag-img" src="/assets/flags/NO.png" title="NO">
+                                        
+                                        </td>
+                                    <td data-sort='61227'><a href="/as/61227">AS61227</a></td>
+                                    <td class="smallonmobile nowrap">Nexthop AS</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='NO' class="nowrap ns"><img class="flag-img" src="/assets/flags/NO.png" title="NO">
+                                        
+                                        </td>
+                                    <td data-sort='57423'><a href="/as/57423">AS57423</a></td>
+                                    <td class="smallonmobile nowrap">Sigterm AS</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='NO' class="nowrap ns"><img class="flag-img" src="/assets/flags/NO.png" title="NO">
+                                        
+                                        </td>
+                                    <td data-sort='64424'><a href="/as/64424">AS64424</a></td>
+                                    <td class="smallonmobile nowrap">NETSECURITY AS</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='NO' class="nowrap ns"><img class="flag-img" src="/assets/flags/NO.png" title="NO">
+                                        
+                                        </td>
+                                    <td data-sort='50562'><a href="/as/50562">AS50562</a></td>
+                                    <td class="smallonmobile nowrap">IT PAYS AS</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='NO' class="nowrap ns"><img class="flag-img" src="/assets/flags/NO.png" title="NO">
+                                        
+                                        </td>
+                                    <td data-sort='35120'><a href="/as/35120">AS35120</a></td>
+                                    <td class="smallonmobile nowrap">WORKING GROUP TWO AS</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='NO' class="nowrap ns"><img class="flag-img" src="/assets/flags/NO.png" title="NO">
+                                        
+                                        </td>
+                                    <td data-sort='209404'><a href="/as/209404">AS209404</a></td>
+                                    <td class="smallonmobile nowrap">Cyberon Security AS</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='NO' class="nowrap ns"><img class="flag-img" src="/assets/flags/NO.png" title="NO">
+                                        
+                                        </td>
+                                    <td data-sort='59562'><a href="/as/59562">AS59562</a></td>
+                                    <td class="smallonmobile nowrap">Sensio AS</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+
+                    </div>
+
+                    <div style="display: none" id="whois-page">
+                        
+                        
+                        <pre style="white-space: pre-wrap;">aut-num:        <a href="/AS49788">AS49788</a>
+as-name:        NEXTHOP
+org:            <a href="https://apps.db.ripe.net/db-web-ui/query?searchtext=ORG-NA502-RIPE">ORG-NA502-RIPE</a>
+import:         from <a href="/AS1299">AS1299</a> accept ANY # TELIA
+export:         to <a href="/AS1299">AS1299</a> announce <a href="/as-set/AS-NEXTHOP">AS-NEXTHOP</a> # TELIA
+mp-import:      afi ipv6 from <a href="/AS1299">AS1299</a> accept ANY # TELIA
+mp-export:      afi ipv6 to <a href="/AS1299">AS1299</a> announce <a href="/as-set/AS-NEXTHOP">AS-NEXTHOP</a> # TELIA
+import:         from <a href="/AS12552">AS12552</a> accept ANY # IP-ONLY
+export:         to <a href="/AS12552">AS12552</a> announce <a href="/as-set/AS-NEXTHOP">AS-NEXTHOP</a> # IP-ONLY
+mp-import:      afi ipv6 from <a href="/AS12552">AS12552</a> accept ANY # IP-ONLY
+mp-export:      afi ipv6 to <a href="/AS12552">AS12552</a> announce <a href="/as-set/AS-NEXTHOP">AS-NEXTHOP</a> # IP-ONLY
+import:         from <a href="/AS174">AS174</a> accept ANY # COGENT
+export:         to <a href="/AS174">AS174</a> announce <a href="/as-set/AS-NEXTHOP">AS-NEXTHOP</a> # COGENT
+mp-import:      afi ipv6 from <a href="/AS174">AS174</a> accept ANY # COGENT
+mp-export:      afi ipv6 to <a href="/AS174">AS174</a> announce <a href="/as-set/AS-NEXTHOP">AS-NEXTHOP</a> # COGENT
+remarks:        --
+import:         from <a href="/AS57997">AS57997</a> accept ANY # NEXTHOP
+export:         to <a href="/AS57997">AS57997</a> announce ANY # NEXTHOP
+import:         from <a href="/AS61227">AS61227</a> accept <a href="/AS61227">AS61227</a> # NEXTHOP-ANYCAST
+export:         to <a href="/AS61227">AS61227</a> announce ANY # NEXTHOP-ANYCAST
+remarks:        --
+import:         from <a href="/AS16185">AS16185</a> accept <a href="/AS16185">AS16185</a> # RINGNETT-NORWAY
+export:         to <a href="/AS16185">AS16185</a> announce ANY # RINGNETT-NORWAY
+mp-import:      afi ipv6 from <a href="/AS16185">AS16185</a> accept <a href="/AS16185">AS16185</a> # RINGNETT-NORWAY
+mp-export:      afi ipv6 to <a href="/AS16185">AS16185</a> announce ANY # RINGNETT-NORWAY
+import:         from <a href="/AS29300">AS29300</a> accept <a href="/as-set/AS-DIRECTCONNECT">AS-DIRECTCONNECT</a> # <a href="/as-set/AS-DIRECTCONNECT">AS-DIRECTCONNECT</a>
+export:         to <a href="/AS29300">AS29300</a> announce ANY # <a href="/as-set/AS-DIRECTCONNECT">AS-DIRECTCONNECT</a>
+import:         from <a href="/AS34989">AS34989</a> accept <a href="/AS34989">AS34989</a> # SERVETHEWORLD-AS
+export:         to <a href="/AS34989">AS34989</a> announce ANY # SERVETHEWORLD-AS
+import:         from <a href="/AS42400">AS42400</a> accept <a href="/AS42400">AS42400</a> # MULTIHOST-AS
+export:         to <a href="/AS42400">AS42400</a> announce ANY # MULTIHOST-AS
+mp-import:      afi ipv6 from <a href="/AS42400">AS42400</a> accept <a href="/AS42400">AS42400</a> # MULTIHOST-AS
+mp-export:      afi ipv6 to <a href="/AS42400">AS42400</a> announce ANY # MULTIHOST-AS
+import:         from <a href="/AS44654">AS44654</a> accept <a href="/as-set/AS-MNS">AS-MNS</a> # MNS.VC
+export:         to <a href="/AS44654">AS44654</a> announce ANY # MNS.VC
+import:         from <a href="/AS48376">AS48376</a> accept <a href="/as-set/AS-EASYNETNO">AS-EASYNETNO</a> # NUNATAK
+export:         to <a href="/AS48376">AS48376</a> announce ANY # NUNATAK
+import:         from <a href="/AS48630">AS48630</a> accept <a href="/AS48630">AS48630</a> # ERIKSEN-AS
+export:         to <a href="/AS48630">AS48630</a> announce ANY # ERIKSEN-AS
+import:         from <a href="/AS50531">AS50531</a> accept <a href="/AS50531">AS50531</a> # ABAX
+export:         to <a href="/AS50531">AS50531</a> announce ANY # ABAX
+mp-import:      afi ipv6 from <a href="/AS50531">AS50531</a> accept <a href="/AS50531">AS50531</a> # ABAX
+mp-export:      afi ipv6 to <a href="/AS50531">AS50531</a> announce ANY # ABAX
+import:         from <a href="/AS50562">AS50562</a> accept <a href="/as-set/AS-ITPAYS">AS-ITPAYS</a> # ITPAYS-AS
+export:         to <a href="/AS50562">AS50562</a> announce ANY # ITPAYS-AS
+import:         from <a href="/AS51850">AS51850</a> accept <a href="/as-set/AS-NAMEUNIT">AS-NAMEUNIT</a> # NAMEUNIT-AS
+export:         to <a href="/AS51850">AS51850</a> announce ANY # NAMEUNIT-AS
+import:         from <a href="/AS57423">AS57423</a> accept <a href="/AS57423">AS57423</a> # NEXTNETWORKS-AS
+export:         to <a href="/AS57423">AS57423</a> announce ANY # NEXTNETWORKS-AS
+mp-import:      afi ipv6 from <a href="/AS57423">AS57423</a> accept <a href="/AS57423">AS57423</a> # NEXTNETWORKS-AS
+mp-export:      afi ipv6 to <a href="/AS57423">AS57423</a> announce ANY # NEXTNETWORKS-AS
+import:         from <a href="/AS60717">AS60717</a> accept <a href="/as-set/AS-BAYONETTE">AS-BAYONETTE</a> # BAYONETTE
+export:         to <a href="/AS60717">AS60717</a> announce ANY # BAYONETTE
+mp-import:      afi ipv6 from <a href="/AS60717">AS60717</a> accept <a href="/as-set/AS-BAYONETTE">AS-BAYONETTE</a> # BAYONETTE
+mp-export:      afi ipv6 to <a href="/AS60717">AS60717</a> announce ANY # BAYONETTE
+import:         from <a href="/AS61238">AS61238</a> accept <a href="/AS61238">AS61238</a> # BLACKBIRD
+export:         to <a href="/AS61238">AS61238</a> announce ANY # BLACKBIRD
+import:         from <a href="/AS202008">AS202008</a> accept <a href="/as-set/AS-DATEK-INST">AS-DATEK-INST</a> # DATEK-INST
+export:         to <a href="/AS202008">AS202008</a> announce ANY # DATEK-INST
+mp-import:      afi ipv6 from <a href="/AS202008">AS202008</a> accept <a href="/as-set/AS-DATEK-INST">AS-DATEK-INST</a> # DATEK-INST
+mp-export:      afi ipv6 to <a href="/AS202008">AS202008</a> announce ANY # DATEK-INST
+import:         from <a href="/AS21119">AS21119</a> accept <a href="/as-set/AS-WAN">AS-WAN</a>
+export:         to <a href="/AS21119">AS21119</a> announce ANY
+mp-import:      afi ipv6 from <a href="/AS21119">AS21119</a> accept <a href="/as-set/AS-WAN">AS-WAN</a>
+mp-export:      afi ipv6 to <a href="/AS21119">AS21119</a> announce ANY
+import:         from <a href="/AS16065">AS16065</a> accept <a href="/as-set/AS16065:AS-CRNA">AS16065:AS-CRNA</a>
+export:         to <a href="/AS16065">AS16065</a> announce ANY
+mp-import:      afi ipv6 from <a href="/AS16065">AS16065</a> accept <a href="/as-set/AS16065:AS-CRNA">AS16065:AS-CRNA</a>
+mp-export:      afi ipv6 to <a href="/AS16065">AS16065</a> announce ANY
+import:         from <a href="/AS35754">AS35754</a> accept <a href="/AS35754">AS35754</a>
+export:         to <a href="/AS35754">AS35754</a> announce ANY
+mp-import:      afi ipv6 from <a href="/AS35754">AS35754</a> accept <a href="/AS35754">AS35754</a>
+mp-export:      afi ipv6 to <a href="/AS35754">AS35754</a> announce ANY
+import:         from <a href="/AS59562">AS59562</a> accept <a href="/AS59562">AS59562</a>
+export:         to <a href="/AS59562">AS59562</a> announce ANY
+mp-import:      afi ipv6 from <a href="/AS59562">AS59562</a> accept <a href="/AS59562">AS59562</a>
+mp-export:      afi ipv6 to <a href="/AS59562">AS59562</a> announce ANY
+import:         from <a href="/AS209404">AS209404</a> accept <a href="/AS209404">AS209404</a>
+export:         to <a href="/AS209404">AS209404</a> announce ANY
+mp-import:      afi ipv6 from <a href="/AS209404">AS209404</a> accept <a href="/AS209404">AS209404</a>
+mp-export:      afi ipv6 to <a href="/AS209404">AS209404</a> announce ANY
+import:         from <a href="/AS208202">AS208202</a> accept <a href="/as-set/as-fiberverket">as-fiberverket</a>
+export:         to <a href="/AS208202">AS208202</a> announce ANY
+mp-import:      afi ipv6 from <a href="/AS208202">AS208202</a> accept <a href="/as-set/as-fiberverket">as-fiberverket</a>
+mp-export:      afi ipv6 to <a href="/AS208202">AS208202</a> announce ANY
+import:         from <a href="/AS60130">AS60130</a> accept <a href="/AS60130">AS60130</a>
+export:         to <a href="/AS60130">AS60130</a> announce ANY
+mp-import:      afi ipv6 from <a href="/AS60130">AS60130</a> accept <a href="/AS60130">AS60130</a>
+mp-export:      afi ipv6 to <a href="/AS60130">AS60130</a> announce ANY
+import:         from <a href="/AS49574">AS49574</a> accept <a href="/AS49574">AS49574</a> # ECIT Solutions AS
+export:         to <a href="/AS49574">AS49574</a> announce ANY
+import:         from <a href="/AS209903">AS209903</a> accept <a href="/AS209903">AS209903</a> # Conscia Norge AS
+export:         to <a href="/AS209903">AS209903</a> announce ANY
+mp-import:      afi ipv6 from <a href="/AS209903">AS209903</a> accept <a href="/AS209903">AS209903</a>
+mp-export:      afi ipv6 to <a href="/AS209903">AS209903</a> announce ANY
+import:         from <a href="/AS212514">AS212514</a> accept <a href="/as-set/AS212514:AS-Customers">AS212514:AS-Customers</a> # Strandos IKT
+export:         to <a href="/AS212514">AS212514</a> announce ANY
+mp-import:      afi ipv6 from <a href="/AS212514">AS212514</a> accept <a href="/as-set/AS212514:AS-Customers">AS212514:AS-Customers</a>
+mp-export:      afi ipv6 to <a href="/AS212514">AS212514</a> announce ANY
+remarks:        --
+import:         from <a href="/AS224">AS224</a> accept <a href="/as-set/AS-UNINETT">AS-UNINETT</a> # UNINETT
+export:         to <a href="/AS224">AS224</a> announce <a href="/as-set/AS-NEXTHOP">AS-NEXTHOP</a> # UNINETT
+mp-import:      afi ipv6 from <a href="/AS224">AS224</a> accept <a href="/as-set/AS-UNINETT">AS-UNINETT</a> # UNINETT
+mp-export:      afi ipv6 to <a href="/AS224">AS224</a> announce <a href="/as-set/AS-NEXTHOP">AS-NEXTHOP</a> # UNINETT
+import:         from <a href="/AS2603">AS2603</a> accept <a href="/as-set/AS-NORDUNET">AS-NORDUNET</a> # NORDUnet
+export:         to <a href="/AS2603">AS2603</a> announce <a href="/as-set/AS-NEXTHOP">AS-NEXTHOP</a> # NORDUnet
+mp-import:      afi ipv6 from <a href="/AS2603">AS2603</a> accept <a href="/as-set/AS-NORDUNET">AS-NORDUNET</a> # NORDUnet
+mp-export:      afi ipv6 to <a href="/AS2603">AS2603</a> announce <a href="/as-set/AS-NEXTHOP">AS-NEXTHOP</a> # NORDUnet
+import:         from <a href="/AS2906">AS2906</a> accept <a href="/as-set/AS-NFLX">AS-NFLX</a> # Netflix
+export:         to <a href="/AS2906">AS2906</a> announce <a href="/as-set/AS-NEXTHOP">AS-NEXTHOP</a> # Netflix
+mp-import:      afi ipv6 from <a href="/AS2906">AS2906</a> accept <a href="/as-set/AS-NFLX">AS-NFLX</a> # Netflix
+mp-export:      afi ipv6 to <a href="/AS2906">AS2906</a> announce <a href="/as-set/AS-NEXTHOP">AS-NEXTHOP</a> # Netflix
+import:         from <a href="/AS5381">AS5381</a> accept <a href="/as-set/AS-POWERTECH">AS-POWERTECH</a> # Powertech
+export:         to <a href="/AS5381">AS5381</a> announce <a href="/as-set/AS-NEXTHOP">AS-NEXTHOP</a> # Powertech
+mp-import:      afi ipv6 from <a href="/AS5381">AS5381</a> accept <a href="/as-set/AS-POWERTECH">AS-POWERTECH</a> # Powertech
+mp-export:      afi ipv6 to <a href="/AS5381">AS5381</a> announce <a href="/as-set/AS-NEXTHOP">AS-NEXTHOP</a> # Powertech
+import:         from <a href="/AS8674">AS8674</a> accept <a href="/as-set/AS-NETNOD">AS-NETNOD</a> # Netnod
+export:         to <a href="/AS8674">AS8674</a> announce <a href="/as-set/AS-NEXTHOP">AS-NEXTHOP</a> # Netnod
+mp-import:      afi ipv6 from <a href="/AS8674">AS8674</a> accept <a href="/as-set/AS-NETNOD">AS-NETNOD</a> # Netnod
+mp-export:      afi ipv6 to <a href="/AS8674">AS8674</a> announce <a href="/as-set/AS-NEXTHOP">AS-NEXTHOP</a> # Netnod
+import:         from <a href="/AS8896">AS8896</a> accept <a href="/as-set/AS-XFIBER">AS-XFIBER</a> # XFIBER
+export:         to <a href="/AS8896">AS8896</a> announce <a href="/as-set/AS-NEXTHOP">AS-NEXTHOP</a> # XFIBER
+mp-import:      afi ipv6 from <a href="/AS8896">AS8896</a> accept <a href="/as-set/AS-XFIBER">AS-XFIBER</a> # XFIBER
+mp-export:      afi ipv6 to <a href="/AS8896">AS8896</a> announce <a href="/as-set/AS-NEXTHOP">AS-NEXTHOP</a> # XFIBER
+import:         from <a href="/AS12996">AS12996</a> accept <a href="/AS12996">AS12996</a> # Domeneshop
+export:         to <a href="/AS12996">AS12996</a> announce <a href="/as-set/AS-NEXTHOP">AS-NEXTHOP</a> # Domeneshop
+mp-import:      afi ipv6 from <a href="/AS12996">AS12996</a> accept <a href="/AS12996">AS12996</a> # Domeneshop
+mp-export:      afi ipv6 to <a href="/AS12996">AS12996</a> announce <a href="/as-set/AS-NEXTHOP">AS-NEXTHOP</a> # Domeneshop
+import:         from <a href="/AS13243">AS13243</a> accept <a href="/as-set/AS-COMACE">AS-COMACE</a> # Evry
+export:         to <a href="/AS13243">AS13243</a> announce <a href="/as-set/AS-NEXTHOP">AS-NEXTHOP</a> # Evry
+mp-import:      afi ipv6 from <a href="/AS13243">AS13243</a> accept <a href="/as-set/AS-COMACE">AS-COMACE</a> # Evry
+mp-export:      afi ipv6 to <a href="/AS13243">AS13243</a> announce <a href="/as-set/AS-NEXTHOP">AS-NEXTHOP</a> # Evry
+import:         from <a href="/AS13335">AS13335</a> accept <a href="/as-set/AS-CLOUDFLARE">AS-CLOUDFLARE</a> # CloudFlare
+export:         to <a href="/AS13335">AS13335</a> announce <a href="/as-set/AS-NEXTHOP">AS-NEXTHOP</a> # CloudFlare
+mp-import:      afi ipv6 from <a href="/AS13335">AS13335</a> accept <a href="/as-set/AS-CLOUDFLARE">AS-CLOUDFLARE</a> # CloudFlare
+mp-export:      afi ipv6 to <a href="/AS13335">AS13335</a> announce <a href="/as-set/AS-NEXTHOP">AS-NEXTHOP</a> # CloudFlare
+import:         from <a href="/AS15659">AS15659</a> accept <a href="/as-set/AS-NEXTGENTEL">AS-NEXTGENTEL</a> # NextGenTel
+export:         to <a href="/AS15659">AS15659</a> announce <a href="/as-set/AS-NEXTHOP">AS-NEXTHOP</a> # NextGenTel
+mp-import:      afi ipv6 from <a href="/AS15659">AS15659</a> accept <a href="/as-set/AS-NEXTGENTEL">AS-NEXTGENTEL</a> # NextGenTel
+mp-export:      afi ipv6 to <a href="/AS15659">AS15659</a> announce <a href="/as-set/AS-NEXTHOP">AS-NEXTHOP</a> # NextGenTel
+import:         from <a href="/AS16175">AS16175</a> accept <a href="/as-set/AS-SIGNAL">AS-SIGNAL</a> # Signal AS
+export:         to <a href="/AS16175">AS16175</a> announce <a href="/as-set/AS-NEXTHOP">AS-NEXTHOP</a> # Signal AS
+mp-import:      afi ipv6 from <a href="/AS16175">AS16175</a> accept <a href="/as-set/AS-SIGNAL">AS-SIGNAL</a> # Signal
+mp-export:      afi ipv6 to <a href="/AS16175">AS16175</a> announce <a href="/as-set/AS-NEXTHOP">AS-NEXTHOP</a> # Signal
+import:         from <a href="/AS16186">AS16186</a> accept <a href="/as-set/AS-SSC-NO">AS-SSC-NO</a> # IP Group
+export:         to <a href="/AS16186">AS16186</a> announce <a href="/as-set/AS-NEXTHOP">AS-NEXTHOP</a> # IP Group
+mp-import:      afi ipv6 from <a href="/AS16186">AS16186</a> accept <a href="/as-set/AS-SSC-NO">AS-SSC-NO</a> # IP Group
+mp-export:      afi ipv6 to <a href="/AS16186">AS16186</a> announce <a href="/as-set/AS-NEXTHOP">AS-NEXTHOP</a> # IP Group
+import:         from <a href="/AS21201">AS21201</a> accept <a href="/as-set/AS-NETFONDS">AS-NETFONDS</a> # Netfonds Bank
+export:         to <a href="/AS21201">AS21201</a> announce <a href="/as-set/AS-NEXTHOP">AS-NEXTHOP</a> # Netfonds Bank
+import:         from <a href="/AS25148">AS25148</a> accept <a href="/as-set/AS-BASEFARM">AS-BASEFARM</a> # Basefarm
+export:         to <a href="/AS25148">AS25148</a> announce <a href="/as-set/AS-NEXTHOP">AS-NEXTHOP</a> # Basefarm
+mp-import:      afi ipv6 from <a href="/AS25148">AS25148</a> accept <a href="/as-set/AS-BASEFARM">AS-BASEFARM</a> # Basefarm
+mp-export:      afi ipv6 to <a href="/AS25148">AS25148</a> announce <a href="/as-set/AS-NEXTHOP">AS-NEXTHOP</a> # Basefarm
+import:         from <a href="/AS29479">AS29479</a> accept <a href="/AS29479">AS29479</a> # Clustertech
+export:         to <a href="/AS29479">AS29479</a> announce <a href="/as-set/AS-NEXTHOP">AS-NEXTHOP</a> # Clustertech
+import:         from <a href="/AS29695">AS29695</a> accept <a href="/as-set/AS-LYSETELE">AS-LYSETELE</a> # Altibox AS
+export:         to <a href="/AS29695">AS29695</a> announce <a href="/as-set/AS-NEXTHOP">AS-NEXTHOP</a> # Altibox AS
+mp-import:      afi ipv6 from <a href="/AS29695">AS29695</a> accept <a href="/as-set/AS-LYSETELE">AS-LYSETELE</a> # Altibox AS
+mp-export:      afi ipv6 to <a href="/AS29695">AS29695</a> announce <a href="/as-set/AS-NEXTHOP">AS-NEXTHOP</a> # Altibox AS
+import:         from <a href="/AS30950">AS30950</a> accept <a href="/as-set/AS-BKK">AS-BKK</a> # BKK
+export:         to <a href="/AS30950">AS30950</a> announce <a href="/as-set/AS-NEXTHOP">AS-NEXTHOP</a> # BKK
+mp-import:      afi ipv6 from <a href="/AS30950">AS30950</a> accept <a href="/as-set/AS-BKK">AS-BKK</a> # BKK
+mp-export:      afi ipv6 to <a href="/AS30950">AS30950</a> announce <a href="/as-set/AS-NEXTHOP">AS-NEXTHOP</a> # BKK
+import:         from <a href="/AS33079">AS33079</a> accept <a href="/as-set/AS33079:AS-SET">AS33079:AS-SET</a> # ISC
+export:         to <a href="/AS33079">AS33079</a> announce <a href="/as-set/AS-NEXTHOP">AS-NEXTHOP</a> # ISC
+mp-import:      afi ipv6 from <a href="/AS33079">AS33079</a> accept <a href="/as-set/AS33079:AS-SET">AS33079:AS-SET</a> # ISC
+mp-export:      afi ipv6 to <a href="/AS33079">AS33079</a> announce <a href="/as-set/AS-NEXTHOP">AS-NEXTHOP</a> # ISC
+import:         from <a href="/AS34087">AS34087</a> accept <a href="/as-set/AS-NTE">AS-NTE</a> # NTE
+export:         to <a href="/AS34087">AS34087</a> announce <a href="/as-set/AS-NEXTHOP">AS-NEXTHOP</a> # NTE
+mp-import:      afi ipv6 from <a href="/AS34087">AS34087</a> accept <a href="/as-set/AS-NTE">AS-NTE</a> # NTE
+mp-export:      afi ipv6 to <a href="/AS34087">AS34087</a> announce <a href="/as-set/AS-NEXTHOP">AS-NEXTHOP</a> # NTE
+import:         from <a href="/AS39029">AS39029</a> accept <a href="/as-set/AS-LINPRO">AS-LINPRO</a> # Redpill Linpro AS
+export:         to <a href="/AS39029">AS39029</a> announce <a href="/as-set/AS-NEXTHOP">AS-NEXTHOP</a> # Redpill Linpro AS
+mp-import:      afi ipv6 from <a href="/AS39029">AS39029</a> accept <a href="/as-set/AS-LINPRO">AS-LINPRO</a> # Redpill Linpro AS
+mp-export:      afi ipv6 to <a href="/AS39029">AS39029</a> announce <a href="/as-set/AS-NEXTHOP">AS-NEXTHOP</a> # Redpill Linpro AS
+import:         from <a href="/AS39783">AS39783</a> accept <a href="/as-set/AS-RENTARACK">AS-RENTARACK</a> # Rent a Rack AS
+export:         to <a href="/AS39783">AS39783</a> announce <a href="/as-set/AS-NEXTHOP">AS-NEXTHOP</a> # Rent a Rack AS
+mp-import:      afi ipv6 from <a href="/AS39783">AS39783</a> accept <a href="/as-set/AS-RENTARACK">AS-RENTARACK</a> # Rent a Rack AS
+mp-export:      afi ipv6 to <a href="/AS39783">AS39783</a> announce <a href="/as-set/AS-NEXTHOP">AS-NEXTHOP</a> # Rent a Rack AS
+import:         from <a href="/AS39787">AS39787</a> accept <a href="/as-set/AS-TV2-NO">AS-TV2-NO</a> # TV2
+export:         to <a href="/AS39787">AS39787</a> announce <a href="/as-set/AS-NEXTHOP">AS-NEXTHOP</a> # TV2
+mp-import:      afi ipv6 from <a href="/AS39787">AS39787</a> accept <a href="/as-set/AS-TV2-NO">AS-TV2-NO</a> # TV2
+mp-export:      afi ipv6 to <a href="/AS39787">AS39787</a> announce <a href="/as-set/AS-NEXTHOP">AS-NEXTHOP</a> # TV2
+import:         from <a href="/AS41164">AS41164</a> accept <a href="/as-set/AS-GET">AS-GET</a> # GET
+export:         to <a href="/AS41164">AS41164</a> announce <a href="/as-set/AS-NEXTHOP">AS-NEXTHOP</a> # GET
+mp-import:      afi ipv6 from <a href="/AS41164">AS41164</a> accept <a href="/as-set/AS-GET">AS-GET</a> # GET
+mp-export:      afi ipv6 to <a href="/AS41164">AS41164</a> announce <a href="/as-set/AS-NEXTHOP">AS-NEXTHOP</a> # GET
+import:         from <a href="/AS41483">AS41483</a> accept <a href="/as-set/AS-NWN">AS-NWN</a> # Telia Norge AS
+export:         to <a href="/AS41483">AS41483</a> announce <a href="/as-set/AS-NEXTHOP">AS-NEXTHOP</a> # Telia Norge AS
+mp-import:      afi ipv6 from <a href="/AS41483">AS41483</a> accept <a href="/as-set/AS-NWN">AS-NWN</a> # Telia Norge AS
+mp-export:      afi ipv6 to <a href="/AS41483">AS41483</a> announce <a href="/as-set/AS-NEXTHOP">AS-NEXTHOP</a> # Telia Norge AS
+import:         from <a href="/AS41572">AS41572</a> accept <a href="/as-set/AS-HAFSLUND">AS-HAFSLUND</a> # Kvantel
+export:         to <a href="/AS41572">AS41572</a> announce <a href="/as-set/AS-NEXTHOP">AS-NEXTHOP</a> # Kvantel
+mp-import:      afi ipv6 from <a href="/AS41572">AS41572</a> accept <a href="/as-set/AS-HAFSLUND">AS-HAFSLUND</a> # Kvantel
+mp-export:      afi ipv6 to <a href="/AS41572">AS41572</a> announce <a href="/as-set/AS-NEXTHOP">AS-NEXTHOP</a> # Kvantel
+import:         from <a href="/AS41741">AS41741</a> accept <a href="/AS41741">AS41741</a> # Nets
+export:         to <a href="/AS41741">AS41741</a> announce <a href="/as-set/AS-NEXTHOP">AS-NEXTHOP</a> # Nets
+mp-import:      afi ipv6 from <a href="/AS41741">AS41741</a> accept <a href="/AS41741">AS41741</a> # Nets
+mp-export:      afi ipv6 to <a href="/AS41741">AS41741</a> announce <a href="/as-set/AS-NEXTHOP">AS-NEXTHOP</a> # Nets
+import:         from <a href="/AS43646">AS43646</a> accept <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a> # Arkena
+export:         to <a href="/AS43646">AS43646</a> announce <a href="/as-set/AS-NEXTHOP">AS-NEXTHOP</a> # Arkena
+mp-import:      afi ipv6 from <a href="/AS43646">AS43646</a> accept <a href="/as-set/AS-TDFPMM">AS-TDFPMM</a> # Arkena
+mp-export:      afi ipv6 to <a href="/AS43646">AS43646</a> announce <a href="/as-set/AS-NEXTHOP">AS-NEXTHOP</a> # Arkena
+import:         from <a href="/AS44511">AS44511</a> accept <a href="/AS44511">AS44511</a> # Sygard
+export:         to <a href="/AS44511">AS44511</a> announce <a href="/as-set/AS-NEXTHOP">AS-NEXTHOP</a> # Sygard
+import:         from <a href="/AS50270">AS50270</a> accept <a href="/AS50270">AS50270</a> # Nettfart
+export:         to <a href="/AS50270">AS50270</a> announce <a href="/as-set/AS-NEXTHOP">AS-NEXTHOP</a> # Nettfart
+mp-import:      afi ipv6 from <a href="/AS50270">AS50270</a> accept <a href="/AS50270">AS50270</a> # Nettfart
+mp-export:      afi ipv6 to <a href="/AS50270">AS50270</a> announce <a href="/as-set/AS-NEXTHOP">AS-NEXTHOP</a> # Nettfart
+import:         from <a href="/AS50272">AS50272</a> accept <a href="/as-set/AS-INTELLIT">AS-INTELLIT</a> # Intellit
+export:         to <a href="/AS50272">AS50272</a> announce <a href="/as-set/AS-NEXTHOP">AS-NEXTHOP</a> # Intellit
+mp-import:      afi ipv6 from <a href="/AS50272">AS50272</a> accept <a href="/as-set/AS-INTELLIT">AS-INTELLIT</a> # Intellit
+mp-export:      afi ipv6 to <a href="/AS50272">AS50272</a> announce <a href="/as-set/AS-NEXTHOP">AS-NEXTHOP</a> # Intellit
+import:         from <a href="/AS56828">AS56828</a> accept <a href="/as-set/AS-NHN">AS-NHN</a> # Norsk Helsenett
+export:         to <a href="/AS56828">AS56828</a> announce <a href="/as-set/AS-NEXTHOP">AS-NEXTHOP</a> # Norsk Helsenett
+mp-import:      afi ipv6 from <a href="/AS56828">AS56828</a> accept <a href="/as-set/AS-NHN">AS-NHN</a> # Norsk Helsenett
+mp-export:      afi ipv6 to <a href="/AS56828">AS56828</a> announce <a href="/as-set/AS-NEXTHOP">AS-NEXTHOP</a> # Norsk Helsenett
+import:         from <a href="/AS56867">AS56867</a> accept <a href="/as-set/AS-TEKNOGRAD">AS-TEKNOGRAD</a> # Teknograd AS
+export:         to <a href="/AS56867">AS56867</a> announce <a href="/as-set/AS-NEXTHOP">AS-NEXTHOP</a> # Teknograd AS
+mp-import:      afi ipv6 from <a href="/AS56867">AS56867</a> accept <a href="/as-set/AS-TEKNOGRAD">AS-TEKNOGRAD</a> # Teknograd AS
+mp-export:      afi ipv6 to <a href="/AS56867">AS56867</a> announce <a href="/as-set/AS-NEXTHOP">AS-NEXTHOP</a> # Teknograd AS
+import:         from <a href="/AS39236">AS39236</a> accept <a href="/AS39236">AS39236</a> # Nedre Romerike Vann- og Avløpsselskap IKS
+export:         to <a href="/AS39236">AS39236</a> announce ANY # Nedre Romerike Vann- og Avløpsselskap IKS
+mp-import:      afi ipv6 from <a href="/AS39236">AS39236</a> accept <a href="/AS39236">AS39236</a> # Nedre Romerike Vann- og Avløpsselskap IKS
+mp-export:      afi ipv6 to <a href="/AS39236">AS39236</a> announce ANY # Nedre Romerike Vann- og Avløpsselskap IKS
+import:         from <a href="/AS64424">AS64424</a> accept <a href="/AS64424">AS64424</a> # NetSecurity AS
+export:         to <a href="/AS64424">AS64424</a> announce ANY # NetSecurity AS
+import:         from <a href="/AS207031">AS207031</a> accept <a href="/AS207031">AS207031</a> # V-Hosting AS
+export:         to <a href="/AS207031">AS207031</a> announce ANY # V-Hosting AS
+mp-import:      afi ipv6 from <a href="/AS207031">AS207031</a> accept <a href="/AS207031">AS207031</a> # V-Hosting AS
+mp-export:      afi ipv6 to <a href="/AS207031">AS207031</a> announce ANY # V-Hosting AS
+admin-c:        DUMY-RIPE
+tech-c:         DUMY-RIPE
+status:         ASSIGNED
+mnt-by:         RIPE-NCC-END-MNT
+mnt-by:         NEXTHOP-MNT
+notify:         drift@nexthop.no
+created:        2009-09-10T12:19:56Z
+last-modified:  2025-05-18T15:57:46Z
+source:         RIPE
+remarks:        ****************************
+remarks:        * THIS OBJECT IS MODIFIED
+remarks:        * Please note that all data that is generally regarded as personal
+remarks:        * data has been removed from this object.
+remarks:        * To view the original object, please query the RIPE Database at:
+remarks:        * http://www.ripe.net/whois
+remarks:        ****************************
+
+
+organisation:   <a href="https://apps.db.ripe.net/db-web-ui/query?searchtext=ORG-NA502-RIPE">ORG-NA502-RIPE</a>
+org-name:       Nexthop AS
+country:        NO
+org-type:       LIR
+address:        Dummy address for <a href="https://apps.db.ripe.net/db-web-ui/query?searchtext=ORG-NA502-RIPE">ORG-NA502-RIPE</a>
+# Email removed, Log into bgp.tools to see whois emails
+abuse-c:        NXMT-RIPE
+mnt-ref:        RIPE-NCC-HM-MNT
+mnt-ref:        NEXTHOP-MNT
+mnt-by:         RIPE-NCC-HM-MNT
+mnt-by:         NEXTHOP-MNT
+created:        2012-08-20T13:57:17Z
+last-modified:  2022-01-20T07:18:32Z
+source:         RIPE
+remarks:        ****************************
+remarks:        * THIS OBJECT IS MODIFIED
+remarks:        * Please note that all data that is generally regarded as personal
+remarks:        * data has been removed from this object.
+remarks:        * To view the original object, please query the RIPE Database at:
+remarks:        * http://www.ripe.net/whois
+remarks:        ****************************
+
+</pre>
+                        
+                        
+                        <a style="font-size: small;">Last Update: 2025-12-11T03:25:27Z UTC </a>
+                        
+                        <hr>
+                        
+                            <h2>Member of the following AS-SETs</h2>
+
+                            <table id="fhTable" class="full-width-table ">
+                                <tbody id="prefixlist-tbody">
+                                    <tr>
+                                        <th class="boldpls nowrap"> - </th>
+                                        <th class="boldpls">Member</th>
+                                        
+                                        <th class="boldpls nowrap">ASN Count</th>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as2116:as-nix">as2116:as-nix</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">40</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-nexthop">as-nexthop</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">59</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as16150:as-customers">as16150:as-customers</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">339</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-hurricanev6">as-hurricanev6</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap boldpls"><p style="display: contents;color: red">20287</p></td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as2116:as-fixo">as2116:as-fixo</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">5</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                        
+
+                    </div>
+
+                    
+
+                    
+                    <div style="display: none" id="ix-page">
+                        <div class="grid-row">
+                            <dl class="column-two-thirds">
+                                <p style="margin: 0px;"><img style="vertical-align: middle; margin-left: 5px;" class="flag-img" src="/assets/peeringdb-icon.png" title="PeeringDB"><a href="https://www.peeringdb.com/asn/49788">Go to PeeringDB page</a></p>
+                            </dl>
+                            
+                            
+                        </div>
+                        <div class="grid-row">
+                            
+                        
+                        <div class="column-two-thirds">
+                            <dl>
+                                <dt>PeeringDB AS-SET:</dt>
+                                <dd class="text data">
+                                    
+                                    <a href="/as-set/as-nexthop">AS-NEXTHOP</a>
+                                    
+                                </dd>
+                            </dl>
+                        </div>
+                        
+    
+    
+                        <dl class="column-third">
+                            <dt>Suggested Prefix Limits</dt>
+                            <dd class="text data">
+                                
+                                <p style="margin: 0px;"><b>IPv4:</b> 150</p>
+                                
+                                <p style="margin: 0px;"><b>IPv6:</b> 120</p>
+                            </dd>
+                        </dl>
+                        </div>
+
+                        
+
+                        <div id="normalixpsubpage">
+
+
+<h3>Internet Exchange Points</h3>
+
+<div class="scroll-ixp-div-on-small">
+<table id="ixpTable" class="full-width-table table-wide-to-force-scroll-on-mobile">
+    <thead class="sortable">
+        <tr>
+            <th class="nowrap boldpls">  &nbsp;  </th>
+            <th class="boldpls">Name</th>
+            <th class="nowrap boldpls">IPv4</th>
+            <th class="nowrap boldpls">IPv6</th>
+            <th data-sort-method='number' class="nowrap boldpls">Link Speed</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+        
+        <tr>
+            <td data-sort='NO' class="nowrap ns"><img class="flag-img" src="/assets/flags/NO.png" title="NO"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/NIX1">NIX1</a></td>
+            <td class="smallonmobile">185.1.55.10</a></td>
+            <td class="smallonmobile nowrap">2001:7f8:12:1::4:9788</td>
+            <td data-sort='100000' class="smallonmobile"><abbr title="nix1-digiplex-sw - STACK EMEA - OSL01 [NO]">100 gbps</abbr></td>
+        </tr>
+        
+        
+    </tbody>
+</table>
+</div>
+
+
+
+
+
+
+
+
+<a style="font-size: small;">Last Update: 2025-12-12T10:08:19Z UTC</a>
+
+
+                        </div>
+                        <div id="overlapixpsubpage">
+                        </div>
+                    </div>
+                    
+                    
+
+                    
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="superclearfix">
+            
+            <div class="superclearfix">
+                
+            </div>
+
+            <div class="superclearfix">
+                
+            </div>
+
+
+        </div>
+
+
+        <div class="group js-footer" id="footer">
+            <nav>
+                <div>
+                    <ul>
+                        <li><a href="/kb/api" target="_blank">Scripting/API</a></li>
+                        <li><a href="/credits" target="_blank">Credits</a></li>
+                        <li><a href="/pricing" target="_blank">Pricing</a></li>
+                        <li><a href="/kb/contact" target="_blank">Contact Us</a></li>
+                        <li><a href="https://github.com/bgptools/issues" target="_blank">Issue Tracker</a></li>
+                        <li><a href="/kb/setup-sessions" target="">Contribute Data</a></li>
+                        
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <script>
+    
+    var inhash = window.location.hash;
+    if (inhash == "#asinfo") {
+        
+    } else if (inhash == "#prefixes") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#prefix-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#prefixes-page');
+        aaa[0].style.display = "";
+
+    } else if (inhash == "#connectivity" || inhash == "#peers" || inhash == "#upstreams" || inhash == "#downstreams") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#connectivity-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#connectivity-page');
+        aaa[0].style.display = "";
+    } else if (inhash == "#whois") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#whois-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#whois-page');
+        aaa[0].style.display = "";
+    } else if (inhash == "#ix") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#ix-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#ix-page');
+        aaa[0].style.display = "";
+    }</script>
+
+    <script>
+    
+
+
+    ;(function() {
+  'use strict'
+
+  function scaleImageMap() {
+    function resizeMap() {
+      function resizeAreaTag(cachedAreaCoords, idx) {
+        function scale(coord) {
+          var dimension = 1 === (isWidth = 1 - isWidth) ? 'width' : 'height'
+          return (
+            padding[dimension] +
+            Math.floor(Number(coord) * scalingFactor[dimension])
+          )
+        }
+
+        var isWidth = 0
+        areas[idx].coords = cachedAreaCoords
+          .split(',')
+          .map(scale)
+          .join(',')
+      }
+
+      var scalingFactor = {
+        width: image.width / image.naturalWidth,
+        height: image.height / image.naturalHeight,
+      }
+
+      var padding = {
+        width: parseInt(
+          window.getComputedStyle(image, null).getPropertyValue('padding-left'),
+          10
+        ),
+        height: parseInt(
+          window.getComputedStyle(image, null).getPropertyValue('padding-top'),
+          10
+        ),
+      }
+
+      cachedAreaCoordsArray.forEach(resizeAreaTag)
+    }
+
+    function getCoords(e) {
+      
+      return e.coords.replace(/ *, */g, ',').replace(/ +/g, ',')
+    }
+
+    function debounce() {
+      clearTimeout(timer)
+      timer = setTimeout(resizeMap, 250)
+    }
+
+    function start() {
+      if (
+        image.width !== image.naturalWidth ||
+        image.height !== image.naturalHeight
+      ) {
+        resizeMap()
+      }
+    }
+
+    function addEventListeners() {
+      image.addEventListener('load', resizeMap, false) 
+      window.addEventListener('focus', resizeMap, false) 
+      window.addEventListener('resize', debounce, false)
+      window.addEventListener('readystatechange', resizeMap, false)
+      document.addEventListener('fullscreenchange', resizeMap, false)
+    }
+
+    function beenHere() {
+      return 'function' === typeof map._resize
+    }
+
+    function getImg(name) {
+      return document.querySelector('img[usemap="#world"]')
+    }
+
+    function setup() {
+      areas = map.getElementsByTagName('area')
+      cachedAreaCoordsArray = Array.prototype.map.call(areas, getCoords)
+      image = getImg('#' + map.name) || getImg(map.name)
+      map._resize = resizeMap 
+    }
+
+    var  
+      map = this,
+      areas = null,
+      cachedAreaCoordsArray = null,
+      image = null,
+      timer = null
+
+    if (!beenHere()) {
+      setup()
+      addEventListeners()
+      start()
+    } else {
+      map._resize() 
+    }
+  }
+
+  function factory() {
+    function chkMap(element) {
+      if (!element.tagName) {
+        throw new TypeError('Object is not a valid DOM element')
+      } else if ('MAP' !== element.tagName.toUpperCase()) {
+        throw new TypeError(
+          'Expected <MAP> tag, found <' + element.tagName + '>.'
+        )
+      }
+    }
+
+    function init(element) {
+      if (element) {
+        chkMap(element)
+        scaleImageMap.call(element)
+        maps.push(element)
+      }
+    }
+
+    var maps
+
+    return function imageMapResizeF(target) {
+      maps = [] 
+
+      switch (typeof target) {
+        case 'undefined':
+        case 'string':
+          Array.prototype.forEach.call(
+            document.querySelectorAll(target || 'map'),
+            init
+          )
+          break
+        case 'object':
+          init(target)
+          break
+        default:
+          throw new TypeError('Unexpected data type (' + typeof target + ').')
+      }
+
+      return maps
+    }
+  }
+
+  if (typeof define === 'function' && define.amd) {
+    define([], factory)
+  } else if (typeof module === 'object' && typeof module.exports === 'object') {
+    module.exports = factory() 
+  } else {
+    window.imageMapResize = factory()
+  }
+
+  if ('jQuery' in window) {
+    window.jQuery.fn.imageMapResize = function $imageMapResizeF() {
+      return this.filter('map')
+        .each(scaleImageMap)
+        .end()
+    }
+  }
+})()
+    
+    </script>
+    <script>
+        var imgEl = document.getElementById("pathimg");
+        imgEl.addEventListener("mouseover",function() {
+            imageMapResize('#world');
+        })
+    </script>
+    <script src="/assets/tablesort.min.js"></script>
+    <script>
+        addEventListener("load", (event) => {
+            
+            
+            var sort = new Tablesort(document.getElementById('donotscrapebgptools-upstreamTable'));
+            var sort2 = new Tablesort(document.getElementById('donotscrapebgptools-upstreamTablePeers'));
+            
+            var sort3 = new Tablesort(document.getElementById('donotscrapebgptools-upstreamTableDowns'));
+            
+            var sort4 = new Tablesort(document.getElementById('ixpTable'));
+            
+        });
+    </script>
+    
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        setTimeout(function() {
+
+        var beaconHttp = new XMLHttpRequest();
+        var url = '/performance-beacon';
+        var params = JSON.stringify(window.performance)
+        beaconHttp.open('POST', url, true);
+        
+        
+        beaconHttp.setRequestHeader('Content-type', 'application/json');
+        beaconHttp.setRequestHeader('visit-url', "/as/49788");
+        if (navigator.connection) {
+            beaconHttp.setRequestHeader('client-side-rtt', navigator.connection.rtt);
+        } else {
+            beaconHttp.setRequestHeader('client-side-rtt', '-2');
+        }
+        beaconHttp.onreadystatechange = function() {}
+        beaconHttp.send(params);
+        },1000)
+    }, false);
+</script>
+
+</body>
+
+
+</html>

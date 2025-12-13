@@ -1,0 +1,2912 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="EstNOC OU (AS206804) is a 9 year old BGP network that is peering with 33 other networks and has 17 upstream carriers">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000">
+    <link rel="search" type="application/opensearchdescription+xml" title="BGP.Tools" href="https://bgp.tools/opensearch.xml">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="theme-color" content="#000000">
+    <link href="https://social.bgp.tools/@bgptools" rel="me">
+    <link rel="canonical" href="https://bgp.tools/as/206804" />
+    <title>AS206804 EstNOC OU - bgp.tools</title>
+    <link rel="stylesheet" type="text/css" href="/assets/main-new.css?2025-12-09-1723%20UTC">
+</head>
+
+<body>
+    <div id="container">
+        
+<div id="global-header" class="global-header-top">
+    <div class="header-sitewide">
+        <div class="global-header">
+            <div class="header-logo">
+                <a href="/" id="logo" class="content">bgp.tools</a>
+            </div>
+            <form id="search" action="/search" method="get" accept-charset="utf-8" role="search" class="top-search-header js-search-hash">
+                <div class="searchfield">
+                    <input type="search" autocomplete="off" name="q" id="site-search-text" title="Search" value="" placeholder="Start here..." autofocus="autofocus" class="js-search-focus">
+                    <button type="submit" id="search-submit" class="search-submit">Search</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div id="global-header-blob" >
+    <a id="auth-header-text" href="/login">Login</a>
+    
+</div>
+<div id="global-header-bar" >
+    <a id="auth-header-bar-text" href="/login">Login</a>
+    
+</div>
+<div class="small-clearfix"></div>
+
+        <div id="global-container">
+            
+
+
+            
+            <div class="section-tabs js-tabs">
+                <ul>
+                    
+<li class="active">
+    <h1> <a id="viewbutton-tab" href="/as/206804">View</a></h1>
+</li>
+
+<li >
+    <a id="editbutton-tab" href="/edit/as/206804">Edit</a>
+</li>
+
+
+
+
+
+                    <li style="float: right;">
+                        
+                        <img id="ws-status" width="24" height="24" src="/assets/disconnected.png" title="Not Connected To realtime data updates">
+                        
+                    </li>
+                </ul>
+            </div>
+
+            <div id="search-container">
+
+                <div class="column-full-width">
+
+                    <div class="clearfix">
+                        
+                    </div>
+                    
+                    
+
+                    <div class="network-header">
+                        
+                        
+                        <img width="334" height="250" src="/img/206804" alt="The website screenshot for https://www.estnoc.ee" >
+                        
+                        
+                        <p id="network-name" class="heading-xlarge">EstNOC OU</p>
+                        <p id="network-number">
+                            AS Number
+                            <strong id="ASNumberString" pure="206804">206804</strong>
+                            <br>
+                        
+                            Website
+                            <strong><a href="https://www.estnoc.ee" rel="nofollow">https://www.estnoc.ee</a></strong>
+                        
+                        </p>
+
+                    </div>
+
+
+                    <div class="clearfix">
+                        
+                    </div>
+
+
+                    <div class="section-tabs js-tabs">
+                        <ul>
+
+                            <li id="overview-tab-li" class="active">
+                                <a id="overview-tab" href="#asinfo">Overview</a>
+                            </li>
+                            
+                            <li id="prefix-tab-li">
+                                <a id="prefix-tab" href="#prefixes">Prefixes</a>
+                            </li>
+
+                            <li id="connectivity-tab-li">
+                                <a id="connectivity-tab" href="#connectivity">Connectivity</a>
+                            </li>
+                            
+                            <li id="whois-tab-li">
+                                <a id="whois-tab" href="#whois">Whois</a>
+                            </li>
+                        
+                        
+                        </ul>
+                    </div>
+
+<script>
+    function removeAllActiveTab() {
+        var tabs = [
+            "overview-tab-li", 
+            "prefix-tab-li", 
+            "connectivity-tab-li",
+            "whois-tab-li",
+            "ix-tab-li",
+            "issues-tab-li"
+        ];
+
+        tabs.forEach(element => {
+            var aaa = document.querySelectorAll('#'+element);
+            if(aaa.length != 0) {
+                aaa[0].classList.remove("active")
+            }
+        });
+    }
+
+    function hideAllContent() {
+        var tabs = [
+            "overview-page", 
+            "prefixes-page", 
+            "connectivity-page",
+            "whois-page",
+            "ix-page",
+            "issues-page"
+        ];
+
+        tabs.forEach(element => {
+            var aaa = document.querySelectorAll('#'+element);
+            if(aaa.length != 0) {
+                aaa[0].style.display = "none";
+            }
+        });
+        if (document.getElementById("donotscrapebgptools-prefixlist-tbody")) {
+            var prefixrows = document.getElementById("donotscrapebgptools-prefixlist-tbody").children;
+            for (var i = 0; i < prefixrows.length; i++) {
+                prefixrows[i].style = "";
+            }
+        }
+    }
+
+    var otab = document.querySelectorAll('#overview-tab');
+    otab[0].addEventListener("click", function () {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#overview-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#overview-page');
+        aaa[0].style.display = "";
+    });
+    
+
+    var ptab = document.querySelectorAll('#prefix-tab');
+    ptab[0].addEventListener("click", function () {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#prefix-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#prefixes-page');
+        aaa[0].style.display = "";
+    });
+
+    var ctab = document.querySelectorAll('#connectivity-tab');
+    ctab[0].addEventListener("click", function () {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#connectivity-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#connectivity-page');
+        aaa[0].style.display = "";
+    });
+    
+
+    var wtab = document.querySelectorAll('#whois-tab');
+    wtab[0].addEventListener("click", function () {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#whois-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#whois-page');
+        aaa[0].style.display = "";
+    });
+
+</script>
+
+
+
+                    
+                    <div id="overview-page">
+
+                        <div class="grid-row">
+                        
+                        <div class="column-two-thirds">
+                            <dl>
+                                <dt>Registered on</dt>
+                                <dd class="text data">
+                                    
+                                     3 Nov 2016 (9 years old)
+                                </dd>
+                            
+                            
+                            <dt>Registered to</dt>
+                            <dd class="text data">
+                                <a href="/rir-owner/ee.estnoc">ee.estnoc</a> (ripe)</dd>
+                                
+                            
+                            </dl>
+                        </div>
+                        
+    
+                        <dl class="column-third">
+                            <dt>Network status</dt>
+                            <dd class="text data">
+                                
+                                Active, Allocated under RIPE
+                                
+                            </dd>
+                        </dl>
+    
+                        </div>
+    
+                        <div class="grid-row">
+                            <dl class="column-two-thirds">
+                                <dt>Network type</dt>
+                                <dd class="text data">
+                                    Eyeball
+                                </dd>
+                            </dl>
+    
+                            <dl class="column-third">
+                                <dt>Prefixes Originated</dt>
+                                <dd class="data">50 IPv4, 11 IPv6</dd>
+                            </dl>
+                        </div>
+                        <div class="grid-row">
+                            <div class="column-half">
+    
+                                <h2 class="heading-medium"><derp>Upstreams</derp></h2>
+                                <ul>
+                                    
+                                    <li>
+                                        <span id="sic0">
+                                          <a href="/as/3356">AS3356</a> - Lumen (Level 3)
+                                        </span>
+                                    </li>
+                                    
+                                    <li>
+                                        <span id="sic0">
+                                          <a href="/as/3491">AS3491</a> - PCCW Global, Inc.
+                                        </span>
+                                    </li>
+                                    
+                                    <li>
+                                        <span id="sic0">
+                                          <a href="/as/8280">AS8280</a> - SYNAPSECOM S.A. Provider of Telecommunications and In...
+                                        </span>
+                                    </li>
+                                    
+                                    <li>
+                                        <span id="sic0">
+                                          <a href="/as/9002">AS9002</a> - RETN Limited
+                                        </span>
+                                    </li>
+                                    
+                                    <li>
+                                        <span id="sic0">
+                                          <a href="/as/56704">AS56704</a> - Farice ehf
+                                        </span>
+                                    </li>
+                                    
+                                    <li>
+                                        <span id="sic0">
+                                          <a href="/as/29467">AS29467</a> - LUXNETWORK S.A.
+                                        </span>
+                                    </li>
+                                    
+                                    <li>
+                                        <span id="sic0">
+                                          <a href="/as/23930">AS23930</a> - VITRO INC.
+                                        </span>
+                                    </li>
+                                    
+                                    <li>
+                                        <span id="sic0">
+                                          <a href="/as/1257">AS1257</a> - Tele2 Sverige AB
+                                        </span>
+                                    </li>
+                                    
+                                </ul>
+    
+                            </div>
+    
+                            <div class="column-half">
+                                
+                                    <h2 class="heading-medium"><derp>Rankings</derp></h2>
+                                    
+                                    <li><span id="sic0">#17 for <a href="/rankings/EE?sort=eyeballs">Estimated Eyeballs  in Estonia</a></span></li>
+                                    
+                                    <li><span id="sic0">#23 for <a href="/rankings/EE?sort=dns">Unique Domains  in Estonia</a></span></li>
+                                    
+                                    <li><span id="sic0">#13 for <a href="/rankings/EE?sort=peering">Known Peers  in Estonia</a></span></li>
+                                    
+                                    <li><span id="sic0">#12 for <a href="/rankings/EE?sort=v4">Originated IPv4 Space  in Estonia</a></span></li>
+                                    
+                                    <li><span id="sic0">#10 for <a href="/rankings/EE?sort=v6">Originated IPv6 Space  in Estonia</a></span></li>
+                                    
+                                
+                            </div>
+                        </div>
+                        
+                        <div class="grid-row" style="padding: 15px;">
+                            <h2 class="heading-medium"><derp>Tags:</derp></h2>
+                            <br>
+                            
+                            <a href="/tags/vpn"><span style="border: 5px solid #6353D6;" class="taglist"> VPN Host </span></a>
+                            
+                            <a href="/tags/vpsh"><span style="border: 5px solid #647096;" class="taglist"> Server Hosting </span></a>
+                            
+                            <a href="/tags/tor"><span style="border: 5px solid #78B04B;" class="taglist"> Tor services </span></a>
+                            
+                        </div>
+                        
+                    </div>
+                    
+
+                    <div style="display: none" id="prefixes-page">
+                        
+
+                        
+                        <div style="float:left">
+                            <dt>Prefixes Originated</dt>
+                            <dd class="data">50 IPv4, 11 IPv6</dd>
+                            <dd class="data"><a href="/as/206804?show-low-vis#prefixes">Show Low Visibility Prefixes</a></dd>
+                            
+                        </div>
+                        <div style="float:right">
+                                <dt>Addresses Originated</dt>
+                                <dd class="data">51 /24's of IPv4</dd>
+                                <dd class="data">266 /48's of IPv6</dd>
+                        </div>
+
+                        <div class="clearfix">
+                            
+                        </div>
+
+
+                        <table id="fhTable" class="full-width-table ">
+                            <tbody id="donotscrapebgptools-prefixlist-tbody">
+                                <tr>
+                                    <th class="nowrap">  &nbsp;  </th>
+                                    <th class="boldpls">Prefix</th>
+                                    <th class="nowrap boldpls">Description</th>
+                                </tr>
+                                <p id="readme-if-you-are-human" style="display: none;">If you are scraping this block for the prefixes that a AS originates, please use the data dumps in https://bgp.tools/kb/api and cache them</p>
+                                
+                                <tr id="pfx-37.0.12.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="MY" src="/assets/flags/MY.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/37.0.12.0/24">37.0.12.0/24</a></td>
+                                    <td class="smallonmobile nowrap">ESTNOC-GLOBAL</td>
+                                </tr>
+                                
+                                <tr id="pfx-37.77.60.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="HU" src="/assets/flags/HU.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/37.77.60.0/24">37.77.60.0/24</a></td>
+                                    <td class="smallonmobile nowrap">ESTNOC-GLOBAL</td>
+                                </tr>
+                                
+                                <tr id="pfx-45.128.132.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="ES" src="/assets/flags/ES.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/45.128.132.0/24">45.128.132.0/24</a></td>
+                                    <td class="smallonmobile nowrap">EstNOC-Global</td>
+                                </tr>
+                                
+                                <tr id="pfx-45.128.133.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="BE" src="/assets/flags/BE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/45.128.133.0/24">45.128.133.0/24</a></td>
+                                    <td class="smallonmobile nowrap">EstNOC-Global</td>
+                                </tr>
+                                
+                                <tr id="pfx-45.128.134.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="FR" src="/assets/flags/FR.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/45.128.134.0/24">45.128.134.0/24</a></td>
+                                    <td class="smallonmobile nowrap">EstNOC-GLOBAL</td>
+                                </tr>
+                                
+                                <tr id="pfx-45.128.135.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="NL" src="/assets/flags/NL.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/45.128.135.0/24">45.128.135.0/24</a></td>
+                                    <td class="smallonmobile nowrap">EstNOC-Global</td>
+                                </tr>
+                                
+                                <tr id="pfx-45.133.192.0/23">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="IS" src="/assets/flags/IS.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/45.133.192.0/23">45.133.192.0/23</a></td>
+                                    <td class="smallonmobile nowrap">EstNOC-Global</td>
+                                </tr>
+                                
+                                <tr id="pfx-45.133.194.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KR" src="/assets/flags/KR.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/45.133.194.0/24">45.133.194.0/24</a></td>
+                                    <td class="smallonmobile nowrap">ESTNOC-GLOBAL</td>
+                                </tr>
+                                
+                                <tr id="pfx-45.133.195.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="NO" src="/assets/flags/NO.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/45.133.195.0/24">45.133.195.0/24</a></td>
+                                    <td class="smallonmobile nowrap">EstNOC-Global</td>
+                                </tr>
+                                
+                                <tr id="pfx-45.138.84.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="IT" src="/assets/flags/IT.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/45.138.84.0/24">45.138.84.0/24</a></td>
+                                    <td class="smallonmobile nowrap">EstNOC-Global</td>
+                                </tr>
+                                
+                                <tr id="pfx-45.138.85.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="DK" src="/assets/flags/DK.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/45.138.85.0/24">45.138.85.0/24</a></td>
+                                    <td class="smallonmobile nowrap">EstNOC-Global</td>
+                                </tr>
+                                
+                                <tr id="pfx-45.138.86.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KE" src="/assets/flags/KE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/45.138.86.0/24">45.138.86.0/24</a></td>
+                                    <td class="smallonmobile nowrap">ESTNOC-GLOBAL</td>
+                                </tr>
+                                
+                                <tr id="pfx-45.138.87.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="RO" src="/assets/flags/RO.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/45.138.87.0/24">45.138.87.0/24</a></td>
+                                    <td class="smallonmobile nowrap">EstNOC-Global</td>
+                                </tr>
+                                
+                                <tr id="pfx-45.146.221.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="GB" src="/assets/flags/GB.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/45.146.221.0/24">45.146.221.0/24</a></td>
+                                    <td class="smallonmobile nowrap">EstNOC-Global</td>
+                                </tr>
+                                
+                                <tr id="pfx-45.146.222.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="RS" src="/assets/flags/RS.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/45.146.222.0/24">45.146.222.0/24</a></td>
+                                    <td class="smallonmobile nowrap">ESTNOC-Global</td>
+                                </tr>
+                                
+                                <tr id="pfx-45.146.223.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="PH" src="/assets/flags/PH.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/45.146.223.0/24">45.146.223.0/24</a></td>
+                                    <td class="smallonmobile nowrap">EstNOC-Global</td>
+                                </tr>
+                                
+                                <tr id="pfx-46.246.1.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="SE" src="/assets/flags/SE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/46.246.1.0/24">46.246.1.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Swedish Infra</td>
+                                </tr>
+                                
+                                <tr id="pfx-85.203.39.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="LV" src="/assets/flags/LV.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/85.203.39.0/24">85.203.39.0/24</a></td>
+                                    <td class="smallonmobile nowrap">EstNOC-Global</td>
+                                </tr>
+                                
+                                <tr id="pfx-103.140.186.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="SG" src="/assets/flags/SG.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/103.140.186.0/24">103.140.186.0/24</a></td>
+                                    <td class="smallonmobile nowrap">EstNOC-GLOBAL</td>
+                                </tr>
+                                
+                                <tr id="pfx-103.140.187.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="JP" src="/assets/flags/JP.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/103.140.187.0/24">103.140.187.0/24</a></td>
+                                    <td class="smallonmobile nowrap">EstNOC-GLOBAL</td>
+                                </tr>
+                                
+                                <tr id="pfx-141.98.212.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="HK" src="/assets/flags/HK.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/141.98.212.0/24">141.98.212.0/24</a></td>
+                                    <td class="smallonmobile nowrap">EstNOC-Global</td>
+                                </tr>
+                                
+                                <tr id="pfx-141.98.213.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KR" src="/assets/flags/KR.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/141.98.213.0/24">141.98.213.0/24</a></td>
+                                    <td class="smallonmobile nowrap">EstNOC-Global</td>
+                                </tr>
+                                
+                                <tr id="pfx-141.98.214.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="AT" src="/assets/flags/AT.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/141.98.214.0/24">141.98.214.0/24</a></td>
+                                    <td class="smallonmobile nowrap">EstNOC-Global</td>
+                                </tr>
+                                
+                                <tr id="pfx-141.98.215.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="PH" src="/assets/flags/PH.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/141.98.215.0/24">141.98.215.0/24</a></td>
+                                    <td class="smallonmobile nowrap">EstNOC-Global</td>
+                                </tr>
+                                
+                                <tr id="pfx-176.96.226.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="RU" src="/assets/flags/RU.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/176.96.226.0/24">176.96.226.0/24</a></td>
+                                    <td class="smallonmobile nowrap">EstNOC-Global</td>
+                                </tr>
+                                
+                                <tr id="pfx-178.73.220.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="SE" src="/assets/flags/SE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/178.73.220.0/24">178.73.220.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Swedish Infra</td>
+                                </tr>
+                                
+                                <tr id="pfx-185.51.134.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="GR" src="/assets/flags/GR.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/185.51.134.0/24">185.51.134.0/24</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-185.90.60.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="EE" src="/assets/flags/EE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/185.90.60.0/24">185.90.60.0/24</a></td>
+                                    <td class="smallonmobile nowrap">EstNOC-Global</td>
+                                </tr>
+                                
+                                <tr id="pfx-185.209.220.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="BE" src="/assets/flags/BE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/185.209.220.0/24">185.209.220.0/24</a></td>
+                                    <td class="smallonmobile nowrap">EstNOC-Global</td>
+                                </tr>
+                                
+                                <tr id="pfx-185.221.132.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="LU" src="/assets/flags/LU.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/185.221.132.0/24">185.221.132.0/24</a></td>
+                                    <td class="smallonmobile nowrap">EstNOC-Global</td>
+                                </tr>
+                                
+                                <tr id="pfx-185.227.68.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="FI" src="/assets/flags/FI.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/185.227.68.0/24">185.227.68.0/24</a></td>
+                                    <td class="smallonmobile nowrap">EstNOC-Global</td>
+                                </tr>
+                                
+                                <tr id="pfx-185.234.73.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="PL" src="/assets/flags/PL.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/185.234.73.0/24">185.234.73.0/24</a></td>
+                                    <td class="smallonmobile nowrap">EstNOC-Global</td>
+                                </tr>
+                                
+                                <tr id="pfx-192.159.100.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="NL" src="/assets/flags/NL.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/192.159.100.0/24">192.159.100.0/24</a></td>
+                                    <td class="smallonmobile nowrap">RIPE Network Coordination Centre</td>
+                                </tr>
+                                
+                                <tr id="pfx-193.36.116.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="DK" src="/assets/flags/DK.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/193.36.116.0/24">193.36.116.0/24</a></td>
+                                    <td class="smallonmobile nowrap">EstNOC-Global</td>
+                                </tr>
+                                
+                                <tr id="pfx-193.36.117.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CH" src="/assets/flags/CH.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/193.36.117.0/24">193.36.117.0/24</a></td>
+                                    <td class="smallonmobile nowrap">EstNOC-Global</td>
+                                </tr>
+                                
+                                <tr id="pfx-193.36.118.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="GB" src="/assets/flags/GB.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/193.36.118.0/24">193.36.118.0/24</a></td>
+                                    <td class="smallonmobile nowrap">EstNOC-Global</td>
+                                </tr>
+                                
+                                <tr id="pfx-195.80.149.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KH" src="/assets/flags/KH.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/195.80.149.0/24">195.80.149.0/24</a></td>
+                                    <td class="smallonmobile nowrap">ESTNOC-Global</td>
+                                </tr>
+                                
+                                <tr id="pfx-195.80.150.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="SI" src="/assets/flags/SI.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/195.80.150.0/24">195.80.150.0/24</a></td>
+                                    <td class="smallonmobile nowrap">ESTNOC-Global</td>
+                                </tr>
+                                
+                                <tr id="pfx-195.80.151.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="BG" src="/assets/flags/BG.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/195.80.151.0/24">195.80.151.0/24</a></td>
+                                    <td class="smallonmobile nowrap">ESTNOC-Global</td>
+                                </tr>
+                                
+                                <tr id="pfx-198.181.163.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="LV" src="/assets/flags/LV.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/198.181.163.0/24">198.181.163.0/24</a></td>
+                                    <td class="smallonmobile nowrap">NETPR-RIX-EE</td>
+                                </tr>
+                                
+                                <tr id="pfx-37.77.56.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="EE" src="/assets/flags/EE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/37.77.56.0/24">37.77.56.0/24</a></td>
+                                    <td class="smallonmobile nowrap">ESTNOC-GLOBAL</td>
+                                </tr>
+                                
+                                <tr id="pfx-45.86.201.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="IS" src="/assets/flags/IS.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/45.86.201.0/24">45.86.201.0/24</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-45.129.33.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CZ" src="/assets/flags/CZ.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/45.129.33.0/24">45.129.33.0/24</a></td>
+                                    <td class="smallonmobile nowrap">EstNOC-Global</td>
+                                </tr>
+                                
+                                <tr id="pfx-45.139.48.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="HR" src="/assets/flags/HR.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/45.139.48.0/24">45.139.48.0/24</a></td>
+                                    <td class="smallonmobile nowrap">EstNOC-Global</td>
+                                </tr>
+                                
+                                <tr id="pfx-45.139.49.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="FR" src="/assets/flags/FR.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/45.139.49.0/24">45.139.49.0/24</a></td>
+                                    <td class="smallonmobile nowrap">ESTNOC-GLOBAL</td>
+                                </tr>
+                                
+                                <tr id="pfx-91.196.68.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="SK" src="/assets/flags/SK.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/91.196.68.0/24">91.196.68.0/24</a></td>
+                                    <td class="smallonmobile nowrap">EstNOC-Global</td>
+                                </tr>
+                                
+                                <tr id="pfx-91.196.70.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="DE" src="/assets/flags/DE.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/91.196.70.0/24">91.196.70.0/24</a></td>
+                                    <td class="smallonmobile nowrap">EstNOC-Global</td>
+                                </tr>
+                                
+                                <tr id="pfx-173.255.174.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="GR" src="/assets/flags/GR.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/173.255.174.0/24">173.255.174.0/24</a></td>
+                                    <td class="smallonmobile nowrap">STL-ATH-EE</td>
+                                </tr>
+                                
+                                <tr id="pfx-193.36.119.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="TW" src="/assets/flags/TW.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/193.36.119.0/24">193.36.119.0/24</a></td>
+                                    <td class="smallonmobile nowrap">EstNOC-Global</td>
+                                </tr>
+                                
+                                <tr id="pfx-195.80.148.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="TW" src="/assets/flags/TW.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/195.80.148.0/24">195.80.148.0/24</a></td>
+                                    <td class="smallonmobile nowrap">EstNOC-Global</td>
+                                </tr>
+                                
+                                <tr id="pfx-2001:1548:206::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="GR" src="/assets/flags/GR.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2001:1548:206::/48">2001:1548:206::/48</a></td>
+                                    <td class="smallonmobile nowrap">SYNAPSECOM S.A. Provider of Telecommunications and In...</td>
+                                </tr>
+                                
+                                <tr id="pfx-2401:eaa0:1::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="SG" src="/assets/flags/SG.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2401:eaa0:1::/48">2401:eaa0:1::/48</a></td>
+                                    <td class="smallonmobile nowrap">EstNOC-Global</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a01:1b8:5::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="EE" src="/assets/flags/EE.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/2a01:1b8:5::/48">2a01:1b8:5::/48</a></td>
+                                    <td class="smallonmobile nowrap">Tele2 Sverige AB</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a03:efc0:2100::/40">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="GR" src="/assets/flags/GR.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a03:efc0:2100::/40">2a03:efc0:2100::/40</a></td>
+                                    <td class="smallonmobile nowrap">Athens, Greece</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a0b:b87:ffd7::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="FI" src="/assets/flags/FI.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a0b:b87:ffd7::/48">2a0b:b87:ffd7::/48</a></td>
+                                    <td class="smallonmobile nowrap">EstNOC-Finland</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a0e:4940:1::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="IS" src="/assets/flags/IS.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/2a0e:4940:1::/48">2a0e:4940:1::/48</a></td>
+                                    <td class="smallonmobile nowrap">ESTNOC-GLOBAL</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a0e:4940:2::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="GB" src="/assets/flags/GB.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/2a0e:4940:2::/48">2a0e:4940:2::/48</a></td>
+                                    <td class="smallonmobile nowrap">ESTNOC-GLOBAL</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a0e:4940:3::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="BE" src="/assets/flags/BE.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/2a0e:4940:3::/48">2a0e:4940:3::/48</a></td>
+                                    <td class="smallonmobile nowrap">ESTNOC-GLOBAL</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a0e:4940:4::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="LV" src="/assets/flags/LV.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/2a0e:4940:4::/48">2a0e:4940:4::/48</a></td>
+                                    <td class="smallonmobile nowrap">ESTNOC-GLOBAL</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a0e:4940:5::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="KR" src="/assets/flags/KR.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/2a0e:4940:5::/48">2a0e:4940:5::/48</a></td>
+                                    <td class="smallonmobile nowrap">ESTNOC-GLOBAL</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a0e:4940:6::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="DE" src="/assets/flags/DE.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/2a0e:4940:6::/48">2a0e:4940:6::/48</a></td>
+                                    <td class="smallonmobile nowrap">ESTNOC-GLOBAL</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div style="display: none" id="connectivity-page">
+
+                        <div class="grid-row">
+
+                            <dl class="column-two-thirds">
+                                <dt><a href="#upstreams">Upstreams</a></dt>
+                                <dd class="text data">
+                                    17
+                                </dd>
+                            </dl>
+
+                            <dl class="column-third">
+                                <dt><a href="#peers">Peers</a></dt>
+                                <dd class="data">33</dd>
+                            </dl>
+                        </div>
+
+
+                        <hr>
+                        <h3>Network Policy<img class="flag-img" src="/assets/info.png" style="padding-left: 12px;" title="This info can take up to 2 hours to fully update" alt="This info take up to 2 hours to fully update"/></h3></h3>
+                        <a style="font-size: small;" href="/kb/network-policy">Click here to learn more about what this graph means and what makes up a network policy</a>
+
+                        <select id="netpolicydropdown" class="dropdownmenu">
+                            
+                                <option disabled=true value="disabled-default">Global Aggregation (disabled due to size)</option>
+                            
+
+                            
+                                
+                            
+                                
+                                <option value="29620d3bfd20066a961deb47ebfd87ab633c87d6631552efd0ddffc8">Policy serene_volhard</option>
+                                
+                            
+                                
+                                <option value="610f699cd5d90267da65f751bbe67aa0f0ea7e9256c1fbc06942b6c8">Policy mystifying_aryabhata</option>
+                                
+                            
+                                
+                                <option selected value="9b7c1307e482c9f2defb10db5a327dde629445918ebab95d991451d6">Policy hardcore_goldstine</option>
+                                
+                            
+                                
+                                <option value="de21dcaf15fd5a616350227a7f9b4d0ff74933b025aac1e79c540a8d">Policy gifted_benz</option>
+                                
+                            
+                                
+                                <option value="f2ba6c8045220c0b9b916c9749ef4157cef8a2faf22cb246c0e5751f">Policy quirky_kare</option>
+                                
+                            
+                                
+                                <option value="02c4c95dcdeb06a6dfb9b71f242f13c104f058a3454cf320a2e421d4">Policy confident_moser</option>
+                                
+                            
+                                
+                                <option value="2ecc882499e2317a302984bcc1143e70701ae527af3c49fd310e26d5">Policy awesome_kare</option>
+                                
+                            
+                                
+                                <option value="684d9df6c8f81f5d22e9792484fbffd8c06902eb650bd8ff3a20314d">Policy pensive_bhaskara</option>
+                                
+                            
+                                
+                                <option value="b38b225484e581e3f1c10520f08e3d7bcbfdd09cf7d1271b849f98b8">Policy eloquent_maxwell</option>
+                                
+                            
+                                
+                                <option value="8c1527e13961446dce9ab66fed5e7c4856328da31b06c999d9393c89">Policy vibrant_germain</option>
+                                
+                            
+                                
+                                <option value="957ce0e6faf387bd4e1399642477f7f4d393e150fd6356ea8a05548b">Policy happy_haibt</option>
+                                
+                            
+                                
+                                <option value="99b1d18129222a3c83337f498c1b67849b054e4254b11f0e15e47196">Policy epic_clifford</option>
+                                
+                            
+                                
+                                <option value="aab0840bdefdc03ddbcb36aac698916b6384ee3b387ae55b07464930">Policy serene_ganguly</option>
+                                
+                            
+                                
+                                <option value="f0e773350238737532c23924c855d57f4f62e50ff89e7e2bc42da7b3">Policy elated_kalam</option>
+                                
+                            
+                                
+                                <option value="31dc5cb1742520c2cf5f78474f183c6324da0d116064a0ad17a48f68">Policy upbeat_hamilton</option>
+                                
+                            
+                                
+                                <option value="6ac158b7448024e380ffd4088ee580d48319ac726340d14e8d6322f9">Policy cool_darwin</option>
+                                
+                            
+                                
+                                <option value="81a9aa7eef08950d0971dc45ba09eabc89e4546ca0d18c7ec9114742">Policy brave_stallman</option>
+                                
+                            
+                                
+                                <option value="f4ad276ffc9e4ec035107252f5d5bee32883ac3d681974d5648d0ae4">Policy relaxed_mestorf</option>
+                                
+                            
+                                
+                                <option value="31539ba5d2210c6417ce3e52c468000964a09be00042c219ba3ae99b">Policy festive_matsumoto</option>
+                                
+                            
+                                
+                                <option value="8cc0358a84f66e7f86b399ed6c5f9d8f43c01a0d5d05ded665912ca2">Policy nostalgic_payne</option>
+                                
+                            
+                                
+                                <option value="1d562ad9c572381205c1771115f15426a27aa5691c4e41cfd0704fe2">Policy practical_feynman</option>
+                                
+                            
+                                
+                                <option value="3815f81558f41f007cb3754ccfa649ed0927d871ff3cf7847ca8af46">Policy laughing_mestorf</option>
+                                
+                            
+                                
+                                <option value="9894324ca9d60daf898d303c1dbeab81cf5dc3c27948bdb3cb7350bc">Policy romantic_rhodes</option>
+                                
+                            
+                                
+                                <option value="c262261d572bd7a4a7ef3bf79a1d0a1d5d936df5d93d0027f001ab54">Policy jolly_fermat</option>
+                                
+                            
+                                
+                                <option value="e43aa4e9245b26de269ff430455ca1023afd3a343876771a76358b1b">Policy stoic_jang</option>
+                                
+                            
+
+                            
+
+
+                        </select>
+
+                        <script>var netgroups = {"02c4c95dcdeb06a6dfb9b71f242f13c104f058a3454cf320a2e421d4":["45.138.86.0/24"],"1d562ad9c572381205c1771115f15426a27aa5691c4e41cfd0704fe2":["91.196.70.0/24"],"29620d3bfd20066a961deb47ebfd87ab633c87d6631552efd0ddffc8":["2a0e:4940:3::/48","2a0b:b87:ffd7::/48"],"2ecc882499e2317a302984bcc1143e70701ae527af3c49fd310e26d5":["2a0e:4940:6::/48"],"31539ba5d2210c6417ce3e52c468000964a09be00042c219ba3ae99b":["141.98.215.0/24","45.146.223.0/24"],"31dc5cb1742520c2cf5f78474f183c6324da0d116064a0ad17a48f68":["178.73.220.0/24","46.246.1.0/24"],"3815f81558f41f007cb3754ccfa649ed0927d871ff3cf7847ca8af46":["193.36.119.0/24","195.80.148.0/24","192.159.100.0/24","141.98.212.0/24"],"610f699cd5d90267da65f751bbe67aa0f0ea7e9256c1fbc06942b6c8":["173.255.174.0/24","185.51.134.0/24"],"684d9df6c8f81f5d22e9792484fbffd8c06902eb650bd8ff3a20314d":["2a0e:4940:1::/48"],"6ac158b7448024e380ffd4088ee580d48319ac726340d14e8d6322f9":["85.203.39.0/24"],"81a9aa7eef08950d0971dc45ba09eabc89e4546ca0d18c7ec9114742":["45.146.221.0/24"],"8c1527e13961446dce9ab66fed5e7c4856328da31b06c999d9393c89":["2a01:1b8:5::/48"],"8cc0358a84f66e7f86b399ed6c5f9d8f43c01a0d5d05ded665912ca2":["185.234.73.0/24"],"957ce0e6faf387bd4e1399642477f7f4d393e150fd6356ea8a05548b":["198.181.163.0/24","176.96.226.0/24"],"9894324ca9d60daf898d303c1dbeab81cf5dc3c27948bdb3cb7350bc":["2401:eaa0:1::/48"],"99b1d18129222a3c83337f498c1b67849b054e4254b11f0e15e47196":["45.133.194.0/24","193.36.118.0/24","141.98.213.0/24"],"9b7c1307e482c9f2defb10db5a327dde629445918ebab95d991451d6":["45.129.33.0/24","91.196.68.0/24","45.138.87.0/24","193.36.117.0/24","45.128.135.0/24","37.77.60.0/24","45.128.133.0/24","45.138.84.0/24","185.209.220.0/24","193.36.116.0/24","45.138.85.0/24","185.90.60.0/24","45.128.132.0/24","45.128.134.0/24","45.133.195.0/24","185.227.68.0/24","45.139.48.0/24","45.139.49.0/24","141.98.214.0/24"],"aab0840bdefdc03ddbcb36aac698916b6384ee3b387ae55b07464930":["103.140.186.0/24","195.80.149.0/24"],"b38b225484e581e3f1c10520f08e3d7bcbfdd09cf7d1271b849f98b8":["185.221.132.0/24"],"c262261d572bd7a4a7ef3bf79a1d0a1d5d936df5d93d0027f001ab54":["2a0e:4940:2::/48","2a0e:4940:5::/48"],"de21dcaf15fd5a616350227a7f9b4d0ff74933b025aac1e79c540a8d":["2001:1548:206::/48","2a03:efc0:2100::/40"],"e43aa4e9245b26de269ff430455ca1023afd3a343876771a76358b1b":["103.140.187.0/24"],"f0e773350238737532c23924c855d57f4f62e50ff89e7e2bc42da7b3":["2a0e:4940:4::/48"],"f2ba6c8045220c0b9b916c9749ef4157cef8a2faf22cb246c0e5751f":["195.80.151.0/24","45.146.222.0/24"],"f4ad276ffc9e4ec035107252f5d5bee32883ac3d681974d5648d0ae4":["45.133.192.0/23","45.86.201.0/24"]}</script>
+
+                        <div style="text-align: center;">
+                            <img id="pathimg" usemap="#world" src="">
+                            <div id="world2"></div>
+                        </div>
+
+                        <details>
+                            <summary>Chart Display Options</summary>
+                            <noscript>This requires javascript to work</noscript>
+                            <label for="graphOptionMoreWiggle" style="display: flex;align-items: center;font-size: 20px;">
+                                <input type="checkbox" id="graphOptionMoreWiggle" name="graphOptionMoreWiggle" style="width: 64px; height: 32px;">
+                                    <p id="graphOptionMoreWiggleLabel" style="width: 200%;">Display links using non straight lines</p>
+                            </label>
+                        </details>
+
+                        <h3 style="display: none;" id="PISPBanner">Prefixes in selected policy</h3>
+                        <table id="policytable" class="full-width-table">
+                        </table>
+                        <button style="width:100%;display: none;" id="ShowFullPolicyButton" class="bigButton" onclick="dropdownPoke()">Load all prefixes in policy</button>
+
+                        <script>
+                            !function(a,b){"function"==typeof define&&define.amd?define([],b):"undefined"!=typeof module&&module.exports?module.exports=b():a.ReconnectingWebSocket=b()}(this,function(){function a(b,c,d){function l(a,b){var c=document.createEvent("CustomEvent");return c.initCustomEvent(a,!1,!1,b),c}var e={debug:!1,automaticOpen:!0,reconnectInterval:1e3,maxReconnectInterval:3e4,reconnectDecay:1.5,timeoutInterval:2e3};d||(d={});for(var f in e)this[f]="undefined"!=typeof d[f]?d[f]:e[f];this.url=b,this.reconnectAttempts=0,this.readyState=WebSocket.CONNECTING,this.protocol=null;var h,g=this,i=!1,j=!1,k=document.createElement("div");k.addEventListener("open",function(a){g.onopen(a)}),k.addEventListener("close",function(a){g.onclose(a)}),k.addEventListener("connecting",function(a){g.onconnecting(a)}),k.addEventListener("message",function(a){g.onmessage(a)}),k.addEventListener("error",function(a){g.onerror(a)}),this.addEventListener=k.addEventListener.bind(k),this.removeEventListener=k.removeEventListener.bind(k),this.dispatchEvent=k.dispatchEvent.bind(k),this.open=function(b){h=new WebSocket(g.url,c||[]),b||k.dispatchEvent(l("connecting")),(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","attempt-connect",g.url);var d=h,e=setTimeout(function(){(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","connection-timeout",g.url),j=!0,d.close(),j=!1},g.timeoutInterval);h.onopen=function(){clearTimeout(e),(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","onopen",g.url),g.protocol=h.protocol,g.readyState=WebSocket.OPEN,g.reconnectAttempts=0;var d=l("open");d.isReconnect=b,b=!1,k.dispatchEvent(d)},h.onclose=function(c){if(clearTimeout(e),h=null,i)g.readyState=WebSocket.CLOSED,k.dispatchEvent(l("close"));else{g.readyState=WebSocket.CONNECTING;var d=l("connecting");d.code=c.code,d.reason=c.reason,d.wasClean=c.wasClean,k.dispatchEvent(d),b||j||((g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","onclose",g.url),k.dispatchEvent(l("close")));var e=g.reconnectInterval*Math.pow(g.reconnectDecay,g.reconnectAttempts);setTimeout(function(){g.reconnectAttempts++,g.open(!0)},e>g.maxReconnectInterval?g.maxReconnectInterval:e)}},h.onmessage=function(b){(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","onmessage",g.url,b.data);var c=l("message");c.data=b.data,k.dispatchEvent(c)},h.onerror=function(b){(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","onerror",g.url,b),k.dispatchEvent(l("error"))}},1==this.automaticOpen&&this.open(!1),this.send=function(b){if(h)return(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","send",g.url,b),h.send(b);throw"INVALID_STATE_ERR : Pausing to reconnect websocket"},this.close=function(a,b){"undefined"==typeof a&&(a=1e3),i=!0,h&&h.close(a,b)},this.refresh=function(){h&&h.close()}}return a.prototype.onopen=function(){},a.prototype.onclose=function(){},a.prototype.onconnecting=function(){},a.prototype.onmessage=function(){},a.prototype.onerror=function(){},a.debugAll=!1,a.CONNECTING=WebSocket.CONNECTING,a.OPEN=WebSocket.OPEN,a.CLOSING=WebSocket.CLOSING,a.CLOSED=WebSocket.CLOSED,a});
+                        </script>
+                        
+                        <script>
+                            var prefixinfo = [{"PrefixString":"37.0.12.0/24","WhoisName":"ESTNOC-GLOBAL","WhoisCountry":"MY"},{"PrefixString":"37.77.60.0/24","WhoisName":"ESTNOC-GLOBAL","WhoisCountry":"HU"},{"PrefixString":"45.128.132.0/24","WhoisName":"EstNOC-Global","WhoisCountry":"ES"},{"PrefixString":"45.128.133.0/24","WhoisName":"EstNOC-Global","WhoisCountry":"BE"},{"PrefixString":"45.128.134.0/24","WhoisName":"EstNOC-GLOBAL","WhoisCountry":"FR"},{"PrefixString":"45.128.135.0/24","WhoisName":"EstNOC-Global","WhoisCountry":"NL"},{"PrefixString":"45.133.192.0/23","WhoisName":"EstNOC-Global","WhoisCountry":"IS"},{"PrefixString":"45.133.194.0/24","WhoisName":"ESTNOC-GLOBAL","WhoisCountry":"KR"},{"PrefixString":"45.133.195.0/24","WhoisName":"EstNOC-Global","WhoisCountry":"NO"},{"PrefixString":"45.138.84.0/24","WhoisName":"EstNOC-Global","WhoisCountry":"IT"},{"PrefixString":"45.138.85.0/24","WhoisName":"EstNOC-Global","WhoisCountry":"DK"},{"PrefixString":"45.138.86.0/24","WhoisName":"ESTNOC-GLOBAL","WhoisCountry":"KE"},{"PrefixString":"45.138.87.0/24","WhoisName":"EstNOC-Global","WhoisCountry":"RO"},{"PrefixString":"45.146.221.0/24","WhoisName":"EstNOC-Global","WhoisCountry":"GB"},{"PrefixString":"45.146.222.0/24","WhoisName":"ESTNOC-Global","WhoisCountry":"RS"},{"PrefixString":"45.146.223.0/24","WhoisName":"EstNOC-Global","WhoisCountry":"PH"},{"PrefixString":"46.246.1.0/24","WhoisName":"Swedish Infra","WhoisCountry":"SE"},{"PrefixString":"85.203.39.0/24","WhoisName":"EstNOC-Global","WhoisCountry":"LV"},{"PrefixString":"103.140.186.0/24","WhoisName":"EstNOC-GLOBAL","WhoisCountry":"SG"},{"PrefixString":"103.140.187.0/24","WhoisName":"EstNOC-GLOBAL","WhoisCountry":"JP"},{"PrefixString":"141.98.212.0/24","WhoisName":"EstNOC-Global","WhoisCountry":"HK"},{"PrefixString":"141.98.213.0/24","WhoisName":"EstNOC-Global","WhoisCountry":"KR"},{"PrefixString":"141.98.214.0/24","WhoisName":"EstNOC-Global","WhoisCountry":"AT"},{"PrefixString":"141.98.215.0/24","WhoisName":"EstNOC-Global","WhoisCountry":"PH"},{"PrefixString":"176.96.226.0/24","WhoisName":"EstNOC-Global","WhoisCountry":"RU"},{"PrefixString":"178.73.220.0/24","WhoisName":"Swedish Infra","WhoisCountry":"SE"},{"PrefixString":"185.51.134.0/24","WhoisName":"-","WhoisCountry":"GR"},{"PrefixString":"185.90.60.0/24","WhoisName":"EstNOC-Global","WhoisCountry":"EE"},{"PrefixString":"185.209.220.0/24","WhoisName":"EstNOC-Global","WhoisCountry":"BE"},{"PrefixString":"185.221.132.0/24","WhoisName":"EstNOC-Global","WhoisCountry":"LU"},{"PrefixString":"185.227.68.0/24","WhoisName":"EstNOC-Global","WhoisCountry":"FI"},{"PrefixString":"185.234.73.0/24","WhoisName":"EstNOC-Global","WhoisCountry":"PL"},{"PrefixString":"192.159.100.0/24","WhoisName":"RIPE Network Coordination Centre","WhoisCountry":"NL"},{"PrefixString":"193.36.116.0/24","WhoisName":"EstNOC-Global","WhoisCountry":"DK"},{"PrefixString":"193.36.117.0/24","WhoisName":"EstNOC-Global","WhoisCountry":"CH"},{"PrefixString":"193.36.118.0/24","WhoisName":"EstNOC-Global","WhoisCountry":"GB"},{"PrefixString":"195.80.149.0/24","WhoisName":"ESTNOC-Global","WhoisCountry":"KH"},{"PrefixString":"195.80.150.0/24","WhoisName":"ESTNOC-Global","WhoisCountry":"SI"},{"PrefixString":"195.80.151.0/24","WhoisName":"ESTNOC-Global","WhoisCountry":"BG"},{"PrefixString":"198.181.163.0/24","WhoisName":"NETPR-RIX-EE","WhoisCountry":"LV"},{"PrefixString":"37.77.56.0/24","WhoisName":"ESTNOC-GLOBAL","WhoisCountry":"EE"},{"PrefixString":"45.86.201.0/24","WhoisName":"-","WhoisCountry":"IS"},{"PrefixString":"45.129.33.0/24","WhoisName":"EstNOC-Global","WhoisCountry":"CZ"},{"PrefixString":"45.139.48.0/24","WhoisName":"EstNOC-Global","WhoisCountry":"HR"},{"PrefixString":"45.139.49.0/24","WhoisName":"ESTNOC-GLOBAL","WhoisCountry":"FR"},{"PrefixString":"91.196.68.0/24","WhoisName":"EstNOC-Global","WhoisCountry":"SK"},{"PrefixString":"91.196.70.0/24","WhoisName":"EstNOC-Global","WhoisCountry":"DE"},{"PrefixString":"173.255.174.0/24","WhoisName":"STL-ATH-EE","WhoisCountry":"GR"},{"PrefixString":"193.36.119.0/24","WhoisName":"EstNOC-Global","WhoisCountry":"TW"},{"PrefixString":"195.80.148.0/24","WhoisName":"EstNOC-Global","WhoisCountry":"TW"},{"PrefixString":"2001:1548:206::/48","WhoisName":"SYNAPSECOM S.A. Provider of Telecommunications and In...","WhoisCountry":"GR"},{"PrefixString":"2401:eaa0:1::/48","WhoisName":"EstNOC-Global","WhoisCountry":"SG"},{"PrefixString":"2a01:1b8:5::/48","WhoisName":"Tele2 Sverige AB","WhoisCountry":"EE"},{"PrefixString":"2a03:efc0:2100::/40","WhoisName":"Athens, Greece","WhoisCountry":"GR"},{"PrefixString":"2a0b:b87:ffd7::/48","WhoisName":"EstNOC-Finland","WhoisCountry":"FI"},{"PrefixString":"2a0e:4940:1::/48","WhoisName":"ESTNOC-GLOBAL","WhoisCountry":"IS"},{"PrefixString":"2a0e:4940:2::/48","WhoisName":"ESTNOC-GLOBAL","WhoisCountry":"GB"},{"PrefixString":"2a0e:4940:3::/48","WhoisName":"ESTNOC-GLOBAL","WhoisCountry":"BE"},{"PrefixString":"2a0e:4940:4::/48","WhoisName":"ESTNOC-GLOBAL","WhoisCountry":"LV"},{"PrefixString":"2a0e:4940:5::/48","WhoisName":"ESTNOC-GLOBAL","WhoisCountry":"KR"},{"PrefixString":"2a0e:4940:6::/48","WhoisName":"ESTNOC-GLOBAL","WhoisCountry":"DE"}]
+                            var asn =  206804 
+
+                            var pfxExtraString = "";
+
+                            function saveGraphOptionsToLocalStorage() {
+                                localStorage.setItem("pfx-chart-options:wiggle", document.getElementById("graphOptionMoreWiggle").checked);
+                            }
+
+                            function loadGraphOptionsToLocalStorage() {
+                                document.getElementById("graphOptionMoreWiggle").checked = localStorage.getItem("pfx-chart-options:wiggle") == "true";
+                                pfxExtraString= "";
+                                if (document.getElementById("graphOptionMoreWiggle").checked) {
+                                    pfxExtraString = pfxExtraString + "&wiggly";
+                                }
+                            }
+                            loadGraphOptionsToLocalStorage();
+
+                            function graphOptionsChanged() {
+                                saveGraphOptionsToLocalStorage();
+                                handleImageChange();
+                            }
+                            document.getElementById("graphOptionMoreWiggle").addEventListener("click", graphOptionsChanged)
+
+
+                            function handleImageChange() {
+                                loadGraphOptionsToLocalStorage();
+                                
+                                document.getElementById("pathimg").src=("/pathimg/"+asn+ "-" + document.getElementById("netpolicydropdown").value +"?"+pfxExtraString);
+                                var request = new XMLHttpRequest();
+                                request.open('GET', "/pathimg/"+asn+ "-" + document.getElementById("netpolicydropdown").value + "?map=true" + pfxExtraString, true);
+
+                                request.onload = function() {
+                                    if (this.status >= 200 && this.status < 400) {
+                                        
+                                        
+                                        document.getElementById("world2").innerHTML = this.response;
+                                        setTimeout(function(){
+                                            imageMapResize('#world');
+                                        },1000)
+                                    }
+                                };
+                                request.send();
+                                buildPrefixTable();
+                            } 
+
+                            function encodeHTML(s) {
+                                return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
+                            }
+
+                            function dropdownPoke(){
+                                InteractedWithPolicyTableYet=true;
+                                handleImageChange();
+                            }
+
+                            var InteractedWithPolicyTableYet = false;
+                            var OverloadPolicySize = 0;
+                            function buildPrefixTable() {
+                                var policy = document.getElementById("netpolicydropdown").value;
+                                
+                                var cidrs = netgroups[policy];
+                                var ihtml = "<tbody> <tr> <th class=\"nowrap\">  -  </th> <th>Prefix</th> <th class=\"nowrap\">Description</th> </tr>";
+
+                                
+                                var aaa = document.querySelectorAll('#PISPBanner');
+                                var bbb = document.querySelectorAll('#policytable');
+                                var n = 0
+                                if (cidrs) {
+                                    aaa[0].style.display = "";
+                                    bbb[0].style.display = "";
+                                    cidrs.forEach(cidr => {
+                                        var obj = {};
+                                        var dont =false;
+                                        n++;
+                                        
+                                        if (!InteractedWithPolicyTableYet) {
+                                            if (n == 5) {
+                                                dont = true;
+                                            } else if (n > 5) {
+                                                dont = true;
+                                            }
+                                        }
+                                        
+                                        if (!dont) {
+                                            prefixinfo.forEach(el => {
+                                                if(el.PrefixString == cidr) {
+                                                    
+                                                        ihtml += "<tr><td class=\"nowrap ns\"><img class=\"flag-img\" src=\"/assets/flags/"+el.WhoisCountry+".png\" title=\""+el.WhoisCountry+"\"></td>"
+                                                        ihtml += "<td><a href=\"/prefix/"+el.PrefixString+"\">"+el.PrefixString+"</a></td>"
+                                                        ihtml += "<td class=\"nowrap\">"+encodeHTML(el.WhoisName)+"</td></tr>"
+                                                }
+                                            });
+                                        } else {
+                                            OverloadPolicySize++;
+                                        }
+                                    });
+                                    document.getElementById("policytable").innerHTML = ihtml
+                                    var PolButton = document.querySelectorAll('#ShowFullPolicyButton');
+                                    if (!InteractedWithPolicyTableYet && OverloadPolicySize!=0) {
+                                        PolButton[0].style="width:100%";
+                                        PolButton[0].innerHTML = "Load all "+OverloadPolicySize+" prefixes in policy"
+                                    } else {
+                                        PolButton[0].style="display:none;";
+                                    }
+                                    
+                                } else {
+                                    aaa[0].style.display = "none";
+                                    bbb[0].style.display = "none";
+                                }
+                            }
+
+
+                            var pathdropdown = document.querySelectorAll('#netpolicydropdown');
+                            pathdropdown[0].addEventListener("change",dropdownPoke)
+                            handleImageChange()
+                            buildPrefixTable()
+
+                            document.addEventListener("load", function(){
+                                
+                                handleImageChange()
+                            });
+
+                            function uuidv4() {
+                                return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+                                    var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+                                    return v.toString(16);
+                                });
+                            }
+
+                            
+                            let realTimeSocket = new ReconnectingWebSocket("wss://bgp.tools/ws/rt-asn?prefix=AS206804" + "&magic=" + encodeURIComponent("EZ7T5KCMLWQDBOODOYHC66KQA7RYAXLMJBKWBAGXC7AX75XQ4TLQ===="));
+                            
+                            realTimeSocket.onmessage = function(event) {
+                                console.log(`[message] Data received from server: ${event.data}`);
+                                if (event.data == "Running.") {
+                                    document.getElementById("ws-status").src = "/assets/connected.png";
+                                    document.getElementById("ws-status").title = "Connected to realtime data";
+                                } else if (event.data == "STOP-CONNECTING") {
+                                    document.getElementById("ws-status").src = disconectedIcon;
+                                    document.getElementById("ws-status").title = "Not connected to realtime data";
+                                    realTimeSocket.maxReconnectAttempts = 1;
+                                    realTimeSocket.close()
+                                } else {
+                                    var obj = JSON.parse(event.data);
+                                    var elm = document.getElementById("pfx-"+obj.Prefix);
+                                    if (!elm && obj.Vis > 6) {
+                                        var tblist = document.getElementById("donotscrapebgptools-prefixlist-tbody");
+                                        var node = document.createElement("tr");                 
+                                        node.outerHTML = '<tr id="pfx-'+obj.Prefix+'"><td class="nowrap"><img class="flag-img" src="/assets/flags/'+obj.Whois.WhoisCountry+'.png" title="'+obj.Whois.WhoisCountry+'"></td><td><a href="/prefix/'+obj.Prefix+'">'+obj.Prefix+'</a></td><td class="smallonmobile nowrap">'+obj.Whois.WhoisName+'</td></tr>';
+                                        tblist.appendChild(node);                              
+                                    }
+                                    if (!elm) {
+                                        elm = document.getElementById("pfx-"+obj.Prefix);
+                                    }
+                                    
+                                    if (obj.Vis > 70) {
+                                        if (elm.style) {
+                                            var es = elm.style;
+                                            if (es.animation.includes("pulse1b")) {
+                                                elm.style = "animation: pulse2b 1s 1;";
+                                            } else if (es.animation.includes("pulse2b")) {
+                                                elm.style = "animation: pulse1b 1s 1;";
+                                            } else {
+                                                elm.style = "animation: pulse1b 1s 1;";
+                                            }
+                                        }
+                                    } else if (obj.Vis < 5) {
+                                        
+                                        var elm = document.getElementById("pfx-"+obj.Prefix);
+                                        if (elm) {
+                                            elm.parentNode.removeChild(elm);
+                                        }
+                                    } else {
+                                        if (elm.style) {
+                                            var es = elm.style;
+                                            if (es.animation.includes("pulse1r")) {
+                                                elm.style = "animation: pulse2r 1s 1;";
+                                            } else if (es.animation.includes("pulse2r")) {
+                                                elm.style = "animation: pulse1r 1s 1;";
+                                            } else {
+                                                elm.style = "animation: pulse1r 1s 1;";
+                                            }
+                                        }
+                                    }
+                                }
+                            };
+                            var disconectedIcon = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAAZlBMVEX/ewBZWVn/ewf/ew5fWljudiP8egp6XVT6eRHodSmVYU6hZEzObjrldCv3eRZ/XlNjWliHX1KrZkngci71eBl1XFXCa0CKYFHydx18XlSQYE+lZUq0aEbJbT3SbzhvXFaLYFG8akLYdYVFAAABQElEQVRIx5XV25KDIAwGYIKASLutqOtZ277/S26xK4ozJea/qRdfajATZaRkd6B6oPoL1d9QphUn+WvXmGF8TfN8yvNrDj6nvNj5Hu8n8HCh9ONiON5PEKuQx55DmFTHC1R9uMOjYkhFERbkEikofw8FGe5t0FWJ+kLvz5H+t8RdGD9k8TeebBXpzwIZT955XyVBtHHeXYzeJy5fhydtoZffZvUMSfvxT4BOeI/G/b9paxH1at8XQF8xNcV8aaQvHQBMhY/XttsdYp5nah3XdvIqui61Cjy+jqLwXp1cx9XLQZ5cR/vx1p8cez2IWrlxYY/T9bNVyCfmdQdbxNgs441FNRAEHS83oe9ahmTw1p88nhHCiAkpeIUeX5eJ6NlM9Gwm+uxO9/3F2PSR597jn1+udCWzUp7150P1jOoZ1f8BGPARG85JosIAAAAASUVORK5CYII=";
+                            realTimeSocket.onerror = function(error) {
+                                document.getElementById("ws-status").src = disconectedIcon;
+                                document.getElementById("ws-status").title = "Not connected to realtime data";
+
+                                console.log(`[error] ${error.message}`);
+                            };
+                            realTimeSocket.onclose = function(error) {
+                                document.getElementById("ws-status").src = disconectedIcon;
+                                document.getElementById("ws-status").title = "Not connected to realtime data";
+
+                                console.log(`[error] ${error.message}`);
+                            };
+                        </script>
+
+<div class="superclearfix">
+    
+</div>
+
+                        <hr>
+                        <a style="font-size: small;" href="/kb/what-is-a-upstream">How are upstreams and downstreams calculated?</a>
+                        <h3 id="upstreams">Upstreams<img class="flag-img" src="/assets/lightning.png" style="padding-left: 12px;" title="This information was fetched live at page load time" alt="This information was fetched live at page load time"/></h3>
+
+
+                        <table id="donotscrapebgptools-upstreamTable" class="full-width-table">
+                            <thead class="sortable">
+                                <tr>
+                                    <th class="nowrap boldpls">  &nbsp;  </th>
+                                    <th data-sort-method='number' class="boldpls">ASN</th>
+                                    <th class="nowrap boldpls">Description</th>
+                                    <th class="nowrap boldpls">IPv4</th>
+                                    <th class="nowrap boldpls">IPv6</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US">
+                                        
+                                        </td>
+                                    <td data-sort='3356'><a href="/as/3356">AS3356</a></td>
+                                    <td class="smallonmobile nowrap">Lumen (Level 3)</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US">
+                                        
+                                        </td>
+                                    <td data-sort='3491'><a href="/as/3491">AS3491</a></td>
+                                    <td class="smallonmobile nowrap">PCCW Global, Inc.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='GR' class="nowrap ns"><img class="flag-img" src="/assets/flags/GR.png" title="GR">
+                                        
+                                        </td>
+                                    <td data-sort='8280'><a href="/as/8280">AS8280</a></td>
+                                    <td class="smallonmobile nowrap">SYNAPSECOM S.A. Provider of Telecommunications and In...</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='GB' class="nowrap ns"><img class="flag-img" src="/assets/flags/GB.png" title="GB">
+                                        
+                                        </td>
+                                    <td data-sort='9002'><a href="/as/9002">AS9002</a></td>
+                                    <td class="smallonmobile nowrap">RETN Limited</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='IS' class="nowrap ns"><img class="flag-img" src="/assets/flags/IS.png" title="IS">
+                                        
+                                        </td>
+                                    <td data-sort='56704'><a href="/as/56704">AS56704</a></td>
+                                    <td class="smallonmobile nowrap">Farice ehf</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='LU' class="nowrap ns"><img class="flag-img" src="/assets/flags/LU.png" title="LU">
+                                        
+                                        </td>
+                                    <td data-sort='29467'><a href="/as/29467">AS29467</a></td>
+                                    <td class="smallonmobile nowrap">LUXNETWORK S.A.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='PH' class="nowrap ns"><img class="flag-img" src="/assets/flags/PH.png" title="PH">
+                                        
+                                        </td>
+                                    <td data-sort='23930'><a href="/as/23930">AS23930</a></td>
+                                    <td class="smallonmobile nowrap">VITRO INC.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='EU' class="nowrap ns"><img class="flag-img" src="/assets/flags/EU.png" title="EU">
+                                        
+                                        </td>
+                                    <td data-sort='1257'><a href="/as/1257">AS1257</a></td>
+                                    <td class="smallonmobile nowrap">Tele2 Sverige AB</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US">
+                                        
+                                        </td>
+                                    <td data-sort='6939'><a href="/as/6939">AS6939</a></td>
+                                    <td class="smallonmobile nowrap">Hurricane Electric LLC</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='SG' class="nowrap ns"><img class="flag-img" src="/assets/flags/SG.png" title="SG">
+                                        
+                                        </td>
+                                    <td data-sort='24482'><a href="/as/24482">AS24482</a></td>
+                                    <td class="smallonmobile nowrap">SG.GS</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='SE' class="nowrap ns"><img class="flag-img" src="/assets/flags/SE.png" title="SE">
+                                        
+                                        </td>
+                                    <td data-sort='42708'><a href="/as/42708">AS42708</a></td>
+                                    <td class="smallonmobile nowrap">Glesys AB</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='BG' class="nowrap ns"><img class="flag-img" src="/assets/flags/BG.png" title="BG">
+                                        
+                                        </td>
+                                    <td data-sort='8866'><a href="/as/8866">AS8866</a></td>
+                                    <td class="smallonmobile nowrap">Vivacom Bulgaria EAD</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='GB' class="nowrap ns"><img class="flag-img" src="/assets/flags/GB.png" title="GB">
+                                        
+                                        </td>
+                                    <td data-sort='30844'><a href="/as/30844">AS30844</a></td>
+                                    <td class="smallonmobile nowrap">Liquid Intelligent Technologies </td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='NL' class="nowrap ns"><img class="flag-img" src="/assets/flags/NL.png" title="NL">
+                                        
+                                        </td>
+                                    <td data-sort='15830'><a href="/as/15830">AS15830</a></td>
+                                    <td class="smallonmobile nowrap">Equinix, Inc.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='PL' class="nowrap ns"><img class="flag-img" src="/assets/flags/PL.png" title="PL">
+                                        
+                                        </td>
+                                    <td data-sort='60695'><a href="/as/60695">AS60695</a></td>
+                                    <td class="smallonmobile nowrap">NETRONIK sp. z o.o.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='SI' class="nowrap ns"><img class="flag-img" src="/assets/flags/SI.png" title="SI">
+                                        
+                                        </td>
+                                    <td data-sort='41828'><a href="/as/41828">AS41828</a></td>
+                                    <td class="smallonmobile nowrap">Telemach Slovenija d.o.o.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='GB' class="nowrap ns"><img class="flag-img" src="/assets/flags/GB.png" title="GB">
+                                        
+                                        </td>
+                                    <td data-sort='28886'><a href="/as/28886">AS28886</a></td>
+                                    <td class="smallonmobile nowrap">RETN Latvia</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+
+                        <hr>
+                        <h3 id="peers">Peers<img class="flag-img" src="/assets/lightning.png" style="padding-left: 12px;" title="This information was fetched live at page load time" alt="This information was fetched live at page load time"/></h3>
+
+
+
+                        <table id="donotscrapebgptools-upstreamTablePeers" class="full-width-table">
+                            <thead class="sortable">
+                                <tr>
+                                    <th class="nowrap boldpls">  &nbsp;  </th>
+                                    <th data-sort-method='number' class="boldpls">ASN</th>
+                                    <th class="nowrap boldpls">Description</th>
+                                    <th class="nowrap boldpls">IPv4</th>
+                                    <th class="nowrap boldpls">IPv6</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='3356'><a href="/as/3356">AS3356</a></td>
+                                    <td class="smallonmobile nowrap">Lumen (Level 3)</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='6939'><a href="/as/6939">AS6939</a></td>
+                                    <td class="smallonmobile nowrap">Hurricane Electric LLC</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='SG' class="nowrap ns"><img class="flag-img" src="/assets/flags/SG.png" title="SG"></td>
+                                    <td data-sort='24482'><a href="/as/24482">AS24482</a></td>
+                                    <td class="smallonmobile nowrap">SG.GS</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='GR' class="nowrap ns"><img class="flag-img" src="/assets/flags/GR.png" title="GR"></td>
+                                    <td data-sort='8280'><a href="/as/8280">AS8280</a></td>
+                                    <td class="smallonmobile nowrap">SYNAPSECOM S.A. Provider of Telecommunications and In...</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='GB' class="nowrap ns"><img class="flag-img" src="/assets/flags/GB.png" title="GB"></td>
+                                    <td data-sort='9002'><a href="/as/9002">AS9002</a></td>
+                                    <td class="smallonmobile nowrap">RETN Limited</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='3491'><a href="/as/3491">AS3491</a></td>
+                                    <td class="smallonmobile nowrap">PCCW Global, Inc.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='IS' class="nowrap ns"><img class="flag-img" src="/assets/flags/IS.png" title="IS"></td>
+                                    <td data-sort='56704'><a href="/as/56704">AS56704</a></td>
+                                    <td class="smallonmobile nowrap">Farice ehf</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='LU' class="nowrap ns"><img class="flag-img" src="/assets/flags/LU.png" title="LU"></td>
+                                    <td data-sort='29467'><a href="/as/29467">AS29467</a></td>
+                                    <td class="smallonmobile nowrap">LUXNETWORK S.A.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='BG' class="nowrap ns"><img class="flag-img" src="/assets/flags/BG.png" title="BG"></td>
+                                    <td data-sort='8866'><a href="/as/8866">AS8866</a></td>
+                                    <td class="smallonmobile nowrap">Vivacom Bulgaria EAD</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='EU' class="nowrap ns"><img class="flag-img" src="/assets/flags/EU.png" title="EU"></td>
+                                    <td data-sort='1257'><a href="/as/1257">AS1257</a></td>
+                                    <td class="smallonmobile nowrap">Tele2 Sverige AB</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='PH' class="nowrap ns"><img class="flag-img" src="/assets/flags/PH.png" title="PH"></td>
+                                    <td data-sort='23930'><a href="/as/23930">AS23930</a></td>
+                                    <td class="smallonmobile nowrap">VITRO INC.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='SE' class="nowrap ns"><img class="flag-img" src="/assets/flags/SE.png" title="SE"></td>
+                                    <td data-sort='42708'><a href="/as/42708">AS42708</a></td>
+                                    <td class="smallonmobile nowrap">Glesys AB</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='PL' class="nowrap ns"><img class="flag-img" src="/assets/flags/PL.png" title="PL"></td>
+                                    <td data-sort='60695'><a href="/as/60695">AS60695</a></td>
+                                    <td class="smallonmobile nowrap">NETRONIK sp. z o.o.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='SI' class="nowrap ns"><img class="flag-img" src="/assets/flags/SI.png" title="SI"></td>
+                                    <td data-sort='41828'><a href="/as/41828">AS41828</a></td>
+                                    <td class="smallonmobile nowrap">Telemach Slovenija d.o.o.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='GB' class="nowrap ns"><img class="flag-img" src="/assets/flags/GB.png" title="GB"></td>
+                                    <td data-sort='30844'><a href="/as/30844">AS30844</a></td>
+                                    <td class="smallonmobile nowrap">Liquid Intelligent Technologies </td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='NL' class="nowrap ns"><img class="flag-img" src="/assets/flags/NL.png" title="NL"></td>
+                                    <td data-sort='15830'><a href="/as/15830">AS15830</a></td>
+                                    <td class="smallonmobile nowrap">Equinix, Inc.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='GB' class="nowrap ns"><img class="flag-img" src="/assets/flags/GB.png" title="GB"></td>
+                                    <td data-sort='28886'><a href="/as/28886">AS28886</a></td>
+                                    <td class="smallonmobile nowrap">RETN Latvia</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='AU' class="nowrap ns"><img class="flag-img" src="/assets/flags/AU.png" title="AU"></td>
+                                    <td data-sort='137409'><a href="/as/137409">AS137409</a></td>
+                                    <td class="smallonmobile nowrap">GSL Networks Pty LTD</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='20473'><a href="/as/20473">AS20473</a></td>
+                                    <td class="smallonmobile nowrap">The Constant Company, LLC</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='JP' class="nowrap ns"><img class="flag-img" src="/assets/flags/JP.png" title="JP"></td>
+                                    <td data-sort='59105'><a href="/as/59105">AS59105</a></td>
+                                    <td class="smallonmobile nowrap">Home NOC Operators Group</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='JP' class="nowrap ns"><img class="flag-img" src="/assets/flags/JP.png" title="JP"></td>
+                                    <td data-sort='2907'><a href="/as/2907">AS2907</a></td>
+                                    <td class="smallonmobile nowrap">Science Information Network</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='PH' class="nowrap ns"><img class="flag-img" src="/assets/flags/PH.png" title="PH"></td>
+                                    <td data-sort='63927'><a href="/as/63927">AS63927</a></td>
+                                    <td class="smallonmobile nowrap">RISE</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='HK' class="nowrap ns"><img class="flag-img" src="/assets/flags/HK.png" title="HK"></td>
+                                    <td data-sort='10099'><a href="/as/10099">AS10099</a></td>
+                                    <td class="smallonmobile nowrap">China Unicom Global</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='RU' class="nowrap ns"><img class="flag-img" src="/assets/flags/RU.png" title="RU"></td>
+                                    <td data-sort='57304'><a href="/as/57304">AS57304</a></td>
+                                    <td class="smallonmobile nowrap">RETN Russia</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='HK' class="nowrap ns"><img class="flag-img" src="/assets/flags/HK.png" title="HK"></td>
+                                    <td data-sort='9886'><a href="/as/9886">AS9886</a></td>
+                                    <td class="smallonmobile nowrap">CTCSCI TECH LIMITED</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='NL' class="nowrap ns"><img class="flag-img" src="/assets/flags/NL.png" title="NL"></td>
+                                    <td data-sort='49544'><a href="/as/49544">AS49544</a></td>
+                                    <td class="smallonmobile nowrap">i3D.net B.V</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='2635'><a href="/as/2635">AS2635</a></td>
+                                    <td class="smallonmobile nowrap">Automattic, Inc</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='RU' class="nowrap ns"><img class="flag-img" src="/assets/flags/RU.png" title="RU"></td>
+                                    <td data-sort='20485'><a href="/as/20485">AS20485</a></td>
+                                    <td class="smallonmobile nowrap">JSC TransTeleKom</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='HK' class="nowrap ns"><img class="flag-img" src="/assets/flags/HK.png" title="HK"></td>
+                                    <td data-sort='138997'><a href="/as/138997">AS138997</a></td>
+                                    <td class="smallonmobile nowrap">Eons Data Communications Limited</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='AU' class="nowrap ns"><img class="flag-img" src="/assets/flags/AU.png" title="AU"></td>
+                                    <td data-sort='63956'><a href="/as/63956">AS63956</a></td>
+                                    <td class="smallonmobile nowrap">5G NETWORK OPERATIONS PTY LTD</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='HK' class="nowrap ns"><img class="flag-img" src="/assets/flags/HK.png" title="HK"></td>
+                                    <td data-sort='153371'><a href="/as/153371">AS153371</a></td>
+                                    <td class="smallonmobile nowrap">BACK WAVES LIMITED</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='AU' class="nowrap ns"><img class="flag-img" src="/assets/flags/AU.png" title="AU"></td>
+                                    <td data-sort='136557'><a href="/as/136557">AS136557</a></td>
+                                    <td class="smallonmobile nowrap">Host Universal Pty Ltd</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='GB' class="nowrap ns"><img class="flag-img" src="/assets/flags/GB.png" title="GB"></td>
+                                    <td data-sort='48266'><a href="/as/48266">AS48266</a></td>
+                                    <td class="smallonmobile nowrap">Catixs Ltd</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+
+
+                    </div>
+
+                    <div style="display: none" id="whois-page">
+                        
+                        
+                        <pre style="white-space: pre-wrap;">aut-num:        <a href="/AS206804">AS206804</a>
+as-name:        EstNOC-GLOBAL
+org:            <a href="https://apps.db.ripe.net/db-web-ui/query?searchtext=ORG-EO51-RIPE">ORG-EO51-RIPE</a>
+import:         from <a href="/AS1257">AS1257</a> accept ANY
+export:         to <a href="/AS1257">AS1257</a> announce <a href="/AS206804">AS206804</a>
+import:         from <a href="/AS56704">AS56704</a> accept ANY
+export:         to <a href="/AS56704">AS56704</a> announce <a href="/AS206804">AS206804</a>
+import:         from <a href="/AS42708">AS42708</a> accept ANY
+export:         to <a href="/AS42708">AS42708</a> announce <a href="/AS206804">AS206804</a>
+import:         from <a href="/AS3356">AS3356</a> accept ANY
+export:         to <a href="/AS3356">AS3356</a> announce <a href="/AS206804">AS206804</a>
+import:         from <a href="/AS44735">AS44735</a> accept ANY
+export:         to <a href="/AS44735">AS44735</a> announce <a href="/AS206804">AS206804</a>
+import:         from <a href="/AS10099">AS10099</a> accept ANY
+export:         to <a href="/AS10099">AS10099</a> announce <a href="/AS206804">AS206804</a>
+import:         from <a href="/AS8866">AS8866</a> accept ANY
+export:         to <a href="/AS8866">AS8866</a> announce <a href="/AS206804">AS206804</a>
+import:         from <a href="/AS17408">AS17408</a> accept ANY
+export:         to <a href="/AS17408">AS17408</a> announce <a href="/AS206804">AS206804</a>
+import:         from <a href="/AS8280">AS8280</a> accept ANY
+export:         to <a href="/AS8280">AS8280</a> announce <a href="/AS206804">AS206804</a>
+import:         from <a href="/AS50509">AS50509</a> accept ANY
+export:         to <a href="/AS50509">AS50509</a> announce <a href="/AS206804">AS206804</a>
+import:         from <a href="/AS60695">AS60695</a> accept ANY
+export:         to <a href="/AS60695">AS60695</a> announce <a href="/AS206804">AS206804</a>
+import:         from <a href="/AS41828">AS41828</a> accept ANY
+export:         to <a href="/AS41828">AS41828</a> announce <a href="/AS206804">AS206804</a>
+import:         from <a href="/AS9957">AS9957</a> accept ANY
+export:         to <a href="/AS9957">AS9957</a> announce <a href="/AS206804">AS206804</a>
+import:         from <a href="/AS30844">AS30844</a> accept ANY
+export:         to <a href="/AS30844">AS30844</a> announce <a href="/AS206804">AS206804</a>
+import:         from <a href="/AS24482">AS24482</a> accept ANY
+export:         to <a href="/AS24482">AS24482</a> announce <a href="/AS206804">AS206804</a>
+import:         from <a href="/AS23930">AS23930</a> accept ANY
+export:         to <a href="/AS23930">AS23930</a> announce <a href="/AS206804">AS206804</a>
+import:         from <a href="/AS29467">AS29467</a> accept ANY
+export:         to <a href="/AS29467">AS29467</a> announce <a href="/AS206804">AS206804</a>
+import:         from <a href="/AS5578">AS5578</a> accept ANY
+export:         to <a href="/AS5578">AS5578</a> announce <a href="/AS206804">AS206804</a>
+import:         from <a href="/AS6939">AS6939</a> accept ANY
+export:         to <a href="/AS6939">AS6939</a> announce <a href="/AS206804">AS206804</a>
+import:         from <a href="/AS39324">AS39324</a> accept ANY
+export:         to <a href="/AS39324">AS39324</a> announce <a href="/AS206804">AS206804</a>
+import:         from <a href="/AS13030">AS13030</a> accept ANY
+export:         to <a href="/AS13030">AS13030</a> announce <a href="/AS206804">AS206804</a>
+import:         from <a href="/AS135273">AS135273</a> accept ANY
+export:         to <a href="/AS135273">AS135273</a> announce <a href="/AS206804">AS206804</a>
+import:         from <a href="/AS49181">AS49181</a> accept ANY
+export:         to <a href="/AS49181">AS49181</a> announce <a href="/AS206804">AS206804</a>
+admin-c:        DUMY-RIPE
+tech-c:         DUMY-RIPE
+status:         ASSIGNED
+mnt-by:         RIPE-NCC-END-MNT
+mnt-by:         ESTNOC-MNT
+created:        2016-11-03T08:10:32Z
+last-modified:  2023-10-13T13:49:26Z
+source:         RIPE
+remarks:        ****************************
+remarks:        * THIS OBJECT IS MODIFIED
+remarks:        * Please note that all data that is generally regarded as personal
+remarks:        * data has been removed from this object.
+remarks:        * To view the original object, please query the RIPE Database at:
+remarks:        * http://www.ripe.net/whois
+remarks:        ****************************
+
+
+organisation:   <a href="https://apps.db.ripe.net/db-web-ui/query?searchtext=ORG-EO51-RIPE">ORG-EO51-RIPE</a>
+org-name:       EstNOC OU
+country:        EE
+org-type:       LIR
+address:        Dummy address for <a href="https://apps.db.ripe.net/db-web-ui/query?searchtext=ORG-EO51-RIPE">ORG-EO51-RIPE</a>
+# Email removed, Log into bgp.tools to see whois emails
+abuse-c:        AR53371-RIPE
+mnt-ref:        ESTNOC-MNT
+mnt-by:         RIPE-NCC-HM-MNT
+mnt-by:         ESTNOC-MNT
+created:        2019-06-20T14:29:54Z
+last-modified:  2025-10-14T15:02:07Z
+source:         RIPE
+remarks:        ****************************
+remarks:        * THIS OBJECT IS MODIFIED
+remarks:        * Please note that all data that is generally regarded as personal
+remarks:        * data has been removed from this object.
+remarks:        * To view the original object, please query the RIPE Database at:
+remarks:        * http://www.ripe.net/whois
+remarks:        ****************************
+
+</pre>
+                        
+                        
+                        <a style="font-size: small;">Last Update: 2025-12-11T03:25:52Z UTC </a>
+                        
+                        <hr>
+                        
+                            <h2>Member of the following AS-SETs</h2>
+
+                            <table id="fhTable" class="full-width-table ">
+                                <tbody id="prefixlist-tbody">
+                                    <tr>
+                                        <th class="boldpls nowrap"> - </th>
+                                        <th class="boldpls">Member</th>
+                                         
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as3212:as-telemach">as3212:as-telemach</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-swan">as-swan</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as8280:as-ddos">as8280:as-ddos</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">APNIC</td>
+                                        
+                                        <td><a href="/as-set/APNIC::as-63529-as-import-as9505">as-63529-as-import-as9505</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-pin-piterix">as-pin-piterix</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-piter-ix-tll">as-piter-ix-tll</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">JPIRR</td>
+                                        
+                                        <td><a href="/as-set/JPIRR::as-bitisle-17941">as-bitisle-17941</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-sip">as-sip</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-luxnetwork">as-luxnetwork</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-liquid">as-liquid</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-bitisle-17941">as-bitisle-17941</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">APNIC</td>
+                                        
+                                        <td><a href="/as-set/APNIC::as63529:as-63529-as-import-as9902">as63529:as-63529-as-import-as9902</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-piter-ix-cp">as-piter-ix-cp</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as216458:as-cust">as216458:as-cust</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-transroute-spec">as-transroute-spec</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as58453:as-asiaascust">as58453:as-asiaascust</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-portlane">as-portlane</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as57304:as-retn-ru">as57304:as-retn-ru</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-pl-netronik">as-pl-netronik</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-equinix-ty">as-equinix-ty</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">APNIC</td>
+                                        
+                                        <td><a href="/as-set/APNIC::as-sggs">as-sggs</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-retnlv">as-retnlv</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-farice-cust6">as-farice-cust6</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">AFRINIC</td>
+                                        
+                                        <td><a href="/as-set/AFRINIC::as-airtel-ng">as-airtel-ng</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as3491:as-customers-ap">as3491:as-customers-ap</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-dacom">as-dacom</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-synapsecom">as-synapsecom</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">JPIRR</td>
+                                        
+                                        <td><a href="/as-set/JPIRR::as-iij">as-iij</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-farice-cust">as-farice-cust</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-hurricanev6">as-hurricanev6</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">APNIC</td>
+                                        
+                                        <td><a href="/as-set/APNIC::as58453:as-asiatest">as58453:as-asiatest</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as216458:as-hardcore-ripe">as216458:as-hardcore-ripe</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-telstra-intl-customers">as-telstra-intl-customers</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-mediam">as-mediam</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as50509:as-transroute-x">as50509:as-transroute-x</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">ALTDB</td>
+                                        
+                                        <td><a href="/as-set/ALTDB::as206804:as-all">as206804:as-all</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-tele2-ee">as-tele2-ee</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as13030:as-ch">as13030:as-ch</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-10099">as-10099</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as57936:as-piter-ix-tll">as57936:as-piter-ix-tll</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-retn-actual-v6">as-retn-actual-v6</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-tusmobil">as-tusmobil</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-stormwall-set">as-stormwall-set</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">APNIC</td>
+                                        
+                                        <td><a href="/as-set/APNIC::as58453:as-asiaascust">as58453:as-asiaascust</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-retn-actual-v4">as-retn-actual-v4</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-benestra">as-benestra</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-skbroadband">as-skbroadband</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-hinet">as-hinet</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-retn6">as-retn6</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-retn">as-retn</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-btc-up">as-btc-up</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">APNIC</td>
+                                        
+                                        <td><a href="/as-set/APNIC::as23930:as-ipvg">as23930:as-ipvg</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as51019:as-routing-in-iceland">as51019:as-routing-in-iceland</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-pin">as-pin</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-hurricane">as-hurricane</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">LEVEL3</td>
+                                        
+                                        <td><a href="/as-set/LEVEL3::as-lumen-customers-asns">as-lumen-customers-asns</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-kinx-transit">as-kinx-transit</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-twig">as-twig</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-135273">as-135273</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-iij">as-iij</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-gigainfra">as-gigainfra</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">JPIRR</td>
+                                        
+                                        <td><a href="/as-set/JPIRR::as-gigainfra">as-gigainfra</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                        
+
+                    </div>
+
+                    
+
+                    
+
+                    
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="superclearfix">
+            
+            <div class="superclearfix">
+                
+            </div>
+
+            <div class="superclearfix">
+                
+            </div>
+
+
+        </div>
+
+
+        <div class="group js-footer" id="footer">
+            <nav>
+                <div>
+                    <ul>
+                        <li><a href="/kb/api" target="_blank">Scripting/API</a></li>
+                        <li><a href="/credits" target="_blank">Credits</a></li>
+                        <li><a href="/pricing" target="_blank">Pricing</a></li>
+                        <li><a href="/kb/contact" target="_blank">Contact Us</a></li>
+                        <li><a href="https://github.com/bgptools/issues" target="_blank">Issue Tracker</a></li>
+                        <li><a href="/kb/setup-sessions" target="">Contribute Data</a></li>
+                        
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <script>
+    
+    var inhash = window.location.hash;
+    if (inhash == "#asinfo") {
+        
+    } else if (inhash == "#prefixes") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#prefix-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#prefixes-page');
+        aaa[0].style.display = "";
+
+    } else if (inhash == "#connectivity" || inhash == "#peers" || inhash == "#upstreams" || inhash == "#downstreams") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#connectivity-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#connectivity-page');
+        aaa[0].style.display = "";
+    } else if (inhash == "#whois") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#whois-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#whois-page');
+        aaa[0].style.display = "";
+    } else if (inhash == "#ix") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#ix-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#ix-page');
+        aaa[0].style.display = "";
+    }</script>
+
+    <script>
+    
+
+
+    ;(function() {
+  'use strict'
+
+  function scaleImageMap() {
+    function resizeMap() {
+      function resizeAreaTag(cachedAreaCoords, idx) {
+        function scale(coord) {
+          var dimension = 1 === (isWidth = 1 - isWidth) ? 'width' : 'height'
+          return (
+            padding[dimension] +
+            Math.floor(Number(coord) * scalingFactor[dimension])
+          )
+        }
+
+        var isWidth = 0
+        areas[idx].coords = cachedAreaCoords
+          .split(',')
+          .map(scale)
+          .join(',')
+      }
+
+      var scalingFactor = {
+        width: image.width / image.naturalWidth,
+        height: image.height / image.naturalHeight,
+      }
+
+      var padding = {
+        width: parseInt(
+          window.getComputedStyle(image, null).getPropertyValue('padding-left'),
+          10
+        ),
+        height: parseInt(
+          window.getComputedStyle(image, null).getPropertyValue('padding-top'),
+          10
+        ),
+      }
+
+      cachedAreaCoordsArray.forEach(resizeAreaTag)
+    }
+
+    function getCoords(e) {
+      
+      return e.coords.replace(/ *, */g, ',').replace(/ +/g, ',')
+    }
+
+    function debounce() {
+      clearTimeout(timer)
+      timer = setTimeout(resizeMap, 250)
+    }
+
+    function start() {
+      if (
+        image.width !== image.naturalWidth ||
+        image.height !== image.naturalHeight
+      ) {
+        resizeMap()
+      }
+    }
+
+    function addEventListeners() {
+      image.addEventListener('load', resizeMap, false) 
+      window.addEventListener('focus', resizeMap, false) 
+      window.addEventListener('resize', debounce, false)
+      window.addEventListener('readystatechange', resizeMap, false)
+      document.addEventListener('fullscreenchange', resizeMap, false)
+    }
+
+    function beenHere() {
+      return 'function' === typeof map._resize
+    }
+
+    function getImg(name) {
+      return document.querySelector('img[usemap="#world"]')
+    }
+
+    function setup() {
+      areas = map.getElementsByTagName('area')
+      cachedAreaCoordsArray = Array.prototype.map.call(areas, getCoords)
+      image = getImg('#' + map.name) || getImg(map.name)
+      map._resize = resizeMap 
+    }
+
+    var  
+      map = this,
+      areas = null,
+      cachedAreaCoordsArray = null,
+      image = null,
+      timer = null
+
+    if (!beenHere()) {
+      setup()
+      addEventListeners()
+      start()
+    } else {
+      map._resize() 
+    }
+  }
+
+  function factory() {
+    function chkMap(element) {
+      if (!element.tagName) {
+        throw new TypeError('Object is not a valid DOM element')
+      } else if ('MAP' !== element.tagName.toUpperCase()) {
+        throw new TypeError(
+          'Expected <MAP> tag, found <' + element.tagName + '>.'
+        )
+      }
+    }
+
+    function init(element) {
+      if (element) {
+        chkMap(element)
+        scaleImageMap.call(element)
+        maps.push(element)
+      }
+    }
+
+    var maps
+
+    return function imageMapResizeF(target) {
+      maps = [] 
+
+      switch (typeof target) {
+        case 'undefined':
+        case 'string':
+          Array.prototype.forEach.call(
+            document.querySelectorAll(target || 'map'),
+            init
+          )
+          break
+        case 'object':
+          init(target)
+          break
+        default:
+          throw new TypeError('Unexpected data type (' + typeof target + ').')
+      }
+
+      return maps
+    }
+  }
+
+  if (typeof define === 'function' && define.amd) {
+    define([], factory)
+  } else if (typeof module === 'object' && typeof module.exports === 'object') {
+    module.exports = factory() 
+  } else {
+    window.imageMapResize = factory()
+  }
+
+  if ('jQuery' in window) {
+    window.jQuery.fn.imageMapResize = function $imageMapResizeF() {
+      return this.filter('map')
+        .each(scaleImageMap)
+        .end()
+    }
+  }
+})()
+    
+    </script>
+    <script>
+        var imgEl = document.getElementById("pathimg");
+        imgEl.addEventListener("mouseover",function() {
+            imageMapResize('#world');
+        })
+    </script>
+    <script src="/assets/tablesort.min.js"></script>
+    <script>
+        addEventListener("load", (event) => {
+            
+            
+            var sort = new Tablesort(document.getElementById('donotscrapebgptools-upstreamTable'));
+            var sort2 = new Tablesort(document.getElementById('donotscrapebgptools-upstreamTablePeers'));
+            
+            
+            
+        });
+    </script>
+    
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        setTimeout(function() {
+
+        var beaconHttp = new XMLHttpRequest();
+        var url = '/performance-beacon';
+        var params = JSON.stringify(window.performance)
+        beaconHttp.open('POST', url, true);
+        
+        
+        beaconHttp.setRequestHeader('Content-type', 'application/json');
+        beaconHttp.setRequestHeader('visit-url', "/as/206804");
+        if (navigator.connection) {
+            beaconHttp.setRequestHeader('client-side-rtt', navigator.connection.rtt);
+        } else {
+            beaconHttp.setRequestHeader('client-side-rtt', '-2');
+        }
+        beaconHttp.onreadystatechange = function() {}
+        beaconHttp.send(params);
+        },1000)
+    }, false);
+</script>
+
+</body>
+
+
+</html>

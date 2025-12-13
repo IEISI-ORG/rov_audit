@@ -1,0 +1,2300 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Internet2 (AS11537) is a 27 year old university network that is peering with 120 other networks and has 0 upstream carriers">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000">
+    <link rel="search" type="application/opensearchdescription+xml" title="BGP.Tools" href="https://bgp.tools/opensearch.xml">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="theme-color" content="#000000">
+    <link href="https://social.bgp.tools/@bgptools" rel="me">
+    <link rel="canonical" href="https://bgp.tools/as/11537" />
+    <title>AS11537 Internet2 - bgp.tools</title>
+    <link rel="stylesheet" type="text/css" href="/assets/main-new.css?2025-12-09-1723%20UTC">
+</head>
+
+<body>
+    <div id="container">
+        
+<div id="global-header" class="global-header-top">
+    <div class="header-sitewide">
+        <div class="global-header">
+            <div class="header-logo">
+                <a href="/" id="logo" class="content">bgp.tools</a>
+            </div>
+            <form id="search" action="/search" method="get" accept-charset="utf-8" role="search" class="top-search-header js-search-hash">
+                <div class="searchfield">
+                    <input type="search" autocomplete="off" name="q" id="site-search-text" title="Search" value="" placeholder="Start here..." autofocus="autofocus" class="js-search-focus">
+                    <button type="submit" id="search-submit" class="search-submit">Search</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div id="global-header-blob" >
+    <a id="auth-header-text" href="/login">Login</a>
+    
+</div>
+<div id="global-header-bar" >
+    <a id="auth-header-bar-text" href="/login">Login</a>
+    
+</div>
+<div class="small-clearfix"></div>
+
+        <div id="global-container">
+            
+
+
+            
+            <div class="section-tabs js-tabs">
+                <ul>
+                    
+<li class="active">
+    <h1> <a id="viewbutton-tab" href="/as/11537">View</a></h1>
+</li>
+
+<li >
+    <a id="editbutton-tab" href="/edit/as/11537">Edit</a>
+</li>
+
+
+
+
+
+                    <li style="float: right;">
+                        
+                        <img id="ws-status" width="24" height="24" src="/assets/disconnected.png" title="Not Connected To realtime data updates">
+                        
+                    </li>
+                </ul>
+            </div>
+
+            <div id="search-container">
+
+                <div class="column-full-width">
+
+                    <div class="clearfix">
+                        
+                    </div>
+                    
+                    
+
+                    <div class="network-header">
+                        
+                        
+                        <img width="334" height="250" src="/img/11537" alt="The website screenshot for http://www.internet2.edu" >
+                        
+                        
+                        <p id="network-name" class="heading-xlarge">Internet2</p>
+                        <p id="network-number">
+                            AS Number
+                            <strong id="ASNumberString" pure="11537">11537</strong>
+                            <br>
+                        
+                            Website
+                            <strong><a href="http://www.internet2.edu" rel="nofollow">http://www.internet2.edu</a></strong>
+                        
+                        </p>
+
+                    </div>
+
+
+                    <div class="clearfix">
+                        
+                    </div>
+
+
+                    <div class="section-tabs js-tabs">
+                        <ul>
+
+                            <li id="overview-tab-li" class="active">
+                                <a id="overview-tab" href="#asinfo">Overview</a>
+                            </li>
+                            
+                            <li id="prefix-tab-li">
+                                <a id="prefix-tab" href="#prefixes">Prefixes</a>
+                            </li>
+
+                            <li id="connectivity-tab-li">
+                                <a id="connectivity-tab" href="#connectivity">Connectivity</a>
+                            </li>
+                            
+                            <li id="whois-tab-li">
+                                <a id="whois-tab" href="#whois">Whois</a>
+                            </li>
+                        
+                            <li id="ix-tab-li">
+                                <a id="ix-tab" href="#ix">IX</a>
+                            </li>
+                        
+                        
+                        </ul>
+                    </div>
+
+<script>
+    function removeAllActiveTab() {
+        var tabs = [
+            "overview-tab-li", 
+            "prefix-tab-li", 
+            "connectivity-tab-li",
+            "whois-tab-li",
+            "ix-tab-li",
+            "issues-tab-li"
+        ];
+
+        tabs.forEach(element => {
+            var aaa = document.querySelectorAll('#'+element);
+            if(aaa.length != 0) {
+                aaa[0].classList.remove("active")
+            }
+        });
+    }
+
+    function hideAllContent() {
+        var tabs = [
+            "overview-page", 
+            "prefixes-page", 
+            "connectivity-page",
+            "whois-page",
+            "ix-page",
+            "issues-page"
+        ];
+
+        tabs.forEach(element => {
+            var aaa = document.querySelectorAll('#'+element);
+            if(aaa.length != 0) {
+                aaa[0].style.display = "none";
+            }
+        });
+        if (document.getElementById("donotscrapebgptools-prefixlist-tbody")) {
+            var prefixrows = document.getElementById("donotscrapebgptools-prefixlist-tbody").children;
+            for (var i = 0; i < prefixrows.length; i++) {
+                prefixrows[i].style = "";
+            }
+        }
+    }
+
+    var otab = document.querySelectorAll('#overview-tab');
+    otab[0].addEventListener("click", function () {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#overview-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#overview-page');
+        aaa[0].style.display = "";
+    });
+    
+
+    var ptab = document.querySelectorAll('#prefix-tab');
+    ptab[0].addEventListener("click", function () {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#prefix-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#prefixes-page');
+        aaa[0].style.display = "";
+    });
+
+    var ctab = document.querySelectorAll('#connectivity-tab');
+    ctab[0].addEventListener("click", function () {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#connectivity-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#connectivity-page');
+        aaa[0].style.display = "";
+    });
+    
+
+    var wtab = document.querySelectorAll('#whois-tab');
+    wtab[0].addEventListener("click", function () {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#whois-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#whois-page');
+        aaa[0].style.display = "";
+    });
+
+</script>
+
+
+<script>
+var wtab = document.querySelectorAll('#ix-tab');
+wtab[0].addEventListener("click", function () {
+    removeAllActiveTab()
+    hideAllContent()
+    var otab2 = document.querySelectorAll('#ix-tab-li');
+    otab2[0].classList.add("active");
+
+    var aaa = document.querySelectorAll('#ix-page');
+    aaa[0].style.display = "";
+});
+</script>
+
+
+                    
+                    <div id="overview-page">
+
+                        <div class="grid-row">
+                        
+                        <div class="column-two-thirds">
+                            <dl>
+                                <dt>Registered on</dt>
+                                <dd class="text data">
+                                    
+                                    23 Sep 1998 (27 years old)
+                                </dd>
+                            
+                            
+                            <dt>Registered to</dt>
+                            <dd class="text data">
+                                <a href="/rir-owner/ARIN-INTER-395">ARIN-INTER-395</a> (arin)</dd>
+                                
+                            
+                            </dl>
+                        </div>
+                        
+    
+                        <dl class="column-third">
+                            <dt>Network status</dt>
+                            <dd class="text data">
+                                
+                                Active, Allocated under ARIN
+                                
+                            </dd>
+                        </dl>
+    
+                        </div>
+    
+                        <div class="grid-row">
+                            <dl class="column-two-thirds">
+                                <dt>Network type</dt>
+                                <dd class="text data">
+                                    Content
+                                </dd>
+                            </dl>
+    
+                            <dl class="column-third">
+                                <dt>Prefixes Originated</dt>
+                                <dd class="data">0 IPv4, 0 IPv6</dd>
+                            </dl>
+                        </div>
+                        <div class="grid-row">
+                            <div class="column-half">
+    
+                                <h2 class="heading-medium"><derp>Upstreams</derp></h2>
+                                <ul>
+                                    
+                                </ul>
+    
+                            </div>
+    
+                            <div class="column-half">
+                                
+                                    <h2 class="heading-medium"><derp>Locations of Operation</derp></h2>
+                                    
+                                    <li><span id="sic0">United States</span></li>
+                                    
+                                
+                            </div>
+                        </div>
+                        
+                        <div class="grid-row" style="padding: 15px;">
+                            <h2 class="heading-medium"><derp>Tags:</derp></h2>
+                            <br>
+                            
+                            <a href="/tags/uni"><span style="border: 5px solid #A8A8A6;" class="taglist"> Academic </span></a>
+                            
+                        </div>
+                        
+                    </div>
+                    
+
+                    <div style="display: none" id="prefixes-page">
+                        
+
+                        
+                        <div style="float:left">
+                            <dt>Prefixes Originated</dt>
+                            <dd class="data">0 IPv4, 0 IPv6</dd>
+                            <dd class="data"><a href="/as/11537?show-low-vis#prefixes">Show Low Visibility Prefixes</a></dd>
+                            
+                        </div>
+                        <div style="float:right">
+                                <dt>Addresses Originated</dt>
+                                <dd class="data">0 /24's of IPv4</dd>
+                                <dd class="data">0 /48's of IPv6</dd>
+                        </div>
+
+                        <div class="clearfix">
+                            
+                        </div>
+
+
+                        <table id="fhTable" class="full-width-table ">
+                            <tbody id="donotscrapebgptools-prefixlist-tbody">
+                                <tr>
+                                    <th class="nowrap">  &nbsp;  </th>
+                                    <th class="boldpls">Prefix</th>
+                                    <th class="nowrap boldpls">Description</th>
+                                </tr>
+                                <p id="readme-if-you-are-human" style="display: none;">If you are scraping this block for the prefixes that a AS originates, please use the data dumps in https://bgp.tools/kb/api and cache them</p>
+                                
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div style="display: none" id="connectivity-page">
+
+                        <div class="grid-row">
+
+                            <dl class="column-two-thirds">
+                                <dt><a href="#upstreams">Upstreams</a></dt>
+                                <dd class="text data">
+                                    0
+                                </dd>
+                            </dl>
+
+                            <dl class="column-third">
+                                <dt><a href="#peers">Peers</a></dt>
+                                <dd class="data">120</dd>
+                            </dl>
+                        </div>
+
+
+                        <hr>
+                        <h3>Network Policy<img class="flag-img" src="/assets/info.png" style="padding-left: 12px;" title="This info can take up to 2 hours to fully update" alt="This info take up to 2 hours to fully update"/></h3></h3>
+                        <a style="font-size: small;" href="/kb/network-policy">Click here to learn more about what this graph means and what makes up a network policy</a>
+
+                        <select id="netpolicydropdown" class="dropdownmenu">
+                            
+                                <option value="default">Global Aggregation</option>
+                            
+
+                            
+                                
+                            
+
+                            
+
+
+                        </select>
+
+                        <script>var netgroups = {}</script>
+
+                        <div style="text-align: center;">
+                            <img id="pathimg" usemap="#world" src="">
+                            <div id="world2"></div>
+                        </div>
+
+                        <details>
+                            <summary>Chart Display Options</summary>
+                            <noscript>This requires javascript to work</noscript>
+                            <label for="graphOptionMoreWiggle" style="display: flex;align-items: center;font-size: 20px;">
+                                <input type="checkbox" id="graphOptionMoreWiggle" name="graphOptionMoreWiggle" style="width: 64px; height: 32px;">
+                                    <p id="graphOptionMoreWiggleLabel" style="width: 200%;">Display links using non straight lines</p>
+                            </label>
+                        </details>
+
+                        <h3 style="display: none;" id="PISPBanner">Prefixes in selected policy</h3>
+                        <table id="policytable" class="full-width-table">
+                        </table>
+                        <button style="width:100%;display: none;" id="ShowFullPolicyButton" class="bigButton" onclick="dropdownPoke()">Load all prefixes in policy</button>
+
+                        <script>
+                            !function(a,b){"function"==typeof define&&define.amd?define([],b):"undefined"!=typeof module&&module.exports?module.exports=b():a.ReconnectingWebSocket=b()}(this,function(){function a(b,c,d){function l(a,b){var c=document.createEvent("CustomEvent");return c.initCustomEvent(a,!1,!1,b),c}var e={debug:!1,automaticOpen:!0,reconnectInterval:1e3,maxReconnectInterval:3e4,reconnectDecay:1.5,timeoutInterval:2e3};d||(d={});for(var f in e)this[f]="undefined"!=typeof d[f]?d[f]:e[f];this.url=b,this.reconnectAttempts=0,this.readyState=WebSocket.CONNECTING,this.protocol=null;var h,g=this,i=!1,j=!1,k=document.createElement("div");k.addEventListener("open",function(a){g.onopen(a)}),k.addEventListener("close",function(a){g.onclose(a)}),k.addEventListener("connecting",function(a){g.onconnecting(a)}),k.addEventListener("message",function(a){g.onmessage(a)}),k.addEventListener("error",function(a){g.onerror(a)}),this.addEventListener=k.addEventListener.bind(k),this.removeEventListener=k.removeEventListener.bind(k),this.dispatchEvent=k.dispatchEvent.bind(k),this.open=function(b){h=new WebSocket(g.url,c||[]),b||k.dispatchEvent(l("connecting")),(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","attempt-connect",g.url);var d=h,e=setTimeout(function(){(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","connection-timeout",g.url),j=!0,d.close(),j=!1},g.timeoutInterval);h.onopen=function(){clearTimeout(e),(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","onopen",g.url),g.protocol=h.protocol,g.readyState=WebSocket.OPEN,g.reconnectAttempts=0;var d=l("open");d.isReconnect=b,b=!1,k.dispatchEvent(d)},h.onclose=function(c){if(clearTimeout(e),h=null,i)g.readyState=WebSocket.CLOSED,k.dispatchEvent(l("close"));else{g.readyState=WebSocket.CONNECTING;var d=l("connecting");d.code=c.code,d.reason=c.reason,d.wasClean=c.wasClean,k.dispatchEvent(d),b||j||((g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","onclose",g.url),k.dispatchEvent(l("close")));var e=g.reconnectInterval*Math.pow(g.reconnectDecay,g.reconnectAttempts);setTimeout(function(){g.reconnectAttempts++,g.open(!0)},e>g.maxReconnectInterval?g.maxReconnectInterval:e)}},h.onmessage=function(b){(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","onmessage",g.url,b.data);var c=l("message");c.data=b.data,k.dispatchEvent(c)},h.onerror=function(b){(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","onerror",g.url,b),k.dispatchEvent(l("error"))}},1==this.automaticOpen&&this.open(!1),this.send=function(b){if(h)return(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","send",g.url,b),h.send(b);throw"INVALID_STATE_ERR : Pausing to reconnect websocket"},this.close=function(a,b){"undefined"==typeof a&&(a=1e3),i=!0,h&&h.close(a,b)},this.refresh=function(){h&&h.close()}}return a.prototype.onopen=function(){},a.prototype.onclose=function(){},a.prototype.onconnecting=function(){},a.prototype.onmessage=function(){},a.prototype.onerror=function(){},a.debugAll=!1,a.CONNECTING=WebSocket.CONNECTING,a.OPEN=WebSocket.OPEN,a.CLOSING=WebSocket.CLOSING,a.CLOSED=WebSocket.CLOSED,a});
+                        </script>
+                        
+                        <script>
+                            var prefixinfo = []
+                            var asn =  11537 
+
+                            var pfxExtraString = "";
+
+                            function saveGraphOptionsToLocalStorage() {
+                                localStorage.setItem("pfx-chart-options:wiggle", document.getElementById("graphOptionMoreWiggle").checked);
+                            }
+
+                            function loadGraphOptionsToLocalStorage() {
+                                document.getElementById("graphOptionMoreWiggle").checked = localStorage.getItem("pfx-chart-options:wiggle") == "true";
+                                pfxExtraString= "";
+                                if (document.getElementById("graphOptionMoreWiggle").checked) {
+                                    pfxExtraString = pfxExtraString + "&wiggly";
+                                }
+                            }
+                            loadGraphOptionsToLocalStorage();
+
+                            function graphOptionsChanged() {
+                                saveGraphOptionsToLocalStorage();
+                                handleImageChange();
+                            }
+                            document.getElementById("graphOptionMoreWiggle").addEventListener("click", graphOptionsChanged)
+
+
+                            function handleImageChange() {
+                                loadGraphOptionsToLocalStorage();
+                                
+                                document.getElementById("pathimg").src=("/pathimg/"+asn+ "-" + document.getElementById("netpolicydropdown").value +"?"+pfxExtraString);
+                                var request = new XMLHttpRequest();
+                                request.open('GET', "/pathimg/"+asn+ "-" + document.getElementById("netpolicydropdown").value + "?map=true" + pfxExtraString, true);
+
+                                request.onload = function() {
+                                    if (this.status >= 200 && this.status < 400) {
+                                        
+                                        
+                                        document.getElementById("world2").innerHTML = this.response;
+                                        setTimeout(function(){
+                                            imageMapResize('#world');
+                                        },1000)
+                                    }
+                                };
+                                request.send();
+                                buildPrefixTable();
+                            } 
+
+                            function encodeHTML(s) {
+                                return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
+                            }
+
+                            function dropdownPoke(){
+                                InteractedWithPolicyTableYet=true;
+                                handleImageChange();
+                            }
+
+                            var InteractedWithPolicyTableYet = false;
+                            var OverloadPolicySize = 0;
+                            function buildPrefixTable() {
+                                var policy = document.getElementById("netpolicydropdown").value;
+                                
+                                var cidrs = netgroups[policy];
+                                var ihtml = "<tbody> <tr> <th class=\"nowrap\">  -  </th> <th>Prefix</th> <th class=\"nowrap\">Description</th> </tr>";
+
+                                
+                                var aaa = document.querySelectorAll('#PISPBanner');
+                                var bbb = document.querySelectorAll('#policytable');
+                                var n = 0
+                                if (cidrs) {
+                                    aaa[0].style.display = "";
+                                    bbb[0].style.display = "";
+                                    cidrs.forEach(cidr => {
+                                        var obj = {};
+                                        var dont =false;
+                                        n++;
+                                        
+                                        if (!InteractedWithPolicyTableYet) {
+                                            if (n == 5) {
+                                                dont = true;
+                                            } else if (n > 5) {
+                                                dont = true;
+                                            }
+                                        }
+                                        
+                                        if (!dont) {
+                                            prefixinfo.forEach(el => {
+                                                if(el.PrefixString == cidr) {
+                                                    
+                                                        ihtml += "<tr><td class=\"nowrap ns\"><img class=\"flag-img\" src=\"/assets/flags/"+el.WhoisCountry+".png\" title=\""+el.WhoisCountry+"\"></td>"
+                                                        ihtml += "<td><a href=\"/prefix/"+el.PrefixString+"\">"+el.PrefixString+"</a></td>"
+                                                        ihtml += "<td class=\"nowrap\">"+encodeHTML(el.WhoisName)+"</td></tr>"
+                                                }
+                                            });
+                                        } else {
+                                            OverloadPolicySize++;
+                                        }
+                                    });
+                                    document.getElementById("policytable").innerHTML = ihtml
+                                    var PolButton = document.querySelectorAll('#ShowFullPolicyButton');
+                                    if (!InteractedWithPolicyTableYet && OverloadPolicySize!=0) {
+                                        PolButton[0].style="width:100%";
+                                        PolButton[0].innerHTML = "Load all "+OverloadPolicySize+" prefixes in policy"
+                                    } else {
+                                        PolButton[0].style="display:none;";
+                                    }
+                                    
+                                } else {
+                                    aaa[0].style.display = "none";
+                                    bbb[0].style.display = "none";
+                                }
+                            }
+
+
+                            var pathdropdown = document.querySelectorAll('#netpolicydropdown');
+                            pathdropdown[0].addEventListener("change",dropdownPoke)
+                            handleImageChange()
+                            buildPrefixTable()
+
+                            document.addEventListener("load", function(){
+                                
+                                handleImageChange()
+                            });
+
+                            function uuidv4() {
+                                return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+                                    var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+                                    return v.toString(16);
+                                });
+                            }
+
+                            
+                            let realTimeSocket = new ReconnectingWebSocket("wss://bgp.tools/ws/rt-asn?prefix=AS11537" + "&magic=" + encodeURIComponent("SQDEPKB4FDQUHEZY2DMOSXRYO2B7FNSTO3MNSDAIOHLCOJP7MQIQ===="));
+                            
+                            realTimeSocket.onmessage = function(event) {
+                                console.log(`[message] Data received from server: ${event.data}`);
+                                if (event.data == "Running.") {
+                                    document.getElementById("ws-status").src = "/assets/connected.png";
+                                    document.getElementById("ws-status").title = "Connected to realtime data";
+                                } else if (event.data == "STOP-CONNECTING") {
+                                    document.getElementById("ws-status").src = disconectedIcon;
+                                    document.getElementById("ws-status").title = "Not connected to realtime data";
+                                    realTimeSocket.maxReconnectAttempts = 1;
+                                    realTimeSocket.close()
+                                } else {
+                                    var obj = JSON.parse(event.data);
+                                    var elm = document.getElementById("pfx-"+obj.Prefix);
+                                    if (!elm && obj.Vis > 6) {
+                                        var tblist = document.getElementById("donotscrapebgptools-prefixlist-tbody");
+                                        var node = document.createElement("tr");                 
+                                        node.outerHTML = '<tr id="pfx-'+obj.Prefix+'"><td class="nowrap"><img class="flag-img" src="/assets/flags/'+obj.Whois.WhoisCountry+'.png" title="'+obj.Whois.WhoisCountry+'"></td><td><a href="/prefix/'+obj.Prefix+'">'+obj.Prefix+'</a></td><td class="smallonmobile nowrap">'+obj.Whois.WhoisName+'</td></tr>';
+                                        tblist.appendChild(node);                              
+                                    }
+                                    if (!elm) {
+                                        elm = document.getElementById("pfx-"+obj.Prefix);
+                                    }
+                                    
+                                    if (obj.Vis > 70) {
+                                        if (elm.style) {
+                                            var es = elm.style;
+                                            if (es.animation.includes("pulse1b")) {
+                                                elm.style = "animation: pulse2b 1s 1;";
+                                            } else if (es.animation.includes("pulse2b")) {
+                                                elm.style = "animation: pulse1b 1s 1;";
+                                            } else {
+                                                elm.style = "animation: pulse1b 1s 1;";
+                                            }
+                                        }
+                                    } else if (obj.Vis < 5) {
+                                        
+                                        var elm = document.getElementById("pfx-"+obj.Prefix);
+                                        if (elm) {
+                                            elm.parentNode.removeChild(elm);
+                                        }
+                                    } else {
+                                        if (elm.style) {
+                                            var es = elm.style;
+                                            if (es.animation.includes("pulse1r")) {
+                                                elm.style = "animation: pulse2r 1s 1;";
+                                            } else if (es.animation.includes("pulse2r")) {
+                                                elm.style = "animation: pulse1r 1s 1;";
+                                            } else {
+                                                elm.style = "animation: pulse1r 1s 1;";
+                                            }
+                                        }
+                                    }
+                                }
+                            };
+                            var disconectedIcon = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAAZlBMVEX/ewBZWVn/ewf/ew5fWljudiP8egp6XVT6eRHodSmVYU6hZEzObjrldCv3eRZ/XlNjWliHX1KrZkngci71eBl1XFXCa0CKYFHydx18XlSQYE+lZUq0aEbJbT3SbzhvXFaLYFG8akLYdYVFAAABQElEQVRIx5XV25KDIAwGYIKASLutqOtZ277/S26xK4ozJea/qRdfajATZaRkd6B6oPoL1d9QphUn+WvXmGF8TfN8yvNrDj6nvNj5Hu8n8HCh9ONiON5PEKuQx55DmFTHC1R9uMOjYkhFERbkEikofw8FGe5t0FWJ+kLvz5H+t8RdGD9k8TeebBXpzwIZT955XyVBtHHeXYzeJy5fhydtoZffZvUMSfvxT4BOeI/G/b9paxH1at8XQF8xNcV8aaQvHQBMhY/XttsdYp5nah3XdvIqui61Cjy+jqLwXp1cx9XLQZ5cR/vx1p8cez2IWrlxYY/T9bNVyCfmdQdbxNgs441FNRAEHS83oe9ahmTw1p88nhHCiAkpeIUeX5eJ6NlM9Gwm+uxO9/3F2PSR597jn1+udCWzUp7150P1jOoZ1f8BGPARG85JosIAAAAASUVORK5CYII=";
+                            realTimeSocket.onerror = function(error) {
+                                document.getElementById("ws-status").src = disconectedIcon;
+                                document.getElementById("ws-status").title = "Not connected to realtime data";
+
+                                console.log(`[error] ${error.message}`);
+                            };
+                            realTimeSocket.onclose = function(error) {
+                                document.getElementById("ws-status").src = disconectedIcon;
+                                document.getElementById("ws-status").title = "Not connected to realtime data";
+
+                                console.log(`[error] ${error.message}`);
+                            };
+                        </script>
+
+<div class="superclearfix">
+    
+</div>
+
+                        <hr>
+                        <a style="font-size: small;" href="/kb/what-is-a-upstream">How are upstreams and downstreams calculated?</a>
+                        <h3 id="upstreams">Upstreams<img class="flag-img" src="/assets/lightning.png" style="padding-left: 12px;" title="This information was fetched live at page load time" alt="This information was fetched live at page load time"/></h3>
+
+
+                        <table id="donotscrapebgptools-upstreamTable" class="full-width-table">
+                            <thead class="sortable">
+                                <tr>
+                                    <th class="nowrap boldpls">  &nbsp;  </th>
+                                    <th data-sort-method='number' class="boldpls">ASN</th>
+                                    <th class="nowrap boldpls">Description</th>
+                                    <th class="nowrap boldpls">IPv4</th>
+                                    <th class="nowrap boldpls">IPv6</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                            </tbody>
+                        </table>
+
+                        <hr>
+                        <h3 id="peers">Peers<img class="flag-img" src="/assets/lightning.png" style="padding-left: 12px;" title="This information was fetched live at page load time" alt="This information was fetched live at page load time"/></h3>
+
+
+
+                        <table id="donotscrapebgptools-upstreamTablePeers" class="full-width-table">
+                            <thead class="sortable">
+                                <tr>
+                                    <th class="nowrap boldpls">  &nbsp;  </th>
+                                    <th data-sort-method='number' class="boldpls">ASN</th>
+                                    <th class="nowrap boldpls">Description</th>
+                                    <th class="nowrap boldpls">IPv4</th>
+                                    <th class="nowrap boldpls">IPv6</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                <tr>
+                                    <td data-sort='NL' class="nowrap ns"><img class="flag-img" src="/assets/flags/NL.png" title="NL"></td>
+                                    <td data-sort='20965'><a href="/as/20965">AS20965</a></td>
+                                    <td class="smallonmobile nowrap">GEANT Vereniging</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='2153'><a href="/as/2153">AS2153</a></td>
+                                    <td class="smallonmobile nowrap">CENIC</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='JP' class="nowrap ns"><img class="flag-img" src="/assets/flags/JP.png" title="JP"></td>
+                                    <td data-sort='2907'><a href="/as/2907">AS2907</a></td>
+                                    <td class="smallonmobile nowrap">Science Information Network</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CN' class="nowrap ns"><img class="flag-img" src="/assets/flags/CN.png" title="CN"></td>
+                                    <td data-sort='23911'><a href="/as/23911">AS23911</a></td>
+                                    <td class="smallonmobile nowrap">China Next Generation Internet Beijing IX</td>
+                                    <td class="nowrap">&#10008;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='JP' class="nowrap ns"><img class="flag-img" src="/assets/flags/JP.png" title="JP"></td>
+                                    <td data-sort='7660'><a href="/as/7660">AS7660</a></td>
+                                    <td class="smallonmobile nowrap">Asia Pacific Advanced Network - Japan</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA"></td>
+                                    <td data-sort='6509'><a href="/as/6509">AS6509</a></td>
+                                    <td class="smallonmobile nowrap">CANARIE Inc</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='AU' class="nowrap ns"><img class="flag-img" src="/assets/flags/AU.png" title="AU"></td>
+                                    <td data-sort='7575'><a href="/as/7575">AS7575</a></td>
+                                    <td class="smallonmobile nowrap">Australian Academic and Research Network (AARNet)</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='NL' class="nowrap ns"><img class="flag-img" src="/assets/flags/NL.png" title="NL"></td>
+                                    <td data-sort='1103'><a href="/as/1103">AS1103</a></td>
+                                    <td class="smallonmobile nowrap">SURF B.V.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='20080'><a href="/as/20080">AS20080</a></td>
+                                    <td class="smallonmobile nowrap">Florida International University</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='1351'><a href="/as/1351">AS1351</a></td>
+                                    <td class="smallonmobile nowrap">University of Vermont</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='KE' class="nowrap ns"><img class="flag-img" src="/assets/flags/KE.png" title="KE"></td>
+                                    <td data-sort='36914'><a href="/as/36914">AS36914</a></td>
+                                    <td class="smallonmobile nowrap">Kenya Education Network</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='UY' class="nowrap ns"><img class="flag-img" src="/assets/flags/UY.png" title="UY"></td>
+                                    <td data-sort='27750'><a href="/as/27750">AS27750</a></td>
+                                    <td class="smallonmobile nowrap">Cooperación Latino Americana de Redes Avanzadas</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='16905'><a href="/as/16905">AS16905</a></td>
+                                    <td class="smallonmobile nowrap">LEARN</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='3754'><a href="/as/3754">AS3754</a></td>
+                                    <td class="smallonmobile nowrap">NYSERNet</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='10490'><a href="/as/10490">AS10490</a></td>
+                                    <td class="smallonmobile nowrap">Georgia Institute of Technology</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='22742'><a href="/as/22742">AS22742</a></td>
+                                    <td class="smallonmobile nowrap">Connecticut Education Network</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='81'><a href="/as/81">AS81</a></td>
+                                    <td class="smallonmobile nowrap">MCNC</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='237'><a href="/as/237">AS237</a></td>
+                                    <td class="smallonmobile nowrap">Merit Network Inc.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+                                    <td data-sort='1916'><a href="/as/1916">AS1916</a></td>
+                                    <td class="smallonmobile nowrap">RNP - Rede Nacional de Ensino e Pesquisa</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='11096'><a href="/as/11096">AS11096</a></td>
+                                    <td class="smallonmobile nowrap">FloridaNet</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='IN' class="nowrap ns"><img class="flag-img" src="/assets/flags/IN.png" title="IN"></td>
+                                    <td data-sort='9885'><a href="/as/9885">AS9885</a></td>
+                                    <td class="smallonmobile nowrap">NKN INTERNET GATEWAY NETWORK</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='62600'><a href="/as/62600">AS62600</a></td>
+                                    <td class="smallonmobile nowrap">Arizona Board of Regents</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='14041'><a href="/as/14041">AS14041</a></td>
+                                    <td class="smallonmobile nowrap">University Corporation for Atmospheric Research</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CN' class="nowrap ns"><img class="flag-img" src="/assets/flags/CN.png" title="CN"></td>
+                                    <td data-sort='7497'><a href="/as/7497">AS7497</a></td>
+                                    <td class="smallonmobile nowrap">Computer Network Information Center of Chinese Academ...</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='32440'><a href="/as/32440">AS32440</a></td>
+                                    <td class="smallonmobile nowrap">Louisiana Board of Regents/Louisiana Optical Network ...</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='ZA' class="nowrap ns"><img class="flag-img" src="/assets/flags/ZA.png" title="ZA"></td>
+                                    <td data-sort='2018'><a href="/as/2018">AS2018</a></td>
+                                    <td class="smallonmobile nowrap">TENET (The UNINET Project)</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='SA' class="nowrap ns"><img class="flag-img" src="/assets/flags/SA.png" title="SA"></td>
+                                    <td data-sort='8895'><a href="/as/8895">AS8895</a></td>
+                                    <td class="smallonmobile nowrap">King Abdul Aziz City for Science and Technology</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='22335'><a href="/as/22335">AS22335</a></td>
+                                    <td class="smallonmobile nowrap">Metropolitan Research and Education Network</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='3701'><a href="/as/3701">AS3701</a></td>
+                                    <td class="smallonmobile nowrap">Link Oregon (University of Oregon)</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='19782'><a href="/as/19782">AS19782</a></td>
+                                    <td class="smallonmobile nowrap">Indiana University (GigaPOP)</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='DK' class="nowrap ns"><img class="flag-img" src="/assets/flags/DK.png" title="DK"></td>
+                                    <td data-sort='2603'><a href="/as/2603">AS2603</a></td>
+                                    <td class="smallonmobile nowrap">NORDUnet</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='21976'><a href="/as/21976">AS21976</a></td>
+                                    <td class="smallonmobile nowrap">NJEDge.Net, Inc.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='2381'><a href="/as/2381">AS2381</a></td>
+                                    <td class="smallonmobile nowrap">WiscNet</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='40220'><a href="/as/40220">AS40220</a></td>
+                                    <td class="smallonmobile nowrap">Virginia Polytechnic Institute and State Univ.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='10578'><a href="/as/10578">AS10578</a></td>
+                                    <td class="smallonmobile nowrap">Harvard University</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='399855'><a href="/as/399855">AS399855</a></td>
+                                    <td class="smallonmobile nowrap">Keystone REN, LLC</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='5078'><a href="/as/5078">AS5078</a></td>
+                                    <td class="smallonmobile nowrap">Oklahoma Network for Education Enrichment and</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='57'><a href="/as/57">AS57</a></td>
+                                    <td class="smallonmobile nowrap">University of Minnesota</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='668'><a href="/as/668">AS668</a></td>
+                                    <td class="smallonmobile nowrap">DoD High Performance Computing (Defense Research and Engineering Network)</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='7896'><a href="/as/7896">AS7896</a></td>
+                                    <td class="smallonmobile nowrap">The Board of Regents of the University of Nebraska</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='293'><a href="/as/293">AS293</a></td>
+                                    <td class="smallonmobile nowrap">ESnet</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='EC' class="nowrap ns"><img class="flag-img" src="/assets/flags/EC.png" title="EC"></td>
+                                    <td data-sort='61468'><a href="/as/61468">AS61468</a></td>
+                                    <td class="smallonmobile nowrap">CEDIA</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='101'><a href="/as/101">AS101</a></td>
+                                    <td class="smallonmobile nowrap">University of Washington</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='NZ' class="nowrap ns"><img class="flag-img" src="/assets/flags/NZ.png" title="NZ"></td>
+                                    <td data-sort='38022'><a href="/as/38022">AS38022</a></td>
+                                    <td class="smallonmobile nowrap">REANNZ National Research and Education Network</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='210'><a href="/as/210">AS210</a></td>
+                                    <td class="smallonmobile nowrap">Utah Education Network</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='2572'><a href="/as/2572">AS2572</a></td>
+                                    <td class="smallonmobile nowrap">Missouri Research and Education Network (MOREnet)</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='14325'><a href="/as/14325">AS14325</a></td>
+                                    <td class="smallonmobile nowrap">OSHEAN, Inc.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='2698'><a href="/as/2698">AS2698</a></td>
+                                    <td class="smallonmobile nowrap">Iowa State University of Science and Technology</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='10437'><a href="/as/10437">AS10437</a></td>
+                                    <td class="smallonmobile nowrap">Kentucky Regional Optical Network (KY-RON)</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='MW' class="nowrap ns"><img class="flag-img" src="/assets/flags/MW.png" title="MW"></td>
+                                    <td data-sort='36944'><a href="/as/36944">AS36944</a></td>
+                                    <td class="smallonmobile nowrap">Ubuntunet Alliance For Research and Education Networking</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='1968'><a href="/as/1968">AS1968</a></td>
+                                    <td class="smallonmobile nowrap">UMASSNET</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='40581'><a href="/as/40581">AS40581</a></td>
+                                    <td class="smallonmobile nowrap">Arkansas Research and Education Optical Network</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='HK' class="nowrap ns"><img class="flag-img" src="/assets/flags/HK.png" title="HK"></td>
+                                    <td data-sort='137207'><a href="/as/137207">AS137207</a></td>
+                                    <td class="smallonmobile nowrap">Joint Universities Computer Centre Limited</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='11317'><a href="/as/11317">AS11317</a></td>
+                                    <td class="smallonmobile nowrap">Great Plains Network</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='2495'><a href="/as/2495">AS2495</a></td>
+                                    <td class="smallonmobile nowrap">Kansas Research and Education Network</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='10466'><a href="/as/10466">AS10466</a></td>
+                                    <td class="smallonmobile nowrap">MAGPI</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='297'><a href="/as/297">AS297</a></td>
+                                    <td class="smallonmobile nowrap">National Aeronautics and Space Administration</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='40498'><a href="/as/40498">AS40498</a></td>
+                                    <td class="smallonmobile nowrap">New Mexico Lambda Rail, Inc.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='3128'><a href="/as/3128">AS3128</a></td>
+                                    <td class="smallonmobile nowrap">University of Wisconsin System</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='62532'><a href="/as/62532">AS62532</a></td>
+                                    <td class="smallonmobile nowrap">NJEDge.Net, Inc.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='33189'><a href="/as/33189">AS33189</a></td>
+                                    <td class="smallonmobile nowrap">South Dakota Board of Regents</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='557'><a href="/as/557">AS557</a></td>
+                                    <td class="smallonmobile nowrap">University of Maine System</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='MX' class="nowrap ns"><img class="flag-img" src="/assets/flags/MX.png" title="MX"></td>
+                                    <td data-sort='18592'><a href="/as/18592">AS18592</a></td>
+                                    <td class="smallonmobile nowrap">Corporacion Universitaria para el Desarrollo de Inter...</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='396926'><a href="/as/396926">AS396926</a></td>
+                                    <td class="smallonmobile nowrap">C Spire Fiber</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='KR' class="nowrap ns"><img class="flag-img" src="/assets/flags/KR.png" title="KR"></td>
+                                    <td data-sort='17579'><a href="/as/17579">AS17579</a></td>
+                                    <td class="smallonmobile nowrap">KISTI</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='46832'><a href="/as/46832">AS46832</a></td>
+                                    <td class="smallonmobile nowrap">University of Missouri - dba the Missouri Research an...</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='36375'><a href="/as/36375">AS36375</a></td>
+                                    <td class="smallonmobile nowrap">University of Michigan</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='14877'><a href="/as/14877">AS14877</a></td>
+                                    <td class="smallonmobile nowrap">FirstLight Fiber, Inc.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='1842'><a href="/as/1842">AS1842</a></td>
+                                    <td class="smallonmobile nowrap">Department of Interior United States Geological Survey</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='SG' class="nowrap ns"><img class="flag-img" src="/assets/flags/SG.png" title="SG"></td>
+                                    <td data-sort='23864'><a href="/as/23864">AS23864</a></td>
+                                    <td class="smallonmobile nowrap">Singapre Advance Research and Education Network - Nat...</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='46435'><a href="/as/46435">AS46435</a></td>
+                                    <td class="smallonmobile nowrap">IRON</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='1742'><a href="/as/1742">AS1742</a></td>
+                                    <td class="smallonmobile nowrap">Harvard University</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='3807'><a href="/as/3807">AS3807</a></td>
+                                    <td class="smallonmobile nowrap">University of Montana</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='16509'><a href="/as/16509">AS16509</a></td>
+                                    <td class="smallonmobile nowrap">Amazon.com, Inc.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='2721'><a href="/as/2721">AS2721</a></td>
+                                    <td class="smallonmobile nowrap">CULR, LLC</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='6360'><a href="/as/6360">AS6360</a></td>
+                                    <td class="smallonmobile nowrap">University of Hawaii</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='40387'><a href="/as/40387">AS40387</a></td>
+                                    <td class="smallonmobile nowrap">University of Illinois</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='396955'><a href="/as/396955">AS396955</a></td>
+                                    <td class="smallonmobile nowrap">Internet2</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='55'><a href="/as/55">AS55</a></td>
+                                    <td class="smallonmobile nowrap">University of Pennsylvania</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='396961'><a href="/as/396961">AS396961</a></td>
+                                    <td class="smallonmobile nowrap">Internet2</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='3676'><a href="/as/3676">AS3676</a></td>
+                                    <td class="smallonmobile nowrap">University of Iowa</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='25829'><a href="/as/25829">AS25829</a></td>
+                                    <td class="smallonmobile nowrap">Smithsonian Institution</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='QA' class="nowrap ns"><img class="flag-img" src="/assets/flags/QA.png" title="QA"></td>
+                                    <td data-sort='29384'><a href="/as/29384">AS29384</a></td>
+                                    <td class="smallonmobile nowrap">Qatar Foundation for Education, Science and Community...</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='25969'><a href="/as/25969">AS25969</a></td>
+                                    <td class="smallonmobile nowrap">St. Louis University</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='4901'><a href="/as/4901">AS4901</a></td>
+                                    <td class="smallonmobile nowrap">The George Washington University</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='36412'><a href="/as/36412">AS36412</a></td>
+                                    <td class="smallonmobile nowrap">Drexel University</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='46'><a href="/as/46">AS46</a></td>
+                                    <td class="smallonmobile nowrap">Rutgers, The State University</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='111'><a href="/as/111">AS111</a></td>
+                                    <td class="smallonmobile nowrap">Boston University</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='59'><a href="/as/59">AS59</a></td>
+                                    <td class="smallonmobile nowrap">University of Wisconsin Madison</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='3851'><a href="/as/3851">AS3851</a></td>
+                                    <td class="smallonmobile nowrap">Nevada System of Higher Education</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='160'><a href="/as/160">AS160</a></td>
+                                    <td class="smallonmobile nowrap">The University of Chicago</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='393689'><a href="/as/393689">AS393689</a></td>
+                                    <td class="smallonmobile nowrap">National Library of Medicine</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='396390'><a href="/as/396390">AS396390</a></td>
+                                    <td class="smallonmobile nowrap">Indiana University</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='62775'><a href="/as/62775">AS62775</a></td>
+                                    <td class="smallonmobile nowrap">Internet2</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='38'><a href="/as/38">AS38</a></td>
+                                    <td class="smallonmobile nowrap">University of Illinois</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='10326'><a href="/as/10326">AS10326</a></td>
+                                    <td class="smallonmobile nowrap">Worcester Polytechnic Institute</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='TW' class="nowrap ns"><img class="flag-img" src="/assets/flags/TW.png" title="TW"></td>
+                                    <td data-sort='7539'><a href="/as/7539">AS7539</a></td>
+                                    <td class="smallonmobile nowrap">National Center for High-performance Computing</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='11745'><a href="/as/11745">AS11745</a></td>
+                                    <td class="smallonmobile nowrap">University System of New Hampshire</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='394088'><a href="/as/394088">AS394088</a></td>
+                                    <td class="smallonmobile nowrap">Agriculture Research Service</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='600'><a href="/as/600">AS600</a></td>
+                                    <td class="smallonmobile nowrap">OARnet</td>
+                                    <td class="nowrap">&#10008;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='2552'><a href="/as/2552">AS2552</a></td>
+                                    <td class="smallonmobile nowrap">Washington University</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='OM' class="nowrap ns"><img class="flag-img" src="/assets/flags/OM.png" title="OM"></td>
+                                    <td data-sort='206350'><a href="/as/206350">AS206350</a></td>
+                                    <td class="smallonmobile nowrap">Oman Research and education Network (OMREN)</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='231'><a href="/as/231">AS231</a></td>
+                                    <td class="smallonmobile nowrap">Michigan State University</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='62715'><a href="/as/62715">AS62715</a></td>
+                                    <td class="smallonmobile nowrap">CrashPlan</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='2722'><a href="/as/2722">AS2722</a></td>
+                                    <td class="smallonmobile nowrap">CULR, LLC</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='29917'><a href="/as/29917">AS29917</a></td>
+                                    <td class="smallonmobile nowrap">University System of New Hampshire</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='10755'><a href="/as/10755">AS10755</a></td>
+                                    <td class="smallonmobile nowrap">Dartmouth College</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='1'><a href="/as/1">AS1</a></td>
+                                    <td class="smallonmobile nowrap">Level 3 Parent, LLC</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='10764'><a href="/as/10764">AS10764</a></td>
+                                    <td class="smallonmobile nowrap">University of Illinois</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='36286'><a href="/as/36286">AS36286</a></td>
+                                    <td class="smallonmobile nowrap">NGA</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='JP' class="nowrap ns"><img class="flag-img" src="/assets/flags/JP.png" title="JP"></td>
+                                    <td data-sort='17934'><a href="/as/17934">AS17934</a></td>
+                                    <td class="smallonmobile nowrap">National Institute of Information and Communications ...</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='40591'><a href="/as/40591">AS40591</a></td>
+                                    <td class="smallonmobile nowrap">Bucknell University</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='QA' class="nowrap ns"><img class="flag-img" src="/assets/flags/QA.png" title="QA"></td>
+                                    <td data-sort='34945'><a href="/as/34945">AS34945</a></td>
+                                    <td class="smallonmobile nowrap">Qatar Foundation for Education, Science and Community...</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='24'><a href="/as/24">AS24</a></td>
+                                    <td class="smallonmobile nowrap">National Aeronautics and Space Administration</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='398900'><a href="/as/398900">AS398900</a></td>
+                                    <td class="smallonmobile nowrap">University of North Carolina at Chapel Hill</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='10886'><a href="/as/10886">AS10886</a></td>
+                                    <td class="smallonmobile nowrap">University of Maryland</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='3112'><a href="/as/3112">AS3112</a></td>
+                                    <td class="smallonmobile nowrap">OARnet</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='5050'><a href="/as/5050">AS5050</a></td>
+                                    <td class="smallonmobile nowrap">Pittsburgh Supercomputing Center</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='64247'><a href="/as/64247">AS64247</a></td>
+                                    <td class="smallonmobile nowrap">University of Washington</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='' class="nowrap ns"><img class="flag-img" src="/assets/flags/.png" title=""></td>
+                                    <td data-sort='28569'><a href="/as/28569">AS28569</a></td>
+                                    <td class="smallonmobile nowrap">AS28569</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+
+
+                    </div>
+
+                    <div style="display: none" id="whois-page">
+                        
+                        
+                        <pre style="white-space: pre-wrap;">ASHandle:       <a href="/AS11537">AS11537</a>
+OrgID:          INTER-395
+ASName:         INTERNET2-RESEARCH-EDU
+ASNumber:       11537
+RegDate:        1998-09-23
+Updated:        2020-04-27
+Source:         ARIN
+
+
+
+OrgID:          INTER-395
+OrgName:        Internet2
+CanAllocate:    
+Street:         3520 Green CT
+Street:         Suite 200
+City:           Ann Arbor
+State/Prov:     MI
+Country:        US
+PostalCode:     48105
+RegDate:        2005-01-31
+Updated:        2025-04-24
+OrgAdminHandle: <a href="https://whois.arin.net/rest/poc/ZEKAU-ARIN">ZEKAU-ARIN</a>
+OrgTechHandle:  <a href="https://whois.arin.net/rest/poc/BARTI-ARIN">BARTI-ARIN</a>
+OrgTechHandle:  <a href="https://whois.arin.net/rest/poc/WALLA72-ARIN">WALLA72-ARIN</a>
+OrgTechHandle:  <a href="https://whois.arin.net/rest/poc/WILKI169-ARIN">WILKI169-ARIN</a>
+OrgTechHandle:  <a href="https://whois.arin.net/rest/poc/ZEKAU-ARIN">ZEKAU-ARIN</a>
+OrgAbuseHandle: <a href="https://whois.arin.net/rest/poc/ABUSE8538-ARIN">ABUSE8538-ARIN</a>
+OrgNOCHandle:   <a href="https://whois.arin.net/rest/poc/NOCAB-ARIN">NOCAB-ARIN</a>
+OrgRoutingHandle:   <a href="https://whois.arin.net/rest/poc/BARTI-ARIN">BARTI-ARIN</a>
+OrgRoutingHandle:   <a href="https://whois.arin.net/rest/poc/HITCH42-ARIN">HITCH42-ARIN</a>
+OrgRoutingHandle:   <a href="https://whois.arin.net/rest/poc/WALLA72-ARIN">WALLA72-ARIN</a>
+Source:         ARIN
+
+
+
+
+
+OrgAdminHandle:       <a href="https://whois.arin.net/rest/poc/ZEKAU-ARIN">ZEKAU-ARIN</a>
+OrgAdminName:         Matt Zekauskas
+# Email removed, Log into bgp.tools to see whois emails
+
+
+OrgTechHandle:        <a href="https://whois.arin.net/rest/poc/BARTI-ARIN">BARTI-ARIN</a>
+OrgTechName:          Jeff Bartig
+# Email removed, Log into bgp.tools to see whois emails
+
+
+OrgTechHandle:        <a href="https://whois.arin.net/rest/poc/WALLA72-ARIN">WALLA72-ARIN</a>
+OrgTechName:          Steven Wallace
+# Email removed, Log into bgp.tools to see whois emails
+
+
+OrgTechHandle:        <a href="https://whois.arin.net/rest/poc/WILKI169-ARIN">WILKI169-ARIN</a>
+OrgTechName:          Chris Wilkinson
+# Email removed, Log into bgp.tools to see whois emails
+
+
+OrgTechHandle:        <a href="https://whois.arin.net/rest/poc/ZEKAU-ARIN">ZEKAU-ARIN</a>
+OrgTechName:          Matt Zekauskas
+# Email removed, Log into bgp.tools to see whois emails
+
+
+OrgAbuseHandle:       <a href="https://whois.arin.net/rest/poc/ABUSE8538-ARIN">ABUSE8538-ARIN</a>
+OrgAbuseName:          Abuse
+# Email removed, Log into bgp.tools to see whois emails
+
+
+OrgNOCHandle:         <a href="https://whois.arin.net/rest/poc/NOCAB-ARIN">NOCAB-ARIN</a>
+OrgNOCName:            Internet2 Network Operations Center
+# Email removed, Log into bgp.tools to see whois emails
+
+
+OrgRoutingHandle:     <a href="https://whois.arin.net/rest/poc/BARTI-ARIN">BARTI-ARIN</a>
+OrgRoutingName:       Jeff Bartig
+# Email removed, Log into bgp.tools to see whois emails
+
+
+OrgRoutingHandle:     <a href="https://whois.arin.net/rest/poc/HITCH42-ARIN">HITCH42-ARIN</a>
+OrgRoutingName:       Christian Hitchcock
+# Email removed, Log into bgp.tools to see whois emails
+
+
+OrgRoutingHandle:     <a href="https://whois.arin.net/rest/poc/WALLA72-ARIN">WALLA72-ARIN</a>
+OrgRoutingName:       Steven Wallace
+# Email removed, Log into bgp.tools to see whois emails
+
+</pre>
+                        
+                        
+                        <a style="font-size: small;">Last Update: 2025-12-12T03:33:36Z UTC </a>
+                        
+                        <hr>
+                        
+                            <h2>Member of the following AS-SETs</h2>
+
+                            <table id="fhTable" class="full-width-table ">
+                                <tbody id="prefixlist-tbody">
+                                    <tr>
+                                        <th class="boldpls nowrap"> - </th>
+                                        <th class="boldpls">Member</th>
+                                         
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as11537:as-to-geant">as11537:as-to-geant</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as11537:as-participants">as11537:as-participants</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">LEVEL3</td>
+                                        
+                                        <td><a href="/as-set/LEVEL3::as-lumen-customers-asns">as-lumen-customers-asns</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">APNIC</td>
+                                        
+                                        <td><a href="/as-set/APNIC::as23864:as-nren-transit">as23864:as-nren-transit</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as11537:as-cone">as11537:as-cone</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">ARIN</td>
+                                        
+                                        <td><a href="/as-set/ARIN::as293:as-from-i2-to-esnet">as293:as-from-i2-to-esnet</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as198949:as-sd">as198949:as-sd</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as11537:as-internal">as11537:as-internal</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as396955:as-transit-arelion">as396955:as-transit-arelion</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as11537:as-cone-beta">as11537:as-cone-beta</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-seattleix-rs-clients">as-seattleix-rs-clients</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as11164:as-internal">as11164:as-internal</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">ARIN</td>
+                                        
+                                        <td><a href="/as-set/ARIN::as-396926-as-mission-p">as-396926-as-mission-p</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as3676:as-uiowa-peers-announce-cust">as3676:as-uiowa-peers-announce-cust</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-gorex">as-gorex</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as396955:as-transit">as396955:as-transit</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-dfnfromabilene">as-dfnfromabilene</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-pnw-gigapop-t-i2">as-pnw-gigapop-t-i2</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as7575:as-research">as7575:as-research</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">ALTDB</td>
+                                        
+                                        <td><a href="/as-set/ALTDB::as-gangbang">as-gangbang</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">ARIN</td>
+                                        
+                                        <td><a href="/as-set/ARIN::as293:as-from-singaren-to-esnet">as293:as-from-singaren-to-esnet</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as10886:as-re-prov">as10886:as-re-prov</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as20965:as-from-internet2-to-geant">as20965:as-from-internet2-to-geant</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                        
+
+                    </div>
+
+                    
+
+                    
+                    <div style="display: none" id="ix-page">
+                        <div class="grid-row">
+                            <dl class="column-two-thirds">
+                                <p style="margin: 0px;"><img style="vertical-align: middle; margin-left: 5px;" class="flag-img" src="/assets/peeringdb-icon.png" title="PeeringDB"><a href="https://www.peeringdb.com/asn/11537">Go to PeeringDB page</a></p>
+                            </dl>
+                            
+                            
+                        </div>
+                        <div class="grid-row">
+                            
+                        
+    
+    
+                        <dl class="column-third">
+                            <dt>Suggested Prefix Limits</dt>
+                            <dd class="text data">
+                                
+                                
+                            </dd>
+                        </dl>
+                        </div>
+
+                        
+
+                        <div id="normalixpsubpage">
+
+
+<h3>Internet Exchange Points</h3>
+
+<div class="scroll-ixp-div-on-small">
+<table id="ixpTable" class="full-width-table table-wide-to-force-scroll-on-mobile">
+    <thead class="sortable">
+        <tr>
+            <th class="nowrap boldpls">  &nbsp;  </th>
+            <th class="boldpls">Name</th>
+            <th class="nowrap boldpls">IPv4</th>
+            <th class="nowrap boldpls">IPv6</th>
+            <th data-sort-method='number' class="nowrap boldpls">Link Speed</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+        
+        <tr>
+            <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/SIX%20Seattle%20%28Jumbo%29">SIX Seattle (Jumbo)</a></td>
+            <td class="smallonmobile">149.112.96.67</a></td>
+            <td class="smallonmobile nowrap">2001:504:16:1::2d11</td>
+            <td data-sort='10000' class="smallonmobile"><abbr title="SIX 7512R -  [US]">10 gbps</abbr></td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"><img style="margin-left: 5px;" class="flag-img" src="/assets/icons/juniper.png" title="Detected Vendor: Juniper Networks"><img class="flag-img" src="/assets/tick.png" title="Last seen online 29 mins ago"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/SIX%20Seattle">SIX Seattle</a></td>
+            <td class="smallonmobile">206.81.80.67</a></td>
+            <td class="smallonmobile nowrap">2001:504:16::2d11</td>
+            <td data-sort='10000' class="smallonmobile"><abbr title="SIX 7512R -  [US]">10 gbps</abbr></td>
+        </tr>
+        
+        
+    </tbody>
+</table>
+</div>
+
+
+
+
+
+
+
+
+<a style="font-size: small;">Last Update: 2025-12-12T10:08:19Z UTC</a>
+
+
+                        </div>
+                        <div id="overlapixpsubpage">
+                        </div>
+                    </div>
+                    
+                    
+
+                    
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="superclearfix">
+            
+            <div class="superclearfix">
+                
+            </div>
+
+            <div class="superclearfix">
+                
+            </div>
+
+
+        </div>
+
+
+        <div class="group js-footer" id="footer">
+            <nav>
+                <div>
+                    <ul>
+                        <li><a href="/kb/api" target="_blank">Scripting/API</a></li>
+                        <li><a href="/credits" target="_blank">Credits</a></li>
+                        <li><a href="/pricing" target="_blank">Pricing</a></li>
+                        <li><a href="/kb/contact" target="_blank">Contact Us</a></li>
+                        <li><a href="https://github.com/bgptools/issues" target="_blank">Issue Tracker</a></li>
+                        <li><a href="/kb/setup-sessions" target="">Contribute Data</a></li>
+                        
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <script>
+    
+    var inhash = window.location.hash;
+    if (inhash == "#asinfo") {
+        
+    } else if (inhash == "#prefixes") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#prefix-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#prefixes-page');
+        aaa[0].style.display = "";
+
+    } else if (inhash == "#connectivity" || inhash == "#peers" || inhash == "#upstreams" || inhash == "#downstreams") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#connectivity-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#connectivity-page');
+        aaa[0].style.display = "";
+    } else if (inhash == "#whois") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#whois-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#whois-page');
+        aaa[0].style.display = "";
+    } else if (inhash == "#ix") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#ix-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#ix-page');
+        aaa[0].style.display = "";
+    }</script>
+
+    <script>
+    
+
+
+    ;(function() {
+  'use strict'
+
+  function scaleImageMap() {
+    function resizeMap() {
+      function resizeAreaTag(cachedAreaCoords, idx) {
+        function scale(coord) {
+          var dimension = 1 === (isWidth = 1 - isWidth) ? 'width' : 'height'
+          return (
+            padding[dimension] +
+            Math.floor(Number(coord) * scalingFactor[dimension])
+          )
+        }
+
+        var isWidth = 0
+        areas[idx].coords = cachedAreaCoords
+          .split(',')
+          .map(scale)
+          .join(',')
+      }
+
+      var scalingFactor = {
+        width: image.width / image.naturalWidth,
+        height: image.height / image.naturalHeight,
+      }
+
+      var padding = {
+        width: parseInt(
+          window.getComputedStyle(image, null).getPropertyValue('padding-left'),
+          10
+        ),
+        height: parseInt(
+          window.getComputedStyle(image, null).getPropertyValue('padding-top'),
+          10
+        ),
+      }
+
+      cachedAreaCoordsArray.forEach(resizeAreaTag)
+    }
+
+    function getCoords(e) {
+      
+      return e.coords.replace(/ *, */g, ',').replace(/ +/g, ',')
+    }
+
+    function debounce() {
+      clearTimeout(timer)
+      timer = setTimeout(resizeMap, 250)
+    }
+
+    function start() {
+      if (
+        image.width !== image.naturalWidth ||
+        image.height !== image.naturalHeight
+      ) {
+        resizeMap()
+      }
+    }
+
+    function addEventListeners() {
+      image.addEventListener('load', resizeMap, false) 
+      window.addEventListener('focus', resizeMap, false) 
+      window.addEventListener('resize', debounce, false)
+      window.addEventListener('readystatechange', resizeMap, false)
+      document.addEventListener('fullscreenchange', resizeMap, false)
+    }
+
+    function beenHere() {
+      return 'function' === typeof map._resize
+    }
+
+    function getImg(name) {
+      return document.querySelector('img[usemap="#world"]')
+    }
+
+    function setup() {
+      areas = map.getElementsByTagName('area')
+      cachedAreaCoordsArray = Array.prototype.map.call(areas, getCoords)
+      image = getImg('#' + map.name) || getImg(map.name)
+      map._resize = resizeMap 
+    }
+
+    var  
+      map = this,
+      areas = null,
+      cachedAreaCoordsArray = null,
+      image = null,
+      timer = null
+
+    if (!beenHere()) {
+      setup()
+      addEventListeners()
+      start()
+    } else {
+      map._resize() 
+    }
+  }
+
+  function factory() {
+    function chkMap(element) {
+      if (!element.tagName) {
+        throw new TypeError('Object is not a valid DOM element')
+      } else if ('MAP' !== element.tagName.toUpperCase()) {
+        throw new TypeError(
+          'Expected <MAP> tag, found <' + element.tagName + '>.'
+        )
+      }
+    }
+
+    function init(element) {
+      if (element) {
+        chkMap(element)
+        scaleImageMap.call(element)
+        maps.push(element)
+      }
+    }
+
+    var maps
+
+    return function imageMapResizeF(target) {
+      maps = [] 
+
+      switch (typeof target) {
+        case 'undefined':
+        case 'string':
+          Array.prototype.forEach.call(
+            document.querySelectorAll(target || 'map'),
+            init
+          )
+          break
+        case 'object':
+          init(target)
+          break
+        default:
+          throw new TypeError('Unexpected data type (' + typeof target + ').')
+      }
+
+      return maps
+    }
+  }
+
+  if (typeof define === 'function' && define.amd) {
+    define([], factory)
+  } else if (typeof module === 'object' && typeof module.exports === 'object') {
+    module.exports = factory() 
+  } else {
+    window.imageMapResize = factory()
+  }
+
+  if ('jQuery' in window) {
+    window.jQuery.fn.imageMapResize = function $imageMapResizeF() {
+      return this.filter('map')
+        .each(scaleImageMap)
+        .end()
+    }
+  }
+})()
+    
+    </script>
+    <script>
+        var imgEl = document.getElementById("pathimg");
+        imgEl.addEventListener("mouseover",function() {
+            imageMapResize('#world');
+        })
+    </script>
+    <script src="/assets/tablesort.min.js"></script>
+    <script>
+        addEventListener("load", (event) => {
+            
+            
+            var sort = new Tablesort(document.getElementById('donotscrapebgptools-upstreamTable'));
+            var sort2 = new Tablesort(document.getElementById('donotscrapebgptools-upstreamTablePeers'));
+            
+            
+            var sort4 = new Tablesort(document.getElementById('ixpTable'));
+            
+        });
+    </script>
+    
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        setTimeout(function() {
+
+        var beaconHttp = new XMLHttpRequest();
+        var url = '/performance-beacon';
+        var params = JSON.stringify(window.performance)
+        beaconHttp.open('POST', url, true);
+        
+        
+        beaconHttp.setRequestHeader('Content-type', 'application/json');
+        beaconHttp.setRequestHeader('visit-url', "/as/11537");
+        if (navigator.connection) {
+            beaconHttp.setRequestHeader('client-side-rtt', navigator.connection.rtt);
+        } else {
+            beaconHttp.setRequestHeader('client-side-rtt', '-2');
+        }
+        beaconHttp.onreadystatechange = function() {}
+        beaconHttp.send(params);
+        },1000)
+    }, false);
+</script>
+
+</body>
+
+
+</html>

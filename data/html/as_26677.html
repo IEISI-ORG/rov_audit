@@ -1,0 +1,2988 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="ORION (AS26677) is a 23 year old BGP network that is peering with 77 other networks and has 4 upstream carriers">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000">
+    <link rel="search" type="application/opensearchdescription+xml" title="BGP.Tools" href="https://bgp.tools/opensearch.xml">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="theme-color" content="#000000">
+    <link href="https://social.bgp.tools/@bgptools" rel="me">
+    <link rel="canonical" href="https://bgp.tools/as/26677" />
+    <title>AS26677 ORION - bgp.tools</title>
+    <link rel="stylesheet" type="text/css" href="/assets/main-new.css?2025-12-09-1723%20UTC">
+</head>
+
+<body>
+    <div id="container">
+        
+<div id="global-header" class="global-header-top">
+    <div class="header-sitewide">
+        <div class="global-header">
+            <div class="header-logo">
+                <a href="/" id="logo" class="content">bgp.tools</a>
+            </div>
+            <form id="search" action="/search" method="get" accept-charset="utf-8" role="search" class="top-search-header js-search-hash">
+                <div class="searchfield">
+                    <input type="search" autocomplete="off" name="q" id="site-search-text" title="Search" value="" placeholder="Start here..." autofocus="autofocus" class="js-search-focus">
+                    <button type="submit" id="search-submit" class="search-submit">Search</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div id="global-header-blob" >
+    <a id="auth-header-text" href="/login">Login</a>
+    
+</div>
+<div id="global-header-bar" >
+    <a id="auth-header-bar-text" href="/login">Login</a>
+    
+</div>
+<div class="small-clearfix"></div>
+
+        <div id="global-container">
+            
+
+
+            
+            <div class="section-tabs js-tabs">
+                <ul>
+                    
+<li class="active">
+    <h1> <a id="viewbutton-tab" href="/as/26677">View</a></h1>
+</li>
+
+<li >
+    <a id="editbutton-tab" href="/edit/as/26677">Edit</a>
+</li>
+
+
+
+
+
+                    <li style="float: right;">
+                        
+                        <img id="ws-status" width="24" height="24" src="/assets/disconnected.png" title="Not Connected To realtime data updates">
+                        
+                    </li>
+                </ul>
+            </div>
+
+            <div id="search-container">
+
+                <div class="column-full-width">
+
+                    <div class="clearfix">
+                        
+                    </div>
+                    
+                    
+
+                    <div class="network-header">
+                        
+                        
+                        <img width="334" height="250" src="/img/26677" alt="The website screenshot for http://www.orion.on.ca" >
+                        
+                        
+                        <p id="network-name" class="heading-xlarge">ORION</p>
+                        <p id="network-number">
+                            AS Number
+                            <strong id="ASNumberString" pure="26677">26677</strong>
+                            <br>
+                        
+                            Website
+                            <strong><a href="http://www.orion.on.ca" rel="nofollow">http://www.orion.on.ca</a></strong>
+                        
+                        </p>
+
+                    </div>
+
+
+                    <div class="clearfix">
+                        
+                    </div>
+
+
+                    <div class="section-tabs js-tabs">
+                        <ul>
+
+                            <li id="overview-tab-li" class="active">
+                                <a id="overview-tab" href="#asinfo">Overview</a>
+                            </li>
+                            
+                            <li id="prefix-tab-li">
+                                <a id="prefix-tab" href="#prefixes">Prefixes</a>
+                            </li>
+
+                            <li id="connectivity-tab-li">
+                                <a id="connectivity-tab" href="#connectivity">Connectivity</a>
+                            </li>
+                            
+                            <li id="whois-tab-li">
+                                <a id="whois-tab" href="#whois">Whois</a>
+                            </li>
+                        
+                            <li id="ix-tab-li">
+                                <a id="ix-tab" href="#ix">IX</a>
+                            </li>
+                        
+                        
+                        </ul>
+                    </div>
+
+<script>
+    function removeAllActiveTab() {
+        var tabs = [
+            "overview-tab-li", 
+            "prefix-tab-li", 
+            "connectivity-tab-li",
+            "whois-tab-li",
+            "ix-tab-li",
+            "issues-tab-li"
+        ];
+
+        tabs.forEach(element => {
+            var aaa = document.querySelectorAll('#'+element);
+            if(aaa.length != 0) {
+                aaa[0].classList.remove("active")
+            }
+        });
+    }
+
+    function hideAllContent() {
+        var tabs = [
+            "overview-page", 
+            "prefixes-page", 
+            "connectivity-page",
+            "whois-page",
+            "ix-page",
+            "issues-page"
+        ];
+
+        tabs.forEach(element => {
+            var aaa = document.querySelectorAll('#'+element);
+            if(aaa.length != 0) {
+                aaa[0].style.display = "none";
+            }
+        });
+        if (document.getElementById("donotscrapebgptools-prefixlist-tbody")) {
+            var prefixrows = document.getElementById("donotscrapebgptools-prefixlist-tbody").children;
+            for (var i = 0; i < prefixrows.length; i++) {
+                prefixrows[i].style = "";
+            }
+        }
+    }
+
+    var otab = document.querySelectorAll('#overview-tab');
+    otab[0].addEventListener("click", function () {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#overview-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#overview-page');
+        aaa[0].style.display = "";
+    });
+    
+
+    var ptab = document.querySelectorAll('#prefix-tab');
+    ptab[0].addEventListener("click", function () {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#prefix-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#prefixes-page');
+        aaa[0].style.display = "";
+    });
+
+    var ctab = document.querySelectorAll('#connectivity-tab');
+    ctab[0].addEventListener("click", function () {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#connectivity-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#connectivity-page');
+        aaa[0].style.display = "";
+    });
+    
+
+    var wtab = document.querySelectorAll('#whois-tab');
+    wtab[0].addEventListener("click", function () {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#whois-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#whois-page');
+        aaa[0].style.display = "";
+    });
+
+</script>
+
+
+<script>
+var wtab = document.querySelectorAll('#ix-tab');
+wtab[0].addEventListener("click", function () {
+    removeAllActiveTab()
+    hideAllContent()
+    var otab2 = document.querySelectorAll('#ix-tab-li');
+    otab2[0].classList.add("active");
+
+    var aaa = document.querySelectorAll('#ix-page');
+    aaa[0].style.display = "";
+});
+</script>
+
+
+                    
+                    <div id="overview-page">
+
+                        <div class="grid-row">
+                        
+                        <div class="column-two-thirds">
+                            <dl>
+                                <dt>Registered on</dt>
+                                <dd class="text data">
+                                    
+                                     4 Nov 2002 (23 years old)
+                                </dd>
+                            
+                            
+                            <dt>Registered to</dt>
+                            <dd class="text data">
+                                <a href="/rir-owner/ARIN-ORANO">ARIN-ORANO</a> (arin)</dd>
+                                
+                            
+                            </dl>
+                        </div>
+                        
+    
+                        <dl class="column-third">
+                            <dt>Network status</dt>
+                            <dd class="text data">
+                                
+                                Active, Allocated under ARIN
+                                
+                            </dd>
+                        </dl>
+    
+                        </div>
+    
+                        <div class="grid-row">
+                            <dl class="column-two-thirds">
+                                <dt>Network type</dt>
+                                <dd class="text data">
+                                    Eyeball
+                                </dd>
+                            </dl>
+    
+                            <dl class="column-third">
+                                <dt>Prefixes Originated</dt>
+                                <dd class="data">34 IPv4, 4 IPv6</dd>
+                            </dl>
+                        </div>
+                        <div class="grid-row">
+                            <div class="column-half">
+    
+                                <h2 class="heading-medium"><derp>Upstreams</derp></h2>
+                                <ul>
+                                    
+                                    <li>
+                                        <span id="sic0">
+                                          <a href="/as/174">AS174</a> - Cogent Communications, LLC
+                                        </span>
+                                    </li>
+                                    
+                                    <li>
+                                        <span id="sic0">
+                                          <a href="/as/6461">AS6461</a> - Zayo Bandwidth
+                                        </span>
+                                    </li>
+                                    
+                                    <li>
+                                        <span id="sic0">
+                                          <a href="/as/6509">AS6509</a> - CANARIE Inc
+                                        </span>
+                                    </li>
+                                    
+                                    <li>
+                                        <span id="sic0">
+                                          <a href="/as/11670">AS11670</a> - Toronto Internet Exchange Community
+                                        </span>
+                                    </li>
+                                    
+                                </ul>
+    
+                            </div>
+    
+                            <div class="column-half">
+                                
+                                    <h2 class="heading-medium"><derp>Rankings</derp></h2>
+                                    
+                                    <li><span id="sic0">#9 for <a href="/rankings/CA?sort=cone">AS Cone  in Canada</a></span></li>
+                                    
+                                    <li><span id="sic0">#181 for <a href="/rankings/CA?sort=eyeballs">Estimated Eyeballs  in Canada</a></span></li>
+                                    
+                                    <li><span id="sic0">#44 for <a href="/rankings/CA?sort=peering">Known Peers  in Canada</a></span></li>
+                                    
+                                    <li><span id="sic0">#20 for <a href="/rankings/CA?sort=v6">Originated IPv6 Space  in Canada</a></span></li>
+                                    
+                                
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+
+                    <div style="display: none" id="prefixes-page">
+                        
+
+                        
+                        <div style="float:left">
+                            <dt>Prefixes Originated</dt>
+                            <dd class="data">34 IPv4, 4 IPv6</dd>
+                            
+                            
+                        </div>
+                        <div style="float:right">
+                                <dt>Addresses Originated</dt>
+                                <dd class="data">53 /24's of IPv4</dd>
+                                <dd class="data">131072 /48's of IPv6</dd>
+                        </div>
+
+                        <div class="clearfix">
+                            
+                        </div>
+
+
+                        <table id="fhTable" class="full-width-table ">
+                            <tbody id="donotscrapebgptools-prefixlist-tbody">
+                                <tr>
+                                    <th class="nowrap">  &nbsp;  </th>
+                                    <th class="boldpls">Prefix</th>
+                                    <th class="nowrap boldpls">Description</th>
+                                </tr>
+                                <p id="readme-if-you-are-human" style="display: none;">If you are scraping this block for the prefixes that a AS originates, please use the data dumps in https://bgp.tools/kb/api and cache them</p>
+                                
+                                <tr id="pfx-66.97.16.0/20">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/66.97.16.0/20">66.97.16.0/20</a></td>
+                                    <td class="smallonmobile nowrap">ORION</td>
+                                </tr>
+                                
+                                <tr id="pfx-66.97.19.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/66.97.19.0/24">66.97.19.0/24</a></td>
+                                    <td class="smallonmobile nowrap">ORION</td>
+                                </tr>
+                                
+                                <tr id="pfx-66.97.20.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/66.97.20.0/24">66.97.20.0/24</a></td>
+                                    <td class="smallonmobile nowrap">ORION</td>
+                                </tr>
+                                
+                                <tr id="pfx-66.97.22.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/66.97.22.0/24">66.97.22.0/24</a></td>
+                                    <td class="smallonmobile nowrap">ORION</td>
+                                </tr>
+                                
+                                <tr id="pfx-66.97.23.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/66.97.23.0/24">66.97.23.0/24</a></td>
+                                    <td class="smallonmobile nowrap">ORION</td>
+                                </tr>
+                                
+                                <tr id="pfx-66.97.27.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/66.97.27.0/24">66.97.27.0/24</a></td>
+                                    <td class="smallonmobile nowrap">ORION</td>
+                                </tr>
+                                
+                                <tr id="pfx-66.97.28.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/66.97.28.0/24">66.97.28.0/24</a></td>
+                                    <td class="smallonmobile nowrap">ORION</td>
+                                </tr>
+                                
+                                <tr id="pfx-66.97.29.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/66.97.29.0/24">66.97.29.0/24</a></td>
+                                    <td class="smallonmobile nowrap">ORION</td>
+                                </tr>
+                                
+                                <tr id="pfx-66.97.30.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/66.97.30.0/24">66.97.30.0/24</a></td>
+                                    <td class="smallonmobile nowrap">ORION</td>
+                                </tr>
+                                
+                                <tr id="pfx-66.97.31.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/66.97.31.0/24">66.97.31.0/24</a></td>
+                                    <td class="smallonmobile nowrap">ORION</td>
+                                </tr>
+                                
+                                <tr id="pfx-142.51.70.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/142.51.70.0/24">142.51.70.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Laurentian University of Sudbury</td>
+                                </tr>
+                                
+                                <tr id="pfx-142.51.71.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/142.51.71.0/24">142.51.71.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Laurentian University of Sudbury</td>
+                                </tr>
+                                
+                                <tr id="pfx-142.155.0.0/22">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/142.155.0.0/22">142.155.0.0/22</a></td>
+                                    <td class="smallonmobile nowrap">St. Lawrence College</td>
+                                </tr>
+                                
+                                <tr id="pfx-142.155.117.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/142.155.117.0/24">142.155.117.0/24</a></td>
+                                    <td class="smallonmobile nowrap">St. Lawrence College</td>
+                                </tr>
+                                
+                                <tr id="pfx-142.155.164.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/142.155.164.0/24">142.155.164.0/24</a></td>
+                                    <td class="smallonmobile nowrap">St. Lawrence College</td>
+                                </tr>
+                                
+                                <tr id="pfx-142.155.192.0/22">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/142.155.192.0/22">142.155.192.0/22</a></td>
+                                    <td class="smallonmobile nowrap">St. Lawrence College</td>
+                                </tr>
+                                
+                                <tr id="pfx-142.155.198.0/23">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/142.155.198.0/23">142.155.198.0/23</a></td>
+                                    <td class="smallonmobile nowrap">St. Lawrence College</td>
+                                </tr>
+                                
+                                <tr id="pfx-142.155.210.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/142.155.210.0/24">142.155.210.0/24</a></td>
+                                    <td class="smallonmobile nowrap">St. Lawrence College</td>
+                                </tr>
+                                
+                                <tr id="pfx-142.155.216.0/22">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/142.155.216.0/22">142.155.216.0/22</a></td>
+                                    <td class="smallonmobile nowrap">St. Lawrence College</td>
+                                </tr>
+                                
+                                <tr id="pfx-172.99.134.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/172.99.134.0/24">172.99.134.0/24</a></td>
+                                    <td class="smallonmobile nowrap">ORION</td>
+                                </tr>
+                                
+                                <tr id="pfx-172.99.134.0/23">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/172.99.134.0/23">172.99.134.0/23</a></td>
+                                    <td class="smallonmobile nowrap">ORION</td>
+                                </tr>
+                                
+                                <tr id="pfx-192.75.204.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/192.75.204.0/24">192.75.204.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Royal Ontario Museum</td>
+                                </tr>
+                                
+                                <tr id="pfx-192.75.205.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/192.75.205.0/24">192.75.205.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Royal Ontario Museum</td>
+                                </tr>
+                                
+                                <tr id="pfx-192.139.237.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/192.139.237.0/24">192.139.237.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Loyalist College of Applied Arts &amp; Technology</td>
+                                </tr>
+                                
+                                <tr id="pfx-192.197.60.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/192.197.60.0/24">192.197.60.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Confederation College of Applied Arts &amp; Technology</td>
+                                </tr>
+                                
+                                <tr id="pfx-192.197.250.0/23">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/192.197.250.0/23">192.197.250.0/23</a></td>
+                                    <td class="smallonmobile nowrap">LUNENFELD TANENBAUM RESEARCH INSTITUTE</td>
+                                </tr>
+                                
+                                <tr id="pfx-199.212.15.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/199.212.15.0/24">199.212.15.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Confederation College of Applied Arts &amp; Technology</td>
+                                </tr>
+                                
+                                <tr id="pfx-199.212.84.0/23">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/199.212.84.0/23">199.212.84.0/23</a></td>
+                                    <td class="smallonmobile nowrap">Confederation College of Applied Arts &amp; Technology</td>
+                                </tr>
+                                
+                                <tr id="pfx-199.212.250.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/199.212.250.0/24">199.212.250.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Waterloo Region District School Board</td>
+                                </tr>
+                                
+                                <tr id="pfx-199.212.251.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/199.212.251.0/24">199.212.251.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Waterloo Region District School Board</td>
+                                </tr>
+                                
+                                <tr id="pfx-199.212.252.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/199.212.252.0/24">199.212.252.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Waterloo Region District School Board</td>
+                                </tr>
+                                
+                                <tr id="pfx-199.212.253.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/199.212.253.0/24">199.212.253.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Waterloo Region District School Board</td>
+                                </tr>
+                                
+                                <tr id="pfx-199.212.254.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/199.212.254.0/24">199.212.254.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Waterloo Region District School Board</td>
+                                </tr>
+                                
+                                <tr id="pfx-205.211.94.0/23">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/205.211.94.0/23">205.211.94.0/23</a></td>
+                                    <td class="smallonmobile nowrap">ORION</td>
+                                </tr>
+                                
+                                <tr id="pfx-2606:b340::/32">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2606:b340::/32">2606:b340::/32</a></td>
+                                    <td class="smallonmobile nowrap">ORION</td>
+                                </tr>
+                                
+                                <tr id="pfx-2607:fd78::/32">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2607:fd78::/32">2607:fd78::/32</a></td>
+                                    <td class="smallonmobile nowrap">ORION</td>
+                                </tr>
+                                
+                                <tr id="pfx-2607:fd78:101::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2607:fd78:101::/48">2607:fd78:101::/48</a></td>
+                                    <td class="smallonmobile nowrap">ORION</td>
+                                </tr>
+                                
+                                <tr id="pfx-2607:fd78:701::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2607:fd78:701::/48">2607:fd78:701::/48</a></td>
+                                    <td class="smallonmobile nowrap">ORION</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div style="display: none" id="connectivity-page">
+
+                        <div class="grid-row">
+                            <dl class="column-third column-third-first">
+                                <dt><a href="#peers">Peers</a></dt>
+                                <dd class="data">77</dd>
+                            </dl><dl class="column-third column-third-mid">
+                                <dt><a href="#upstreams">Upstreams</a></dt>
+                                
+                                <dd class="text data">4</dd>
+                                
+                            </dl>
+                            <dl class="column-third column-third-last">
+                                <dt><a href="#downstreams">Downstreams</a></dt> <dd class="data">47 (Cone: 49)</dd>
+                            </dl>
+
+                        </div>
+
+
+                        <hr>
+                        <h3>Network Policy<img class="flag-img" src="/assets/info.png" style="padding-left: 12px;" title="This info can take up to 2 hours to fully update" alt="This info take up to 2 hours to fully update"/></h3></h3>
+                        <a style="font-size: small;" href="/kb/network-policy">Click here to learn more about what this graph means and what makes up a network policy</a>
+
+                        <select id="netpolicydropdown" class="dropdownmenu">
+                            
+                                <option value="default">Global Aggregation</option>
+                            
+
+                            
+                                
+                            
+                                <option value="4437858c420119c75706c3caa8816759cdcd888561b2dcff99e8890b">Policy gallant_kalam</option>
+                            
+                                <option value="7e3745ebf917d007acdcdec01f1d60c1fd8626d3186b3842547898e2">Policy goofy_northcutt</option>
+                            
+                                <option value="7e4d788654bb6c15f1a5a61db2a832de2a7a1f9598073dfb76a10fbe">Policy objective_varahamihira</option>
+                            
+                                <option value="a35838011a37a73f70738a9bbd933e2b9bbd80f79cf4199d9c3b0f14">Policy goofy_dubinsky</option>
+                            
+                                <option value="c29a7d6ac0f7267cb57ad24b2b107143bc358dec9270b5d4342ad3d7">Policy upbeat_pasteur</option>
+                            
+
+                            
+
+
+                        </select>
+
+                        <script>var netgroups = {"4437858c420119c75706c3caa8816759cdcd888561b2dcff99e8890b":["2607:fd78::/32"],"7e3745ebf917d007acdcdec01f1d60c1fd8626d3186b3842547898e2":["2606:b340::/32"],"7e4d788654bb6c15f1a5a61db2a832de2a7a1f9598073dfb76a10fbe":["142.51.71.0/24","192.197.250.0/23","192.75.205.0/24","192.75.204.0/24","172.99.134.0/24","142.51.70.0/24"],"a35838011a37a73f70738a9bbd933e2b9bbd80f79cf4199d9c3b0f14":["2607:fd78:101::/48","2607:fd78:701::/48"],"c29a7d6ac0f7267cb57ad24b2b107143bc358dec9270b5d4342ad3d7":["142.155.216.0/22","142.155.0.0/22","66.97.16.0/20","199.212.252.0/24","66.97.30.0/24","66.97.23.0/24","66.97.22.0/24","142.155.117.0/24","142.155.198.0/23","199.212.254.0/24","66.97.27.0/24","192.139.237.0/24","66.97.20.0/24","199.212.15.0/24","199.212.250.0/24","199.212.251.0/24","142.155.192.0/22","142.155.164.0/24","205.211.94.0/23","199.212.84.0/23","66.97.28.0/24","172.99.134.0/23","199.212.253.0/24","66.97.31.0/24","66.97.19.0/24","192.197.60.0/24","142.155.210.0/24"]}</script>
+
+                        <div style="text-align: center;">
+                            <img id="pathimg" usemap="#world" src="">
+                            <div id="world2"></div>
+                        </div>
+
+                        <details>
+                            <summary>Chart Display Options</summary>
+                            <noscript>This requires javascript to work</noscript>
+                            <label for="graphOptionMoreWiggle" style="display: flex;align-items: center;font-size: 20px;">
+                                <input type="checkbox" id="graphOptionMoreWiggle" name="graphOptionMoreWiggle" style="width: 64px; height: 32px;">
+                                    <p id="graphOptionMoreWiggleLabel" style="width: 200%;">Display links using non straight lines</p>
+                            </label>
+                        </details>
+
+                        <h3 style="display: none;" id="PISPBanner">Prefixes in selected policy</h3>
+                        <table id="policytable" class="full-width-table">
+                        </table>
+                        <button style="width:100%;display: none;" id="ShowFullPolicyButton" class="bigButton" onclick="dropdownPoke()">Load all prefixes in policy</button>
+
+                        <script>
+                            !function(a,b){"function"==typeof define&&define.amd?define([],b):"undefined"!=typeof module&&module.exports?module.exports=b():a.ReconnectingWebSocket=b()}(this,function(){function a(b,c,d){function l(a,b){var c=document.createEvent("CustomEvent");return c.initCustomEvent(a,!1,!1,b),c}var e={debug:!1,automaticOpen:!0,reconnectInterval:1e3,maxReconnectInterval:3e4,reconnectDecay:1.5,timeoutInterval:2e3};d||(d={});for(var f in e)this[f]="undefined"!=typeof d[f]?d[f]:e[f];this.url=b,this.reconnectAttempts=0,this.readyState=WebSocket.CONNECTING,this.protocol=null;var h,g=this,i=!1,j=!1,k=document.createElement("div");k.addEventListener("open",function(a){g.onopen(a)}),k.addEventListener("close",function(a){g.onclose(a)}),k.addEventListener("connecting",function(a){g.onconnecting(a)}),k.addEventListener("message",function(a){g.onmessage(a)}),k.addEventListener("error",function(a){g.onerror(a)}),this.addEventListener=k.addEventListener.bind(k),this.removeEventListener=k.removeEventListener.bind(k),this.dispatchEvent=k.dispatchEvent.bind(k),this.open=function(b){h=new WebSocket(g.url,c||[]),b||k.dispatchEvent(l("connecting")),(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","attempt-connect",g.url);var d=h,e=setTimeout(function(){(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","connection-timeout",g.url),j=!0,d.close(),j=!1},g.timeoutInterval);h.onopen=function(){clearTimeout(e),(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","onopen",g.url),g.protocol=h.protocol,g.readyState=WebSocket.OPEN,g.reconnectAttempts=0;var d=l("open");d.isReconnect=b,b=!1,k.dispatchEvent(d)},h.onclose=function(c){if(clearTimeout(e),h=null,i)g.readyState=WebSocket.CLOSED,k.dispatchEvent(l("close"));else{g.readyState=WebSocket.CONNECTING;var d=l("connecting");d.code=c.code,d.reason=c.reason,d.wasClean=c.wasClean,k.dispatchEvent(d),b||j||((g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","onclose",g.url),k.dispatchEvent(l("close")));var e=g.reconnectInterval*Math.pow(g.reconnectDecay,g.reconnectAttempts);setTimeout(function(){g.reconnectAttempts++,g.open(!0)},e>g.maxReconnectInterval?g.maxReconnectInterval:e)}},h.onmessage=function(b){(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","onmessage",g.url,b.data);var c=l("message");c.data=b.data,k.dispatchEvent(c)},h.onerror=function(b){(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","onerror",g.url,b),k.dispatchEvent(l("error"))}},1==this.automaticOpen&&this.open(!1),this.send=function(b){if(h)return(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","send",g.url,b),h.send(b);throw"INVALID_STATE_ERR : Pausing to reconnect websocket"},this.close=function(a,b){"undefined"==typeof a&&(a=1e3),i=!0,h&&h.close(a,b)},this.refresh=function(){h&&h.close()}}return a.prototype.onopen=function(){},a.prototype.onclose=function(){},a.prototype.onconnecting=function(){},a.prototype.onmessage=function(){},a.prototype.onerror=function(){},a.debugAll=!1,a.CONNECTING=WebSocket.CONNECTING,a.OPEN=WebSocket.OPEN,a.CLOSING=WebSocket.CLOSING,a.CLOSED=WebSocket.CLOSED,a});
+                        </script>
+                        
+                        <script>
+                            var prefixinfo = [{"PrefixString":"66.97.16.0/20","WhoisName":"ORION","WhoisCountry":"CA"},{"PrefixString":"66.97.19.0/24","WhoisName":"ORION","WhoisCountry":"CA"},{"PrefixString":"66.97.20.0/24","WhoisName":"ORION","WhoisCountry":"CA"},{"PrefixString":"66.97.22.0/24","WhoisName":"ORION","WhoisCountry":"CA"},{"PrefixString":"66.97.23.0/24","WhoisName":"ORION","WhoisCountry":"CA"},{"PrefixString":"66.97.27.0/24","WhoisName":"ORION","WhoisCountry":"CA"},{"PrefixString":"66.97.28.0/24","WhoisName":"ORION","WhoisCountry":"CA"},{"PrefixString":"66.97.29.0/24","WhoisName":"ORION","WhoisCountry":"CA"},{"PrefixString":"66.97.30.0/24","WhoisName":"ORION","WhoisCountry":"CA"},{"PrefixString":"66.97.31.0/24","WhoisName":"ORION","WhoisCountry":"CA"},{"PrefixString":"142.51.70.0/24","WhoisName":"Laurentian University of Sudbury","WhoisCountry":"CA"},{"PrefixString":"142.51.71.0/24","WhoisName":"Laurentian University of Sudbury","WhoisCountry":"CA"},{"PrefixString":"142.155.0.0/22","WhoisName":"St. Lawrence College","WhoisCountry":"CA"},{"PrefixString":"142.155.117.0/24","WhoisName":"St. Lawrence College","WhoisCountry":"CA"},{"PrefixString":"142.155.164.0/24","WhoisName":"St. Lawrence College","WhoisCountry":"CA"},{"PrefixString":"142.155.192.0/22","WhoisName":"St. Lawrence College","WhoisCountry":"CA"},{"PrefixString":"142.155.198.0/23","WhoisName":"St. Lawrence College","WhoisCountry":"CA"},{"PrefixString":"142.155.210.0/24","WhoisName":"St. Lawrence College","WhoisCountry":"CA"},{"PrefixString":"142.155.216.0/22","WhoisName":"St. Lawrence College","WhoisCountry":"CA"},{"PrefixString":"172.99.134.0/24","WhoisName":"ORION","WhoisCountry":"CA"},{"PrefixString":"172.99.134.0/23","WhoisName":"ORION","WhoisCountry":"CA"},{"PrefixString":"192.75.204.0/24","WhoisName":"Royal Ontario Museum","WhoisCountry":"CA"},{"PrefixString":"192.75.205.0/24","WhoisName":"Royal Ontario Museum","WhoisCountry":"CA"},{"PrefixString":"192.139.237.0/24","WhoisName":"Loyalist College of Applied Arts \u0026 Technology","WhoisCountry":"CA"},{"PrefixString":"192.197.60.0/24","WhoisName":"Confederation College of Applied Arts \u0026 Technology","WhoisCountry":"CA"},{"PrefixString":"192.197.250.0/23","WhoisName":"LUNENFELD TANENBAUM RESEARCH INSTITUTE","WhoisCountry":"CA"},{"PrefixString":"199.212.15.0/24","WhoisName":"Confederation College of Applied Arts \u0026 Technology","WhoisCountry":"CA"},{"PrefixString":"199.212.84.0/23","WhoisName":"Confederation College of Applied Arts \u0026 Technology","WhoisCountry":"CA"},{"PrefixString":"199.212.250.0/24","WhoisName":"Waterloo Region District School Board","WhoisCountry":"CA"},{"PrefixString":"199.212.251.0/24","WhoisName":"Waterloo Region District School Board","WhoisCountry":"CA"},{"PrefixString":"199.212.252.0/24","WhoisName":"Waterloo Region District School Board","WhoisCountry":"CA"},{"PrefixString":"199.212.253.0/24","WhoisName":"Waterloo Region District School Board","WhoisCountry":"CA"},{"PrefixString":"199.212.254.0/24","WhoisName":"Waterloo Region District School Board","WhoisCountry":"CA"},{"PrefixString":"205.211.94.0/23","WhoisName":"ORION","WhoisCountry":"CA"},{"PrefixString":"2606:b340::/32","WhoisName":"ORION","WhoisCountry":"CA"},{"PrefixString":"2607:fd78::/32","WhoisName":"ORION","WhoisCountry":"CA"},{"PrefixString":"2607:fd78:101::/48","WhoisName":"ORION","WhoisCountry":"CA"},{"PrefixString":"2607:fd78:701::/48","WhoisName":"ORION","WhoisCountry":"CA"}]
+                            var asn =  26677 
+
+                            var pfxExtraString = "";
+
+                            function saveGraphOptionsToLocalStorage() {
+                                localStorage.setItem("pfx-chart-options:wiggle", document.getElementById("graphOptionMoreWiggle").checked);
+                            }
+
+                            function loadGraphOptionsToLocalStorage() {
+                                document.getElementById("graphOptionMoreWiggle").checked = localStorage.getItem("pfx-chart-options:wiggle") == "true";
+                                pfxExtraString= "";
+                                if (document.getElementById("graphOptionMoreWiggle").checked) {
+                                    pfxExtraString = pfxExtraString + "&wiggly";
+                                }
+                            }
+                            loadGraphOptionsToLocalStorage();
+
+                            function graphOptionsChanged() {
+                                saveGraphOptionsToLocalStorage();
+                                handleImageChange();
+                            }
+                            document.getElementById("graphOptionMoreWiggle").addEventListener("click", graphOptionsChanged)
+
+
+                            function handleImageChange() {
+                                loadGraphOptionsToLocalStorage();
+                                
+                                document.getElementById("pathimg").src=("/pathimg/"+asn+ "-" + document.getElementById("netpolicydropdown").value +"?"+pfxExtraString);
+                                var request = new XMLHttpRequest();
+                                request.open('GET', "/pathimg/"+asn+ "-" + document.getElementById("netpolicydropdown").value + "?map=true" + pfxExtraString, true);
+
+                                request.onload = function() {
+                                    if (this.status >= 200 && this.status < 400) {
+                                        
+                                        
+                                        document.getElementById("world2").innerHTML = this.response;
+                                        setTimeout(function(){
+                                            imageMapResize('#world');
+                                        },1000)
+                                    }
+                                };
+                                request.send();
+                                buildPrefixTable();
+                            } 
+
+                            function encodeHTML(s) {
+                                return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
+                            }
+
+                            function dropdownPoke(){
+                                InteractedWithPolicyTableYet=true;
+                                handleImageChange();
+                            }
+
+                            var InteractedWithPolicyTableYet = false;
+                            var OverloadPolicySize = 0;
+                            function buildPrefixTable() {
+                                var policy = document.getElementById("netpolicydropdown").value;
+                                
+                                var cidrs = netgroups[policy];
+                                var ihtml = "<tbody> <tr> <th class=\"nowrap\">  -  </th> <th>Prefix</th> <th class=\"nowrap\">Description</th> </tr>";
+
+                                
+                                var aaa = document.querySelectorAll('#PISPBanner');
+                                var bbb = document.querySelectorAll('#policytable');
+                                var n = 0
+                                if (cidrs) {
+                                    aaa[0].style.display = "";
+                                    bbb[0].style.display = "";
+                                    cidrs.forEach(cidr => {
+                                        var obj = {};
+                                        var dont =false;
+                                        n++;
+                                        
+                                        if (!InteractedWithPolicyTableYet) {
+                                            if (n == 5) {
+                                                dont = true;
+                                            } else if (n > 5) {
+                                                dont = true;
+                                            }
+                                        }
+                                        
+                                        if (!dont) {
+                                            prefixinfo.forEach(el => {
+                                                if(el.PrefixString == cidr) {
+                                                    
+                                                        ihtml += "<tr><td class=\"nowrap ns\"><img class=\"flag-img\" src=\"/assets/flags/"+el.WhoisCountry+".png\" title=\""+el.WhoisCountry+"\"></td>"
+                                                        ihtml += "<td><a href=\"/prefix/"+el.PrefixString+"\">"+el.PrefixString+"</a></td>"
+                                                        ihtml += "<td class=\"nowrap\">"+encodeHTML(el.WhoisName)+"</td></tr>"
+                                                }
+                                            });
+                                        } else {
+                                            OverloadPolicySize++;
+                                        }
+                                    });
+                                    document.getElementById("policytable").innerHTML = ihtml
+                                    var PolButton = document.querySelectorAll('#ShowFullPolicyButton');
+                                    if (!InteractedWithPolicyTableYet && OverloadPolicySize!=0) {
+                                        PolButton[0].style="width:100%";
+                                        PolButton[0].innerHTML = "Load all "+OverloadPolicySize+" prefixes in policy"
+                                    } else {
+                                        PolButton[0].style="display:none;";
+                                    }
+                                    
+                                } else {
+                                    aaa[0].style.display = "none";
+                                    bbb[0].style.display = "none";
+                                }
+                            }
+
+
+                            var pathdropdown = document.querySelectorAll('#netpolicydropdown');
+                            pathdropdown[0].addEventListener("change",dropdownPoke)
+                            handleImageChange()
+                            buildPrefixTable()
+
+                            document.addEventListener("load", function(){
+                                
+                                handleImageChange()
+                            });
+
+                            function uuidv4() {
+                                return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+                                    var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+                                    return v.toString(16);
+                                });
+                            }
+
+                            
+                            let realTimeSocket = new ReconnectingWebSocket("wss://bgp.tools/ws/rt-asn?prefix=AS26677" + "&magic=" + encodeURIComponent("CGZIKH3Z32SJDGAIWZIVJU5N4XQ3JAY7IIEJBLHHSPO7MHYI3AFQ===="));
+                            
+                            realTimeSocket.onmessage = function(event) {
+                                console.log(`[message] Data received from server: ${event.data}`);
+                                if (event.data == "Running.") {
+                                    document.getElementById("ws-status").src = "/assets/connected.png";
+                                    document.getElementById("ws-status").title = "Connected to realtime data";
+                                } else if (event.data == "STOP-CONNECTING") {
+                                    document.getElementById("ws-status").src = disconectedIcon;
+                                    document.getElementById("ws-status").title = "Not connected to realtime data";
+                                    realTimeSocket.maxReconnectAttempts = 1;
+                                    realTimeSocket.close()
+                                } else {
+                                    var obj = JSON.parse(event.data);
+                                    var elm = document.getElementById("pfx-"+obj.Prefix);
+                                    if (!elm && obj.Vis > 6) {
+                                        var tblist = document.getElementById("donotscrapebgptools-prefixlist-tbody");
+                                        var node = document.createElement("tr");                 
+                                        node.outerHTML = '<tr id="pfx-'+obj.Prefix+'"><td class="nowrap"><img class="flag-img" src="/assets/flags/'+obj.Whois.WhoisCountry+'.png" title="'+obj.Whois.WhoisCountry+'"></td><td><a href="/prefix/'+obj.Prefix+'">'+obj.Prefix+'</a></td><td class="smallonmobile nowrap">'+obj.Whois.WhoisName+'</td></tr>';
+                                        tblist.appendChild(node);                              
+                                    }
+                                    if (!elm) {
+                                        elm = document.getElementById("pfx-"+obj.Prefix);
+                                    }
+                                    
+                                    if (obj.Vis > 70) {
+                                        if (elm.style) {
+                                            var es = elm.style;
+                                            if (es.animation.includes("pulse1b")) {
+                                                elm.style = "animation: pulse2b 1s 1;";
+                                            } else if (es.animation.includes("pulse2b")) {
+                                                elm.style = "animation: pulse1b 1s 1;";
+                                            } else {
+                                                elm.style = "animation: pulse1b 1s 1;";
+                                            }
+                                        }
+                                    } else if (obj.Vis < 5) {
+                                        
+                                        var elm = document.getElementById("pfx-"+obj.Prefix);
+                                        if (elm) {
+                                            elm.parentNode.removeChild(elm);
+                                        }
+                                    } else {
+                                        if (elm.style) {
+                                            var es = elm.style;
+                                            if (es.animation.includes("pulse1r")) {
+                                                elm.style = "animation: pulse2r 1s 1;";
+                                            } else if (es.animation.includes("pulse2r")) {
+                                                elm.style = "animation: pulse1r 1s 1;";
+                                            } else {
+                                                elm.style = "animation: pulse1r 1s 1;";
+                                            }
+                                        }
+                                    }
+                                }
+                            };
+                            var disconectedIcon = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAAZlBMVEX/ewBZWVn/ewf/ew5fWljudiP8egp6XVT6eRHodSmVYU6hZEzObjrldCv3eRZ/XlNjWliHX1KrZkngci71eBl1XFXCa0CKYFHydx18XlSQYE+lZUq0aEbJbT3SbzhvXFaLYFG8akLYdYVFAAABQElEQVRIx5XV25KDIAwGYIKASLutqOtZ277/S26xK4ozJea/qRdfajATZaRkd6B6oPoL1d9QphUn+WvXmGF8TfN8yvNrDj6nvNj5Hu8n8HCh9ONiON5PEKuQx55DmFTHC1R9uMOjYkhFERbkEikofw8FGe5t0FWJ+kLvz5H+t8RdGD9k8TeebBXpzwIZT955XyVBtHHeXYzeJy5fhydtoZffZvUMSfvxT4BOeI/G/b9paxH1at8XQF8xNcV8aaQvHQBMhY/XttsdYp5nah3XdvIqui61Cjy+jqLwXp1cx9XLQZ5cR/vx1p8cez2IWrlxYY/T9bNVyCfmdQdbxNgs441FNRAEHS83oe9ahmTw1p88nhHCiAkpeIUeX5eJ6NlM9Gwm+uxO9/3F2PSR597jn1+udCWzUp7150P1jOoZ1f8BGPARG85JosIAAAAASUVORK5CYII=";
+                            realTimeSocket.onerror = function(error) {
+                                document.getElementById("ws-status").src = disconectedIcon;
+                                document.getElementById("ws-status").title = "Not connected to realtime data";
+
+                                console.log(`[error] ${error.message}`);
+                            };
+                            realTimeSocket.onclose = function(error) {
+                                document.getElementById("ws-status").src = disconectedIcon;
+                                document.getElementById("ws-status").title = "Not connected to realtime data";
+
+                                console.log(`[error] ${error.message}`);
+                            };
+                        </script>
+
+<div class="superclearfix">
+    
+</div>
+
+                        <hr>
+                        <a style="font-size: small;" href="/kb/what-is-a-upstream">How are upstreams and downstreams calculated?</a>
+                        <h3 id="upstreams">Upstreams<img class="flag-img" src="/assets/lightning.png" style="padding-left: 12px;" title="This information was fetched live at page load time" alt="This information was fetched live at page load time"/></h3>
+
+
+                        <table id="donotscrapebgptools-upstreamTable" class="full-width-table">
+                            <thead class="sortable">
+                                <tr>
+                                    <th class="nowrap boldpls">  &nbsp;  </th>
+                                    <th data-sort-method='number' class="boldpls">ASN</th>
+                                    <th class="nowrap boldpls">Description</th>
+                                    <th class="nowrap boldpls">IPv4</th>
+                                    <th class="nowrap boldpls">IPv6</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US">
+                                        
+                                        </td>
+                                    <td data-sort='174'><a href="/as/174">AS174</a></td>
+                                    <td class="smallonmobile nowrap">Cogent Communications, LLC</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US">
+                                        
+                                        </td>
+                                    <td data-sort='6461'><a href="/as/6461">AS6461</a></td>
+                                    <td class="smallonmobile nowrap">Zayo Bandwidth</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA">
+                                        
+                                        </td>
+                                    <td data-sort='6509'><a href="/as/6509">AS6509</a></td>
+                                    <td class="smallonmobile nowrap">CANARIE Inc</td>
+                                    <td class="nowrap">&#10008;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA">
+                                        
+                                        </td>
+                                    <td data-sort='11670'><a href="/as/11670">AS11670</a></td>
+                                    <td class="smallonmobile nowrap">Toronto Internet Exchange Community</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+
+                        <hr>
+                        <h3 id="peers">Peers<img class="flag-img" src="/assets/lightning.png" style="padding-left: 12px;" title="This information was fetched live at page load time" alt="This information was fetched live at page load time"/></h3>
+
+
+
+                        <table id="donotscrapebgptools-upstreamTablePeers" class="full-width-table">
+                            <thead class="sortable">
+                                <tr>
+                                    <th class="nowrap boldpls">  &nbsp;  </th>
+                                    <th data-sort-method='number' class="boldpls">ASN</th>
+                                    <th class="nowrap boldpls">Description</th>
+                                    <th class="nowrap boldpls">IPv4</th>
+                                    <th class="nowrap boldpls">IPv6</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='6461'><a href="/as/6461">AS6461</a></td>
+                                    <td class="smallonmobile nowrap">Zayo Bandwidth</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='174'><a href="/as/174">AS174</a></td>
+                                    <td class="smallonmobile nowrap">Cogent Communications, LLC</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA"></td>
+                                    <td data-sort='30045'><a href="/as/30045">AS30045</a></td>
+                                    <td class="smallonmobile nowrap">University Health Network</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA"></td>
+                                    <td data-sort='239'><a href="/as/239">AS239</a></td>
+                                    <td class="smallonmobile nowrap">University of Toronto</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA"></td>
+                                    <td data-sort='6509'><a href="/as/6509">AS6509</a></td>
+                                    <td class="smallonmobile nowrap">CANARIE Inc</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='6939'><a href="/as/6939">AS6939</a></td>
+                                    <td class="smallonmobile nowrap">Hurricane Electric LLC</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA"></td>
+                                    <td data-sort='31782'><a href="/as/31782">AS31782</a></td>
+                                    <td class="smallonmobile nowrap">Wilfrid Laurier University</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA"></td>
+                                    <td data-sort='19350'><a href="/as/19350">AS19350</a></td>
+                                    <td class="smallonmobile nowrap">Centennial College</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA"></td>
+                                    <td data-sort='19764'><a href="/as/19764">AS19764</a></td>
+                                    <td class="smallonmobile nowrap">Georgian College of Applied Arts &amp; Technology</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA"></td>
+                                    <td data-sort='30713'><a href="/as/30713">AS30713</a></td>
+                                    <td class="smallonmobile nowrap">York Region District School Board</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA"></td>
+                                    <td data-sort='32157'><a href="/as/32157">AS32157</a></td>
+                                    <td class="smallonmobile nowrap">DURHAM COLLEGE OF APPLIED ARTS AND TECHNOLOGY</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA"></td>
+                                    <td data-sort='14661'><a href="/as/14661">AS14661</a></td>
+                                    <td class="smallonmobile nowrap">Laurentian University of Sudbury</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA"></td>
+                                    <td data-sort='25826'><a href="/as/25826">AS25826</a></td>
+                                    <td class="smallonmobile nowrap">University of Ottawa</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA"></td>
+                                    <td data-sort='32638'><a href="/as/32638">AS32638</a></td>
+                                    <td class="smallonmobile nowrap">Trent University</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA"></td>
+                                    <td data-sort='46626'><a href="/as/46626">AS46626</a></td>
+                                    <td class="smallonmobile nowrap">The Hospital for Sick Children</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA"></td>
+                                    <td data-sort='32156'><a href="/as/32156">AS32156</a></td>
+                                    <td class="smallonmobile nowrap">The Humber College Institute of Technology and Advanc...</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA"></td>
+                                    <td data-sort='802'><a href="/as/802">AS802</a></td>
+                                    <td class="smallonmobile nowrap">York University</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA"></td>
+                                    <td data-sort='11700'><a href="/as/11700">AS11700</a></td>
+                                    <td class="smallonmobile nowrap">CW-E</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA"></td>
+                                    <td data-sort='53566'><a href="/as/53566">AS53566</a></td>
+                                    <td class="smallonmobile nowrap">The George Brown College of Applied Arts and Technology</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA"></td>
+                                    <td data-sort='31886'><a href="/as/31886">AS31886</a></td>
+                                    <td class="smallonmobile nowrap">University of Guelph</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA"></td>
+                                    <td data-sort='819'><a href="/as/819">AS819</a></td>
+                                    <td class="smallonmobile nowrap">LARG*net London and Region Global Computer Network</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA"></td>
+                                    <td data-sort='10265'><a href="/as/10265">AS10265</a></td>
+                                    <td class="smallonmobile nowrap">Seneca College of Applied Arts and Technology</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA"></td>
+                                    <td data-sort='32820'><a href="/as/32820">AS32820</a></td>
+                                    <td class="smallonmobile nowrap">Nipissing University</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA"></td>
+                                    <td data-sort='31983'><a href="/as/31983">AS31983</a></td>
+                                    <td class="smallonmobile nowrap">Queen&#39;s University at Kingston</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA"></td>
+                                    <td data-sort='23237'><a href="/as/23237">AS23237</a></td>
+                                    <td class="smallonmobile nowrap">McMaster University</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA"></td>
+                                    <td data-sort='46757'><a href="/as/46757">AS46757</a></td>
+                                    <td class="smallonmobile nowrap">Sharcnet</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA"></td>
+                                    <td data-sort='11703'><a href="/as/11703">AS11703</a></td>
+                                    <td class="smallonmobile nowrap">MaRS Discovery District</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA"></td>
+                                    <td data-sort='835'><a href="/as/835">AS835</a></td>
+                                    <td class="smallonmobile nowrap">GoCodeIT Inc</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA"></td>
+                                    <td data-sort='32347'><a href="/as/32347">AS32347</a></td>
+                                    <td class="smallonmobile nowrap">Sir Sandford Fleming College of Applied Arts and Technology</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA"></td>
+                                    <td data-sort='32250'><a href="/as/32250">AS32250</a></td>
+                                    <td class="smallonmobile nowrap">Niagara College of Applied Arts and Technology</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA"></td>
+                                    <td data-sort='11670'><a href="/as/11670">AS11670</a></td>
+                                    <td class="smallonmobile nowrap">Toronto Internet Exchange Community</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA"></td>
+                                    <td data-sort='53904'><a href="/as/53904">AS53904</a></td>
+                                    <td class="smallonmobile nowrap">CANARIE Inc</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA"></td>
+                                    <td data-sort='32817'><a href="/as/32817">AS32817</a></td>
+                                    <td class="smallonmobile nowrap">Northern College of Applied Arts &amp; Technology</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA"></td>
+                                    <td data-sort='26996'><a href="/as/26996">AS26996</a></td>
+                                    <td class="smallonmobile nowrap">Toronto Metropolitan University</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA"></td>
+                                    <td data-sort='25728'><a href="/as/25728">AS25728</a></td>
+                                    <td class="smallonmobile nowrap">Lambton College of Applied Arts and Technology</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA"></td>
+                                    <td data-sort='63327'><a href="/as/63327">AS63327</a></td>
+                                    <td class="smallonmobile nowrap">Ontario Agency for Health Protection and Promotion</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA"></td>
+                                    <td data-sort='26071'><a href="/as/26071">AS26071</a></td>
+                                    <td class="smallonmobile nowrap">Lakehead University</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA"></td>
+                                    <td data-sort='32762'><a href="/as/32762">AS32762</a></td>
+                                    <td class="smallonmobile nowrap">Sault College of Applied Arts &amp; Technology</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA"></td>
+                                    <td data-sort='399825'><a href="/as/399825">AS399825</a></td>
+                                    <td class="smallonmobile nowrap">NOSM University</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA"></td>
+                                    <td data-sort='12093'><a href="/as/12093">AS12093</a></td>
+                                    <td class="smallonmobile nowrap">University of Waterloo</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA"></td>
+                                    <td data-sort='46477'><a href="/as/46477">AS46477</a></td>
+                                    <td class="smallonmobile nowrap">Perimeter Institute</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA"></td>
+                                    <td data-sort='22766'><a href="/as/22766">AS22766</a></td>
+                                    <td class="smallonmobile nowrap">The Ontario Educational Communications Authority</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA"></td>
+                                    <td data-sort='54070'><a href="/as/54070">AS54070</a></td>
+                                    <td class="smallonmobile nowrap">Ontario College of Art &amp; Design University</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA"></td>
+                                    <td data-sort='18621'><a href="/as/18621">AS18621</a></td>
+                                    <td class="smallonmobile nowrap">The Conestoga College Institute of Technology and Adv...</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA"></td>
+                                    <td data-sort='32756'><a href="/as/32756">AS32756</a></td>
+                                    <td class="smallonmobile nowrap">Cambrian College of Applied Arts &amp; Technology</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA"></td>
+                                    <td data-sort='19925'><a href="/as/19925">AS19925</a></td>
+                                    <td class="smallonmobile nowrap">Sunnybrook Health Sciences Centre</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA"></td>
+                                    <td data-sort='11851'><a href="/as/11851">AS11851</a></td>
+                                    <td class="smallonmobile nowrap">The Michener Institute for Applied Health Sciences</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='NL' class="nowrap ns"><img class="flag-img" src="/assets/flags/NL.png" title="NL"></td>
+                                    <td data-sort='49544'><a href="/as/49544">AS49544</a></td>
+                                    <td class="smallonmobile nowrap">i3D.net B.V</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA"></td>
+                                    <td data-sort='395704'><a href="/as/395704">AS395704</a></td>
+                                    <td class="smallonmobile nowrap">Canadore College of Applied Arts and Technology</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='1828'><a href="/as/1828">AS1828</a></td>
+                                    <td class="smallonmobile nowrap">Unitas Global</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA"></td>
+                                    <td data-sort='6327'><a href="/as/6327">AS6327</a></td>
+                                    <td class="smallonmobile nowrap">Shaw Communications</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA"></td>
+                                    <td data-sort='29773'><a href="/as/29773">AS29773</a></td>
+                                    <td class="smallonmobile nowrap">Carleton University</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA"></td>
+                                    <td data-sort='11628'><a href="/as/11628">AS11628</a></td>
+                                    <td class="smallonmobile nowrap">Ontario Institute for Cancer Research</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA"></td>
+                                    <td data-sort='16475'><a href="/as/16475">AS16475</a></td>
+                                    <td class="smallonmobile nowrap">Brock University</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA"></td>
+                                    <td data-sort='393877'><a href="/as/393877">AS393877</a></td>
+                                    <td class="smallonmobile nowrap">Baycrest</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='SG' class="nowrap ns"><img class="flag-img" src="/assets/flags/SG.png" title="SG"></td>
+                                    <td data-sort='24482'><a href="/as/24482">AS24482</a></td>
+                                    <td class="smallonmobile nowrap">SG.GS</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA"></td>
+                                    <td data-sort='19737'><a href="/as/19737">AS19737</a></td>
+                                    <td class="smallonmobile nowrap">Royal Military College of Canada</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA"></td>
+                                    <td data-sort='33185'><a href="/as/33185">AS33185</a></td>
+                                    <td class="smallonmobile nowrap">Hive Data Center Inc.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA"></td>
+                                    <td data-sort='400202'><a href="/as/400202">AS400202</a></td>
+                                    <td class="smallonmobile nowrap">Municipality of the County of Pictou</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA"></td>
+                                    <td data-sort='15158'><a href="/as/15158">AS15158</a></td>
+                                    <td class="smallonmobile nowrap">Algoma University</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA"></td>
+                                    <td data-sort='13733'><a href="/as/13733">AS13733</a></td>
+                                    <td class="smallonmobile nowrap">Centre for Addiction and Mental Health</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='20473'><a href="/as/20473">AS20473</a></td>
+                                    <td class="smallonmobile nowrap">The Constant Company, LLC</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA"></td>
+                                    <td data-sort='53356'><a href="/as/53356">AS53356</a></td>
+                                    <td class="smallonmobile nowrap">Free Range Cloud Hosting Inc.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA"></td>
+                                    <td data-sort='63065'><a href="/as/63065">AS63065</a></td>
+                                    <td class="smallonmobile nowrap">Hiboo Networks Inc.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA"></td>
+                                    <td data-sort='398290'><a href="/as/398290">AS398290</a></td>
+                                    <td class="smallonmobile nowrap">House of Commons</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA"></td>
+                                    <td data-sort='1403'><a href="/as/1403">AS1403</a></td>
+                                    <td class="smallonmobile nowrap">EBOX</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA"></td>
+                                    <td data-sort='394256'><a href="/as/394256">AS394256</a></td>
+                                    <td class="smallonmobile nowrap">Tech Futures Interactive Inc.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='36236'><a href="/as/36236">AS36236</a></td>
+                                    <td class="smallonmobile nowrap">NetActuate, Inc</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA"></td>
+                                    <td data-sort='399226'><a href="/as/399226">AS399226</a></td>
+                                    <td class="smallonmobile nowrap">SpeedFI Inc.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='15169'><a href="/as/15169">AS15169</a></td>
+                                    <td class="smallonmobile nowrap">Google LLC</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='GB' class="nowrap ns"><img class="flag-img" src="/assets/flags/GB.png" title="GB"></td>
+                                    <td data-sort='4455'><a href="/as/4455">AS4455</a></td>
+                                    <td class="smallonmobile nowrap">IX Reach Ltd</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA"></td>
+                                    <td data-sort='46641'><a href="/as/46641">AS46641</a></td>
+                                    <td class="smallonmobile nowrap">Niagara Catholic District School Board</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA"></td>
+                                    <td data-sort='812'><a href="/as/812">AS812</a></td>
+                                    <td class="smallonmobile nowrap">Rogers Communications Canada Inc.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA"></td>
+                                    <td data-sort='33554'><a href="/as/33554">AS33554</a></td>
+                                    <td class="smallonmobile nowrap">Neutral Data Centers Corp.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='FR' class="nowrap ns"><img class="flag-img" src="/assets/flags/FR.png" title="FR"></td>
+                                    <td data-sort='35280'><a href="/as/35280">AS35280</a></td>
+                                    <td class="smallonmobile nowrap">F5 Networks SARL</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='1239'><a href="/as/1239">AS1239</a></td>
+                                    <td class="smallonmobile nowrap">Sprint Wireline (Cogent)</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='IT' class="nowrap ns"><img class="flag-img" src="/assets/flags/IT.png" title="IT"></td>
+                                    <td data-sort='202617'><a href="/as/202617">AS202617</a></td>
+                                    <td class="smallonmobile nowrap">Kering Eyewear S.p.A.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+
+
+
+                        <hr>
+                        <h3 id="downstreams">Downstreams<img class="flag-img" src="/assets/lightning.png" style="padding-left: 12px;" title="This information was fetched live at page load time" alt="This information was fetched live at page load time"/></h3>
+                        <table id="donotscrapebgptools-upstreamTableDowns" class="full-width-table">
+                            <thead class="sortable">
+                                
+                                <tr>
+                                    <th class="nowrap boldpls">  &nbsp;  </th>
+                                    <th data-sort-method='number'  class="boldpls">ASN</th>
+                                    <th class="nowrap boldpls">Description</th>
+                                    <th class="nowrap boldpls">IPv4</th>
+                                    <th class="nowrap boldpls">IPv6</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA">
+                                        
+                                        </td>
+                                    <td data-sort='30045'><a href="/as/30045">AS30045</a></td>
+                                    <td class="smallonmobile nowrap">University Health Network</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA">
+                                        
+                                        </td>
+                                    <td data-sort='239'><a href="/as/239">AS239</a></td>
+                                    <td class="smallonmobile nowrap">University of Toronto</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA">
+                                        
+                                        </td>
+                                    <td data-sort='31782'><a href="/as/31782">AS31782</a></td>
+                                    <td class="smallonmobile nowrap">Wilfrid Laurier University</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA">
+                                        
+                                        </td>
+                                    <td data-sort='19350'><a href="/as/19350">AS19350</a></td>
+                                    <td class="smallonmobile nowrap">Centennial College</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA">
+                                        
+                                        </td>
+                                    <td data-sort='19764'><a href="/as/19764">AS19764</a></td>
+                                    <td class="smallonmobile nowrap">Georgian College of Applied Arts &amp; Technology</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA">
+                                        
+                                        </td>
+                                    <td data-sort='30713'><a href="/as/30713">AS30713</a></td>
+                                    <td class="smallonmobile nowrap">York Region District School Board</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA">
+                                        
+                                        </td>
+                                    <td data-sort='32157'><a href="/as/32157">AS32157</a></td>
+                                    <td class="smallonmobile nowrap">DURHAM COLLEGE OF APPLIED ARTS AND TECHNOLOGY</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA">
+                                        
+                                        </td>
+                                    <td data-sort='14661'><a href="/as/14661">AS14661</a></td>
+                                    <td class="smallonmobile nowrap">Laurentian University of Sudbury</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA">
+                                        
+                                        </td>
+                                    <td data-sort='25826'><a href="/as/25826">AS25826</a></td>
+                                    <td class="smallonmobile nowrap">University of Ottawa</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA">
+                                        
+                                        </td>
+                                    <td data-sort='32638'><a href="/as/32638">AS32638</a></td>
+                                    <td class="smallonmobile nowrap">Trent University</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA">
+                                        
+                                        </td>
+                                    <td data-sort='32156'><a href="/as/32156">AS32156</a></td>
+                                    <td class="smallonmobile nowrap">The Humber College Institute of Technology and Advanc...</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA">
+                                        
+                                        </td>
+                                    <td data-sort='802'><a href="/as/802">AS802</a></td>
+                                    <td class="smallonmobile nowrap">York University</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA">
+                                        
+                                        </td>
+                                    <td data-sort='46626'><a href="/as/46626">AS46626</a></td>
+                                    <td class="smallonmobile nowrap">The Hospital for Sick Children</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA">
+                                        
+                                        </td>
+                                    <td data-sort='53566'><a href="/as/53566">AS53566</a></td>
+                                    <td class="smallonmobile nowrap">The George Brown College of Applied Arts and Technology</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA">
+                                        
+                                        </td>
+                                    <td data-sort='46757'><a href="/as/46757">AS46757</a></td>
+                                    <td class="smallonmobile nowrap">Sharcnet</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA">
+                                        
+                                        </td>
+                                    <td data-sort='32820'><a href="/as/32820">AS32820</a></td>
+                                    <td class="smallonmobile nowrap">Nipissing University</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA">
+                                        
+                                        </td>
+                                    <td data-sort='31983'><a href="/as/31983">AS31983</a></td>
+                                    <td class="smallonmobile nowrap">Queen&#39;s University at Kingston</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA">
+                                        
+                                        </td>
+                                    <td data-sort='23237'><a href="/as/23237">AS23237</a></td>
+                                    <td class="smallonmobile nowrap">McMaster University</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA">
+                                        
+                                        </td>
+                                    <td data-sort='11700'><a href="/as/11700">AS11700</a></td>
+                                    <td class="smallonmobile nowrap">CW-E</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA">
+                                        
+                                        </td>
+                                    <td data-sort='11703'><a href="/as/11703">AS11703</a></td>
+                                    <td class="smallonmobile nowrap">MaRS Discovery District</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA">
+                                        
+                                        </td>
+                                    <td data-sort='32347'><a href="/as/32347">AS32347</a></td>
+                                    <td class="smallonmobile nowrap">Sir Sandford Fleming College of Applied Arts and Technology</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA">
+                                        
+                                        </td>
+                                    <td data-sort='32250'><a href="/as/32250">AS32250</a></td>
+                                    <td class="smallonmobile nowrap">Niagara College of Applied Arts and Technology</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA">
+                                        
+                                        </td>
+                                    <td data-sort='53904'><a href="/as/53904">AS53904</a></td>
+                                    <td class="smallonmobile nowrap">CANARIE Inc</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA">
+                                        
+                                        </td>
+                                    <td data-sort='31886'><a href="/as/31886">AS31886</a></td>
+                                    <td class="smallonmobile nowrap">University of Guelph</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA">
+                                        
+                                        </td>
+                                    <td data-sort='32817'><a href="/as/32817">AS32817</a></td>
+                                    <td class="smallonmobile nowrap">Northern College of Applied Arts &amp; Technology</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA">
+                                        
+                                        </td>
+                                    <td data-sort='25728'><a href="/as/25728">AS25728</a></td>
+                                    <td class="smallonmobile nowrap">Lambton College of Applied Arts and Technology</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA">
+                                        
+                                        </td>
+                                    <td data-sort='63327'><a href="/as/63327">AS63327</a></td>
+                                    <td class="smallonmobile nowrap">Ontario Agency for Health Protection and Promotion</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA">
+                                        
+                                        </td>
+                                    <td data-sort='32762'><a href="/as/32762">AS32762</a></td>
+                                    <td class="smallonmobile nowrap">Sault College of Applied Arts &amp; Technology</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA">
+                                        
+                                        </td>
+                                    <td data-sort='22766'><a href="/as/22766">AS22766</a></td>
+                                    <td class="smallonmobile nowrap">The Ontario Educational Communications Authority</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA">
+                                        
+                                        </td>
+                                    <td data-sort='12093'><a href="/as/12093">AS12093</a></td>
+                                    <td class="smallonmobile nowrap">University of Waterloo</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA">
+                                        
+                                        </td>
+                                    <td data-sort='399825'><a href="/as/399825">AS399825</a></td>
+                                    <td class="smallonmobile nowrap">NOSM University</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA">
+                                        
+                                        </td>
+                                    <td data-sort='46477'><a href="/as/46477">AS46477</a></td>
+                                    <td class="smallonmobile nowrap">Perimeter Institute</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA">
+                                        
+                                        </td>
+                                    <td data-sort='26071'><a href="/as/26071">AS26071</a></td>
+                                    <td class="smallonmobile nowrap">Lakehead University</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA">
+                                        
+                                        </td>
+                                    <td data-sort='32756'><a href="/as/32756">AS32756</a></td>
+                                    <td class="smallonmobile nowrap">Cambrian College of Applied Arts &amp; Technology</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA">
+                                        
+                                        </td>
+                                    <td data-sort='18621'><a href="/as/18621">AS18621</a></td>
+                                    <td class="smallonmobile nowrap">The Conestoga College Institute of Technology and Adv...</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA">
+                                        
+                                        </td>
+                                    <td data-sort='54070'><a href="/as/54070">AS54070</a></td>
+                                    <td class="smallonmobile nowrap">Ontario College of Art &amp; Design University</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA">
+                                        
+                                        </td>
+                                    <td data-sort='19925'><a href="/as/19925">AS19925</a></td>
+                                    <td class="smallonmobile nowrap">Sunnybrook Health Sciences Centre</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA">
+                                        
+                                        </td>
+                                    <td data-sort='11851'><a href="/as/11851">AS11851</a></td>
+                                    <td class="smallonmobile nowrap">The Michener Institute for Applied Health Sciences</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA">
+                                        
+                                        </td>
+                                    <td data-sort='26996'><a href="/as/26996">AS26996</a></td>
+                                    <td class="smallonmobile nowrap">Toronto Metropolitan University</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA">
+                                        
+                                        </td>
+                                    <td data-sort='11628'><a href="/as/11628">AS11628</a></td>
+                                    <td class="smallonmobile nowrap">Ontario Institute for Cancer Research</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA">
+                                        
+                                        </td>
+                                    <td data-sort='395704'><a href="/as/395704">AS395704</a></td>
+                                    <td class="smallonmobile nowrap">Canadore College of Applied Arts and Technology</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA">
+                                        
+                                        </td>
+                                    <td data-sort='16475'><a href="/as/16475">AS16475</a></td>
+                                    <td class="smallonmobile nowrap">Brock University</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA">
+                                        
+                                        </td>
+                                    <td data-sort='393877'><a href="/as/393877">AS393877</a></td>
+                                    <td class="smallonmobile nowrap">Baycrest</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA">
+                                        
+                                        </td>
+                                    <td data-sort='29773'><a href="/as/29773">AS29773</a></td>
+                                    <td class="smallonmobile nowrap">Carleton University</td>
+                                    <td class="nowrap">&#10008;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA">
+                                        
+                                        </td>
+                                    <td data-sort='19737'><a href="/as/19737">AS19737</a></td>
+                                    <td class="smallonmobile nowrap">Royal Military College of Canada</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA">
+                                        
+                                        </td>
+                                    <td data-sort='13733'><a href="/as/13733">AS13733</a></td>
+                                    <td class="smallonmobile nowrap">Centre for Addiction and Mental Health</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA">
+                                        
+                                        </td>
+                                    <td data-sort='10265'><a href="/as/10265">AS10265</a></td>
+                                    <td class="smallonmobile nowrap">Seneca College of Applied Arts and Technology</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+
+                    </div>
+
+                    <div style="display: none" id="whois-page">
+                        
+                        
+                        <pre style="white-space: pre-wrap;">ASHandle:       <a href="/AS26677">AS26677</a>
+OrgID:          ORANO
+ASName:         ORION-ASN
+ASNumber:       26677
+RegDate:        2002-11-04
+Comment:        Ontario Research and Innovation Optical Network - ORION
+Updated:        2012-03-02
+Source:         ARIN
+
+
+
+OrgID:          ORANO
+OrgName:        ORION
+CanAllocate:    
+Street:         211 Yonge Street, 2nd Floor
+City:           TORONTO
+State/Prov:     ON
+Country:        CA
+PostalCode:     M5B 1M4
+RegDate:        2002-09-18
+Updated:        2025-11-05
+OrgAdminHandle: <a href="https://whois.arin.net/rest/poc/ENGIN1-ARIN">ENGIN1-ARIN</a>
+OrgTechHandle:  <a href="https://whois.arin.net/rest/poc/ENGIN1-ARIN">ENGIN1-ARIN</a>
+OrgAbuseHandle: <a href="https://whois.arin.net/rest/poc/ENGIN1-ARIN">ENGIN1-ARIN</a>
+Source:         ARIN
+
+
+
+
+
+OrgAdminHandle:       <a href="https://whois.arin.net/rest/poc/ENGIN1-ARIN">ENGIN1-ARIN</a>
+OrgAdminName:          Engineering
+# Email removed, Log into bgp.tools to see whois emails
+
+
+OrgTechHandle:        <a href="https://whois.arin.net/rest/poc/ENGIN1-ARIN">ENGIN1-ARIN</a>
+OrgTechName:           Engineering
+# Email removed, Log into bgp.tools to see whois emails
+
+
+OrgAbuseHandle:       <a href="https://whois.arin.net/rest/poc/ENGIN1-ARIN">ENGIN1-ARIN</a>
+OrgAbuseName:          Engineering
+# Email removed, Log into bgp.tools to see whois emails
+
+</pre>
+                        
+                        
+                        <a style="font-size: small;">Last Update: 2025-12-12T03:33:27Z UTC </a>
+                        
+                        <hr>
+                        
+                            <h2>Member of the following AS-SETs</h2>
+
+                            <table id="fhTable" class="full-width-table ">
+                                <tbody id="prefixlist-tbody">
+                                    <tr>
+                                        <th class="boldpls nowrap"> - </th>
+                                        <th class="boldpls">Member</th>
+                                        
+                                        <th class="boldpls nowrap">ASN Count</th>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as174:as-cogc-016">as174:as-cogc-016</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">47</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-nexicom">as-nexicom</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">122</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as16631:as-cogc-008">as16631:as-cogc-008</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">65</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">CANARIE</td>
+                                        
+                                        <td><a href="/as-set/CANARIE::as6509:as-gigapop">as6509:as-gigapop</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">16</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">CANARIE</td>
+                                        
+                                        <td><a href="/as-set/CANARIE::as26677:as-gigapop">as26677:as-gigapop</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">57</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">ARIN</td>
+                                        
+                                        <td><a href="/as-set/ARIN::as-11700-peers">as-11700-peers</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">6</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-hurricanev6">as-hurricanev6</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap boldpls"><p style="display: contents;color: red">20287</p></td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-rogers:as-torix-peers">as-rogers:as-torix-peers</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">32</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">ARIN</td>
+                                        
+                                        <td><a href="/as-set/ARIN::as26677:as-gigapop4rpkimon">as26677:as-gigapop4rpkimon</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">55</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">ARIN</td>
+                                        
+                                        <td><a href="/as-set/ARIN::as26677:as-nest">as26677:as-nest</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">69</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as13657:as-peers">as13657:as-peers</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">40</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">ARIN</td>
+                                        
+                                        <td><a href="/as-set/ARIN::as-549-as-customers">as-549-as-customers</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">69</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">ARIN</td>
+                                        
+                                        <td><a href="/as-set/ARIN::as-akn:as-torix-peers">as-akn:as-torix-peers</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">79</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">ARIN</td>
+                                        
+                                        <td><a href="/as-set/ARIN::as26677:as-test26677">as26677:as-test26677</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">1</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">ARIN</td>
+                                        
+                                        <td><a href="/as-set/ARIN::as26677:as-gigapop-peering">as26677:as-gigapop-peering</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">55</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as7992:as-peers">as7992:as-peers</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">50</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">ARIN</td>
+                                        
+                                        <td><a href="/as-set/ARIN::as26677:as-rog">as26677:as-rog</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">12</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                        
+
+                    </div>
+
+                    
+
+                    
+                    <div style="display: none" id="ix-page">
+                        <div class="grid-row">
+                            <dl class="column-two-thirds">
+                                <p style="margin: 0px;"><img style="vertical-align: middle; margin-left: 5px;" class="flag-img" src="/assets/peeringdb-icon.png" title="PeeringDB"><a href="https://www.peeringdb.com/asn/26677">Go to PeeringDB page</a></p>
+                            </dl>
+                            
+                            
+                        </div>
+                        <div class="grid-row">
+                            
+                        
+                        <div class="column-two-thirds">
+                            <dl>
+                                <dt>PeeringDB AS-SET:</dt>
+                                <dd class="text data">
+                                    
+                                    <a href="/as-set/as26677:as-gigapop">AS26677:AS-GIGAPOP</a>
+                                    
+                                </dd>
+                            </dl>
+                        </div>
+                        
+    
+    
+                        <dl class="column-third">
+                            <dt>Suggested Prefix Limits</dt>
+                            <dd class="text data">
+                                
+                                <p style="margin: 0px;"><b>IPv4:</b> 500</p>
+                                
+                                <p style="margin: 0px;"><b>IPv6:</b> 25</p>
+                            </dd>
+                        </dl>
+                        </div>
+
+                        
+
+                        <div id="normalixpsubpage">
+
+
+<h3>Internet Exchange Points</h3>
+
+<div class="scroll-ixp-div-on-small">
+<table id="ixpTable" class="full-width-table table-wide-to-force-scroll-on-mobile">
+    <thead class="sortable">
+        <tr>
+            <th class="nowrap boldpls">  &nbsp;  </th>
+            <th class="boldpls">Name</th>
+            <th class="nowrap boldpls">IPv4</th>
+            <th class="nowrap boldpls">IPv6</th>
+            <th data-sort-method='number' class="nowrap boldpls">Link Speed</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+        
+        <tr>
+            <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA"><img style="margin-left: 5px;" class="flag-img" src="/assets/icons/cisco.png" title="Detected Vendor: Cisco Systems, Inc"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/TorIX">TorIX</a></td>
+            <td class="smallonmobile">206.108.34.40</a></td>
+            <td class="smallonmobile nowrap">2001:504:1a::34:40</td>
+            <td data-sort='200000' class="smallonmobile"><abbr title="602-HS02-TOR1 - Cologix TOR1 [CA]">200 gbps</abbr></td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA"><img style="margin-left: 5px;" class="flag-img" src="/assets/icons/cisco.png" title="Detected Vendor: Cisco Systems, Inc"><img class="flag-img" src="/assets/tick.png" title="Last seen online 28 mins ago"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/MegaIX%20Toronto">MegaIX Toronto</a></td>
+            <td class="smallonmobile">206.53.203.17</a></td>
+            <td class="smallonmobile nowrap">2606:a980:0:8::11</td>
+            <td data-sort='10000' class="smallonmobile">10 gbps</td>
+        </tr>
+        
+        
+    </tbody>
+</table>
+</div>
+
+
+
+
+
+
+
+
+<a style="font-size: small;">Last Update: 2025-12-12T10:08:19Z UTC</a>
+
+
+                        </div>
+                        <div id="overlapixpsubpage">
+                        </div>
+                    </div>
+                    
+                    
+
+                    
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="superclearfix">
+            
+            <div class="superclearfix">
+                
+            </div>
+
+            <div class="superclearfix">
+                
+            </div>
+
+
+        </div>
+
+
+        <div class="group js-footer" id="footer">
+            <nav>
+                <div>
+                    <ul>
+                        <li><a href="/kb/api" target="_blank">Scripting/API</a></li>
+                        <li><a href="/credits" target="_blank">Credits</a></li>
+                        <li><a href="/pricing" target="_blank">Pricing</a></li>
+                        <li><a href="/kb/contact" target="_blank">Contact Us</a></li>
+                        <li><a href="https://github.com/bgptools/issues" target="_blank">Issue Tracker</a></li>
+                        <li><a href="/kb/setup-sessions" target="">Contribute Data</a></li>
+                        
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <script>
+    
+    var inhash = window.location.hash;
+    if (inhash == "#asinfo") {
+        
+    } else if (inhash == "#prefixes") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#prefix-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#prefixes-page');
+        aaa[0].style.display = "";
+
+    } else if (inhash == "#connectivity" || inhash == "#peers" || inhash == "#upstreams" || inhash == "#downstreams") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#connectivity-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#connectivity-page');
+        aaa[0].style.display = "";
+    } else if (inhash == "#whois") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#whois-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#whois-page');
+        aaa[0].style.display = "";
+    } else if (inhash == "#ix") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#ix-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#ix-page');
+        aaa[0].style.display = "";
+    }</script>
+
+    <script>
+    
+
+
+    ;(function() {
+  'use strict'
+
+  function scaleImageMap() {
+    function resizeMap() {
+      function resizeAreaTag(cachedAreaCoords, idx) {
+        function scale(coord) {
+          var dimension = 1 === (isWidth = 1 - isWidth) ? 'width' : 'height'
+          return (
+            padding[dimension] +
+            Math.floor(Number(coord) * scalingFactor[dimension])
+          )
+        }
+
+        var isWidth = 0
+        areas[idx].coords = cachedAreaCoords
+          .split(',')
+          .map(scale)
+          .join(',')
+      }
+
+      var scalingFactor = {
+        width: image.width / image.naturalWidth,
+        height: image.height / image.naturalHeight,
+      }
+
+      var padding = {
+        width: parseInt(
+          window.getComputedStyle(image, null).getPropertyValue('padding-left'),
+          10
+        ),
+        height: parseInt(
+          window.getComputedStyle(image, null).getPropertyValue('padding-top'),
+          10
+        ),
+      }
+
+      cachedAreaCoordsArray.forEach(resizeAreaTag)
+    }
+
+    function getCoords(e) {
+      
+      return e.coords.replace(/ *, */g, ',').replace(/ +/g, ',')
+    }
+
+    function debounce() {
+      clearTimeout(timer)
+      timer = setTimeout(resizeMap, 250)
+    }
+
+    function start() {
+      if (
+        image.width !== image.naturalWidth ||
+        image.height !== image.naturalHeight
+      ) {
+        resizeMap()
+      }
+    }
+
+    function addEventListeners() {
+      image.addEventListener('load', resizeMap, false) 
+      window.addEventListener('focus', resizeMap, false) 
+      window.addEventListener('resize', debounce, false)
+      window.addEventListener('readystatechange', resizeMap, false)
+      document.addEventListener('fullscreenchange', resizeMap, false)
+    }
+
+    function beenHere() {
+      return 'function' === typeof map._resize
+    }
+
+    function getImg(name) {
+      return document.querySelector('img[usemap="#world"]')
+    }
+
+    function setup() {
+      areas = map.getElementsByTagName('area')
+      cachedAreaCoordsArray = Array.prototype.map.call(areas, getCoords)
+      image = getImg('#' + map.name) || getImg(map.name)
+      map._resize = resizeMap 
+    }
+
+    var  
+      map = this,
+      areas = null,
+      cachedAreaCoordsArray = null,
+      image = null,
+      timer = null
+
+    if (!beenHere()) {
+      setup()
+      addEventListeners()
+      start()
+    } else {
+      map._resize() 
+    }
+  }
+
+  function factory() {
+    function chkMap(element) {
+      if (!element.tagName) {
+        throw new TypeError('Object is not a valid DOM element')
+      } else if ('MAP' !== element.tagName.toUpperCase()) {
+        throw new TypeError(
+          'Expected <MAP> tag, found <' + element.tagName + '>.'
+        )
+      }
+    }
+
+    function init(element) {
+      if (element) {
+        chkMap(element)
+        scaleImageMap.call(element)
+        maps.push(element)
+      }
+    }
+
+    var maps
+
+    return function imageMapResizeF(target) {
+      maps = [] 
+
+      switch (typeof target) {
+        case 'undefined':
+        case 'string':
+          Array.prototype.forEach.call(
+            document.querySelectorAll(target || 'map'),
+            init
+          )
+          break
+        case 'object':
+          init(target)
+          break
+        default:
+          throw new TypeError('Unexpected data type (' + typeof target + ').')
+      }
+
+      return maps
+    }
+  }
+
+  if (typeof define === 'function' && define.amd) {
+    define([], factory)
+  } else if (typeof module === 'object' && typeof module.exports === 'object') {
+    module.exports = factory() 
+  } else {
+    window.imageMapResize = factory()
+  }
+
+  if ('jQuery' in window) {
+    window.jQuery.fn.imageMapResize = function $imageMapResizeF() {
+      return this.filter('map')
+        .each(scaleImageMap)
+        .end()
+    }
+  }
+})()
+    
+    </script>
+    <script>
+        var imgEl = document.getElementById("pathimg");
+        imgEl.addEventListener("mouseover",function() {
+            imageMapResize('#world');
+        })
+    </script>
+    <script src="/assets/tablesort.min.js"></script>
+    <script>
+        addEventListener("load", (event) => {
+            
+            
+            var sort = new Tablesort(document.getElementById('donotscrapebgptools-upstreamTable'));
+            var sort2 = new Tablesort(document.getElementById('donotscrapebgptools-upstreamTablePeers'));
+            
+            var sort3 = new Tablesort(document.getElementById('donotscrapebgptools-upstreamTableDowns'));
+            
+            var sort4 = new Tablesort(document.getElementById('ixpTable'));
+            
+        });
+    </script>
+    
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        setTimeout(function() {
+
+        var beaconHttp = new XMLHttpRequest();
+        var url = '/performance-beacon';
+        var params = JSON.stringify(window.performance)
+        beaconHttp.open('POST', url, true);
+        
+        
+        beaconHttp.setRequestHeader('Content-type', 'application/json');
+        beaconHttp.setRequestHeader('visit-url', "/as/26677");
+        if (navigator.connection) {
+            beaconHttp.setRequestHeader('client-side-rtt', navigator.connection.rtt);
+        } else {
+            beaconHttp.setRequestHeader('client-side-rtt', '-2');
+        }
+        beaconHttp.onreadystatechange = function() {}
+        beaconHttp.send(params);
+        },1000)
+    }, false);
+</script>
+
+</body>
+
+
+</html>

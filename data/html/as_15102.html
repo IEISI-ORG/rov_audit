@@ -1,0 +1,2869 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Xplore Inc. (AS15102) is a 25 year old BGP network that is peering with 4 other networks and has 4 upstream carriers">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000">
+    <link rel="search" type="application/opensearchdescription+xml" title="BGP.Tools" href="https://bgp.tools/opensearch.xml">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="theme-color" content="#000000">
+    <link href="https://social.bgp.tools/@bgptools" rel="me">
+    <link rel="canonical" href="https://bgp.tools/as/15102" />
+    <title>AS15102 Xplore Inc. - bgp.tools</title>
+    <link rel="stylesheet" type="text/css" href="/assets/main-new.css?2025-12-09-1723%20UTC">
+</head>
+
+<body>
+    <div id="container">
+        
+<div id="global-header" class="global-header-top">
+    <div class="header-sitewide">
+        <div class="global-header">
+            <div class="header-logo">
+                <a href="/" id="logo" class="content">bgp.tools</a>
+            </div>
+            <form id="search" action="/search" method="get" accept-charset="utf-8" role="search" class="top-search-header js-search-hash">
+                <div class="searchfield">
+                    <input type="search" autocomplete="off" name="q" id="site-search-text" title="Search" value="" placeholder="Start here..." autofocus="autofocus" class="js-search-focus">
+                    <button type="submit" id="search-submit" class="search-submit">Search</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div id="global-header-blob" >
+    <a id="auth-header-text" href="/login">Login</a>
+    
+</div>
+<div id="global-header-bar" >
+    <a id="auth-header-bar-text" href="/login">Login</a>
+    
+</div>
+<div class="small-clearfix"></div>
+
+        <div id="global-container">
+            
+
+
+            
+            <div class="section-tabs js-tabs">
+                <ul>
+                    
+<li class="active">
+    <h1> <a id="viewbutton-tab" href="/as/15102">View</a></h1>
+</li>
+
+<li >
+    <a id="editbutton-tab" href="/edit/as/15102">Edit</a>
+</li>
+
+
+
+
+
+                    <li style="float: right;">
+                        
+                        <img id="ws-status" width="24" height="24" src="/assets/disconnected.png" title="Not Connected To realtime data updates">
+                        
+                    </li>
+                </ul>
+            </div>
+
+            <div id="search-container">
+
+                <div class="column-full-width">
+
+                    <div class="clearfix">
+                        
+                    </div>
+                    
+                    
+
+                    <div class="network-header">
+                        
+                        
+                        
+                        <p id="network-name" class="heading-xlarge">Xplore Inc.</p>
+                        <p id="network-number">
+                            AS Number
+                            <strong id="ASNumberString" pure="15102">15102</strong>
+                            <br>
+                        
+                            Website
+                            <strong><a href="https://www.wiband.com/" rel="nofollow">https://www.wiband.com/</a></strong>
+                        
+                        </p>
+
+                    </div>
+
+
+                    <div class="clearfix">
+                        
+                    </div>
+
+
+                    <div class="section-tabs js-tabs">
+                        <ul>
+
+                            <li id="overview-tab-li" class="active">
+                                <a id="overview-tab" href="#asinfo">Overview</a>
+                            </li>
+                            
+                            <li id="prefix-tab-li">
+                                <a id="prefix-tab" href="#prefixes">Prefixes</a>
+                            </li>
+
+                            <li id="connectivity-tab-li">
+                                <a id="connectivity-tab" href="#connectivity">Connectivity</a>
+                            </li>
+                            
+                            <li id="whois-tab-li">
+                                <a id="whois-tab" href="#whois">Whois</a>
+                            </li>
+                        
+                            <li id="ix-tab-li">
+                                <a id="ix-tab" href="#ix">IX</a>
+                            </li>
+                        
+                        
+                        </ul>
+                    </div>
+
+<script>
+    function removeAllActiveTab() {
+        var tabs = [
+            "overview-tab-li", 
+            "prefix-tab-li", 
+            "connectivity-tab-li",
+            "whois-tab-li",
+            "ix-tab-li",
+            "issues-tab-li"
+        ];
+
+        tabs.forEach(element => {
+            var aaa = document.querySelectorAll('#'+element);
+            if(aaa.length != 0) {
+                aaa[0].classList.remove("active")
+            }
+        });
+    }
+
+    function hideAllContent() {
+        var tabs = [
+            "overview-page", 
+            "prefixes-page", 
+            "connectivity-page",
+            "whois-page",
+            "ix-page",
+            "issues-page"
+        ];
+
+        tabs.forEach(element => {
+            var aaa = document.querySelectorAll('#'+element);
+            if(aaa.length != 0) {
+                aaa[0].style.display = "none";
+            }
+        });
+        if (document.getElementById("donotscrapebgptools-prefixlist-tbody")) {
+            var prefixrows = document.getElementById("donotscrapebgptools-prefixlist-tbody").children;
+            for (var i = 0; i < prefixrows.length; i++) {
+                prefixrows[i].style = "";
+            }
+        }
+    }
+
+    var otab = document.querySelectorAll('#overview-tab');
+    otab[0].addEventListener("click", function () {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#overview-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#overview-page');
+        aaa[0].style.display = "";
+    });
+    
+
+    var ptab = document.querySelectorAll('#prefix-tab');
+    ptab[0].addEventListener("click", function () {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#prefix-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#prefixes-page');
+        aaa[0].style.display = "";
+    });
+
+    var ctab = document.querySelectorAll('#connectivity-tab');
+    ctab[0].addEventListener("click", function () {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#connectivity-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#connectivity-page');
+        aaa[0].style.display = "";
+    });
+    
+
+    var wtab = document.querySelectorAll('#whois-tab');
+    wtab[0].addEventListener("click", function () {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#whois-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#whois-page');
+        aaa[0].style.display = "";
+    });
+
+</script>
+
+
+<script>
+var wtab = document.querySelectorAll('#ix-tab');
+wtab[0].addEventListener("click", function () {
+    removeAllActiveTab()
+    hideAllContent()
+    var otab2 = document.querySelectorAll('#ix-tab-li');
+    otab2[0].classList.add("active");
+
+    var aaa = document.querySelectorAll('#ix-page');
+    aaa[0].style.display = "";
+});
+</script>
+
+
+                    
+                    <div id="overview-page">
+
+                        <div class="grid-row">
+                        
+                        <div class="column-two-thirds">
+                            <dl>
+                                <dt>Registered on</dt>
+                                <dd class="text data">
+                                    
+                                    21 Mar 2000 (25 years old)
+                                </dd>
+                            
+                            
+                            <dt>Registered to</dt>
+                            <dd class="text data">
+                                <a href="/rir-owner/ARIN-BARRE-2">ARIN-BARRE-2</a> (arin)</dd>
+                                
+                                <dd class="text data" id="network-status">
+                                    <a href="/transfer-history/15102">[Transfer History]</a>
+                                </dd>
+                                
+                            
+                            </dl>
+                        </div>
+                        
+    
+                        <dl class="column-third">
+                            <dt>Network status</dt>
+                            <dd class="text data">
+                                
+                                Active, Allocated under ARIN
+                                
+                            </dd>
+                        </dl>
+    
+                        </div>
+    
+                        <div class="grid-row">
+                            <dl class="column-two-thirds">
+                                <dt>Network type</dt>
+                                <dd class="text data">
+                                    Content
+                                </dd>
+                            </dl>
+    
+                            <dl class="column-third">
+                                <dt>Prefixes Originated</dt>
+                                <dd class="data">85 IPv4, 1 IPv6</dd>
+                            </dl>
+                        </div>
+                        <div class="grid-row">
+                            <div class="column-half">
+    
+                                <h2 class="heading-medium"><derp>Upstreams</derp></h2>
+                                <ul>
+                                    
+                                    <li>
+                                        <span id="sic0">
+                                          <a href="/as/6327">AS6327</a> - Shaw Communications
+                                        </span>
+                                    </li>
+                                    
+                                    <li>
+                                        <span id="sic0">
+                                          <a href="/as/6939">AS6939</a> - Hurricane Electric LLC
+                                        </span>
+                                    </li>
+                                    
+                                    <li>
+                                        <span id="sic0">
+                                          <a href="/as/40473">AS40473</a> - Xplore Inc.
+                                        </span>
+                                    </li>
+                                    
+                                    <li>
+                                        <span id="sic0">
+                                          <a href="/as/22457">AS22457</a> - Xplore Inc.
+                                        </span>
+                                    </li>
+                                    
+                                </ul>
+    
+                            </div>
+    
+                            <div class="column-half">
+                                
+                                    <h2 class="heading-medium"><derp>Rankings</derp></h2>
+                                    
+                                    <li><span id="sic0">#38 for <a href="/rankings/CA?sort=cone">AS Cone  in Canada</a></span></li>
+                                    
+                                    <li><span id="sic0">#111 for <a href="/rankings/CA?sort=v4">Originated IPv4 Space  in Canada</a></span></li>
+                                    
+                                
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+
+                    <div style="display: none" id="prefixes-page">
+                        
+
+                        
+                        <div style="float:left">
+                            <dt>Prefixes Originated</dt>
+                            <dd class="data">85 IPv4, 1 IPv6</dd>
+                            <dd class="data"><a href="/as/15102?show-low-vis#prefixes">Show Low Visibility Prefixes</a></dd>
+                            
+                        </div>
+                        <div style="float:right">
+                                <dt>Addresses Originated</dt>
+                                <dd class="data">122 /24's of IPv4</dd>
+                                <dd class="data">1 /48's of IPv6</dd>
+                        </div>
+
+                        <div class="clearfix">
+                            
+                        </div>
+
+
+                        <table id="fhTable" class="full-width-table ">
+                            <tbody id="donotscrapebgptools-prefixlist-tbody">
+                                <tr>
+                                    <th class="nowrap">  &nbsp;  </th>
+                                    <th class="boldpls">Prefix</th>
+                                    <th class="nowrap boldpls">Description</th>
+                                </tr>
+                                <p id="readme-if-you-are-human" style="display: none;">If you are scraping this block for the prefixes that a AS originates, please use the data dumps in https://bgp.tools/kb/api and cache them</p>
+                                
+                                <tr id="pfx-44.135.121.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/44.135.121.0/24">44.135.121.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Manitoba&#39;s Amateur Radio Network - VA4WAN - Data Center</td>
+                                </tr>
+                                
+                                <tr id="pfx-44.190.9.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="DE" src="/assets/flags/DE.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/44.190.9.0/24">44.190.9.0/24</a></td>
+                                    <td class="smallonmobile nowrap">ZZ</td>
+                                </tr>
+                                
+                                <tr id="pfx-64.56.128.0/19">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/64.56.128.0/19">64.56.128.0/19</a></td>
+                                    <td class="smallonmobile nowrap">Xplore Inc.</td>
+                                </tr>
+                                
+                                <tr id="pfx-64.56.128.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/64.56.128.0/24">64.56.128.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Xplore Inc.</td>
+                                </tr>
+                                
+                                <tr id="pfx-64.56.129.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/64.56.129.0/24">64.56.129.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Wiband Communications</td>
+                                </tr>
+                                
+                                <tr id="pfx-64.56.130.0/23">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/64.56.130.0/23">64.56.130.0/23</a></td>
+                                    <td class="smallonmobile nowrap">Xplore Inc.</td>
+                                </tr>
+                                
+                                <tr id="pfx-64.56.130.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/64.56.130.0/24">64.56.130.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Xplore Inc.</td>
+                                </tr>
+                                
+                                <tr id="pfx-64.56.131.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/cross.png" title="Matches IRR source, but under a different ASN">
+                                    </td>
+                                    <td><a href="/prefix/64.56.131.0/24">64.56.131.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Xplore Inc.</td>
+                                </tr>
+                                
+                                <tr id="pfx-64.56.134.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/64.56.134.0/24">64.56.134.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Xplore Inc.</td>
+                                </tr>
+                                
+                                <tr id="pfx-64.56.135.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/64.56.135.0/24">64.56.135.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Xplore Inc.</td>
+                                </tr>
+                                
+                                <tr id="pfx-64.56.136.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/64.56.136.0/24">64.56.136.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Xplore Inc.</td>
+                                </tr>
+                                
+                                <tr id="pfx-64.56.137.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/64.56.137.0/24">64.56.137.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Xplore Inc.</td>
+                                </tr>
+                                
+                                <tr id="pfx-64.56.138.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/cross.png" title="Matches IRR source, but under a different ASN">
+                                    </td>
+                                    <td><a href="/prefix/64.56.138.0/24">64.56.138.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Wiband Communications</td>
+                                </tr>
+                                
+                                <tr id="pfx-64.56.139.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/64.56.139.0/24">64.56.139.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Wiband Communications</td>
+                                </tr>
+                                
+                                <tr id="pfx-64.56.140.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/64.56.140.0/24">64.56.140.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Wiband Communications</td>
+                                </tr>
+                                
+                                <tr id="pfx-64.56.140.0/22">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/64.56.140.0/22">64.56.140.0/22</a></td>
+                                    <td class="smallonmobile nowrap">Xplore Inc.</td>
+                                </tr>
+                                
+                                <tr id="pfx-64.56.141.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/64.56.141.0/24">64.56.141.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Xplore Inc.</td>
+                                </tr>
+                                
+                                <tr id="pfx-64.56.142.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/64.56.142.0/24">64.56.142.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Xplore Inc.</td>
+                                </tr>
+                                
+                                <tr id="pfx-64.56.143.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/64.56.143.0/24">64.56.143.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Xplore Inc.</td>
+                                </tr>
+                                
+                                <tr id="pfx-64.56.144.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/64.56.144.0/24">64.56.144.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Wiband Communications</td>
+                                </tr>
+                                
+                                <tr id="pfx-64.56.145.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/64.56.145.0/24">64.56.145.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Xplore Inc.</td>
+                                </tr>
+                                
+                                <tr id="pfx-64.56.146.0/23">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/64.56.146.0/23">64.56.146.0/23</a></td>
+                                    <td class="smallonmobile nowrap">Xplore Inc.</td>
+                                </tr>
+                                
+                                <tr id="pfx-64.56.148.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/64.56.148.0/24">64.56.148.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Wiband Communications</td>
+                                </tr>
+                                
+                                <tr id="pfx-64.56.149.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/64.56.149.0/24">64.56.149.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Wiband Communications</td>
+                                </tr>
+                                
+                                <tr id="pfx-64.56.150.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/64.56.150.0/24">64.56.150.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Wiband Communications</td>
+                                </tr>
+                                
+                                <tr id="pfx-64.56.151.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/64.56.151.0/24">64.56.151.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Wiband Communications</td>
+                                </tr>
+                                
+                                <tr id="pfx-64.56.152.0/22">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/64.56.152.0/22">64.56.152.0/22</a></td>
+                                    <td class="smallonmobile nowrap">Wiband Communications</td>
+                                </tr>
+                                
+                                <tr id="pfx-64.56.152.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/cross.png" title="Matches IRR source, but under a different ASN">
+                                    </td>
+                                    <td><a href="/prefix/64.56.152.0/24">64.56.152.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Wiband Communications</td>
+                                </tr>
+                                
+                                <tr id="pfx-64.56.156.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/64.56.156.0/24">64.56.156.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Wiband Communications</td>
+                                </tr>
+                                
+                                <tr id="pfx-64.56.157.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/64.56.157.0/24">64.56.157.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Wiband Communications</td>
+                                </tr>
+                                
+                                <tr id="pfx-64.56.158.0/23">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/64.56.158.0/23">64.56.158.0/23</a></td>
+                                    <td class="smallonmobile nowrap">Xplore Inc.</td>
+                                </tr>
+                                
+                                <tr id="pfx-64.56.159.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/64.56.159.0/24">64.56.159.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Xplore Inc.</td>
+                                </tr>
+                                
+                                <tr id="pfx-67.215.48.0/20">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/cross.png" title="Matches IRR source, but under a different ASN">
+                                    </td>
+                                    <td><a href="/prefix/67.215.48.0/20">67.215.48.0/20</a></td>
+                                    <td class="smallonmobile nowrap">Xplore Inc.</td>
+                                </tr>
+                                
+                                <tr id="pfx-67.215.48.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/67.215.48.0/24">67.215.48.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Xplore Inc.</td>
+                                </tr>
+                                
+                                <tr id="pfx-67.215.49.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/67.215.49.0/24">67.215.49.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Chill Communications</td>
+                                </tr>
+                                
+                                <tr id="pfx-67.215.50.0/23">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/67.215.50.0/23">67.215.50.0/23</a></td>
+                                    <td class="smallonmobile nowrap">Xplore Inc.</td>
+                                </tr>
+                                
+                                <tr id="pfx-67.215.50.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/67.215.50.0/24">67.215.50.0/24</a></td>
+                                    <td class="smallonmobile nowrap">WiBand Communications</td>
+                                </tr>
+                                
+                                <tr id="pfx-67.215.51.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/67.215.51.0/24">67.215.51.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Xplore Inc.</td>
+                                </tr>
+                                
+                                <tr id="pfx-67.215.53.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/67.215.53.0/24">67.215.53.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Xplore Inc.</td>
+                                </tr>
+                                
+                                <tr id="pfx-67.215.56.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/67.215.56.0/24">67.215.56.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Chill Communications</td>
+                                </tr>
+                                
+                                <tr id="pfx-67.215.57.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/67.215.57.0/24">67.215.57.0/24</a></td>
+                                    <td class="smallonmobile nowrap">WiBand Communications</td>
+                                </tr>
+                                
+                                <tr id="pfx-67.215.58.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/67.215.58.0/24">67.215.58.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Xplore Inc.</td>
+                                </tr>
+                                
+                                <tr id="pfx-67.215.59.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/67.215.59.0/24">67.215.59.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Xplore Inc.</td>
+                                </tr>
+                                
+                                <tr id="pfx-67.215.60.0/23">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/67.215.60.0/23">67.215.60.0/23</a></td>
+                                    <td class="smallonmobile nowrap">Xplore Inc.</td>
+                                </tr>
+                                
+                                <tr id="pfx-67.215.62.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/67.215.62.0/24">67.215.62.0/24</a></td>
+                                    <td class="smallonmobile nowrap">WiBand Communications</td>
+                                </tr>
+                                
+                                <tr id="pfx-67.215.63.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/67.215.63.0/24">67.215.63.0/24</a></td>
+                                    <td class="smallonmobile nowrap">WiBand Communications</td>
+                                </tr>
+                                
+                                <tr id="pfx-72.13.160.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/72.13.160.0/24">72.13.160.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Community Networks</td>
+                                </tr>
+                                
+                                <tr id="pfx-72.13.160.0/19">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/cross.png" title="Matches IRR source, but under a different ASN">
+                                    </td>
+                                    <td><a href="/prefix/72.13.160.0/19">72.13.160.0/19</a></td>
+                                    <td class="smallonmobile nowrap">Xplore Inc.</td>
+                                </tr>
+                                
+                                <tr id="pfx-72.13.161.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/72.13.161.0/24">72.13.161.0/24</a></td>
+                                    <td class="smallonmobile nowrap">WiBand Communications</td>
+                                </tr>
+                                
+                                <tr id="pfx-72.13.162.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/72.13.162.0/24">72.13.162.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Community Networks</td>
+                                </tr>
+                                
+                                <tr id="pfx-72.13.164.0/23">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/72.13.164.0/23">72.13.164.0/23</a></td>
+                                    <td class="smallonmobile nowrap">Xplore Inc.</td>
+                                </tr>
+                                
+                                <tr id="pfx-72.13.166.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/72.13.166.0/24">72.13.166.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Xplore Inc.</td>
+                                </tr>
+                                
+                                <tr id="pfx-72.13.167.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/72.13.167.0/24">72.13.167.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Community Networks</td>
+                                </tr>
+                                
+                                <tr id="pfx-72.13.168.0/23">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/72.13.168.0/23">72.13.168.0/23</a></td>
+                                    <td class="smallonmobile nowrap">Xplore Inc.</td>
+                                </tr>
+                                
+                                <tr id="pfx-72.13.170.0/23">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/72.13.170.0/23">72.13.170.0/23</a></td>
+                                    <td class="smallonmobile nowrap">Xplore Inc.</td>
+                                </tr>
+                                
+                                <tr id="pfx-72.13.172.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/72.13.172.0/24">72.13.172.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Clearstream Internet Inc.</td>
+                                </tr>
+                                
+                                <tr id="pfx-72.13.173.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/72.13.173.0/24">72.13.173.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Mercury Wireless</td>
+                                </tr>
+                                
+                                <tr id="pfx-72.13.174.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/72.13.174.0/24">72.13.174.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Skyryder Networks</td>
+                                </tr>
+                                
+                                <tr id="pfx-72.13.176.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/72.13.176.0/24">72.13.176.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Airweb Technologies Inc.</td>
+                                </tr>
+                                
+                                <tr id="pfx-72.13.177.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/72.13.177.0/24">72.13.177.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Xplore Inc.</td>
+                                </tr>
+                                
+                                <tr id="pfx-72.13.178.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/72.13.178.0/24">72.13.178.0/24</a></td>
+                                    <td class="smallonmobile nowrap">WiBand COmmunications Corp.</td>
+                                </tr>
+                                
+                                <tr id="pfx-72.13.179.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/72.13.179.0/24">72.13.179.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Xplore Inc.</td>
+                                </tr>
+                                
+                                <tr id="pfx-72.13.180.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/72.13.180.0/24">72.13.180.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Smith Corp.</td>
+                                </tr>
+                                
+                                <tr id="pfx-72.13.182.0/23">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/72.13.182.0/23">72.13.182.0/23</a></td>
+                                    <td class="smallonmobile nowrap">Xplore Inc.</td>
+                                </tr>
+                                
+                                <tr id="pfx-72.13.184.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/72.13.184.0/24">72.13.184.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Community Networks</td>
+                                </tr>
+                                
+                                <tr id="pfx-72.13.184.0/22">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/72.13.184.0/22">72.13.184.0/22</a></td>
+                                    <td class="smallonmobile nowrap">Xplore Inc.</td>
+                                </tr>
+                                
+                                <tr id="pfx-72.13.186.0/23">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/72.13.186.0/23">72.13.186.0/23</a></td>
+                                    <td class="smallonmobile nowrap">First Communications Group Inc</td>
+                                </tr>
+                                
+                                <tr id="pfx-72.13.186.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/72.13.186.0/24">72.13.186.0/24</a></td>
+                                    <td class="smallonmobile nowrap">First Communications Group Inc</td>
+                                </tr>
+                                
+                                <tr id="pfx-72.13.187.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/72.13.187.0/24">72.13.187.0/24</a></td>
+                                    <td class="smallonmobile nowrap">First Communications Group Inc</td>
+                                </tr>
+                                
+                                <tr id="pfx-72.13.188.0/22">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/72.13.188.0/22">72.13.188.0/22</a></td>
+                                    <td class="smallonmobile nowrap">Xplore Inc.</td>
+                                </tr>
+                                
+                                <tr id="pfx-72.172.160.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/72.172.160.0/24">72.172.160.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Xplore Inc.</td>
+                                </tr>
+                                
+                                <tr id="pfx-72.172.160.0/20">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/cross.png" title="Matches IRR source, but under a different ASN">
+                                    </td>
+                                    <td><a href="/prefix/72.172.160.0/20">72.172.160.0/20</a></td>
+                                    <td class="smallonmobile nowrap">Xplore Inc.</td>
+                                </tr>
+                                
+                                <tr id="pfx-72.172.161.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/72.172.161.0/24">72.172.161.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Alta Genetics</td>
+                                </tr>
+                                
+                                <tr id="pfx-72.172.164.0/22">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/72.172.164.0/22">72.172.164.0/22</a></td>
+                                    <td class="smallonmobile nowrap">Xplore Inc.</td>
+                                </tr>
+                                
+                                <tr id="pfx-72.172.168.0/22">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/72.172.168.0/22">72.172.168.0/22</a></td>
+                                    <td class="smallonmobile nowrap">Community Networks</td>
+                                </tr>
+                                
+                                <tr id="pfx-72.172.172.0/22">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/72.172.172.0/22">72.172.172.0/22</a></td>
+                                    <td class="smallonmobile nowrap">Community Networks</td>
+                                </tr>
+                                
+                                <tr id="pfx-173.240.176.0/20">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/173.240.176.0/20">173.240.176.0/20</a></td>
+                                    <td class="smallonmobile nowrap">Xplore Inc.</td>
+                                </tr>
+                                
+                                <tr id="pfx-208.82.248.0/21">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/cross.png" title="Matches IRR source, but under a different ASN">
+                                    </td>
+                                    <td><a href="/prefix/208.82.248.0/21">208.82.248.0/21</a></td>
+                                    <td class="smallonmobile nowrap">Xplore Inc.</td>
+                                </tr>
+                                
+                                <tr id="pfx-208.82.250.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/208.82.250.0/24">208.82.250.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Xplore Inc.</td>
+                                </tr>
+                                
+                                <tr id="pfx-208.82.251.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/208.82.251.0/24">208.82.251.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Xplore Inc.</td>
+                                </tr>
+                                
+                                <tr id="pfx-208.82.252.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/208.82.252.0/24">208.82.252.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Xplore Inc.</td>
+                                </tr>
+                                
+                                <tr id="pfx-208.82.253.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/208.82.253.0/24">208.82.253.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Xplore Inc.</td>
+                                </tr>
+                                
+                                <tr id="pfx-208.82.254.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/208.82.254.0/24">208.82.254.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Xplore Inc.</td>
+                                </tr>
+                                
+                                <tr id="pfx-208.82.255.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/208.82.255.0/24">208.82.255.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Xplore Inc.</td>
+                                </tr>
+                                
+                                <tr id="pfx-72.172.162.0/23">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/72.172.162.0/23">72.172.162.0/23</a></td>
+                                    <td class="smallonmobile nowrap">Xplore Inc.</td>
+                                </tr>
+                                
+                                <tr id="pfx-2606:ee00:5::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CA" src="/assets/flags/CA.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/2606:ee00:5::/48">2606:ee00:5::/48</a></td>
+                                    <td class="smallonmobile nowrap">Xplore Inc.</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div style="display: none" id="connectivity-page">
+
+                        <div class="grid-row">
+                            <dl class="column-third column-third-first">
+                                <dt><a href="#peers">Peers</a></dt>
+                                <dd class="data">4</dd>
+                            </dl><dl class="column-third column-third-mid">
+                                <dt><a href="#upstreams">Upstreams</a></dt>
+                                
+                                <dd class="text data">4</dd>
+                                
+                            </dl>
+                            <dl class="column-third column-third-last">
+                                <dt><a href="#downstreams">Downstreams</a></dt> <dd class="data">1 (Cone: 2)</dd>
+                            </dl>
+
+                        </div>
+
+
+                        <hr>
+                        <h3>Network Policy<img class="flag-img" src="/assets/info.png" style="padding-left: 12px;" title="This info can take up to 2 hours to fully update" alt="This info take up to 2 hours to fully update"/></h3></h3>
+                        <a style="font-size: small;" href="/kb/network-policy">Click here to learn more about what this graph means and what makes up a network policy</a>
+
+                        <select id="netpolicydropdown" class="dropdownmenu">
+                            
+                                <option disabled=true value="disabled-default">Global Aggregation (disabled due to size)</option>
+                            
+
+                            
+                                
+                            
+                                
+                                <option value="27ab8da8b3166c79c54805d18fafab413d71654a2a07b7916d59806d">Policy confident_colden</option>
+                                
+                            
+                                
+                                <option value="2ac5eb914e5e9f07c14e3d75cfb2d3f2cb6a0a928ebe22e46c6a660c">Policy eager_lehmann</option>
+                                
+                            
+                                
+                                <option value="62687740d3824c69ea565e79265a23ab6ff5c45830735169a23e2deb">Policy adoring_yonath</option>
+                                
+                            
+                                
+                                <option value="804825f7cd595c378054dc9f40e90a09823da0b01922acd61da288d8">Policy ecstatic_chatterjee</option>
+                                
+                            
+                                
+                                <option value="977f83e02301fc99c3ab3ca02a8e12cbffaa0845c04022dcd59a594b">Policy compassionate_keldysh</option>
+                                
+                            
+                                
+                                <option value="0956742b93de31b9eadc163d56b8f445fb6ea8593353c47b7d31442e">Policy dreamy_benz</option>
+                                
+                            
+                                
+                                <option value="43be468f89bdc6254b31ae025f75a70fa759f6cc6c043792215eaf0a">Policy inspiring_hertz</option>
+                                
+                            
+                                
+                                <option value="6ccf0b3561087f999af2b2529c9d7a4e52aa628510165c326844e389">Policy gracious_pascal</option>
+                                
+                            
+                                
+                                <option value="944f4274ca956e419060689eda736024f7fcfb1b8481e5a5af0fb43f">Policy inspiring_greider</option>
+                                
+                            
+                                
+                                <option value="9681f15cbe158c81e954729971fb2354ddeabdcaa2edf696b8a706ef">Policy amazing_curran</option>
+                                
+                            
+                                
+                                <option value="f0133c7e7587b5a63608e0d72ef19c416aa10cc5688b005d5992297c">Policy awesome_moore</option>
+                                
+                            
+                                
+                                <option value="505bc752a08a73129e6d76f9e98195f7f88453564b2143147824e7b0">Policy admiring_newton</option>
+                                
+                            
+                                
+                                <option value="01a776553734dffe0e09ea2d4ff39943708bf5eb4f847829bd9e8ead">Policy focused_feynman</option>
+                                
+                            
+                                
+                                <option value="4ae9a28006febebfb33e4fb610055d9c04ff6689882208da6d573747">Policy cocky_germain</option>
+                                
+                            
+                                
+                                <option value="9dd87066e3b66b14af9acc8516881af75ac1c82b9fa0934c0ae9255d">Policy hungry_tharp</option>
+                                
+                            
+                                
+                                <option value="be96019a5019629459075f5f826259afb10c4698e95a1fcac1eeb932">Policy vigorous_maxwell</option>
+                                
+                            
+                                
+                                <option value="c029b6f6b9a88704d93666811e19e502b05e218f85c7be4e851d6325">Policy hardcore_dewdney</option>
+                                
+                            
+                                
+                                <option value="810db72e2e973d1b04766211bf361ffd80bb181f5ed194a50ffa3d39">Policy focused_nash</option>
+                                
+                            
+                                
+                                <option value="ad1bd46ca13a6e1b4c4bd975a0adddddf6543d0974b83195b81af9ba">Policy compassionate_noether</option>
+                                
+                            
+                                
+                                <option value="c8cd71233eb0276e2f970c14e3800adcf76645c1c0f2ca0a5e7c821c">Policy clever_ritchie</option>
+                                
+                            
+                                
+                                <option value="cc37e3de2cba1f827a2c863937c1a831c0a37ecc642041afd5c3974a">Policy gifted_davinci</option>
+                                
+                            
+                                
+                                <option value="da4258f211e3d84b97f58486507f4b9b0cc58b168b3e3b6b64560905">Policy wonderful_cori</option>
+                                
+                            
+                                
+                                <option value="1d31918d2d35c32e0b335816d0ecb9d31e64af8e0f77f93e6a0b8383">Policy agitated_chaplygin</option>
+                                
+                            
+                                
+                                <option value="48208ec3f0a34369c2232fbd77e39aa524bf6bc73f963a21668a131a">Policy silly_mcnulty</option>
+                                
+                            
+                                
+                                <option value="fb66e0896c3f45c608d475f56238c3d67eb5556b1255a54d7db39b10">Policy bold_hellman</option>
+                                
+                            
+                                
+                                <option value="00e3933097cae9411ea44a54666585082ee8483a4424b5649658aedc">Policy trusting_rhodes</option>
+                                
+                            
+                                
+                                <option value="2c673455b0e259f3f4d73214cf02f29034946c9c4d25647caeccb346">Policy heuristic_stonebraker</option>
+                                
+                            
+                                
+                                <option value="af17d905cb22d5d3b25cff449071777ebcbbbe318f34eca5227ccead">Policy kind_boyd</option>
+                                
+                            
+                                
+                                <option value="eb1107afdc2ccf8903ff0f7829c8926b2020e52d44eb562317e9cdec">Policy magical_allen</option>
+                                
+                            
+                                
+                                <option value="03daa1e9d3c740a16b06431d33e030fba027010ec0ef7bfbc23153ce">Policy agitated_chaum</option>
+                                
+                            
+                                
+                                <option value="504cc62dc27e70efebc7db21e6429d80899f06e78a0e7e9908690358">Policy wizardly_bhabha</option>
+                                
+                            
+                                
+                                <option selected value="610875b1d7bb0fd9ca68edf27389a73d170ac4924db2c4a7f955374a">Policy ecstatic_galois</option>
+                                
+                            
+                                
+                                <option value="6c9b9fd3bfeaec36765b217fd23a9c4ee3d9aecf1f99b29923f52175">Policy hungry_varahamihira</option>
+                                
+                            
+                                
+                                <option value="e35b48142bdf45c60798aef9dc31aad7b6847706bf5db388e081590f">Policy goofy_haibt</option>
+                                
+                            
+                                
+                                <option value="4c6dafaf5f64aa263ad4b8f63db5f802310b3661e36066d988f0c3e4">Policy stupefied_matsumoto</option>
+                                
+                            
+                                
+                                <option value="805359d0d8d0f125ef1804e5c5321a971fec0c09169852648ab8f790">Policy relaxed_kirch</option>
+                                
+                            
+                                
+                                <option value="96c0f79260ce228d2c2f18bc4171e822d8b6150d2e701ce8ddb73864">Policy nervous_carson</option>
+                                
+                            
+                                
+                                <option value="98daabc5a6d4068bec54f0cb75647d0c33920beb2f9b27d509bd4f38">Policy dazzling_liskov</option>
+                                
+                            
+                                
+                                <option value="d0775aa61a692e1c16c0fd7d17b5df32b6815d2a0918c7ce8a28e38f">Policy priceless_dhawan</option>
+                                
+                            
+
+                            
+
+
+                        </select>
+
+                        <script>var netgroups = {"00e3933097cae9411ea44a54666585082ee8483a4424b5649658aedc":["64.56.157.0/24","64.56.151.0/24"],"01a776553734dffe0e09ea2d4ff39943708bf5eb4f847829bd9e8ead":["64.56.156.0/24","64.56.144.0/24"],"03daa1e9d3c740a16b06431d33e030fba027010ec0ef7bfbc23153ce":["72.13.172.0/24"],"0956742b93de31b9eadc163d56b8f445fb6ea8593353c47b7d31442e":["72.172.160.0/24"],"1d31918d2d35c32e0b335816d0ecb9d31e64af8e0f77f93e6a0b8383":["64.56.143.0/24"],"27ab8da8b3166c79c54805d18fafab413d71654a2a07b7916d59806d":["72.13.174.0/24"],"2ac5eb914e5e9f07c14e3d75cfb2d3f2cb6a0a928ebe22e46c6a660c":["64.56.140.0/24","64.56.128.0/24"],"2c673455b0e259f3f4d73214cf02f29034946c9c4d25647caeccb346":["44.135.121.0/24","44.190.9.0/24"],"43be468f89bdc6254b31ae025f75a70fa759f6cc6c043792215eaf0a":["72.13.177.0/24","67.215.58.0/24","208.82.250.0/24"],"48208ec3f0a34369c2232fbd77e39aa524bf6bc73f963a21668a131a":["67.215.62.0/24","72.13.168.0/23","72.13.182.0/23","72.172.168.0/22","64.56.150.0/24","64.56.145.0/24"],"4ae9a28006febebfb33e4fb610055d9c04ff6689882208da6d573747":["72.13.179.0/24","72.172.172.0/22","72.13.188.0/22"],"4c6dafaf5f64aa263ad4b8f63db5f802310b3661e36066d988f0c3e4":["64.56.149.0/24"],"504cc62dc27e70efebc7db21e6429d80899f06e78a0e7e9908690358":["64.56.130.0/23","72.13.184.0/22","64.56.138.0/24","64.56.152.0/24","67.215.50.0/23","64.56.140.0/22","72.13.186.0/23"],"505bc752a08a73129e6d76f9e98195f7f88453564b2143147824e7b0":["67.215.53.0/24"],"610875b1d7bb0fd9ca68edf27389a73d170ac4924db2c4a7f955374a":["67.215.56.0/24","67.215.48.0/24","208.82.254.0/24","72.13.184.0/24","67.215.60.0/23","208.82.253.0/24","208.82.251.0/24","208.82.255.0/24","67.215.59.0/24","72.13.160.0/24"],"62687740d3824c69ea565e79265a23ab6ff5c45830735169a23e2deb":["72.172.161.0/24"],"6c9b9fd3bfeaec36765b217fd23a9c4ee3d9aecf1f99b29923f52175":["64.56.139.0/24","64.56.148.0/24"],"6ccf0b3561087f999af2b2529c9d7a4e52aa628510165c326844e389":["64.56.136.0/24"],"804825f7cd595c378054dc9f40e90a09823da0b01922acd61da288d8":["72.13.162.0/24","72.13.176.0/24"],"805359d0d8d0f125ef1804e5c5321a971fec0c09169852648ab8f790":["64.56.141.0/24","64.56.142.0/24"],"810db72e2e973d1b04766211bf361ffd80bb181f5ed194a50ffa3d39":["72.13.161.0/24"],"944f4274ca956e419060689eda736024f7fcfb1b8481e5a5af0fb43f":["72.172.162.0/23"],"9681f15cbe158c81e954729971fb2354ddeabdcaa2edf696b8a706ef":["64.56.152.0/22","64.56.146.0/23","72.172.164.0/22","64.56.135.0/24","64.56.129.0/24","67.215.63.0/24"],"96c0f79260ce228d2c2f18bc4171e822d8b6150d2e701ce8ddb73864":["67.215.57.0/24","72.13.187.0/24","72.13.186.0/24"],"977f83e02301fc99c3ab3ca02a8e12cbffaa0845c04022dcd59a594b":["72.13.173.0/24"],"98daabc5a6d4068bec54f0cb75647d0c33920beb2f9b27d509bd4f38":["72.13.167.0/24","208.82.252.0/24","72.13.178.0/24"],"9dd87066e3b66b14af9acc8516881af75ac1c82b9fa0934c0ae9255d":["64.56.131.0/24","64.56.158.0/23"],"ad1bd46ca13a6e1b4c4bd975a0adddddf6543d0974b83195b81af9ba":["72.13.170.0/23"],"af17d905cb22d5d3b25cff449071777ebcbbbe318f34eca5227ccead":["67.215.51.0/24"],"be96019a5019629459075f5f826259afb10c4698e95a1fcac1eeb932":["72.172.160.0/20","72.13.180.0/24","67.215.48.0/20","67.215.49.0/24","72.13.160.0/19","208.82.248.0/21"],"c029b6f6b9a88704d93666811e19e502b05e218f85c7be4e851d6325":["64.56.130.0/24"],"c8cd71233eb0276e2f970c14e3800adcf76645c1c0f2ca0a5e7c821c":["64.56.137.0/24"],"cc37e3de2cba1f827a2c863937c1a831c0a37ecc642041afd5c3974a":["67.215.50.0/24"],"d0775aa61a692e1c16c0fd7d17b5df32b6815d2a0918c7ce8a28e38f":["64.56.159.0/24"],"da4258f211e3d84b97f58486507f4b9b0cc58b168b3e3b6b64560905":["72.13.164.0/23"],"e35b48142bdf45c60798aef9dc31aad7b6847706bf5db388e081590f":["72.13.166.0/24","64.56.128.0/19"],"eb1107afdc2ccf8903ff0f7829c8926b2020e52d44eb562317e9cdec":["2606:ee00:5::/48"],"f0133c7e7587b5a63608e0d72ef19c416aa10cc5688b005d5992297c":["64.56.134.0/24"],"fb66e0896c3f45c608d475f56238c3d67eb5556b1255a54d7db39b10":["173.240.176.0/20"]}</script>
+
+                        <div style="text-align: center;">
+                            <img id="pathimg" usemap="#world" src="">
+                            <div id="world2"></div>
+                        </div>
+
+                        <details>
+                            <summary>Chart Display Options</summary>
+                            <noscript>This requires javascript to work</noscript>
+                            <label for="graphOptionMoreWiggle" style="display: flex;align-items: center;font-size: 20px;">
+                                <input type="checkbox" id="graphOptionMoreWiggle" name="graphOptionMoreWiggle" style="width: 64px; height: 32px;">
+                                    <p id="graphOptionMoreWiggleLabel" style="width: 200%;">Display links using non straight lines</p>
+                            </label>
+                        </details>
+
+                        <h3 style="display: none;" id="PISPBanner">Prefixes in selected policy</h3>
+                        <table id="policytable" class="full-width-table">
+                        </table>
+                        <button style="width:100%;display: none;" id="ShowFullPolicyButton" class="bigButton" onclick="dropdownPoke()">Load all prefixes in policy</button>
+
+                        <script>
+                            !function(a,b){"function"==typeof define&&define.amd?define([],b):"undefined"!=typeof module&&module.exports?module.exports=b():a.ReconnectingWebSocket=b()}(this,function(){function a(b,c,d){function l(a,b){var c=document.createEvent("CustomEvent");return c.initCustomEvent(a,!1,!1,b),c}var e={debug:!1,automaticOpen:!0,reconnectInterval:1e3,maxReconnectInterval:3e4,reconnectDecay:1.5,timeoutInterval:2e3};d||(d={});for(var f in e)this[f]="undefined"!=typeof d[f]?d[f]:e[f];this.url=b,this.reconnectAttempts=0,this.readyState=WebSocket.CONNECTING,this.protocol=null;var h,g=this,i=!1,j=!1,k=document.createElement("div");k.addEventListener("open",function(a){g.onopen(a)}),k.addEventListener("close",function(a){g.onclose(a)}),k.addEventListener("connecting",function(a){g.onconnecting(a)}),k.addEventListener("message",function(a){g.onmessage(a)}),k.addEventListener("error",function(a){g.onerror(a)}),this.addEventListener=k.addEventListener.bind(k),this.removeEventListener=k.removeEventListener.bind(k),this.dispatchEvent=k.dispatchEvent.bind(k),this.open=function(b){h=new WebSocket(g.url,c||[]),b||k.dispatchEvent(l("connecting")),(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","attempt-connect",g.url);var d=h,e=setTimeout(function(){(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","connection-timeout",g.url),j=!0,d.close(),j=!1},g.timeoutInterval);h.onopen=function(){clearTimeout(e),(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","onopen",g.url),g.protocol=h.protocol,g.readyState=WebSocket.OPEN,g.reconnectAttempts=0;var d=l("open");d.isReconnect=b,b=!1,k.dispatchEvent(d)},h.onclose=function(c){if(clearTimeout(e),h=null,i)g.readyState=WebSocket.CLOSED,k.dispatchEvent(l("close"));else{g.readyState=WebSocket.CONNECTING;var d=l("connecting");d.code=c.code,d.reason=c.reason,d.wasClean=c.wasClean,k.dispatchEvent(d),b||j||((g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","onclose",g.url),k.dispatchEvent(l("close")));var e=g.reconnectInterval*Math.pow(g.reconnectDecay,g.reconnectAttempts);setTimeout(function(){g.reconnectAttempts++,g.open(!0)},e>g.maxReconnectInterval?g.maxReconnectInterval:e)}},h.onmessage=function(b){(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","onmessage",g.url,b.data);var c=l("message");c.data=b.data,k.dispatchEvent(c)},h.onerror=function(b){(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","onerror",g.url,b),k.dispatchEvent(l("error"))}},1==this.automaticOpen&&this.open(!1),this.send=function(b){if(h)return(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","send",g.url,b),h.send(b);throw"INVALID_STATE_ERR : Pausing to reconnect websocket"},this.close=function(a,b){"undefined"==typeof a&&(a=1e3),i=!0,h&&h.close(a,b)},this.refresh=function(){h&&h.close()}}return a.prototype.onopen=function(){},a.prototype.onclose=function(){},a.prototype.onconnecting=function(){},a.prototype.onmessage=function(){},a.prototype.onerror=function(){},a.debugAll=!1,a.CONNECTING=WebSocket.CONNECTING,a.OPEN=WebSocket.OPEN,a.CLOSING=WebSocket.CLOSING,a.CLOSED=WebSocket.CLOSED,a});
+                        </script>
+                        
+                        <script>
+                            var prefixinfo = [{"PrefixString":"44.135.121.0/24","WhoisName":"Manitoba's Amateur Radio Network - VA4WAN - Data Center","WhoisCountry":"CA"},{"PrefixString":"44.190.9.0/24","WhoisName":"ZZ","WhoisCountry":"DE"},{"PrefixString":"64.56.128.0/19","WhoisName":"Xplore Inc.","WhoisCountry":"CA"},{"PrefixString":"64.56.128.0/24","WhoisName":"Xplore Inc.","WhoisCountry":"CA"},{"PrefixString":"64.56.129.0/24","WhoisName":"Wiband Communications","WhoisCountry":"CA"},{"PrefixString":"64.56.130.0/23","WhoisName":"Xplore Inc.","WhoisCountry":"CA"},{"PrefixString":"64.56.130.0/24","WhoisName":"Xplore Inc.","WhoisCountry":"CA"},{"PrefixString":"64.56.131.0/24","WhoisName":"Xplore Inc.","WhoisCountry":"CA"},{"PrefixString":"64.56.134.0/24","WhoisName":"Xplore Inc.","WhoisCountry":"CA"},{"PrefixString":"64.56.135.0/24","WhoisName":"Xplore Inc.","WhoisCountry":"CA"},{"PrefixString":"64.56.136.0/24","WhoisName":"Xplore Inc.","WhoisCountry":"CA"},{"PrefixString":"64.56.137.0/24","WhoisName":"Xplore Inc.","WhoisCountry":"CA"},{"PrefixString":"64.56.138.0/24","WhoisName":"Wiband Communications","WhoisCountry":"CA"},{"PrefixString":"64.56.139.0/24","WhoisName":"Wiband Communications","WhoisCountry":"CA"},{"PrefixString":"64.56.140.0/24","WhoisName":"Wiband Communications","WhoisCountry":"CA"},{"PrefixString":"64.56.140.0/22","WhoisName":"Xplore Inc.","WhoisCountry":"CA"},{"PrefixString":"64.56.141.0/24","WhoisName":"Xplore Inc.","WhoisCountry":"CA"},{"PrefixString":"64.56.142.0/24","WhoisName":"Xplore Inc.","WhoisCountry":"CA"},{"PrefixString":"64.56.143.0/24","WhoisName":"Xplore Inc.","WhoisCountry":"CA"},{"PrefixString":"64.56.144.0/24","WhoisName":"Wiband Communications","WhoisCountry":"CA"},{"PrefixString":"64.56.145.0/24","WhoisName":"Xplore Inc.","WhoisCountry":"CA"},{"PrefixString":"64.56.146.0/23","WhoisName":"Xplore Inc.","WhoisCountry":"CA"},{"PrefixString":"64.56.148.0/24","WhoisName":"Wiband Communications","WhoisCountry":"CA"},{"PrefixString":"64.56.149.0/24","WhoisName":"Wiband Communications","WhoisCountry":"CA"},{"PrefixString":"64.56.150.0/24","WhoisName":"Wiband Communications","WhoisCountry":"CA"},{"PrefixString":"64.56.151.0/24","WhoisName":"Wiband Communications","WhoisCountry":"CA"},{"PrefixString":"64.56.152.0/22","WhoisName":"Wiband Communications","WhoisCountry":"CA"},{"PrefixString":"64.56.152.0/24","WhoisName":"Wiband Communications","WhoisCountry":"CA"},{"PrefixString":"64.56.156.0/24","WhoisName":"Wiband Communications","WhoisCountry":"CA"},{"PrefixString":"64.56.157.0/24","WhoisName":"Wiband Communications","WhoisCountry":"CA"},{"PrefixString":"64.56.158.0/23","WhoisName":"Xplore Inc.","WhoisCountry":"CA"},{"PrefixString":"64.56.159.0/24","WhoisName":"Xplore Inc.","WhoisCountry":"CA"},{"PrefixString":"67.215.48.0/20","WhoisName":"Xplore Inc.","WhoisCountry":"CA"},{"PrefixString":"67.215.48.0/24","WhoisName":"Xplore Inc.","WhoisCountry":"CA"},{"PrefixString":"67.215.49.0/24","WhoisName":"Chill Communications","WhoisCountry":"CA"},{"PrefixString":"67.215.50.0/23","WhoisName":"Xplore Inc.","WhoisCountry":"CA"},{"PrefixString":"67.215.50.0/24","WhoisName":"WiBand Communications","WhoisCountry":"CA"},{"PrefixString":"67.215.51.0/24","WhoisName":"Xplore Inc.","WhoisCountry":"CA"},{"PrefixString":"67.215.53.0/24","WhoisName":"Xplore Inc.","WhoisCountry":"CA"},{"PrefixString":"67.215.56.0/24","WhoisName":"Chill Communications","WhoisCountry":"CA"},{"PrefixString":"67.215.57.0/24","WhoisName":"WiBand Communications","WhoisCountry":"CA"},{"PrefixString":"67.215.58.0/24","WhoisName":"Xplore Inc.","WhoisCountry":"CA"},{"PrefixString":"67.215.59.0/24","WhoisName":"Xplore Inc.","WhoisCountry":"CA"},{"PrefixString":"67.215.60.0/23","WhoisName":"Xplore Inc.","WhoisCountry":"CA"},{"PrefixString":"67.215.62.0/24","WhoisName":"WiBand Communications","WhoisCountry":"CA"},{"PrefixString":"67.215.63.0/24","WhoisName":"WiBand Communications","WhoisCountry":"CA"},{"PrefixString":"72.13.160.0/24","WhoisName":"Community Networks","WhoisCountry":"CA"},{"PrefixString":"72.13.160.0/19","WhoisName":"Xplore Inc.","WhoisCountry":"CA"},{"PrefixString":"72.13.161.0/24","WhoisName":"WiBand Communications","WhoisCountry":"CA"},{"PrefixString":"72.13.162.0/24","WhoisName":"Community Networks","WhoisCountry":"CA"},{"PrefixString":"72.13.164.0/23","WhoisName":"Xplore Inc.","WhoisCountry":"CA"},{"PrefixString":"72.13.166.0/24","WhoisName":"Xplore Inc.","WhoisCountry":"CA"},{"PrefixString":"72.13.167.0/24","WhoisName":"Community Networks","WhoisCountry":"CA"},{"PrefixString":"72.13.168.0/23","WhoisName":"Xplore Inc.","WhoisCountry":"CA"},{"PrefixString":"72.13.170.0/23","WhoisName":"Xplore Inc.","WhoisCountry":"CA"},{"PrefixString":"72.13.172.0/24","WhoisName":"Clearstream Internet Inc.","WhoisCountry":"CA"},{"PrefixString":"72.13.173.0/24","WhoisName":"Mercury Wireless","WhoisCountry":"CA"},{"PrefixString":"72.13.174.0/24","WhoisName":"Skyryder Networks","WhoisCountry":"CA"},{"PrefixString":"72.13.176.0/24","WhoisName":"Airweb Technologies Inc.","WhoisCountry":"CA"},{"PrefixString":"72.13.177.0/24","WhoisName":"Xplore Inc.","WhoisCountry":"CA"},{"PrefixString":"72.13.178.0/24","WhoisName":"WiBand COmmunications Corp.","WhoisCountry":"CA"},{"PrefixString":"72.13.179.0/24","WhoisName":"Xplore Inc.","WhoisCountry":"CA"},{"PrefixString":"72.13.180.0/24","WhoisName":"Smith Corp.","WhoisCountry":"CA"},{"PrefixString":"72.13.182.0/23","WhoisName":"Xplore Inc.","WhoisCountry":"CA"},{"PrefixString":"72.13.184.0/24","WhoisName":"Community Networks","WhoisCountry":"CA"},{"PrefixString":"72.13.184.0/22","WhoisName":"Xplore Inc.","WhoisCountry":"CA"},{"PrefixString":"72.13.186.0/23","WhoisName":"First Communications Group Inc","WhoisCountry":"CA"},{"PrefixString":"72.13.186.0/24","WhoisName":"First Communications Group Inc","WhoisCountry":"CA"},{"PrefixString":"72.13.187.0/24","WhoisName":"First Communications Group Inc","WhoisCountry":"CA"},{"PrefixString":"72.13.188.0/22","WhoisName":"Xplore Inc.","WhoisCountry":"CA"},{"PrefixString":"72.172.160.0/24","WhoisName":"Xplore Inc.","WhoisCountry":"CA"},{"PrefixString":"72.172.160.0/20","WhoisName":"Xplore Inc.","WhoisCountry":"CA"},{"PrefixString":"72.172.161.0/24","WhoisName":"Alta Genetics","WhoisCountry":"CA"},{"PrefixString":"72.172.164.0/22","WhoisName":"Xplore Inc.","WhoisCountry":"CA"},{"PrefixString":"72.172.168.0/22","WhoisName":"Community Networks","WhoisCountry":"CA"},{"PrefixString":"72.172.172.0/22","WhoisName":"Community Networks","WhoisCountry":"CA"},{"PrefixString":"173.240.176.0/20","WhoisName":"Xplore Inc.","WhoisCountry":"CA"},{"PrefixString":"208.82.248.0/21","WhoisName":"Xplore Inc.","WhoisCountry":"CA"},{"PrefixString":"208.82.250.0/24","WhoisName":"Xplore Inc.","WhoisCountry":"CA"},{"PrefixString":"208.82.251.0/24","WhoisName":"Xplore Inc.","WhoisCountry":"CA"},{"PrefixString":"208.82.252.0/24","WhoisName":"Xplore Inc.","WhoisCountry":"CA"},{"PrefixString":"208.82.253.0/24","WhoisName":"Xplore Inc.","WhoisCountry":"CA"},{"PrefixString":"208.82.254.0/24","WhoisName":"Xplore Inc.","WhoisCountry":"CA"},{"PrefixString":"208.82.255.0/24","WhoisName":"Xplore Inc.","WhoisCountry":"CA"},{"PrefixString":"72.172.162.0/23","WhoisName":"Xplore Inc.","WhoisCountry":"CA"},{"PrefixString":"2606:ee00:5::/48","WhoisName":"Xplore Inc.","WhoisCountry":"CA"}]
+                            var asn =  15102 
+
+                            var pfxExtraString = "";
+
+                            function saveGraphOptionsToLocalStorage() {
+                                localStorage.setItem("pfx-chart-options:wiggle", document.getElementById("graphOptionMoreWiggle").checked);
+                            }
+
+                            function loadGraphOptionsToLocalStorage() {
+                                document.getElementById("graphOptionMoreWiggle").checked = localStorage.getItem("pfx-chart-options:wiggle") == "true";
+                                pfxExtraString= "";
+                                if (document.getElementById("graphOptionMoreWiggle").checked) {
+                                    pfxExtraString = pfxExtraString + "&wiggly";
+                                }
+                            }
+                            loadGraphOptionsToLocalStorage();
+
+                            function graphOptionsChanged() {
+                                saveGraphOptionsToLocalStorage();
+                                handleImageChange();
+                            }
+                            document.getElementById("graphOptionMoreWiggle").addEventListener("click", graphOptionsChanged)
+
+
+                            function handleImageChange() {
+                                loadGraphOptionsToLocalStorage();
+                                
+                                document.getElementById("pathimg").src=("/pathimg/"+asn+ "-" + document.getElementById("netpolicydropdown").value +"?"+pfxExtraString);
+                                var request = new XMLHttpRequest();
+                                request.open('GET', "/pathimg/"+asn+ "-" + document.getElementById("netpolicydropdown").value + "?map=true" + pfxExtraString, true);
+
+                                request.onload = function() {
+                                    if (this.status >= 200 && this.status < 400) {
+                                        
+                                        
+                                        document.getElementById("world2").innerHTML = this.response;
+                                        setTimeout(function(){
+                                            imageMapResize('#world');
+                                        },1000)
+                                    }
+                                };
+                                request.send();
+                                buildPrefixTable();
+                            } 
+
+                            function encodeHTML(s) {
+                                return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
+                            }
+
+                            function dropdownPoke(){
+                                InteractedWithPolicyTableYet=true;
+                                handleImageChange();
+                            }
+
+                            var InteractedWithPolicyTableYet = false;
+                            var OverloadPolicySize = 0;
+                            function buildPrefixTable() {
+                                var policy = document.getElementById("netpolicydropdown").value;
+                                
+                                var cidrs = netgroups[policy];
+                                var ihtml = "<tbody> <tr> <th class=\"nowrap\">  -  </th> <th>Prefix</th> <th class=\"nowrap\">Description</th> </tr>";
+
+                                
+                                var aaa = document.querySelectorAll('#PISPBanner');
+                                var bbb = document.querySelectorAll('#policytable');
+                                var n = 0
+                                if (cidrs) {
+                                    aaa[0].style.display = "";
+                                    bbb[0].style.display = "";
+                                    cidrs.forEach(cidr => {
+                                        var obj = {};
+                                        var dont =false;
+                                        n++;
+                                        
+                                        if (!InteractedWithPolicyTableYet) {
+                                            if (n == 5) {
+                                                dont = true;
+                                            } else if (n > 5) {
+                                                dont = true;
+                                            }
+                                        }
+                                        
+                                        if (!dont) {
+                                            prefixinfo.forEach(el => {
+                                                if(el.PrefixString == cidr) {
+                                                    
+                                                        ihtml += "<tr><td class=\"nowrap ns\"><img class=\"flag-img\" src=\"/assets/flags/"+el.WhoisCountry+".png\" title=\""+el.WhoisCountry+"\"></td>"
+                                                        ihtml += "<td><a href=\"/prefix/"+el.PrefixString+"\">"+el.PrefixString+"</a></td>"
+                                                        ihtml += "<td class=\"nowrap\">"+encodeHTML(el.WhoisName)+"</td></tr>"
+                                                }
+                                            });
+                                        } else {
+                                            OverloadPolicySize++;
+                                        }
+                                    });
+                                    document.getElementById("policytable").innerHTML = ihtml
+                                    var PolButton = document.querySelectorAll('#ShowFullPolicyButton');
+                                    if (!InteractedWithPolicyTableYet && OverloadPolicySize!=0) {
+                                        PolButton[0].style="width:100%";
+                                        PolButton[0].innerHTML = "Load all "+OverloadPolicySize+" prefixes in policy"
+                                    } else {
+                                        PolButton[0].style="display:none;";
+                                    }
+                                    
+                                } else {
+                                    aaa[0].style.display = "none";
+                                    bbb[0].style.display = "none";
+                                }
+                            }
+
+
+                            var pathdropdown = document.querySelectorAll('#netpolicydropdown');
+                            pathdropdown[0].addEventListener("change",dropdownPoke)
+                            handleImageChange()
+                            buildPrefixTable()
+
+                            document.addEventListener("load", function(){
+                                
+                                handleImageChange()
+                            });
+
+                            function uuidv4() {
+                                return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+                                    var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+                                    return v.toString(16);
+                                });
+                            }
+
+                            
+                            let realTimeSocket = new ReconnectingWebSocket("wss://bgp.tools/ws/rt-asn?prefix=AS15102" + "&magic=" + encodeURIComponent("SRF75VU4C7ZL2WECAJ6LK2UNZJDJ7UOTILSZO2HGHP6QDGWLQIVA===="));
+                            
+                            realTimeSocket.onmessage = function(event) {
+                                console.log(`[message] Data received from server: ${event.data}`);
+                                if (event.data == "Running.") {
+                                    document.getElementById("ws-status").src = "/assets/connected.png";
+                                    document.getElementById("ws-status").title = "Connected to realtime data";
+                                } else if (event.data == "STOP-CONNECTING") {
+                                    document.getElementById("ws-status").src = disconectedIcon;
+                                    document.getElementById("ws-status").title = "Not connected to realtime data";
+                                    realTimeSocket.maxReconnectAttempts = 1;
+                                    realTimeSocket.close()
+                                } else {
+                                    var obj = JSON.parse(event.data);
+                                    var elm = document.getElementById("pfx-"+obj.Prefix);
+                                    if (!elm && obj.Vis > 6) {
+                                        var tblist = document.getElementById("donotscrapebgptools-prefixlist-tbody");
+                                        var node = document.createElement("tr");                 
+                                        node.outerHTML = '<tr id="pfx-'+obj.Prefix+'"><td class="nowrap"><img class="flag-img" src="/assets/flags/'+obj.Whois.WhoisCountry+'.png" title="'+obj.Whois.WhoisCountry+'"></td><td><a href="/prefix/'+obj.Prefix+'">'+obj.Prefix+'</a></td><td class="smallonmobile nowrap">'+obj.Whois.WhoisName+'</td></tr>';
+                                        tblist.appendChild(node);                              
+                                    }
+                                    if (!elm) {
+                                        elm = document.getElementById("pfx-"+obj.Prefix);
+                                    }
+                                    
+                                    if (obj.Vis > 70) {
+                                        if (elm.style) {
+                                            var es = elm.style;
+                                            if (es.animation.includes("pulse1b")) {
+                                                elm.style = "animation: pulse2b 1s 1;";
+                                            } else if (es.animation.includes("pulse2b")) {
+                                                elm.style = "animation: pulse1b 1s 1;";
+                                            } else {
+                                                elm.style = "animation: pulse1b 1s 1;";
+                                            }
+                                        }
+                                    } else if (obj.Vis < 5) {
+                                        
+                                        var elm = document.getElementById("pfx-"+obj.Prefix);
+                                        if (elm) {
+                                            elm.parentNode.removeChild(elm);
+                                        }
+                                    } else {
+                                        if (elm.style) {
+                                            var es = elm.style;
+                                            if (es.animation.includes("pulse1r")) {
+                                                elm.style = "animation: pulse2r 1s 1;";
+                                            } else if (es.animation.includes("pulse2r")) {
+                                                elm.style = "animation: pulse1r 1s 1;";
+                                            } else {
+                                                elm.style = "animation: pulse1r 1s 1;";
+                                            }
+                                        }
+                                    }
+                                }
+                            };
+                            var disconectedIcon = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAAZlBMVEX/ewBZWVn/ewf/ew5fWljudiP8egp6XVT6eRHodSmVYU6hZEzObjrldCv3eRZ/XlNjWliHX1KrZkngci71eBl1XFXCa0CKYFHydx18XlSQYE+lZUq0aEbJbT3SbzhvXFaLYFG8akLYdYVFAAABQElEQVRIx5XV25KDIAwGYIKASLutqOtZ277/S26xK4ozJea/qRdfajATZaRkd6B6oPoL1d9QphUn+WvXmGF8TfN8yvNrDj6nvNj5Hu8n8HCh9ONiON5PEKuQx55DmFTHC1R9uMOjYkhFERbkEikofw8FGe5t0FWJ+kLvz5H+t8RdGD9k8TeebBXpzwIZT955XyVBtHHeXYzeJy5fhydtoZffZvUMSfvxT4BOeI/G/b9paxH1at8XQF8xNcV8aaQvHQBMhY/XttsdYp5nah3XdvIqui61Cjy+jqLwXp1cx9XLQZ5cR/vx1p8cez2IWrlxYY/T9bNVyCfmdQdbxNgs441FNRAEHS83oe9ahmTw1p88nhHCiAkpeIUeX5eJ6NlM9Gwm+uxO9/3F2PSR597jn1+udCWzUp7150P1jOoZ1f8BGPARG85JosIAAAAASUVORK5CYII=";
+                            realTimeSocket.onerror = function(error) {
+                                document.getElementById("ws-status").src = disconectedIcon;
+                                document.getElementById("ws-status").title = "Not connected to realtime data";
+
+                                console.log(`[error] ${error.message}`);
+                            };
+                            realTimeSocket.onclose = function(error) {
+                                document.getElementById("ws-status").src = disconectedIcon;
+                                document.getElementById("ws-status").title = "Not connected to realtime data";
+
+                                console.log(`[error] ${error.message}`);
+                            };
+                        </script>
+
+<div class="superclearfix">
+    
+</div>
+
+                        <hr>
+                        <a style="font-size: small;" href="/kb/what-is-a-upstream">How are upstreams and downstreams calculated?</a>
+                        <h3 id="upstreams">Upstreams<img class="flag-img" src="/assets/lightning.png" style="padding-left: 12px;" title="This information was fetched live at page load time" alt="This information was fetched live at page load time"/></h3>
+
+
+                        <table id="donotscrapebgptools-upstreamTable" class="full-width-table">
+                            <thead class="sortable">
+                                <tr>
+                                    <th class="nowrap boldpls">  &nbsp;  </th>
+                                    <th data-sort-method='number' class="boldpls">ASN</th>
+                                    <th class="nowrap boldpls">Description</th>
+                                    <th class="nowrap boldpls">IPv4</th>
+                                    <th class="nowrap boldpls">IPv6</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA">
+                                        
+                                        </td>
+                                    <td data-sort='6327'><a href="/as/6327">AS6327</a></td>
+                                    <td class="smallonmobile nowrap">Shaw Communications</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US">
+                                        
+                                        </td>
+                                    <td data-sort='6939'><a href="/as/6939">AS6939</a></td>
+                                    <td class="smallonmobile nowrap">Hurricane Electric LLC</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA">
+                                        
+                                        </td>
+                                    <td data-sort='40473'><a href="/as/40473">AS40473</a></td>
+                                    <td class="smallonmobile nowrap">Xplore Inc.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA">
+                                        
+                                        </td>
+                                    <td data-sort='22457'><a href="/as/22457">AS22457</a></td>
+                                    <td class="smallonmobile nowrap">Xplore Inc.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+
+                        <hr>
+                        <h3 id="peers">Peers<img class="flag-img" src="/assets/lightning.png" style="padding-left: 12px;" title="This information was fetched live at page load time" alt="This information was fetched live at page load time"/></h3>
+
+
+
+                        <table id="donotscrapebgptools-upstreamTablePeers" class="full-width-table">
+                            <thead class="sortable">
+                                <tr>
+                                    <th class="nowrap boldpls">  &nbsp;  </th>
+                                    <th data-sort-method='number' class="boldpls">ASN</th>
+                                    <th class="nowrap boldpls">Description</th>
+                                    <th class="nowrap boldpls">IPv4</th>
+                                    <th class="nowrap boldpls">IPv6</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='6939'><a href="/as/6939">AS6939</a></td>
+                                    <td class="smallonmobile nowrap">Hurricane Electric LLC</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA"></td>
+                                    <td data-sort='6327'><a href="/as/6327">AS6327</a></td>
+                                    <td class="smallonmobile nowrap">Shaw Communications</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA"></td>
+                                    <td data-sort='40473'><a href="/as/40473">AS40473</a></td>
+                                    <td class="smallonmobile nowrap">Xplore Inc.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA"></td>
+                                    <td data-sort='22457'><a href="/as/22457">AS22457</a></td>
+                                    <td class="smallonmobile nowrap">Xplore Inc.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+
+
+
+                        <hr>
+                        <h3 id="downstreams">Downstreams<img class="flag-img" src="/assets/lightning.png" style="padding-left: 12px;" title="This information was fetched live at page load time" alt="This information was fetched live at page load time"/></h3>
+                        <table id="donotscrapebgptools-upstreamTableDowns" class="full-width-table">
+                            <thead class="sortable">
+                                
+                                <tr>
+                                    <th class="nowrap boldpls">  &nbsp;  </th>
+                                    <th data-sort-method='number'  class="boldpls">ASN</th>
+                                    <th class="nowrap boldpls">Description</th>
+                                    <th class="nowrap boldpls">IPv4</th>
+                                    <th class="nowrap boldpls">IPv6</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                <tr>
+                                    <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA">
+                                        
+                                        </td>
+                                    <td data-sort='40473'><a href="/as/40473">AS40473</a></td>
+                                    <td class="smallonmobile nowrap">Xplore Inc.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+
+                    </div>
+
+                    <div style="display: none" id="whois-page">
+                        
+                        
+                        <pre style="white-space: pre-wrap;">ASHandle:       <a href="/AS15102">AS15102</a>
+OrgID:          BARRE-2
+ASName:         ASN-WIBAND-1
+ASNumber:       15102
+RegDate:        2000-03-21
+Updated:        2024-01-19
+Source:         ARIN
+
+
+
+OrgID:          BARRE-2
+OrgName:        Xplore Inc.
+CanAllocate:    
+Street:         300 Lockhart Rd
+City:           Woodstock
+State/Prov:     NB
+Country:        CA
+PostalCode:     E7M-5C3
+Comment:        Geofeed https://geofeed.xplore.ca/geofeed.csv
+RegDate:        2005-04-26
+Updated:        2024-11-25
+OrgAdminHandle: <a href="https://whois.arin.net/rest/poc/ADMIN5869-ARIN">ADMIN5869-ARIN</a>
+OrgTechHandle:  <a href="https://whois.arin.net/rest/poc/ADMIN5869-ARIN">ADMIN5869-ARIN</a>
+OrgAbuseHandle: <a href="https://whois.arin.net/rest/poc/ABUSE8623-ARIN">ABUSE8623-ARIN</a>
+OrgNOCHandle:   <a href="https://whois.arin.net/rest/poc/ADMIN5869-ARIN">ADMIN5869-ARIN</a>
+Source:         ARIN
+
+
+
+
+
+OrgAdminHandle:       <a href="https://whois.arin.net/rest/poc/ADMIN5869-ARIN">ADMIN5869-ARIN</a>
+OrgAdminName:          Admin
+# Email removed, Log into bgp.tools to see whois emails
+
+
+OrgTechHandle:        <a href="https://whois.arin.net/rest/poc/ADMIN5869-ARIN">ADMIN5869-ARIN</a>
+OrgTechName:           Admin
+# Email removed, Log into bgp.tools to see whois emails
+
+
+OrgAbuseHandle:       <a href="https://whois.arin.net/rest/poc/ABUSE8623-ARIN">ABUSE8623-ARIN</a>
+OrgAbuseName:          Abuse
+# Email removed, Log into bgp.tools to see whois emails
+
+
+OrgNOCHandle:         <a href="https://whois.arin.net/rest/poc/ADMIN5869-ARIN">ADMIN5869-ARIN</a>
+OrgNOCName:            Admin
+# Email removed, Log into bgp.tools to see whois emails
+
+</pre>
+                        
+                        
+                        <a style="font-size: small;">Last Update: 2025-12-12T03:30:29Z UTC </a>
+                        
+                        <hr>
+                        
+                            <h2>Member of the following AS-SETs</h2>
+
+                            <table id="fhTable" class="full-width-table ">
+                                <tbody id="prefixlist-tbody">
+                                    <tr>
+                                        <th class="boldpls nowrap"> - </th>
+                                        <th class="boldpls">Member</th>
+                                        
+                                        <th class="boldpls nowrap">ASN Count</th>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">ARIN</td>
+                                        
+                                        <td><a href="/as-set/ARIN::as-axiaconnect">as-axiaconnect</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">12</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">ARIN</td>
+                                        
+                                        <td><a href="/as-set/ARIN::as-yycix-rs-clients">as-yycix-rs-clients</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">5199</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-transroute-spec">as-transroute-spec</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap boldpls"><p style="display: contents;color: red">19692</p></td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-hurricane">as-hurricane</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap boldpls"><p style="display: contents;color: red">24435</p></td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-telus">as-telus</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">1</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-hurricanev6">as-hurricanev6</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap boldpls"><p style="display: contents;color: red">20287</p></td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">LEVEL3</td>
+                                        
+                                        <td><a href="/as-set/LEVEL3::as-level3-origins-na">as-level3-origins-na</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">0</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">ARIN</td>
+                                        
+                                        <td><a href="/as-set/ARIN::as-wiband">as-wiband</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">1</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">ARIN</td>
+                                        
+                                        <td><a href="/as-set/ARIN::as-mbix-rs-members">as-mbix-rs-members</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap boldpls"><p style="display: contents;color: red">39031</p></td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-wiband">as-wiband</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">1</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">ARIN</td>
+                                        
+                                        <td><a href="/as-set/ARIN::as-axiafibrenet">as-axiafibrenet</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">13</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">ARIN</td>
+                                        
+                                        <td><a href="/as-set/ARIN::as16395:as-mbix-rs-members">as16395:as-mbix-rs-members</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap boldpls"><p style="display: contents;color: red">39031</p></td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-bigpipe">as-bigpipe</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap boldpls"><p style="display: contents;color: red">12744</p></td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                        
+
+                    </div>
+
+                    
+
+                    
+                    <div style="display: none" id="ix-page">
+                        <div class="grid-row">
+                            <dl class="column-two-thirds">
+                                <p style="margin: 0px;"><img style="vertical-align: middle; margin-left: 5px;" class="flag-img" src="/assets/peeringdb-icon.png" title="PeeringDB"><a href="https://www.peeringdb.com/asn/15102">Go to PeeringDB page</a></p>
+                            </dl>
+                            
+                            
+                        </div>
+                        <div class="grid-row">
+                            
+                        
+                        <div class="column-two-thirds">
+                            <dl>
+                                <dt>PeeringDB AS-SET:</dt>
+                                <dd class="text data">
+                                    
+                                    <a href="/as-set/as-wiband">AS-WIBAND</a>
+                                    
+                                </dd>
+                            </dl>
+                        </div>
+                        
+    
+    
+                        <dl class="column-third">
+                            <dt>Suggested Prefix Limits</dt>
+                            <dd class="text data">
+                                
+                                <p style="margin: 0px;"><b>IPv4:</b> 54</p>
+                                
+                                <p style="margin: 0px;"><b>IPv6:</b> 2</p>
+                            </dd>
+                        </dl>
+                        </div>
+
+                        
+
+                        <div id="normalixpsubpage">
+
+
+<h3>Internet Exchange Points</h3>
+
+<div class="scroll-ixp-div-on-small">
+<table id="ixpTable" class="full-width-table table-wide-to-force-scroll-on-mobile">
+    <thead class="sortable">
+        <tr>
+            <th class="nowrap boldpls">  &nbsp;  </th>
+            <th class="boldpls">Name</th>
+            <th class="nowrap boldpls">IPv4</th>
+            <th class="nowrap boldpls">IPv6</th>
+            <th data-sort-method='number' class="nowrap boldpls">Link Speed</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+        
+        <tr>
+            <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/YYCIX">YYCIX</a></td>
+            <td class="smallonmobile">206.126.225.29</a></td>
+            <td class="smallonmobile nowrap">2001:504:2f::1:5102:1</td>
+            <td data-sort='10000' class="smallonmobile">10 gbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/VANIX">VANIX</a></td>
+            <td class="smallonmobile">206.41.104.88</a></td>
+            <td class="smallonmobile nowrap">2001:504:39::88</td>
+            <td data-sort='10000' class="smallonmobile">10 gbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='CA' class="nowrap ns"><img class="flag-img" src="/assets/flags/CA.png" title="CA"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/MBIX">MBIX</a></td>
+            <td class="smallonmobile">206.72.208.23</a></td>
+            <td class="smallonmobile nowrap">2001:504:26::1:5102:1</td>
+            <td data-sort='1000' class="smallonmobile">1000 mbps</td>
+        </tr>
+        
+        
+    </tbody>
+</table>
+</div>
+
+
+
+
+
+
+
+
+<a style="font-size: small;">Last Update: 2025-12-12T10:08:19Z UTC</a>
+
+
+                        </div>
+                        <div id="overlapixpsubpage">
+                        </div>
+                    </div>
+                    
+                    
+
+                    
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="superclearfix">
+            
+            <div class="superclearfix">
+                
+            </div>
+
+            <div class="superclearfix">
+                
+            </div>
+
+
+        </div>
+
+
+        <div class="group js-footer" id="footer">
+            <nav>
+                <div>
+                    <ul>
+                        <li><a href="/kb/api" target="_blank">Scripting/API</a></li>
+                        <li><a href="/credits" target="_blank">Credits</a></li>
+                        <li><a href="/pricing" target="_blank">Pricing</a></li>
+                        <li><a href="/kb/contact" target="_blank">Contact Us</a></li>
+                        <li><a href="https://github.com/bgptools/issues" target="_blank">Issue Tracker</a></li>
+                        <li><a href="/kb/setup-sessions" target="">Contribute Data</a></li>
+                        
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <script>
+    
+    var inhash = window.location.hash;
+    if (inhash == "#asinfo") {
+        
+    } else if (inhash == "#prefixes") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#prefix-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#prefixes-page');
+        aaa[0].style.display = "";
+
+    } else if (inhash == "#connectivity" || inhash == "#peers" || inhash == "#upstreams" || inhash == "#downstreams") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#connectivity-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#connectivity-page');
+        aaa[0].style.display = "";
+    } else if (inhash == "#whois") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#whois-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#whois-page');
+        aaa[0].style.display = "";
+    } else if (inhash == "#ix") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#ix-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#ix-page');
+        aaa[0].style.display = "";
+    }</script>
+
+    <script>
+    
+
+
+    ;(function() {
+  'use strict'
+
+  function scaleImageMap() {
+    function resizeMap() {
+      function resizeAreaTag(cachedAreaCoords, idx) {
+        function scale(coord) {
+          var dimension = 1 === (isWidth = 1 - isWidth) ? 'width' : 'height'
+          return (
+            padding[dimension] +
+            Math.floor(Number(coord) * scalingFactor[dimension])
+          )
+        }
+
+        var isWidth = 0
+        areas[idx].coords = cachedAreaCoords
+          .split(',')
+          .map(scale)
+          .join(',')
+      }
+
+      var scalingFactor = {
+        width: image.width / image.naturalWidth,
+        height: image.height / image.naturalHeight,
+      }
+
+      var padding = {
+        width: parseInt(
+          window.getComputedStyle(image, null).getPropertyValue('padding-left'),
+          10
+        ),
+        height: parseInt(
+          window.getComputedStyle(image, null).getPropertyValue('padding-top'),
+          10
+        ),
+      }
+
+      cachedAreaCoordsArray.forEach(resizeAreaTag)
+    }
+
+    function getCoords(e) {
+      
+      return e.coords.replace(/ *, */g, ',').replace(/ +/g, ',')
+    }
+
+    function debounce() {
+      clearTimeout(timer)
+      timer = setTimeout(resizeMap, 250)
+    }
+
+    function start() {
+      if (
+        image.width !== image.naturalWidth ||
+        image.height !== image.naturalHeight
+      ) {
+        resizeMap()
+      }
+    }
+
+    function addEventListeners() {
+      image.addEventListener('load', resizeMap, false) 
+      window.addEventListener('focus', resizeMap, false) 
+      window.addEventListener('resize', debounce, false)
+      window.addEventListener('readystatechange', resizeMap, false)
+      document.addEventListener('fullscreenchange', resizeMap, false)
+    }
+
+    function beenHere() {
+      return 'function' === typeof map._resize
+    }
+
+    function getImg(name) {
+      return document.querySelector('img[usemap="#world"]')
+    }
+
+    function setup() {
+      areas = map.getElementsByTagName('area')
+      cachedAreaCoordsArray = Array.prototype.map.call(areas, getCoords)
+      image = getImg('#' + map.name) || getImg(map.name)
+      map._resize = resizeMap 
+    }
+
+    var  
+      map = this,
+      areas = null,
+      cachedAreaCoordsArray = null,
+      image = null,
+      timer = null
+
+    if (!beenHere()) {
+      setup()
+      addEventListeners()
+      start()
+    } else {
+      map._resize() 
+    }
+  }
+
+  function factory() {
+    function chkMap(element) {
+      if (!element.tagName) {
+        throw new TypeError('Object is not a valid DOM element')
+      } else if ('MAP' !== element.tagName.toUpperCase()) {
+        throw new TypeError(
+          'Expected <MAP> tag, found <' + element.tagName + '>.'
+        )
+      }
+    }
+
+    function init(element) {
+      if (element) {
+        chkMap(element)
+        scaleImageMap.call(element)
+        maps.push(element)
+      }
+    }
+
+    var maps
+
+    return function imageMapResizeF(target) {
+      maps = [] 
+
+      switch (typeof target) {
+        case 'undefined':
+        case 'string':
+          Array.prototype.forEach.call(
+            document.querySelectorAll(target || 'map'),
+            init
+          )
+          break
+        case 'object':
+          init(target)
+          break
+        default:
+          throw new TypeError('Unexpected data type (' + typeof target + ').')
+      }
+
+      return maps
+    }
+  }
+
+  if (typeof define === 'function' && define.amd) {
+    define([], factory)
+  } else if (typeof module === 'object' && typeof module.exports === 'object') {
+    module.exports = factory() 
+  } else {
+    window.imageMapResize = factory()
+  }
+
+  if ('jQuery' in window) {
+    window.jQuery.fn.imageMapResize = function $imageMapResizeF() {
+      return this.filter('map')
+        .each(scaleImageMap)
+        .end()
+    }
+  }
+})()
+    
+    </script>
+    <script>
+        var imgEl = document.getElementById("pathimg");
+        imgEl.addEventListener("mouseover",function() {
+            imageMapResize('#world');
+        })
+    </script>
+    <script src="/assets/tablesort.min.js"></script>
+    <script>
+        addEventListener("load", (event) => {
+            
+            
+            var sort = new Tablesort(document.getElementById('donotscrapebgptools-upstreamTable'));
+            var sort2 = new Tablesort(document.getElementById('donotscrapebgptools-upstreamTablePeers'));
+            
+            var sort3 = new Tablesort(document.getElementById('donotscrapebgptools-upstreamTableDowns'));
+            
+            var sort4 = new Tablesort(document.getElementById('ixpTable'));
+            
+        });
+    </script>
+    
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        setTimeout(function() {
+
+        var beaconHttp = new XMLHttpRequest();
+        var url = '/performance-beacon';
+        var params = JSON.stringify(window.performance)
+        beaconHttp.open('POST', url, true);
+        
+        
+        beaconHttp.setRequestHeader('Content-type', 'application/json');
+        beaconHttp.setRequestHeader('visit-url', "/as/15102");
+        if (navigator.connection) {
+            beaconHttp.setRequestHeader('client-side-rtt', navigator.connection.rtt);
+        } else {
+            beaconHttp.setRequestHeader('client-side-rtt', '-2');
+        }
+        beaconHttp.onreadystatechange = function() {}
+        beaconHttp.send(params);
+        },1000)
+    }, false);
+</script>
+
+</body>
+
+
+</html>

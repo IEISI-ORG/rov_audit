@@ -1,0 +1,2459 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="AZISTA GmbH (AS20751) is a 23 year old BGP network that is peering with 40 other networks and has 2 upstream carriers">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000">
+    <link rel="search" type="application/opensearchdescription+xml" title="BGP.Tools" href="https://bgp.tools/opensearch.xml">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="theme-color" content="#000000">
+    <link href="https://social.bgp.tools/@bgptools" rel="me">
+    <link rel="canonical" href="https://bgp.tools/as/20751" />
+    <title>AS20751 AZISTA GmbH - bgp.tools</title>
+    <link rel="stylesheet" type="text/css" href="/assets/main-new.css?2025-12-09-1723%20UTC">
+</head>
+
+<body>
+    <div id="container">
+        
+<div id="global-header" class="global-header-top">
+    <div class="header-sitewide">
+        <div class="global-header">
+            <div class="header-logo">
+                <a href="/" id="logo" class="content">bgp.tools</a>
+            </div>
+            <form id="search" action="/search" method="get" accept-charset="utf-8" role="search" class="top-search-header js-search-hash">
+                <div class="searchfield">
+                    <input type="search" autocomplete="off" name="q" id="site-search-text" title="Search" value="" placeholder="Start here..." autofocus="autofocus" class="js-search-focus">
+                    <button type="submit" id="search-submit" class="search-submit">Search</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div id="global-header-blob" >
+    <a id="auth-header-text" href="/login">Login</a>
+    
+</div>
+<div id="global-header-bar" >
+    <a id="auth-header-bar-text" href="/login">Login</a>
+    
+</div>
+<div class="small-clearfix"></div>
+
+        <div id="global-container">
+            
+
+
+            
+            <div class="section-tabs js-tabs">
+                <ul>
+                    
+<li class="active">
+    <h1> <a id="viewbutton-tab" href="/as/20751">View</a></h1>
+</li>
+
+<li >
+    <a id="editbutton-tab" href="/edit/as/20751">Edit</a>
+</li>
+
+
+
+
+
+                    <li style="float: right;">
+                        
+                        <img id="ws-status" width="24" height="24" src="/assets/disconnected.png" title="Not Connected To realtime data updates">
+                        
+                    </li>
+                </ul>
+            </div>
+
+            <div id="search-container">
+
+                <div class="column-full-width">
+
+                    <div class="clearfix">
+                        
+                    </div>
+                    
+                    
+
+                    <div class="network-header">
+                        
+                        
+                        <img width="334" height="250" src="/img/20751" alt="The website screenshot for https://www.azista.at/" >
+                        
+                        
+                        <p id="network-name" class="heading-xlarge">AZISTA GmbH</p>
+                        <p id="network-number">
+                            AS Number
+                            <strong id="ASNumberString" pure="20751">20751</strong>
+                            <br>
+                        
+                            Website
+                            <strong><a href="https://www.azista.at/" rel="nofollow">https://www.azista.at/</a></strong>
+                        
+                        </p>
+
+                    </div>
+
+
+                    <div class="clearfix">
+                        
+                    </div>
+
+
+                    <div class="section-tabs js-tabs">
+                        <ul>
+
+                            <li id="overview-tab-li" class="active">
+                                <a id="overview-tab" href="#asinfo">Overview</a>
+                            </li>
+                            
+                            <li id="prefix-tab-li">
+                                <a id="prefix-tab" href="#prefixes">Prefixes</a>
+                            </li>
+
+                            <li id="connectivity-tab-li">
+                                <a id="connectivity-tab" href="#connectivity">Connectivity</a>
+                            </li>
+                            
+                            <li id="whois-tab-li">
+                                <a id="whois-tab" href="#whois">Whois</a>
+                            </li>
+                        
+                            <li id="ix-tab-li">
+                                <a id="ix-tab" href="#ix">IX</a>
+                            </li>
+                        
+                        
+                        </ul>
+                    </div>
+
+<script>
+    function removeAllActiveTab() {
+        var tabs = [
+            "overview-tab-li", 
+            "prefix-tab-li", 
+            "connectivity-tab-li",
+            "whois-tab-li",
+            "ix-tab-li",
+            "issues-tab-li"
+        ];
+
+        tabs.forEach(element => {
+            var aaa = document.querySelectorAll('#'+element);
+            if(aaa.length != 0) {
+                aaa[0].classList.remove("active")
+            }
+        });
+    }
+
+    function hideAllContent() {
+        var tabs = [
+            "overview-page", 
+            "prefixes-page", 
+            "connectivity-page",
+            "whois-page",
+            "ix-page",
+            "issues-page"
+        ];
+
+        tabs.forEach(element => {
+            var aaa = document.querySelectorAll('#'+element);
+            if(aaa.length != 0) {
+                aaa[0].style.display = "none";
+            }
+        });
+        if (document.getElementById("donotscrapebgptools-prefixlist-tbody")) {
+            var prefixrows = document.getElementById("donotscrapebgptools-prefixlist-tbody").children;
+            for (var i = 0; i < prefixrows.length; i++) {
+                prefixrows[i].style = "";
+            }
+        }
+    }
+
+    var otab = document.querySelectorAll('#overview-tab');
+    otab[0].addEventListener("click", function () {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#overview-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#overview-page');
+        aaa[0].style.display = "";
+    });
+    
+
+    var ptab = document.querySelectorAll('#prefix-tab');
+    ptab[0].addEventListener("click", function () {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#prefix-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#prefixes-page');
+        aaa[0].style.display = "";
+    });
+
+    var ctab = document.querySelectorAll('#connectivity-tab');
+    ctab[0].addEventListener("click", function () {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#connectivity-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#connectivity-page');
+        aaa[0].style.display = "";
+    });
+    
+
+    var wtab = document.querySelectorAll('#whois-tab');
+    wtab[0].addEventListener("click", function () {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#whois-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#whois-page');
+        aaa[0].style.display = "";
+    });
+
+</script>
+
+
+<script>
+var wtab = document.querySelectorAll('#ix-tab');
+wtab[0].addEventListener("click", function () {
+    removeAllActiveTab()
+    hideAllContent()
+    var otab2 = document.querySelectorAll('#ix-tab-li');
+    otab2[0].classList.add("active");
+
+    var aaa = document.querySelectorAll('#ix-page');
+    aaa[0].style.display = "";
+});
+</script>
+
+
+                    
+                    <div id="overview-page">
+
+                        <div class="grid-row">
+                        
+                        <div class="column-two-thirds">
+                            <dl>
+                                <dt>Registered on</dt>
+                                <dd class="text data">
+                                    
+                                    21 Aug 2002 (23 years old)
+                                </dd>
+                            
+                            
+                            <dt>Registered to</dt>
+                            <dd class="text data">
+                                <a href="/rir-owner/at.max4eu">at.max4eu</a> (ripe)</dd>
+                                
+                            
+                            </dl>
+                        </div>
+                        
+    
+                        <dl class="column-third">
+                            <dt>Network status</dt>
+                            <dd class="text data">
+                                
+                                Active, Allocated under RIPE
+                                
+                            </dd>
+                        </dl>
+    
+                        </div>
+    
+                        <div class="grid-row">
+                            <dl class="column-two-thirds">
+                                <dt>Network type</dt>
+                                <dd class="text data">
+                                    Content
+                                </dd>
+                            </dl>
+    
+                            <dl class="column-third">
+                                <dt>Prefixes Originated</dt>
+                                <dd class="data">9 IPv4, 0 IPv6</dd>
+                            </dl>
+                        </div>
+                        <div class="grid-row">
+                            <div class="column-half">
+    
+                                <h2 class="heading-medium"><derp>Upstreams</derp></h2>
+                                <ul>
+                                    
+                                    <li>
+                                        <span id="sic0">
+                                          <a href="/as/1764">AS1764</a> - Next Layer Telecommunications
+                                        </span>
+                                    </li>
+                                    
+                                    <li>
+                                        <span id="sic0">
+                                          <a href="/as/24953">AS24953</a> - NETPLANET GmbH
+                                        </span>
+                                    </li>
+                                    
+                                </ul>
+    
+                            </div>
+    
+                            <div class="column-half">
+                                
+                                    <h2 class="heading-medium"><derp>Rankings</derp></h2>
+                                    
+                                    <li><span id="sic0">#25 for <a href="/rankings/AT?sort=cone">AS Cone  in Austria</a></span></li>
+                                    
+                                    <li><span id="sic0">#45 for <a href="/rankings/AT?sort=dns">Unique Domains  in Austria</a></span></li>
+                                    
+                                    <li><span id="sic0">#53 for <a href="/rankings/AT?sort=peering">Known Peers  in Austria</a></span></li>
+                                    
+                                    <li><span id="sic0">#57 for <a href="/rankings/AT?sort=v4">Originated IPv4 Space  in Austria</a></span></li>
+                                    
+                                
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+
+                    <div style="display: none" id="prefixes-page">
+                        
+
+                        
+                        <div style="float:left">
+                            <dt>Prefixes Originated</dt>
+                            <dd class="data">9 IPv4, 0 IPv6</dd>
+                            
+                            
+                        </div>
+                        <div style="float:right">
+                                <dt>Addresses Originated</dt>
+                                <dd class="data">35 /24's of IPv4</dd>
+                                <dd class="data">0 /48's of IPv6</dd>
+                        </div>
+
+                        <div class="clearfix">
+                            
+                        </div>
+
+
+                        <table id="fhTable" class="full-width-table ">
+                            <tbody id="donotscrapebgptools-prefixlist-tbody">
+                                <tr>
+                                    <th class="nowrap">  &nbsp;  </th>
+                                    <th class="boldpls">Prefix</th>
+                                    <th class="nowrap boldpls">Description</th>
+                                </tr>
+                                <p id="readme-if-you-are-human" style="display: none;">If you are scraping this block for the prefixes that a AS originates, please use the data dumps in https://bgp.tools/kb/api and cache them</p>
+                                
+                                <tr id="pfx-78.40.213.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="AT" src="/assets/flags/AT.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/78.40.213.0/24">78.40.213.0/24</a></td>
+                                    <td class="smallonmobile nowrap">AZISTA GmbH</td>
+                                </tr>
+                                
+                                <tr id="pfx-80.64.128.0/21">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="AT" src="/assets/flags/AT.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/80.64.128.0/21">80.64.128.0/21</a></td>
+                                    <td class="smallonmobile nowrap">AZISTA GmbH</td>
+                                </tr>
+                                
+                                <tr id="pfx-80.64.136.0/22">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="AT" src="/assets/flags/AT.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/80.64.136.0/22">80.64.136.0/22</a></td>
+                                    <td class="smallonmobile nowrap">AZISTA GmbH</td>
+                                </tr>
+                                
+                                <tr id="pfx-83.216.208.0/21">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="AT" src="/assets/flags/AT.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/83.216.208.0/21">83.216.208.0/21</a></td>
+                                    <td class="smallonmobile nowrap">AZISTA GmbH</td>
+                                </tr>
+                                
+                                <tr id="pfx-83.216.208.0/20">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="AT" src="/assets/flags/AT.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/83.216.208.0/20">83.216.208.0/20</a></td>
+                                    <td class="smallonmobile nowrap">AZISTA GmbH</td>
+                                </tr>
+                                
+                                <tr id="pfx-83.216.216.0/22">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="AT" src="/assets/flags/AT.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/83.216.216.0/22">83.216.216.0/22</a></td>
+                                    <td class="smallonmobile nowrap">AZISTA GmbH</td>
+                                </tr>
+                                
+                                <tr id="pfx-83.216.220.0/22">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="AT" src="/assets/flags/AT.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/83.216.220.0/22">83.216.220.0/22</a></td>
+                                    <td class="smallonmobile nowrap">AZISTA GmbH</td>
+                                </tr>
+                                
+                                <tr id="pfx-185.136.212.0/22">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="AT" src="/assets/flags/AT.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/185.136.212.0/22">185.136.212.0/22</a></td>
+                                    <td class="smallonmobile nowrap">AZISTA GmbH</td>
+                                </tr>
+                                
+                                <tr id="pfx-195.62.26.0/23">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="AT" src="/assets/flags/AT.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/195.62.26.0/23">195.62.26.0/23</a></td>
+                                    <td class="smallonmobile nowrap">Sascha Pollak KG</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div style="display: none" id="connectivity-page">
+
+                        <div class="grid-row">
+                            <dl class="column-third column-third-first">
+                                <dt><a href="#peers">Peers</a></dt>
+                                <dd class="data">40</dd>
+                            </dl><dl class="column-third column-third-mid">
+                                <dt><a href="#upstreams">Upstreams</a></dt>
+                                
+                                <dd class="text data">2</dd>
+                                
+                            </dl>
+                            <dl class="column-third column-third-last">
+                                <dt><a href="#downstreams">Downstreams</a></dt> <dd class="data">3 (Cone: 5)</dd>
+                            </dl>
+
+                        </div>
+
+
+                        <hr>
+                        <h3>Network Policy<img class="flag-img" src="/assets/info.png" style="padding-left: 12px;" title="This info can take up to 2 hours to fully update" alt="This info take up to 2 hours to fully update"/></h3></h3>
+                        <a style="font-size: small;" href="/kb/network-policy">Click here to learn more about what this graph means and what makes up a network policy</a>
+
+                        <select id="netpolicydropdown" class="dropdownmenu">
+                            
+                                <option value="default">Global Aggregation</option>
+                            
+
+                            
+                                
+                            
+                                <option value="09adce63d362b5543cfb38243a30dbcb0ef055949382e7520080b69c">Policy gifted_kapitsa</option>
+                            
+                                <option value="96470cea057b77b5bf8ccb6dc8e324027232510d7c4d78b0070e6d6f">Policy flamboyant_montalcini</option>
+                            
+
+                            
+
+
+                        </select>
+
+                        <script>var netgroups = {"09adce63d362b5543cfb38243a30dbcb0ef055949382e7520080b69c":["195.62.26.0/23","83.216.208.0/20","80.64.128.0/21","185.136.212.0/22","83.216.208.0/21","83.216.216.0/22","83.216.220.0/22","80.64.136.0/22"],"96470cea057b77b5bf8ccb6dc8e324027232510d7c4d78b0070e6d6f":["78.40.213.0/24"]}</script>
+
+                        <div style="text-align: center;">
+                            <img id="pathimg" usemap="#world" src="">
+                            <div id="world2"></div>
+                        </div>
+
+                        <details>
+                            <summary>Chart Display Options</summary>
+                            <noscript>This requires javascript to work</noscript>
+                            <label for="graphOptionMoreWiggle" style="display: flex;align-items: center;font-size: 20px;">
+                                <input type="checkbox" id="graphOptionMoreWiggle" name="graphOptionMoreWiggle" style="width: 64px; height: 32px;">
+                                    <p id="graphOptionMoreWiggleLabel" style="width: 200%;">Display links using non straight lines</p>
+                            </label>
+                        </details>
+
+                        <h3 style="display: none;" id="PISPBanner">Prefixes in selected policy</h3>
+                        <table id="policytable" class="full-width-table">
+                        </table>
+                        <button style="width:100%;display: none;" id="ShowFullPolicyButton" class="bigButton" onclick="dropdownPoke()">Load all prefixes in policy</button>
+
+                        <script>
+                            !function(a,b){"function"==typeof define&&define.amd?define([],b):"undefined"!=typeof module&&module.exports?module.exports=b():a.ReconnectingWebSocket=b()}(this,function(){function a(b,c,d){function l(a,b){var c=document.createEvent("CustomEvent");return c.initCustomEvent(a,!1,!1,b),c}var e={debug:!1,automaticOpen:!0,reconnectInterval:1e3,maxReconnectInterval:3e4,reconnectDecay:1.5,timeoutInterval:2e3};d||(d={});for(var f in e)this[f]="undefined"!=typeof d[f]?d[f]:e[f];this.url=b,this.reconnectAttempts=0,this.readyState=WebSocket.CONNECTING,this.protocol=null;var h,g=this,i=!1,j=!1,k=document.createElement("div");k.addEventListener("open",function(a){g.onopen(a)}),k.addEventListener("close",function(a){g.onclose(a)}),k.addEventListener("connecting",function(a){g.onconnecting(a)}),k.addEventListener("message",function(a){g.onmessage(a)}),k.addEventListener("error",function(a){g.onerror(a)}),this.addEventListener=k.addEventListener.bind(k),this.removeEventListener=k.removeEventListener.bind(k),this.dispatchEvent=k.dispatchEvent.bind(k),this.open=function(b){h=new WebSocket(g.url,c||[]),b||k.dispatchEvent(l("connecting")),(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","attempt-connect",g.url);var d=h,e=setTimeout(function(){(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","connection-timeout",g.url),j=!0,d.close(),j=!1},g.timeoutInterval);h.onopen=function(){clearTimeout(e),(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","onopen",g.url),g.protocol=h.protocol,g.readyState=WebSocket.OPEN,g.reconnectAttempts=0;var d=l("open");d.isReconnect=b,b=!1,k.dispatchEvent(d)},h.onclose=function(c){if(clearTimeout(e),h=null,i)g.readyState=WebSocket.CLOSED,k.dispatchEvent(l("close"));else{g.readyState=WebSocket.CONNECTING;var d=l("connecting");d.code=c.code,d.reason=c.reason,d.wasClean=c.wasClean,k.dispatchEvent(d),b||j||((g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","onclose",g.url),k.dispatchEvent(l("close")));var e=g.reconnectInterval*Math.pow(g.reconnectDecay,g.reconnectAttempts);setTimeout(function(){g.reconnectAttempts++,g.open(!0)},e>g.maxReconnectInterval?g.maxReconnectInterval:e)}},h.onmessage=function(b){(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","onmessage",g.url,b.data);var c=l("message");c.data=b.data,k.dispatchEvent(c)},h.onerror=function(b){(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","onerror",g.url,b),k.dispatchEvent(l("error"))}},1==this.automaticOpen&&this.open(!1),this.send=function(b){if(h)return(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","send",g.url,b),h.send(b);throw"INVALID_STATE_ERR : Pausing to reconnect websocket"},this.close=function(a,b){"undefined"==typeof a&&(a=1e3),i=!0,h&&h.close(a,b)},this.refresh=function(){h&&h.close()}}return a.prototype.onopen=function(){},a.prototype.onclose=function(){},a.prototype.onconnecting=function(){},a.prototype.onmessage=function(){},a.prototype.onerror=function(){},a.debugAll=!1,a.CONNECTING=WebSocket.CONNECTING,a.OPEN=WebSocket.OPEN,a.CLOSING=WebSocket.CLOSING,a.CLOSED=WebSocket.CLOSED,a});
+                        </script>
+                        
+                        <script>
+                            var prefixinfo = [{"PrefixString":"78.40.213.0/24","WhoisName":"AZISTA GmbH","WhoisCountry":"AT"},{"PrefixString":"80.64.128.0/21","WhoisName":"AZISTA GmbH","WhoisCountry":"AT"},{"PrefixString":"80.64.136.0/22","WhoisName":"AZISTA GmbH","WhoisCountry":"AT"},{"PrefixString":"83.216.208.0/21","WhoisName":"AZISTA GmbH","WhoisCountry":"AT"},{"PrefixString":"83.216.208.0/20","WhoisName":"AZISTA GmbH","WhoisCountry":"AT"},{"PrefixString":"83.216.216.0/22","WhoisName":"AZISTA GmbH","WhoisCountry":"AT"},{"PrefixString":"83.216.220.0/22","WhoisName":"AZISTA GmbH","WhoisCountry":"AT"},{"PrefixString":"185.136.212.0/22","WhoisName":"AZISTA GmbH","WhoisCountry":"AT"},{"PrefixString":"195.62.26.0/23","WhoisName":"Sascha Pollak KG","WhoisCountry":"AT"}]
+                            var asn =  20751 
+
+                            var pfxExtraString = "";
+
+                            function saveGraphOptionsToLocalStorage() {
+                                localStorage.setItem("pfx-chart-options:wiggle", document.getElementById("graphOptionMoreWiggle").checked);
+                            }
+
+                            function loadGraphOptionsToLocalStorage() {
+                                document.getElementById("graphOptionMoreWiggle").checked = localStorage.getItem("pfx-chart-options:wiggle") == "true";
+                                pfxExtraString= "";
+                                if (document.getElementById("graphOptionMoreWiggle").checked) {
+                                    pfxExtraString = pfxExtraString + "&wiggly";
+                                }
+                            }
+                            loadGraphOptionsToLocalStorage();
+
+                            function graphOptionsChanged() {
+                                saveGraphOptionsToLocalStorage();
+                                handleImageChange();
+                            }
+                            document.getElementById("graphOptionMoreWiggle").addEventListener("click", graphOptionsChanged)
+
+
+                            function handleImageChange() {
+                                loadGraphOptionsToLocalStorage();
+                                
+                                document.getElementById("pathimg").src=("/pathimg/"+asn+ "-" + document.getElementById("netpolicydropdown").value +"?"+pfxExtraString);
+                                var request = new XMLHttpRequest();
+                                request.open('GET', "/pathimg/"+asn+ "-" + document.getElementById("netpolicydropdown").value + "?map=true" + pfxExtraString, true);
+
+                                request.onload = function() {
+                                    if (this.status >= 200 && this.status < 400) {
+                                        
+                                        
+                                        document.getElementById("world2").innerHTML = this.response;
+                                        setTimeout(function(){
+                                            imageMapResize('#world');
+                                        },1000)
+                                    }
+                                };
+                                request.send();
+                                buildPrefixTable();
+                            } 
+
+                            function encodeHTML(s) {
+                                return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
+                            }
+
+                            function dropdownPoke(){
+                                InteractedWithPolicyTableYet=true;
+                                handleImageChange();
+                            }
+
+                            var InteractedWithPolicyTableYet = false;
+                            var OverloadPolicySize = 0;
+                            function buildPrefixTable() {
+                                var policy = document.getElementById("netpolicydropdown").value;
+                                
+                                var cidrs = netgroups[policy];
+                                var ihtml = "<tbody> <tr> <th class=\"nowrap\">  -  </th> <th>Prefix</th> <th class=\"nowrap\">Description</th> </tr>";
+
+                                
+                                var aaa = document.querySelectorAll('#PISPBanner');
+                                var bbb = document.querySelectorAll('#policytable');
+                                var n = 0
+                                if (cidrs) {
+                                    aaa[0].style.display = "";
+                                    bbb[0].style.display = "";
+                                    cidrs.forEach(cidr => {
+                                        var obj = {};
+                                        var dont =false;
+                                        n++;
+                                        
+                                        if (!InteractedWithPolicyTableYet) {
+                                            if (n == 5) {
+                                                dont = true;
+                                            } else if (n > 5) {
+                                                dont = true;
+                                            }
+                                        }
+                                        
+                                        if (!dont) {
+                                            prefixinfo.forEach(el => {
+                                                if(el.PrefixString == cidr) {
+                                                    
+                                                        ihtml += "<tr><td class=\"nowrap ns\"><img class=\"flag-img\" src=\"/assets/flags/"+el.WhoisCountry+".png\" title=\""+el.WhoisCountry+"\"></td>"
+                                                        ihtml += "<td><a href=\"/prefix/"+el.PrefixString+"\">"+el.PrefixString+"</a></td>"
+                                                        ihtml += "<td class=\"nowrap\">"+encodeHTML(el.WhoisName)+"</td></tr>"
+                                                }
+                                            });
+                                        } else {
+                                            OverloadPolicySize++;
+                                        }
+                                    });
+                                    document.getElementById("policytable").innerHTML = ihtml
+                                    var PolButton = document.querySelectorAll('#ShowFullPolicyButton');
+                                    if (!InteractedWithPolicyTableYet && OverloadPolicySize!=0) {
+                                        PolButton[0].style="width:100%";
+                                        PolButton[0].innerHTML = "Load all "+OverloadPolicySize+" prefixes in policy"
+                                    } else {
+                                        PolButton[0].style="display:none;";
+                                    }
+                                    
+                                } else {
+                                    aaa[0].style.display = "none";
+                                    bbb[0].style.display = "none";
+                                }
+                            }
+
+
+                            var pathdropdown = document.querySelectorAll('#netpolicydropdown');
+                            pathdropdown[0].addEventListener("change",dropdownPoke)
+                            handleImageChange()
+                            buildPrefixTable()
+
+                            document.addEventListener("load", function(){
+                                
+                                handleImageChange()
+                            });
+
+                            function uuidv4() {
+                                return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+                                    var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+                                    return v.toString(16);
+                                });
+                            }
+
+                            
+                            let realTimeSocket = new ReconnectingWebSocket("wss://bgp.tools/ws/rt-asn?prefix=AS20751" + "&magic=" + encodeURIComponent("ECD25WEV6KW7XBRYHX3HOMQNZ4CIZRZUXGEKH3WCIABKIJ5O3IKQ===="));
+                            
+                            realTimeSocket.onmessage = function(event) {
+                                console.log(`[message] Data received from server: ${event.data}`);
+                                if (event.data == "Running.") {
+                                    document.getElementById("ws-status").src = "/assets/connected.png";
+                                    document.getElementById("ws-status").title = "Connected to realtime data";
+                                } else if (event.data == "STOP-CONNECTING") {
+                                    document.getElementById("ws-status").src = disconectedIcon;
+                                    document.getElementById("ws-status").title = "Not connected to realtime data";
+                                    realTimeSocket.maxReconnectAttempts = 1;
+                                    realTimeSocket.close()
+                                } else {
+                                    var obj = JSON.parse(event.data);
+                                    var elm = document.getElementById("pfx-"+obj.Prefix);
+                                    if (!elm && obj.Vis > 6) {
+                                        var tblist = document.getElementById("donotscrapebgptools-prefixlist-tbody");
+                                        var node = document.createElement("tr");                 
+                                        node.outerHTML = '<tr id="pfx-'+obj.Prefix+'"><td class="nowrap"><img class="flag-img" src="/assets/flags/'+obj.Whois.WhoisCountry+'.png" title="'+obj.Whois.WhoisCountry+'"></td><td><a href="/prefix/'+obj.Prefix+'">'+obj.Prefix+'</a></td><td class="smallonmobile nowrap">'+obj.Whois.WhoisName+'</td></tr>';
+                                        tblist.appendChild(node);                              
+                                    }
+                                    if (!elm) {
+                                        elm = document.getElementById("pfx-"+obj.Prefix);
+                                    }
+                                    
+                                    if (obj.Vis > 70) {
+                                        if (elm.style) {
+                                            var es = elm.style;
+                                            if (es.animation.includes("pulse1b")) {
+                                                elm.style = "animation: pulse2b 1s 1;";
+                                            } else if (es.animation.includes("pulse2b")) {
+                                                elm.style = "animation: pulse1b 1s 1;";
+                                            } else {
+                                                elm.style = "animation: pulse1b 1s 1;";
+                                            }
+                                        }
+                                    } else if (obj.Vis < 5) {
+                                        
+                                        var elm = document.getElementById("pfx-"+obj.Prefix);
+                                        if (elm) {
+                                            elm.parentNode.removeChild(elm);
+                                        }
+                                    } else {
+                                        if (elm.style) {
+                                            var es = elm.style;
+                                            if (es.animation.includes("pulse1r")) {
+                                                elm.style = "animation: pulse2r 1s 1;";
+                                            } else if (es.animation.includes("pulse2r")) {
+                                                elm.style = "animation: pulse1r 1s 1;";
+                                            } else {
+                                                elm.style = "animation: pulse1r 1s 1;";
+                                            }
+                                        }
+                                    }
+                                }
+                            };
+                            var disconectedIcon = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAAZlBMVEX/ewBZWVn/ewf/ew5fWljudiP8egp6XVT6eRHodSmVYU6hZEzObjrldCv3eRZ/XlNjWliHX1KrZkngci71eBl1XFXCa0CKYFHydx18XlSQYE+lZUq0aEbJbT3SbzhvXFaLYFG8akLYdYVFAAABQElEQVRIx5XV25KDIAwGYIKASLutqOtZ277/S26xK4ozJea/qRdfajATZaRkd6B6oPoL1d9QphUn+WvXmGF8TfN8yvNrDj6nvNj5Hu8n8HCh9ONiON5PEKuQx55DmFTHC1R9uMOjYkhFERbkEikofw8FGe5t0FWJ+kLvz5H+t8RdGD9k8TeebBXpzwIZT955XyVBtHHeXYzeJy5fhydtoZffZvUMSfvxT4BOeI/G/b9paxH1at8XQF8xNcV8aaQvHQBMhY/XttsdYp5nah3XdvIqui61Cjy+jqLwXp1cx9XLQZ5cR/vx1p8cez2IWrlxYY/T9bNVyCfmdQdbxNgs441FNRAEHS83oe9ahmTw1p88nhHCiAkpeIUeX5eJ6NlM9Gwm+uxO9/3F2PSR597jn1+udCWzUp7150P1jOoZ1f8BGPARG85JosIAAAAASUVORK5CYII=";
+                            realTimeSocket.onerror = function(error) {
+                                document.getElementById("ws-status").src = disconectedIcon;
+                                document.getElementById("ws-status").title = "Not connected to realtime data";
+
+                                console.log(`[error] ${error.message}`);
+                            };
+                            realTimeSocket.onclose = function(error) {
+                                document.getElementById("ws-status").src = disconectedIcon;
+                                document.getElementById("ws-status").title = "Not connected to realtime data";
+
+                                console.log(`[error] ${error.message}`);
+                            };
+                        </script>
+
+<div class="superclearfix">
+    
+</div>
+
+                        <hr>
+                        <a style="font-size: small;" href="/kb/what-is-a-upstream">How are upstreams and downstreams calculated?</a>
+                        <h3 id="upstreams">Upstreams<img class="flag-img" src="/assets/lightning.png" style="padding-left: 12px;" title="This information was fetched live at page load time" alt="This information was fetched live at page load time"/></h3>
+
+
+                        <table id="donotscrapebgptools-upstreamTable" class="full-width-table">
+                            <thead class="sortable">
+                                <tr>
+                                    <th class="nowrap boldpls">  &nbsp;  </th>
+                                    <th data-sort-method='number' class="boldpls">ASN</th>
+                                    <th class="nowrap boldpls">Description</th>
+                                    <th class="nowrap boldpls">IPv4</th>
+                                    <th class="nowrap boldpls">IPv6</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                <tr>
+                                    <td data-sort='AT' class="nowrap ns"><img class="flag-img" src="/assets/flags/AT.png" title="AT">
+                                        
+                                        </td>
+                                    <td data-sort='1764'><a href="/as/1764">AS1764</a></td>
+                                    <td class="smallonmobile nowrap">Next Layer Telecommunications</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='AT' class="nowrap ns"><img class="flag-img" src="/assets/flags/AT.png" title="AT">
+                                        
+                                        </td>
+                                    <td data-sort='24953'><a href="/as/24953">AS24953</a></td>
+                                    <td class="smallonmobile nowrap">NETPLANET GmbH</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+
+                        <hr>
+                        <h3 id="peers">Peers<img class="flag-img" src="/assets/lightning.png" style="padding-left: 12px;" title="This information was fetched live at page load time" alt="This information was fetched live at page load time"/></h3>
+
+
+
+                        <table id="donotscrapebgptools-upstreamTablePeers" class="full-width-table">
+                            <thead class="sortable">
+                                <tr>
+                                    <th class="nowrap boldpls">  &nbsp;  </th>
+                                    <th data-sort-method='number' class="boldpls">ASN</th>
+                                    <th class="nowrap boldpls">Description</th>
+                                    <th class="nowrap boldpls">IPv4</th>
+                                    <th class="nowrap boldpls">IPv6</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                <tr>
+                                    <td data-sort='AT' class="nowrap ns"><img class="flag-img" src="/assets/flags/AT.png" title="AT"></td>
+                                    <td data-sort='1764'><a href="/as/1764">AS1764</a></td>
+                                    <td class="smallonmobile nowrap">Next Layer Telecommunications</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='AT' class="nowrap ns"><img class="flag-img" src="/assets/flags/AT.png" title="AT"></td>
+                                    <td data-sort='12971'><a href="/as/12971">AS12971</a></td>
+                                    <td class="smallonmobile nowrap">Internet Viennaweb Service GmbH</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='AT' class="nowrap ns"><img class="flag-img" src="/assets/flags/AT.png" title="AT"></td>
+                                    <td data-sort='24953'><a href="/as/24953">AS24953</a></td>
+                                    <td class="smallonmobile nowrap">NETPLANET GmbH</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='6939'><a href="/as/6939">AS6939</a></td>
+                                    <td class="smallonmobile nowrap">Hurricane Electric LLC</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='AT' class="nowrap ns"><img class="flag-img" src="/assets/flags/AT.png" title="AT"></td>
+                                    <td data-sort='47592'><a href="/as/47592">AS47592</a></td>
+                                    <td class="smallonmobile nowrap">AZISTA GmbH</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='DE' class="nowrap ns"><img class="flag-img" src="/assets/flags/DE.png" title="DE"></td>
+                                    <td data-sort='5405'><a href="/as/5405">AS5405</a></td>
+                                    <td class="smallonmobile nowrap">Inter.link GmbH</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='AT' class="nowrap ns"><img class="flag-img" src="/assets/flags/AT.png" title="AT"></td>
+                                    <td data-sort='25101'><a href="/as/25101">AS25101</a></td>
+                                    <td class="smallonmobile nowrap">AZISTA GmbH</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='RO' class="nowrap ns"><img class="flag-img" src="/assets/flags/RO.png" title="RO"></td>
+                                    <td data-sort='6204'><a href="/as/6204">AS6204</a></td>
+                                    <td class="smallonmobile nowrap">INTERKVM HOST SRL</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='DE' class="nowrap ns"><img class="flag-img" src="/assets/flags/DE.png" title="DE"></td>
+                                    <td data-sort='24940'><a href="/as/24940">AS24940</a></td>
+                                    <td class="smallonmobile nowrap">Hetzner Online GmbH</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CH' class="nowrap ns"><img class="flag-img" src="/assets/flags/CH.png" title="CH"></td>
+                                    <td data-sort='3303'><a href="/as/3303">AS3303</a></td>
+                                    <td class="smallonmobile nowrap">Swisscom (Schweiz) AG</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='DE' class="nowrap ns"><img class="flag-img" src="/assets/flags/DE.png" title="DE"></td>
+                                    <td data-sort='50629'><a href="/as/50629">AS50629</a></td>
+                                    <td class="smallonmobile nowrap">LWLcom GmbH</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='AT' class="nowrap ns"><img class="flag-img" src="/assets/flags/AT.png" title="AT"></td>
+                                    <td data-sort='47147'><a href="/as/47147">AS47147</a></td>
+                                    <td class="smallonmobile nowrap">Anexia Cloud Solutions GmbH</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+                                    <td data-sort='22356'><a href="/as/22356">AS22356</a></td>
+                                    <td class="smallonmobile nowrap">Durand do Brasil Ltda</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='FR' class="nowrap ns"><img class="flag-img" src="/assets/flags/FR.png" title="FR"></td>
+                                    <td data-sort='8218'><a href="/as/8218">AS8218</a></td>
+                                    <td class="smallonmobile nowrap">Zayo Europe</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+                                    <td data-sort='14840'><a href="/as/14840">AS14840</a></td>
+                                    <td class="smallonmobile nowrap">BR.DIGITAL </td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='DE' class="nowrap ns"><img class="flag-img" src="/assets/flags/DE.png" title="DE"></td>
+                                    <td data-sort='21385'><a href="/as/21385">AS21385</a></td>
+                                    <td class="smallonmobile nowrap">Trusted Network GmbH</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CH' class="nowrap ns"><img class="flag-img" src="/assets/flags/CH.png" title="CH"></td>
+                                    <td data-sort='13030'><a href="/as/13030">AS13030</a></td>
+                                    <td class="smallonmobile nowrap">Init7 (Switzerland) Ltd.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='NL' class="nowrap ns"><img class="flag-img" src="/assets/flags/NL.png" title="NL"></td>
+                                    <td data-sort='49544'><a href="/as/49544">AS49544</a></td>
+                                    <td class="smallonmobile nowrap">i3D.net B.V</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='IN' class="nowrap ns"><img class="flag-img" src="/assets/flags/IN.png" title="IN"></td>
+                                    <td data-sort='9498'><a href="/as/9498">AS9498</a></td>
+                                    <td class="smallonmobile nowrap">Bharti Airtel Ltd.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='DE' class="nowrap ns"><img class="flag-img" src="/assets/flags/DE.png" title="DE"></td>
+                                    <td data-sort='13237'><a href="/as/13237">AS13237</a></td>
+                                    <td class="smallonmobile nowrap">euNetworks GmbH</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='AT' class="nowrap ns"><img class="flag-img" src="/assets/flags/AT.png" title="AT"></td>
+                                    <td data-sort='47692'><a href="/as/47692">AS47692</a></td>
+                                    <td class="smallonmobile nowrap">Nessus GmbH</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='AT' class="nowrap ns"><img class="flag-img" src="/assets/flags/AT.png" title="AT"></td>
+                                    <td data-sort='1853'><a href="/as/1853">AS1853</a></td>
+                                    <td class="smallonmobile nowrap">ACONET</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='AT' class="nowrap ns"><img class="flag-img" src="/assets/flags/AT.png" title="AT"></td>
+                                    <td data-sort='8447'><a href="/as/8447">AS8447</a></td>
+                                    <td class="smallonmobile nowrap">A1 Telekom Austria AG</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='AT' class="nowrap ns"><img class="flag-img" src="/assets/flags/AT.png" title="AT"></td>
+                                    <td data-sort='8540'><a href="/as/8540">AS8540</a></td>
+                                    <td class="smallonmobile nowrap">AMA netwoRX GmbH</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='AT' class="nowrap ns"><img class="flag-img" src="/assets/flags/AT.png" title="AT"></td>
+                                    <td data-sort='35492'><a href="/as/35492">AS35492</a></td>
+                                    <td class="smallonmobile nowrap">FunkFeuer Wien - Verein zur Foerderung freier Netze</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='AT' class="nowrap ns"><img class="flag-img" src="/assets/flags/AT.png" title="AT"></td>
+                                    <td data-sort='40994'><a href="/as/40994">AS40994</a></td>
+                                    <td class="smallonmobile nowrap">Alwyzon (Hohl IT)</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='AT' class="nowrap ns"><img class="flag-img" src="/assets/flags/AT.png" title="AT"></td>
+                                    <td data-sort='48362'><a href="/as/48362">AS48362</a></td>
+                                    <td class="smallonmobile nowrap">Stadtwerke Feldkirch</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CH' class="nowrap ns"><img class="flag-img" src="/assets/flags/CH.png" title="CH"></td>
+                                    <td data-sort='15576'><a href="/as/15576">AS15576</a></td>
+                                    <td class="smallonmobile nowrap">NTS workspace AG</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+                                    <td data-sort='53062'><a href="/as/53062">AS53062</a></td>
+                                    <td class="smallonmobile nowrap">ALT | GRUPO BRASIL TECPAR</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='32590'><a href="/as/32590">AS32590</a></td>
+                                    <td class="smallonmobile nowrap">Valve Corporation</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='SI' class="nowrap ns"><img class="flag-img" src="/assets/flags/SI.png" title="SI"></td>
+                                    <td data-sort='3212'><a href="/as/3212">AS3212</a></td>
+                                    <td class="smallonmobile nowrap">Telemach Slovenija d.o.o.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='SI' class="nowrap ns"><img class="flag-img" src="/assets/flags/SI.png" title="SI"></td>
+                                    <td data-sort='34779'><a href="/as/34779">AS34779</a></td>
+                                    <td class="smallonmobile nowrap">T-2, d.o.o.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='AT' class="nowrap ns"><img class="flag-img" src="/assets/flags/AT.png" title="AT"></td>
+                                    <td data-sort='21013'><a href="/as/21013">AS21013</a></td>
+                                    <td class="smallonmobile nowrap">eww ag</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='AT' class="nowrap ns"><img class="flag-img" src="/assets/flags/AT.png" title="AT"></td>
+                                    <td data-sort='3330'><a href="/as/3330">AS3330</a></td>
+                                    <td class="smallonmobile nowrap">eww ag</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='AT' class="nowrap ns"><img class="flag-img" src="/assets/flags/AT.png" title="AT"></td>
+                                    <td data-sort='215120'><a href="/as/215120">AS215120</a></td>
+                                    <td class="smallonmobile nowrap">Evolus IT Solutions GmbH</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='DE' class="nowrap ns"><img class="flag-img" src="/assets/flags/DE.png" title="DE"></td>
+                                    <td data-sort='3209'><a href="/as/3209">AS3209</a></td>
+                                    <td class="smallonmobile nowrap">Vodafone GmbH</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+                                    <td data-sort='61599'><a href="/as/61599">AS61599</a></td>
+                                    <td class="smallonmobile nowrap">EAI TELECOMUNICACOES LTDA</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='RO' class="nowrap ns"><img class="flag-img" src="/assets/flags/RO.png" title="RO"></td>
+                                    <td data-sort='6663'><a href="/as/6663">AS6663</a></td>
+                                    <td class="smallonmobile nowrap">Türk Telekom International</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CZ' class="nowrap ns"><img class="flag-img" src="/assets/flags/CZ.png" title="CZ"></td>
+                                    <td data-sort='29208'><a href="/as/29208">AS29208</a></td>
+                                    <td class="smallonmobile nowrap">Quantcom, a.s.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='RO' class="nowrap ns"><img class="flag-img" src="/assets/flags/RO.png" title="RO"></td>
+                                    <td data-sort='9009'><a href="/as/9009">AS9009</a></td>
+                                    <td class="smallonmobile nowrap">M247 Europe SRL</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+
+
+
+                        <hr>
+                        <h3 id="downstreams">Downstreams<img class="flag-img" src="/assets/lightning.png" style="padding-left: 12px;" title="This information was fetched live at page load time" alt="This information was fetched live at page load time"/></h3>
+                        <table id="donotscrapebgptools-upstreamTableDowns" class="full-width-table">
+                            <thead class="sortable">
+                                
+                                <tr>
+                                    <th class="nowrap boldpls">  &nbsp;  </th>
+                                    <th data-sort-method='number'  class="boldpls">ASN</th>
+                                    <th class="nowrap boldpls">Description</th>
+                                    <th class="nowrap boldpls">IPv4</th>
+                                    <th class="nowrap boldpls">IPv6</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                <tr>
+                                    <td data-sort='AT' class="nowrap ns"><img class="flag-img" src="/assets/flags/AT.png" title="AT">
+                                        
+                                        </td>
+                                    <td data-sort='12971'><a href="/as/12971">AS12971</a></td>
+                                    <td class="smallonmobile nowrap">Internet Viennaweb Service GmbH</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='AT' class="nowrap ns"><img class="flag-img" src="/assets/flags/AT.png" title="AT">
+                                        
+                                        </td>
+                                    <td data-sort='47592'><a href="/as/47592">AS47592</a></td>
+                                    <td class="smallonmobile nowrap">AZISTA GmbH</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='AT' class="nowrap ns"><img class="flag-img" src="/assets/flags/AT.png" title="AT">
+                                        
+                                        </td>
+                                    <td data-sort='25101'><a href="/as/25101">AS25101</a></td>
+                                    <td class="smallonmobile nowrap">AZISTA GmbH</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+
+                    </div>
+
+                    <div style="display: none" id="whois-page">
+                        
+                        
+                        <pre style="white-space: pre-wrap;">aut-num:        <a href="/AS20751">AS20751</a>
+as-name:        ASN-AZISTA
+org:            <a href="https://apps.db.ripe.net/db-web-ui/query?searchtext=ORG-FRJ1-RIPE">ORG-FRJ1-RIPE</a>
+descr:          AZISTA GmbH
+descr:          AUSTRIA
+remarks:        ============================================================
+remarks:        Upstreams/Partners/Customers/Peerings/Crosslinks
+remarks:        ============================================================
+remarks:        -------------------------------------------------
+remarks:        - Upstreams/Transit -
+remarks:        -------------------------------------------------
+remarks:        # transit: Nextlayer
+import:         from <a href="/AS1764">AS1764</a> action pref=102; accept ANY
+export:         to <a href="/AS1764">AS1764</a> announce <a href="/as-set/AS-AZISTA">AS-AZISTA</a>
+mp-import:      afi ipv6.unicast from <a href="/AS1764">AS1764</a> accept ANY
+mp-export:      afi ipv6.unicast to <a href="/AS1764">AS1764</a> announce <a href="/as-set/AS-AZISTA-V6">AS-AZISTA-V6</a>
+remarks:        # transit: Netplanet
+import:         from <a href="/AS24953">AS24953</a> action pref=100; accept ANY
+export:         to <a href="/AS24953">AS24953</a> announce <a href="/as-set/AS-AZISTA">AS-AZISTA</a>
+mp-import:      afi ipv6.unicast from <a href="/AS24953">AS24953</a> accept ANY
+mp-export:      afi ipv6.unicast to <a href="/AS24953">AS24953</a> announce <a href="/as-set/AS-AZISTA-V6">AS-AZISTA-V6</a>
+remarks:        # transit: kapper.net
+import:         from <a href="/AS48943">AS48943</a> action pref=90; accept ANY
+export:         to <a href="/AS48943">AS48943</a> announce <a href="/as-set/AS-AZISTA">AS-AZISTA</a>
+mp-import:      afi ipv6.unicast from <a href="/AS48943">AS48943</a> accept ANY
+mp-export:      afi ipv6.unicast to <a href="/AS48943">AS48943</a> announce <a href="/as-set/AS-AZISTA-V6">AS-AZISTA-V6</a>
+remarks:        -------------------------------------------------
+remarks:        - Interconnects/Duplex/Partners -
+remarks:        -------------------------------------------------
+remarks:        # interconnect: euinternet.net (AZISTA)
+import:         from <a href="/AS25101">AS25101</a> action pref=100; accept <a href="/as-set/AS-EUINTERNET">AS-EUINTERNET</a>
+export:         to <a href="/AS25101">AS25101</a> announce ANY
+remarks:        # interconnect: ACN Services (AZISTA)
+import:         from <a href="/AS47592">AS47592</a> action pref=100; accept <a href="/AS47592">AS47592</a>
+export:         to <a href="/AS47592">AS47592</a> announce ANY
+remarks:        # peering interconnect: Trusted Network (TNIB)
+import:         from <a href="/AS21385">AS21385</a> action pref=100; accept ANY
+export:         to <a href="/AS21385">AS21385</a> announce ANY
+mp-import:      afi ipv6.unicast from <a href="/AS21385">AS21385</a> accept ANY
+mp-export:      afi ipv6.unicast to <a href="/AS21385">AS21385</a> announce ANY
+remarks:        -------------------------------------------------
+remarks:        - Downstreams -
+remarks:        -------------------------------------------------
+remarks:        # customer: BIOSNET
+import:         from <a href="/AS12971">AS12971</a> action pref=100; accept <a href="/as-set/AS-BIOSNET">AS-BIOSNET</a>
+export:         to <a href="/AS12971">AS12971</a> announce ANY
+remarks:        # customer: Huemer Data Center Ges.m.b.H
+import:         from <a href="/AS199205">AS199205</a> action pref=100; accept <a href="/as-set/AS-HUEMER">AS-HUEMER</a>
+export:         to <a href="/AS199205">AS199205</a> announce ANY
+remarks:        -------------------------------------------------
+remarks:
+remarks:        ============================================================
+remarks:        VIX Peerings / Vienna-Austria
+remarks:        ============================================================
+remarks:        # peering: Packet Clearing House
+import:         from <a href="/AS42">AS42</a> action pref=100; accept <a href="/as-set/AS-PCH">AS-PCH</a>
+export:         to <a href="/AS42">AS42</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: Service.ACO.net
+import:         from <a href="/AS1120">AS1120</a> action pref=100; accept <a href="/as-set/AS-ACOSERV">AS-ACOSERV</a>
+export:         to <a href="/AS1120">AS1120</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: ACO.net
+import:         from <a href="/AS1853">AS1853</a> action pref=100; accept <a href="/as-set/AS-ACONETTOVIX">AS-ACONETTOVIX</a>
+export:         to <a href="/AS1853">AS1853</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: RoEduNet
+import:         from <a href="/AS2614">AS2614</a> action pref=100; accept <a href="/as-set/AS-ROEDUNET">AS-ROEDUNET</a>
+export:         to   <a href="/AS2614">AS2614</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: Aut O Mattic Ltd
+import:         from <a href="/AS2635">AS2635</a> action pref=100; accept <a href="/as-set/AS-AUTOMATTIC">AS-AUTOMATTIC</a>
+export:         to <a href="/AS2635">AS2635</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: emea.ATT.com (AT&amp;T)
+import:         from <a href="/AS2686">AS2686</a> action pref=100; accept <a href="/as-set/AS-IGNEMEA">AS-IGNEMEA</a>
+export:         to <a href="/AS2686">AS2686</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: Netflix Streaming Services
+import:         from <a href="/AS2906">AS2906</a> action pref=100; accept <a href="/as-set/AS-NFLX">AS-NFLX</a>
+export:         to <a href="/AS2906">AS2906</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: Vodafone D2 GmbH
+import:         from <a href="/AS3209">AS3209</a> action pref=100; accept <a href="/as-set/AS-ARCORGLOBAL">AS-ARCORGLOBAL</a>
+export:         to <a href="/AS3209">AS3209</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: TELEMACH UG d.o.o
+import:         from <a href="/AS3212">AS3212</a> action pref=100; accept <a href="/as-set/AS-TRIERA">AS-TRIERA</a>
+export:         to <a href="/AS3212">AS3212</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: Voxility SRL
+import:         from <a href="/AS3223">AS3223</a> action pref=100; accept <a href="/as-set/AS-VOXILITY-SET">AS-VOXILITY-SET</a>
+export:         to <a href="/AS3223">AS3223</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: Swisscom AG
+import:         from <a href="/AS3303">AS3303</a> accept <a href="/as-set/AS-SWCMGLOBAL">AS-SWCMGLOBAL</a>
+export:         to   <a href="/AS3303">AS3303</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: EWW AG (Profinet/ex OEBBTEL)
+import:         from <a href="/AS3330">AS3330</a> action pref=100; accept <a href="/as-set/AS-PROFINET">AS-PROFINET</a>
+export:         to <a href="/AS3330">AS3330</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: Packet Clearing House (PCH.net)
+import:         from <a href="/AS3856">AS3856</a> action pref=100; accept <a href="/as-set/AS-PCH">AS-PCH</a>
+export:         to <a href="/AS3856">AS3856</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: APA.at
+import:         from <a href="/AS5403">AS5403</a> action pref=100; accept <a href="/as-set/AS-APA">AS-APA</a>
+export:         to <a href="/AS5403">AS5403</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: Inter.link
+import:         from <a href="/AS5405">AS5405</a> action pref=100; accept <a href="/as-set/AS-INTERDOTLINK">AS-INTERDOTLINK</a>
+export:         to <a href="/AS5405">AS5405</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: BENESTRA, s. r. o.
+import:         from <a href="/AS5578">AS5578</a> action pref=100; accept <a href="/as-set/AS-BENESTRA">AS-BENESTRA</a>
+export:         to <a href="/AS5578">AS5578</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: GTS TELECOM SRL
+import:         from <a href="/AS5606">AS5606</a> action pref=100; accept <a href="/as-set/AS-GTSRO">AS-GTSRO</a>
+export:         to   <a href="/AS5606">AS5606</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: INTERKVM HOST SRL
+import:         from <a href="/AS6204">AS6204</a> action pref=100; accept <a href="/as-set/AS-INTERKVM">AS-INTERKVM</a>
+export:         to   <a href="/AS6204">AS6204</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: Pantel International
+import:         from <a href="/AS6663">AS6663</a> action pref=100; accept <a href="/as-set/AS-PANET">AS-PANET</a>
+export:         to <a href="/AS6663">AS6663</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: MagWien.gv.at
+import:         from <a href="/AS6720">AS6720</a> action pref=100; accept <a href="/as-set/AS-MAGWIEN">AS-MAGWIEN</a> <a href="/AS16314">AS16314</a>
+export:         to <a href="/AS6720">AS6720</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: net4you.at
+import:         from <a href="/AS6798">AS6798</a> action pref=100; accept <a href="/as-set/AS-NET4YOU">AS-NET4YOU</a>
+export:         to <a href="/AS6798">AS6798</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: Hurricane Electric he.net
+import:         from <a href="/AS6939">AS6939</a> action pref=100; accept <a href="/as-set/AS-HURRICANE">AS-HURRICANE</a>
+export:         to <a href="/AS6939">AS6939</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: PT. Telkom Indonesia International (TELIN)
+import:         from <a href="/AS7713">AS7713</a> action pref=100; accept <a href="/as-set/AS7713:AS-TELKOM-TRANSIT">AS7713:AS-TELKOM-TRANSIT</a>
+export:         to <a href="/AS7713">AS7713</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: Microsoft Corporation
+import:         from <a href="/AS8075">AS8075</a> action pref=100; accept <a href="/as-set/AS-MICROSOFT">AS-MICROSOFT</a>
+export:         to <a href="/AS8075">AS8075</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: Zayo France
+import:         from <a href="/AS8218">AS8218</a> action pref=100; accept <a href="/as-set/AS8218:AS-CUSTOMERS">AS8218:AS-CUSTOMERS</a>
+export:         to <a href="/AS8218">AS8218</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: Colt
+import:         from <a href="/AS8220">AS8220</a> action pref=100; accept <a href="/as-set/AS-COLTAT">AS-COLTAT</a>
+export:         to <a href="/AS8220">AS8220</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: Video-Broadcast.at (ex Cybertron)
+import:         from <a href="/AS8245">AS8245</a> action pref=100; accept <a href="/as-set/AS-VB-PEERS">AS-VB-PEERS</a> <a href="/as-set/AS-VB">AS-VB</a>
+export:         to <a href="/AS8245">AS8245</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: Zattoo AG
+import:         from <a href="/AS8302">AS8302</a> action pref=100; accept <a href="/as-set/AS-ZATTOO">AS-ZATTOO</a>
+export:         to   <a href="/AS8302">AS8302</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: Kabelplus.at
+import:         from <a href="/AS8339">AS8339</a> action pref=100; accept <a href="/as-set/AS-KABS">AS-KABS</a>
+export:         to <a href="/AS8339">AS8339</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: T-Systems.at
+import:         from <a href="/AS8387">AS8387</a> action pref=100; accept <a href="/as-set/AS8387:AS-T-SYSTEMS-AT">AS8387:AS-T-SYSTEMS-AT</a>
+export:         to <a href="/AS8387">AS8387</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: Telekom Srbija a.d.
+import:         from <a href="/AS8400">AS8400</a> action pref=100; accept <a href="/as-set/AS-TELEKOM">AS-TELEKOM</a>
+export:         to <a href="/AS8400">AS8400</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: Magenta/T-Mobile.at
+import:         from <a href="/AS8412">AS8412</a> action pref=100; accept <a href="/as-set/AS-TMA">AS-TMA</a>
+export:         to <a href="/AS8412">AS8412</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: SalzburgAG.at/CableLink
+import:         from <a href="/AS8445">AS8445</a> action pref=100; accept <a href="/as-set/AS-SALZBURG-AG">AS-SALZBURG-AG</a>
+export:         to <a href="/AS8445">AS8445</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: A1 Telekom Austria AG
+import:         from <a href="/AS8447">AS8447</a> action pref=100; accept <a href="/as-set/AS-PTA">AS-PTA</a>
+export:         to <a href="/AS8447">AS8447</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: AMA netwoRX GmbH
+import:         from <a href="/AS8540">AS8540</a> action pref=100; accept <a href="/as-set/AS-AMANET">AS-AMANET</a>
+export:         to   <a href="/AS8540">AS8540</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: IONOS SE
+import:         from <a href="/AS8560">AS8560</a> action pref=100; accept <a href="/as-set/AS-IONOS">AS-IONOS</a>
+export:         to   <a href="/AS8560">AS8560</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: Omantel
+import:         from <a href="/AS8529">AS8529</a> action pref=100; accept <a href="/as-set/AS-OMANTEL">AS-OMANTEL</a>
+export:         to <a href="/AS8529">AS8529</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: hotze.com
+import:         from <a href="/AS8596">AS8596</a> action pref=100; accept <a href="/as-set/AS-HOTZE">AS-HOTZE</a>
+export:         to <a href="/AS8596">AS8596</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: Autonomica (I-Root)
+import:         from <a href="/AS8674">AS8674</a> action pref=100; accept <a href="/as-set/AS-NETNOD-ANYCAST">AS-NETNOD-ANYCAST</a>
+export:         to <a href="/AS8674">AS8674</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: Orange Romania
+import:         from <a href="/AS8953">AS8953</a> action pref=100; accept <a href="/as-set/AS-ORANGE-ROMANIA">AS-ORANGE-ROMANIA</a>
+export:         to   <a href="/AS8953">AS8953</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: RETN.net
+import:         from <a href="/AS9002">AS9002</a> action pref=100; accept <a href="/as-set/AS-RETN">AS-RETN</a>
+export:         to <a href="/AS9002">AS9002</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: M247 Ltd
+import:         from <a href="/AS9009">AS9009</a> action pref=100; accept <a href="/as-set/AS-GBXS">AS-GBXS</a>
+export:         to <a href="/AS9009">AS9009</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: softnet.si
+import:         from <a href="/AS9119">AS9119</a> action pref=100; accept <a href="/as-set/AS-SOFTNET">AS-SOFTNET</a>
+export:         to <a href="/AS9119">AS9119</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: BIHNET
+import:         from <a href="/AS9146">AS9146</a> action pref=100; accept <a href="/as-set/AS-BIHNET-ALL">AS-BIHNET-ALL</a>
+export:         to   <a href="/AS9146">AS9146</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: Oath EMEA Limited (Yahoo)
+import:         from <a href="/AS10310">AS10310</a> action pref=100; accept <a href="/as-set/AS-YAHOO">AS-YAHOO</a>
+export:         to <a href="/AS10310">AS10310</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: internic.at
+import:         from <a href="/AS12401">AS12401</a> action pref=100; accept <a href="/as-set/AS-INIC">AS-INIC</a>
+export:         to <a href="/AS12401">AS12401</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: KraftCom
+import:         from <a href="/AS12453">AS12453</a> action pref=100; accept <a href="/as-set/AS-KRAFTCOM">AS-KRAFTCOM</a>
+export:         to <a href="/AS12453">AS12453</a> announce <a href="/as-set/AS-KRAFTCOM">AS-KRAFTCOM</a>
+remarks:        # peering: MMC.at
+import:         from <a href="/AS12577">AS12577</a> action pref=100; accept <a href="/as-set/AS-MMC-AT">AS-MMC-AT</a>
+export:         to <a href="/AS12577">AS12577</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: LIWEST.at
+import:         from <a href="/AS12605">AS12605</a> action pref=100; accept <a href="/as-set/AS-LIWESTAT">AS-LIWESTAT</a>
+export:         to <a href="/AS12605">AS12605</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: RIS/RIPE.net
+import:         from <a href="/AS12654">AS12654</a> action pref=100; accept AS12654:RS-RIS
+export:         to <a href="/AS12654">AS12654</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: sIT Solutions AT Spardat GmbH (IT-Austria.net)
+import:         from <a href="/AS12895">AS12895</a> action pref=100; accept <a href="/as-set/AS-ITAUSTRIA">AS-ITAUSTRIA</a>
+export:         to <a href="/AS12895">AS12895</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: Serbian Open eXchange
+import:         from <a href="/AS13004">AS13004</a> action pref=100; accept <a href="/as-set/AS-SOX-SRB">AS-SOX-SRB</a>
+export:         to <a href="/AS13004">AS13004</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: INIT7
+import:         from <a href="/AS13030">AS13030</a> action pref=100; accept <a href="/as-set/AS-INIT7">AS-INIT7</a>
+export:         to <a href="/AS13030">AS13030</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: ISKON.hr
+import:         from <a href="/AS13046">AS13046</a> action pref=100; accept <a href="/as-set/AS-ISKON">AS-ISKON</a>
+export:         to <a href="/AS13046">AS13046</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: CNet.at
+import:         from <a href="/AS13064">AS13064</a> action pref=100; accept <a href="/as-set/AS-CNET">AS-CNET</a>
+export:         to <a href="/AS13064">AS13064</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: ennit server GmbH (TNG.de)
+import:         from <a href="/AS13101">AS13101</a> action pref=100; accept <a href="/as-set/AS-TNG">AS-TNG</a>
+export:         to <a href="/AS13101">AS13101</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: euNetworks Managed Services GmbH (LambdaNet.net)
+import:         from <a href="/AS13237">AS13237</a> action pref=100; accept <a href="/as-set/AS-LAMBDANET">AS-LAMBDANET</a>
+export:         to <a href="/AS13237">AS13237</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: CloudFlare Inc
+import:         from <a href="/AS13335">AS13335</a> action pref=100; accept <a href="/AS13335">AS13335</a>
+export:         to <a href="/AS13335">AS13335</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: NTS Workspace AG
+import:         from <a href="/AS15576">AS15576</a> action pref=100; accept <a href="/as-set/AS-NTS">AS-NTS</a>
+export:         to <a href="/AS15576">AS15576</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: onstage.at
+import:         from <a href="/AS15702">AS15702</a> action pref=100; accept <a href="/as-set/AS-ONSTAGE">AS-ONSTAGE</a>
+export:         to <a href="/AS15702">AS15702</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: CETIN Ltd.
+import:         from <a href="/AS15958">AS15958</a> action pref=100; accept <a href="/as-set/AS-TELENORDOO">AS-TELENORDOO</a>
+export:         to   <a href="/AS15958">AS15958</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: IT-Services der Sozialversicherung
+import:         from <a href="/AS16099">AS16099</a> action pref=100; accept <a href="/AS16099">AS16099</a>
+export:         to <a href="/AS16099">AS16099</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: LeaseWeb
+import:         from <a href="/AS16265">AS16265</a> action pref=100; accept <a href="/as-set/AS-LEASEWEB">AS-LEASEWEB</a>
+export:         to <a href="/AS16265">AS16265</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: OVH SAS
+import:         from <a href="/AS16276">AS16276</a> action pref=100; accept <a href="/as-set/AS-OVH">AS-OVH</a>
+export:         to <a href="/AS16276">AS16276</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: KAV.at
+import:         from <a href="/AS16314">AS16314</a> action pref=100; accept <a href="/AS16314">AS16314</a>
+export:         to <a href="/AS16314">AS16314</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: Amazon.com
+import:         from <a href="/AS16509">AS16509</a> action pref=100; accept <a href="/as-set/AS-AMAZON">AS-AMAZON</a>
+export:         to <a href="/AS16509">AS16509</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: INCAPSULA
+import:         from <a href="/AS19551">AS19551</a> action pref=100; accept <a href="/as-set/AS-INCAPSULA">AS-INCAPSULA</a>
+export:         to   <a href="/AS19551">AS19551</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: SOPRADO
+import:         from <a href="/AS20546">AS20546</a> action pref=100; accept <a href="/as-set/AS-MYRASEC">AS-MYRASEC</a>
+export:         to   <a href="/AS20546">AS20546</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: Broadband Hosting B.V.
+import:         from <a href="/AS20562">AS20562</a> action pref=100; accept <a href="/as-set/AS-OPENPEERING-EU">AS-OPENPEERING-EU</a>
+export:         to <a href="/AS20562">AS20562</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: funknetz.at
+import:         from <a href="/AS20704">AS20704</a> action pref=100; accept <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+export:         to <a href="/AS20704">AS20704</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: EXATEL
+import:         from <a href="/AS20804">AS20804</a> action pref=100; accept <a href="/as-set/AS-EXATEL-INT">AS-EXATEL-INT</a>
+export:         to   <a href="/AS20804">AS20804</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: Akamai
+import:         from <a href="/AS20940">AS20940</a> action pref=100; accept <a href="/as-set/AS-AKAMAI">AS-AKAMAI</a>
+export:         to <a href="/AS20940">AS20940</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: ITandTel
+import:         from <a href="/AS21013">AS21013</a> action pref=100; accept <a href="/as-set/AS-ITANDTEL">AS-ITANDTEL</a>
+export:         to <a href="/AS21013">AS21013</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: GEANT Vereniging
+import:         from <a href="/AS21320">AS21320</a> action pref=100; accept <a href="/as-set/AS-GEANT-EUPEER">AS-GEANT-EUPEER</a>
+export:         to   <a href="/AS21320">AS21320</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: empirion.at
+import:         from <a href="/AS21360">AS21360</a> action pref=100; accept <a href="/as-set/AS-EMPIRION">AS-EMPIRION</a>
+export:         to <a href="/AS21360">AS21360</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: ATM S.A.
+import:         from <a href="/AS24724">AS24724</a> action pref=100; accept <a href="/as-set/AS24724:AS-FOREIGN">AS24724:AS-FOREIGN</a>
+export:         to <a href="/AS24724">AS24724</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: Raiffeisen Informatik GmbH
+import:         from <a href="/AS24864">AS24864</a> action pref=100; accept <a href="/as-set/AS-R-IT">AS-R-IT</a>
+export:         to <a href="/AS24864">AS24864</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: Hetzner Online AG
+import:         from <a href="/AS24940">AS24940</a> action pref=100; accept <a href="/as-set/AS-HETZNER">AS-HETZNER</a>
+export:         to <a href="/AS24940">AS24940</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: OEBB Infrastruktur AG
+import:         from <a href="/AS25011">AS25011</a> action pref=100; accept <a href="/AS25011">AS25011</a>
+export:         to <a href="/AS25011">AS25011</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: RIPE NCC
+import:         from <a href="/AS25152">AS25152</a> action pref=100; accept <a href="/AS25152">AS25152</a>
+export:         to <a href="/AS25152">AS25152</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: Hutchison 3G Austria (h3g.at/DREI)
+import:         from <a href="/AS25255">AS25255</a> action pref=100; accept <a href="/as-set/AS-H3G-AUSTRIA">AS-H3G-AUSTRIA</a>
+export:         to <a href="/AS25255">AS25255</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: JM-Data Telekom GmbH
+import:         from <a href="/AS25447">AS25447</a> action pref=100; accept <a href="/as-set/AS-JM-DATA">AS-JM-DATA</a>
+export:         to <a href="/AS25447">AS25447</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: Akton d.o.o.
+import:         from <a href="/AS25467">AS25467</a> action pref=100; accept <a href="/as-set/AS-AKTON">AS-AKTON</a>
+export:         to <a href="/AS25467">AS25467</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: Ledl.net (Domaintechnik.at)
+import:         from <a href="/AS25575">AS25575</a> action pref=100; accept <a href="/as-set/AS-DOMAINTECHNIK">AS-DOMAINTECHNIK</a>
+export:         to <a href="/AS25575">AS25575</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: VeriSign
+import:         from <a href="/AS26415">AS26415</a> action pref=100; accept <a href="/as-set/AS-GTLD">AS-GTLD</a>
+export:         to   <a href="/AS26415">AS26415</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: Infotech.at
+import:         from <a href="/AS28760">AS28760</a> action pref=100; accept <a href="/as-set/AS-INFOTECH">AS-INFOTECH</a>
+export:         to <a href="/AS28760">AS28760</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: CSC-Austria.at
+import:         from <a href="/AS28857">AS28857</a> action pref=100; accept <a href="/as-set/AS-CSCAUSTRIA">AS-CSCAUSTRIA</a>
+export:         to <a href="/AS28857">AS28857</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: Linznet.at
+import:         from <a href="/AS28889">AS28889</a> action pref=100; accept <a href="/as-set/AS-LINZNET">AS-LINZNET</a>
+export:         to <a href="/AS28889">AS28889</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: Citycom Graz (GSTW.at)
+import:         from <a href="/AS29056">AS29056</a> action pref=100; accept <a href="/as-set/AS29056:AS-CITYCOM">AS29056:AS-CITYCOM</a>
+export:         to <a href="/AS29056">AS29056</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: WVNET Information &amp; Kommunikation GmbH
+import:         from <a href="/AS29081">AS29081</a> action pref=100; accept <a href="/as-set/AS-WVNETAT">AS-WVNETAT</a>
+export:         to <a href="/AS29081">AS29081</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: Dial Telecom
+import:         from <a href="/AS29208">AS29208</a> action pref=100; accept <a href="/as-set/AS-DIALTELECOM">AS-DIALTELECOM</a>
+export:         to <a href="/AS29208">AS29208</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: Wien Energie
+import:         from <a href="/AS29287">AS29287</a> action pref=100; accept <a href="/as-set/AS-WIENSTROM">AS-WIENSTROM</a>
+export:         to <a href="/AS29287">AS29287</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: iPlace Internet &amp; Network Services GmbH
+import:         from <a href="/AS29545">AS29545</a> action pref=100; accept <a href="/as-set/AS-IPLACE">AS-IPLACE</a>
+export:         to <a href="/AS29545">AS29545</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: nic.at
+import:         from <a href="/AS30971">AS30971</a> action pref=100; accept <a href="/as-set/AS-NICAT">AS-NICAT</a>
+export:         to   <a href="/AS30971">AS30971</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: Serbia Broadband - Srpske kablovske mreze d.o.o.
+import:         from <a href="/AS31042">AS31042</a> action pref=100; accept <a href="/as-set/AS-SBB">AS-SBB</a>
+export:         to <a href="/AS31042">AS31042</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: Beyond.pl
+import:         from <a href="/AS31229">AS31229</a> action pref=100; accept <a href="/as-set/AS-BEYOND">AS-BEYOND</a>
+export:         to   <a href="/AS31229">AS31229</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: AnschlussWerk
+import:         from <a href="/AS31317">AS31317</a> action pref=100; accept <a href="/as-set/AS-ANSCHLUSSWERK">AS-ANSCHLUSSWERK</a>
+export:         to   <a href="/AS31317">AS31317</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: IKB
+import:         from <a href="/AS31510">AS31510</a> action pref=100; accept <a href="/as-set/AS-IKB">AS-IKB</a>
+export:         to <a href="/AS31510">AS31510</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: DENIC eG
+import:         from <a href="/AS31529">AS31529</a> action pref=100; accept <a href="/as-set/AS-DENIC-ANY">AS-DENIC-ANY</a>
+export:         to <a href="/AS31529">AS31529</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: myNET GmbH
+import:         from <a href="/AS31543">AS31543</a> action pref=100; accept <a href="/as-set/AS-MYNET-AT">AS-MYNET-AT</a>
+export:         to <a href="/AS31543">AS31543</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: Valve Corporation
+import:         from <a href="/AS32590">AS32590</a> action pref=100; accept <a href="/as-set/AS-VALVE">AS-VALVE</a>
+export:         to <a href="/AS32590">AS32590</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: Akamai (PROLEXIC-TECHNOLOGIES)
+import:         from <a href="/AS32787">AS32787</a> action pref=100; accept <a href="/as-set/AS-PROLE">AS-PROLE</a>
+export:         to   <a href="/AS32787">AS32787</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: Meta (Facebook)
+import:         from <a href="/AS32934">AS32934</a> action pref=100; accept <a href="/as-set/AS-FACEBOOK">AS-FACEBOOK</a>
+export:         to <a href="/AS32934">AS32934</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: StackPath
+import:         from <a href="/AS33438">AS33438</a> action pref=100; accept <a href="/as-set/AS-STACKPATH">AS-STACKPATH</a>
+export:         to   <a href="/AS33438">AS33438</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: <a href="/AS33891">AS33891</a> Netzbetrieb GmbH (CORE-BACKBONE)
+import:         from <a href="/AS33891">AS33891</a> action pref=100; accept <a href="/as-set/AS-CORE-BACKBONE">AS-CORE-BACKBONE</a>
+export:         to <a href="/AS33891">AS33891</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: Bundesministerium fuer Gesundheit (AT)
+import:         from <a href="/AS34183">AS34183</a> action pref=100; accept <a href="/as-set/AS-BMG">AS-BMG</a>
+export:         to   <a href="/AS34183">AS34183</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: Kantonschule Zug
+import:         from <a href="/AS34288">AS34288</a> action pref=100; accept <a href="/as-set/AS34288:AS-IX:AS-VIX">AS34288:AS-IX:AS-VIX</a>
+export:         to <a href="/AS34288">AS34288</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: STW-Hall/AT (citynet hall)
+import:         from <a href="/AS34347">AS34347</a> action pref=100; accept <a href="/as-set/AS-CNHAT">AS-CNHAT</a>
+export:         to <a href="/AS34347">AS34347</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: Optima Telekom
+import:         from <a href="/AS34594">AS34594</a> action pref=100; accept <a href="/as-set/AS-OPTIMA">AS-OPTIMA</a>
+export:         to <a href="/AS34594">AS34594</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: Axera S.P.A.
+import:         from <a href="/AS34758">AS34758</a> action pref=100; accept <a href="/as-set/AS-AXERA">AS-AXERA</a>
+export:         to <a href="/AS34758">AS34758</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: Neotel
+import:         from <a href="/AS34772">AS34772</a> action pref=100; accept <a href="/as-set/AS-NEOTEL-SET">AS-NEOTEL-SET</a>
+export:         to <a href="/AS34772">AS34772</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: T-2 d.o.o.
+import:         from <a href="/AS34779">AS34779</a> action pref=100; accept <a href="/as-set/AS-T2-CUST">AS-T2-CUST</a>
+export:         to <a href="/AS34779">AS34779</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: AtNOC Clemens Zauner e. U.
+import:         from <a href="/AS35339">AS35339</a> action pref=100; accept <a href="/as-set/AS-ATNOC">AS-ATNOC</a>
+export:         to <a href="/AS35339">AS35339</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: Lagis ISP
+import:         from <a href="/AS35369">AS35369</a> action pref=100; accept <a href="/as-set/AS-LAGIS">AS-LAGIS</a>
+export:         to <a href="/AS35369">AS35369</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: World4You Internet Services GmbH
+import:         from <a href="/AS38955">AS38955</a> action pref=100; accept <a href="/as-set/AS-WORLD4YOU">AS-WORLD4YOU</a>
+export:         to <a href="/AS38955">AS38955</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: ASFINAG
+import:         from <a href="/AS39478">AS39478</a> action pref=100; accept <a href="/as-set/AS-ASFINAG">AS-ASFINAG</a>
+export:         to <a href="/AS39478">AS39478</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: KT-Net Communications GmbH
+import:         from <a href="/AS39560">AS39560</a> action pref=100; accept <a href="/as-set/AS-KT-NET">AS-KT-NET</a>
+export:         to <a href="/AS39560">AS39560</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: Peter Rauter GmbH
+import:         from <a href="/AS39878">AS39878</a> action pref=100; accept <a href="/as-set/AS-RAUTER">AS-RAUTER</a>
+export:         to <a href="/AS39878">AS39878</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: I3B/Oja.at
+import:         from <a href="/AS39912">AS39912</a> action pref=100; accept <a href="/as-set/AS-I3B-TRANSIT-V4">AS-I3B-TRANSIT-V4</a>
+export:         to <a href="/AS39912">AS39912</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: Hohl IT e.U./Alwyzon
+import:         from <a href="/AS40994">AS40994</a> action pref=100; accept <a href="/as-set/AS-ALWYZON">AS-ALWYZON</a>
+export:         to   <a href="/AS40994">AS40994</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: STW Kapfenberg
+import:         from <a href="/AS41491">AS41491</a> action pref=100; accept <a href="/AS41491">AS41491</a>
+export:         to <a href="/AS41491">AS41491</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: Stelkom d.o.o.
+import:         from <a href="/AS43061">AS43061</a> action pref=100; accept <a href="/as-set/AS-STELKOM-CUST">AS-STELKOM-CUST</a>
+export:         to <a href="/AS43061">AS43061</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: Gamsjaeger Kabel-TV &amp; ISP Betriebs GmbH
+import:         from <a href="/AS43848">AS43848</a> action pref=100; accept <a href="/as-set/AS-GAMSJAEGER">AS-GAMSJAEGER</a>
+export:         to <a href="/AS43848">AS43848</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: WNT Telecommunication GmbH
+import:         from <a href="/AS43957">AS43957</a> action pref=100; accept <a href="/as-set/AS-WNTNEWMEDIA">AS-WNTNEWMEDIA</a>
+export:         to <a href="/AS43957">AS43957</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: Omonia.hr
+import:         from <a href="/AS44306">AS44306</a> action pref=100; accept <a href="/as-set/AS-OMONIA">AS-OMONIA</a>
+export:         to <a href="/AS44306">AS44306</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: Make.at
+import:         from <a href="/AS44765">AS44765</a> action pref=100; accept <a href="/as-set/AS-MAKENEWMEDIA">AS-MAKENEWMEDIA</a>
+export:         to <a href="/AS44765">AS44765</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: Standard Verlagsgesellschaft m.b.H
+import:         from <a href="/AS44865">AS44865</a> action pref=100; accept <a href="/AS44865">AS44865</a>
+export:         to <a href="/AS44865">AS44865</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: Twitch
+import:         from <a href="/AS46489">AS46489</a> action pref=100; accept <a href="/as-set/AS-TWITCH">AS-TWITCH</a>
+export:         to <a href="/AS46489">AS46489</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: ANEXIA
+import:         from <a href="/AS47147">AS47147</a> action pref=100; accept <a href="/as-set/AS-ANX">AS-ANX</a>
+export:         to   <a href="/AS47147">AS47147</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: Nessus
+import:         from <a href="/AS47692">AS47692</a> action pref=100; accept <a href="/as-set/AS-NESSUS">AS-NESSUS</a>
+export:         to   <a href="/AS47692">AS47692</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: Raiffeisen Rechenzentrum GmbH (Graz)
+import:         from <a href="/AS48339">AS48339</a> action pref=100; accept <a href="/as-set/AS-RRZS">AS-RRZS</a>
+export:         to <a href="/AS48339">AS48339</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: Stadtwerke Feldkirch
+import:         from <a href="/AS48362">AS48362</a> action pref=100; accept <a href="/as-set/AS-TKSWF">AS-TKSWF</a>
+export:         to   <a href="/AS48362">AS48362</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: KAPPER NETWORK-COMMUNICATIONS GmbH
+import:         from <a href="/AS48943">AS48943</a> action pref=100; accept <a href="/as-set/AS-KAPPERNET">AS-KAPPERNET</a>
+export:         to <a href="/AS48943">AS48943</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: ViM Internetdienstleistungen
+import:         from <a href="/AS49322">AS49322</a> action pref=100; accept <a href="/AS49322">AS49322</a>
+export:         to   <a href="/AS49322">AS49322</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: i3D.net B.V
+import:         from <a href="/AS49544">AS49544</a> action pref=100; accept <a href="/as-set/AS-INTERACTIVE3D">AS-INTERACTIVE3D</a>
+export:         to   <a href="/AS49544">AS49544</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: Energie AG Oberoesterreich Telekom GmbH
+import:         from <a href="/AS49808">AS49808</a> action pref=100; accept <a href="/as-set/AS-POWERSPEED">AS-POWERSPEED</a>
+export:         to <a href="/AS49808">AS49808</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: Netcompany
+import:         from <a href="/AS50226">AS50226</a> action pref=100; accept <a href="/as-set/AS-NETCOMPANY">AS-NETCOMPANY</a>
+export:         to   <a href="/AS50226">AS50226</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: European Academy Bolzano
+import:         from <a href="/AS50507">AS50507</a> action pref=100; accept <a href="/as-set/AS-EURACTOVIX">AS-EURACTOVIX</a>
+export:         to <a href="/AS50507">AS50507</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: LWLcom
+import:         from <a href="/AS50629">AS50629</a> action pref=100; accept <a href="/as-set/AS-LWL">AS-LWL</a>
+export:         to <a href="/AS50629">AS50629</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: COSYS DATA GmbH
+import:         from <a href="/AS50782">AS50782</a> action pref=100; accept <a href="/as-set/AS-COSYS">AS-COSYS</a>
+export:         to <a href="/AS50782">AS50782</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: mediainvent Service GmbH
+import:         from <a href="/AS51184">AS51184</a> action pref=100; accept <a href="/as-set/AS-MEDIAINVENT">AS-MEDIAINVENT</a>
+export:         to <a href="/AS51184">AS51184</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: Mass Response Service GmbH
+import:         from <a href="/AS51265">AS51265</a> action pref=100; accept <a href="/AS51265">AS51265</a>
+export:         to <a href="/AS51265">AS51265</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: Styria IT Solutions
+import:         from <a href="/AS51577">AS51577</a> action pref=100; accept <a href="/as-set/AS-STYRIAIT">AS-STYRIAIT</a>
+export:         to   <a href="/AS51577">AS51577</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: Sportradar AG
+import:         from <a href="/AS51776">AS51776</a> action pref=100; accept <a href="/AS51776">AS51776</a>
+export:         to   <a href="/AS51776">AS51776</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: Fastly
+import:         from <a href="/AS54113">AS54113</a> action pref=100; accept <a href="/as-set/AS-FASTLY">AS-FASTLY</a>
+export:         to   <a href="/AS54113">AS54113</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: Meteverse
+import:         from <a href="/AS54994">AS54994</a> action pref=100; accept <a href="/AS54994">AS54994</a>
+export:         to   <a href="/AS54994">AS54994</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: Netskope
+import:         from <a href="/AS55256">AS55256</a> action pref=100; accept <a href="/AS55256">AS55256</a>
+export:         to   <a href="/AS55256">AS55256</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: mieX GmbH
+import:         from <a href="/AS56833">AS56833</a> action pref=100; accept <a href="/as-set/AS-MIEX">AS-MIEX</a>
+export:         to <a href="/AS56833">AS56833</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: EDIS GmbH
+import:         from <a href="/AS57169">AS57169</a> action pref=100; accept <a href="/as-set/AS-EDIS">AS-EDIS</a>
+export:         to <a href="/AS57169">AS57169</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: NetIX Communications Ltd.
+import:         from <a href="/AS57463">AS57463</a> action pref=100; accept <a href="/as-set/AS-NETIX-INT">AS-NETIX-INT</a>
+export:         to <a href="/AS57463">AS57463</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: Kabel-TV Lampert GmbH
+import:         from <a href="/AS59890">AS59890</a> action pref=100; accept <a href="/as-set/AS-LAMPERT">AS-LAMPERT</a>
+export:         to <a href="/AS59890">AS59890</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: EDV Consulting Zoichter
+import:         from <a href="/AS60274">AS60274</a> action pref=100; accept <a href="/AS60274">AS60274</a>
+export:         to   <a href="/AS60274">AS60274</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: Cablevision
+import:         from <a href="/AS60517">AS60517</a> action pref=100; accept <a href="/as-set/AS-CABLEVISION">AS-CABLEVISION</a>
+export:         to <a href="/AS60517">AS60517</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: XINON
+import:         from <a href="/AS60587">AS60587</a> action pref=100; accept <a href="/as-set/AS-XINON-CARRIER-V4">AS-XINON-CARRIER-V4</a>
+export:         to   <a href="/AS60587">AS60587</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: IFORCE
+import:         from <a href="/AS60823">AS60823</a> action pref=100; accept <a href="/as-set/AS-IFORCE">AS-IFORCE</a>
+export:         to   <a href="/AS60823">AS60823</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: SETCOR d.o.o.
+import:         from <a href="/AS61211">AS61211</a> action pref=100; accept <a href="/as-set/AS-Datacross">AS-Datacross</a>
+export:         to   <a href="/AS61211">AS61211</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: JMP Technology Services
+import:         from <a href="/AS61423">AS61423</a> action pref=100; accept <a href="/as-set/AS-JMP">AS-JMP</a>
+export:         to   <a href="/AS61423">AS61423</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: Ertl &amp; Groß GmbH &amp; Co OG
+import:         from <a href="/AS62363">AS62363</a> accept <a href="/as-set/AS-EGW">AS-EGW</a>
+export:         to   <a href="/AS62363">AS62363</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: Ing. Christian Singerl
+import:         from <a href="/AS62373">AS62373</a> action pref=100; accept <a href="/AS62373">AS62373</a>
+export:         to <a href="/AS62373">AS62373</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: netcup GmbH
+import:         from <a href="/AS197540">AS197540</a> action pref=100; accept <a href="/as-set/AS-NETCUP">AS-NETCUP</a>
+export:         to <a href="/AS197540">AS197540</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: iLOL d.o.o.
+import:         from <a href="/AS198524">AS198524</a> action pref=100; accept <a href="/as-set/AS-ILOL">AS-ILOL</a>
+export:         to   <a href="/AS198524">AS198524</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: CZ.NIC z.s.p.o
+import:         from <a href="/AS200070">AS200070</a> action pref=100; accept <a href="/as-set/AS-CZNIC-TRANSIT">AS-CZNIC-TRANSIT</a>
+export:         to <a href="/AS200070">AS200070</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: Riepert IT
+import:         from <a href="/AS200970">AS200970</a> action pref=100; accept <a href="/as-set/AS-RIEPERT">AS-RIEPERT</a>
+export:         to   <a href="/AS200970">AS200970</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: E-CAPS D.O.O
+import:         from <a href="/AS203752">AS203752</a> action pref=100; accept <a href="/as-set/AS-E-CAPS">AS-E-CAPS</a>
+export:         to   <a href="/AS203752">AS203752</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: ITNS GmbH
+import:         from <a href="/AS204419">AS204419</a> action pref=100; accept <a href="/AS204419">AS204419</a>
+export:         to   <a href="/AS204419">AS204419</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: CloudNow GmbH
+import:         from <a href="/AS205243">AS205243</a> action pref=100; accept <a href="/as-set/as-cloudnow-v4">as-cloudnow-v4</a>
+export:         to   <a href="/AS205243">AS205243</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: TIMEWARP IT
+import:         from <a href="/AS207203">AS207203</a> action pref=100; accept <a href="/as-set/AS-TIMEWARP-SET">AS-TIMEWARP-SET</a>
+export:         to   <a href="/AS207203">AS207203</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: WEDOS Internet, a.s.
+import:         from <a href="/AS208414">AS208414</a> action pref=100; accept <a href="/as-set/AS-WEDOS-GLOBAL">AS-WEDOS-GLOBAL</a>
+export:         to   <a href="/AS208414">AS208414</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: rdi.at
+import:         from <a href="/AS211510">AS211510</a> action pref=100; accept <a href="/AS211510">AS211510</a>
+export:         to   <a href="/AS211510">AS211510</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: PSMEDIA LTD&amp;CoKG
+import:         from <a href="/AS212131">AS212131</a> action pref=100; accept <a href="/AS212131">AS212131</a>
+export:         to   <a href="/AS212131">AS212131</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: Florian Berthold trading
+import:         from <a href="/AS215219">AS215219</a> action pref=100; accept <a href="/AS215219">AS215219</a>
+export:         to   <a href="/AS215219">AS215219</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: Orange Tunisia
+import:         from <a href="/AS328126">AS328126</a> action pref=100; accept <a href="/AS328126">AS328126</a>
+export:         to   <a href="/AS328126">AS328126</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        # peering: BYTEDANCE
+import:         from <a href="/AS396986">AS396986</a> action pref=100; accept <a href="/AS396986">AS396986</a>
+export:         to   <a href="/AS396986">AS396986</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        ============================================================
+remarks:        ---&gt; VIX Route Server IPv4
+import-via:     <a href="/AS1121">AS1121</a> from <a href="/as-set/AS-VIX-RS">AS-VIX-RS</a> action pref=100; accept ANY
+export-via:     <a href="/AS1121">AS1121</a> to <a href="/as-set/AS-VIX-RS">AS-VIX-RS</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        ---&gt; VIX Route Server IPv6
+import-via:     afi ipv6.unicast <a href="/AS1121">AS1121</a> from <a href="/as-set/AS-VIX-RS-V6">AS-VIX-RS-V6</a> action pref=100; accept ANY
+export-via:     afi ipv6.unicast <a href="/AS1121">AS1121</a> to <a href="/as-set/AS-VIX-RS-V6">AS-VIX-RS-V6</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        ---&gt; fallback VIX all-members IPv4
+import-via:     <a href="/AS1121">AS1121</a> from <a href="/as-set/AS-VIX-MEMBERS">AS-VIX-MEMBERS</a> action pref=100; accept ANY
+export-via:     <a href="/AS1121">AS1121</a> to <a href="/as-set/AS-VIX-MEMBERS">AS-VIX-MEMBERS</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        ---&gt; fallback VIX all-members IPv6
+import-via:     afi ipv6.unicast <a href="/AS1121">AS1121</a> from <a href="/as-set/AS-VIX-MEMBERS">AS-VIX-MEMBERS</a> action pref=100; accept ANY
+export-via:     afi ipv6.unicast <a href="/AS1121">AS1121</a> to <a href="/as-set/AS-VIX-MEMBERS">AS-VIX-MEMBERS</a> announce <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:
+remarks:        ============================================================
+remarks:        REMARKS / INFOS / CHANGES / AUDIT-LOG
+remarks:        ============================================================
+remarks:        # <a href="/AS1764">AS1764</a> (Nextlayer) was added as Upstream/Transit [20210309]
+remarks:        # peerings updated, Transit updated, cleaned old entries [20240503]
+remarks:        # added special objects for VIX Route Servers [20240504]
+remarks:        # added ipv6 references [20250329]
+remarks:        # added special objects for VIX members fallback [20250401]
+remarks:        # <a href="/AS48943">AS48943</a> (kapper.net) was added as Upstream/Transit (testing) [20250930]
+remarks:        # <a href="/AS199205">AS199205</a> (Huemer) was added as Downstream [20251212]
+remarks:
+admin-c:        DUMY-RIPE
+tech-c:         DUMY-RIPE
+remarks:
+remarks:        -------------------------------------------------------------------------
+remarks:        This Autonomous System is present at Digital Realty Vienna VIE1-2 (AT)
+remarks:        and in the AZISTA DCs VIVI1 &amp; CLB (VIE, AT)
+remarks:
+remarks:        Please send peering requests and changes to peering@azista.net
+remarks:        Please request offer for transit or housing via office@azista.at
+remarks:
+remarks:        We are utilizing BGP route flap dampening according to the
+remarks:        policy recommendations of RIPE-580. For more information,
+remarks:        see https://www.ripe.net/documents/2620/ripe-580.pdf
+remarks:        -------------------------------------------------------------------------
+remarks:        We are filtering any BGP announcements of prefixes longer than /24.
+remarks:        -------------------------------------------------------------------------
+remarks:
+remarks:        BGP COMMUNITY SYSTEM:
+remarks:
+remarks:        Community Action
+remarks:        =================
+remarks:
+remarks:        inbound routes by entry point:
+remarks:        ---------------------------------------------------------------------------------------
+remarks:
+remarks:        20751:2000 route originated via <a href="/AS20751">AS20751</a> - Infra Vienna (VIE)
+remarks:        20751:20751 route originated by <a href="/AS20751">AS20751</a>
+remarks:
+remarks:        20751:90 route learned from Transit/Upstream
+remarks:        20751:110 route learned from Peering
+remarks:        20751:120 route learned from Customer
+remarks:
+remarks:        20751:2300 route learned from AS21385/TNIB (Vienna)
+remarks:        20751:2400 route learned from AS24953/Netplanet (Vienna)
+remarks:        20751:2800 route learned from AS1764/Nextlayer (Vienna)
+remarks:        20751:2900 route learned from AS48943/kapper.net (Vienna)
+remarks:
+remarks:        20751:2500 route learned from VIX (Vienna)
+remarks:        20751:2590 route learned from VIX (Vienna) via <a href="/AS24953">AS24953</a>
+remarks:        20751:2570 route learned from VIX (Vienna) via <a href="/AS21385">AS21385</a>
+remarks:        20751:2580 route learned from VIX (Vienna) via <a href="/AS1764">AS1764</a>
+remarks:
+remarks:        20751:2600 route learned from DE-PEERINGS (Germany) via <a href="/AS21385">AS21385</a>
+remarks:        20751:2610 route learned from DE-CIX (Germany) via <a href="/AS1764">AS1764</a>
+remarks:        20751:2620 route learned from PEERING-CZ via <a href="/AS24953">AS24953</a>
+remarks:
+remarks:        20751:25101 route learned from AS25101/euinternet.net (Vienna)
+remarks:        20751:47592 route learned from AS47592/ACN Services (Vienna)
+remarks:
+remarks:        20751:40xxx route learned from Customer
+remarks:
+remarks:
+remarks:        Outbound Routes:
+remarks:        ---------------------------------------------------------------------------------------
+remarks:
+remarks:        20751:6300 route announced to AS21385/TNIB (Vienna/Munich)
+remarks:        20751:6400 route announced to AS24953/Netplanet (Vienna)
+remarks:        20751:6800 route announced to AS1764/Nextlayer (Vienna)
+remarks:        20751:6900 route announced to AS48943/kapper.net (Vienna)
+remarks:
+remarks:        20751:6500 route announced to VIX
+remarks:
+remarks:        outbound routes - controllable by transit customer:
+remarks:        ---------------------------------------------------------------------------------------
+remarks:
+remarks:        20751:5000 do not announce to local Peerings (VIX/Vienna only)
+remarks:        20751:5001 do not announce to Upstreams (Global)
+remarks:        20751:5002 do not announce to Peerings (except Vienna)
+remarks:
+remarks:        n = 0 do not announce prefix
+remarks:        1 &lt;= n &lt;= 5 prepend n times to announcement
+remarks:
+remarks:        20751:503n do not announce/prepend to <a href="/AS21385">AS21385</a> TNIB
+remarks:        20751:504n do not announce/prepend to <a href="/AS24953">AS24953</a> Netplanet
+remarks:        20751:508n do not announce/prepend to <a href="/AS1764">AS1764</a> Nextlayer
+remarks:        20751:509n do not announce/prepend to <a href="/AS48943">AS48943</a> kapper.net
+remarks:
+remarks:        20751:505n do not announce/prepend to VIX-Peers
+remarks:        20751:512n do not announce/prepend to VIX-Peers (via AS21385)
+remarks:        20751:506n do not announce/prepend to DE-PEERINGS (via AS21385)
+remarks:
+remarks:        20751:251n do not announce/prepend to <a href="/AS25101">AS25101</a> euinternet.net (AZISTA)
+remarks:        20751:475n do not announce/prepend to <a href="/AS47592">AS47592</a> ACN Services (AZISTA TEST)
+remarks:
+remarks:        RPKI route-validation:
+remarks:        ---------------------------------------------------------------------------------------
+remarks:
+remarks:        20751:9001 RPKI validation-state: valid      (matching ROA)
+remarks:        20751:9002 RPKI validation-state: invalid    (not matching ROA)
+remarks:        20751:9003 RPKI validation-state: unknown    (no ROA created or lookup error)
+remarks:        20751:9004 RPKI validation-state: unverified (not checked)
+remarks:
+remarks:        ------------------------------------------------
+remarks:        AZISTA Official Web-Site: https://www.azista.at/
+remarks:        AZISTA NOC-email: noc@azista.net
+remarks:        PeeringDB: https://as20751.peeringdb.com/
+remarks:        IRR Record (IXP Peerings): <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+remarks:        IRR Record (private Peerings): <a href="/as-set/AS-AZISTAPEER">AS-AZISTAPEER</a>
+remarks:        IRR Record (Transit IPv4): <a href="/as-set/AS-AZISTA">AS-AZISTA</a>
+remarks:        IRR Record (Transit IPv6): <a href="/as-set/AS-AZISTA-V6">AS-AZISTA-V6</a>
+remarks:        VIX IP: 193.203.0.81
+remarks:        ------------------------------------------------
+status:         ASSIGNED
+notify:         hostmaster@azista.net
+mnt-by:         RIPE-NCC-END-MNT
+mnt-by:         ACNETWORKS-MNT
+mnt-by:         AZISTA-MNT
+created:        2002-08-21T16:17:07Z
+last-modified:  2025-12-12T16:06:16Z
+source:         RIPE
+remarks:        ****************************
+remarks:        * THIS OBJECT IS MODIFIED
+remarks:        * Please note that all data that is generally regarded as personal
+remarks:        * data has been removed from this object.
+remarks:        * To view the original object, please query the RIPE Database at:
+remarks:        * http://www.ripe.net/whois
+remarks:        ****************************
+
+
+organisation:   <a href="https://apps.db.ripe.net/db-web-ui/query?searchtext=ORG-FRJ1-RIPE">ORG-FRJ1-RIPE</a>
+org-name:       AZISTA GmbH
+country:        AT
+org-type:       LIR
+address:        Dummy address for <a href="https://apps.db.ripe.net/db-web-ui/query?searchtext=ORG-FRJ1-RIPE">ORG-FRJ1-RIPE</a>
+# Email removed, Log into bgp.tools to see whois emails
+mnt-ref:        RIPE-NCC-HM-MNT
+mnt-ref:        AZISTA-MNT
+mnt-ref:        ACNETWORKS-MNT
+mnt-by:         RIPE-NCC-HM-MNT
+mnt-by:         AZISTA-MNT
+abuse-c:        AZIS13-RIPE
+created:        2004-04-17T10:59:04Z
+last-modified:  2021-09-15T19:45:29Z
+source:         RIPE
+remarks:        ****************************
+remarks:        * THIS OBJECT IS MODIFIED
+remarks:        * Please note that all data that is generally regarded as personal
+remarks:        * data has been removed from this object.
+remarks:        * To view the original object, please query the RIPE Database at:
+remarks:        * http://www.ripe.net/whois
+remarks:        ****************************
+
+</pre>
+                        
+                        
+                        <a style="font-size: small;">Last Update: 2025-12-12T16:06:21Z UTC </a>
+                        
+                        <hr>
+                        
+                            <h2>Member of the following AS-SETs</h2>
+
+                            <table id="fhTable" class="full-width-table ">
+                                <tbody id="prefixlist-tbody">
+                                    <tr>
+                                        <th class="boldpls nowrap"> - </th>
+                                        <th class="boldpls">Member</th>
+                                        
+                                        <th class="boldpls nowrap">ASN Count</th>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-azista">as-azista</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">5</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-nextlayer-v6">as-nextlayer-v6</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">1235</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as16631:as-cogc-014">as16631:as-cogc-014</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">66</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-cixat">as-cixat</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">4</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">LEVEL3</td>
+                                        
+                                        <td><a href="/as-set/LEVEL3::as-sprint-origins">as-sprint-origins</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">7309</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-nextlayer">as-nextlayer</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">1259</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-vix-members">as-vix-members</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">188</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-ris-rrc05">as-ris-rrc05</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">43</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as174:as-cogc-010">as174:as-cogc-010</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">40</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-azista-v6">as-azista-v6</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">2</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-max4eu">as-max4eu</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">8</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                        
+
+                    </div>
+
+                    
+
+                    
+                    <div style="display: none" id="ix-page">
+                        <div class="grid-row">
+                            <dl class="column-two-thirds">
+                                <p style="margin: 0px;"><img style="vertical-align: middle; margin-left: 5px;" class="flag-img" src="/assets/peeringdb-icon.png" title="PeeringDB"><a href="https://www.peeringdb.com/asn/20751">Go to PeeringDB page</a></p>
+                            </dl>
+                            
+                            
+                        </div>
+                        <div class="grid-row">
+                            
+                        
+                        <div class="column-two-thirds">
+                            <dl>
+                                <dt>PeeringDB AS-SET:</dt>
+                                <dd class="text data">
+                                    
+                                    <a href="/as-set/ripe::as-max4eu">RIPE::AS-MAX4EU</a>
+                                    
+                                </dd>
+                            </dl>
+                        </div>
+                        
+    
+    
+                        <dl class="column-third">
+                            <dt>Suggested Prefix Limits</dt>
+                            <dd class="text data">
+                                
+                                <p style="margin: 0px;"><b>IPv4:</b> 35</p>
+                                
+                                <p style="margin: 0px;"><b>IPv6:</b> 2</p>
+                            </dd>
+                        </dl>
+                        </div>
+
+                        
+
+                        <div id="normalixpsubpage">
+
+
+<h3>Internet Exchange Points</h3>
+
+<div class="scroll-ixp-div-on-small">
+<table id="ixpTable" class="full-width-table table-wide-to-force-scroll-on-mobile">
+    <thead class="sortable">
+        <tr>
+            <th class="nowrap boldpls">  &nbsp;  </th>
+            <th class="boldpls">Name</th>
+            <th class="nowrap boldpls">IPv4</th>
+            <th class="nowrap boldpls">IPv6</th>
+            <th data-sort-method='number' class="nowrap boldpls">Link Speed</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+        
+        <tr>
+            <td data-sort='AT' class="nowrap ns"><img class="flag-img" src="/assets/flags/AT.png" title="AT"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/VIX">VIX</a></td>
+            <td class="smallonmobile">193.203.0.81</a></td>
+            <td class="smallonmobile nowrap">2001:7f8:30:0:2:1:2:751</td>
+            <td data-sort='10000' class="smallonmobile">10 gbps</td>
+        </tr>
+        
+        
+    </tbody>
+</table>
+</div>
+
+
+
+
+
+
+
+
+<a style="font-size: small;">Last Update: 2025-12-13T10:08:20Z UTC</a>
+
+
+                        </div>
+                        <div id="overlapixpsubpage">
+                        </div>
+                    </div>
+                    
+                    
+
+                    
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="superclearfix">
+            
+            <div class="superclearfix">
+                
+            </div>
+
+            <div class="superclearfix">
+                
+            </div>
+
+
+        </div>
+
+
+        <div class="group js-footer" id="footer">
+            <nav>
+                <div>
+                    <ul>
+                        <li><a href="/kb/api" target="_blank">Scripting/API</a></li>
+                        <li><a href="/credits" target="_blank">Credits</a></li>
+                        <li><a href="/pricing" target="_blank">Pricing</a></li>
+                        <li><a href="/kb/contact" target="_blank">Contact Us</a></li>
+                        <li><a href="https://github.com/bgptools/issues" target="_blank">Issue Tracker</a></li>
+                        <li><a href="/kb/setup-sessions" target="">Contribute Data</a></li>
+                        
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <script>
+    
+    var inhash = window.location.hash;
+    if (inhash == "#asinfo") {
+        
+    } else if (inhash == "#prefixes") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#prefix-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#prefixes-page');
+        aaa[0].style.display = "";
+
+    } else if (inhash == "#connectivity" || inhash == "#peers" || inhash == "#upstreams" || inhash == "#downstreams") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#connectivity-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#connectivity-page');
+        aaa[0].style.display = "";
+    } else if (inhash == "#whois") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#whois-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#whois-page');
+        aaa[0].style.display = "";
+    } else if (inhash == "#ix") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#ix-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#ix-page');
+        aaa[0].style.display = "";
+    }</script>
+
+    <script>
+    
+
+
+    ;(function() {
+  'use strict'
+
+  function scaleImageMap() {
+    function resizeMap() {
+      function resizeAreaTag(cachedAreaCoords, idx) {
+        function scale(coord) {
+          var dimension = 1 === (isWidth = 1 - isWidth) ? 'width' : 'height'
+          return (
+            padding[dimension] +
+            Math.floor(Number(coord) * scalingFactor[dimension])
+          )
+        }
+
+        var isWidth = 0
+        areas[idx].coords = cachedAreaCoords
+          .split(',')
+          .map(scale)
+          .join(',')
+      }
+
+      var scalingFactor = {
+        width: image.width / image.naturalWidth,
+        height: image.height / image.naturalHeight,
+      }
+
+      var padding = {
+        width: parseInt(
+          window.getComputedStyle(image, null).getPropertyValue('padding-left'),
+          10
+        ),
+        height: parseInt(
+          window.getComputedStyle(image, null).getPropertyValue('padding-top'),
+          10
+        ),
+      }
+
+      cachedAreaCoordsArray.forEach(resizeAreaTag)
+    }
+
+    function getCoords(e) {
+      
+      return e.coords.replace(/ *, */g, ',').replace(/ +/g, ',')
+    }
+
+    function debounce() {
+      clearTimeout(timer)
+      timer = setTimeout(resizeMap, 250)
+    }
+
+    function start() {
+      if (
+        image.width !== image.naturalWidth ||
+        image.height !== image.naturalHeight
+      ) {
+        resizeMap()
+      }
+    }
+
+    function addEventListeners() {
+      image.addEventListener('load', resizeMap, false) 
+      window.addEventListener('focus', resizeMap, false) 
+      window.addEventListener('resize', debounce, false)
+      window.addEventListener('readystatechange', resizeMap, false)
+      document.addEventListener('fullscreenchange', resizeMap, false)
+    }
+
+    function beenHere() {
+      return 'function' === typeof map._resize
+    }
+
+    function getImg(name) {
+      return document.querySelector('img[usemap="#world"]')
+    }
+
+    function setup() {
+      areas = map.getElementsByTagName('area')
+      cachedAreaCoordsArray = Array.prototype.map.call(areas, getCoords)
+      image = getImg('#' + map.name) || getImg(map.name)
+      map._resize = resizeMap 
+    }
+
+    var  
+      map = this,
+      areas = null,
+      cachedAreaCoordsArray = null,
+      image = null,
+      timer = null
+
+    if (!beenHere()) {
+      setup()
+      addEventListeners()
+      start()
+    } else {
+      map._resize() 
+    }
+  }
+
+  function factory() {
+    function chkMap(element) {
+      if (!element.tagName) {
+        throw new TypeError('Object is not a valid DOM element')
+      } else if ('MAP' !== element.tagName.toUpperCase()) {
+        throw new TypeError(
+          'Expected <MAP> tag, found <' + element.tagName + '>.'
+        )
+      }
+    }
+
+    function init(element) {
+      if (element) {
+        chkMap(element)
+        scaleImageMap.call(element)
+        maps.push(element)
+      }
+    }
+
+    var maps
+
+    return function imageMapResizeF(target) {
+      maps = [] 
+
+      switch (typeof target) {
+        case 'undefined':
+        case 'string':
+          Array.prototype.forEach.call(
+            document.querySelectorAll(target || 'map'),
+            init
+          )
+          break
+        case 'object':
+          init(target)
+          break
+        default:
+          throw new TypeError('Unexpected data type (' + typeof target + ').')
+      }
+
+      return maps
+    }
+  }
+
+  if (typeof define === 'function' && define.amd) {
+    define([], factory)
+  } else if (typeof module === 'object' && typeof module.exports === 'object') {
+    module.exports = factory() 
+  } else {
+    window.imageMapResize = factory()
+  }
+
+  if ('jQuery' in window) {
+    window.jQuery.fn.imageMapResize = function $imageMapResizeF() {
+      return this.filter('map')
+        .each(scaleImageMap)
+        .end()
+    }
+  }
+})()
+    
+    </script>
+    <script>
+        var imgEl = document.getElementById("pathimg");
+        imgEl.addEventListener("mouseover",function() {
+            imageMapResize('#world');
+        })
+    </script>
+    <script src="/assets/tablesort.min.js"></script>
+    <script>
+        addEventListener("load", (event) => {
+            
+            
+            var sort = new Tablesort(document.getElementById('donotscrapebgptools-upstreamTable'));
+            var sort2 = new Tablesort(document.getElementById('donotscrapebgptools-upstreamTablePeers'));
+            
+            var sort3 = new Tablesort(document.getElementById('donotscrapebgptools-upstreamTableDowns'));
+            
+            var sort4 = new Tablesort(document.getElementById('ixpTable'));
+            
+        });
+    </script>
+    
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        setTimeout(function() {
+
+        var beaconHttp = new XMLHttpRequest();
+        var url = '/performance-beacon';
+        var params = JSON.stringify(window.performance)
+        beaconHttp.open('POST', url, true);
+        
+        
+        beaconHttp.setRequestHeader('Content-type', 'application/json');
+        beaconHttp.setRequestHeader('visit-url', "/as/20751");
+        if (navigator.connection) {
+            beaconHttp.setRequestHeader('client-side-rtt', navigator.connection.rtt);
+        } else {
+            beaconHttp.setRequestHeader('client-side-rtt', '-2');
+        }
+        beaconHttp.onreadystatechange = function() {}
+        beaconHttp.send(params);
+        },1000)
+    }, false);
+</script>
+
+</body>
+
+
+</html>
