@@ -1,0 +1,794 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Pascal Gloor (AS29260) is a inactive BGP network">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000">
+    <link rel="search" type="application/opensearchdescription+xml" title="BGP.Tools" href="https://bgp.tools/opensearch.xml">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="theme-color" content="#000000">
+    <link href="https://social.bgp.tools/@bgptools" rel="me">
+    <link rel="canonical" href="https://bgp.tools/as/29260" />
+    <title>AS29260 Pascal Gloor - bgp.tools</title>
+    <link rel="stylesheet" type="text/css" href="/assets/main-new.css?2025-12-13-1541%20UTC">
+</head>
+
+<body>
+    <div id="container">
+        
+<div id="global-header" class="global-header-top">
+    <div class="header-sitewide">
+        <div class="global-header">
+            <div class="header-logo">
+                <a href="/" id="logo" class="content">bgp.tools</a>
+            </div>
+            <form id="search" action="/search" method="get" accept-charset="utf-8" role="search" class="top-search-header js-search-hash">
+                <div class="searchfield">
+                    <input type="search" autocomplete="off" name="q" id="site-search-text" title="Search" value="" placeholder="Start here..." autofocus="autofocus" class="js-search-focus">
+                    <button type="submit" id="search-submit" class="search-submit">Search</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div id="global-header-blob" >
+    <a id="auth-header-text" href="/login">Login</a>
+    
+</div>
+<div id="global-header-bar" >
+    <a id="auth-header-bar-text" href="/login">Login</a>
+    
+</div>
+<div class="small-clearfix"></div>
+
+        <div id="global-container">
+            
+
+
+            
+            <div class="section-tabs js-tabs">
+                <ul>
+                    
+<li class="active">
+    <h1> <a id="viewbutton-tab" href="/as/29260">View</a></h1>
+</li>
+
+<li >
+    <a id="editbutton-tab" href="/edit/as/29260">Edit</a>
+</li>
+
+
+
+
+
+                    <li style="float: right;">
+                        
+                        <img id="ws-status" width="24" height="24" src="/assets/disconnected.png" title="Not Connected To realtime data updates">
+                        
+                    </li>
+                </ul>
+            </div>
+
+            <div id="search-container">
+
+                <div class="column-full-width">
+
+                    <div class="clearfix">
+                        
+                    </div>
+                    
+                    <div class="warningbox">This ASN is not currently in the global routing table</div>
+                    
+                    
+
+                    <div class="network-header">
+                        
+                        
+                        <img width="334" height="250" src="/img/29260" alt="The website screenshot for http://www.netlantis.org" >
+                        
+                        
+                        <p id="network-name" class="heading-xlarge">Pascal Gloor</p>
+                        <p id="network-number">
+                            AS Number
+                            <strong id="ASNumberString" pure="29260">29260</strong>
+                            <br>
+                        
+                            Website
+                            <strong><a href="http://www.netlantis.org" rel="nofollow">http://www.netlantis.org</a></strong>
+                        
+                        </p>
+
+                    </div>
+
+
+                    <div class="clearfix">
+                        
+                    </div>
+
+
+                    <div class="section-tabs js-tabs">
+                        <ul>
+
+                            <li id="overview-tab-li" class="active">
+                                <a id="overview-tab" href="#asinfo">Overview</a>
+                            </li>
+                            
+                            <li id="whois-tab-li">
+                                <a id="whois-tab" href="#whois">Whois</a>
+                            </li>
+                        
+                        
+                        </ul>
+                    </div>
+
+<script>
+    function removeAllActiveTab() {
+        var tabs = [
+            "overview-tab-li", 
+            "prefix-tab-li", 
+            "connectivity-tab-li",
+            "whois-tab-li",
+            "ix-tab-li",
+            "issues-tab-li"
+        ];
+
+        tabs.forEach(element => {
+            var aaa = document.querySelectorAll('#'+element);
+            if(aaa.length != 0) {
+                aaa[0].classList.remove("active")
+            }
+        });
+    }
+
+    function hideAllContent() {
+        var tabs = [
+            "overview-page", 
+            "prefixes-page", 
+            "connectivity-page",
+            "whois-page",
+            "ix-page",
+            "issues-page"
+        ];
+
+        tabs.forEach(element => {
+            var aaa = document.querySelectorAll('#'+element);
+            if(aaa.length != 0) {
+                aaa[0].style.display = "none";
+            }
+        });
+        if (document.getElementById("donotscrapebgptools-prefixlist-tbody")) {
+            var prefixrows = document.getElementById("donotscrapebgptools-prefixlist-tbody").children;
+            for (var i = 0; i < prefixrows.length; i++) {
+                prefixrows[i].style = "";
+            }
+        }
+    }
+
+    var otab = document.querySelectorAll('#overview-tab');
+    otab[0].addEventListener("click", function () {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#overview-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#overview-page');
+        aaa[0].style.display = "";
+    });
+    
+
+    var wtab = document.querySelectorAll('#whois-tab');
+    wtab[0].addEventListener("click", function () {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#whois-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#whois-page');
+        aaa[0].style.display = "";
+    });
+
+</script>
+
+
+
+                    
+                    <div id="overview-page">
+
+                        <div class="grid-row">
+                        
+                        <div class="column-two-thirds">
+                            <dl>
+                                <dt>Registered on</dt>
+                                <dd class="text data">
+                                    
+                                    11 Jul 2003 (22 years old)
+                                </dd>
+                            
+                            
+                            <dt>Registered to</dt>
+                            <dd class="text data">
+                                <a href="/rir-owner/ORG-PG93-RIPE">ORG-PG93-RIPE</a> (ripe)</dd>
+                                
+                            
+                            </dl>
+                        </div>
+                        
+    
+                        <dl class="column-third">
+                            <dt>Network status</dt>
+                            <dd class="text data">
+                                
+                                Active, Allocated under RIPE
+                                
+                            </dd>
+                        </dl>
+    
+                        </div>
+    
+                        <div class="grid-row">
+                            <dl class="column-two-thirds">
+                                <dt>Network type</dt>
+                                <dd class="text data">
+                                    Unknown
+                                </dd>
+                            </dl>
+    
+                            <dl class="column-third">
+                                <dt>Prefixes Originated</dt>
+                                <dd class="data">0 IPv4, 0 IPv6</dd>
+                            </dl>
+                        </div>
+                        <div class="grid-row">
+                            <div class="column-half">
+    
+                                <h2 class="heading-medium"><derp>Upstreams</derp></h2>
+                                <ul>
+                                    
+                                </ul>
+    
+                            </div>
+    
+                            <div class="column-half">
+                                
+                                    <h2 class="heading-medium"><derp>Locations of Operation</derp></h2>
+                                    
+                                    <li><span id="sic0">Switzerland</span></li>
+                                    
+                                
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                    <div style="display: none" id="whois-page">
+                        
+                        
+                        <pre style="white-space: pre-wrap;">aut-num:        <a href="/AS29260">AS29260</a>
+as-name:        NETLANTIS
+org:            <a href="https://apps.db.ripe.net/db-web-ui/query?searchtext=ORG-PG93-RIPE">ORG-PG93-RIPE</a>
+descr:          Autonomus System for NetLantis RouteServers
+remarks:
+remarks:        For peering, please fill up the form at the following URL
+remarks:        http://www.netlantis.org/index.html?menu=5&amp;page=newpeer
+remarks:
+remarks:        All Netlantis tools available on http://www.netlantis.org
+remarks:
+remarks:        ===========================================================
+remarks:        PEERS FROM nrc01.netlantis.org
+remarks:        WARNING: This RouteCollector is running under <a href="/AS12654">AS12654</a>
+remarks:        Please refer to this object
+remarks:        ===========================================================
+remarks:        PEERS FROM nrc02.netlantis.org
+remarks:        ===========================================================
+import:         from <a href="/AS286">AS286</a> 134.222.86.174 at 212.60.59.52 accept ANY
+import:         from <a href="/AS5418">AS5418</a> 217.170.15.1 at 212.60.59.52 accept ANY
+import:         from <a href="/AS8246">AS8246</a> 157.25.1.130 at 212.60.59.52 accept ANY
+import:         from <a href="/AS8839">AS8839</a> 212.95.67.41 at 212.60.59.52 accept ANY
+import:         from <a href="/AS8966">AS8966</a> 195.229.0.2 at 212.60.59.52 accept ANY
+import:         from <a href="/AS8968">AS8968</a> 213.217.153.94 at 212.60.59.52 accept ANY
+import:         from <a href="/AS9044">AS9044</a> 212.101.1.245 at 212.60.59.52 accept ANY
+import:         from <a href="/AS12381">AS12381</a> 194.68.48.4 at 212.60.59.52 accept ANY
+import:         from <a href="/AS12401">AS12401</a> 212.126.64.12 at 212.60.59.52 accept ANY
+import:         from <a href="/AS12634">AS12634</a> 213.204.200.1 at 212.60.59.52 accept ANY
+import:         from <a href="/AS12731">AS12731</a> 213.128.128.30 at 212.60.59.52 accept ANY
+import:         from <a href="/AS12779">AS12779</a> 213.254.2.4 at 212.60.59.52 accept ANY
+import:         from <a href="/AS12902">AS12902</a> 217.77.137.194 at 212.60.59.52 accept ANY
+import:         from <a href="/AS13101">AS13101</a> 213.178.64.91 at 212.60.59.52 accept ANY
+import:         from <a href="/AS13268">AS13268</a> 212.124.91.3 at 212.60.59.52 accept ANY
+import:         from <a href="/AS15407">AS15407</a> 212.93.128.142 at 212.60.59.52 accept ANY
+import:         from <a href="/AS15407">AS15407</a> 62.231.65.162 at 212.60.59.52 accept ANY
+import:         from <a href="/AS15498">AS15498</a> 62.13.199.1 at 212.60.59.52 accept ANY
+import:         from <a href="/AS15567">AS15567</a> 217.13.200.37 at 212.60.59.52 accept ANY
+import:         from <a href="/AS15600">AS15600</a> 212.60.35.23 at 212.60.59.52 accept ANY
+import:         from <a href="/AS20766">AS20766</a> 80.67.160.37 at 212.60.59.52 accept ANY
+import:         from <a href="/AS21155">AS21155</a> 80.84.239.1 at 212.60.59.52 accept ANY
+import:         from <a href="/AS21398">AS21398</a> 80.242.96.123 at 212.60.59.52 accept ANY
+import:         from <a href="/AS24587">AS24587</a> 81.17.32.182 at 212.60.59.52 accept ANY
+import:         from <a href="/AS25137">AS25137</a> 81.92.201.239 at 212.60.59.52 accept ANY
+import:         from <a href="/AS25358">AS25358</a> 195.140.149.1 at 212.60.59.52 accept ANY
+import:         from <a href="/AS25409">AS25409</a> 195.234.188.145 at 212.60.59.52 accept ANY
+import:         from <a href="/AS25492">AS25492</a> 195.22.128.1 at 212.60.59.52 accept ANY
+import:         from <a href="/AS25560">AS25560</a> 62.216.175.6 at 212.60.59.52 accept ANY
+import:         from <a href="/AS25577">AS25577</a> 80.253.114.9 at 212.60.59.52 accept ANY
+import:         from <a href="/AS28685">AS28685</a> 213.144.232.1 at 212.60.59.52 accept ANY
+import:         from <a href="/AS28747">AS28747</a> 217.22.48.5 at 212.60.59.52 accept ANY
+import:         from <a href="/AS28788">AS28788</a> 62.133.193.33 at 212.60.59.52 accept ANY
+import:         from <a href="/AS28956">AS28956</a> 80.253.115.254 at 212.60.59.52 accept ANY
+import:         from <a href="/AS29017">AS29017</a> 213.228.194.1 at 212.60.59.52 accept ANY
+import:         from <a href="/AS29105">AS29105</a> 195.128.40.16 at 212.60.59.52 accept ANY
+import:         from <a href="/AS29152">AS29152</a> 195.80.158.253 at 212.60.59.52 accept ANY
+import:         from <a href="/AS29279">AS29279</a> 62.221.192.1 at 212.60.59.52 accept ANY
+import:         from <a href="/AS29415">AS29415</a> 195.137.248.3 at 212.60.59.52 accept ANY
+import:         from <a href="/AS29444">AS29444</a> 82.136.0.142 at 212.60.59.52 accept ANY
+import:         from <a href="/AS29449">AS29449</a> 82.143.0.4 at 212.60.59.52 accept ANY
+import:         from <a href="/AS29686">AS29686</a> 213.248.79.66 at 212.60.59.52 accept ANY
+import:         from <a href="/AS29838">AS29838</a> 66.230.156.1 at 212.60.59.52 accept ANY
+remarks:        ===========================================================
+remarks:        PEERS FROM nrc03.netlantis.org
+remarks:        ===========================================================
+import:         from <a href="/AS286">AS286</a> 134.222.85.45 at 217.75.108.170 accept ANY
+import:         from <a href="/AS3344">AS3344</a> 195.22.135.241 at 217.75.108.170 accept ANY
+import:         from <a href="/AS4787">AS4787</a> 202.158.51.26 at 217.75.108.170 accept ANY
+import:         from <a href="/AS4788">AS4788</a> 203.106.87.60 at 217.75.108.170 accept ANY
+import:         from <a href="/AS6911">AS6911</a> 62.84.160.6 at 217.75.108.170 accept ANY
+import:         from <a href="/AS7606">AS7606</a> 198.32.212.253 at 217.75.108.170 accept ANY
+import:         from <a href="/AS8289">AS8289</a> 212.37.9.254 at 217.75.108.170 accept ANY
+import:         from <a href="/AS8648">AS8648</a> 213.146.113.2 at 217.75.108.170 accept ANY
+import:         from <a href="/AS8708">AS8708</a> 193.231.184.233 at 217.75.108.170 accept ANY
+import:         from <a href="/AS9541">AS9541</a> 202.163.120.153 at 217.75.108.170 accept ANY
+import:         from <a href="/AS12399">AS12399</a> 212.211.254.253 at 217.75.108.170 accept ANY
+import:         from <a href="/AS12670">AS12670</a> 213.30.128.12 at 217.75.108.170 accept ANY
+import:         from <a href="/AS12832">AS12832</a> 213.193.31.249 at 217.75.108.170 accept ANY
+import:         from <a href="/AS12859">AS12859</a> 213.136.31.6 at 217.75.108.170 accept ANY
+import:         from <a href="/AS13237">AS13237</a> 80.245.35.6 at 217.75.108.170 accept ANY
+import:         from <a href="/AS13308">AS13308</a> 193.111.165.3 at 217.75.108.170 accept ANY
+import:         from <a href="/AS15879">AS15879</a> 213.133.47.65 at 217.75.108.170 accept ANY
+import:         from <a href="/AS16150">AS16150</a> 217.75.96.60 at 217.75.108.170 accept ANY
+import:         from <a href="/AS16316">AS16316</a> 217.145.96.1 at 217.75.108.170 accept ANY
+import:         from <a href="/AS20847">AS20847</a> 62.165.127.69 at 217.75.108.170 accept ANY
+import:         from <a href="/AS20857">AS20857</a> 80.69.67.1 at 217.75.108.170 accept ANY
+import:         from <a href="/AS21099">AS21099</a> 213.221.179.120 at 217.75.108.170 accept ANY
+import:         from <a href="/AS21202">AS21202</a> 217.78.32.126 at 217.75.108.170 accept ANY
+import:         from <a href="/AS24765">AS24765</a> 62.24.226.254 at 217.75.108.170 accept ANY
+import:         from <a href="/AS25018">AS25018</a> 212.90.113.1 at 217.75.108.170 accept ANY
+import:         from <a href="/AS25048">AS25048</a> 81.90.128.1 at 217.75.108.170 accept ANY
+import:         from <a href="/AS25209">AS25209</a> 195.69.144.150 at 217.75.108.170 accept ANY
+import:         from <a href="/AS25232">AS25232</a> 213.247.40.125 at 217.75.108.170 accept ANY
+import:         from <a href="/AS25369">AS25369</a> 195.20.108.1 at 217.75.108.170 accept ANY
+import:         from <a href="/AS25391">AS25391</a> 195.20.116.252 at 217.75.108.170 accept ANY
+import:         from <a href="/AS25396">AS25396</a> 195.22.135.254 at 217.75.108.170 accept ANY
+import:         from <a href="/AS25443">AS25443</a> 194.69.207.39 at 217.75.108.170 accept ANY
+import:         from <a href="/AS28707">AS28707</a> 62.213.192.18 at 217.75.108.170 accept ANY
+import:         from <a href="/AS28764">AS28764</a> 217.156.120.57 at 217.75.108.170 accept ANY
+import:         from <a href="/AS29075">AS29075</a> 80.67.180.19 at 217.75.108.170 accept ANY
+import:         from <a href="/AS29468">AS29468</a> 194.8.31.0 at 217.75.108.170 accept ANY
+import:         from <a href="/AS29527">AS29527</a> 80.82.140.1 at 217.75.108.170 accept ANY
+import:         from <a href="/AS29608">AS29608</a> 62.233.44.17 at 217.75.108.170 accept ANY
+import:         from <a href="/AS30779">AS30779</a> 195.24.147.35 at 217.75.108.170 accept ANY
+import:         from <a href="/AS30781">AS30781</a> 82.138.68.11 at 217.75.108.170 accept ANY
+import:         from <a href="/AS30880">AS30880</a> 217.75.99.2 at 217.75.108.170 accept ANY
+import:         from <a href="/AS30893">AS30893</a> 195.47.238.33 at 217.75.108.170 accept ANY
+import:         from <a href="/AS30967">AS30967</a> 217.79.160.113 at 217.75.108.170 accept ANY
+remarks:        ===========================================================
+remarks:        PEERS FROM nrc04.netlantis.org
+remarks:        ===========================================================
+import:         from <a href="/AS5641">AS5641</a> 207.114.4.131 at 204.238.179.126 accept ANY
+import:         from <a href="/AS8843">AS8843</a> 62.220.128.77 at 204.238.179.126 accept ANY
+import:         from <a href="/AS9472">AS9472</a> 202.70.192.194 at 204.238.179.126 accept ANY
+import:         from <a href="/AS9942">AS9942</a> 203.194.0.12 at 204.238.179.126 accept ANY
+import:         from <a href="/AS12111">AS12111</a> 216.229.166.252 at 204.238.179.126 accept ANY
+import:         from <a href="/AS23393">AS23393</a> 66.230.128.2 at 204.238.179.126 accept ANY
+import:         from <a href="/AS26625">AS26625</a> 196.45.0.1 at 204.238.179.126 accept ANY
+import:         from <a href="/AS26943">AS26943</a> 64.202.112.62 at 204.238.179.126 accept ANY
+import:         from <a href="/AS30374">AS30374</a> 216.220.25.8 at 204.238.179.126 accept ANY
+remarks:        ===========================================================
+remarks:        PEERS FROM nrc05.netlantis.org
+remarks:        ===========================================================
+import:         from <a href="/AS2493">AS2493</a> 206.186.255.223 at 64.235.244.128 accept ANY
+import:         from <a href="/AS3742">AS3742</a> 209.221.134.253 at 64.235.244.128 accept ANY
+import:         from <a href="/AS4779">AS4779</a> 202.90.128.10 at 64.235.244.128 accept ANY
+import:         from <a href="/AS6508">AS6508</a> 216.206.181.1 at 64.235.244.128 accept ANY
+import:         from <a href="/AS6508">AS6508</a> 216.177.80.2 at 64.235.244.128 accept ANY
+import:         from <a href="/AS10084">AS10084</a> 198.32.212.252 at 64.235.244.128 accept ANY
+import:         from <a href="/AS10848">AS10848</a> 216.182.0.33 at 64.235.244.128 accept ANY
+import:         from <a href="/AS11686">AS11686</a> 208.182.75.33 at 64.235.244.128 accept ANY
+import:         from <a href="/AS14589">AS14589</a> 216.111.117.194 at 64.235.244.128 accept ANY
+import:         from <a href="/AS14818">AS14818</a> 65.19.2.3 at 64.235.244.128 accept ANY
+import:         from <a href="/AS15412">AS15412</a> 195.66.224.146 at 64.235.244.128 accept ANY
+import:         from <a href="/AS16532">AS16532</a> 66.158.128.1 at 64.235.244.128 accept ANY
+import:         from <a href="/AS18474">AS18474</a> 209.173.32.3 at 64.235.244.128 accept ANY
+import:         from <a href="/AS21548">AS21548</a> 64.254.224.109 at 64.235.244.128 accept ANY
+import:         from <a href="/AS21875">AS21875</a> 66.252.224.1 at 64.235.244.128 accept ANY
+import:         from <a href="/AS23352">AS23352</a> 64.202.111.10 at 64.235.244.128 accept ANY
+import:         from <a href="/AS23401">AS23401</a> 66.51.135.1 at 64.235.244.128 accept ANY
+import:         from <a href="/AS23609">AS23609</a> 203.149.72.1 at 64.235.244.128 accept ANY
+import:         from <a href="/AS25973">AS25973</a> 64.235.224.141 at 64.235.244.128 accept ANY
+import:         from <a href="/AS26627">AS26627</a> 66.250.55.26 at 64.235.244.128 accept ANY
+import:         from <a href="/AS27504">AS27504</a> 209.74.230.250 at 64.235.244.128 accept ANY
+import:         from <a href="/AS30071">AS30071</a> 65.124.16.70 at 64.235.244.128 accept ANY
+remarks:        ===========================================================
+remarks:        PEERS FROM nrc06.netlantis.org
+remarks:        ===========================================================
+import:         from <a href="/AS4844">AS4844</a> 210.23.0.129 at 202.73.37.19 accept ANY
+import:         from <a href="/AS9791">AS9791</a> 202.122.168.3 at 202.73.37.19 accept ANY
+import:         from <a href="/AS10075">AS10075</a> 203.124.127.251 at 202.73.37.19 accept ANY
+import:         from <a href="/AS18106">AS18106</a> 202.73.40.33 at 202.73.37.19 accept ANY
+import:         from <a href="/AS23837">AS23837</a> 203.152.134.21 at 202.73.37.19 accept ANY
+remarks:        ===========================================================
+remarks:        PEERS FROM nrc07.netlantis.org
+remarks:        ===========================================================
+import:         from <a href="/AS577">AS577</a> 204.101.196.36 at 64.142.17.4 accept ANY
+import:         from <a href="/AS7065">AS7065</a> 64.142.1.23 at 64.142.17.4 accept ANY
+import:         from <a href="/AS23265">AS23265</a> 64.185.97.128 at 64.142.17.4 accept ANY
+remarks:        ===========================================================
+remarks:        PEERS FROM nrc08.netlantis.org
+remarks:        ===========================================================
+import:         from <a href="/AS14007">AS14007</a> 216.251.128.254 at 66.197.0.65 accept ANY
+import:         from <a href="/AS21844">AS21844</a> 12.96.160.128 at 66.197.0.65 accept ANY
+remarks:        ===========================================================
+remarks:        PEERS FROM nrc09.netlantis.org
+remarks:        ===========================================================
+import:         from <a href="/AS25818">AS25818</a> 69.67.35.1 at 196.35.54.10 accept ANY
+remarks:        ===========================================================
+sponsoring-org: <a href="https://apps.db.ripe.net/db-web-ui/query?searchtext=ORG-SNN1-RIPE">ORG-SNN1-RIPE</a>
+admin-c:        DUMY-RIPE
+tech-c:         DUMY-RIPE
+status:         ASSIGNED
+mnt-by:         RIPE-NCC-END-MNT
+mnt-by:         NETLANTIS-MNT
+created:        2003-07-11T14:48:14Z
+last-modified:  2023-03-14T12:51:08Z
+source:         RIPE
+remarks:        ****************************
+remarks:        * THIS OBJECT IS MODIFIED
+remarks:        * Please note that all data that is generally regarded as personal
+remarks:        * data has been removed from this object.
+remarks:        * To view the original object, please query the RIPE Database at:
+remarks:        * http://www.ripe.net/whois
+remarks:        ****************************
+
+
+organisation:   <a href="https://apps.db.ripe.net/db-web-ui/query?searchtext=ORG-PG93-RIPE">ORG-PG93-RIPE</a>
+org-name:       Pascal Gloor
+country:        CH
+org-type:       OTHER
+address:        Dummy address for <a href="https://apps.db.ripe.net/db-web-ui/query?searchtext=ORG-PG93-RIPE">ORG-PG93-RIPE</a>
+# Email removed, Log into bgp.tools to see whois emails
+abuse-c:        SPLR1-RIPE
+mnt-ref:        NETLANTIS-MNT
+mnt-by:         NETLANTIS-MNT
+created:        2014-05-27T13:21:38Z
+last-modified:  2022-12-01T17:22:47Z
+source:         RIPE
+remarks:        ****************************
+remarks:        * THIS OBJECT IS MODIFIED
+remarks:        * Please note that all data that is generally regarded as personal
+remarks:        * data has been removed from this object.
+remarks:        * To view the original object, please query the RIPE Database at:
+remarks:        * http://www.ripe.net/whois
+remarks:        ****************************
+
+</pre>
+                        
+                        
+                        <a style="font-size: small;">Last Update: 2025-12-11T03:25:09Z UTC </a>
+                        
+                        <hr>
+                        
+                            <h2>Member of the following AS-SETs</h2>
+
+                            <table id="fhTable" class="full-width-table ">
+                                <tbody id="prefixlist-tbody">
+                                    <tr>
+                                        <th class="boldpls nowrap"> - </th>
+                                        <th class="boldpls">Member</th>
+                                        
+                                        <th class="boldpls nowrap">ASN Count</th>
+                                    </tr>
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                        
+
+                    </div>
+
+                    
+
+                    
+
+                    
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="superclearfix">
+            
+            <div class="superclearfix">
+                
+            </div>
+
+            <div class="superclearfix">
+                
+            </div>
+
+
+        </div>
+
+
+        <div class="group js-footer" id="footer">
+            <nav>
+                <div>
+                    <ul>
+                        <li><a href="/kb/api" target="_blank">Scripting/API</a></li>
+                        <li><a href="/credits" target="_blank">Credits</a></li>
+                        <li><a href="/pricing" target="_blank">Pricing</a></li>
+                        <li><a href="/kb/contact" target="_blank">Contact Us</a></li>
+                        <li><a href="https://github.com/bgptools/issues" target="_blank">Issue Tracker</a></li>
+                        <li><a href="/kb/setup-sessions" target="">Contribute Data</a></li>
+                        
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <script>
+    
+    var inhash = window.location.hash;
+    if (inhash == "#asinfo") {
+        
+    } else if (inhash == "#prefixes") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#prefix-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#prefixes-page');
+        aaa[0].style.display = "";
+
+    } else if (inhash == "#connectivity" || inhash == "#peers" || inhash == "#upstreams" || inhash == "#downstreams") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#connectivity-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#connectivity-page');
+        aaa[0].style.display = "";
+    } else if (inhash == "#whois") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#whois-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#whois-page');
+        aaa[0].style.display = "";
+    } else if (inhash == "#ix") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#ix-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#ix-page');
+        aaa[0].style.display = "";
+    }</script>
+
+    <script>
+    
+
+
+    ;(function() {
+  'use strict'
+
+  function scaleImageMap() {
+    function resizeMap() {
+      function resizeAreaTag(cachedAreaCoords, idx) {
+        function scale(coord) {
+          var dimension = 1 === (isWidth = 1 - isWidth) ? 'width' : 'height'
+          return (
+            padding[dimension] +
+            Math.floor(Number(coord) * scalingFactor[dimension])
+          )
+        }
+
+        var isWidth = 0
+        areas[idx].coords = cachedAreaCoords
+          .split(',')
+          .map(scale)
+          .join(',')
+      }
+
+      var scalingFactor = {
+        width: image.width / image.naturalWidth,
+        height: image.height / image.naturalHeight,
+      }
+
+      var padding = {
+        width: parseInt(
+          window.getComputedStyle(image, null).getPropertyValue('padding-left'),
+          10
+        ),
+        height: parseInt(
+          window.getComputedStyle(image, null).getPropertyValue('padding-top'),
+          10
+        ),
+      }
+
+      cachedAreaCoordsArray.forEach(resizeAreaTag)
+    }
+
+    function getCoords(e) {
+      
+      return e.coords.replace(/ *, */g, ',').replace(/ +/g, ',')
+    }
+
+    function debounce() {
+      clearTimeout(timer)
+      timer = setTimeout(resizeMap, 250)
+    }
+
+    function start() {
+      if (
+        image.width !== image.naturalWidth ||
+        image.height !== image.naturalHeight
+      ) {
+        resizeMap()
+      }
+    }
+
+    function addEventListeners() {
+      image.addEventListener('load', resizeMap, false) 
+      window.addEventListener('focus', resizeMap, false) 
+      window.addEventListener('resize', debounce, false)
+      window.addEventListener('readystatechange', resizeMap, false)
+      document.addEventListener('fullscreenchange', resizeMap, false)
+    }
+
+    function beenHere() {
+      return 'function' === typeof map._resize
+    }
+
+    function getImg(name) {
+      return document.querySelector('img[usemap="#world"]')
+    }
+
+    function setup() {
+      areas = map.getElementsByTagName('area')
+      cachedAreaCoordsArray = Array.prototype.map.call(areas, getCoords)
+      image = getImg('#' + map.name) || getImg(map.name)
+      map._resize = resizeMap 
+    }
+
+    var  
+      map = this,
+      areas = null,
+      cachedAreaCoordsArray = null,
+      image = null,
+      timer = null
+
+    if (!beenHere()) {
+      setup()
+      addEventListeners()
+      start()
+    } else {
+      map._resize() 
+    }
+  }
+
+  function factory() {
+    function chkMap(element) {
+      if (!element.tagName) {
+        throw new TypeError('Object is not a valid DOM element')
+      } else if ('MAP' !== element.tagName.toUpperCase()) {
+        throw new TypeError(
+          'Expected <MAP> tag, found <' + element.tagName + '>.'
+        )
+      }
+    }
+
+    function init(element) {
+      if (element) {
+        chkMap(element)
+        scaleImageMap.call(element)
+        maps.push(element)
+      }
+    }
+
+    var maps
+
+    return function imageMapResizeF(target) {
+      maps = [] 
+
+      switch (typeof target) {
+        case 'undefined':
+        case 'string':
+          Array.prototype.forEach.call(
+            document.querySelectorAll(target || 'map'),
+            init
+          )
+          break
+        case 'object':
+          init(target)
+          break
+        default:
+          throw new TypeError('Unexpected data type (' + typeof target + ').')
+      }
+
+      return maps
+    }
+  }
+
+  if (typeof define === 'function' && define.amd) {
+    define([], factory)
+  } else if (typeof module === 'object' && typeof module.exports === 'object') {
+    module.exports = factory() 
+  } else {
+    window.imageMapResize = factory()
+  }
+
+  if ('jQuery' in window) {
+    window.jQuery.fn.imageMapResize = function $imageMapResizeF() {
+      return this.filter('map')
+        .each(scaleImageMap)
+        .end()
+    }
+  }
+})()
+    
+    </script>
+    <script>
+        var imgEl = document.getElementById("pathimg");
+        imgEl.addEventListener("mouseover",function() {
+            imageMapResize('#world');
+        })
+    </script>
+    <script src="/assets/tablesort.min.js"></script>
+    <script>
+        addEventListener("load", (event) => {
+            
+            
+            var sort = new Tablesort(document.getElementById('donotscrapebgptools-upstreamTable'));
+            var sort2 = new Tablesort(document.getElementById('donotscrapebgptools-upstreamTablePeers'));
+            
+            
+            
+        });
+    </script>
+    
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        setTimeout(function() {
+
+        var beaconHttp = new XMLHttpRequest();
+        var url = '/performance-beacon';
+        var params = JSON.stringify(window.performance)
+        beaconHttp.open('POST', url, true);
+        
+        
+        beaconHttp.setRequestHeader('Content-type', 'application/json');
+        beaconHttp.setRequestHeader('visit-url', "/as/29260");
+        if (navigator.connection) {
+            beaconHttp.setRequestHeader('client-side-rtt', navigator.connection.rtt);
+        } else {
+            beaconHttp.setRequestHeader('client-side-rtt', '-2');
+        }
+        beaconHttp.onreadystatechange = function() {}
+        beaconHttp.send(params);
+        },1000)
+    }, false);
+</script>
+
+</body>
+
+
+</html>

@@ -1,0 +1,2361 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Joint Stock Company TransTeleCom (AS28745) is a 22 year old BGP network that is peering with 8 other networks and has 1 upstream carriers">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000">
+    <link rel="search" type="application/opensearchdescription+xml" title="BGP.Tools" href="https://bgp.tools/opensearch.xml">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="theme-color" content="#000000">
+    <link href="https://social.bgp.tools/@bgptools" rel="me">
+    <link rel="canonical" href="https://bgp.tools/as/28745" />
+    <title>AS28745 Joint Stock Company TransTeleCom - bgp.tools</title>
+    <link rel="stylesheet" type="text/css" href="/assets/main-new.css?2025-12-13-1541%20UTC">
+</head>
+
+<body>
+    <div id="container">
+        
+<div id="global-header" class="global-header-top">
+    <div class="header-sitewide">
+        <div class="global-header">
+            <div class="header-logo">
+                <a href="/" id="logo" class="content">bgp.tools</a>
+            </div>
+            <form id="search" action="/search" method="get" accept-charset="utf-8" role="search" class="top-search-header js-search-hash">
+                <div class="searchfield">
+                    <input type="search" autocomplete="off" name="q" id="site-search-text" title="Search" value="" placeholder="Start here..." autofocus="autofocus" class="js-search-focus">
+                    <button type="submit" id="search-submit" class="search-submit">Search</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div id="global-header-blob" >
+    <a id="auth-header-text" href="/login">Login</a>
+    
+</div>
+<div id="global-header-bar" >
+    <a id="auth-header-bar-text" href="/login">Login</a>
+    
+</div>
+<div class="small-clearfix"></div>
+
+        <div id="global-container">
+            
+
+
+            
+            <div class="section-tabs js-tabs">
+                <ul>
+                    
+<li class="active">
+    <h1> <a id="viewbutton-tab" href="/as/28745">View</a></h1>
+</li>
+
+<li >
+    <a id="editbutton-tab" href="/edit/as/28745">Edit</a>
+</li>
+
+
+
+
+
+                    <li style="float: right;">
+                        
+                        <img id="ws-status" width="24" height="24" src="/assets/disconnected.png" title="Not Connected To realtime data updates">
+                        
+                    </li>
+                </ul>
+            </div>
+
+            <div id="search-container">
+
+                <div class="column-full-width">
+
+                    <div class="clearfix">
+                        
+                    </div>
+                    
+                    
+
+                    <div class="network-header">
+                        
+                        <p id="network-name" class="heading-xlarge">Joint Stock Company TransTeleCom</p>
+                        <p id="network-number">
+                            AS Number
+                            <strong id="ASNumberString" pure="28745">28745</strong>
+                            <br>
+                        
+                        </p>
+
+                    </div>
+
+
+                    <div class="clearfix">
+                        
+                    </div>
+
+
+                    <div class="section-tabs js-tabs">
+                        <ul>
+
+                            <li id="overview-tab-li" class="active">
+                                <a id="overview-tab" href="#asinfo">Overview</a>
+                            </li>
+                            
+                            <li id="prefix-tab-li">
+                                <a id="prefix-tab" href="#prefixes">Prefixes</a>
+                            </li>
+
+                            <li id="connectivity-tab-li">
+                                <a id="connectivity-tab" href="#connectivity">Connectivity</a>
+                            </li>
+                            
+                            <li id="whois-tab-li">
+                                <a id="whois-tab" href="#whois">Whois</a>
+                            </li>
+                        
+                        
+                        </ul>
+                    </div>
+
+<script>
+    function removeAllActiveTab() {
+        var tabs = [
+            "overview-tab-li", 
+            "prefix-tab-li", 
+            "connectivity-tab-li",
+            "whois-tab-li",
+            "ix-tab-li",
+            "issues-tab-li"
+        ];
+
+        tabs.forEach(element => {
+            var aaa = document.querySelectorAll('#'+element);
+            if(aaa.length != 0) {
+                aaa[0].classList.remove("active")
+            }
+        });
+    }
+
+    function hideAllContent() {
+        var tabs = [
+            "overview-page", 
+            "prefixes-page", 
+            "connectivity-page",
+            "whois-page",
+            "ix-page",
+            "issues-page"
+        ];
+
+        tabs.forEach(element => {
+            var aaa = document.querySelectorAll('#'+element);
+            if(aaa.length != 0) {
+                aaa[0].style.display = "none";
+            }
+        });
+        if (document.getElementById("donotscrapebgptools-prefixlist-tbody")) {
+            var prefixrows = document.getElementById("donotscrapebgptools-prefixlist-tbody").children;
+            for (var i = 0; i < prefixrows.length; i++) {
+                prefixrows[i].style = "";
+            }
+        }
+    }
+
+    var otab = document.querySelectorAll('#overview-tab');
+    otab[0].addEventListener("click", function () {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#overview-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#overview-page');
+        aaa[0].style.display = "";
+    });
+    
+
+    var ptab = document.querySelectorAll('#prefix-tab');
+    ptab[0].addEventListener("click", function () {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#prefix-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#prefixes-page');
+        aaa[0].style.display = "";
+    });
+
+    var ctab = document.querySelectorAll('#connectivity-tab');
+    ctab[0].addEventListener("click", function () {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#connectivity-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#connectivity-page');
+        aaa[0].style.display = "";
+    });
+    
+
+    var wtab = document.querySelectorAll('#whois-tab');
+    wtab[0].addEventListener("click", function () {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#whois-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#whois-page');
+        aaa[0].style.display = "";
+    });
+
+</script>
+
+
+
+                    
+                    <div id="overview-page">
+
+                        <div class="grid-row">
+                        
+                        <div class="column-two-thirds">
+                            <dl>
+                                <dt>Registered on</dt>
+                                <dd class="text data">
+                                    
+                                    13 Feb 2003 (22 years old)
+                                </dd>
+                            
+                            
+                            <dt>Registered to</dt>
+                            <dd class="text data">
+                                <a href="/rir-owner/ru.transtelecom">ru.transteleco...</a> (ripe)</dd>
+                                
+                            
+                            </dl>
+                        </div>
+                        
+    
+                        <dl class="column-third">
+                            <dt>Network status</dt>
+                            <dd class="text data">
+                                
+                                Active, Allocated under RIPE
+                                
+                            </dd>
+                        </dl>
+    
+                        </div>
+    
+                        <div class="grid-row">
+                            <dl class="column-two-thirds">
+                                <dt>Network type</dt>
+                                <dd class="text data">
+                                    Eyeball
+                                </dd>
+                            </dl>
+    
+                            <dl class="column-third">
+                                <dt>Prefixes Originated</dt>
+                                <dd class="data">50 IPv4, 2 IPv6</dd>
+                            </dl>
+                        </div>
+                        <div class="grid-row">
+                            <div class="column-half">
+    
+                                <h2 class="heading-medium"><derp>Upstreams</derp></h2>
+                                <ul>
+                                    
+                                    <li>
+                                        <span id="sic0">
+                                          <a href="/as/20485">AS20485</a> - JSC TransTeleKom
+                                        </span>
+                                    </li>
+                                    
+                                </ul>
+    
+                            </div>
+    
+                            <div class="column-half">
+                                
+                                    <h2 class="heading-medium"><derp>Rankings</derp></h2>
+                                    
+                                    <li><span id="sic0">#70 for <a href="/rankings/RU?sort=cone">AS Cone  in Russian Federation</a></span></li>
+                                    
+                                    <li><span id="sic0">#174 for <a href="/rankings/RU?sort=v4">Originated IPv4 Space  in Russian Federation</a></span></li>
+                                    
+                                
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+
+                    <div style="display: none" id="prefixes-page">
+                        
+
+                        
+                        <div style="float:left">
+                            <dt>Prefixes Originated</dt>
+                            <dd class="data">50 IPv4, 2 IPv6</dd>
+                            
+                            
+                        </div>
+                        <div style="float:right">
+                                <dt>Addresses Originated</dt>
+                                <dd class="data">91 /24's of IPv4</dd>
+                                <dd class="data">65536 /48's of IPv6</dd>
+                        </div>
+
+                        <div class="clearfix">
+                            
+                        </div>
+
+
+                        <table id="fhTable" class="full-width-table ">
+                            <tbody id="donotscrapebgptools-prefixlist-tbody">
+                                <tr>
+                                    <th class="nowrap">  &nbsp;  </th>
+                                    <th class="boldpls">Prefix</th>
+                                    <th class="nowrap boldpls">Description</th>
+                                </tr>
+                                <p id="readme-if-you-are-human" style="display: none;">If you are scraping this block for the prefixes that a AS originates, please use the data dumps in https://bgp.tools/kb/api and cache them</p>
+                                
+                                <tr id="pfx-62.165.32.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="RU" src="/assets/flags/RU.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/62.165.32.0/24">62.165.32.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Southern Urals TransTelecom Managment</td>
+                                </tr>
+                                
+                                <tr id="pfx-62.165.33.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="RU" src="/assets/flags/RU.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/62.165.33.0/24">62.165.33.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Southern Urals TransTelecom PIX</td>
+                                </tr>
+                                
+                                <tr id="pfx-62.165.34.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="RU" src="/assets/flags/RU.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/62.165.34.0/24">62.165.34.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Joint Stock Company TransTeleCom</td>
+                                </tr>
+                                
+                                <tr id="pfx-62.165.35.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="RU" src="/assets/flags/RU.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/62.165.35.0/24">62.165.35.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Joint Stock Company TransTeleCom</td>
+                                </tr>
+                                
+                                <tr id="pfx-62.165.36.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="RU" src="/assets/flags/RU.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/62.165.36.0/24">62.165.36.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Southern Urals TransTelecom P2P customer connection</td>
+                                </tr>
+                                
+                                <tr id="pfx-62.165.37.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="RU" src="/assets/flags/RU.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/62.165.37.0/24">62.165.37.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Southern Urals TransTelecom P2P customer connection</td>
+                                </tr>
+                                
+                                <tr id="pfx-62.165.38.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="RU" src="/assets/flags/RU.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/62.165.38.0/24">62.165.38.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Joint Stock Company TransTeleCom</td>
+                                </tr>
+                                
+                                <tr id="pfx-62.165.42.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="RU" src="/assets/flags/RU.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/62.165.42.0/24">62.165.42.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Joint Stock Company TransTeleCom</td>
+                                </tr>
+                                
+                                <tr id="pfx-62.165.44.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="RU" src="/assets/flags/RU.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/62.165.44.0/24">62.165.44.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Joint Stock Company TransTeleCom</td>
+                                </tr>
+                                
+                                <tr id="pfx-62.165.46.0/23">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="RU" src="/assets/flags/RU.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/62.165.46.0/23">62.165.46.0/23</a></td>
+                                    <td class="smallonmobile nowrap">Joint Stock Company TransTeleCom</td>
+                                </tr>
+                                
+                                <tr id="pfx-62.165.51.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="RU" src="/assets/flags/RU.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/62.165.51.0/24">62.165.51.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Southern Urals TransTelecom MSS IPOE</td>
+                                </tr>
+                                
+                                <tr id="pfx-62.165.52.0/22">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="RU" src="/assets/flags/RU.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/62.165.52.0/22">62.165.52.0/22</a></td>
+                                    <td class="smallonmobile nowrap">Joint Stock Company TransTeleCom</td>
+                                </tr>
+                                
+                                <tr id="pfx-62.165.56.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="RU" src="/assets/flags/RU.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/62.165.56.0/24">62.165.56.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Joint Stock Company TransTeleCom</td>
+                                </tr>
+                                
+                                <tr id="pfx-62.165.58.0/23">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="RU" src="/assets/flags/RU.png">
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/halftick.png" title="Matches unauthenticated IRR source">
+                                        
+                                    </td>
+                                    <td><a href="/prefix/62.165.58.0/23">62.165.58.0/23</a></td>
+                                    <td class="smallonmobile nowrap">Joint Stock Company TransTeleCom</td>
+                                </tr>
+                                
+                                <tr id="pfx-83.146.65.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="RU" src="/assets/flags/RU.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/83.146.65.0/24">83.146.65.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Southern Urals TransTelecom MSS DHCP&#43;IPOE</td>
+                                </tr>
+                                
+                                <tr id="pfx-83.146.67.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="RU" src="/assets/flags/RU.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/83.146.67.0/24">83.146.67.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Joint Stock Company TransTeleCom</td>
+                                </tr>
+                                
+                                <tr id="pfx-83.146.69.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="RU" src="/assets/flags/RU.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/83.146.69.0/24">83.146.69.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Southern Urals TransTelecom</td>
+                                </tr>
+                                
+                                <tr id="pfx-83.146.70.0/23">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="RU" src="/assets/flags/RU.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/83.146.70.0/23">83.146.70.0/23</a></td>
+                                    <td class="smallonmobile nowrap">Southern Urals TransTelecom MSS-DHCP</td>
+                                </tr>
+                                
+                                <tr id="pfx-83.146.77.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="RU" src="/assets/flags/RU.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/83.146.77.0/24">83.146.77.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Joint Stock Company TransTeleCom</td>
+                                </tr>
+                                
+                                <tr id="pfx-83.146.80.0/22">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="RU" src="/assets/flags/RU.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/83.146.80.0/22">83.146.80.0/22</a></td>
+                                    <td class="smallonmobile nowrap">Southern Urals TransTelecom MSS-DHCP</td>
+                                </tr>
+                                
+                                <tr id="pfx-83.146.96.0/22">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="RU" src="/assets/flags/RU.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/83.146.96.0/22">83.146.96.0/22</a></td>
+                                    <td class="smallonmobile nowrap">Southern Urals TransTelecom MSS-DHCP</td>
+                                </tr>
+                                
+                                <tr id="pfx-83.146.100.0/22">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="RU" src="/assets/flags/RU.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/83.146.100.0/22">83.146.100.0/22</a></td>
+                                    <td class="smallonmobile nowrap">Joint Stock Company TransTeleCom</td>
+                                </tr>
+                                
+                                <tr id="pfx-83.146.104.0/23">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="RU" src="/assets/flags/RU.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/83.146.104.0/23">83.146.104.0/23</a></td>
+                                    <td class="smallonmobile nowrap">Southern Urals TransTelecom MSS-DHCP</td>
+                                </tr>
+                                
+                                <tr id="pfx-83.146.106.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="RU" src="/assets/flags/RU.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/83.146.106.0/24">83.146.106.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Southern Urals TransTelecom IPA-STATIC</td>
+                                </tr>
+                                
+                                <tr id="pfx-83.146.108.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="RU" src="/assets/flags/RU.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/83.146.108.0/24">83.146.108.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Joint Stock Company TransTeleCom</td>
+                                </tr>
+                                
+                                <tr id="pfx-83.146.112.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="RU" src="/assets/flags/RU.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/83.146.112.0/24">83.146.112.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Southern Urals TransTelecom</td>
+                                </tr>
+                                
+                                <tr id="pfx-83.146.113.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="RU" src="/assets/flags/RU.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/83.146.113.0/24">83.146.113.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Southern Urals TransTelecom</td>
+                                </tr>
+                                
+                                <tr id="pfx-83.146.116.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="RU" src="/assets/flags/RU.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/83.146.116.0/24">83.146.116.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Southern Urals TransTelecom</td>
+                                </tr>
+                                
+                                <tr id="pfx-83.146.118.0/23">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="RU" src="/assets/flags/RU.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/83.146.118.0/23">83.146.118.0/23</a></td>
+                                    <td class="smallonmobile nowrap">Southern Urals TransTelecom MSS-DHCP</td>
+                                </tr>
+                                
+                                <tr id="pfx-83.146.120.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="RU" src="/assets/flags/RU.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/83.146.120.0/24">83.146.120.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Southern Urals TransTelecom</td>
+                                </tr>
+                                
+                                <tr id="pfx-89.237.0.0/21">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="RU" src="/assets/flags/RU.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/89.237.0.0/21">89.237.0.0/21</a></td>
+                                    <td class="smallonmobile nowrap">Southern Urals TransTelecom</td>
+                                </tr>
+                                
+                                <tr id="pfx-89.237.17.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="RU" src="/assets/flags/RU.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/89.237.17.0/24">89.237.17.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Southern Urals TransTelecom MSS DHCP &#43; IPoE</td>
+                                </tr>
+                                
+                                <tr id="pfx-89.237.18.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="RU" src="/assets/flags/RU.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/89.237.18.0/24">89.237.18.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Southern Urals TransTelecom Management Net</td>
+                                </tr>
+                                
+                                <tr id="pfx-89.237.19.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="RU" src="/assets/flags/RU.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/89.237.19.0/24">89.237.19.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Southern Urals TransTelecom Servers</td>
+                                </tr>
+                                
+                                <tr id="pfx-89.237.21.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="RU" src="/assets/flags/RU.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/89.237.21.0/24">89.237.21.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Southern Urals TransTelecom MSS DHCP &#43; IPoE</td>
+                                </tr>
+                                
+                                <tr id="pfx-89.237.22.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="RU" src="/assets/flags/RU.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/89.237.22.0/24">89.237.22.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Southern Urals TransTelecom MSS DHCP</td>
+                                </tr>
+                                
+                                <tr id="pfx-89.237.29.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="RU" src="/assets/flags/RU.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/89.237.29.0/24">89.237.29.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Southern Urals TransTelecom P2P customer connection</td>
+                                </tr>
+                                
+                                <tr id="pfx-89.237.42.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="RU" src="/assets/flags/RU.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/89.237.42.0/24">89.237.42.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Southern Urals TransTelecom</td>
+                                </tr>
+                                
+                                <tr id="pfx-89.237.47.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="RU" src="/assets/flags/RU.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/89.237.47.0/24">89.237.47.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Southern Urals TransTelecom P2P BGP customer connection</td>
+                                </tr>
+                                
+                                <tr id="pfx-89.237.48.0/22">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="RU" src="/assets/flags/RU.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/89.237.48.0/22">89.237.48.0/22</a></td>
+                                    <td class="smallonmobile nowrap">Southern Urals TransTelecom MSS-DHCP</td>
+                                </tr>
+                                
+                                <tr id="pfx-89.237.54.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="RU" src="/assets/flags/RU.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/89.237.54.0/24">89.237.54.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Southern Urals TransTelecom P2P customer connection</td>
+                                </tr>
+                                
+                                <tr id="pfx-89.237.62.0/23">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="RU" src="/assets/flags/RU.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/89.237.62.0/23">89.237.62.0/23</a></td>
+                                    <td class="smallonmobile nowrap">Joint Stock Company TransTeleCom</td>
+                                </tr>
+                                
+                                <tr id="pfx-176.56.0.0/23">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="RU" src="/assets/flags/RU.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/176.56.0.0/23">176.56.0.0/23</a></td>
+                                    <td class="smallonmobile nowrap">Southern Urals TransTelecom IPA-STATIC</td>
+                                </tr>
+                                
+                                <tr id="pfx-176.56.2.0/23">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="RU" src="/assets/flags/RU.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/176.56.2.0/23">176.56.2.0/23</a></td>
+                                    <td class="smallonmobile nowrap">Southern Urals TransTelecom MSS-DHCP</td>
+                                </tr>
+                                
+                                <tr id="pfx-176.56.4.0/22">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="RU" src="/assets/flags/RU.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/176.56.4.0/22">176.56.4.0/22</a></td>
+                                    <td class="smallonmobile nowrap">Southern Urals TransTelecom MSS-DHCP</td>
+                                </tr>
+                                
+                                <tr id="pfx-176.56.10.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="RU" src="/assets/flags/RU.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/176.56.10.0/24">176.56.10.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Southern Urals TransTelecom MSS IPOE &#43; DHCP</td>
+                                </tr>
+                                
+                                <tr id="pfx-176.56.13.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="RU" src="/assets/flags/RU.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/176.56.13.0/24">176.56.13.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Southern Urals TransTelecom IPA IPoE</td>
+                                </tr>
+                                
+                                <tr id="pfx-176.56.19.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="RU" src="/assets/flags/RU.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/176.56.19.0/24">176.56.19.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Courier Plus Company</td>
+                                </tr>
+                                
+                                <tr id="pfx-176.56.22.0/23">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="RU" src="/assets/flags/RU.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/176.56.22.0/23">176.56.22.0/23</a></td>
+                                    <td class="smallonmobile nowrap">Joint Stock Company TransTeleCom</td>
+                                </tr>
+                                
+                                <tr id="pfx-176.56.24.0/21">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="RU" src="/assets/flags/RU.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/176.56.24.0/21">176.56.24.0/21</a></td>
+                                    <td class="smallonmobile nowrap">Southern Urals TransTelecom</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a02:7880::/32">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="RU" src="/assets/flags/RU.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/2a02:7880::/32">2a02:7880::/32</a></td>
+                                    <td class="smallonmobile nowrap">Joint Stock Company TransTeleCom</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a02:7880::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="RU" src="/assets/flags/RU.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/2a02:7880::/48">2a02:7880::/48</a></td>
+                                    <td class="smallonmobile nowrap">Joint Stock Company TransTeleCom</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div style="display: none" id="connectivity-page">
+
+                        <div class="grid-row">
+                            <dl class="column-third column-third-first">
+                                <dt><a href="#peers">Peers</a></dt>
+                                <dd class="data">8</dd>
+                            </dl><dl class="column-third column-third-mid">
+                                <dt><a href="#upstreams">Upstreams</a></dt>
+                                
+                                <dd class="text data">1</dd>
+                                
+                            </dl>
+                            <dl class="column-third column-third-last">
+                                <dt><a href="#downstreams">Downstreams</a></dt> <dd class="data">7 (Cone: 9)</dd>
+                            </dl>
+
+                        </div>
+
+
+                        <hr>
+                        <h3>Network Policy<img class="flag-img" src="/assets/info.png" style="padding-left: 12px;" title="This info can take up to 2 hours to fully update" alt="This info take up to 2 hours to fully update"/></h3></h3>
+                        <a style="font-size: small;" href="/kb/network-policy">Click here to learn more about what this graph means and what makes up a network policy</a>
+
+                        <select id="netpolicydropdown" class="dropdownmenu">
+                            
+                                <option value="default">Global Aggregation</option>
+                            
+
+                            
+                                
+                            
+                                <option value="e88eab4f723b29272f1b2147568e85232fe03e08485985f73ac6174e">Policy elated_grothendieck</option>
+                            
+                                <option value="ed15666792dea1880b42ac545ed4bab26f37c3a0623f51ccc416ed80">Policy quizzical_euler</option>
+                            
+                                <option value="fa0fc880fe260350e0fa6cd2e1a7d8b5fa1d0eafc7fca107a4dad322">Policy affectionate_morse</option>
+                            
+                                <option value="59ecb4a497fc7f9e5bf46956d99d1dd9cb019e8cb29aa65f5a03a5a4">Policy heuristic_chatelet</option>
+                            
+
+                            
+
+
+                        </select>
+
+                        <script>var netgroups = {"59ecb4a497fc7f9e5bf46956d99d1dd9cb019e8cb29aa65f5a03a5a4":["2a02:7880::/48"],"e88eab4f723b29272f1b2147568e85232fe03e08485985f73ac6174e":["62.165.56.0/24","83.146.65.0/24","83.146.113.0/24","83.146.112.0/24","83.146.120.0/24","83.146.67.0/24","83.146.69.0/24","89.237.0.0/21"],"ed15666792dea1880b42ac545ed4bab26f37c3a0623f51ccc416ed80":["83.146.77.0/24","176.56.2.0/23","176.56.4.0/22","83.146.118.0/23","62.165.46.0/23","62.165.32.0/24","89.237.17.0/24","62.165.37.0/24","176.56.10.0/24","83.146.116.0/24","89.237.19.0/24","62.165.35.0/24","62.165.52.0/22","62.165.58.0/23","62.165.42.0/24","83.146.100.0/22","83.146.108.0/24","89.237.22.0/24","83.146.104.0/23","176.56.0.0/23","89.237.29.0/24","176.56.13.0/24","83.146.106.0/24","62.165.51.0/24","83.146.96.0/22","89.237.42.0/24","89.237.48.0/22","62.165.36.0/24","89.237.62.0/23","83.146.70.0/23","83.146.80.0/22","62.165.34.0/24","62.165.33.0/24","89.237.47.0/24","62.165.38.0/24","89.237.18.0/24","89.237.21.0/24","89.237.54.0/24","176.56.19.0/24","176.56.22.0/23","176.56.24.0/21","62.165.44.0/24"],"fa0fc880fe260350e0fa6cd2e1a7d8b5fa1d0eafc7fca107a4dad322":["2a02:7880::/32"]}</script>
+
+                        <div style="text-align: center;">
+                            <img id="pathimg" usemap="#world" src="">
+                            <div id="world2"></div>
+                        </div>
+
+                        <details>
+                            <summary>Chart Display Options</summary>
+                            <noscript>This requires javascript to work</noscript>
+                            <label for="graphOptionMoreWiggle" style="display: flex;align-items: center;font-size: 20px;">
+                                <input type="checkbox" id="graphOptionMoreWiggle" name="graphOptionMoreWiggle" style="width: 64px; height: 32px;">
+                                    <p id="graphOptionMoreWiggleLabel" style="width: 200%;">Display links using non straight lines</p>
+                            </label>
+                        </details>
+
+                        <h3 style="display: none;" id="PISPBanner">Prefixes in selected policy</h3>
+                        <table id="policytable" class="full-width-table">
+                        </table>
+                        <button style="width:100%;display: none;" id="ShowFullPolicyButton" class="bigButton" onclick="dropdownPoke()">Load all prefixes in policy</button>
+
+                        <script>
+                            !function(a,b){"function"==typeof define&&define.amd?define([],b):"undefined"!=typeof module&&module.exports?module.exports=b():a.ReconnectingWebSocket=b()}(this,function(){function a(b,c,d){function l(a,b){var c=document.createEvent("CustomEvent");return c.initCustomEvent(a,!1,!1,b),c}var e={debug:!1,automaticOpen:!0,reconnectInterval:1e3,maxReconnectInterval:3e4,reconnectDecay:1.5,timeoutInterval:2e3};d||(d={});for(var f in e)this[f]="undefined"!=typeof d[f]?d[f]:e[f];this.url=b,this.reconnectAttempts=0,this.readyState=WebSocket.CONNECTING,this.protocol=null;var h,g=this,i=!1,j=!1,k=document.createElement("div");k.addEventListener("open",function(a){g.onopen(a)}),k.addEventListener("close",function(a){g.onclose(a)}),k.addEventListener("connecting",function(a){g.onconnecting(a)}),k.addEventListener("message",function(a){g.onmessage(a)}),k.addEventListener("error",function(a){g.onerror(a)}),this.addEventListener=k.addEventListener.bind(k),this.removeEventListener=k.removeEventListener.bind(k),this.dispatchEvent=k.dispatchEvent.bind(k),this.open=function(b){h=new WebSocket(g.url,c||[]),b||k.dispatchEvent(l("connecting")),(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","attempt-connect",g.url);var d=h,e=setTimeout(function(){(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","connection-timeout",g.url),j=!0,d.close(),j=!1},g.timeoutInterval);h.onopen=function(){clearTimeout(e),(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","onopen",g.url),g.protocol=h.protocol,g.readyState=WebSocket.OPEN,g.reconnectAttempts=0;var d=l("open");d.isReconnect=b,b=!1,k.dispatchEvent(d)},h.onclose=function(c){if(clearTimeout(e),h=null,i)g.readyState=WebSocket.CLOSED,k.dispatchEvent(l("close"));else{g.readyState=WebSocket.CONNECTING;var d=l("connecting");d.code=c.code,d.reason=c.reason,d.wasClean=c.wasClean,k.dispatchEvent(d),b||j||((g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","onclose",g.url),k.dispatchEvent(l("close")));var e=g.reconnectInterval*Math.pow(g.reconnectDecay,g.reconnectAttempts);setTimeout(function(){g.reconnectAttempts++,g.open(!0)},e>g.maxReconnectInterval?g.maxReconnectInterval:e)}},h.onmessage=function(b){(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","onmessage",g.url,b.data);var c=l("message");c.data=b.data,k.dispatchEvent(c)},h.onerror=function(b){(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","onerror",g.url,b),k.dispatchEvent(l("error"))}},1==this.automaticOpen&&this.open(!1),this.send=function(b){if(h)return(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","send",g.url,b),h.send(b);throw"INVALID_STATE_ERR : Pausing to reconnect websocket"},this.close=function(a,b){"undefined"==typeof a&&(a=1e3),i=!0,h&&h.close(a,b)},this.refresh=function(){h&&h.close()}}return a.prototype.onopen=function(){},a.prototype.onclose=function(){},a.prototype.onconnecting=function(){},a.prototype.onmessage=function(){},a.prototype.onerror=function(){},a.debugAll=!1,a.CONNECTING=WebSocket.CONNECTING,a.OPEN=WebSocket.OPEN,a.CLOSING=WebSocket.CLOSING,a.CLOSED=WebSocket.CLOSED,a});
+                        </script>
+                        
+                        <script>
+                            var prefixinfo = [{"PrefixString":"62.165.32.0/24","WhoisName":"Southern Urals TransTelecom Managment","WhoisCountry":"RU"},{"PrefixString":"62.165.33.0/24","WhoisName":"Southern Urals TransTelecom PIX","WhoisCountry":"RU"},{"PrefixString":"62.165.34.0/24","WhoisName":"Joint Stock Company TransTeleCom","WhoisCountry":"RU"},{"PrefixString":"62.165.35.0/24","WhoisName":"Joint Stock Company TransTeleCom","WhoisCountry":"RU"},{"PrefixString":"62.165.36.0/24","WhoisName":"Southern Urals TransTelecom P2P customer connection","WhoisCountry":"RU"},{"PrefixString":"62.165.37.0/24","WhoisName":"Southern Urals TransTelecom P2P customer connection","WhoisCountry":"RU"},{"PrefixString":"62.165.38.0/24","WhoisName":"Joint Stock Company TransTeleCom","WhoisCountry":"RU"},{"PrefixString":"62.165.42.0/24","WhoisName":"Joint Stock Company TransTeleCom","WhoisCountry":"RU"},{"PrefixString":"62.165.44.0/24","WhoisName":"Joint Stock Company TransTeleCom","WhoisCountry":"RU"},{"PrefixString":"62.165.46.0/23","WhoisName":"Joint Stock Company TransTeleCom","WhoisCountry":"RU"},{"PrefixString":"62.165.51.0/24","WhoisName":"Southern Urals TransTelecom MSS IPOE","WhoisCountry":"RU"},{"PrefixString":"62.165.52.0/22","WhoisName":"Joint Stock Company TransTeleCom","WhoisCountry":"RU"},{"PrefixString":"62.165.56.0/24","WhoisName":"Joint Stock Company TransTeleCom","WhoisCountry":"RU"},{"PrefixString":"62.165.58.0/23","WhoisName":"Joint Stock Company TransTeleCom","WhoisCountry":"RU"},{"PrefixString":"83.146.65.0/24","WhoisName":"Southern Urals TransTelecom MSS DHCP+IPOE","WhoisCountry":"RU"},{"PrefixString":"83.146.67.0/24","WhoisName":"Joint Stock Company TransTeleCom","WhoisCountry":"RU"},{"PrefixString":"83.146.69.0/24","WhoisName":"Southern Urals TransTelecom","WhoisCountry":"RU"},{"PrefixString":"83.146.70.0/23","WhoisName":"Southern Urals TransTelecom MSS-DHCP","WhoisCountry":"RU"},{"PrefixString":"83.146.77.0/24","WhoisName":"Joint Stock Company TransTeleCom","WhoisCountry":"RU"},{"PrefixString":"83.146.80.0/22","WhoisName":"Southern Urals TransTelecom MSS-DHCP","WhoisCountry":"RU"},{"PrefixString":"83.146.96.0/22","WhoisName":"Southern Urals TransTelecom MSS-DHCP","WhoisCountry":"RU"},{"PrefixString":"83.146.100.0/22","WhoisName":"Joint Stock Company TransTeleCom","WhoisCountry":"RU"},{"PrefixString":"83.146.104.0/23","WhoisName":"Southern Urals TransTelecom MSS-DHCP","WhoisCountry":"RU"},{"PrefixString":"83.146.106.0/24","WhoisName":"Southern Urals TransTelecom IPA-STATIC","WhoisCountry":"RU"},{"PrefixString":"83.146.108.0/24","WhoisName":"Joint Stock Company TransTeleCom","WhoisCountry":"RU"},{"PrefixString":"83.146.112.0/24","WhoisName":"Southern Urals TransTelecom","WhoisCountry":"RU"},{"PrefixString":"83.146.113.0/24","WhoisName":"Southern Urals TransTelecom","WhoisCountry":"RU"},{"PrefixString":"83.146.116.0/24","WhoisName":"Southern Urals TransTelecom","WhoisCountry":"RU"},{"PrefixString":"83.146.118.0/23","WhoisName":"Southern Urals TransTelecom MSS-DHCP","WhoisCountry":"RU"},{"PrefixString":"83.146.120.0/24","WhoisName":"Southern Urals TransTelecom","WhoisCountry":"RU"},{"PrefixString":"89.237.0.0/21","WhoisName":"Southern Urals TransTelecom","WhoisCountry":"RU"},{"PrefixString":"89.237.17.0/24","WhoisName":"Southern Urals TransTelecom MSS DHCP + IPoE","WhoisCountry":"RU"},{"PrefixString":"89.237.18.0/24","WhoisName":"Southern Urals TransTelecom Management Net","WhoisCountry":"RU"},{"PrefixString":"89.237.19.0/24","WhoisName":"Southern Urals TransTelecom Servers","WhoisCountry":"RU"},{"PrefixString":"89.237.21.0/24","WhoisName":"Southern Urals TransTelecom MSS DHCP + IPoE","WhoisCountry":"RU"},{"PrefixString":"89.237.22.0/24","WhoisName":"Southern Urals TransTelecom MSS DHCP","WhoisCountry":"RU"},{"PrefixString":"89.237.29.0/24","WhoisName":"Southern Urals TransTelecom P2P customer connection","WhoisCountry":"RU"},{"PrefixString":"89.237.42.0/24","WhoisName":"Southern Urals TransTelecom","WhoisCountry":"RU"},{"PrefixString":"89.237.47.0/24","WhoisName":"Southern Urals TransTelecom P2P BGP customer connection","WhoisCountry":"RU"},{"PrefixString":"89.237.48.0/22","WhoisName":"Southern Urals TransTelecom MSS-DHCP","WhoisCountry":"RU"},{"PrefixString":"89.237.54.0/24","WhoisName":"Southern Urals TransTelecom P2P customer connection","WhoisCountry":"RU"},{"PrefixString":"89.237.62.0/23","WhoisName":"Joint Stock Company TransTeleCom","WhoisCountry":"RU"},{"PrefixString":"176.56.0.0/23","WhoisName":"Southern Urals TransTelecom IPA-STATIC","WhoisCountry":"RU"},{"PrefixString":"176.56.2.0/23","WhoisName":"Southern Urals TransTelecom MSS-DHCP","WhoisCountry":"RU"},{"PrefixString":"176.56.4.0/22","WhoisName":"Southern Urals TransTelecom MSS-DHCP","WhoisCountry":"RU"},{"PrefixString":"176.56.10.0/24","WhoisName":"Southern Urals TransTelecom MSS IPOE + DHCP","WhoisCountry":"RU"},{"PrefixString":"176.56.13.0/24","WhoisName":"Southern Urals TransTelecom IPA IPoE","WhoisCountry":"RU"},{"PrefixString":"176.56.19.0/24","WhoisName":"Courier Plus Company","WhoisCountry":"RU"},{"PrefixString":"176.56.22.0/23","WhoisName":"Joint Stock Company TransTeleCom","WhoisCountry":"RU"},{"PrefixString":"176.56.24.0/21","WhoisName":"Southern Urals TransTelecom","WhoisCountry":"RU"},{"PrefixString":"2a02:7880::/32","WhoisName":"Joint Stock Company TransTeleCom","WhoisCountry":"RU"},{"PrefixString":"2a02:7880::/48","WhoisName":"Joint Stock Company TransTeleCom","WhoisCountry":"RU"}]
+                            var asn =  28745 
+
+                            var pfxExtraString = "";
+
+                            function saveGraphOptionsToLocalStorage() {
+                                localStorage.setItem("pfx-chart-options:wiggle", document.getElementById("graphOptionMoreWiggle").checked);
+                            }
+
+                            function loadGraphOptionsToLocalStorage() {
+                                document.getElementById("graphOptionMoreWiggle").checked = localStorage.getItem("pfx-chart-options:wiggle") == "true";
+                                pfxExtraString= "";
+                                if (document.getElementById("graphOptionMoreWiggle").checked) {
+                                    pfxExtraString = pfxExtraString + "&wiggly";
+                                }
+                            }
+                            loadGraphOptionsToLocalStorage();
+
+                            function graphOptionsChanged() {
+                                saveGraphOptionsToLocalStorage();
+                                handleImageChange();
+                            }
+                            document.getElementById("graphOptionMoreWiggle").addEventListener("click", graphOptionsChanged)
+
+
+                            function handleImageChange() {
+                                loadGraphOptionsToLocalStorage();
+                                
+                                document.getElementById("pathimg").src=("/pathimg/"+asn+ "-" + document.getElementById("netpolicydropdown").value +"?"+pfxExtraString);
+                                var request = new XMLHttpRequest();
+                                request.open('GET', "/pathimg/"+asn+ "-" + document.getElementById("netpolicydropdown").value + "?map=true" + pfxExtraString, true);
+
+                                request.onload = function() {
+                                    if (this.status >= 200 && this.status < 400) {
+                                        
+                                        
+                                        document.getElementById("world2").innerHTML = this.response;
+                                        setTimeout(function(){
+                                            imageMapResize('#world');
+                                        },1000)
+                                    }
+                                };
+                                request.send();
+                                buildPrefixTable();
+                            } 
+
+                            function encodeHTML(s) {
+                                return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
+                            }
+
+                            function dropdownPoke(){
+                                InteractedWithPolicyTableYet=true;
+                                handleImageChange();
+                            }
+
+                            var InteractedWithPolicyTableYet = false;
+                            var OverloadPolicySize = 0;
+                            function buildPrefixTable() {
+                                var policy = document.getElementById("netpolicydropdown").value;
+                                
+                                var cidrs = netgroups[policy];
+                                var ihtml = "<tbody> <tr> <th class=\"nowrap\">  -  </th> <th>Prefix</th> <th class=\"nowrap\">Description</th> </tr>";
+
+                                
+                                var aaa = document.querySelectorAll('#PISPBanner');
+                                var bbb = document.querySelectorAll('#policytable');
+                                var n = 0
+                                if (cidrs) {
+                                    aaa[0].style.display = "";
+                                    bbb[0].style.display = "";
+                                    cidrs.forEach(cidr => {
+                                        var obj = {};
+                                        var dont =false;
+                                        n++;
+                                        
+                                        if (!InteractedWithPolicyTableYet) {
+                                            if (n == 5) {
+                                                dont = true;
+                                            } else if (n > 5) {
+                                                dont = true;
+                                            }
+                                        }
+                                        
+                                        if (!dont) {
+                                            prefixinfo.forEach(el => {
+                                                if(el.PrefixString == cidr) {
+                                                    
+                                                        ihtml += "<tr><td class=\"nowrap ns\"><img class=\"flag-img\" src=\"/assets/flags/"+el.WhoisCountry+".png\" title=\""+el.WhoisCountry+"\"></td>"
+                                                        ihtml += "<td><a href=\"/prefix/"+el.PrefixString+"\">"+el.PrefixString+"</a></td>"
+                                                        ihtml += "<td class=\"nowrap\">"+encodeHTML(el.WhoisName)+"</td></tr>"
+                                                }
+                                            });
+                                        } else {
+                                            OverloadPolicySize++;
+                                        }
+                                    });
+                                    document.getElementById("policytable").innerHTML = ihtml
+                                    var PolButton = document.querySelectorAll('#ShowFullPolicyButton');
+                                    if (!InteractedWithPolicyTableYet && OverloadPolicySize!=0) {
+                                        PolButton[0].style="width:100%";
+                                        PolButton[0].innerHTML = "Load all "+OverloadPolicySize+" prefixes in policy"
+                                    } else {
+                                        PolButton[0].style="display:none;";
+                                    }
+                                    
+                                } else {
+                                    aaa[0].style.display = "none";
+                                    bbb[0].style.display = "none";
+                                }
+                            }
+
+
+                            var pathdropdown = document.querySelectorAll('#netpolicydropdown');
+                            pathdropdown[0].addEventListener("change",dropdownPoke)
+                            handleImageChange()
+                            buildPrefixTable()
+
+                            document.addEventListener("load", function(){
+                                
+                                handleImageChange()
+                            });
+
+                            function uuidv4() {
+                                return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+                                    var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+                                    return v.toString(16);
+                                });
+                            }
+
+                            
+                            let realTimeSocket = new ReconnectingWebSocket("wss://bgp.tools/ws/rt-asn?prefix=AS28745" + "&magic=" + encodeURIComponent("HSNI4UTJY46NGNOL3QJ7LJRXZJXC62V3AIOIPBRJSRAX6X244QZQ===="));
+                            
+                            realTimeSocket.onmessage = function(event) {
+                                console.log(`[message] Data received from server: ${event.data}`);
+                                if (event.data == "Running.") {
+                                    document.getElementById("ws-status").src = "/assets/connected.png";
+                                    document.getElementById("ws-status").title = "Connected to realtime data";
+                                } else if (event.data == "STOP-CONNECTING") {
+                                    document.getElementById("ws-status").src = disconectedIcon;
+                                    document.getElementById("ws-status").title = "Not connected to realtime data";
+                                    realTimeSocket.maxReconnectAttempts = 1;
+                                    realTimeSocket.close()
+                                } else {
+                                    var obj = JSON.parse(event.data);
+                                    var elm = document.getElementById("pfx-"+obj.Prefix);
+                                    if (!elm && obj.Vis > 6) {
+                                        var tblist = document.getElementById("donotscrapebgptools-prefixlist-tbody");
+                                        var node = document.createElement("tr");                 
+                                        node.outerHTML = '<tr id="pfx-'+obj.Prefix+'"><td class="nowrap"><img class="flag-img" src="/assets/flags/'+obj.Whois.WhoisCountry+'.png" title="'+obj.Whois.WhoisCountry+'"></td><td><a href="/prefix/'+obj.Prefix+'">'+obj.Prefix+'</a></td><td class="smallonmobile nowrap">'+obj.Whois.WhoisName+'</td></tr>';
+                                        tblist.appendChild(node);                              
+                                    }
+                                    if (!elm) {
+                                        elm = document.getElementById("pfx-"+obj.Prefix);
+                                    }
+                                    
+                                    if (obj.Vis > 70) {
+                                        if (elm.style) {
+                                            var es = elm.style;
+                                            if (es.animation.includes("pulse1b")) {
+                                                elm.style = "animation: pulse2b 1s 1;";
+                                            } else if (es.animation.includes("pulse2b")) {
+                                                elm.style = "animation: pulse1b 1s 1;";
+                                            } else {
+                                                elm.style = "animation: pulse1b 1s 1;";
+                                            }
+                                        }
+                                    } else if (obj.Vis < 5) {
+                                        
+                                        var elm = document.getElementById("pfx-"+obj.Prefix);
+                                        if (elm) {
+                                            elm.parentNode.removeChild(elm);
+                                        }
+                                    } else {
+                                        if (elm.style) {
+                                            var es = elm.style;
+                                            if (es.animation.includes("pulse1r")) {
+                                                elm.style = "animation: pulse2r 1s 1;";
+                                            } else if (es.animation.includes("pulse2r")) {
+                                                elm.style = "animation: pulse1r 1s 1;";
+                                            } else {
+                                                elm.style = "animation: pulse1r 1s 1;";
+                                            }
+                                        }
+                                    }
+                                }
+                            };
+                            var disconectedIcon = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAAZlBMVEX/ewBZWVn/ewf/ew5fWljudiP8egp6XVT6eRHodSmVYU6hZEzObjrldCv3eRZ/XlNjWliHX1KrZkngci71eBl1XFXCa0CKYFHydx18XlSQYE+lZUq0aEbJbT3SbzhvXFaLYFG8akLYdYVFAAABQElEQVRIx5XV25KDIAwGYIKASLutqOtZ277/S26xK4ozJea/qRdfajATZaRkd6B6oPoL1d9QphUn+WvXmGF8TfN8yvNrDj6nvNj5Hu8n8HCh9ONiON5PEKuQx55DmFTHC1R9uMOjYkhFERbkEikofw8FGe5t0FWJ+kLvz5H+t8RdGD9k8TeebBXpzwIZT955XyVBtHHeXYzeJy5fhydtoZffZvUMSfvxT4BOeI/G/b9paxH1at8XQF8xNcV8aaQvHQBMhY/XttsdYp5nah3XdvIqui61Cjy+jqLwXp1cx9XLQZ5cR/vx1p8cez2IWrlxYY/T9bNVyCfmdQdbxNgs441FNRAEHS83oe9ahmTw1p88nhHCiAkpeIUeX5eJ6NlM9Gwm+uxO9/3F2PSR597jn1+udCWzUp7150P1jOoZ1f8BGPARG85JosIAAAAASUVORK5CYII=";
+                            realTimeSocket.onerror = function(error) {
+                                document.getElementById("ws-status").src = disconectedIcon;
+                                document.getElementById("ws-status").title = "Not connected to realtime data";
+
+                                console.log(`[error] ${error.message}`);
+                            };
+                            realTimeSocket.onclose = function(error) {
+                                document.getElementById("ws-status").src = disconectedIcon;
+                                document.getElementById("ws-status").title = "Not connected to realtime data";
+
+                                console.log(`[error] ${error.message}`);
+                            };
+                        </script>
+
+<div class="superclearfix">
+    
+</div>
+
+                        <hr>
+                        <a style="font-size: small;" href="/kb/what-is-a-upstream">How are upstreams and downstreams calculated?</a>
+                        <h3 id="upstreams">Upstreams<img class="flag-img" src="/assets/lightning.png" style="padding-left: 12px;" title="This information was fetched live at page load time" alt="This information was fetched live at page load time"/></h3>
+
+
+                        <table id="donotscrapebgptools-upstreamTable" class="full-width-table">
+                            <thead class="sortable">
+                                <tr>
+                                    <th class="nowrap boldpls">  &nbsp;  </th>
+                                    <th data-sort-method='number' class="boldpls">ASN</th>
+                                    <th class="nowrap boldpls">Description</th>
+                                    <th class="nowrap boldpls">IPv4</th>
+                                    <th class="nowrap boldpls">IPv6</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                <tr>
+                                    <td data-sort='RU' class="nowrap ns"><img class="flag-img" src="/assets/flags/RU.png" title="RU">
+                                        
+                                        </td>
+                                    <td data-sort='20485'><a href="/as/20485">AS20485</a></td>
+                                    <td class="smallonmobile nowrap">JSC TransTeleKom</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+
+                        <hr>
+                        <h3 id="peers">Peers<img class="flag-img" src="/assets/lightning.png" style="padding-left: 12px;" title="This information was fetched live at page load time" alt="This information was fetched live at page load time"/></h3>
+
+
+
+                        <table id="donotscrapebgptools-upstreamTablePeers" class="full-width-table">
+                            <thead class="sortable">
+                                <tr>
+                                    <th class="nowrap boldpls">  &nbsp;  </th>
+                                    <th data-sort-method='number' class="boldpls">ASN</th>
+                                    <th class="nowrap boldpls">Description</th>
+                                    <th class="nowrap boldpls">IPv4</th>
+                                    <th class="nowrap boldpls">IPv6</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                <tr>
+                                    <td data-sort='RU' class="nowrap ns"><img class="flag-img" src="/assets/flags/RU.png" title="RU"></td>
+                                    <td data-sort='20485'><a href="/as/20485">AS20485</a></td>
+                                    <td class="smallonmobile nowrap">JSC TransTeleKom</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='RU' class="nowrap ns"><img class="flag-img" src="/assets/flags/RU.png" title="RU"></td>
+                                    <td data-sort='44172'><a href="/as/44172">AS44172</a></td>
+                                    <td class="smallonmobile nowrap">Courier Plus Ltd.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='RU' class="nowrap ns"><img class="flag-img" src="/assets/flags/RU.png" title="RU"></td>
+                                    <td data-sort='47972'><a href="/as/47972">AS47972</a></td>
+                                    <td class="smallonmobile nowrap">PJSC Rosseti Volga</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='RU' class="nowrap ns"><img class="flag-img" src="/assets/flags/RU.png" title="RU"></td>
+                                    <td data-sort='15774'><a href="/as/15774">AS15774</a></td>
+                                    <td class="smallonmobile nowrap">Limited Liability Company &#34;TTK-Svyaz&#34;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='RU' class="nowrap ns"><img class="flag-img" src="/assets/flags/RU.png" title="RU"></td>
+                                    <td data-sort='207128'><a href="/as/207128">AS207128</a></td>
+                                    <td class="smallonmobile nowrap">Streamlet Ltd.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='RU' class="nowrap ns"><img class="flag-img" src="/assets/flags/RU.png" title="RU"></td>
+                                    <td data-sort='8369'><a href="/as/8369">AS8369</a></td>
+                                    <td class="smallonmobile nowrap">Intersvyaz-2 JSC</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='RU' class="nowrap ns"><img class="flag-img" src="/assets/flags/RU.png" title="RU"></td>
+                                    <td data-sort='31470'><a href="/as/31470">AS31470</a></td>
+                                    <td class="smallonmobile nowrap">JSC Chelyabinsk Electric-Metallurgical Kombinat</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='RU' class="nowrap ns"><img class="flag-img" src="/assets/flags/RU.png" title="RU"></td>
+                                    <td data-sort='21023'><a href="/as/21023">AS21023</a></td>
+                                    <td class="smallonmobile nowrap">Joint Stock Company Ural Industrial Bank</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+
+
+
+                        <hr>
+                        <h3 id="downstreams">Downstreams<img class="flag-img" src="/assets/lightning.png" style="padding-left: 12px;" title="This information was fetched live at page load time" alt="This information was fetched live at page load time"/></h3>
+                        <table id="donotscrapebgptools-upstreamTableDowns" class="full-width-table">
+                            <thead class="sortable">
+                                
+                                <tr>
+                                    <th class="nowrap boldpls">  &nbsp;  </th>
+                                    <th data-sort-method='number'  class="boldpls">ASN</th>
+                                    <th class="nowrap boldpls">Description</th>
+                                    <th class="nowrap boldpls">IPv4</th>
+                                    <th class="nowrap boldpls">IPv6</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                <tr>
+                                    <td data-sort='RU' class="nowrap ns"><img class="flag-img" src="/assets/flags/RU.png" title="RU">
+                                        
+                                        </td>
+                                    <td data-sort='44172'><a href="/as/44172">AS44172</a></td>
+                                    <td class="smallonmobile nowrap">Courier Plus Ltd.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='RU' class="nowrap ns"><img class="flag-img" src="/assets/flags/RU.png" title="RU">
+                                        
+                                        </td>
+                                    <td data-sort='15774'><a href="/as/15774">AS15774</a></td>
+                                    <td class="smallonmobile nowrap">Limited Liability Company &#34;TTK-Svyaz&#34;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='RU' class="nowrap ns"><img class="flag-img" src="/assets/flags/RU.png" title="RU">
+                                        
+                                        </td>
+                                    <td data-sort='207128'><a href="/as/207128">AS207128</a></td>
+                                    <td class="smallonmobile nowrap">Streamlet Ltd.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='RU' class="nowrap ns"><img class="flag-img" src="/assets/flags/RU.png" title="RU">
+                                        
+                                        </td>
+                                    <td data-sort='8369'><a href="/as/8369">AS8369</a></td>
+                                    <td class="smallonmobile nowrap">Intersvyaz-2 JSC</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='RU' class="nowrap ns"><img class="flag-img" src="/assets/flags/RU.png" title="RU">
+                                        
+                                        </td>
+                                    <td data-sort='31470'><a href="/as/31470">AS31470</a></td>
+                                    <td class="smallonmobile nowrap">JSC Chelyabinsk Electric-Metallurgical Kombinat</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='RU' class="nowrap ns"><img class="flag-img" src="/assets/flags/RU.png" title="RU">
+                                        
+                                        </td>
+                                    <td data-sort='21023'><a href="/as/21023">AS21023</a></td>
+                                    <td class="smallonmobile nowrap">Joint Stock Company Ural Industrial Bank</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='RU' class="nowrap ns"><img class="flag-img" src="/assets/flags/RU.png" title="RU">
+                                        
+                                        </td>
+                                    <td data-sort='47972'><a href="/as/47972">AS47972</a></td>
+                                    <td class="smallonmobile nowrap">PJSC Rosseti Volga</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+
+                    </div>
+
+                    <div style="display: none" id="whois-page">
+                        
+                        
+                        <pre style="white-space: pre-wrap;">aut-num:        <a href="/AS28745">AS28745</a>
+as-name:        SUTTK-AS
+org:            <a href="https://apps.db.ripe.net/db-web-ui/query?searchtext=ORG-CJSC19-RIPE">ORG-CJSC19-RIPE</a>
+import:         from <a href="/AS20485">AS20485</a> action pref=120; accept ANY
+import:         from <a href="/AS24665">AS24665</a> action pref=100; accept <a href="/AS24665">AS24665</a>
+import:         from <a href="/AS28970">AS28970</a> action pref=100; accept <a href="/as-set/AS-TRS">AS-TRS</a>
+import:         from <a href="/as-set/AS-UCSNET">AS-UCSNET</a> action pref=100; accept <a href="/as-set/AS-UCSNET">AS-UCSNET</a>
+import:         from <a href="/AS28703">AS28703</a> action pref=100; accept <a href="/AS28703">AS28703</a>
+import:         from <a href="/AS29648">AS29648</a> action pref=100; accept <a href="/as-set/AS-COMLINE">AS-COMLINE</a>
+import:         from <a href="/AS30831">AS30831</a> action pref=100; accept <a href="/AS30831">AS30831</a>
+import:         from <a href="/AS30940">AS30940</a> action pref=100; accept <a href="/AS30940">AS30940</a>
+import:         from <a href="/AS31470">AS31470</a> action pref=100; accept <a href="/AS31470">AS31470</a>
+import:         from <a href="/AS31588">AS31588</a> action pref=100; accept <a href="/AS31588">AS31588</a>
+import:         from <a href="/AS209932">AS209932</a> action pref=100; accept <a href="/AS209932">AS209932</a>
+import:         from <a href="/AS34241">AS34241</a> action pref=100; accept <a href="/as-set/AS-NCT">AS-NCT</a>
+import:         from <a href="/AS34801">AS34801</a> action pref=100; accept <a href="/AS34801">AS34801</a>
+import:         from <a href="/as-set/AS-CHICS">AS-CHICS</a> action pref=100; accept <a href="/as-set/AS-CHICS">AS-CHICS</a>
+import:         from <a href="/AS39462">AS39462</a> action pref=100; accept <a href="/AS39462">AS39462</a>
+import:         from <a href="/AS41704">AS41704</a> action pref=100; accept <a href="/as-set/AS-OGS">AS-OGS</a>
+import:         from <a href="/AS43148">AS43148</a> action pref=100; accept <a href="/AS43148">AS43148</a>
+import:         from <a href="/AS12772">AS12772</a> action pref=100; accept <a href="/as-set/AS-ENFORTA">AS-ENFORTA</a>
+import:         from <a href="/AS41661">AS41661</a> action pref=100; accept <a href="/AS41661">AS41661</a>
+import:         from <a href="/AS42683">AS42683</a> action pref=100; accept <a href="/AS42683">AS42683</a>
+import:         from <a href="/AS8427">AS8427</a> action pref=100; accept <a href="/AS8427">AS8427</a>
+import:         from <a href="/AS44039">AS44039</a> action pref=100; accept <a href="/AS44039">AS44039</a>
+import:         from <a href="/AS44172">AS44172</a> action pref=100; accept <a href="/AS44172">AS44172</a>
+import:         from <a href="/AS28832">AS28832</a> action pref=100; accept <a href="/as-set/AS-MKS-CHEL">AS-MKS-CHEL</a>
+import:         from <a href="/AS44492">AS44492</a> action pref=100; accept <a href="/AS44492">AS44492</a>
+import:         from <a href="/AS47439">AS47439</a> action pref=100; accept <a href="/as-set/AS-ZLATTELECOM">AS-ZLATTELECOM</a>
+import:         from <a href="/as-set/AS-FCOMM">AS-FCOMM</a> action pref=100; accept <a href="/as-set/AS-FCOMM">AS-FCOMM</a>
+import:         from <a href="/AS47460">AS47460</a> action pref=100; accept <a href="/AS47460">AS47460</a>
+import:         from <a href="/as-set/AS-S-INFORM">AS-S-INFORM</a> action pref=100; accept <a href="/as-set/AS-S-INFORM">AS-S-INFORM</a>
+import:         from <a href="/AS47972">AS47972</a> action pref=100; accept <a href="/AS47972">AS47972</a>
+import:         from <a href="/AS48160">AS48160</a> action pref=100; accept <a href="/AS48160">AS48160</a>
+import:         from <a href="/AS41704">AS41704</a> action pref=100; accept <a href="/AS41704">AS41704</a>
+import:         from <a href="/AS47733">AS47733</a> action pref=100; accept <a href="/AS47733">AS47733</a>
+import:         from <a href="/AS48527">AS48527</a> action pref=100; accept <a href="/AS48527">AS48527</a>
+import:         from <a href="/AS12418">AS12418</a> action pref=100; accept <a href="/AS12418">AS12418</a>
+import:         from <a href="/AS42269">AS42269</a> action pref=100; accept <a href="/AS42269">AS42269</a>
+import:         from <a href="/AS44556">AS44556</a> action pref=100; accept <a href="/AS44556">AS44556</a>
+import:         from <a href="/AS48978">AS48978</a> action pref=100; accept <a href="/AS48978">AS48978</a>
+import:         from <a href="/AS48725">AS48725</a> action pref=100; accept <a href="/AS48725">AS48725</a>
+import:         from <a href="/as-set/AS-CHELSI">AS-CHELSI</a> action pref=100; accept <a href="/as-set/AS-CHELSI">AS-CHELSI</a>
+import:         from <a href="/as-set/AS-UCN">AS-UCN</a> action pref=100; accept <a href="/as-set/AS-UCN">AS-UCN</a>
+import:         from <a href="/AS42930">AS42930</a> action pref=100; accept <a href="/AS42930">AS42930</a>
+import:         from <a href="/as-set/AS-OSSURAL">AS-OSSURAL</a> action pref=100; accept <a href="/as-set/AS-OSSURAL">AS-OSSURAL</a>
+import:         from <a href="/as-set/AS-URALUNICOM">AS-URALUNICOM</a> action pref=100; accept <a href="/as-set/AS-URALUNICOM">AS-URALUNICOM</a>
+import:         from <a href="/AS49144">AS49144</a> action pref=100; accept <a href="/AS49144">AS49144</a>
+import:         from <a href="/AS49369">AS49369</a> action pref=100; accept <a href="/AS49369">AS49369</a>
+import:         from <a href="/AS34246">AS34246</a> action pref=100; accept <a href="/AS34246">AS34246</a>
+import:         from <a href="/AS31466">AS31466</a> action pref=100; accept <a href="/AS34246">AS34246</a>
+import:         from <a href="/AS28890">AS28890</a> action pref=100; accept <a href="/AS28890">AS28890</a>
+import:         from <a href="/as-set/AS-URALNET">AS-URALNET</a> action pref=100; accept <a href="/as-set/AS-URALNET">AS-URALNET</a>
+import:         from <a href="/AS50077">AS50077</a> action pref=100; accept <a href="/AS50077">AS50077</a>
+import:         from <a href="/AS48043">AS48043</a> action pref=100; accept <a href="/AS48043">AS48043</a>
+import:         { from <a href="/AS34291">AS34291</a> action pref=100; accept <a href="/AS34291">AS34291</a>; from <a href="/AS39789">AS39789</a> action pref=100; accept <a href="/AS39789">AS39789</a>; from <a href="/AS50676">AS50676</a> action pref=100; accept <a href="/AS50676">AS50676</a>; from <a href="/AS12418">AS12418</a> action pref=100; accept <a href="/AS12418">AS12418</a>; from <a href="/AS197044">AS197044</a> action pref=100; accept <a href="/AS197044">AS197044</a>; }
+import:         from <a href="/AS48612">AS48612</a> action pref=100; accept <a href="/as-set/AS-RTC-ORENBURG">AS-RTC-ORENBURG</a>
+import:         from <a href="/AS44493">AS44493</a> action pref=100; accept <a href="/AS44493">AS44493</a>
+import:         from <a href="/AS23456">AS23456</a> action pref=100; accept <a href="/AS23456">AS23456</a>
+import:         from <a href="/as-set/AS-LUKOIL">AS-LUKOIL</a> action pref=100; accept <a href="/as-set/AS-LUKOIL">AS-LUKOIL</a>
+import:         from <a href="/AS38958">AS38958</a> action pref=100; accept <a href="/AS38958">AS38958</a>
+import:         from <a href="/AS197178">AS197178</a> action pref=100; accept <a href="/AS197178">AS197178</a>
+import:         from <a href="/AS48909">AS48909</a> action pref=100; accept <a href="/AS48909">AS48909</a>
+import:         from <a href="/AS44120">AS44120</a> action pref=100; accept <a href="/AS44120">AS44120</a>
+import:         from <a href="/as-set/AS-INTERSVYAZ">AS-INTERSVYAZ</a> action pref=100; accept <a href="/as-set/AS-INTERSVYAZ">AS-INTERSVYAZ</a>
+import:         from <a href="/as-set/AS-INSIT">AS-INSIT</a> action pref=100; accept <a href="/as-set/AS-INSIT">AS-INSIT</a>
+import:         from <a href="/AS51882">AS51882</a> action pref=100; accept <a href="/AS51882">AS51882</a>
+import:         from <a href="/as-set/AS-VEGA-NET">AS-VEGA-NET</a> action pref=100; accept <a href="/as-set/AS-VEGA-NET">AS-VEGA-NET</a>
+import:         from <a href="/AS51690">AS51690</a> action pref=100; accept <a href="/AS51690">AS51690</a>
+import:         from <a href="/as-set/AS-SERVICETELECOM">AS-SERVICETELECOM</a> action pref=100; accept <a href="/as-set/AS-SERVICETELECOM">AS-SERVICETELECOM</a>
+import:         from <a href="/AS8324">AS8324</a> action pref=100; accept <a href="/AS8324">AS8324</a>
+import:         from <a href="/AS24588">AS24588</a> action pref=100; accept <a href="/AS24588">AS24588</a>
+import:         from <a href="/AS56436">AS56436</a> action pref=100; accept <a href="/AS56436">AS56436</a>
+import:         from <a href="/AS56761">AS56761</a> action pref=100; accept <a href="/AS56761">AS56761</a>
+import:         from <a href="/AS56807">AS56807</a> action pref=100; accept <a href="/AS56807">AS56807</a>
+import:         from <a href="/AS197857">AS197857</a> action pref=100; accept <a href="/AS197857">AS197857</a>
+import:         from <a href="/AS56923">AS56923</a> action pref=100; accept <a href="/AS56923">AS56923</a>
+import:         from <a href="/as-set/AS-STKNET">AS-STKNET</a> action pref=100; accept <a href="/as-set/AS-STKNET">AS-STKNET</a>
+import:         from <a href="/AS57041">AS57041</a> action pref=100; accept <a href="/AS57041">AS57041</a>
+import:         from <a href="/AS57149">AS57149</a> action pref=100; accept <a href="/AS57149">AS57149</a>
+import:         from <a href="/AS49483">AS49483</a> action pref=100; accept <a href="/AS49483">AS49483</a>
+import:         from <a href="/as-set/AS-MAGINFONET">AS-MAGINFONET</a> action pref=100; accept <a href="/as-set/AS-MAGINFONET">AS-MAGINFONET</a>
+import:         from <a href="/AS196991">AS196991</a> action pref=100; accept <a href="/AS196991">AS196991</a>
+import:         from <a href="/AS57503">AS57503</a> action pref=100; accept <a href="/AS57503">AS57503</a>
+import:         from <a href="/as-set/AS-MODEM">AS-MODEM</a> action pref=100; accept <a href="/as-set/AS-MODEM">AS-MODEM</a>
+import:         from <a href="/as-set/AS-INFOCENTR">AS-INFOCENTR</a> action pref=100; accept <a href="/as-set/AS-INFOCENTR">AS-INFOCENTR</a>
+import:         from <a href="/AS43246">AS43246</a> action pref=100; accept <a href="/AS43246">AS43246</a>
+import:         from <a href="/AS56395">AS56395</a> action pref=100; accept <a href="/AS56395">AS56395</a>
+import:         from <a href="/AS198683">AS198683</a> action pref=100; accept <a href="/AS198683">AS198683</a>
+import:         from <a href="/AS198552">AS198552</a> action pref=100; accept <a href="/AS198552">AS198552</a>
+import:         from <a href="/AS198809">AS198809</a> action pref=100; accept <a href="/AS198809">AS198809</a>
+import:         from <a href="/AS58231">AS58231</a> action pref=100; accept <a href="/AS58231">AS58231</a>
+import:         from <a href="/as-set/AS-FACTORIAL-INTERNET">AS-FACTORIAL-INTERNET</a> action pref=100; accept <a href="/as-set/AS-FACTORIAL-INTERNET">AS-FACTORIAL-INTERNET</a>
+import:         from <a href="/AS41925">AS41925</a> action pref=100; accept <a href="/AS41925">AS41925</a>
+import:         from <a href="/AS56606">AS56606</a> action pref=100; accept <a href="/AS56606">AS56606</a>
+import:         from <a href="/AS198791">AS198791</a> action pref=100; accept <a href="/AS198791">AS198791</a>
+import:         from <a href="/AS57762">AS57762</a> action pref=100; accept <a href="/AS57762">AS57762</a>
+import:         from <a href="/AS3203">AS3203</a> action pref=100; accept <a href="/AS3203">AS3203</a>
+import:         from <a href="/as-set/AS-MKTECHNOLOGIYA">AS-MKTECHNOLOGIYA</a> action pref=100; accept <a href="/as-set/AS-MKTECHNOLOGIYA">AS-MKTECHNOLOGIYA</a>
+import:         from <a href="/as-set/AS-DALMATOVO">AS-DALMATOVO</a> action pref=100; accept <a href="/as-set/AS-DALMATOVO">AS-DALMATOVO</a>
+import:         from <a href="/as-set/AS-SMSL">AS-SMSL</a> action pref=100; accept <a href="/as-set/AS-SMSL">AS-SMSL</a>
+import:         from <a href="/AS48607">AS48607</a> action pref=100; accept <a href="/AS48607">AS48607</a>
+import:         from <a href="/AS43085">AS43085</a> action pref=100; accept <a href="/AS43085">AS43085</a>
+import:         from <a href="/AS207935">AS207935</a> action pref=100; accept <a href="/AS207935">AS207935</a>
+import:         from <a href="/AS59537">AS59537</a> action pref=100; accept <a href="/AS59537">AS59537</a>
+import:         from <a href="/AS47684">AS47684</a> action pref=100; accept <a href="/as-set/AS-FCOMM">AS-FCOMM</a>
+import:         from <a href="/AS198826">AS198826</a> action pref=100; accept <a href="/as-set/AS-ISTELECOM">AS-ISTELECOM</a>
+import:         from <a href="/AS60900">AS60900</a> action pref=100; accept <a href="/AS60900">AS60900</a>
+import:         from <a href="/AS51348">AS51348</a> action pref=100; accept <a href="/AS51348">AS51348</a>
+import:         from <a href="/AS50367">AS50367</a> action pref=100; accept <a href="/AS50367">AS50367</a>
+import:         from <a href="/AS202800">AS202800</a> action pref=100; accept <a href="/AS202800">AS202800</a>
+import:         from <a href="/AS49513">AS49513</a> action pref=100; accept <a href="/AS49513">AS49513</a>
+import:         from <a href="/AS207128">AS207128</a> action pref=100; accept <a href="/AS207128">AS207128</a>
+import:         from <a href="/AS206538">AS206538</a> action pref=100; accept <a href="/AS206538">AS206538</a>
+import:         from <a href="/AS61381">AS61381</a> action pref=100; accept <a href="/AS61381">AS61381</a>
+import:         from <a href="/AS9049">AS9049</a> action pref=100; accept <a href="/as-set/AS-ERTH">AS-ERTH</a>
+import:         from <a href="/AS209357">AS209357</a> action pref=100; accept <a href="/AS209357">AS209357</a>
+import:         from <a href="/AS58236">AS58236</a> action pref=500; accept <a href="/AS58236">AS58236</a>
+export:         to <a href="/AS20485">AS20485</a> announce <a href="/as-set/AS-SUTTK">AS-SUTTK</a>
+export:         to <a href="/AS24665">AS24665</a> announce ANY
+export:         to <a href="/AS28970">AS28970</a> announce ANY
+export:         to <a href="/as-set/AS-UCSNET">AS-UCSNET</a> announce ANY
+export:         to <a href="/AS28703">AS28703</a> announce ANY
+export:         to <a href="/AS29648">AS29648</a> announce ANY
+export:         to <a href="/AS30831">AS30831</a> announce ANY
+export:         to <a href="/AS30940">AS30940</a> announce ANY
+export:         to <a href="/AS31470">AS31470</a> announce ANY
+export:         to <a href="/AS31588">AS31588</a> announce ANY
+export:         to <a href="/AS34241">AS34241</a> announce ANY
+export:         to <a href="/AS34801">AS34801</a> announce ANY
+export:         to <a href="/as-set/AS-CHICS">AS-CHICS</a> announce ANY
+export:         to <a href="/AS39462">AS39462</a> announce ANY
+export:         to <a href="/AS21023">AS21023</a> announce ANY
+export:         to <a href="/AS41704">AS41704</a> announce ANY
+export:         to <a href="/AS42532">AS42532</a> announce ANY
+export:         to <a href="/AS43148">AS43148</a> announce ANY
+export:         to <a href="/AS12772">AS12772</a> announce ANY
+export:         to <a href="/AS41661">AS41661</a> announce ANY
+export:         to <a href="/AS42683">AS42683</a> announce ANY
+export:         to <a href="/AS8427">AS8427</a> announce ANY
+export:         to <a href="/AS44039">AS44039</a> announce ANY
+export:         to <a href="/AS44172">AS44172</a> announce ANY
+export:         to <a href="/AS28832">AS28832</a> announce ANY
+export:         to <a href="/AS44492">AS44492</a> announce ANY
+export:         to <a href="/AS47439">AS47439</a> announce ANY
+export:         to <a href="/as-set/AS-FCOMM">AS-FCOMM</a> announce ANY
+export:         to <a href="/AS47460">AS47460</a> announce ANY
+export:         to <a href="/as-set/AS-MKS-CHEL">AS-MKS-CHEL</a> announce ANY
+export:         to <a href="/as-set/AS-S-INFORM">AS-S-INFORM</a> announce ANY
+export:         to <a href="/AS47972">AS47972</a> announce ANY
+export:         to <a href="/AS48160">AS48160</a> announce ANY
+export:         to <a href="/AS41704">AS41704</a> announce ANY
+export:         to <a href="/AS47733">AS47733</a> announce ANY
+export:         to <a href="/AS48527">AS48527</a> announce ANY
+export:         to <a href="/AS12418">AS12418</a> announce ANY
+export:         to <a href="/AS42269">AS42269</a> announce ANY
+export:         to <a href="/AS44556">AS44556</a> announce ANY
+export:         to <a href="/AS48978">AS48978</a> announce ANY
+export:         to <a href="/AS48725">AS48725</a> announce ANY
+export:         to <a href="/as-set/AS-CHELSI">AS-CHELSI</a> announce ANY
+export:         to <a href="/AS48203">AS48203</a> announce ANY
+export:         to <a href="/as-set/AS-UCN">AS-UCN</a> announce ANY
+export:         to <a href="/AS42930">AS42930</a> announce ANY
+export:         to <a href="/as-set/AS-OSSURAL">AS-OSSURAL</a> announce ANY
+export:         to <a href="/as-set/AS-URALUNICOM">AS-URALUNICOM</a> announce ANY
+export:         to <a href="/AS49144">AS49144</a> announce ANY
+export:         to <a href="/AS49369">AS49369</a> announce ANY
+export:         to <a href="/AS34246">AS34246</a> announce ANY
+export:         to <a href="/AS31466">AS31466</a> announce ANY
+export:         to <a href="/AS28890">AS28890</a> announce ANY
+export:         to <a href="/as-set/AS-URALNET">AS-URALNET</a> announce ANY
+export:         to <a href="/AS50077">AS50077</a> announce ANY
+export:         to <a href="/AS48043">AS48043</a> announce ANY
+export:         { to <a href="/AS34291">AS34291</a> announce ANY; to <a href="/AS39789">AS39789</a> announce ANY; to <a href="/AS50676">AS50676</a> announce ANY; to <a href="/AS12418">AS12418</a> announce ANY; to <a href="/AS197044">AS197044</a> announce ANY; }
+export:         to <a href="/AS48612">AS48612</a> announce ANY
+export:         to <a href="/AS44493">AS44493</a> announce ANY
+export:         to <a href="/AS23456">AS23456</a> announce ANY
+export:         to <a href="/as-set/AS-LUKOIL">AS-LUKOIL</a> announce ANY
+export:         to <a href="/AS38958">AS38958</a> announce ANY
+export:         to <a href="/AS197178">AS197178</a> announce ANY
+export:         to <a href="/AS48909">AS48909</a> announce ANY
+export:         to <a href="/AS44120">AS44120</a> announce ANY
+export:         to <a href="/as-set/AS-INTERSVYAZ">AS-INTERSVYAZ</a> announce ANY
+export:         to <a href="/as-set/AS-INSIT">AS-INSIT</a> announce ANY
+export:         to <a href="/AS51882">AS51882</a> announce ANY
+export:         to <a href="/as-set/AS-VEGA-NET">AS-VEGA-NET</a> announce ANY
+export:         to <a href="/AS51690">AS51690</a> announce ANY
+export:         to <a href="/as-set/AS-SERVICETELECOM">AS-SERVICETELECOM</a> announce ANY
+export:         to <a href="/AS8324">AS8324</a> announce ANY
+export:         to <a href="/AS24588">AS24588</a> announce ANY
+export:         to <a href="/AS56436">AS56436</a> announce ANY
+export:         to <a href="/AS56761">AS56761</a> announce ANY
+export:         to <a href="/AS56807">AS56807</a> announce ANY
+export:         to <a href="/AS197857">AS197857</a> announce ANY
+export:         to <a href="/AS56923">AS56923</a> announce ANY
+export:         to <a href="/as-set/AS-STKNET">AS-STKNET</a> announce ANY
+export:         to <a href="/AS57041">AS57041</a> announce ANY
+export:         to <a href="/AS57149">AS57149</a> announce ANY
+export:         to <a href="/AS49483">AS49483</a> announce ANY
+export:         to <a href="/as-set/AS-MAGINFONET">AS-MAGINFONET</a> announce ANY
+export:         to <a href="/AS196991">AS196991</a> announce ANY
+export:         to <a href="/AS57503">AS57503</a> announce ANY
+export:         to <a href="/as-set/AS-MODEM">AS-MODEM</a> announce ANY
+export:         to <a href="/as-set/AS-INFOCENTR">AS-INFOCENTR</a> announce ANY
+export:         to <a href="/AS43246">AS43246</a> announce ANY
+export:         to <a href="/AS56395">AS56395</a> announce ANY
+export:         to <a href="/AS198683">AS198683</a> announce ANY
+export:         to <a href="/AS198552">AS198552</a> announce ANY
+export:         to <a href="/AS198809">AS198809</a> announce ANY
+export:         to <a href="/AS58231">AS58231</a> announce ANY
+export:         to <a href="/AS15774">AS15774</a> announce ANY
+export:         to <a href="/as-set/AS-FACTORIAL-INTERNET">AS-FACTORIAL-INTERNET</a> announce ANY
+export:         to <a href="/AS56606">AS56606</a> announce ANY
+export:         to <a href="/AS198791">AS198791</a> announce ANY
+export:         to <a href="/AS57762">AS57762</a> announce ANY
+export:         to <a href="/AS3203">AS3203</a> announce ANY
+export:         to <a href="/as-set/AS-MKTECHNOLOGIYA">AS-MKTECHNOLOGIYA</a> announce ANY
+export:         to <a href="/as-set/AS-DALMATOVO">AS-DALMATOVO</a> announce ANY
+export:         to <a href="/as-set/AS-SMSL">AS-SMSL</a> announce ANY
+export:         to <a href="/AS48607">AS48607</a> announce ANY
+export:         to <a href="/AS43085">AS43085</a> announce ANY
+export:         to <a href="/AS207935">AS207935</a> announce ANY
+export:         to <a href="/AS59537">AS59537</a> announce ANY
+export:         to <a href="/AS47684">AS47684</a> announce ANY
+export:         to <a href="/AS198826">AS198826</a> announce ANY
+export:         to <a href="/AS60900">AS60900</a> announce ANY
+export:         to <a href="/AS51348">AS51348</a> announce ANY
+export:         to <a href="/AS50367">AS50367</a> announce ANY
+export:         to <a href="/AS202800">AS202800</a> announce ANY
+export:         to <a href="/AS49513">AS49513</a> announce ANY
+export:         to <a href="/AS207128">AS207128</a> announce ANY
+export:         to <a href="/AS206538">AS206538</a> announce ANY
+export:         to <a href="/AS61381">AS61381</a> announce ANY
+export:         to <a href="/AS9049">AS9049</a> announce <a href="/as-set/AS-SUTTK">AS-SUTTK</a>
+export:         to <a href="/AS209357">AS209357</a> announce ANY
+export:         to <a href="/AS209932">AS209932</a> announce ANY
+export:         to <a href="/AS58236">AS58236</a> announce ANY
+admin-c:        DUMY-RIPE
+tech-c:         DUMY-RIPE
+status:         ASSIGNED
+mnt-by:         RIPE-NCC-END-MNT
+mnt-by:         TRANSTELECOM-MNT
+created:        2003-02-13T10:26:40Z
+last-modified:  2025-01-13T21:16:51Z
+source:         RIPE
+remarks:        ****************************
+remarks:        * THIS OBJECT IS MODIFIED
+remarks:        * Please note that all data that is generally regarded as personal
+remarks:        * data has been removed from this object.
+remarks:        * To view the original object, please query the RIPE Database at:
+remarks:        * http://www.ripe.net/whois
+remarks:        ****************************
+
+
+organisation:   <a href="https://apps.db.ripe.net/db-web-ui/query?searchtext=ORG-CJSC19-RIPE">ORG-CJSC19-RIPE</a>
+org-name:       Joint Stock Company TransTeleCom
+country:        RU
+org-type:       LIR
+address:        Dummy address for <a href="https://apps.db.ripe.net/db-web-ui/query?searchtext=ORG-CJSC19-RIPE">ORG-CJSC19-RIPE</a>
+# Email removed, Log into bgp.tools to see whois emails
+abuse-c:        KTTK-RIPE
+mnt-ref:        RIPE-NCC-HM-MNT
+mnt-ref:        TRANSTELECOM-MNT
+mnt-by:         RIPE-NCC-HM-MNT
+mnt-by:         TRANSTELECOM-MNT
+created:        2009-03-11T13:07:47Z
+last-modified:  2025-11-10T09:23:30Z
+source:         RIPE
+remarks:        ****************************
+remarks:        * THIS OBJECT IS MODIFIED
+remarks:        * Please note that all data that is generally regarded as personal
+remarks:        * data has been removed from this object.
+remarks:        * To view the original object, please query the RIPE Database at:
+remarks:        * http://www.ripe.net/whois
+remarks:        ****************************
+
+</pre>
+                        
+                        
+                        <a style="font-size: small;">Last Update: 2025-12-11T03:25:09Z UTC </a>
+                        
+                        <hr>
+                        
+                            <h2>Member of the following AS-SETs</h2>
+
+                            <table id="fhTable" class="full-width-table ">
+                                <tbody id="prefixlist-tbody">
+                                    <tr>
+                                        <th class="boldpls nowrap"> - </th>
+                                        <th class="boldpls">Member</th>
+                                        
+                                        <th class="boldpls nowrap">ASN Count</th>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-block-set">as-block-set</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">638</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as3491:as-customers-eu">as3491:as-customers-eu</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap boldpls"><p style="display: contents;color: red">83202</p></td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as29648:as-suttk-2-surnet">as29648:as-suttk-2-surnet</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">4</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as29648:as-cust">as29648:as-cust</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">142</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-blocked-ru">as-blocked-ru</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">641</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-btn-customers">as-btn-customers</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">1495</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-rus-korabl-nahui">as-rus-korabl-nahui</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">641</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as50581:as-block">as50581:as-block</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">642</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-suttk">as-suttk</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">164</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">LEVEL3</td>
+                                        
+                                        <td><a href="/as-set/LEVEL3::as-level3-origins-na">as-level3-origins-na</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">0</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-transrs">as-transrs</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">3</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">LEVEL3</td>
+                                        
+                                        <td><a href="/as-set/LEVEL3::as-level3-origins-eu">as-level3-origins-eu</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">0</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-tratata">as-tratata</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">1097</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as29648:as-in:as28745">as29648:as-in:as28745</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">24</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                        
+
+                    </div>
+
+                    
+
+                    
+
+                    
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="superclearfix">
+            
+            <div class="superclearfix">
+                
+            </div>
+
+            <div class="superclearfix">
+                
+            </div>
+
+
+        </div>
+
+
+        <div class="group js-footer" id="footer">
+            <nav>
+                <div>
+                    <ul>
+                        <li><a href="/kb/api" target="_blank">Scripting/API</a></li>
+                        <li><a href="/credits" target="_blank">Credits</a></li>
+                        <li><a href="/pricing" target="_blank">Pricing</a></li>
+                        <li><a href="/kb/contact" target="_blank">Contact Us</a></li>
+                        <li><a href="https://github.com/bgptools/issues" target="_blank">Issue Tracker</a></li>
+                        <li><a href="/kb/setup-sessions" target="">Contribute Data</a></li>
+                        
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <script>
+    
+    var inhash = window.location.hash;
+    if (inhash == "#asinfo") {
+        
+    } else if (inhash == "#prefixes") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#prefix-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#prefixes-page');
+        aaa[0].style.display = "";
+
+    } else if (inhash == "#connectivity" || inhash == "#peers" || inhash == "#upstreams" || inhash == "#downstreams") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#connectivity-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#connectivity-page');
+        aaa[0].style.display = "";
+    } else if (inhash == "#whois") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#whois-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#whois-page');
+        aaa[0].style.display = "";
+    } else if (inhash == "#ix") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#ix-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#ix-page');
+        aaa[0].style.display = "";
+    }</script>
+
+    <script>
+    
+
+
+    ;(function() {
+  'use strict'
+
+  function scaleImageMap() {
+    function resizeMap() {
+      function resizeAreaTag(cachedAreaCoords, idx) {
+        function scale(coord) {
+          var dimension = 1 === (isWidth = 1 - isWidth) ? 'width' : 'height'
+          return (
+            padding[dimension] +
+            Math.floor(Number(coord) * scalingFactor[dimension])
+          )
+        }
+
+        var isWidth = 0
+        areas[idx].coords = cachedAreaCoords
+          .split(',')
+          .map(scale)
+          .join(',')
+      }
+
+      var scalingFactor = {
+        width: image.width / image.naturalWidth,
+        height: image.height / image.naturalHeight,
+      }
+
+      var padding = {
+        width: parseInt(
+          window.getComputedStyle(image, null).getPropertyValue('padding-left'),
+          10
+        ),
+        height: parseInt(
+          window.getComputedStyle(image, null).getPropertyValue('padding-top'),
+          10
+        ),
+      }
+
+      cachedAreaCoordsArray.forEach(resizeAreaTag)
+    }
+
+    function getCoords(e) {
+      
+      return e.coords.replace(/ *, */g, ',').replace(/ +/g, ',')
+    }
+
+    function debounce() {
+      clearTimeout(timer)
+      timer = setTimeout(resizeMap, 250)
+    }
+
+    function start() {
+      if (
+        image.width !== image.naturalWidth ||
+        image.height !== image.naturalHeight
+      ) {
+        resizeMap()
+      }
+    }
+
+    function addEventListeners() {
+      image.addEventListener('load', resizeMap, false) 
+      window.addEventListener('focus', resizeMap, false) 
+      window.addEventListener('resize', debounce, false)
+      window.addEventListener('readystatechange', resizeMap, false)
+      document.addEventListener('fullscreenchange', resizeMap, false)
+    }
+
+    function beenHere() {
+      return 'function' === typeof map._resize
+    }
+
+    function getImg(name) {
+      return document.querySelector('img[usemap="#world"]')
+    }
+
+    function setup() {
+      areas = map.getElementsByTagName('area')
+      cachedAreaCoordsArray = Array.prototype.map.call(areas, getCoords)
+      image = getImg('#' + map.name) || getImg(map.name)
+      map._resize = resizeMap 
+    }
+
+    var  
+      map = this,
+      areas = null,
+      cachedAreaCoordsArray = null,
+      image = null,
+      timer = null
+
+    if (!beenHere()) {
+      setup()
+      addEventListeners()
+      start()
+    } else {
+      map._resize() 
+    }
+  }
+
+  function factory() {
+    function chkMap(element) {
+      if (!element.tagName) {
+        throw new TypeError('Object is not a valid DOM element')
+      } else if ('MAP' !== element.tagName.toUpperCase()) {
+        throw new TypeError(
+          'Expected <MAP> tag, found <' + element.tagName + '>.'
+        )
+      }
+    }
+
+    function init(element) {
+      if (element) {
+        chkMap(element)
+        scaleImageMap.call(element)
+        maps.push(element)
+      }
+    }
+
+    var maps
+
+    return function imageMapResizeF(target) {
+      maps = [] 
+
+      switch (typeof target) {
+        case 'undefined':
+        case 'string':
+          Array.prototype.forEach.call(
+            document.querySelectorAll(target || 'map'),
+            init
+          )
+          break
+        case 'object':
+          init(target)
+          break
+        default:
+          throw new TypeError('Unexpected data type (' + typeof target + ').')
+      }
+
+      return maps
+    }
+  }
+
+  if (typeof define === 'function' && define.amd) {
+    define([], factory)
+  } else if (typeof module === 'object' && typeof module.exports === 'object') {
+    module.exports = factory() 
+  } else {
+    window.imageMapResize = factory()
+  }
+
+  if ('jQuery' in window) {
+    window.jQuery.fn.imageMapResize = function $imageMapResizeF() {
+      return this.filter('map')
+        .each(scaleImageMap)
+        .end()
+    }
+  }
+})()
+    
+    </script>
+    <script>
+        var imgEl = document.getElementById("pathimg");
+        imgEl.addEventListener("mouseover",function() {
+            imageMapResize('#world');
+        })
+    </script>
+    <script src="/assets/tablesort.min.js"></script>
+    <script>
+        addEventListener("load", (event) => {
+            
+            
+            var sort = new Tablesort(document.getElementById('donotscrapebgptools-upstreamTable'));
+            var sort2 = new Tablesort(document.getElementById('donotscrapebgptools-upstreamTablePeers'));
+            
+            var sort3 = new Tablesort(document.getElementById('donotscrapebgptools-upstreamTableDowns'));
+            
+            
+        });
+    </script>
+    
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        setTimeout(function() {
+
+        var beaconHttp = new XMLHttpRequest();
+        var url = '/performance-beacon';
+        var params = JSON.stringify(window.performance)
+        beaconHttp.open('POST', url, true);
+        
+        
+        beaconHttp.setRequestHeader('Content-type', 'application/json');
+        beaconHttp.setRequestHeader('visit-url', "/as/28745");
+        if (navigator.connection) {
+            beaconHttp.setRequestHeader('client-side-rtt', navigator.connection.rtt);
+        } else {
+            beaconHttp.setRequestHeader('client-side-rtt', '-2');
+        }
+        beaconHttp.onreadystatechange = function() {}
+        beaconHttp.send(params);
+        },1000)
+    }, false);
+</script>
+
+</body>
+
+
+</html>

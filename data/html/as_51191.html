@@ -1,0 +1,2559 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Core-Backbone GmbH (AS51191) is a 14 year old BGP network that is peering with 5 other networks and has 4 upstream carriers">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000">
+    <link rel="search" type="application/opensearchdescription+xml" title="BGP.Tools" href="https://bgp.tools/opensearch.xml">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="theme-color" content="#000000">
+    <link href="https://social.bgp.tools/@bgptools" rel="me">
+    <link rel="canonical" href="https://bgp.tools/as/51191" />
+    <title>AS51191 Core-Backbone GmbH - bgp.tools</title>
+    <link rel="stylesheet" type="text/css" href="/assets/main-new.css?2025-12-13-1541%20UTC">
+</head>
+
+<body>
+    <div id="container">
+        
+<div id="global-header" class="global-header-top">
+    <div class="header-sitewide">
+        <div class="global-header">
+            <div class="header-logo">
+                <a href="/" id="logo" class="content">bgp.tools</a>
+            </div>
+            <form id="search" action="/search" method="get" accept-charset="utf-8" role="search" class="top-search-header js-search-hash">
+                <div class="searchfield">
+                    <input type="search" autocomplete="off" name="q" id="site-search-text" title="Search" value="" placeholder="Start here..." autofocus="autofocus" class="js-search-focus">
+                    <button type="submit" id="search-submit" class="search-submit">Search</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div id="global-header-blob" >
+    <a id="auth-header-text" href="/login">Login</a>
+    
+</div>
+<div id="global-header-bar" >
+    <a id="auth-header-bar-text" href="/login">Login</a>
+    
+</div>
+<div class="small-clearfix"></div>
+
+        <div id="global-container">
+            
+
+
+            
+            <div class="section-tabs js-tabs">
+                <ul>
+                    
+<li class="active">
+    <h1> <a id="viewbutton-tab" href="/as/51191">View</a></h1>
+</li>
+
+<li >
+    <a id="editbutton-tab" href="/edit/as/51191">Edit</a>
+</li>
+
+
+
+
+
+                    <li style="float: right;">
+                        
+                        <img id="ws-status" width="24" height="24" src="/assets/disconnected.png" title="Not Connected To realtime data updates">
+                        
+                    </li>
+                </ul>
+            </div>
+
+            <div id="search-container">
+
+                <div class="column-full-width">
+
+                    <div class="clearfix">
+                        
+                    </div>
+                    
+                    
+
+                    <div class="network-header">
+                        
+                        
+                        <img width="334" height="250" src="/img/51191" alt="The website screenshot for https://www.xirra.net" >
+                        
+                        
+                        <p id="network-name" class="heading-xlarge">Core-Backbone GmbH</p>
+                        <p id="network-number">
+                            AS Number
+                            <strong id="ASNumberString" pure="51191">51191</strong>
+                            <br>
+                        
+                            Website
+                            <strong><a href="https://www.xirra.net" rel="nofollow">https://www.xirra.net</a></strong>
+                        
+                        </p>
+
+                    </div>
+
+
+                    <div class="clearfix">
+                        
+                    </div>
+
+
+                    <div class="section-tabs js-tabs">
+                        <ul>
+
+                            <li id="overview-tab-li" class="active">
+                                <a id="overview-tab" href="#asinfo">Overview</a>
+                            </li>
+                            
+                            <li id="prefix-tab-li">
+                                <a id="prefix-tab" href="#prefixes">Prefixes</a>
+                            </li>
+
+                            <li id="connectivity-tab-li">
+                                <a id="connectivity-tab" href="#connectivity">Connectivity</a>
+                            </li>
+                            
+                            <li id="whois-tab-li">
+                                <a id="whois-tab" href="#whois">Whois</a>
+                            </li>
+                        
+                        
+                        </ul>
+                    </div>
+
+<script>
+    function removeAllActiveTab() {
+        var tabs = [
+            "overview-tab-li", 
+            "prefix-tab-li", 
+            "connectivity-tab-li",
+            "whois-tab-li",
+            "ix-tab-li",
+            "issues-tab-li"
+        ];
+
+        tabs.forEach(element => {
+            var aaa = document.querySelectorAll('#'+element);
+            if(aaa.length != 0) {
+                aaa[0].classList.remove("active")
+            }
+        });
+    }
+
+    function hideAllContent() {
+        var tabs = [
+            "overview-page", 
+            "prefixes-page", 
+            "connectivity-page",
+            "whois-page",
+            "ix-page",
+            "issues-page"
+        ];
+
+        tabs.forEach(element => {
+            var aaa = document.querySelectorAll('#'+element);
+            if(aaa.length != 0) {
+                aaa[0].style.display = "none";
+            }
+        });
+        if (document.getElementById("donotscrapebgptools-prefixlist-tbody")) {
+            var prefixrows = document.getElementById("donotscrapebgptools-prefixlist-tbody").children;
+            for (var i = 0; i < prefixrows.length; i++) {
+                prefixrows[i].style = "";
+            }
+        }
+    }
+
+    var otab = document.querySelectorAll('#overview-tab');
+    otab[0].addEventListener("click", function () {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#overview-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#overview-page');
+        aaa[0].style.display = "";
+    });
+    
+
+    var ptab = document.querySelectorAll('#prefix-tab');
+    ptab[0].addEventListener("click", function () {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#prefix-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#prefixes-page');
+        aaa[0].style.display = "";
+    });
+
+    var ctab = document.querySelectorAll('#connectivity-tab');
+    ctab[0].addEventListener("click", function () {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#connectivity-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#connectivity-page');
+        aaa[0].style.display = "";
+    });
+    
+
+    var wtab = document.querySelectorAll('#whois-tab');
+    wtab[0].addEventListener("click", function () {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#whois-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#whois-page');
+        aaa[0].style.display = "";
+    });
+
+</script>
+
+
+
+                    
+                    <div id="overview-page">
+
+                        <div class="grid-row">
+                        
+                        <div class="column-two-thirds">
+                            <dl>
+                                <dt>Registered on</dt>
+                                <dd class="text data">
+                                    
+                                     7 Feb 2011 (14 years old)
+                                </dd>
+                            
+                            
+                            <dt>Registered to</dt>
+                            <dd class="text data">
+                                <a href="/rir-owner/de.ico">de.ico</a> (ripe)</dd>
+                                
+                                <dd class="text data" id="network-status">
+                                    <a href="/transfer-history/51191">[Transfer History]</a>
+                                </dd>
+                                
+                            
+                            </dl>
+                        </div>
+                        
+    
+                        <dl class="column-third">
+                            <dt>Network status</dt>
+                            <dd class="text data">
+                                
+                                Active, Allocated under RIPE
+                                
+                            </dd>
+                        </dl>
+    
+                        </div>
+    
+                        <div class="grid-row">
+                            <dl class="column-two-thirds">
+                                <dt>Network type</dt>
+                                <dd class="text data">
+                                    Content
+                                </dd>
+                            </dl>
+    
+                            <dl class="column-third">
+                                <dt>Prefixes Originated</dt>
+                                <dd class="data">8 IPv4, 98 IPv6</dd>
+                            </dl>
+                        </div>
+                        <div class="grid-row">
+                            <div class="column-half">
+    
+                                <h2 class="heading-medium"><derp>Upstreams</derp></h2>
+                                <ul>
+                                    
+                                    <li>
+                                        <span id="sic0">
+                                          <a href="/as/60068">AS60068</a> - Datacamp Limited (CDN77 / DataPacket)
+                                        </span>
+                                    </li>
+                                    
+                                    <li>
+                                        <span id="sic0">
+                                          <a href="/as/199524">AS199524</a> - Gcore S.A.
+                                        </span>
+                                    </li>
+                                    
+                                    <li>
+                                        <span id="sic0">
+                                          <a href="/as/33891">AS33891</a> - Core-Backbone GmbH
+                                        </span>
+                                    </li>
+                                    
+                                    <li>
+                                        <span id="sic0">
+                                          <a href="/as/20473">AS20473</a> - The Constant Company, LLC
+                                        </span>
+                                    </li>
+                                    
+                                </ul>
+    
+                            </div>
+    
+                            <div class="column-half">
+                                
+                                    <h2 class="heading-medium"><derp>Rankings</derp></h2>
+                                    
+                                    <li><span id="sic0">#73 for <a href="/rankings/DE?sort=dns">Unique Domains  in Germany</a></span></li>
+                                    
+                                    <li><span id="sic0">#82 for <a href="/rankings/DE?sort=v6">Originated IPv6 Space  in Germany</a></span></li>
+                                    
+                                
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+
+                    <div style="display: none" id="prefixes-page">
+                        
+
+                        
+                        <div style="float:left">
+                            <dt>Prefixes Originated</dt>
+                            <dd class="data">8 IPv4, 98 IPv6</dd>
+                            <dd class="data"><a href="/as/51191?show-low-vis#prefixes">Show Low Visibility Prefixes</a></dd>
+                            
+                        </div>
+                        <div style="float:right">
+                                <dt>Addresses Originated</dt>
+                                <dd class="data">28 /24's of IPv4</dd>
+                                <dd class="data">524291 /48's of IPv6</dd>
+                        </div>
+
+                        <div class="clearfix">
+                            
+                        </div>
+
+
+                        <table id="fhTable" class="full-width-table ">
+                            <tbody id="donotscrapebgptools-prefixlist-tbody">
+                                <tr>
+                                    <th class="nowrap">  &nbsp;  </th>
+                                    <th class="boldpls">Prefix</th>
+                                    <th class="nowrap boldpls">Description</th>
+                                </tr>
+                                <p id="readme-if-you-are-human" style="display: none;">If you are scraping this block for the prefixes that a AS originates, please use the data dumps in https://bgp.tools/kb/api and cache them</p>
+                                
+                                <tr id="pfx-91.232.96.0/23">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="DE" src="/assets/flags/DE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/91.232.96.0/23">91.232.96.0/23</a></td>
+                                    <td class="smallonmobile nowrap">Core-Backbone GmbH</td>
+                                </tr>
+                                
+                                <tr id="pfx-130.185.104.0/21">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="DE" src="/assets/flags/DE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/130.185.104.0/21">130.185.104.0/21</a></td>
+                                    <td class="smallonmobile nowrap">Core-Backbone GmbH</td>
+                                </tr>
+                                
+                                <tr id="pfx-185.24.68.0/22">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="DE" src="/assets/flags/DE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/185.24.68.0/22">185.24.68.0/22</a></td>
+                                    <td class="smallonmobile nowrap">Core-Backbone GmbH</td>
+                                </tr>
+                                
+                                <tr id="pfx-185.108.216.0/22">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="DE" src="/assets/flags/DE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/185.108.216.0/22">185.108.216.0/22</a></td>
+                                    <td class="smallonmobile nowrap">Core-Backbone GmbH</td>
+                                </tr>
+                                
+                                <tr id="pfx-185.169.24.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="IT" src="/assets/flags/IT.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/185.169.24.0/24">185.169.24.0/24</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-185.169.25.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="IT" src="/assets/flags/IT.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/185.169.25.0/24">185.169.25.0/24</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-195.138.240.0/21">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="DE" src="/assets/flags/DE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/195.138.240.0/21">195.138.240.0/21</a></td>
+                                    <td class="smallonmobile nowrap">Core-Backbone GmbH</td>
+                                </tr>
+                                
+                                <tr id="pfx-195.138.244.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="DE" src="/assets/flags/DE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/195.138.244.0/24">195.138.244.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Core-Backbone GmbH</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a01:4a0:2000::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="DE" src="/assets/flags/DE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a01:4a0:2000::/48">2a01:4a0:2000::/48</a></td>
+                                    <td class="smallonmobile nowrap">Core-Backbone GmbH</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a01:4a0:2001::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="DE" src="/assets/flags/DE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a01:4a0:2001::/48">2a01:4a0:2001::/48</a></td>
+                                    <td class="smallonmobile nowrap">Core-Backbone GmbH</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a01:4a0:2002::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="DE" src="/assets/flags/DE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a01:4a0:2002::/48">2a01:4a0:2002::/48</a></td>
+                                    <td class="smallonmobile nowrap">Core-Backbone GmbH</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a06:4b00::/29">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="DE" src="/assets/flags/DE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a06:4b00::/29">2a06:4b00::/29</a></td>
+                                    <td class="smallonmobile nowrap">Core-Backbone GmbH</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a06:4b01:3300::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="DE" src="/assets/flags/DE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a06:4b01:3300::/48">2a06:4b01:3300::/48</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a06:4b01:3301::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="DE" src="/assets/flags/DE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a06:4b01:3301::/48">2a06:4b01:3301::/48</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a06:4b01:3302::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="DE" src="/assets/flags/DE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a06:4b01:3302::/48">2a06:4b01:3302::/48</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a06:4b01:3303::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="DE" src="/assets/flags/DE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a06:4b01:3303::/48">2a06:4b01:3303::/48</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a06:4b01:3304::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="DE" src="/assets/flags/DE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a06:4b01:3304::/48">2a06:4b01:3304::/48</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a06:4b01:3305::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="DE" src="/assets/flags/DE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a06:4b01:3305::/48">2a06:4b01:3305::/48</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a06:4b01:3306::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="DE" src="/assets/flags/DE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a06:4b01:3306::/48">2a06:4b01:3306::/48</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a06:4b01:3307::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="DE" src="/assets/flags/DE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a06:4b01:3307::/48">2a06:4b01:3307::/48</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a06:4b01:3308::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="DE" src="/assets/flags/DE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a06:4b01:3308::/48">2a06:4b01:3308::/48</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a06:4b01:3309::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="DE" src="/assets/flags/DE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a06:4b01:3309::/48">2a06:4b01:3309::/48</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a06:4b01:330a::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="DE" src="/assets/flags/DE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a06:4b01:330a::/48">2a06:4b01:330a::/48</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a06:4b01:330b::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="DE" src="/assets/flags/DE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a06:4b01:330b::/48">2a06:4b01:330b::/48</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a06:4b01:330c::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="DE" src="/assets/flags/DE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a06:4b01:330c::/48">2a06:4b01:330c::/48</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a06:4b01:330d::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="DE" src="/assets/flags/DE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a06:4b01:330d::/48">2a06:4b01:330d::/48</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a06:4b01:330e::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="DE" src="/assets/flags/DE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a06:4b01:330e::/48">2a06:4b01:330e::/48</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a06:4b01:330f::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="DE" src="/assets/flags/DE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a06:4b01:330f::/48">2a06:4b01:330f::/48</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a06:4b01:3310::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="DE" src="/assets/flags/DE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a06:4b01:3310::/48">2a06:4b01:3310::/48</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a06:4b01:3311::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="DE" src="/assets/flags/DE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a06:4b01:3311::/48">2a06:4b01:3311::/48</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a06:4b01:3312::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="DE" src="/assets/flags/DE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a06:4b01:3312::/48">2a06:4b01:3312::/48</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a06:4b01:3313::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="DE" src="/assets/flags/DE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a06:4b01:3313::/48">2a06:4b01:3313::/48</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a06:4b01:3314::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="DE" src="/assets/flags/DE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a06:4b01:3314::/48">2a06:4b01:3314::/48</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a06:4b01:3315::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="DE" src="/assets/flags/DE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a06:4b01:3315::/48">2a06:4b01:3315::/48</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a06:4b01:3316::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="DE" src="/assets/flags/DE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a06:4b01:3316::/48">2a06:4b01:3316::/48</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a06:4b01:3318::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="DE" src="/assets/flags/DE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a06:4b01:3318::/48">2a06:4b01:3318::/48</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a06:4b01:3319::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="DE" src="/assets/flags/DE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a06:4b01:3319::/48">2a06:4b01:3319::/48</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a06:4b01:331a::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="DE" src="/assets/flags/DE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a06:4b01:331a::/48">2a06:4b01:331a::/48</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a06:4b01:331b::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="DE" src="/assets/flags/DE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a06:4b01:331b::/48">2a06:4b01:331b::/48</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a06:4b01:331c::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="DE" src="/assets/flags/DE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a06:4b01:331c::/48">2a06:4b01:331c::/48</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a06:4b01:331d::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="DE" src="/assets/flags/DE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a06:4b01:331d::/48">2a06:4b01:331d::/48</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a06:4b01:331e::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="DE" src="/assets/flags/DE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a06:4b01:331e::/48">2a06:4b01:331e::/48</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a06:4b01:331f::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="DE" src="/assets/flags/DE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a06:4b01:331f::/48">2a06:4b01:331f::/48</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a06:4b01:3320::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="DE" src="/assets/flags/DE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a06:4b01:3320::/48">2a06:4b01:3320::/48</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a06:4b01:3321::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="DE" src="/assets/flags/DE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a06:4b01:3321::/48">2a06:4b01:3321::/48</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a06:4b01:3322::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="DE" src="/assets/flags/DE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a06:4b01:3322::/48">2a06:4b01:3322::/48</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a06:4b01:3323::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="DE" src="/assets/flags/DE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a06:4b01:3323::/48">2a06:4b01:3323::/48</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a06:4b01:3324::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="DE" src="/assets/flags/DE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a06:4b01:3324::/48">2a06:4b01:3324::/48</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a06:4b01:3325::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="DE" src="/assets/flags/DE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a06:4b01:3325::/48">2a06:4b01:3325::/48</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a06:4b01:3326::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="DE" src="/assets/flags/DE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a06:4b01:3326::/48">2a06:4b01:3326::/48</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a06:4b01:3327::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="DE" src="/assets/flags/DE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a06:4b01:3327::/48">2a06:4b01:3327::/48</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a06:4b01:3328::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="DE" src="/assets/flags/DE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a06:4b01:3328::/48">2a06:4b01:3328::/48</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a06:4b01:3329::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="DE" src="/assets/flags/DE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a06:4b01:3329::/48">2a06:4b01:3329::/48</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a06:4b01:332a::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="DE" src="/assets/flags/DE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a06:4b01:332a::/48">2a06:4b01:332a::/48</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a06:4b01:332b::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="DE" src="/assets/flags/DE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a06:4b01:332b::/48">2a06:4b01:332b::/48</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a06:4b01:332c::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="DE" src="/assets/flags/DE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a06:4b01:332c::/48">2a06:4b01:332c::/48</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a06:4b01:332e::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="DE" src="/assets/flags/DE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a06:4b01:332e::/48">2a06:4b01:332e::/48</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a06:4b01:332f::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="DE" src="/assets/flags/DE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a06:4b01:332f::/48">2a06:4b01:332f::/48</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a06:4b01:3330::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="DE" src="/assets/flags/DE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a06:4b01:3330::/48">2a06:4b01:3330::/48</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a06:4b01:3400::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="DE" src="/assets/flags/DE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a06:4b01:3400::/48">2a06:4b01:3400::/48</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a06:4b01:3404::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="DE" src="/assets/flags/DE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a06:4b01:3404::/48">2a06:4b01:3404::/48</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a06:4b01:340c::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="DE" src="/assets/flags/DE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a06:4b01:340c::/48">2a06:4b01:340c::/48</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a06:4b01:3500::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="DE" src="/assets/flags/DE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a06:4b01:3500::/48">2a06:4b01:3500::/48</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a06:4b01:3501::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="DE" src="/assets/flags/DE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a06:4b01:3501::/48">2a06:4b01:3501::/48</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a06:4b01:3502::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="DE" src="/assets/flags/DE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a06:4b01:3502::/48">2a06:4b01:3502::/48</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a06:4b01:3503::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="DE" src="/assets/flags/DE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a06:4b01:3503::/48">2a06:4b01:3503::/48</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a06:4b01:3504::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="DE" src="/assets/flags/DE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a06:4b01:3504::/48">2a06:4b01:3504::/48</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a06:4b01:3505::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="DE" src="/assets/flags/DE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a06:4b01:3505::/48">2a06:4b01:3505::/48</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a06:4b01:3506::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="DE" src="/assets/flags/DE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a06:4b01:3506::/48">2a06:4b01:3506::/48</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a06:4b01:3507::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="DE" src="/assets/flags/DE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a06:4b01:3507::/48">2a06:4b01:3507::/48</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a06:4b01:3508::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="DE" src="/assets/flags/DE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a06:4b01:3508::/48">2a06:4b01:3508::/48</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a06:4b01:350b::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="DE" src="/assets/flags/DE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a06:4b01:350b::/48">2a06:4b01:350b::/48</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a06:4b01:350c::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="DE" src="/assets/flags/DE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a06:4b01:350c::/48">2a06:4b01:350c::/48</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a06:4b01:350d::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="DE" src="/assets/flags/DE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a06:4b01:350d::/48">2a06:4b01:350d::/48</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a06:4b01:350e::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="DE" src="/assets/flags/DE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a06:4b01:350e::/48">2a06:4b01:350e::/48</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a06:4b01:3510::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="DE" src="/assets/flags/DE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a06:4b01:3510::/48">2a06:4b01:3510::/48</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a06:4b01:3511::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="DE" src="/assets/flags/DE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a06:4b01:3511::/48">2a06:4b01:3511::/48</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a06:4b01:3512::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="DE" src="/assets/flags/DE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a06:4b01:3512::/48">2a06:4b01:3512::/48</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a06:4b01:3513::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="DE" src="/assets/flags/DE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a06:4b01:3513::/48">2a06:4b01:3513::/48</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a06:4b01:3514::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="DE" src="/assets/flags/DE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a06:4b01:3514::/48">2a06:4b01:3514::/48</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a06:4b01:3515::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="DE" src="/assets/flags/DE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a06:4b01:3515::/48">2a06:4b01:3515::/48</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a06:4b01:3518::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="DE" src="/assets/flags/DE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a06:4b01:3518::/48">2a06:4b01:3518::/48</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a06:4b01:3519::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="DE" src="/assets/flags/DE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a06:4b01:3519::/48">2a06:4b01:3519::/48</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a06:4b01:351a::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="DE" src="/assets/flags/DE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a06:4b01:351a::/48">2a06:4b01:351a::/48</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a06:4b01:351b::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="DE" src="/assets/flags/DE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a06:4b01:351b::/48">2a06:4b01:351b::/48</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a06:4b01:351c::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="DE" src="/assets/flags/DE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a06:4b01:351c::/48">2a06:4b01:351c::/48</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a06:4b01:351d::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="DE" src="/assets/flags/DE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a06:4b01:351d::/48">2a06:4b01:351d::/48</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a06:4b01:351e::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="DE" src="/assets/flags/DE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a06:4b01:351e::/48">2a06:4b01:351e::/48</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a06:4b01:351f::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="DE" src="/assets/flags/DE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a06:4b01:351f::/48">2a06:4b01:351f::/48</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a06:4b01:3520::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="DE" src="/assets/flags/DE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a06:4b01:3520::/48">2a06:4b01:3520::/48</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a06:4b01:3521::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="DE" src="/assets/flags/DE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a06:4b01:3521::/48">2a06:4b01:3521::/48</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a06:4b01:3522::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="DE" src="/assets/flags/DE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a06:4b01:3522::/48">2a06:4b01:3522::/48</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a06:4b01:3523::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="DE" src="/assets/flags/DE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a06:4b01:3523::/48">2a06:4b01:3523::/48</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a06:4b01:3524::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="DE" src="/assets/flags/DE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a06:4b01:3524::/48">2a06:4b01:3524::/48</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a06:4b01:3525::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="DE" src="/assets/flags/DE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a06:4b01:3525::/48">2a06:4b01:3525::/48</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a06:4b01:3526::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="DE" src="/assets/flags/DE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a06:4b01:3526::/48">2a06:4b01:3526::/48</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a06:4b01:3527::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="DE" src="/assets/flags/DE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a06:4b01:3527::/48">2a06:4b01:3527::/48</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a06:4b01:3528::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="DE" src="/assets/flags/DE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a06:4b01:3528::/48">2a06:4b01:3528::/48</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a06:4b01:3529::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="DE" src="/assets/flags/DE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a06:4b01:3529::/48">2a06:4b01:3529::/48</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a06:4b01:352a::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="DE" src="/assets/flags/DE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a06:4b01:352a::/48">2a06:4b01:352a::/48</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a06:4b01:352b::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="DE" src="/assets/flags/DE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a06:4b01:352b::/48">2a06:4b01:352b::/48</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a06:4b01:352c::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="DE" src="/assets/flags/DE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a06:4b01:352c::/48">2a06:4b01:352c::/48</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a06:4b01:352d::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="DE" src="/assets/flags/DE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a06:4b01:352d::/48">2a06:4b01:352d::/48</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a06:4b01:352e::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="DE" src="/assets/flags/DE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a06:4b01:352e::/48">2a06:4b01:352e::/48</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a06:4b01:352f::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="DE" src="/assets/flags/DE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a06:4b01:352f::/48">2a06:4b01:352f::/48</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a06:4b01:3530::/48">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="DE" src="/assets/flags/DE.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a06:4b01:3530::/48">2a06:4b01:3530::/48</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div style="display: none" id="connectivity-page">
+
+                        <div class="grid-row">
+
+                            <dl class="column-two-thirds">
+                                <dt><a href="#upstreams">Upstreams</a></dt>
+                                <dd class="text data">
+                                    4
+                                </dd>
+                            </dl>
+
+                            <dl class="column-third">
+                                <dt><a href="#peers">Peers</a></dt>
+                                <dd class="data">5</dd>
+                            </dl>
+                        </div>
+
+
+                        <hr>
+                        <h3>Network Policy<img class="flag-img" src="/assets/info.png" style="padding-left: 12px;" title="This info can take up to 2 hours to fully update" alt="This info take up to 2 hours to fully update"/></h3></h3>
+                        <a style="font-size: small;" href="/kb/network-policy">Click here to learn more about what this graph means and what makes up a network policy</a>
+
+                        <select id="netpolicydropdown" class="dropdownmenu">
+                            
+                                <option disabled=true value="disabled-default">Global Aggregation (disabled due to size)</option>
+                            
+
+                            
+                                
+                            
+                                
+                                <option value="3f7784703ff6aaea71be933ee1075b215534c0b85cfd33d325fb6314">Policy silly_bhabha</option>
+                                
+                            
+                                
+                                <option value="40c988a16edf93973cbab476086a740ff306e4f2178b0d79196190d2">Policy eager_ganguly</option>
+                                
+                            
+                                
+                                <option value="8a4800cb40bf2b38a804abe055a18932cd8d5a94de2421cbdb3200d1">Policy vibrant_feistel</option>
+                                
+                            
+                                
+                                <option value="92e935f140f8fc404fc1a2c7035312f53f1b3418bedec90d2b1ed601">Policy infallible_volhard</option>
+                                
+                            
+                                
+                                <option selected value="985069583809233503631c08ace2ac6a08db95391d7fa5772b2cb60c">Policy charming_albattani</option>
+                                
+                            
+                                
+                                <option value="a5a42a0ccce1b5e19f27d66f14c3a737a23b1ee914cb01d34df772d6">Policy eager_newton</option>
+                                
+                            
+                                
+                                <option value="c3002c51f9af72d63177b60f1e78e2a27ea51269bcc818559e5b6413">Policy nervous_margulis</option>
+                                
+                            
+                                
+                                <option value="5cc49a3e76adfdff20b71bb5339f667c98b47b9655a7c9553492d7b4">Policy serene_bose</option>
+                                
+                            
+                                
+                                <option value="295cc24a097d9509252ac01090c60db268309b43d921a6dbd690c425">Policy zealous_edison</option>
+                                
+                            
+                                
+                                <option value="578ddb11bb7e79d751b9459099857da17ac5586e78672f238b048824">Policy upbeat_shaw</option>
+                                
+                            
+                                
+                                <option value="828dc2458cf61c2de215d3adb9a7953f90b7f61cfdd7175f80d1925d">Policy admiring_poitras</option>
+                                
+                            
+                                
+                                <option value="a5ea96c232c6d5e8803632c279ca8415a34abaff2da976ae737976b8">Policy gallant_moore</option>
+                                
+                            
+                                
+                                <option value="d6bc4cffceb4684133ed75a2f229aae627429f4d5945c7a612c3f633">Policy optimistic_dewdney</option>
+                                
+                            
+                                
+                                <option value="f4611ddb70f859f143c845618c8fa8d93e00f8341adaf4e7e34e108b">Policy cranky_ishizaka</option>
+                                
+                            
+                                
+                                <option value="1bfdba3be59e558dc36b1019abf0f38e514dc3a4c5646faf9fe4f285">Policy condescending_morse</option>
+                                
+                            
+                                
+                                <option value="63a7cce6a05829f72f9fe7e292daffe412d5964a2456eea7dcaaca67">Policy competent_nash</option>
+                                
+                            
+                                
+                                <option value="8dc930ddfaec37fbd5fe131da60d9604b2d36edf627cfaf1b7f7742f">Policy agitated_booth</option>
+                                
+                            
+                                
+                                <option value="cd4e6721fb588f718c8dbdbc049d2bf5a4e01ab6a62b63b54d004681">Policy vigorous_black</option>
+                                
+                            
+                                
+                                <option value="cf2504768a0b3a3ac5609643e55dfd8a30321930c490443df5c835a7">Policy objective_blackburn</option>
+                                
+                            
+                                
+                                <option value="5d985fd8c7bd04cec9d98396e4d569f758585983cc2f1f63a915f4a9">Policy xenodochial_perlman</option>
+                                
+                            
+                                
+                                <option value="2778fb60dda62f67bde3f42e2db414413c904ff59cbc53ba4a5e2ade">Policy pedantic_golick</option>
+                                
+                            
+                                
+                                <option value="340c4d0a770e2810453631abcd5e7b968b76ab4d836d042d77872faa">Policy nostalgic_dewdney</option>
+                                
+                            
+                                
+                                <option value="37ee67280ba3888b170b972777702c7e3009356183e03283a4729d5f">Policy affectionate_kalam</option>
+                                
+                            
+                                
+                                <option value="449fb0a8ce2f5323b20e47a3b8abb5078587a1ea53c3d4aa9718eec1">Policy amazing_johnson</option>
+                                
+                            
+                                
+                                <option value="54ff618dcff2bf80297e9e1462dec2a83fe5e101be585c280e6a23b6">Policy sharp_hodgkin</option>
+                                
+                            
+                                
+                                <option value="593e6ce9d1da1a9f113d71bd86bf007a23c32bb2dbbb1847a798cac0">Policy laughing_davinci</option>
+                                
+                            
+                                
+                                <option value="8fb516833ed72160e5d566dfaf14fe14e2d08e47478e427ea62f2665">Policy kind_kepler</option>
+                                
+                            
+
+                            
+
+
+                        </select>
+
+                        <script>var netgroups = {"1bfdba3be59e558dc36b1019abf0f38e514dc3a4c5646faf9fe4f285":["2a06:4b01:3330::/48","2a06:4b01:3300::/48","2a06:4b01:3323::/48","2a06:4b01:332a::/48","2a06:4b01:3328::/48","2a06:4b01:332c::/48","2a06:4b01:332e::/48","2a06:4b01:3327::/48","2a06:4b01:3326::/48","2a06:4b01:3324::/48","2a06:4b01:3322::/48","2a06:4b01:332b::/48","2a06:4b01:3325::/48","2a06:4b01:332f::/48"],"2778fb60dda62f67bde3f42e2db414413c904ff59cbc53ba4a5e2ade":["2a06:4b01:350d::/48"],"295cc24a097d9509252ac01090c60db268309b43d921a6dbd690c425":["2a06:4b01:3308::/48"],"340c4d0a770e2810453631abcd5e7b968b76ab4d836d042d77872faa":["2a06:4b01:3505::/48"],"37ee67280ba3888b170b972777702c7e3009356183e03283a4729d5f":["2a06:4b01:3305::/48"],"3f7784703ff6aaea71be933ee1075b215534c0b85cfd33d325fb6314":["2a06:4b01:331d::/48","2a06:4b01:3320::/48","2a06:4b01:331f::/48","2a06:4b01:3301::/48","2a06:4b01:3321::/48","2a06:4b01:3318::/48","2a06:4b01:331b::/48","2a06:4b01:331e::/48","2a06:4b01:331c::/48","2a06:4b01:331a::/48","2a06:4b01:3319::/48"],"40c988a16edf93973cbab476086a740ff306e4f2178b0d79196190d2":["2a06:4b01:330d::/48"],"449fb0a8ce2f5323b20e47a3b8abb5078587a1ea53c3d4aa9718eec1":["2a06:4b01:3519::/48","2a06:4b01:3502::/48","2a06:4b01:351f::/48","2a06:4b01:351b::/48","2a06:4b01:3501::/48","2a06:4b01:351e::/48","2a06:4b01:351c::/48","2a06:4b01:3518::/48","2a06:4b01:3521::/48","2a06:4b01:351a::/48","2a06:4b01:3520::/48","2a06:4b01:351d::/48"],"54ff618dcff2bf80297e9e1462dec2a83fe5e101be585c280e6a23b6":["2a06:4b01:3306::/48"],"578ddb11bb7e79d751b9459099857da17ac5586e78672f238b048824":["2a06:4b01:3503::/48"],"593e6ce9d1da1a9f113d71bd86bf007a23c32bb2dbbb1847a798cac0":["2a01:4a0:2000::/48","2a01:4a0:2002::/48","2a01:4a0:2001::/48","2a06:4b00::/29"],"5cc49a3e76adfdff20b71bb5339f667c98b47b9655a7c9553492d7b4":["2a06:4b01:3508::/48"],"5d985fd8c7bd04cec9d98396e4d569f758585983cc2f1f63a915f4a9":["2a06:4b01:350b::/48"],"63a7cce6a05829f72f9fe7e292daffe412d5964a2456eea7dcaaca67":["2a06:4b01:3504::/48"],"828dc2458cf61c2de215d3adb9a7953f90b7f61cfdd7175f80d1925d":["2a06:4b01:3507::/48"],"8a4800cb40bf2b38a804abe055a18932cd8d5a94de2421cbdb3200d1":["2a06:4b01:3329::/48"],"8dc930ddfaec37fbd5fe131da60d9604b2d36edf627cfaf1b7f7742f":["2a06:4b01:3511::/48","2a06:4b01:3513::/48","2a06:4b01:350c::/48","2a06:4b01:3510::/48","2a06:4b01:350e::/48","2a06:4b01:3514::/48","2a06:4b01:3512::/48"],"8fb516833ed72160e5d566dfaf14fe14e2d08e47478e427ea62f2665":["2a06:4b01:340c::/48"],"92e935f140f8fc404fc1a2c7035312f53f1b3418bedec90d2b1ed601":["195.138.244.0/24"],"985069583809233503631c08ace2ac6a08db95391d7fa5772b2cb60c":["2a06:4b01:352e::/48","2a06:4b01:352c::/48","2a06:4b01:3500::/48","2a06:4b01:3530::/48","2a06:4b01:352b::/48","2a06:4b01:352f::/48","2a06:4b01:3525::/48","2a06:4b01:3528::/48","2a06:4b01:352a::/48","2a06:4b01:3526::/48","2a06:4b01:3527::/48","2a06:4b01:3522::/48","2a06:4b01:3524::/48","2a06:4b01:3523::/48"],"a5a42a0ccce1b5e19f27d66f14c3a737a23b1ee914cb01d34df772d6":["2a06:4b01:3307::/48"],"a5ea96c232c6d5e8803632c279ca8415a34abaff2da976ae737976b8":["2a06:4b01:352d::/48","2a06:4b01:3529::/48"],"c3002c51f9af72d63177b60f1e78e2a27ea51269bcc818559e5b6413":["2a06:4b01:3506::/48"],"cd4e6721fb588f718c8dbdbc049d2bf5a4e01ab6a62b63b54d004681":["2a06:4b01:3400::/48"],"cf2504768a0b3a3ac5609643e55dfd8a30321930c490443df5c835a7":["185.24.68.0/22","91.232.96.0/23","185.108.216.0/22","130.185.104.0/21","195.138.240.0/21","185.169.24.0/24","185.169.25.0/24"],"d6bc4cffceb4684133ed75a2f229aae627429f4d5945c7a612c3f633":["2a06:4b01:3515::/48"],"f4611ddb70f859f143c845618c8fa8d93e00f8341adaf4e7e34e108b":["2a06:4b01:3404::/48"]}</script>
+
+                        <div style="text-align: center;">
+                            <img id="pathimg" usemap="#world" src="">
+                            <div id="world2"></div>
+                        </div>
+
+                        <details>
+                            <summary>Chart Display Options</summary>
+                            <noscript>This requires javascript to work</noscript>
+                            <label for="graphOptionMoreWiggle" style="display: flex;align-items: center;font-size: 20px;">
+                                <input type="checkbox" id="graphOptionMoreWiggle" name="graphOptionMoreWiggle" style="width: 64px; height: 32px;">
+                                    <p id="graphOptionMoreWiggleLabel" style="width: 200%;">Display links using non straight lines</p>
+                            </label>
+                        </details>
+
+                        <h3 style="display: none;" id="PISPBanner">Prefixes in selected policy</h3>
+                        <table id="policytable" class="full-width-table">
+                        </table>
+                        <button style="width:100%;display: none;" id="ShowFullPolicyButton" class="bigButton" onclick="dropdownPoke()">Load all prefixes in policy</button>
+
+                        <script>
+                            !function(a,b){"function"==typeof define&&define.amd?define([],b):"undefined"!=typeof module&&module.exports?module.exports=b():a.ReconnectingWebSocket=b()}(this,function(){function a(b,c,d){function l(a,b){var c=document.createEvent("CustomEvent");return c.initCustomEvent(a,!1,!1,b),c}var e={debug:!1,automaticOpen:!0,reconnectInterval:1e3,maxReconnectInterval:3e4,reconnectDecay:1.5,timeoutInterval:2e3};d||(d={});for(var f in e)this[f]="undefined"!=typeof d[f]?d[f]:e[f];this.url=b,this.reconnectAttempts=0,this.readyState=WebSocket.CONNECTING,this.protocol=null;var h,g=this,i=!1,j=!1,k=document.createElement("div");k.addEventListener("open",function(a){g.onopen(a)}),k.addEventListener("close",function(a){g.onclose(a)}),k.addEventListener("connecting",function(a){g.onconnecting(a)}),k.addEventListener("message",function(a){g.onmessage(a)}),k.addEventListener("error",function(a){g.onerror(a)}),this.addEventListener=k.addEventListener.bind(k),this.removeEventListener=k.removeEventListener.bind(k),this.dispatchEvent=k.dispatchEvent.bind(k),this.open=function(b){h=new WebSocket(g.url,c||[]),b||k.dispatchEvent(l("connecting")),(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","attempt-connect",g.url);var d=h,e=setTimeout(function(){(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","connection-timeout",g.url),j=!0,d.close(),j=!1},g.timeoutInterval);h.onopen=function(){clearTimeout(e),(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","onopen",g.url),g.protocol=h.protocol,g.readyState=WebSocket.OPEN,g.reconnectAttempts=0;var d=l("open");d.isReconnect=b,b=!1,k.dispatchEvent(d)},h.onclose=function(c){if(clearTimeout(e),h=null,i)g.readyState=WebSocket.CLOSED,k.dispatchEvent(l("close"));else{g.readyState=WebSocket.CONNECTING;var d=l("connecting");d.code=c.code,d.reason=c.reason,d.wasClean=c.wasClean,k.dispatchEvent(d),b||j||((g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","onclose",g.url),k.dispatchEvent(l("close")));var e=g.reconnectInterval*Math.pow(g.reconnectDecay,g.reconnectAttempts);setTimeout(function(){g.reconnectAttempts++,g.open(!0)},e>g.maxReconnectInterval?g.maxReconnectInterval:e)}},h.onmessage=function(b){(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","onmessage",g.url,b.data);var c=l("message");c.data=b.data,k.dispatchEvent(c)},h.onerror=function(b){(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","onerror",g.url,b),k.dispatchEvent(l("error"))}},1==this.automaticOpen&&this.open(!1),this.send=function(b){if(h)return(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","send",g.url,b),h.send(b);throw"INVALID_STATE_ERR : Pausing to reconnect websocket"},this.close=function(a,b){"undefined"==typeof a&&(a=1e3),i=!0,h&&h.close(a,b)},this.refresh=function(){h&&h.close()}}return a.prototype.onopen=function(){},a.prototype.onclose=function(){},a.prototype.onconnecting=function(){},a.prototype.onmessage=function(){},a.prototype.onerror=function(){},a.debugAll=!1,a.CONNECTING=WebSocket.CONNECTING,a.OPEN=WebSocket.OPEN,a.CLOSING=WebSocket.CLOSING,a.CLOSED=WebSocket.CLOSED,a});
+                        </script>
+                        
+                        <script>
+                            var prefixinfo = [{"PrefixString":"91.232.96.0/23","WhoisName":"Core-Backbone GmbH","WhoisCountry":"DE"},{"PrefixString":"130.185.104.0/21","WhoisName":"Core-Backbone GmbH","WhoisCountry":"DE"},{"PrefixString":"185.24.68.0/22","WhoisName":"Core-Backbone GmbH","WhoisCountry":"DE"},{"PrefixString":"185.108.216.0/22","WhoisName":"Core-Backbone GmbH","WhoisCountry":"DE"},{"PrefixString":"185.169.24.0/24","WhoisName":"-","WhoisCountry":"IT"},{"PrefixString":"185.169.25.0/24","WhoisName":"-","WhoisCountry":"IT"},{"PrefixString":"195.138.240.0/21","WhoisName":"Core-Backbone GmbH","WhoisCountry":"DE"},{"PrefixString":"195.138.244.0/24","WhoisName":"Core-Backbone GmbH","WhoisCountry":"DE"},{"PrefixString":"2a01:4a0:2000::/48","WhoisName":"Core-Backbone GmbH","WhoisCountry":"DE"},{"PrefixString":"2a01:4a0:2001::/48","WhoisName":"Core-Backbone GmbH","WhoisCountry":"DE"},{"PrefixString":"2a01:4a0:2002::/48","WhoisName":"Core-Backbone GmbH","WhoisCountry":"DE"},{"PrefixString":"2a06:4b00::/29","WhoisName":"Core-Backbone GmbH","WhoisCountry":"DE"},{"PrefixString":"2a06:4b01:3300::/48","WhoisName":"-","WhoisCountry":"DE"},{"PrefixString":"2a06:4b01:3301::/48","WhoisName":"-","WhoisCountry":"DE"},{"PrefixString":"2a06:4b01:3302::/48","WhoisName":"-","WhoisCountry":"DE"},{"PrefixString":"2a06:4b01:3303::/48","WhoisName":"-","WhoisCountry":"DE"},{"PrefixString":"2a06:4b01:3304::/48","WhoisName":"-","WhoisCountry":"DE"},{"PrefixString":"2a06:4b01:3305::/48","WhoisName":"-","WhoisCountry":"DE"},{"PrefixString":"2a06:4b01:3306::/48","WhoisName":"-","WhoisCountry":"DE"},{"PrefixString":"2a06:4b01:3307::/48","WhoisName":"-","WhoisCountry":"DE"},{"PrefixString":"2a06:4b01:3308::/48","WhoisName":"-","WhoisCountry":"DE"},{"PrefixString":"2a06:4b01:3309::/48","WhoisName":"-","WhoisCountry":"DE"},{"PrefixString":"2a06:4b01:330a::/48","WhoisName":"-","WhoisCountry":"DE"},{"PrefixString":"2a06:4b01:330b::/48","WhoisName":"-","WhoisCountry":"DE"},{"PrefixString":"2a06:4b01:330c::/48","WhoisName":"-","WhoisCountry":"DE"},{"PrefixString":"2a06:4b01:330d::/48","WhoisName":"-","WhoisCountry":"DE"},{"PrefixString":"2a06:4b01:330e::/48","WhoisName":"-","WhoisCountry":"DE"},{"PrefixString":"2a06:4b01:330f::/48","WhoisName":"-","WhoisCountry":"DE"},{"PrefixString":"2a06:4b01:3310::/48","WhoisName":"-","WhoisCountry":"DE"},{"PrefixString":"2a06:4b01:3311::/48","WhoisName":"-","WhoisCountry":"DE"},{"PrefixString":"2a06:4b01:3312::/48","WhoisName":"-","WhoisCountry":"DE"},{"PrefixString":"2a06:4b01:3313::/48","WhoisName":"-","WhoisCountry":"DE"},{"PrefixString":"2a06:4b01:3314::/48","WhoisName":"-","WhoisCountry":"DE"},{"PrefixString":"2a06:4b01:3315::/48","WhoisName":"-","WhoisCountry":"DE"},{"PrefixString":"2a06:4b01:3316::/48","WhoisName":"-","WhoisCountry":"DE"},{"PrefixString":"2a06:4b01:3318::/48","WhoisName":"-","WhoisCountry":"DE"},{"PrefixString":"2a06:4b01:3319::/48","WhoisName":"-","WhoisCountry":"DE"},{"PrefixString":"2a06:4b01:331a::/48","WhoisName":"-","WhoisCountry":"DE"},{"PrefixString":"2a06:4b01:331b::/48","WhoisName":"-","WhoisCountry":"DE"},{"PrefixString":"2a06:4b01:331c::/48","WhoisName":"-","WhoisCountry":"DE"},{"PrefixString":"2a06:4b01:331d::/48","WhoisName":"-","WhoisCountry":"DE"},{"PrefixString":"2a06:4b01:331e::/48","WhoisName":"-","WhoisCountry":"DE"},{"PrefixString":"2a06:4b01:331f::/48","WhoisName":"-","WhoisCountry":"DE"},{"PrefixString":"2a06:4b01:3320::/48","WhoisName":"-","WhoisCountry":"DE"},{"PrefixString":"2a06:4b01:3321::/48","WhoisName":"-","WhoisCountry":"DE"},{"PrefixString":"2a06:4b01:3322::/48","WhoisName":"-","WhoisCountry":"DE"},{"PrefixString":"2a06:4b01:3323::/48","WhoisName":"-","WhoisCountry":"DE"},{"PrefixString":"2a06:4b01:3324::/48","WhoisName":"-","WhoisCountry":"DE"},{"PrefixString":"2a06:4b01:3325::/48","WhoisName":"-","WhoisCountry":"DE"},{"PrefixString":"2a06:4b01:3326::/48","WhoisName":"-","WhoisCountry":"DE"},{"PrefixString":"2a06:4b01:3327::/48","WhoisName":"-","WhoisCountry":"DE"},{"PrefixString":"2a06:4b01:3328::/48","WhoisName":"-","WhoisCountry":"DE"},{"PrefixString":"2a06:4b01:3329::/48","WhoisName":"-","WhoisCountry":"DE"},{"PrefixString":"2a06:4b01:332a::/48","WhoisName":"-","WhoisCountry":"DE"},{"PrefixString":"2a06:4b01:332b::/48","WhoisName":"-","WhoisCountry":"DE"},{"PrefixString":"2a06:4b01:332c::/48","WhoisName":"-","WhoisCountry":"DE"},{"PrefixString":"2a06:4b01:332e::/48","WhoisName":"-","WhoisCountry":"DE"},{"PrefixString":"2a06:4b01:332f::/48","WhoisName":"-","WhoisCountry":"DE"},{"PrefixString":"2a06:4b01:3330::/48","WhoisName":"-","WhoisCountry":"DE"},{"PrefixString":"2a06:4b01:3400::/48","WhoisName":"-","WhoisCountry":"DE"},{"PrefixString":"2a06:4b01:3404::/48","WhoisName":"-","WhoisCountry":"DE"},{"PrefixString":"2a06:4b01:340c::/48","WhoisName":"-","WhoisCountry":"DE"},{"PrefixString":"2a06:4b01:3500::/48","WhoisName":"-","WhoisCountry":"DE"},{"PrefixString":"2a06:4b01:3501::/48","WhoisName":"-","WhoisCountry":"DE"},{"PrefixString":"2a06:4b01:3502::/48","WhoisName":"-","WhoisCountry":"DE"},{"PrefixString":"2a06:4b01:3503::/48","WhoisName":"-","WhoisCountry":"DE"},{"PrefixString":"2a06:4b01:3504::/48","WhoisName":"-","WhoisCountry":"DE"},{"PrefixString":"2a06:4b01:3505::/48","WhoisName":"-","WhoisCountry":"DE"},{"PrefixString":"2a06:4b01:3506::/48","WhoisName":"-","WhoisCountry":"DE"},{"PrefixString":"2a06:4b01:3507::/48","WhoisName":"-","WhoisCountry":"DE"},{"PrefixString":"2a06:4b01:3508::/48","WhoisName":"-","WhoisCountry":"DE"},{"PrefixString":"2a06:4b01:350b::/48","WhoisName":"-","WhoisCountry":"DE"},{"PrefixString":"2a06:4b01:350c::/48","WhoisName":"-","WhoisCountry":"DE"},{"PrefixString":"2a06:4b01:350d::/48","WhoisName":"-","WhoisCountry":"DE"},{"PrefixString":"2a06:4b01:350e::/48","WhoisName":"-","WhoisCountry":"DE"},{"PrefixString":"2a06:4b01:3510::/48","WhoisName":"-","WhoisCountry":"DE"},{"PrefixString":"2a06:4b01:3511::/48","WhoisName":"-","WhoisCountry":"DE"},{"PrefixString":"2a06:4b01:3512::/48","WhoisName":"-","WhoisCountry":"DE"},{"PrefixString":"2a06:4b01:3513::/48","WhoisName":"-","WhoisCountry":"DE"},{"PrefixString":"2a06:4b01:3514::/48","WhoisName":"-","WhoisCountry":"DE"},{"PrefixString":"2a06:4b01:3515::/48","WhoisName":"-","WhoisCountry":"DE"},{"PrefixString":"2a06:4b01:3518::/48","WhoisName":"-","WhoisCountry":"DE"},{"PrefixString":"2a06:4b01:3519::/48","WhoisName":"-","WhoisCountry":"DE"},{"PrefixString":"2a06:4b01:351a::/48","WhoisName":"-","WhoisCountry":"DE"},{"PrefixString":"2a06:4b01:351b::/48","WhoisName":"-","WhoisCountry":"DE"},{"PrefixString":"2a06:4b01:351c::/48","WhoisName":"-","WhoisCountry":"DE"},{"PrefixString":"2a06:4b01:351d::/48","WhoisName":"-","WhoisCountry":"DE"},{"PrefixString":"2a06:4b01:351e::/48","WhoisName":"-","WhoisCountry":"DE"},{"PrefixString":"2a06:4b01:351f::/48","WhoisName":"-","WhoisCountry":"DE"},{"PrefixString":"2a06:4b01:3520::/48","WhoisName":"-","WhoisCountry":"DE"},{"PrefixString":"2a06:4b01:3521::/48","WhoisName":"-","WhoisCountry":"DE"},{"PrefixString":"2a06:4b01:3522::/48","WhoisName":"-","WhoisCountry":"DE"},{"PrefixString":"2a06:4b01:3523::/48","WhoisName":"-","WhoisCountry":"DE"},{"PrefixString":"2a06:4b01:3524::/48","WhoisName":"-","WhoisCountry":"DE"},{"PrefixString":"2a06:4b01:3525::/48","WhoisName":"-","WhoisCountry":"DE"},{"PrefixString":"2a06:4b01:3526::/48","WhoisName":"-","WhoisCountry":"DE"},{"PrefixString":"2a06:4b01:3527::/48","WhoisName":"-","WhoisCountry":"DE"},{"PrefixString":"2a06:4b01:3528::/48","WhoisName":"-","WhoisCountry":"DE"},{"PrefixString":"2a06:4b01:3529::/48","WhoisName":"-","WhoisCountry":"DE"},{"PrefixString":"2a06:4b01:352a::/48","WhoisName":"-","WhoisCountry":"DE"},{"PrefixString":"2a06:4b01:352b::/48","WhoisName":"-","WhoisCountry":"DE"},{"PrefixString":"2a06:4b01:352c::/48","WhoisName":"-","WhoisCountry":"DE"},{"PrefixString":"2a06:4b01:352d::/48","WhoisName":"-","WhoisCountry":"DE"},{"PrefixString":"2a06:4b01:352e::/48","WhoisName":"-","WhoisCountry":"DE"},{"PrefixString":"2a06:4b01:352f::/48","WhoisName":"-","WhoisCountry":"DE"},{"PrefixString":"2a06:4b01:3530::/48","WhoisName":"-","WhoisCountry":"DE"}]
+                            var asn =  51191 
+
+                            var pfxExtraString = "";
+
+                            function saveGraphOptionsToLocalStorage() {
+                                localStorage.setItem("pfx-chart-options:wiggle", document.getElementById("graphOptionMoreWiggle").checked);
+                            }
+
+                            function loadGraphOptionsToLocalStorage() {
+                                document.getElementById("graphOptionMoreWiggle").checked = localStorage.getItem("pfx-chart-options:wiggle") == "true";
+                                pfxExtraString= "";
+                                if (document.getElementById("graphOptionMoreWiggle").checked) {
+                                    pfxExtraString = pfxExtraString + "&wiggly";
+                                }
+                            }
+                            loadGraphOptionsToLocalStorage();
+
+                            function graphOptionsChanged() {
+                                saveGraphOptionsToLocalStorage();
+                                handleImageChange();
+                            }
+                            document.getElementById("graphOptionMoreWiggle").addEventListener("click", graphOptionsChanged)
+
+
+                            function handleImageChange() {
+                                loadGraphOptionsToLocalStorage();
+                                
+                                document.getElementById("pathimg").src=("/pathimg/"+asn+ "-" + document.getElementById("netpolicydropdown").value +"?"+pfxExtraString);
+                                var request = new XMLHttpRequest();
+                                request.open('GET', "/pathimg/"+asn+ "-" + document.getElementById("netpolicydropdown").value + "?map=true" + pfxExtraString, true);
+
+                                request.onload = function() {
+                                    if (this.status >= 200 && this.status < 400) {
+                                        
+                                        
+                                        document.getElementById("world2").innerHTML = this.response;
+                                        setTimeout(function(){
+                                            imageMapResize('#world');
+                                        },1000)
+                                    }
+                                };
+                                request.send();
+                                buildPrefixTable();
+                            } 
+
+                            function encodeHTML(s) {
+                                return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
+                            }
+
+                            function dropdownPoke(){
+                                InteractedWithPolicyTableYet=true;
+                                handleImageChange();
+                            }
+
+                            var InteractedWithPolicyTableYet = false;
+                            var OverloadPolicySize = 0;
+                            function buildPrefixTable() {
+                                var policy = document.getElementById("netpolicydropdown").value;
+                                
+                                var cidrs = netgroups[policy];
+                                var ihtml = "<tbody> <tr> <th class=\"nowrap\">  -  </th> <th>Prefix</th> <th class=\"nowrap\">Description</th> </tr>";
+
+                                
+                                var aaa = document.querySelectorAll('#PISPBanner');
+                                var bbb = document.querySelectorAll('#policytable');
+                                var n = 0
+                                if (cidrs) {
+                                    aaa[0].style.display = "";
+                                    bbb[0].style.display = "";
+                                    cidrs.forEach(cidr => {
+                                        var obj = {};
+                                        var dont =false;
+                                        n++;
+                                        
+                                        if (!InteractedWithPolicyTableYet) {
+                                            if (n == 5) {
+                                                dont = true;
+                                            } else if (n > 5) {
+                                                dont = true;
+                                            }
+                                        }
+                                        
+                                        if (!dont) {
+                                            prefixinfo.forEach(el => {
+                                                if(el.PrefixString == cidr) {
+                                                    
+                                                        ihtml += "<tr><td class=\"nowrap ns\"><img class=\"flag-img\" src=\"/assets/flags/"+el.WhoisCountry+".png\" title=\""+el.WhoisCountry+"\"></td>"
+                                                        ihtml += "<td><a href=\"/prefix/"+el.PrefixString+"\">"+el.PrefixString+"</a></td>"
+                                                        ihtml += "<td class=\"nowrap\">"+encodeHTML(el.WhoisName)+"</td></tr>"
+                                                }
+                                            });
+                                        } else {
+                                            OverloadPolicySize++;
+                                        }
+                                    });
+                                    document.getElementById("policytable").innerHTML = ihtml
+                                    var PolButton = document.querySelectorAll('#ShowFullPolicyButton');
+                                    if (!InteractedWithPolicyTableYet && OverloadPolicySize!=0) {
+                                        PolButton[0].style="width:100%";
+                                        PolButton[0].innerHTML = "Load all "+OverloadPolicySize+" prefixes in policy"
+                                    } else {
+                                        PolButton[0].style="display:none;";
+                                    }
+                                    
+                                } else {
+                                    aaa[0].style.display = "none";
+                                    bbb[0].style.display = "none";
+                                }
+                            }
+
+
+                            var pathdropdown = document.querySelectorAll('#netpolicydropdown');
+                            pathdropdown[0].addEventListener("change",dropdownPoke)
+                            handleImageChange()
+                            buildPrefixTable()
+
+                            document.addEventListener("load", function(){
+                                
+                                handleImageChange()
+                            });
+
+                            function uuidv4() {
+                                return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+                                    var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+                                    return v.toString(16);
+                                });
+                            }
+
+                            
+                            let realTimeSocket = new ReconnectingWebSocket("wss://bgp.tools/ws/rt-asn?prefix=AS51191" + "&magic=" + encodeURIComponent("7QDNKZWB5AVAFFUOPRSGJFS2YHTVWNZ422IBEEQU3XQCXAXOYJ7A===="));
+                            
+                            realTimeSocket.onmessage = function(event) {
+                                console.log(`[message] Data received from server: ${event.data}`);
+                                if (event.data == "Running.") {
+                                    document.getElementById("ws-status").src = "/assets/connected.png";
+                                    document.getElementById("ws-status").title = "Connected to realtime data";
+                                } else if (event.data == "STOP-CONNECTING") {
+                                    document.getElementById("ws-status").src = disconectedIcon;
+                                    document.getElementById("ws-status").title = "Not connected to realtime data";
+                                    realTimeSocket.maxReconnectAttempts = 1;
+                                    realTimeSocket.close()
+                                } else {
+                                    var obj = JSON.parse(event.data);
+                                    var elm = document.getElementById("pfx-"+obj.Prefix);
+                                    if (!elm && obj.Vis > 6) {
+                                        var tblist = document.getElementById("donotscrapebgptools-prefixlist-tbody");
+                                        var node = document.createElement("tr");                 
+                                        node.outerHTML = '<tr id="pfx-'+obj.Prefix+'"><td class="nowrap"><img class="flag-img" src="/assets/flags/'+obj.Whois.WhoisCountry+'.png" title="'+obj.Whois.WhoisCountry+'"></td><td><a href="/prefix/'+obj.Prefix+'">'+obj.Prefix+'</a></td><td class="smallonmobile nowrap">'+obj.Whois.WhoisName+'</td></tr>';
+                                        tblist.appendChild(node);                              
+                                    }
+                                    if (!elm) {
+                                        elm = document.getElementById("pfx-"+obj.Prefix);
+                                    }
+                                    
+                                    if (obj.Vis > 70) {
+                                        if (elm.style) {
+                                            var es = elm.style;
+                                            if (es.animation.includes("pulse1b")) {
+                                                elm.style = "animation: pulse2b 1s 1;";
+                                            } else if (es.animation.includes("pulse2b")) {
+                                                elm.style = "animation: pulse1b 1s 1;";
+                                            } else {
+                                                elm.style = "animation: pulse1b 1s 1;";
+                                            }
+                                        }
+                                    } else if (obj.Vis < 5) {
+                                        
+                                        var elm = document.getElementById("pfx-"+obj.Prefix);
+                                        if (elm) {
+                                            elm.parentNode.removeChild(elm);
+                                        }
+                                    } else {
+                                        if (elm.style) {
+                                            var es = elm.style;
+                                            if (es.animation.includes("pulse1r")) {
+                                                elm.style = "animation: pulse2r 1s 1;";
+                                            } else if (es.animation.includes("pulse2r")) {
+                                                elm.style = "animation: pulse1r 1s 1;";
+                                            } else {
+                                                elm.style = "animation: pulse1r 1s 1;";
+                                            }
+                                        }
+                                    }
+                                }
+                            };
+                            var disconectedIcon = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAAZlBMVEX/ewBZWVn/ewf/ew5fWljudiP8egp6XVT6eRHodSmVYU6hZEzObjrldCv3eRZ/XlNjWliHX1KrZkngci71eBl1XFXCa0CKYFHydx18XlSQYE+lZUq0aEbJbT3SbzhvXFaLYFG8akLYdYVFAAABQElEQVRIx5XV25KDIAwGYIKASLutqOtZ277/S26xK4ozJea/qRdfajATZaRkd6B6oPoL1d9QphUn+WvXmGF8TfN8yvNrDj6nvNj5Hu8n8HCh9ONiON5PEKuQx55DmFTHC1R9uMOjYkhFERbkEikofw8FGe5t0FWJ+kLvz5H+t8RdGD9k8TeebBXpzwIZT955XyVBtHHeXYzeJy5fhydtoZffZvUMSfvxT4BOeI/G/b9paxH1at8XQF8xNcV8aaQvHQBMhY/XttsdYp5nah3XdvIqui61Cjy+jqLwXp1cx9XLQZ5cR/vx1p8cez2IWrlxYY/T9bNVyCfmdQdbxNgs441FNRAEHS83oe9ahmTw1p88nhHCiAkpeIUeX5eJ6NlM9Gwm+uxO9/3F2PSR597jn1+udCWzUp7150P1jOoZ1f8BGPARG85JosIAAAAASUVORK5CYII=";
+                            realTimeSocket.onerror = function(error) {
+                                document.getElementById("ws-status").src = disconectedIcon;
+                                document.getElementById("ws-status").title = "Not connected to realtime data";
+
+                                console.log(`[error] ${error.message}`);
+                            };
+                            realTimeSocket.onclose = function(error) {
+                                document.getElementById("ws-status").src = disconectedIcon;
+                                document.getElementById("ws-status").title = "Not connected to realtime data";
+
+                                console.log(`[error] ${error.message}`);
+                            };
+                        </script>
+
+<div class="superclearfix">
+    
+</div>
+
+                        <hr>
+                        <a style="font-size: small;" href="/kb/what-is-a-upstream">How are upstreams and downstreams calculated?</a>
+                        <h3 id="upstreams">Upstreams<img class="flag-img" src="/assets/lightning.png" style="padding-left: 12px;" title="This information was fetched live at page load time" alt="This information was fetched live at page load time"/></h3>
+
+
+                        <table id="donotscrapebgptools-upstreamTable" class="full-width-table">
+                            <thead class="sortable">
+                                <tr>
+                                    <th class="nowrap boldpls">  &nbsp;  </th>
+                                    <th data-sort-method='number' class="boldpls">ASN</th>
+                                    <th class="nowrap boldpls">Description</th>
+                                    <th class="nowrap boldpls">IPv4</th>
+                                    <th class="nowrap boldpls">IPv6</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                <tr>
+                                    <td data-sort='GB' class="nowrap ns"><img class="flag-img" src="/assets/flags/GB.png" title="GB">
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has valid ASPA">
+                                        </td>
+                                    <td data-sort='60068'><a href="/as/60068">AS60068</a></td>
+                                    <td class="smallonmobile nowrap">Datacamp Limited (CDN77 / DataPacket)</td>
+                                    <td class="nowrap">&#10008;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='LU' class="nowrap ns"><img class="flag-img" src="/assets/flags/LU.png" title="LU">
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has valid ASPA">
+                                        </td>
+                                    <td data-sort='199524'><a href="/as/199524">AS199524</a></td>
+                                    <td class="smallonmobile nowrap">Gcore S.A.</td>
+                                    <td class="nowrap">&#10008;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='DE' class="nowrap ns"><img class="flag-img" src="/assets/flags/DE.png" title="DE">
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has valid ASPA">
+                                        </td>
+                                    <td data-sort='33891'><a href="/as/33891">AS33891</a></td>
+                                    <td class="smallonmobile nowrap">Core-Backbone GmbH</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US">
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has valid ASPA">
+                                        </td>
+                                    <td data-sort='20473'><a href="/as/20473">AS20473</a></td>
+                                    <td class="smallonmobile nowrap">The Constant Company, LLC</td>
+                                    <td class="nowrap">&#10008;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+
+                        <hr>
+                        <h3 id="peers">Peers<img class="flag-img" src="/assets/lightning.png" style="padding-left: 12px;" title="This information was fetched live at page load time" alt="This information was fetched live at page load time"/></h3>
+
+
+
+                        <table id="donotscrapebgptools-upstreamTablePeers" class="full-width-table">
+                            <thead class="sortable">
+                                <tr>
+                                    <th class="nowrap boldpls">  &nbsp;  </th>
+                                    <th data-sort-method='number' class="boldpls">ASN</th>
+                                    <th class="nowrap boldpls">Description</th>
+                                    <th class="nowrap boldpls">IPv4</th>
+                                    <th class="nowrap boldpls">IPv6</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                <tr>
+                                    <td data-sort='GB' class="nowrap ns"><img class="flag-img" src="/assets/flags/GB.png" title="GB"></td>
+                                    <td data-sort='60068'><a href="/as/60068">AS60068</a></td>
+                                    <td class="smallonmobile nowrap">Datacamp Limited (CDN77 / DataPacket)</td>
+                                    <td class="nowrap">&#10008;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='LU' class="nowrap ns"><img class="flag-img" src="/assets/flags/LU.png" title="LU"></td>
+                                    <td data-sort='199524'><a href="/as/199524">AS199524</a></td>
+                                    <td class="smallonmobile nowrap">Gcore S.A.</td>
+                                    <td class="nowrap">&#10008;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='DE' class="nowrap ns"><img class="flag-img" src="/assets/flags/DE.png" title="DE"></td>
+                                    <td data-sort='33891'><a href="/as/33891">AS33891</a></td>
+                                    <td class="smallonmobile nowrap">Core-Backbone GmbH</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='20473'><a href="/as/20473">AS20473</a></td>
+                                    <td class="smallonmobile nowrap">The Constant Company, LLC</td>
+                                    <td class="nowrap">&#10008;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='PL' class="nowrap ns"><img class="flag-img" src="/assets/flags/PL.png" title="PL"></td>
+                                    <td data-sort='56662'><a href="/as/56662">AS56662</a></td>
+                                    <td class="smallonmobile nowrap">Marcin Gondek</td>
+                                    <td class="nowrap">&#10008;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+
+
+                    </div>
+
+                    <div style="display: none" id="whois-page">
+                        
+                        
+                        <pre style="white-space: pre-wrap;">aut-num:        <a href="/AS51191">AS51191</a>
+as-name:        XIRRA
+org:            <a href="https://apps.db.ripe.net/db-web-ui/query?searchtext=ORG-IICG1-RIPE">ORG-IICG1-RIPE</a>
+import:         from <a href="/AS33891">AS33891</a> accept ANY
+export:         to <a href="/AS33891">AS33891</a> announce <a href="/as-set/AS-XIRRA">AS-XIRRA</a>
+import:         from <a href="/AS199524">AS199524</a> accept ANY
+export:         to <a href="/AS199524">AS199524</a> announce <a href="/as-set/AS-XIRRA">AS-XIRRA</a>
+admin-c:        DUMY-RIPE
+tech-c:         DUMY-RIPE
+status:         ASSIGNED
+mnt-by:         RIPE-NCC-END-MNT
+mnt-by:         CORE-BACKBONE
+created:        2011-02-07T16:13:12Z
+last-modified:  2025-06-25T06:17:58Z
+source:         RIPE
+remarks:        ****************************
+remarks:        * THIS OBJECT IS MODIFIED
+remarks:        * Please note that all data that is generally regarded as personal
+remarks:        * data has been removed from this object.
+remarks:        * To view the original object, please query the RIPE Database at:
+remarks:        * http://www.ripe.net/whois
+remarks:        ****************************
+
+
+organisation:   <a href="https://apps.db.ripe.net/db-web-ui/query?searchtext=ORG-IICG1-RIPE">ORG-IICG1-RIPE</a>
+org-name:       Core-Backbone GmbH
+country:        DE
+org-type:       LIR
+address:        Dummy address for <a href="https://apps.db.ripe.net/db-web-ui/query?searchtext=ORG-IICG1-RIPE">ORG-IICG1-RIPE</a>
+# Email removed, Log into bgp.tools to see whois emails
+mnt-ref:        RIPE-NCC-HM-MNT
+mnt-ref:        CORE-BACKBONE
+mnt-by:         RIPE-NCC-HM-MNT
+mnt-by:         CORE-BACKBONE
+abuse-c:        CN2660-RIPE
+created:        2004-04-17T11:08:15Z
+last-modified:  2024-12-03T11:28:43Z
+source:         RIPE
+remarks:        ****************************
+remarks:        * THIS OBJECT IS MODIFIED
+remarks:        * Please note that all data that is generally regarded as personal
+remarks:        * data has been removed from this object.
+remarks:        * To view the original object, please query the RIPE Database at:
+remarks:        * http://www.ripe.net/whois
+remarks:        ****************************
+
+</pre>
+                        
+                        
+                        <a style="font-size: small;">Last Update: 2025-12-11T03:25:33Z UTC </a>
+                        
+                        <hr>
+                        
+                            <h2>Member of the following AS-SETs</h2>
+
+                            <table id="fhTable" class="full-width-table ">
+                                <tbody id="prefixlist-tbody">
+                                    <tr>
+                                        <th class="boldpls nowrap"> - </th>
+                                        <th class="boldpls">Member</th>
+                                        
+                                        <th class="boldpls nowrap">ASN Count</th>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-xirra">as-xirra</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">1</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as20473:as-vultr">as20473:as-vultr</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">1664</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-cdn77">as-cdn77</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">3460</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-qtel-transit-set">as-qtel-transit-set</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">299</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-core-backbone:as-exceptions">as-core-backbone:as-exceptions</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">40</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                        
+
+                    </div>
+
+                    
+
+                    
+
+                    
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="superclearfix">
+            
+            <div class="superclearfix">
+                
+            </div>
+
+            <div class="superclearfix">
+                
+            </div>
+
+
+        </div>
+
+
+        <div class="group js-footer" id="footer">
+            <nav>
+                <div>
+                    <ul>
+                        <li><a href="/kb/api" target="_blank">Scripting/API</a></li>
+                        <li><a href="/credits" target="_blank">Credits</a></li>
+                        <li><a href="/pricing" target="_blank">Pricing</a></li>
+                        <li><a href="/kb/contact" target="_blank">Contact Us</a></li>
+                        <li><a href="https://github.com/bgptools/issues" target="_blank">Issue Tracker</a></li>
+                        <li><a href="/kb/setup-sessions" target="">Contribute Data</a></li>
+                        
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <script>
+    
+    var inhash = window.location.hash;
+    if (inhash == "#asinfo") {
+        
+    } else if (inhash == "#prefixes") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#prefix-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#prefixes-page');
+        aaa[0].style.display = "";
+
+    } else if (inhash == "#connectivity" || inhash == "#peers" || inhash == "#upstreams" || inhash == "#downstreams") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#connectivity-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#connectivity-page');
+        aaa[0].style.display = "";
+    } else if (inhash == "#whois") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#whois-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#whois-page');
+        aaa[0].style.display = "";
+    } else if (inhash == "#ix") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#ix-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#ix-page');
+        aaa[0].style.display = "";
+    }</script>
+
+    <script>
+    
+
+
+    ;(function() {
+  'use strict'
+
+  function scaleImageMap() {
+    function resizeMap() {
+      function resizeAreaTag(cachedAreaCoords, idx) {
+        function scale(coord) {
+          var dimension = 1 === (isWidth = 1 - isWidth) ? 'width' : 'height'
+          return (
+            padding[dimension] +
+            Math.floor(Number(coord) * scalingFactor[dimension])
+          )
+        }
+
+        var isWidth = 0
+        areas[idx].coords = cachedAreaCoords
+          .split(',')
+          .map(scale)
+          .join(',')
+      }
+
+      var scalingFactor = {
+        width: image.width / image.naturalWidth,
+        height: image.height / image.naturalHeight,
+      }
+
+      var padding = {
+        width: parseInt(
+          window.getComputedStyle(image, null).getPropertyValue('padding-left'),
+          10
+        ),
+        height: parseInt(
+          window.getComputedStyle(image, null).getPropertyValue('padding-top'),
+          10
+        ),
+      }
+
+      cachedAreaCoordsArray.forEach(resizeAreaTag)
+    }
+
+    function getCoords(e) {
+      
+      return e.coords.replace(/ *, */g, ',').replace(/ +/g, ',')
+    }
+
+    function debounce() {
+      clearTimeout(timer)
+      timer = setTimeout(resizeMap, 250)
+    }
+
+    function start() {
+      if (
+        image.width !== image.naturalWidth ||
+        image.height !== image.naturalHeight
+      ) {
+        resizeMap()
+      }
+    }
+
+    function addEventListeners() {
+      image.addEventListener('load', resizeMap, false) 
+      window.addEventListener('focus', resizeMap, false) 
+      window.addEventListener('resize', debounce, false)
+      window.addEventListener('readystatechange', resizeMap, false)
+      document.addEventListener('fullscreenchange', resizeMap, false)
+    }
+
+    function beenHere() {
+      return 'function' === typeof map._resize
+    }
+
+    function getImg(name) {
+      return document.querySelector('img[usemap="#world"]')
+    }
+
+    function setup() {
+      areas = map.getElementsByTagName('area')
+      cachedAreaCoordsArray = Array.prototype.map.call(areas, getCoords)
+      image = getImg('#' + map.name) || getImg(map.name)
+      map._resize = resizeMap 
+    }
+
+    var  
+      map = this,
+      areas = null,
+      cachedAreaCoordsArray = null,
+      image = null,
+      timer = null
+
+    if (!beenHere()) {
+      setup()
+      addEventListeners()
+      start()
+    } else {
+      map._resize() 
+    }
+  }
+
+  function factory() {
+    function chkMap(element) {
+      if (!element.tagName) {
+        throw new TypeError('Object is not a valid DOM element')
+      } else if ('MAP' !== element.tagName.toUpperCase()) {
+        throw new TypeError(
+          'Expected <MAP> tag, found <' + element.tagName + '>.'
+        )
+      }
+    }
+
+    function init(element) {
+      if (element) {
+        chkMap(element)
+        scaleImageMap.call(element)
+        maps.push(element)
+      }
+    }
+
+    var maps
+
+    return function imageMapResizeF(target) {
+      maps = [] 
+
+      switch (typeof target) {
+        case 'undefined':
+        case 'string':
+          Array.prototype.forEach.call(
+            document.querySelectorAll(target || 'map'),
+            init
+          )
+          break
+        case 'object':
+          init(target)
+          break
+        default:
+          throw new TypeError('Unexpected data type (' + typeof target + ').')
+      }
+
+      return maps
+    }
+  }
+
+  if (typeof define === 'function' && define.amd) {
+    define([], factory)
+  } else if (typeof module === 'object' && typeof module.exports === 'object') {
+    module.exports = factory() 
+  } else {
+    window.imageMapResize = factory()
+  }
+
+  if ('jQuery' in window) {
+    window.jQuery.fn.imageMapResize = function $imageMapResizeF() {
+      return this.filter('map')
+        .each(scaleImageMap)
+        .end()
+    }
+  }
+})()
+    
+    </script>
+    <script>
+        var imgEl = document.getElementById("pathimg");
+        imgEl.addEventListener("mouseover",function() {
+            imageMapResize('#world');
+        })
+    </script>
+    <script src="/assets/tablesort.min.js"></script>
+    <script>
+        addEventListener("load", (event) => {
+            
+            
+            var sort = new Tablesort(document.getElementById('donotscrapebgptools-upstreamTable'));
+            var sort2 = new Tablesort(document.getElementById('donotscrapebgptools-upstreamTablePeers'));
+            
+            
+            
+        });
+    </script>
+    
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        setTimeout(function() {
+
+        var beaconHttp = new XMLHttpRequest();
+        var url = '/performance-beacon';
+        var params = JSON.stringify(window.performance)
+        beaconHttp.open('POST', url, true);
+        
+        
+        beaconHttp.setRequestHeader('Content-type', 'application/json');
+        beaconHttp.setRequestHeader('visit-url', "/as/51191");
+        if (navigator.connection) {
+            beaconHttp.setRequestHeader('client-side-rtt', navigator.connection.rtt);
+        } else {
+            beaconHttp.setRequestHeader('client-side-rtt', '-2');
+        }
+        beaconHttp.onreadystatechange = function() {}
+        beaconHttp.send(params);
+        },1000)
+    }, false);
+</script>
+
+</body>
+
+
+</html>

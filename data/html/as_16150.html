@@ -1,0 +1,2120 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="GlobalConnect AB (AS16150) is a inactive BGP network">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000">
+    <link rel="search" type="application/opensearchdescription+xml" title="BGP.Tools" href="https://bgp.tools/opensearch.xml">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="theme-color" content="#000000">
+    <link href="https://social.bgp.tools/@bgptools" rel="me">
+    <link rel="canonical" href="https://bgp.tools/as/16150" />
+    <title>AS16150 GlobalConnect AB - bgp.tools</title>
+    <link rel="stylesheet" type="text/css" href="/assets/main-new.css?2025-12-13-1541%20UTC">
+</head>
+
+<body>
+    <div id="container">
+        
+<div id="global-header" class="global-header-top">
+    <div class="header-sitewide">
+        <div class="global-header">
+            <div class="header-logo">
+                <a href="/" id="logo" class="content">bgp.tools</a>
+            </div>
+            <form id="search" action="/search" method="get" accept-charset="utf-8" role="search" class="top-search-header js-search-hash">
+                <div class="searchfield">
+                    <input type="search" autocomplete="off" name="q" id="site-search-text" title="Search" value="" placeholder="Start here..." autofocus="autofocus" class="js-search-focus">
+                    <button type="submit" id="search-submit" class="search-submit">Search</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div id="global-header-blob" >
+    <a id="auth-header-text" href="/login">Login</a>
+    
+</div>
+<div id="global-header-bar" >
+    <a id="auth-header-bar-text" href="/login">Login</a>
+    
+</div>
+<div class="small-clearfix"></div>
+
+        <div id="global-container">
+            
+
+
+            
+            <div class="section-tabs js-tabs">
+                <ul>
+                    
+<li class="active">
+    <h1> <a id="viewbutton-tab" href="/as/16150">View</a></h1>
+</li>
+
+<li >
+    <a id="editbutton-tab" href="/edit/as/16150">Edit</a>
+</li>
+
+
+
+
+
+                    <li style="float: right;">
+                        
+                        <img id="ws-status" width="24" height="24" src="/assets/disconnected.png" title="Not Connected To realtime data updates">
+                        
+                    </li>
+                </ul>
+            </div>
+
+            <div id="search-container">
+
+                <div class="column-full-width">
+
+                    <div class="clearfix">
+                        
+                    </div>
+                    
+                    <div class="warningbox">This ASN is not currently in the global routing table</div>
+                    
+                    
+
+                    <div class="network-header">
+                        
+                        <p id="network-name" class="heading-xlarge">GlobalConnect AB</p>
+                        <p id="network-number">
+                            AS Number
+                            <strong id="ASNumberString" pure="16150">16150</strong>
+                            <br>
+                        
+                        </p>
+
+                    </div>
+
+
+                    <div class="clearfix">
+                        
+                    </div>
+
+
+                    <div class="section-tabs js-tabs">
+                        <ul>
+
+                            <li id="overview-tab-li" class="active">
+                                <a id="overview-tab" href="#asinfo">Overview</a>
+                            </li>
+                            
+                            <li id="whois-tab-li">
+                                <a id="whois-tab" href="#whois">Whois</a>
+                            </li>
+                        
+                        
+                        </ul>
+                    </div>
+
+<script>
+    function removeAllActiveTab() {
+        var tabs = [
+            "overview-tab-li", 
+            "prefix-tab-li", 
+            "connectivity-tab-li",
+            "whois-tab-li",
+            "ix-tab-li",
+            "issues-tab-li"
+        ];
+
+        tabs.forEach(element => {
+            var aaa = document.querySelectorAll('#'+element);
+            if(aaa.length != 0) {
+                aaa[0].classList.remove("active")
+            }
+        });
+    }
+
+    function hideAllContent() {
+        var tabs = [
+            "overview-page", 
+            "prefixes-page", 
+            "connectivity-page",
+            "whois-page",
+            "ix-page",
+            "issues-page"
+        ];
+
+        tabs.forEach(element => {
+            var aaa = document.querySelectorAll('#'+element);
+            if(aaa.length != 0) {
+                aaa[0].style.display = "none";
+            }
+        });
+        if (document.getElementById("donotscrapebgptools-prefixlist-tbody")) {
+            var prefixrows = document.getElementById("donotscrapebgptools-prefixlist-tbody").children;
+            for (var i = 0; i < prefixrows.length; i++) {
+                prefixrows[i].style = "";
+            }
+        }
+    }
+
+    var otab = document.querySelectorAll('#overview-tab');
+    otab[0].addEventListener("click", function () {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#overview-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#overview-page');
+        aaa[0].style.display = "";
+    });
+    
+
+    var wtab = document.querySelectorAll('#whois-tab');
+    wtab[0].addEventListener("click", function () {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#whois-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#whois-page');
+        aaa[0].style.display = "";
+    });
+
+</script>
+
+
+
+                    
+                    <div id="overview-page">
+
+                        <div class="grid-row">
+                        
+                        <div class="column-two-thirds">
+                            <dl>
+                                <dt>Registered on</dt>
+                                <dd class="text data">
+                                    
+                                     7 Sep 2002 (23 years old)
+                                </dd>
+                            
+                            
+                            <dt>Registered to</dt>
+                            <dd class="text data">
+                                <a href="/rir-owner/se.globalconnect">se.globalconne...</a> (ripe)</dd>
+                                
+                                <dd class="text data" id="network-status">
+                                    <a href="/transfer-history/16150">[Transfer History]</a>
+                                </dd>
+                                
+                            
+                            </dl>
+                        </div>
+                        
+    
+                        <dl class="column-third">
+                            <dt>Network status</dt>
+                            <dd class="text data">
+                                
+                                Active, Allocated under RIPE
+                                
+                            </dd>
+                        </dl>
+    
+                        </div>
+    
+                        <div class="grid-row">
+                            <dl class="column-two-thirds">
+                                <dt>Network type</dt>
+                                <dd class="text data">
+                                    Unknown
+                                </dd>
+                            </dl>
+    
+                            <dl class="column-third">
+                                <dt>Prefixes Originated</dt>
+                                <dd class="data">0 IPv4, 0 IPv6</dd>
+                            </dl>
+                        </div>
+                        <div class="grid-row">
+                            <div class="column-half">
+    
+                                <h2 class="heading-medium"><derp>Upstreams</derp></h2>
+                                <ul>
+                                    
+                                </ul>
+    
+                            </div>
+    
+                            <div class="column-half">
+                                
+                                    <h2 class="heading-medium"><derp>Locations of Operation</derp></h2>
+                                    
+                                    <li><span id="sic0">Sweden</span></li>
+                                    
+                                
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                    <div style="display: none" id="whois-page">
+                        
+                        
+                        <pre style="white-space: pre-wrap;">aut-num:        <a href="/AS16150">AS16150</a>
+as-name:        PORT80-GLOBALTRANSIT
+org:            <a href="https://apps.db.ripe.net/db-web-ui/query?searchtext=ORG-ITCA1-RIPE">ORG-ITCA1-RIPE</a>
+export:         to <a href="/AS42">AS42</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS42">AS42</a> action pref = 100;accept ANY
+export:         to <a href="/AS42">AS42</a> 195.69.144.250 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS42">AS42</a> 195.69.144.250 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS42">AS42</a> 195.66.225.238 at 195.66.224.243 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS42">AS42</a> 195.66.225.238 at 195.66.224.243 action pref = 100;accept ANY
+export:         to <a href="/AS42">AS42</a> 194.68.128.133 at 194.68.128.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS42">AS42</a> 194.68.128.133 at 194.68.128.143 action pref = 100;accept ANY
+export:         to <a href="/AS42">AS42</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS42">AS42</a> action pref = 100;accept ANY
+export:         to <a href="/AS224">AS224</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS224">AS224</a> action pref = 100;accept ANY
+export:         to <a href="/AS224">AS224</a> 193.156.90.1 at 193.156.90.67 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS224">AS224</a> 193.156.90.1 at 193.156.90.67 action pref = 100;accept ANY
+export:         to <a href="/AS286">AS286</a> 195.69.144.89 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS286">AS286</a> 195.69.144.89 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS286">AS286</a> 195.69.144.144 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS286">AS286</a> 195.69.144.144 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS286">AS286</a> 195.66.224.54 at 195.66.224.243 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS286">AS286</a> 195.66.224.54 at 195.66.224.243 action pref = 100;accept ANY
+export:         to <a href="/AS702">AS702</a> 193.156.90.20 at 193.156.90.67 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS702">AS702</a> 193.156.90.20 at 193.156.90.67 action pref = 100;accept ANY
+export:         to <a href="/AS702">AS702</a> 194.68.128.81 at 194.68.128.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS702">AS702</a> 194.68.128.81 at 194.68.128.143 action pref = 100;accept ANY
+export:         to <a href="/AS786">AS786</a> 195.66.224.15 at 195.66.224.243 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS786">AS786</a> 195.66.224.15 at 195.66.224.243 action pref = 100;accept ANY
+export:         to <a href="/AS1103">AS1103</a> 195.69.144.34 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS1103">AS1103</a> 195.69.144.34 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS1103">AS1103</a> 195.69.144.50 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS1103">AS1103</a> 195.69.144.50 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS1126">AS1126</a> 195.69.144.252 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS1126">AS1126</a> 195.69.144.252 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS1200">AS1200</a> 195.69.144.1 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS1200">AS1200</a> 195.69.144.1 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS1200">AS1200</a> 195.69.145.1 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS1200">AS1200</a> 195.69.145.1 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS1239">AS1239</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS1239">AS1239</a> action pref = 100;accept ANY
+export:         to <a href="/AS1239">AS1239</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS1239">AS1239</a> action pref = 100;accept ANY
+export:         to <a href="/AS1267">AS1267</a> 195.69.145.236 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS1267">AS1267</a> 195.69.145.236 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS1267">AS1267</a> 195.66.225.65 at 195.66.224.243 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS1267">AS1267</a> 195.66.225.65 at 195.66.224.243 action pref = 100;accept ANY
+export:         to <a href="/AS1290">AS1290</a> 195.66.224.14 at 195.66.224.243 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS1290">AS1290</a> 195.66.224.14 at 195.66.224.243 action pref = 100;accept ANY
+export:         to <a href="/AS1653">AS1653</a> 195.69.116.19 at 195.69.116.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS1653">AS1653</a> 195.69.116.19 at 195.69.116.143 action pref = 100;accept ANY
+export:         to <a href="/AS1653">AS1653</a> 195.245.240.19 at 195.245.240.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS1653">AS1653</a> 195.245.240.19 at 195.245.240.143 action pref = 100;accept ANY
+export:         to <a href="/AS1653">AS1653</a> 195.69.119.19 at 195.69.119.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS1653">AS1653</a> 195.69.119.19 at 195.69.119.143 action pref = 100;accept ANY
+export:         to <a href="/AS1835">AS1835</a> 192.38.7.1 at 192.38.7.43 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS1835">AS1835</a> 192.38.7.1 at 192.38.7.43 action pref = 100;accept ANY
+export:         to <a href="/AS1880">AS1880</a> 195.245.240.26 at 195.245.240.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS1880">AS1880</a> 195.245.240.26 at 195.245.240.143 action pref = 100;accept ANY
+export:         to <a href="/AS1880">AS1880</a> 195.69.119.34 at 195.69.119.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS1880">AS1880</a> 195.69.119.34 at 195.69.119.143 action pref = 100;accept ANY
+export:         to <a href="/AS2116">AS2116</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS2116">AS2116</a> action pref = 100;accept ANY
+export:         to <a href="/AS2116">AS2116</a> 193.156.90.3 at 193.156.90.67 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS2116">AS2116</a> 193.156.90.3 at 193.156.90.67 action pref = 100;accept ANY
+export:         to <a href="/AS2116">AS2116</a> 195.245.240.149 at 195.245.240.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS2116">AS2116</a> 195.245.240.149 at 195.245.240.143 action pref = 100;accept ANY
+export:         to <a href="/AS2116">AS2116</a> 195.69.119.149 at 195.69.119.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS2116">AS2116</a> 195.69.119.149 at 195.69.119.143 action pref = 100;accept ANY
+export:         to <a href="/AS2119">AS2119</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS2119">AS2119</a> action pref = 100;accept ANY
+export:         to <a href="/AS2119">AS2119</a> 193.156.90.2 at 193.156.90.67 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS2119">AS2119</a> 193.156.90.2 at 193.156.90.67 action pref = 100;accept ANY
+export:         to <a href="/AS2119">AS2119</a> 195.69.145.192 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS2119">AS2119</a> 195.69.145.192 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS2119">AS2119</a> 195.66.225.107 at 195.66.224.243 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS2119">AS2119</a> 195.66.225.107 at 195.66.224.243 action pref = 100;accept ANY
+export:         to <a href="/AS2119">AS2119</a> 192.38.7.65 at 192.38.7.43 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS2119">AS2119</a> 192.38.7.65 at 192.38.7.43 action pref = 100;accept ANY
+export:         to <a href="/AS2119">AS2119</a> 195.69.117.158 at 195.69.117.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS2119">AS2119</a> 195.69.117.158 at 195.69.117.143 action pref = 100;accept ANY
+export:         to <a href="/AS2119">AS2119</a> 194.68.130.158 at 194.68.130.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS2119">AS2119</a> 194.68.130.158 at 194.68.130.143 action pref = 100;accept ANY
+export:         to <a href="/AS2119">AS2119</a> 194.68.123.158 at 194.68.123.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS2119">AS2119</a> 194.68.123.158 at 194.68.123.143 action pref = 100;accept ANY
+export:         to <a href="/AS2119">AS2119</a> 194.68.128.158 at 194.68.128.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS2119">AS2119</a> 194.68.128.158 at 194.68.128.143 action pref = 100;accept ANY
+export:         to <a href="/AS2497">AS2497</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS2497">AS2497</a> action pref = 100;accept ANY
+export:         to <a href="/AS2529">AS2529</a> 195.69.144.131 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS2529">AS2529</a> 195.69.144.131 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS2603">AS2603</a> 193.156.90.5 at 193.156.90.67 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS2603">AS2603</a> 193.156.90.5 at 193.156.90.67 action pref = 100;accept ANY
+export:         to <a href="/AS2603">AS2603</a> 195.69.145.203 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS2603">AS2603</a> 195.69.145.203 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS2603">AS2603</a> 195.66.225.24 at 195.66.224.243 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS2603">AS2603</a> 195.66.225.24 at 195.66.224.243 action pref = 100;accept ANY
+export:         to <a href="/AS2603">AS2603</a> 192.38.7.50 at 192.38.7.43 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS2603">AS2603</a> 192.38.7.50 at 192.38.7.43 action pref = 100;accept ANY
+export:         to <a href="/AS2603">AS2603</a> 195.245.240.24 at 195.245.240.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS2603">AS2603</a> 195.245.240.24 at 195.245.240.143 action pref = 100;accept ANY
+export:         to <a href="/AS2603">AS2603</a> 195.69.119.24 at 195.69.119.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS2603">AS2603</a> 195.69.119.24 at 195.69.119.143 action pref = 100;accept ANY
+export:         to <a href="/AS2611">AS2611</a> 195.69.144.43 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS2611">AS2611</a> 195.69.144.43 at 195.69.145.52 action pref = 100;accept <a href="/as-set/AS-BELNET">AS-BELNET</a>
+export:         to <a href="/AS2647">AS2647</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS2647">AS2647</a> action pref = 100;accept ANY
+export:         to <a href="/AS2686">AS2686</a> 193.156.90.9 at 193.156.90.67 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS2686">AS2686</a> 193.156.90.9 at 193.156.90.67 action pref = 100;accept ANY
+export:         to <a href="/AS2686">AS2686</a> 195.69.144.194 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS2686">AS2686</a> 195.69.144.194 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS2686">AS2686</a> 195.69.144.37 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS2686">AS2686</a> 195.69.144.37 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS2686">AS2686</a> 192.38.7.8 at 192.38.7.43 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS2686">AS2686</a> 192.38.7.8 at 192.38.7.43 action pref = 100;accept ANY
+export:         to <a href="/AS2686">AS2686</a> 194.68.123.44 at 194.68.123.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS2686">AS2686</a> 194.68.123.44 at 194.68.123.143 action pref = 100;accept ANY
+export:         to <a href="/AS2686">AS2686</a> 194.68.128.44 at 194.68.128.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS2686">AS2686</a> 194.68.128.44 at 194.68.128.143 action pref = 100;accept ANY
+export:         to <a href="/AS2818">AS2818</a> 195.69.144.169 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS2818">AS2818</a> 195.69.144.169 at 195.69.145.52 action pref = 100;accept <a href="/as-set/AS-BBC">AS-BBC</a>
+export:         to <a href="/AS2818">AS2818</a> 195.66.224.103 at 195.66.224.243 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS2818">AS2818</a> 195.66.224.103 at 195.66.224.243 action pref = 100;accept <a href="/as-set/AS-BBC">AS-BBC</a>
+export:         to <a href="/AS2840">AS2840</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS2840">AS2840</a> action pref = 100;accept ANY
+export:         to <a href="/AS2852">AS2852</a> 195.69.145.106 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS2852">AS2852</a> 195.69.145.106 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS2856">AS2856</a> 195.66.224.10 at 195.66.224.243 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS2856">AS2856</a> 195.66.224.10 at 195.66.224.243 action pref = 100;accept ANY
+export:         to <a href="/AS2856">AS2856</a> 195.66.224.11 at 195.66.224.243 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS2856">AS2856</a> 195.66.224.11 at 195.66.224.243 action pref = 100;accept ANY
+export:         to <a href="/AS2874">AS2874</a> 193.156.90.7 at 193.156.90.67 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS2874">AS2874</a> 193.156.90.7 at 193.156.90.67 action pref = 100;accept ANY
+export:         to <a href="/AS2874">AS2874</a> 194.68.123.17 at 194.68.123.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS2874">AS2874</a> 194.68.123.17 at 194.68.123.143 action pref = 100;accept ANY
+export:         to <a href="/AS2874">AS2874</a> 194.68.128.17 at 194.68.128.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS2874">AS2874</a> 194.68.128.17 at 194.68.128.143 action pref = 100;accept ANY
+export:         to <a href="/AS3043">AS3043</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS3043">AS3043</a> action pref = 100;accept ANY
+export:         to <a href="/AS3209">AS3209</a> 195.69.144.123 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS3209">AS3209</a> 195.69.144.123 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS3209">AS3209</a> 195.69.145.123 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS3209">AS3209</a> 195.69.145.123 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS3212">AS3212</a> 195.69.145.36 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS3212">AS3212</a> 195.69.145.36 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS3216">AS3216</a> 195.69.145.153 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS3216">AS3216</a> 195.69.145.153 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS3216">AS3216</a> 195.66.224.205 at 195.66.224.243 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS3216">AS3216</a> 195.66.224.205 at 195.66.224.243 action pref = 100;accept ANY
+export:         to <a href="/AS3238">AS3238</a> 195.245.240.135 at 195.245.240.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS3238">AS3238</a> 195.245.240.135 at 195.245.240.143 action pref = 100;accept ANY
+export:         to <a href="/AS3238">AS3238</a> 195.69.119.135 at 195.69.119.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS3238">AS3238</a> 195.69.119.135 at 195.69.119.143 action pref = 100;accept ANY
+export:         to <a href="/AS3249">AS3249</a> 195.69.145.181 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS3249">AS3249</a> 195.69.145.181 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS3249">AS3249</a> 195.66.224.195 at 195.66.224.243 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS3249">AS3249</a> 195.66.224.195 at 195.66.224.243 action pref = 100;accept ANY
+export:         to <a href="/AS3249">AS3249</a> 194.68.123.23 at 194.68.123.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS3249">AS3249</a> 194.68.123.23 at 194.68.123.143 action pref = 100;accept ANY
+export:         to <a href="/AS3249">AS3249</a> 194.68.128.23 at 194.68.128.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS3249">AS3249</a> 194.68.128.23 at 194.68.128.143 action pref = 100;accept ANY
+export:         to <a href="/AS3262">AS3262</a> 195.69.144.120 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS3262">AS3262</a> 195.69.144.120 at 195.69.145.52 action pref = 100;accept <a href="/as-set/AS-SARENET">AS-SARENET</a>
+export:         to <a href="/AS3265">AS3265</a> 195.69.144.48 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS3265">AS3265</a> 195.69.144.48 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS3265">AS3265</a> 195.69.144.166 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS3265">AS3265</a> 195.69.144.166 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS3292">AS3292</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS3292">AS3292</a> action pref = 100;accept ANY
+export:         to <a href="/AS3292">AS3292</a> 193.156.90.16 at 193.156.90.67 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS3292">AS3292</a> 193.156.90.16 at 193.156.90.67 action pref = 100;accept ANY
+export:         to <a href="/AS3292">AS3292</a> 195.69.144.104 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS3292">AS3292</a> 195.69.144.104 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS3292">AS3292</a> 195.66.224.64 at 195.66.224.243 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS3292">AS3292</a> 195.66.224.64 at 195.66.224.243 action pref = 100;accept ANY
+export:         to <a href="/AS3292">AS3292</a> 195.69.117.41 at 195.69.117.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS3292">AS3292</a> 195.69.117.41 at 195.69.117.143 action pref = 100;accept ANY
+export:         to <a href="/AS3292">AS3292</a> 194.68.130.41 at 194.68.130.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS3292">AS3292</a> 194.68.130.41 at 194.68.130.143 action pref = 100;accept ANY
+export:         to <a href="/AS3292">AS3292</a> 195.245.240.41 at 195.245.240.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS3292">AS3292</a> 195.245.240.41 at 195.245.240.143 action pref = 100;accept ANY
+export:         to <a href="/AS3292">AS3292</a> 195.69.119.41 at 195.69.119.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS3292">AS3292</a> 195.69.119.41 at 195.69.119.143 action pref = 100;accept ANY
+export:         to <a href="/AS3301">AS3301</a> 195.69.118.111 at 195.69.118.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS3301">AS3301</a> 195.69.118.111 at 195.69.118.143 action pref = 100;accept ANY
+export:         to <a href="/AS3301">AS3301</a> 195.69.116.111 at 195.69.116.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS3301">AS3301</a> 195.69.116.111 at 195.69.116.143 action pref = 100;accept ANY
+export:         to <a href="/AS3301">AS3301</a> 194.68.123.111 at 194.68.123.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS3301">AS3301</a> 194.68.123.111 at 194.68.123.143 action pref = 100;accept ANY
+export:         to <a href="/AS3301">AS3301</a> 194.68.128.111 at 194.68.128.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS3301">AS3301</a> 194.68.128.111 at 194.68.128.143 action pref = 100;accept ANY
+export:         to <a href="/AS3303">AS3303</a> 195.69.144.100 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS3303">AS3303</a> 195.69.144.100 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS3303">AS3303</a> 194.68.123.116 at 194.68.123.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS3303">AS3303</a> 194.68.123.116 at 194.68.123.143 action pref = 100;accept ANY
+export:         to <a href="/AS3303">AS3303</a> 194.68.128.116 at 194.68.128.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS3303">AS3303</a> 194.68.128.116 at 194.68.128.143 action pref = 100;accept ANY
+export:         to <a href="/AS3327">AS3327</a> 195.69.145.242 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS3327">AS3327</a> 195.69.145.242 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS3327">AS3327</a> 194.68.123.164 at 194.68.123.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS3327">AS3327</a> 194.68.123.164 at 194.68.123.143 action pref = 100;accept ANY
+export:         to <a href="/AS3327">AS3327</a> 194.68.128.164 at 194.68.128.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS3327">AS3327</a> 194.68.128.164 at 194.68.128.143 action pref = 100;accept ANY
+export:         to <a href="/AS3333">AS3333</a> 195.69.144.68 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS3333">AS3333</a> 195.69.144.68 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS3333">AS3333</a> 195.69.144.71 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS3333">AS3333</a> 195.69.144.71 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS3491">AS3491</a> 195.69.145.37 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS3491">AS3491</a> 195.69.145.37 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS3491">AS3491</a> 195.66.224.167 at 195.66.224.243 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS3491">AS3491</a> 195.66.224.167 at 195.66.224.243 action pref = 100;accept ANY
+export:         to <a href="/AS3491">AS3491</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS3491">AS3491</a> action pref = 100;accept ANY
+export:         to <a href="/AS3549">AS3549</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS3549">AS3549</a> action pref = 100;accept ANY
+export:         to <a href="/AS3741">AS3741</a> 195.66.224.198 at 195.66.224.243 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS3741">AS3741</a> 195.66.224.198 at 195.66.224.243 action pref = 100;accept ANY
+export:         to <a href="/AS3856">AS3856</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS3856">AS3856</a> action pref = 100;accept ANY
+export:         to <a href="/AS3856">AS3856</a> 195.69.145.250 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS3856">AS3856</a> 195.69.145.250 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS3856">AS3856</a> 195.66.225.239 at 195.66.224.243 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS3856">AS3856</a> 195.66.225.239 at 195.66.224.243 action pref = 100;accept ANY
+export:         to <a href="/AS3856">AS3856</a> 194.68.128.132 at 194.68.128.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS3856">AS3856</a> 194.68.128.132 at 194.68.128.143 action pref = 100;accept ANY
+export:         to <a href="/AS3856">AS3856</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS3856">AS3856</a> action pref = 100;accept ANY
+export:         to <a href="/AS4004">AS4004</a> 195.66.224.24 at 195.66.224.243 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS4004">AS4004</a> 195.66.224.24 at 195.66.224.243 action pref = 100;accept ANY
+export:         to <a href="/AS4134">AS4134</a> 195.66.225.54 at 195.66.224.243 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS4134">AS4134</a> 195.66.225.54 at 195.66.224.243 action pref = 100;accept ANY
+export:         to <a href="/AS4436">AS4436</a> 195.69.145.219 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS4436">AS4436</a> 195.69.145.219 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS4436">AS4436</a> 195.66.224.37 at 195.66.224.243 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS4436">AS4436</a> 195.66.224.37 at 195.66.224.243 action pref = 100;accept ANY
+export:         to <a href="/AS4436">AS4436</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS4436">AS4436</a> action pref = 100;accept ANY
+export:         to <a href="/AS4565">AS4565</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS4565">AS4565</a> action pref = 100;accept ANY
+export:         to <a href="/AS4589">AS4589</a> 195.69.144.38 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS4589">AS4589</a> 195.69.144.38 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS4589">AS4589</a> 195.69.144.137 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS4589">AS4589</a> 195.69.144.137 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS4589">AS4589</a> 195.66.224.43 at 195.66.224.243 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS4589">AS4589</a> 195.66.224.43 at 195.66.224.243 action pref = 100;accept ANY
+export:         to <a href="/AS4637">AS4637</a> 195.66.224.166 at 195.66.224.243 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS4637">AS4637</a> 195.66.224.166 at 195.66.224.243 action pref = 100;accept ANY
+export:         to <a href="/AS4739">AS4739</a> 195.69.144.227 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS4739">AS4739</a> 195.69.144.227 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS4739">AS4739</a> 195.66.225.96 at 195.66.224.243 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS4739">AS4739</a> 195.66.225.96 at 195.66.224.243 action pref = 100;accept ANY
+export:         to <a href="/AS4766">AS4766</a> 195.69.144.232 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS4766">AS4766</a> 195.69.144.232 at 195.69.145.52 action pref = 100;accept <a href="/as-set/AS-KORNET">AS-KORNET</a>
+export:         to <a href="/AS4788">AS4788</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS4788">AS4788</a> action pref = 100;accept ANY
+export:         to <a href="/AS5089">AS5089</a> 195.69.144.40 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS5089">AS5089</a> 195.69.144.40 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS5381">AS5381</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS5381">AS5381</a> action pref = 100;accept ANY
+export:         to <a href="/AS5381">AS5381</a> 193.156.90.6 at 193.156.90.67 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS5381">AS5381</a> 193.156.90.6 at 193.156.90.67 action pref = 100;accept ANY
+export:         to <a href="/AS5390">AS5390</a> 195.69.144.55 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS5390">AS5390</a> 195.69.144.55 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS5390">AS5390</a> 195.69.144.70 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS5390">AS5390</a> 195.69.144.70 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS5400">AS5400</a> 195.69.144.108 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS5400">AS5400</a> 195.69.144.108 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS5400">AS5400</a> 195.66.224.108 at 195.66.224.243 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS5400">AS5400</a> 195.66.224.108 at 195.66.224.243 action pref = 100;accept ANY
+export:         to <a href="/AS5400">AS5400</a> 194.68.123.109 at 194.68.123.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS5400">AS5400</a> 194.68.123.109 at 194.68.123.143 action pref = 100;accept ANY
+export:         to <a href="/AS5400">AS5400</a> 194.68.128.109 at 194.68.128.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS5400">AS5400</a> 194.68.128.109 at 194.68.128.143 action pref = 100;accept ANY
+export:         to <a href="/AS5410">AS5410</a> 195.69.144.65 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS5410">AS5410</a> 195.69.144.65 at 195.69.145.52 action pref = 100;accept <a href="/as-set/AS-T-ONLINEFRANCE">AS-T-ONLINEFRANCE</a>
+export:         to <a href="/AS5413">AS5413</a> 195.69.144.95 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS5413">AS5413</a> 195.69.144.95 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS5413">AS5413</a> 195.66.224.29 at 195.66.224.243 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS5413">AS5413</a> 195.66.224.29 at 195.66.224.243 action pref = 100;accept ANY
+export:         to <a href="/AS5430">AS5430</a> 195.69.144.136 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS5430">AS5430</a> 195.69.144.136 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS5466">AS5466</a> 195.69.144.160 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS5466">AS5466</a> 195.69.144.160 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS5466">AS5466</a> 195.66.224.79 at 195.66.224.243 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS5466">AS5466</a> 195.66.224.79 at 195.66.224.243 action pref = 100;accept ANY
+export:         to <a href="/AS5568">AS5568</a> 195.69.145.212 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS5568">AS5568</a> 195.69.145.212 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS5577">AS5577</a> 195.69.145.240 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS5577">AS5577</a> 195.69.145.240 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS5577">AS5577</a> 195.66.225.90 at 195.66.224.243 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS5577">AS5577</a> 195.66.225.90 at 195.66.224.243 action pref = 100;accept ANY
+export:         to <a href="/AS5580">AS5580</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS5580">AS5580</a> action pref = 100;accept ANY
+export:         to <a href="/AS5580">AS5580</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS5580">AS5580</a> action pref = 100;accept ANY
+export:         to <a href="/AS5580">AS5580</a> 195.69.144.229 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS5580">AS5580</a> 195.69.144.229 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS5580">AS5580</a> 195.69.145.229 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS5580">AS5580</a> 195.69.145.229 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS5580">AS5580</a> 195.66.225.111 at 195.66.224.243 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS5580">AS5580</a> 195.66.225.111 at 195.66.224.243 action pref = 100;accept ANY
+export:         to <a href="/AS5580">AS5580</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS5580">AS5580</a> action pref = 100;accept ANY
+export:         to <a href="/AS5583">AS5583</a> 195.69.144.66 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS5583">AS5583</a> 195.69.144.66 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS5588">AS5588</a> 195.69.145.185 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS5588">AS5588</a> 195.69.145.185 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS5588">AS5588</a> 195.66.224.58 at 195.66.224.243 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS5588">AS5588</a> 195.66.224.58 at 195.66.224.243 action pref = 100;accept ANY
+export:         to <a href="/AS5769">AS5769</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS5769">AS5769</a> action pref = 100;accept ANY
+export:         to <a href="/AS6079">AS6079</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS6079">AS6079</a> action pref = 100;accept ANY
+export:         to <a href="/AS6320">AS6320</a> 195.69.144.178 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS6320">AS6320</a> 195.69.144.178 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS6320">AS6320</a> 195.66.224.139 at 195.66.224.243 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS6320">AS6320</a> 195.66.224.139 at 195.66.224.243 action pref = 100;accept ANY
+export:         to <a href="/AS6327">AS6327</a> 195.69.144.148 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS6327">AS6327</a> 195.69.144.148 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS6327">AS6327</a> 195.66.224.213 at 195.66.224.243 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS6327">AS6327</a> 195.66.224.213 at 195.66.224.243 action pref = 100;accept ANY
+export:         to <a href="/AS6447">AS6447</a> 128.223.51.103 at 217.75.96.60 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS6447">AS6447</a> 128.223.51.103 at 217.75.96.60 action pref = 100;accept ANY
+export:         to <a href="/AS6447">AS6447</a> 128.223.51.102 at 217.75.96.60 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS6447">AS6447</a> 128.223.51.102 at 217.75.96.60 action pref = 100;accept ANY
+export:         to <a href="/AS6461">AS6461</a> 195.69.144.122 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS6461">AS6461</a> 195.69.144.122 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS6661">AS6661</a> 195.69.144.60 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS6661">AS6661</a> 195.69.144.60 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS6663">AS6663</a> 195.69.144.121 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS6663">AS6663</a> 195.69.144.121 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS6663">AS6663</a> 195.66.224.252 at 195.66.224.243 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS6663">AS6663</a> 195.66.224.252 at 195.66.224.243 action pref = 100;accept ANY
+export:         to <a href="/AS6667">AS6667</a> 193.156.90.30 at 193.156.90.67 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS6667">AS6667</a> 193.156.90.30 at 193.156.90.67 action pref = 100;accept ANY
+export:         to <a href="/AS6667">AS6667</a> 195.69.144.127 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS6667">AS6667</a> 195.69.144.127 at 195.69.145.52 action pref = 100;accept <a href="/as-set/AS-EUNETIP">AS-EUNETIP</a>
+export:         to <a href="/AS6667">AS6667</a> 192.38.7.55 at 192.38.7.43 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS6667">AS6667</a> 192.38.7.55 at 192.38.7.43 action pref = 100;accept ANY
+export:         to <a href="/AS6667">AS6667</a> 194.68.123.136 at 194.68.123.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS6667">AS6667</a> 194.68.123.136 at 194.68.123.143 action pref = 100;accept ANY
+export:         to <a href="/AS6667">AS6667</a> 194.68.128.136 at 194.68.128.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS6667">AS6667</a> 194.68.128.136 at 194.68.128.143 action pref = 100;accept ANY
+export:         to <a href="/AS6695">AS6695</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS6695">AS6695</a> action pref = 100;accept ANY
+export:         to <a href="/AS6724">AS6724</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS6724">AS6724</a> action pref = 100;accept ANY
+export:         to <a href="/AS6724">AS6724</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS6724">AS6724</a> action pref = 100;accept ANY
+export:         to <a href="/AS6730">AS6730</a> 195.69.144.116 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS6730">AS6730</a> 195.69.144.116 at 195.69.145.52 action pref = 100;accept <a href="/as-set/AS-GLOBAL">AS-GLOBAL</a>
+export:         to <a href="/AS6735">AS6735</a> 195.69.145.80 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS6735">AS6735</a> 195.69.145.80 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS6774">AS6774</a> 195.69.144.87 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS6774">AS6774</a> 195.69.144.87 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS6774">AS6774</a> 195.69.145.76 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS6774">AS6774</a> 195.69.145.76 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS6785">AS6785</a> 192.38.7.36 at 192.38.7.43 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS6785">AS6785</a> 192.38.7.36 at 192.38.7.43 action pref = 100;accept ANY
+export:         to <a href="/AS6785">AS6785</a> 192.38.7.37 at 192.38.7.43 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS6785">AS6785</a> 192.38.7.37 at 192.38.7.43 action pref = 100;accept ANY
+export:         to <a href="/AS6805">AS6805</a> 195.69.144.91 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS6805">AS6805</a> 195.69.144.91 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS6830">AS6830</a> 195.69.144.106 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS6830">AS6830</a> 195.69.144.106 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS6830">AS6830</a> 195.69.144.174 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS6830">AS6830</a> 195.69.144.174 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS6830">AS6830</a> 195.66.224.89 at 195.66.224.243 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS6830">AS6830</a> 195.66.224.89 at 195.66.224.243 action pref = 100;accept ANY
+export:         to <a href="/AS6830">AS6830</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS6830">AS6830</a> action pref = 100;accept ANY
+export:         to <a href="/AS6830">AS6830</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS6830">AS6830</a> action pref = 100;accept ANY
+export:         to <a href="/AS6900">AS6900</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS6900">AS6900</a> action pref = 100;accept ANY
+export:         to <a href="/AS6908">AS6908</a> 195.69.145.145 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS6908">AS6908</a> 195.69.145.145 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS6908">AS6908</a> 195.66.225.32 at 195.66.224.243 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS6908">AS6908</a> 195.66.225.32 at 195.66.224.243 action pref = 100;accept ANY
+export:         to <a href="/AS6939">AS6939</a> 195.69.145.150 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS6939">AS6939</a> 195.69.145.150 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS6939">AS6939</a> 195.66.224.21 at 195.66.224.243 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS6939">AS6939</a> 195.66.224.21 at 195.66.224.243 action pref = 100;accept ANY
+export:         to <a href="/AS6939">AS6939</a> 194.68.123.187 at 194.68.123.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS6939">AS6939</a> 194.68.123.187 at 194.68.123.143 action pref = 100;accept ANY
+export:         to <a href="/AS6939">AS6939</a> 194.68.128.187 at 194.68.128.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS6939">AS6939</a> 194.68.128.187 at 194.68.128.143 action pref = 100;accept ANY
+export:         to <a href="/AS6939">AS6939</a> 195.69.119.187 at 195.69.119.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS6939">AS6939</a> 195.69.119.187 at 195.69.119.143 action pref = 100;accept ANY
+export:         to <a href="/AS7132">AS7132</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS7132">AS7132</a> action pref = 100;accept ANY
+export:         to <a href="/AS7332">AS7332</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS7332">AS7332</a> action pref = 100;accept ANY
+export:         to <a href="/AS7342">AS7342</a> 195.69.145.232 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS7342">AS7342</a> 195.69.145.232 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS7342">AS7342</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS7342">AS7342</a> action pref = 100;accept ANY
+export:         to <a href="/AS7385">AS7385</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS7385">AS7385</a> action pref = 100;accept ANY
+export:         to <a href="/AS7473">AS7473</a> 195.66.225.10 at 195.66.224.243 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS7473">AS7473</a> 195.66.225.10 at 195.66.224.243 action pref = 100;accept ANY
+export:         to <a href="/AS8001">AS8001</a> 195.66.224.94 at 195.66.224.243 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS8001">AS8001</a> 195.66.224.94 at 195.66.224.243 action pref = 100;accept ANY
+export:         to <a href="/AS8001">AS8001</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS8001">AS8001</a> action pref = 100;accept ANY
+export:         to <a href="/AS8068">AS8068</a> 195.69.145.20 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS8068">AS8068</a> 195.69.145.20 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS8068">AS8068</a> 195.69.145.21 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS8068">AS8068</a> 195.69.145.21 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS8068">AS8068</a> 195.66.224.234 at 195.66.224.243 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS8068">AS8068</a> 195.66.224.234 at 195.66.224.243 action pref = 100;accept ANY
+export:         to <a href="/AS8068">AS8068</a> 194.68.123.181 at 194.68.123.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS8068">AS8068</a> 194.68.123.181 at 194.68.123.143 action pref = 100;accept ANY
+export:         to <a href="/AS8068">AS8068</a> 195.245.240.181 at 195.245.240.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS8068">AS8068</a> 195.245.240.181 at 195.245.240.143 action pref = 100;accept ANY
+export:         to <a href="/AS8068">AS8068</a> 194.68.128.181 at 194.68.128.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS8068">AS8068</a> 194.68.128.181 at 194.68.128.143 action pref = 100;accept ANY
+export:         to <a href="/AS8068">AS8068</a> 195.69.119.181 at 195.69.119.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS8068">AS8068</a> 195.69.119.181 at 195.69.119.143 action pref = 100;accept ANY
+export:         to <a href="/AS8075">AS8075</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS8075">AS8075</a> action pref = 100;accept ANY
+export:         to <a href="/AS8195">AS8195</a> 194.68.123.53 at 194.68.123.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS8195">AS8195</a> 194.68.123.53 at 194.68.123.143 action pref = 100;accept ANY
+export:         to <a href="/AS8195">AS8195</a> 194.68.128.53 at 194.68.128.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS8195">AS8195</a> 194.68.128.53 at 194.68.128.143 action pref = 100;accept ANY
+export:         to <a href="/AS8218">AS8218</a> 195.69.145.47 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS8218">AS8218</a> 195.69.145.47 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS8218">AS8218</a> 195.66.224.42 at 195.66.224.243 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS8218">AS8218</a> 195.66.224.42 at 195.66.224.243 action pref = 100;accept ANY
+export:         to <a href="/AS8220">AS8220</a> 195.69.144.236 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS8220">AS8220</a> 195.69.144.236 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS8220">AS8220</a> 195.69.144.52 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS8220">AS8220</a> 195.69.144.52 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS8220">AS8220</a> 195.66.224.49 at 195.66.224.243 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS8220">AS8220</a> 195.66.224.49 at 195.66.224.243 action pref = 100;accept ANY
+export:         to <a href="/AS8220">AS8220</a> 192.38.7.80 at 192.38.7.43 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS8220">AS8220</a> 192.38.7.80 at 192.38.7.43 action pref = 100;accept ANY
+export:         to <a href="/AS8220">AS8220</a> 194.68.123.104 at 194.68.123.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS8220">AS8220</a> 194.68.123.104 at 194.68.123.143 action pref = 100;accept ANY
+export:         to <a href="/AS8220">AS8220</a> 194.68.128.104 at 194.68.128.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS8220">AS8220</a> 194.68.128.104 at 194.68.128.143 action pref = 100;accept ANY
+export:         to <a href="/AS8342">AS8342</a> 195.66.224.90 at 195.66.224.243 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS8342">AS8342</a> 195.66.224.90 at 195.66.224.243 action pref = 100;accept ANY
+export:         to <a href="/AS8359">AS8359</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS8359">AS8359</a> action pref = 100;accept ANY
+export:         to <a href="/AS8359">AS8359</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS8359">AS8359</a> action pref = 100;accept ANY
+export:         to <a href="/AS8359">AS8359</a> 195.69.145.188 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS8359">AS8359</a> 195.69.145.188 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS8359">AS8359</a> 195.66.224.218 at 195.66.224.243 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS8359">AS8359</a> 195.66.224.218 at 195.66.224.243 action pref = 100;accept ANY
+export:         to <a href="/AS8359">AS8359</a> 194.68.123.161 at 194.68.123.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS8359">AS8359</a> 194.68.123.161 at 194.68.123.143 action pref = 100;accept ANY
+export:         to <a href="/AS8359">AS8359</a> 194.68.128.161 at 194.68.128.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS8359">AS8359</a> 194.68.128.161 at 194.68.128.143 action pref = 100;accept ANY
+export:         to <a href="/AS8365">AS8365</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS8365">AS8365</a> action pref = 100;accept ANY
+export:         to <a href="/AS8365">AS8365</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS8365">AS8365</a> action pref = 100;accept ANY
+export:         to <a href="/AS8368">AS8368</a> 195.69.145.97 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS8368">AS8368</a> 195.69.145.97 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS8422">AS8422</a> 195.69.145.62 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS8422">AS8422</a> 195.69.145.62 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS8426">AS8426</a> 195.69.145.228 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS8426">AS8426</a> 195.69.145.228 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS8426">AS8426</a> 195.69.144.82 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS8426">AS8426</a> 195.69.144.82 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS8426">AS8426</a> 195.66.224.66 at 195.66.224.243 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS8426">AS8426</a> 195.66.224.66 at 195.66.224.243 action pref = 100;accept ANY
+export:         to <a href="/AS8434">AS8434</a> 195.245.240.66 at 195.245.240.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS8434">AS8434</a> 195.245.240.66 at 195.245.240.143 action pref = 100;accept ANY
+export:         to <a href="/AS8434">AS8434</a> 195.69.119.66 at 195.69.119.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS8434">AS8434</a> 195.69.119.66 at 195.69.119.143 action pref = 100;accept ANY
+export:         to <a href="/AS8447">AS8447</a> 195.69.145.207 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS8447">AS8447</a> 195.69.145.207 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS8447">AS8447</a> 195.66.224.211 at 195.66.224.243 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS8447">AS8447</a> 195.66.224.211 at 195.66.224.243 action pref = 100;accept ANY
+export:         to <a href="/AS8468">AS8468</a> 195.69.145.82 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS8468">AS8468</a> 195.69.145.82 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS8468">AS8468</a> 195.66.224.151 at 195.66.224.243 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS8468">AS8468</a> 195.66.224.151 at 195.66.224.243 action pref = 100;accept ANY
+export:         to <a href="/AS8473">AS8473</a> 195.69.144.99 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS8473">AS8473</a> 195.69.144.99 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS8473">AS8473</a> 195.69.116.85 at 195.69.116.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS8473">AS8473</a> 195.69.116.85 at 195.69.116.143 action pref = 100;accept ANY
+export:         to <a href="/AS8473">AS8473</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS8473">AS8473</a> action pref = 100;accept ANY
+export:         to <a href="/AS8478">AS8478</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS8478">AS8478</a> action pref = 100;accept ANY
+export:         to <a href="/AS8582">AS8582</a> 195.69.145.57 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS8582">AS8582</a> 195.69.145.57 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS8582">AS8582</a> 195.69.144.57 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS8582">AS8582</a> 195.69.144.57 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS8586">AS8586</a> 195.69.144.132 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS8586">AS8586</a> 195.69.144.132 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS8586">AS8586</a> 195.66.224.73 at 195.66.224.243 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS8586">AS8586</a> 195.66.224.73 at 195.66.224.243 action pref = 100;accept ANY
+export:         to <a href="/AS8607">AS8607</a> 195.66.224.111 at 195.66.224.243 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS8607">AS8607</a> 195.66.224.111 at 195.66.224.243 action pref = 100;accept ANY
+export:         to <a href="/AS8642">AS8642</a> 194.68.123.71 at 194.68.123.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS8642">AS8642</a> 194.68.123.71 at 194.68.123.143 action pref = 100;accept ANY
+export:         to <a href="/AS8657">AS8657</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS8657">AS8657</a> action pref = 100;accept ANY
+export:         to <a href="/AS8657">AS8657</a> 195.69.144.217 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS8657">AS8657</a> 195.69.144.217 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS8657">AS8657</a> 195.66.224.91 at 195.66.224.243 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS8657">AS8657</a> 195.66.224.91 at 195.66.224.243 action pref = 100;accept ANY
+export:         to <a href="/AS8674">AS8674</a> 193.156.90.200 at 193.156.90.67 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS8674">AS8674</a> 193.156.90.200 at 193.156.90.67 action pref = 100;accept ANY
+export:         to <a href="/AS8674">AS8674</a> 193.156.90.201 at 193.156.90.67 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS8674">AS8674</a> 193.156.90.201 at 193.156.90.67 action pref = 100;accept ANY
+export:         to <a href="/AS8674">AS8674</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS8674">AS8674</a> action pref = 100;accept ANY
+export:         to <a href="/AS8674">AS8674</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS8674">AS8674</a> action pref = 100;accept ANY
+export:         to <a href="/AS8674">AS8674</a> 195.69.118.72 at 195.69.118.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS8674">AS8674</a> 195.69.118.72 at 195.69.118.143 action pref = 100;accept ANY
+export:         to <a href="/AS8674">AS8674</a> 195.69.116.72 at 195.69.116.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS8674">AS8674</a> 195.69.116.72 at 195.69.116.143 action pref = 100;accept ANY
+export:         to <a href="/AS8674">AS8674</a> 195.245.240.73 at 195.245.240.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS8674">AS8674</a> 195.245.240.73 at 195.245.240.143 action pref = 100;accept ANY
+export:         to <a href="/AS8674">AS8674</a> 195.69.119.172 at 195.69.119.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS8674">AS8674</a> 195.69.119.172 at 195.69.119.143 action pref = 100;accept ANY
+export:         to <a href="/AS8681">AS8681</a> 195.66.224.180 at 195.66.224.243 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS8681">AS8681</a> 195.66.224.180 at 195.66.224.243 action pref = 100;accept ANY
+export:         to <a href="/AS8708">AS8708</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS8708">AS8708</a> action pref = 100;accept ANY
+export:         to <a href="/AS8708">AS8708</a> 195.69.144.51 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS8708">AS8708</a> 195.69.144.51 at 195.69.145.52 action pref = 100;accept <a href="/as-set/AS-RDSNET">AS-RDSNET</a>
+export:         to <a href="/AS8708">AS8708</a> 195.66.224.46 at 195.66.224.243 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS8708">AS8708</a> 195.66.224.46 at 195.66.224.243 action pref = 100;accept <a href="/as-set/AS-RDSNET">AS-RDSNET</a>
+export:         to <a href="/AS8714">AS8714</a> 195.66.225.231 at 195.66.224.243 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS8714">AS8714</a> 195.66.225.231 at 195.66.224.243 action pref = 100;accept ANY
+export:         to <a href="/AS8737">AS8737</a> 195.69.144.62 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS8737">AS8737</a> 195.69.144.62 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS8737">AS8737</a> 195.69.144.84 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS8737">AS8737</a> 195.69.144.84 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS8881">AS8881</a> 195.69.145.109 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS8881">AS8881</a> 195.69.145.109 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS8881">AS8881</a> 195.66.224.245 at 195.66.224.243 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS8881">AS8881</a> 195.66.224.245 at 195.66.224.243 action pref = 100;accept ANY
+export:         to <a href="/AS8897">AS8897</a> 195.69.144.249 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS8897">AS8897</a> 195.69.144.249 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS8918">AS8918</a> 195.69.144.58 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS8918">AS8918</a> 195.69.144.58 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS8928">AS8928</a> 195.69.144.81 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS8928">AS8928</a> 195.69.144.81 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS8928">AS8928</a> 195.66.224.53 at 195.66.224.243 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS8928">AS8928</a> 195.66.224.53 at 195.66.224.243 action pref = 100;accept ANY
+export:         to <a href="/AS8928">AS8928</a> 194.68.123.146 at 194.68.123.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS8928">AS8928</a> 194.68.123.146 at 194.68.123.143 action pref = 100;accept ANY
+export:         to <a href="/AS8928">AS8928</a> 195.245.240.146 at 195.245.240.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS8928">AS8928</a> 195.245.240.146 at 195.245.240.143 action pref = 100;accept ANY
+export:         to <a href="/AS8928">AS8928</a> 194.68.128.146 at 194.68.128.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS8928">AS8928</a> 194.68.128.146 at 194.68.128.143 action pref = 100;accept ANY
+export:         to <a href="/AS8928">AS8928</a> 195.69.119.146 at 195.69.119.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS8928">AS8928</a> 195.69.119.146 at 195.69.119.143 action pref = 100;accept ANY
+export:         to <a href="/AS8966">AS8966</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS8966">AS8966</a> action pref = 100;accept ANY
+export:         to <a href="/AS8966">AS8966</a> 195.69.145.89 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS8966">AS8966</a> 195.69.145.89 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS8966">AS8966</a> 195.66.224.159 at 195.66.224.243 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS8966">AS8966</a> 195.66.224.159 at 195.66.224.243 action pref = 100;accept ANY
+export:         to <a href="/AS9002">AS9002</a> 195.69.145.216 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS9002">AS9002</a> 195.69.145.216 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS9002">AS9002</a> 195.66.224.193 at 195.66.224.243 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS9002">AS9002</a> 195.66.224.193 at 195.66.224.243 action pref = 100;accept ANY
+export:         to <a href="/AS9002">AS9002</a> 194.68.123.157 at 194.68.123.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS9002">AS9002</a> 194.68.123.157 at 194.68.123.143 action pref = 100;accept ANY
+export:         to <a href="/AS9002">AS9002</a> 194.68.128.157 at 194.68.128.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS9002">AS9002</a> 194.68.128.157 at 194.68.128.143 action pref = 100;accept ANY
+export:         to <a href="/AS9009">AS9009</a> 195.69.144.63 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS9009">AS9009</a> 195.69.144.63 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS9009">AS9009</a> 195.66.224.231 at 195.66.224.243 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS9009">AS9009</a> 195.66.224.231 at 195.66.224.243 action pref = 100;accept ANY
+export:         to <a href="/AS9031">AS9031</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS9031">AS9031</a> action pref = 100;accept ANY
+export:         to <a href="/AS9031">AS9031</a> 195.69.144.180 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS9031">AS9031</a> 195.69.144.180 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS9031">AS9031</a> 194.68.123.189 at 194.68.123.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS9031">AS9031</a> 194.68.123.189 at 194.68.123.143 action pref = 100;accept ANY
+export:         to <a href="/AS9031">AS9031</a> 195.245.240.189 at 195.245.240.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS9031">AS9031</a> 195.245.240.189 at 195.245.240.143 action pref = 100;accept ANY
+export:         to <a href="/AS9031">AS9031</a> 194.68.128.189 at 194.68.128.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS9031">AS9031</a> 194.68.128.189 at 194.68.128.143 action pref = 100;accept ANY
+export:         to <a href="/AS9031">AS9031</a> 195.69.119.189 at 195.69.119.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS9031">AS9031</a> 195.69.119.189 at 195.69.119.143 action pref = 100;accept ANY
+export:         to <a href="/AS9116">AS9116</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS9116">AS9116</a> action pref = 100;accept ANY
+export:         to <a href="/AS9120">AS9120</a> 192.38.7.46 at 192.38.7.43 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS9120">AS9120</a> 192.38.7.46 at 192.38.7.43 action pref = 100;accept ANY
+export:         to <a href="/AS9121">AS9121</a> 195.69.144.241 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS9121">AS9121</a> 195.69.144.241 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS9121">AS9121</a> 195.69.145.241 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS9121">AS9121</a> 195.69.145.241 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS9121">AS9121</a> 195.66.225.59 at 195.66.224.243 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS9121">AS9121</a> 195.66.225.59 at 195.66.224.243 action pref = 100;accept ANY
+export:         to <a href="/AS9143">AS9143</a> 195.69.144.103 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS9143">AS9143</a> 195.69.144.103 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS9143">AS9143</a> 195.69.144.181 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS9143">AS9143</a> 195.69.144.181 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS9145">AS9145</a> 195.69.144.42 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS9145">AS9145</a> 195.69.144.42 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS9167">AS9167</a> 192.38.7.49 at 192.38.7.43 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS9167">AS9167</a> 192.38.7.49 at 192.38.7.43 action pref = 100;accept ANY
+export:         to <a href="/AS9191">AS9191</a> 195.69.144.162 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS9191">AS9191</a> 195.69.144.162 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS9318">AS9318</a> 195.66.224.176 at 195.66.224.243 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS9318">AS9318</a> 195.66.224.176 at 195.66.224.243 action pref = 100;accept ANY
+export:         to <a href="/AS9505">AS9505</a> 195.69.145.78 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS9505">AS9505</a> 195.69.145.78 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS10310">AS10310</a> 195.69.145.110 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS10310">AS10310</a> 195.69.145.110 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS10310">AS10310</a> 195.66.224.129 at 195.66.224.243 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS10310">AS10310</a> 195.66.224.129 at 195.66.224.243 action pref = 100;accept ANY
+export:         to <a href="/AS10310">AS10310</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS10310">AS10310</a> action pref = 100;accept ANY
+export:         to <a href="/AS10310">AS10310</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS10310">AS10310</a> action pref = 100;accept ANY
+export:         to <a href="/AS11867">AS11867</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS11867">AS11867</a> action pref = 100;accept ANY
+export:         to <a href="/AS12306">AS12306</a> 195.69.144.161 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS12306">AS12306</a> 195.69.144.161 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS12322">AS12322</a> 195.69.144.251 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS12322">AS12322</a> 195.69.144.251 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS12399">AS12399</a> 195.69.145.99 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS12399">AS12399</a> 195.69.145.99 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS12414">AS12414</a> 195.69.144.165 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS12414">AS12414</a> 195.69.144.165 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS12552">AS12552</a> 193.156.90.56 at 193.156.90.67 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS12552">AS12552</a> 193.156.90.56 at 193.156.90.67 action pref = 100;accept ANY
+export:         to <a href="/AS12552">AS12552</a> 192.38.7.68 at 192.38.7.43 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS12552">AS12552</a> 192.38.7.68 at 192.38.7.43 action pref = 100;accept ANY
+export:         to <a href="/AS12552">AS12552</a> 195.69.117.92 at 195.69.117.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS12552">AS12552</a> 195.69.117.92 at 195.69.117.143 action pref = 100;accept ANY
+export:         to <a href="/AS12552">AS12552</a> 194.68.130.92 at 194.68.130.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS12552">AS12552</a> 194.68.130.92 at 194.68.130.143 action pref = 100;accept ANY
+export:         to <a href="/AS12552">AS12552</a> 195.69.116.92 at 195.69.116.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS12552">AS12552</a> 195.69.116.92 at 195.69.116.143 action pref = 100;accept ANY
+export:         to <a href="/AS12552">AS12552</a> 194.68.123.92 at 194.68.123.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS12552">AS12552</a> 194.68.123.92 at 194.68.123.143 action pref = 100;accept ANY
+export:         to <a href="/AS12552">AS12552</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS12552">AS12552</a> action pref = 100;accept ANY
+export:         to <a href="/AS12552">AS12552</a> 194.68.128.92 at 194.68.128.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS12552">AS12552</a> 194.68.128.92 at 194.68.128.143 action pref = 100;accept ANY
+export:         to <a href="/AS12552">AS12552</a> 195.69.119.92 at 195.69.119.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS12552">AS12552</a> 195.69.119.92 at 195.69.119.143 action pref = 100;accept ANY
+export:         to <a href="/AS12573">AS12573</a> 195.69.145.118 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS12573">AS12573</a> 195.69.145.118 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS12573">AS12573</a> 195.69.144.118 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS12573">AS12573</a> 195.69.144.118 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS12634">AS12634</a> 195.69.144.130 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS12634">AS12634</a> 195.69.144.130 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS12634">AS12634</a> 195.69.144.105 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS12634">AS12634</a> 195.69.144.105 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS12654">AS12654</a> 195.69.144.69 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS12654">AS12654</a> 195.69.144.69 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS12654">AS12654</a> 194.68.123.147 at 194.68.123.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS12654">AS12654</a> 194.68.123.147 at 194.68.123.143 action pref = 100;accept ANY
+export:         to <a href="/AS12713">AS12713</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS12713">AS12713</a> action pref = 100;accept ANY
+export:         to <a href="/AS12713">AS12713</a> 195.69.144.179 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS12713">AS12713</a> 195.69.144.179 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS12713">AS12713</a> 195.66.224.190 at 195.66.224.243 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS12713">AS12713</a> 195.66.224.190 at 195.66.224.243 action pref = 100;accept ANY
+export:         to <a href="/AS12859">AS12859</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS12859">AS12859</a> action pref = 100;accept ANY
+export:         to <a href="/AS12859">AS12859</a> 195.69.144.35 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS12859">AS12859</a> 195.69.144.35 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS12859">AS12859</a> 195.69.144.200 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS12859">AS12859</a> 195.69.144.200 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS12871">AS12871</a> 195.69.144.64 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS12871">AS12871</a> 195.69.144.64 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS12902">AS12902</a> 195.69.144.223 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS12902">AS12902</a> 195.69.144.223 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS12929">AS12929</a> 193.156.90.23 at 193.156.90.67 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS12929">AS12929</a> 193.156.90.23 at 193.156.90.67 action pref = 100;accept ANY
+export:         to <a href="/AS12989">AS12989</a> 195.69.144.94 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS12989">AS12989</a> 195.69.144.94 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS12989">AS12989</a> 195.69.145.70 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS12989">AS12989</a> 195.69.145.70 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS12989">AS12989</a> 195.66.224.227 at 195.66.224.243 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS12989">AS12989</a> 195.66.224.227 at 195.66.224.243 action pref = 100;accept ANY
+export:         to <a href="/AS12996">AS12996</a> 193.156.90.22 at 193.156.90.67 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS12996">AS12996</a> 193.156.90.22 at 193.156.90.67 action pref = 100;accept ANY
+export:         to <a href="/AS13030">AS13030</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS13030">AS13030</a> action pref = 100;accept ANY
+export:         to <a href="/AS13030">AS13030</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS13030">AS13030</a> action pref = 100;accept ANY
+export:         to <a href="/AS13030">AS13030</a> 195.69.144.210 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS13030">AS13030</a> 195.69.144.210 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS13030">AS13030</a> 195.66.224.175 at 195.66.224.243 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS13030">AS13030</a> 195.66.224.175 at 195.66.224.243 action pref = 100;accept ANY
+export:         to <a href="/AS13030">AS13030</a> 192.38.7.52 at 192.38.7.43 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS13030">AS13030</a> 192.38.7.52 at 192.38.7.43 action pref = 100;accept ANY
+export:         to <a href="/AS13037">AS13037</a> 195.66.224.158 at 195.66.224.243 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS13037">AS13037</a> 195.66.224.158 at 195.66.224.243 action pref = 100;accept ANY
+export:         to <a href="/AS13049">AS13049</a> 195.69.145.50 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS13049">AS13049</a> 195.69.145.50 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS13069">AS13069</a> 193.156.90.24 at 193.156.90.67 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS13069">AS13069</a> 193.156.90.24 at 193.156.90.67 action pref = 100;accept ANY
+export:         to <a href="/AS13101">AS13101</a> 195.69.145.119 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS13101">AS13101</a> 195.69.145.119 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS13127">AS13127</a> 195.69.144.47 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS13127">AS13127</a> 195.69.144.47 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS13127">AS13127</a> 195.69.144.211 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS13127">AS13127</a> 195.69.144.211 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS13189">AS13189</a> 195.245.240.138 at 195.245.240.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS13189">AS13189</a> 195.245.240.138 at 195.245.240.143 action pref = 100;accept ANY
+export:         to <a href="/AS13189">AS13189</a> 195.69.119.138 at 195.69.119.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS13189">AS13189</a> 195.69.119.138 at 195.69.119.143 action pref = 100;accept ANY
+export:         to <a href="/AS13193">AS13193</a> 195.69.145.198 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS13193">AS13193</a> 195.69.145.198 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS13237">AS13237</a> 195.69.144.212 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS13237">AS13237</a> 195.69.144.212 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS13237">AS13237</a> 195.66.224.99 at 195.66.224.243 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS13237">AS13237</a> 195.66.224.99 at 195.66.224.243 action pref = 100;accept ANY
+export:         to <a href="/AS13237">AS13237</a> 192.38.7.54 at 192.38.7.43 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS13237">AS13237</a> 192.38.7.54 at 192.38.7.43 action pref = 100;accept ANY
+export:         to <a href="/AS13237">AS13237</a> 194.68.123.141 at 194.68.123.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS13237">AS13237</a> 194.68.123.141 at 194.68.123.143 action pref = 100;accept ANY
+export:         to <a href="/AS13237">AS13237</a> 194.68.128.141 at 194.68.128.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS13237">AS13237</a> 194.68.128.141 at 194.68.128.143 action pref = 100;accept ANY
+export:         to <a href="/AS13246">AS13246</a> 195.69.144.101 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS13246">AS13246</a> 195.69.144.101 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS13285">AS13285</a> 195.66.224.136 at 195.66.224.243 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS13285">AS13285</a> 195.66.224.136 at 195.66.224.243 action pref = 100;accept ANY
+export:         to <a href="/AS13645">AS13645</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS13645">AS13645</a> action pref = 100;accept ANY
+export:         to <a href="/AS13768">AS13768</a> 195.69.145.209 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS13768">AS13768</a> 195.69.145.209 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS13768">AS13768</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS13768">AS13768</a> action pref = 100;accept ANY
+export:         to <a href="/AS15133">AS15133</a> 195.69.145.162 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS15133">AS15133</a> 195.69.145.162 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS15169">AS15169</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS15169">AS15169</a> action pref = 100;accept ANY
+export:         to <a href="/AS15169">AS15169</a> 195.69.144.247 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS15169">AS15169</a> 195.69.144.247 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS15169">AS15169</a> 195.66.224.125 at 195.66.224.243 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS15169">AS15169</a> 195.66.224.125 at 195.66.224.243 action pref = 100;accept ANY
+export:         to <a href="/AS15169">AS15169</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS15169">AS15169</a> action pref = 100;accept ANY
+export:         to <a href="/AS15169">AS15169</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS15169">AS15169</a> action pref = 100;accept ANY
+export:         to <a href="/AS15290">AS15290</a> 195.69.145.122 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS15290">AS15290</a> 195.69.145.122 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS15366">AS15366</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS15366">AS15366</a> action pref = 100;accept ANY
+export:         to <a href="/AS15412">AS15412</a> 195.69.144.72 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS15412">AS15412</a> 195.69.144.72 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS15412">AS15412</a> 195.66.224.146 at 195.66.224.243 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS15412">AS15412</a> 195.66.224.146 at 195.66.224.243 action pref = 100;accept ANY
+export:         to <a href="/AS15516">AS15516</a> 192.38.7.64 at 192.38.7.43 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS15516">AS15516</a> 192.38.7.64 at 192.38.7.43 action pref = 100;accept ANY
+export:         to <a href="/AS15535">AS15535</a> 195.69.145.127 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS15535">AS15535</a> 195.69.145.127 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS15542">AS15542</a> 195.69.145.125 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS15542">AS15542</a> 195.69.145.125 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS15557">AS15557</a> 195.69.145.171 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS15557">AS15557</a> 195.69.145.171 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS15560">AS15560</a> 193.156.90.52 at 193.156.90.67 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS15560">AS15560</a> 193.156.90.52 at 193.156.90.67 action pref = 100;accept ANY
+export:         to <a href="/AS15598">AS15598</a> 195.69.144.213 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS15598">AS15598</a> 195.69.144.213 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS15600">AS15600</a> 195.69.144.128 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS15600">AS15600</a> 195.69.144.128 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS15659">AS15659</a> 193.156.90.31 at 193.156.90.67 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS15659">AS15659</a> 193.156.90.31 at 193.156.90.67 action pref = 100;accept ANY
+export:         to <a href="/AS15703">AS15703</a> 195.69.144.171 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS15703">AS15703</a> 195.69.144.171 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS15782">AS15782</a> 192.38.7.75 at 192.38.7.43 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS15782">AS15782</a> 192.38.7.75 at 192.38.7.43 action pref = 100;accept ANY
+export:         to <a href="/AS15782">AS15782</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS15782">AS15782</a> action pref = 100;accept ANY
+export:         to <a href="/AS15782">AS15782</a> 195.69.117.145 at 195.69.117.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS15782">AS15782</a> 195.69.117.145 at 195.69.117.143 action pref = 100;accept ANY
+export:         to <a href="/AS15830">AS15830</a> 195.66.224.82 at 195.66.224.243 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS15830">AS15830</a> 195.66.224.82 at 195.66.224.243 action pref = 100;accept ANY
+export:         to <a href="/AS15879">AS15879</a> 195.69.144.167 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS15879">AS15879</a> 195.69.144.167 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS15879">AS15879</a> 195.69.145.67 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS15879">AS15879</a> 195.69.145.67 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS16065">AS16065</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS16065">AS16065</a> action pref = 100;accept ANY
+export:         to <a href="/AS16065">AS16065</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS16065">AS16065</a> action pref = 100;accept ANY
+export:         to <a href="/AS16086">AS16086</a> 195.245.240.152 at 195.245.240.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS16086">AS16086</a> 195.245.240.152 at 195.245.240.143 action pref = 100;accept ANY
+export:         to <a href="/AS16086">AS16086</a> 195.69.119.152 at 195.69.119.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS16086">AS16086</a> 195.69.119.152 at 195.69.119.143 action pref = 100;accept ANY
+export:         to <a href="/AS16131">AS16131</a> 195.69.144.239 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS16131">AS16131</a> 195.69.144.239 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS16186">AS16186</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS16186">AS16186</a> action pref = 100;accept ANY
+export:         to <a href="/AS16186">AS16186</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS16186">AS16186</a> action pref = 100;accept ANY
+export:         to <a href="/AS16243">AS16243</a> 195.69.144.245 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS16243">AS16243</a> 195.69.144.245 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS16245">AS16245</a> 192.38.7.93 at 192.38.7.43 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS16245">AS16245</a> 192.38.7.93 at 192.38.7.43 action pref = 100;accept ANY
+export:         to <a href="/AS16265">AS16265</a> 195.69.144.215 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS16265">AS16265</a> 195.69.144.215 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS16265">AS16265</a> 194.68.123.160 at 194.68.123.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS16265">AS16265</a> 194.68.123.160 at 194.68.123.143 action pref = 100;accept ANY
+export:         to <a href="/AS16265">AS16265</a> 194.68.128.160 at 194.68.128.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS16265">AS16265</a> 194.68.128.160 at 194.68.128.143 action pref = 100;accept ANY
+export:         to <a href="/AS16276">AS16276</a> 195.69.145.231 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS16276">AS16276</a> 195.69.145.231 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS16298">AS16298</a> 195.69.144.183 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS16298">AS16298</a> 195.69.144.183 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS16509">AS16509</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS16509">AS16509</a> action pref = 100;accept ANY
+export:         to <a href="/AS18922">AS18922</a> 195.66.224.115 at 195.66.224.243 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS18922">AS18922</a> 195.66.224.115 at 195.66.224.243 action pref = 100;accept ANY
+export:         to <a href="/AS19029">AS19029</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS19029">AS19029</a> action pref = 100;accept ANY
+export:         to <a href="/AS19080">AS19080</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS19080">AS19080</a> action pref = 100;accept ANY
+export:         to <a href="/AS19151">AS19151</a> 195.69.145.58 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS19151">AS19151</a> 195.69.145.58 at 195.69.145.52 action pref = 100;accept <a href="/as-set/AS-WVFIBER">AS-WVFIBER</a>
+export:         to <a href="/AS19151">AS19151</a> 195.66.224.233 at 195.66.224.243 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS19151">AS19151</a> 195.66.224.233 at 195.66.224.243 action pref = 100;accept ANY
+export:         to <a href="/AS19151">AS19151</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS19151">AS19151</a> action pref = 100;accept ANY
+export:         to <a href="/AS20495">AS20495</a> 195.69.144.107 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS20495">AS20495</a> 195.69.144.107 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS20504">AS20504</a> 195.69.144.186 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS20504">AS20504</a> 195.69.144.186 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS20504">AS20504</a> 195.69.145.225 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS20504">AS20504</a> 195.69.145.225 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS20547">AS20547</a> 195.66.224.72 at 195.66.224.243 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS20547">AS20547</a> 195.66.224.72 at 195.66.224.243 action pref = 100;accept ANY
+export:         to <a href="/AS20562">AS20562</a> 195.69.144.189 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS20562">AS20562</a> 195.69.144.189 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS20640">AS20640</a> 195.69.144.221 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS20640">AS20640</a> 195.69.144.221 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS20747">AS20747</a> 195.69.144.145 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS20747">AS20747</a> 195.69.144.145 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS20847">AS20847</a> 195.69.144.222 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS20847">AS20847</a> 195.69.144.222 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS20847">AS20847</a> 195.69.144.197 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS20847">AS20847</a> 195.69.144.197 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS20932">AS20932</a> 195.69.144.234 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS20932">AS20932</a> 195.69.144.234 at 195.69.145.52 action pref = 100;accept <a href="/as-set/AS-IP-MAN">AS-IP-MAN</a>
+export:         to <a href="/AS20940">AS20940</a> 195.69.144.168 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS20940">AS20940</a> 195.69.144.168 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS20940">AS20940</a> 195.69.145.208 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS20940">AS20940</a> 195.69.145.208 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS20940">AS20940</a> 195.66.224.168 at 195.66.224.243 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS20940">AS20940</a> 195.66.224.168 at 195.66.224.243 action pref = 100;accept ANY
+export:         to <a href="/AS20940">AS20940</a> 194.68.123.170 at 194.68.123.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS20940">AS20940</a> 194.68.123.170 at 194.68.123.143 action pref = 100;accept ANY
+export:         to <a href="/AS20940">AS20940</a> 194.68.128.170 at 194.68.128.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS20940">AS20940</a> 194.68.128.170 at 194.68.128.143 action pref = 100;accept ANY
+export:         to <a href="/AS20940">AS20940</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS20940">AS20940</a> action pref = 100;accept ANY
+export:         to <a href="/AS20940">AS20940</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS20940">AS20940</a> action pref = 100;accept ANY
+export:         to <a href="/AS20976">AS20976</a> 195.69.145.61 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS20976">AS20976</a> 195.69.145.61 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS20976">AS20976</a> 195.66.224.52 at 195.66.224.243 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS20976">AS20976</a> 195.66.224.52 at 195.66.224.243 action pref = 100;accept ANY
+export:         to <a href="/AS21099">AS21099</a> 195.66.224.162 at 195.66.224.243 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS21099">AS21099</a> 195.66.224.162 at 195.66.224.243 action pref = 100;accept ANY
+export:         to <a href="/AS21155">AS21155</a> 195.69.144.214 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS21155">AS21155</a> 195.69.144.214 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS21155">AS21155</a> 195.69.145.63 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS21155">AS21155</a> 195.69.145.63 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS21195">AS21195</a> 195.245.240.140 at 195.245.240.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS21195">AS21195</a> 195.245.240.140 at 195.245.240.143 action pref = 100;accept ANY
+export:         to <a href="/AS21195">AS21195</a> 195.69.119.140 at 195.69.119.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS21195">AS21195</a> 195.69.119.140 at 195.69.119.143 action pref = 100;accept ANY
+export:         to <a href="/AS21221">AS21221</a> 195.69.144.102 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS21221">AS21221</a> 195.69.144.102 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS21250">AS21250</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS21250">AS21250</a> action pref = 100;accept ANY
+export:         to <a href="/AS21293">AS21293</a> 193.156.90.50 at 193.156.90.67 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS21293">AS21293</a> 193.156.90.50 at 193.156.90.67 action pref = 100;accept ANY
+export:         to <a href="/AS21293">AS21293</a> 193.156.90.51 at 193.156.90.67 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS21293">AS21293</a> 193.156.90.51 at 193.156.90.67 action pref = 100;accept ANY
+export:         to <a href="/AS21336">AS21336</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS21336">AS21336</a> action pref = 100;accept ANY
+export:         to <a href="/AS21357">AS21357</a> 193.108.152.44 at 217.75.96.60 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS21357">AS21357</a> 193.108.152.44 at 217.75.96.60 action pref = 100;accept ANY
+export:         to <a href="/AS21371">AS21371</a> 195.66.224.187 at 195.66.224.243 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS21371">AS21371</a> 195.66.224.187 at 195.66.224.243 action pref = 100;accept ANY
+export:         to <a href="/AS21392">AS21392</a> 195.69.145.175 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS21392">AS21392</a> 195.69.145.175 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS21409">AS21409</a> 195.69.145.184 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS21409">AS21409</a> 195.69.145.184 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS21478">AS21478</a> 195.69.144.216 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS21478">AS21478</a> 195.69.144.216 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS22212">AS22212</a> 195.69.144.138 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS22212">AS22212</a> 195.69.144.138 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS22212">AS22212</a> 195.66.224.44 at 195.66.224.243 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS22212">AS22212</a> 195.66.224.44 at 195.66.224.243 action pref = 100;accept ANY
+export:         to <a href="/AS22212">AS22212</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS22212">AS22212</a> action pref = 100;accept ANY
+export:         to <a href="/AS22822">AS22822</a> 195.69.145.133 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS22822">AS22822</a> 195.69.145.133 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS22822">AS22822</a> 195.66.224.133 at 195.66.224.243 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS22822">AS22822</a> 195.66.224.133 at 195.66.224.243 action pref = 100;accept ANY
+export:         to <a href="/AS22822">AS22822</a> 194.68.123.167 at 194.68.123.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS22822">AS22822</a> 194.68.123.167 at 194.68.123.143 action pref = 100;accept ANY
+export:         to <a href="/AS22822">AS22822</a> 194.68.128.167 at 194.68.128.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS22822">AS22822</a> 194.68.128.167 at 194.68.128.143 action pref = 100;accept ANY
+export:         to <a href="/AS23148">AS23148</a> 195.69.145.48 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS23148">AS23148</a> 195.69.145.48 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS23148">AS23148</a> 195.66.225.91 at 195.66.224.243 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS23148">AS23148</a> 195.66.225.91 at 195.66.224.243 action pref = 100;accept ANY
+export:         to <a href="/AS23393">AS23393</a> 195.69.145.223 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS23393">AS23393</a> 195.69.145.223 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS24167">AS24167</a> 195.69.144.184 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS24167">AS24167</a> 195.69.144.184 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS24587">AS24587</a> 195.69.145.71 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS24587">AS24587</a> 195.69.145.71 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS24642">AS24642</a> 195.69.144.248 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS24642">AS24642</a> 195.69.144.248 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS24867">AS24867</a> 195.66.225.66 at 195.66.224.243 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS24867">AS24867</a> 195.66.225.66 at 195.66.224.243 action pref = 100;accept ANY
+export:         to <a href="/AS25074">AS25074</a> 195.69.144.155 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS25074">AS25074</a> 195.69.144.155 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS25074">AS25074</a> 195.66.225.25 at 195.66.224.243 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS25074">AS25074</a> 195.66.225.25 at 195.66.224.243 action pref = 100;accept ANY
+export:         to <a href="/AS25137">AS25137</a> 195.69.145.113 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS25137">AS25137</a> 195.69.145.113 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS25148">AS25148</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS25148">AS25148</a> action pref = 100;accept ANY
+export:         to <a href="/AS25148">AS25148</a> 193.156.90.68 at 193.156.90.67 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS25148">AS25148</a> 193.156.90.68 at 193.156.90.67 action pref = 100;accept ANY
+export:         to <a href="/AS25148">AS25148</a> 195.69.145.42 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS25148">AS25148</a> 195.69.145.42 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS25180">AS25180</a> 195.66.224.186 at 195.66.224.243 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS25180">AS25180</a> 195.66.224.186 at 195.66.224.243 action pref = 100;accept ANY
+export:         to <a href="/AS25286">AS25286</a> 195.69.145.105 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS25286">AS25286</a> 195.69.145.105 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS25286">AS25286</a> 195.66.224.179 at 195.66.224.243 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS25286">AS25286</a> 195.66.224.179 at 195.66.224.243 action pref = 100;accept ANY
+export:         to <a href="/AS25351">AS25351</a> 193.156.90.32 at 193.156.90.67 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS25351">AS25351</a> 193.156.90.32 at 193.156.90.67 action pref = 100;accept ANY
+export:         to <a href="/AS25459">AS25459</a> 195.69.145.68 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS25459">AS25459</a> 195.69.145.68 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS25466">AS25466</a> 195.69.145.201 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS25466">AS25466</a> 195.69.145.201 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS25577">AS25577</a> 195.66.224.201 at 195.66.224.243 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS25577">AS25577</a> 195.66.224.201 at 195.66.224.243 action pref = 100;accept ANY
+export:         to <a href="/AS25596">AS25596</a> 195.69.144.159 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS25596">AS25596</a> 195.69.144.159 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS25596">AS25596</a> 195.69.145.169 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS25596">AS25596</a> 195.69.145.169 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS25973">AS25973</a> 195.69.144.73 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS25973">AS25973</a> 195.69.144.73 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS25973">AS25973</a> 195.66.225.15 at 195.66.224.243 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS25973">AS25973</a> 195.66.225.15 at 195.66.224.243 action pref = 100;accept ANY
+export:         to <a href="/AS25973">AS25973</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS25973">AS25973</a> action pref = 100;accept ANY
+export:         to <a href="/AS26415">AS26415</a> 193.156.90.204 at 193.156.90.67 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS26415">AS26415</a> 193.156.90.204 at 193.156.90.67 action pref = 100;accept ANY
+export:         to <a href="/AS26415">AS26415</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS26415">AS26415</a> action pref = 100;accept ANY
+export:         to <a href="/AS26415">AS26415</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS26415">AS26415</a> action pref = 100;accept ANY
+export:         to <a href="/AS28685">AS28685</a> 195.69.144.133 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS28685">AS28685</a> 195.69.144.133 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS28788">AS28788</a> 195.69.144.237 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS28788">AS28788</a> 195.69.144.237 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS28878">AS28878</a> 195.69.144.198 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS28878">AS28878</a> 195.69.144.198 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS28878">AS28878</a> 195.69.145.251 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS28878">AS28878</a> 195.69.145.251 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS28917">AS28917</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS28917">AS28917</a> action pref = 100;accept ANY
+export:         to <a href="/AS29017">AS29017</a> 195.69.145.84 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS29017">AS29017</a> 195.69.145.84 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS29017">AS29017</a> 195.66.224.141 at 195.66.224.243 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS29017">AS29017</a> 195.66.224.141 at 195.66.224.243 action pref = 100;accept ANY
+export:         to <a href="/AS29076">AS29076</a> 195.69.145.246 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS29076">AS29076</a> 195.69.145.246 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS29076">AS29076</a> 194.68.123.192 at 194.68.123.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS29076">AS29076</a> 194.68.123.192 at 194.68.123.143 action pref = 100;accept ANY
+export:         to <a href="/AS29468">AS29468</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS29468">AS29468</a> action pref = 100;accept ANY
+export:         to <a href="/AS29518">AS29518</a> 195.69.117.148 at 195.69.117.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS29518">AS29518</a> 195.69.117.148 at 195.69.117.143 action pref = 100;accept ANY
+export:         to <a href="/AS29518">AS29518</a> 194.68.130.148 at 194.68.130.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS29518">AS29518</a> 194.68.130.148 at 194.68.130.143 action pref = 100;accept ANY
+export:         to <a href="/AS29518">AS29518</a> 195.245.240.148 at 195.245.240.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS29518">AS29518</a> 195.245.240.148 at 195.245.240.143 action pref = 100;accept ANY
+export:         to <a href="/AS29518">AS29518</a> 195.69.119.148 at 195.69.119.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS29518">AS29518</a> 195.69.119.148 at 195.69.119.143 action pref = 100;accept ANY
+export:         to <a href="/AS29550">AS29550</a> 195.66.224.223 at 195.66.224.243 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS29550">AS29550</a> 195.66.224.223 at 195.66.224.243 action pref = 100;accept ANY
+export:         to <a href="/AS29602">AS29602</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS29602">AS29602</a> action pref = 100;accept ANY
+export:         to <a href="/AS29640">AS29640</a> 195.69.144.246 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS29640">AS29640</a> 195.69.144.246 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS29686">AS29686</a> 195.69.145.56 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS29686">AS29686</a> 195.69.145.56 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS29695">AS29695</a> 193.156.90.66 at 193.156.90.67 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS29695">AS29695</a> 193.156.90.66 at 193.156.90.67 action pref = 100;accept ANY
+export:         to <a href="/AS29695">AS29695</a> 192.38.7.6 at 192.38.7.43 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS29695">AS29695</a> 192.38.7.6 at 192.38.7.43 action pref = 100;accept ANY
+export:         to <a href="/AS29791">AS29791</a> 195.69.145.187 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS29791">AS29791</a> 195.69.145.187 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS29791">AS29791</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS29791">AS29791</a> action pref = 100;accept ANY
+export:         to <a href="/AS30081">AS30081</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS30081">AS30081</a> action pref = 100;accept ANY
+export:         to <a href="/AS30094">AS30094</a> 195.69.145.141 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS30094">AS30094</a> 195.69.145.141 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS30094">AS30094</a> 195.69.144.193 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS30094">AS30094</a> 195.69.144.193 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS30781">AS30781</a> 195.69.145.239 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS30781">AS30781</a> 195.69.145.239 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS30844">AS30844</a> 195.66.224.68 at 195.66.224.243 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS30844">AS30844</a> 195.66.224.68 at 195.66.224.243 action pref = 100;accept ANY
+export:         to <a href="/AS30889">AS30889</a> 195.69.144.202 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS30889">AS30889</a> 195.69.144.202 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS30890">AS30890</a> 195.66.225.101 at 195.66.224.243 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS30890">AS30890</a> 195.66.225.101 at 195.66.224.243 action pref = 100;accept ANY
+export:         to <a href="/AS30950">AS30950</a> 193.156.90.59 at 193.156.90.67 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS30950">AS30950</a> 193.156.90.59 at 193.156.90.67 action pref = 100;accept ANY
+export:         to <a href="/AS31005">AS31005</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS31005">AS31005</a> action pref = 100;accept ANY
+export:         to <a href="/AS31005">AS31005</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS31005">AS31005</a> action pref = 100;accept ANY
+export:         to <a href="/AS31027">AS31027</a> 192.38.7.58 at 192.38.7.43 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS31027">AS31027</a> 192.38.7.58 at 192.38.7.43 action pref = 100;accept ANY
+export:         to <a href="/AS31216">AS31216</a> 195.69.145.124 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS31216">AS31216</a> 195.69.145.124 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS31251">AS31251</a> 195.69.145.128 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS31251">AS31251</a> 195.69.145.128 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS31252">AS31252</a> 195.69.145.46 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS31252">AS31252</a> 195.69.145.46 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS31252">AS31252</a> 195.66.224.247 at 195.66.224.243 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS31252">AS31252</a> 195.66.224.247 at 195.66.224.243 action pref = 100;accept ANY
+export:         to <a href="/AS31283">AS31283</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS31283">AS31283</a> action pref = 100;accept ANY
+export:         to <a href="/AS31283">AS31283</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS31283">AS31283</a> action pref = 100;accept ANY
+export:         to <a href="/AS31337">AS31337</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS31337">AS31337</a> action pref = 100;accept ANY
+export:         to <a href="/AS31383">AS31383</a> 195.69.145.35 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS31383">AS31383</a> 195.69.145.35 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS31432">AS31432</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS31432">AS31432</a> action pref = 100;accept ANY
+export:         to <a href="/AS31432">AS31432</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS31432">AS31432</a> action pref = 100;accept ANY
+export:         to <a href="/AS31432">AS31432</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS31432">AS31432</a> action pref = 100;accept ANY
+export:         to <a href="/AS31500">AS31500</a> 195.69.145.157 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS31500">AS31500</a> 195.69.145.157 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS31500">AS31500</a> 195.66.224.215 at 195.66.224.243 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS31500">AS31500</a> 195.66.224.215 at 195.66.224.243 action pref = 100;accept ANY
+export:         to <a href="/AS31500">AS31500</a> 194.68.123.195 at 194.68.123.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS31500">AS31500</a> 194.68.123.195 at 194.68.123.143 action pref = 100;accept ANY
+export:         to <a href="/AS31500">AS31500</a> 194.68.128.195 at 194.68.128.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS31500">AS31500</a> 194.68.128.195 at 194.68.128.143 action pref = 100;accept ANY
+export:         to <a href="/AS31529">AS31529</a> 195.69.145.160 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS31529">AS31529</a> 195.69.145.160 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS31661">AS31661</a> 195.69.145.87 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS31661">AS31661</a> 195.69.145.87 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS31661">AS31661</a> 192.38.7.12 at 192.38.7.43 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS31661">AS31661</a> 192.38.7.12 at 192.38.7.43 action pref = 100;accept ANY
+export:         to <a href="/AS31661">AS31661</a> 195.69.117.184 at 195.69.117.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS31661">AS31661</a> 195.69.117.184 at 195.69.117.143 action pref = 100;accept ANY
+export:         to <a href="/AS32787">AS32787</a> 195.66.224.31 at 195.66.224.243 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS32787">AS32787</a> 195.66.224.31 at 195.66.224.243 action pref = 100;accept ANY
+export:         to <a href="/AS32934">AS32934</a> 195.69.145.115 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS32934">AS32934</a> 195.69.145.115 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS32934">AS32934</a> 195.69.145.164 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS32934">AS32934</a> 195.69.145.164 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS32934">AS32934</a> 195.66.225.121 at 195.66.224.243 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS32934">AS32934</a> 195.66.225.121 at 195.66.224.243 action pref = 100;accept ANY
+export:         to <a href="/AS32934">AS32934</a> 195.66.225.69 at 195.66.224.243 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS32934">AS32934</a> 195.66.225.69 at 195.66.224.243 action pref = 100;accept ANY
+export:         to <a href="/AS32934">AS32934</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS32934">AS32934</a> action pref = 100;accept ANY
+export:         to <a href="/AS32934">AS32934</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS32934">AS32934</a> action pref = 100;accept ANY
+export:         to <a href="/AS33822">AS33822</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS33822">AS33822</a> action pref = 100;accept ANY
+export:         to <a href="/AS33885">AS33885</a> 195.245.240.154 at 195.245.240.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS33885">AS33885</a> 195.245.240.154 at 195.245.240.143 action pref = 100;accept ANY
+export:         to <a href="/AS33885">AS33885</a> 195.69.119.154 at 195.69.119.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS33885">AS33885</a> 195.69.119.154 at 195.69.119.143 action pref = 100;accept ANY
+export:         to <a href="/AS33886">AS33886</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS33886">AS33886</a> action pref = 100;accept ANY
+export:         to <a href="/AS33915">AS33915</a> 195.69.145.143 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS33915">AS33915</a> 195.69.145.143 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS33970">AS33970</a> 195.69.145.205 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS33970">AS33970</a> 195.69.145.205 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS34106">AS34106</a> 195.69.144.156 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS34106">AS34106</a> 195.69.144.156 at 195.69.145.52 action pref = 100;accept <a href="/as-set/AS-TELEGRAAF">AS-TELEGRAAF</a>
+export:         to <a href="/AS34106">AS34106</a> 195.69.145.156 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS34106">AS34106</a> 195.69.145.156 at 195.69.145.52 action pref = 100;accept <a href="/as-set/AS-TELEGRAAF">AS-TELEGRAAF</a>
+export:         to <a href="/AS34215">AS34215</a> 195.69.145.40 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS34215">AS34215</a> 195.69.145.40 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS34305">AS34305</a> 195.69.145.174 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS34305">AS34305</a> 195.69.145.174 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS34305">AS34305</a> 195.66.224.249 at 195.66.224.243 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS34305">AS34305</a> 195.66.224.249 at 195.66.224.243 action pref = 100;accept ANY
+export:         to <a href="/AS34486">AS34486</a> 195.69.145.186 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS34486">AS34486</a> 195.69.145.186 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS34537">AS34537</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS34537">AS34537</a> action pref = 100;accept ANY
+export:         to <a href="/AS34537">AS34537</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS34537">AS34537</a> action pref = 100;accept ANY
+export:         to <a href="/AS34610">AS34610</a> 195.69.117.163 at 195.69.117.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS34610">AS34610</a> 195.69.117.163 at 195.69.117.143 action pref = 100;accept ANY
+export:         to <a href="/AS34610">AS34610</a> 194.68.130.163 at 194.68.130.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS34610">AS34610</a> 194.68.130.163 at 194.68.130.143 action pref = 100;accept ANY
+export:         to <a href="/AS34610">AS34610</a> 195.69.116.163 at 195.69.116.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS34610">AS34610</a> 195.69.116.163 at 195.69.116.143 action pref = 100;accept ANY
+export:         to <a href="/AS34610">AS34610</a> 195.245.240.163 at 195.245.240.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS34610">AS34610</a> 195.245.240.163 at 195.245.240.143 action pref = 100;accept ANY
+export:         to <a href="/AS34610">AS34610</a> 195.69.119.163 at 195.69.119.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS34610">AS34610</a> 195.69.119.163 at 195.69.119.143 action pref = 100;accept ANY
+export:         to <a href="/AS34823">AS34823</a> 192.38.7.95 at 192.38.7.43 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS34823">AS34823</a> 192.38.7.95 at 192.38.7.43 action pref = 100;accept ANY
+export:         to <a href="/AS34968">AS34968</a> 195.69.145.81 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS34968">AS34968</a> 195.69.145.81 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS34989">AS34989</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS34989">AS34989</a> action pref = 100;accept ANY
+export:         to <a href="/AS35041">AS35041</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS35041">AS35041</a> action pref = 100;accept ANY
+export:         to <a href="/AS35041">AS35041</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS35041">AS35041</a> action pref = 100;accept ANY
+export:         to <a href="/AS35228">AS35228</a> 195.69.145.45 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS35228">AS35228</a> 195.69.145.45 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS35260">AS35260</a> 195.69.145.69 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS35260">AS35260</a> 195.69.145.69 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS35320">AS35320</a> 195.69.145.183 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS35320">AS35320</a> 195.69.145.183 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS35599">AS35599</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS35599">AS35599</a> action pref = 100;accept ANY
+export:         to <a href="/AS35706">AS35706</a> 195.69.117.153 at 195.69.117.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS35706">AS35706</a> 195.69.117.153 at 195.69.117.143 action pref = 100;accept ANY
+export:         to <a href="/AS35706">AS35706</a> 194.68.130.153 at 194.68.130.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS35706">AS35706</a> 194.68.130.153 at 194.68.130.143 action pref = 100;accept ANY
+export:         to <a href="/AS35706">AS35706</a> 194.68.123.153 at 194.68.123.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS35706">AS35706</a> 194.68.123.153 at 194.68.123.143 action pref = 100;accept ANY
+export:         to <a href="/AS35706">AS35706</a> 194.68.128.153 at 194.68.128.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS35706">AS35706</a> 194.68.128.153 at 194.68.128.143 action pref = 100;accept ANY
+export:         to <a href="/AS35742">AS35742</a> 195.245.240.203 at 195.245.240.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS35742">AS35742</a> 195.245.240.203 at 195.245.240.143 action pref = 100;accept ANY
+export:         to <a href="/AS35742">AS35742</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS35742">AS35742</a> action pref = 100;accept ANY
+export:         to <a href="/AS35742">AS35742</a> 195.69.119.203 at 195.69.119.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS35742">AS35742</a> 195.69.119.203 at 195.69.119.143 action pref = 100;accept ANY
+export:         to <a href="/AS36561">AS36561</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS36561">AS36561</a> action pref = 100;accept ANY
+export:         to <a href="/AS36561">AS36561</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS36561">AS36561</a> action pref = 100;accept ANY
+export:         to <a href="/AS36625">AS36625</a> 195.66.225.46 at 195.66.224.243 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS36625">AS36625</a> 195.66.225.46 at 195.66.224.243 action pref = 100;accept ANY
+export:         to <a href="/AS36944">AS36944</a> 195.66.225.31 at 195.66.224.243 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS36944">AS36944</a> 195.66.225.31 at 195.66.224.243 action pref = 100;accept ANY
+export:         to <a href="/AS39029">AS39029</a> 193.156.90.81 at 193.156.90.67 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS39029">AS39029</a> 193.156.90.81 at 193.156.90.67 action pref = 100;accept ANY
+export:         to <a href="/AS39326">AS39326</a> 195.69.145.107 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS39326">AS39326</a> 195.69.145.107 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS39570">AS39570</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS39570">AS39570</a> action pref = 100;accept ANY
+export:         to <a href="/AS39570">AS39570</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS39570">AS39570</a> action pref = 100;accept ANY
+export:         to <a href="/AS39651">AS39651</a> 195.69.118.156 at 195.69.118.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS39651">AS39651</a> 195.69.118.156 at 195.69.118.143 action pref = 100;accept ANY
+export:         to <a href="/AS39651">AS39651</a> 195.69.116.156 at 195.69.116.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS39651">AS39651</a> 195.69.116.156 at 195.69.116.143 action pref = 100;accept ANY
+export:         to <a href="/AS39651">AS39651</a> 195.245.240.156 at 195.245.240.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS39651">AS39651</a> 195.245.240.156 at 195.245.240.143 action pref = 100;accept ANY
+export:         to <a href="/AS39651">AS39651</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS39651">AS39651</a> action pref = 100;accept ANY
+export:         to <a href="/AS39651">AS39651</a> 195.69.119.156 at 195.69.119.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS39651">AS39651</a> 195.69.119.156 at 195.69.119.143 action pref = 100;accept ANY
+export:         to <a href="/AS39787">AS39787</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS39787">AS39787</a> action pref = 100;accept ANY
+export:         to <a href="/AS39787">AS39787</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS39787">AS39787</a> action pref = 100;accept ANY
+export:         to <a href="/AS39787">AS39787</a> 193.156.90.75 at 193.156.90.67 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS39787">AS39787</a> 193.156.90.75 at 193.156.90.67 action pref = 100;accept ANY
+export:         to <a href="/AS39792">AS39792</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS39792">AS39792</a> action pref = 100;accept ANY
+export:         to <a href="/AS39915">AS39915</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS39915">AS39915</a> action pref = 100;accept ANY
+export:         to <a href="/AS40009">AS40009</a> 195.66.225.38 at 195.66.224.243 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS40009">AS40009</a> 195.66.225.38 at 195.66.224.243 action pref = 100;accept ANY
+export:         to <a href="/AS41095">AS41095</a> 195.69.145.196 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS41095">AS41095</a> 195.69.145.196 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS41095">AS41095</a> 195.66.225.64 at 195.66.224.243 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS41095">AS41095</a> 195.66.225.64 at 195.66.224.243 action pref = 100;accept ANY
+export:         to <a href="/AS41095">AS41095</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS41095">AS41095</a> action pref = 100;accept ANY
+export:         to <a href="/AS41164">AS41164</a> 193.156.90.18 at 193.156.90.67 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS41164">AS41164</a> 193.156.90.18 at 193.156.90.67 action pref = 100;accept ANY
+export:         to <a href="/AS41164">AS41164</a> 193.156.90.70 at 193.156.90.67 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS41164">AS41164</a> 193.156.90.70 at 193.156.90.67 action pref = 100;accept ANY
+export:         to <a href="/AS41528">AS41528</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS41528">AS41528</a> action pref = 100;accept ANY
+export:         to <a href="/AS41572">AS41572</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS41572">AS41572</a> action pref = 100;accept ANY
+export:         to <a href="/AS41572">AS41572</a> 193.156.90.77 at 193.156.90.67 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS41572">AS41572</a> 193.156.90.77 at 193.156.90.67 action pref = 100;accept ANY
+export:         to <a href="/AS41692">AS41692</a> 195.69.145.221 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS41692">AS41692</a> 195.69.145.221 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS41753">AS41753</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS41753">AS41753</a> action pref = 100;accept ANY
+export:         to <a href="/AS41753">AS41753</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS41753">AS41753</a> action pref = 100;accept ANY
+export:         to <a href="/AS41884">AS41884</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS41884">AS41884</a> action pref = 100;accept ANY
+export:         to <a href="/AS41884">AS41884</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS41884">AS41884</a> action pref = 100;accept ANY
+export:         to <a href="/AS42303">AS42303</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS42303">AS42303</a> action pref = 100;accept ANY
+export:         to <a href="/AS42303">AS42303</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS42303">AS42303</a> action pref = 100;accept ANY
+export:         to <a href="/AS42400">AS42400</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS42400">AS42400</a> action pref = 100;accept ANY
+export:         to <a href="/AS42400">AS42400</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS42400">AS42400</a> action pref = 100;accept ANY
+export:         to <a href="/AS42499">AS42499</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS42499">AS42499</a> action pref = 100;accept ANY
+export:         to <a href="/AS42708">AS42708</a> 195.69.145.25 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS42708">AS42708</a> 195.69.145.25 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS42708">AS42708</a> 194.68.123.194 at 194.68.123.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS42708">AS42708</a> 194.68.123.194 at 194.68.123.143 action pref = 100;accept ANY
+export:         to <a href="/AS42708">AS42708</a> 194.68.128.194 at 194.68.128.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS42708">AS42708</a> 194.68.128.194 at 194.68.128.143 action pref = 100;accept ANY
+export:         to <a href="/AS43350">AS43350</a> 195.69.144.228 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS43350">AS43350</a> 195.69.144.228 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS43568">AS43568</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS43568">AS43568</a> action pref = 100;accept ANY
+export:         to <a href="/AS43568">AS43568</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS43568">AS43568</a> action pref = 100;accept ANY
+export:         to <a href="/AS43821">AS43821</a> 195.69.145.176 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS43821">AS43821</a> 195.69.145.176 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS43890">AS43890</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS43890">AS43890</a> action pref = 100;accept ANY
+export:         to <a href="/AS43893">AS43893</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS43893">AS43893</a> action pref = 100;accept ANY
+export:         to <a href="/AS43893">AS43893</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS43893">AS43893</a> action pref = 100;accept ANY
+export:         to <a href="/AS43893">AS43893</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS43893">AS43893</a> action pref = 100;accept ANY
+export:         to <a href="/AS43893">AS43893</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS43893">AS43893</a> action pref = 100;accept ANY
+export:         to <a href="/AS43948">AS43948</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS43948">AS43948</a> action pref = 100;accept ANY
+export:         to <a href="/AS43948">AS43948</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS43948">AS43948</a> action pref = 100;accept ANY
+export:         to <a href="/AS44034">AS44034</a> 194.68.123.166 at 194.68.123.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS44034">AS44034</a> 194.68.123.166 at 194.68.123.143 action pref = 100;accept ANY
+export:         to <a href="/AS44034">AS44034</a> 194.68.128.166 at 194.68.128.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS44034">AS44034</a> 194.68.128.166 at 194.68.128.143 action pref = 100;accept ANY
+export:         to <a href="/AS44581">AS44581</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS44581">AS44581</a> action pref = 100;accept ANY
+export:         to <a href="/AS44581">AS44581</a> 195.69.117.183 at 195.69.117.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS44581">AS44581</a> 195.69.117.183 at 195.69.117.143 action pref = 100;accept ANY
+export:         to <a href="/AS44581">AS44581</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS44581">AS44581</a> action pref = 100;accept ANY
+export:         to <a href="/AS44581">AS44581</a> 194.68.130.183 at 194.68.130.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS44581">AS44581</a> 194.68.130.183 at 194.68.130.143 action pref = 100;accept ANY
+export:         to <a href="/AS44581">AS44581</a> 194.68.123.183 at 194.68.123.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS44581">AS44581</a> 194.68.123.183 at 194.68.123.143 action pref = 100;accept ANY
+export:         to <a href="/AS44581">AS44581</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS44581">AS44581</a> action pref = 100;accept ANY
+export:         to <a href="/AS44581">AS44581</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS44581">AS44581</a> action pref = 100;accept ANY
+export:         to <a href="/AS44581">AS44581</a> 194.68.128.183 at 194.68.128.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS44581">AS44581</a> 194.68.128.183 at 194.68.128.143 action pref = 100;accept ANY
+export:         to <a href="/AS44581">AS44581</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS44581">AS44581</a> action pref = 100;accept ANY
+export:         to <a href="/AS45038">AS45038</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS45038">AS45038</a> action pref = 100;accept ANY
+export:         to <a href="/AS46786">AS46786</a> 195.69.145.137 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS46786">AS46786</a> 195.69.145.137 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS46786">AS46786</a> 195.66.225.106 at 195.66.224.243 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS46786">AS46786</a> 195.66.225.106 at 195.66.224.243 action pref = 100;accept ANY
+export:         to <a href="/AS47155">AS47155</a> 194.68.123.190 at 194.68.123.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS47155">AS47155</a> 194.68.123.190 at 194.68.123.143 action pref = 100;accept ANY
+export:         to <a href="/AS47155">AS47155</a> 195.245.240.190 at 195.245.240.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS47155">AS47155</a> 195.245.240.190 at 195.245.240.143 action pref = 100;accept ANY
+export:         to <a href="/AS47155">AS47155</a> 194.68.128.190 at 194.68.128.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS47155">AS47155</a> 194.68.128.190 at 194.68.128.143 action pref = 100;accept ANY
+export:         to <a href="/AS47155">AS47155</a> 195.69.119.190 at 195.69.119.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS47155">AS47155</a> 195.69.119.190 at 195.69.119.143 action pref = 100;accept ANY
+export:         to <a href="/AS47869">AS47869</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS47869">AS47869</a> action pref = 100;accept ANY
+export:         to <a href="/AS48042">AS48042</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS48042">AS48042</a> action pref = 100;accept ANY
+export:         to <a href="/AS48144">AS48144</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS48144">AS48144</a> action pref = 100;accept ANY
+export:         to <a href="/AS48285">AS48285</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS48285">AS48285</a> action pref = 100;accept ANY
+export:         to <a href="/AS48285">AS48285</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS48285">AS48285</a> action pref = 100;accept ANY
+export:         to <a href="/AS48285">AS48285</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS48285">AS48285</a> action pref = 100;accept ANY
+export:         to <a href="/AS48514">AS48514</a> 194.68.130.180 at 194.68.130.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS48514">AS48514</a> 194.68.130.180 at 194.68.130.143 action pref = 100;accept ANY
+export:         to <a href="/AS48598">AS48598</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS48598">AS48598</a> action pref = 100;accept ANY
+export:         to <a href="/AS49262">AS49262</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS49262">AS49262</a> action pref = 100;accept ANY
+export:         to <a href="/AS49801">AS49801</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS49801">AS49801</a> action pref = 100;accept ANY
+export:         to <a href="/AS49949">AS49949</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS49949">AS49949</a> action pref = 100;accept ANY
+export:         to <a href="/AS51701">AS51701</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS51701">AS51701</a> action pref = 100;accept ANY
+export:         to <a href="/AS51747">AS51747</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS51747">AS51747</a> action pref = 100;accept ANY
+export:         to <a href="/AS52005">AS52005</a> 195.245.240.254 at 195.245.240.143 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS52005">AS52005</a> 195.245.240.254 at 195.245.240.143 action pref = 100;accept ANY
+export:         to <a href="/AS64597">AS64597</a> 195.69.144.230 at 195.69.145.52 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS64597">AS64597</a> 195.69.144.230 at 195.69.145.52 action pref = 100;accept ANY
+export:         to <a href="/AS64597">AS64597</a> 195.66.225.224 at 195.66.224.243 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS64597">AS64597</a> 195.66.225.224 at 195.66.224.243 action pref = 100;accept ANY
+export:         to <a href="/AS64597">AS64597</a> 195.160.237.10 at 217.75.96.60 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS64597">AS64597</a> 195.160.237.10 at 217.75.96.60 action pref = 100;accept ANY
+export:         to <a href="/AS65444">AS65444</a> 127.0.1.1 at 217.75.96.60 announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS65444">AS65444</a> 127.0.1.1 at 217.75.96.60 action pref = 100;accept ANY
+export:         to <a href="/AS65517">AS65517</a> announce <a href="/as-set/AS16150:AS-CUSTOMERS">AS16150:AS-CUSTOMERS</a>
+import:         from <a href="/AS65517">AS65517</a> action pref = 100;accept ANY
+admin-c:        DUMY-RIPE
+tech-c:         DUMY-RIPE
+status:         ASSIGNED
+remarks:        &#43;---------------------------------------------------------------- | <a href="/AS16150">AS16150</a> is present at: | Location Exchange Peer IP &#43;---------------------------------------------------------------- | | DENMARK | Copenhagen DIX 192.38.7.43 | DIX 2001:7F8:1F::1:6150:43:0 | | GERMANY | Frankfurt DECIX 80.81.194.114 | DECIX 2001:7f8::3f16:0:1 | | NETHERLANDS | Amsterdam AMS-IX 195.69.145.52 | AMS-IX 2001:7f8:1::a501:6150:1 | | NORWAY | Oslo NIX 193.156.90.67 | NIX 2001:7F8:12:1::1:6150 | | SWEDEN | Stockholm NETNOD GEA-1500 194.68.123.143 | NETNOD GEA-1500 2001:7f8:d:ff::143 | NETNOD GEA-4470 195.245.240.143 | NETNOD GEA-4470 2001:7f8:d:fc::143 | NETNOD GEB-1500 194.68.128.143 | NETNOD GEB-1500 2001:7f8:d:fe::143 | NETNOD GEB-4470 195.69.119.143 | NETNOD GEB-4470 2001:7f8:d:fb::143 | STHIX 194.50.181.137 | | Gothenburg NETNOD GEB-1500 194.68.130.143 | NETNOD GEB-4470 195.69.116.143 | NETNOD GEB-1500 2001:7f8:d:fa::143 | | Malmo NETNOD GEB-1500 195.69.117.143 | NETNOD GEB-4470 195.69.118.143 | NETNOD GEB-1500 2001:7f8:d:f9::143 | | UK | London LINX 195.66.224.243 | LINX 2001:7f8:4:0::3f16:1 | | US | Ashburn Equinix 206.223.115.127 | Ashburn Equinix 2001:504:0:2:1:6150:1 | &#43;---------------------------------------------------------------- | For peering, see http://as16150.net/peering-policy.html &#43;---------------------------------------------------------------- | Urgent problems, call &#43;46-8-50003088 or email noc@p80.net &#43;---------------------------------------------------------------- | For ABUSE, please contact abuse@p80.net &#43;----------------------------------------------------------------
+mnt-by:         RIPE-NCC-END-MNT
+mnt-by:         IP-ONLY-MNT
+created:        2002-09-07T20:33:43Z
+last-modified:  2025-09-29T12:22:28Z
+source:         RIPE
+remarks:        ****************************
+remarks:        * THIS OBJECT IS MODIFIED
+remarks:        * Please note that all data that is generally regarded as personal
+remarks:        * data has been removed from this object.
+remarks:        * To view the original object, please query the RIPE Database at:
+remarks:        * http://www.ripe.net/whois
+remarks:        ****************************
+
+
+organisation:   <a href="https://apps.db.ripe.net/db-web-ui/query?searchtext=ORG-ITCA1-RIPE">ORG-ITCA1-RIPE</a>
+org-name:       GlobalConnect AB
+country:        SE
+org-type:       LIR
+address:        Dummy address for <a href="https://apps.db.ripe.net/db-web-ui/query?searchtext=ORG-ITCA1-RIPE">ORG-ITCA1-RIPE</a>
+# Email removed, Log into bgp.tools to see whois emails
+mnt-ref:        IP-ONLY-MNT
+mnt-ref:        RIPE-NCC-HM-MNT
+mnt-by:         RIPE-NCC-HM-MNT
+mnt-by:         IP-ONLY-MNT
+abuse-c:        IR514-RIPE
+created:        2004-04-17T12:03:43Z
+last-modified:  2021-08-10T07:52:49Z
+source:         RIPE
+remarks:        ****************************
+remarks:        * THIS OBJECT IS MODIFIED
+remarks:        * Please note that all data that is generally regarded as personal
+remarks:        * data has been removed from this object.
+remarks:        * To view the original object, please query the RIPE Database at:
+remarks:        * http://www.ripe.net/whois
+remarks:        ****************************
+
+</pre>
+                        
+                        
+                        <a style="font-size: small;">Last Update: 2025-12-14T14:52:25Z UTC </a>
+                        
+                        <hr>
+                        
+                            <h2>Member of the following AS-SETs</h2>
+
+                            <table id="fhTable" class="full-width-table ">
+                                <tbody id="prefixlist-tbody">
+                                    <tr>
+                                        <th class="boldpls nowrap"> - </th>
+                                        <th class="boldpls">Member</th>
+                                         
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-titanamsix">as-titanamsix</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as20932:as-peering">as20932:as-peering</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-set-ntisod">as-set-ntisod</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-atrato:as-peers">as-atrato:as-peers</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as1200:as-ams-ix-peers">as1200:as-ams-ix-peers</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as16150:as-customers">as16150:as-customers</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">LEVEL3</td>
+                                        
+                                        <td><a href="/as-set/LEVEL3::as-sprint-origins">as-sprint-origins</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-ipo-comrades">as-ipo-comrades</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-liquid-linxpeers">as-liquid-linxpeers</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as61180:as-peers-amsix">as61180:as-peers-amsix</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as12552:as-gcnet">as12552:as-gcnet</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as16243:as-peers-amsix">as16243:as-peers-amsix</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-gblxeu">as-gblxeu</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as8218:as-amsix-rs">as8218:as-amsix-rs</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as16150:as-customers6">as16150:as-customers6</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as15659:as-nix">as15659:as-nix</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as41164:as-nix-peers">as41164:as-nix-peers</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as174:as-cogc-007">as174:as-cogc-007</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as34913:as-peers">as34913:as-peers</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-31576-peers">as-31576-peers</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as16631:as-cogc-017">as16631:as-cogc-017</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                        
+
+                    </div>
+
+                    
+
+                    
+
+                    
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="superclearfix">
+            
+            <div class="superclearfix">
+                
+            </div>
+
+            <div class="superclearfix">
+                
+            </div>
+
+
+        </div>
+
+
+        <div class="group js-footer" id="footer">
+            <nav>
+                <div>
+                    <ul>
+                        <li><a href="/kb/api" target="_blank">Scripting/API</a></li>
+                        <li><a href="/credits" target="_blank">Credits</a></li>
+                        <li><a href="/pricing" target="_blank">Pricing</a></li>
+                        <li><a href="/kb/contact" target="_blank">Contact Us</a></li>
+                        <li><a href="https://github.com/bgptools/issues" target="_blank">Issue Tracker</a></li>
+                        <li><a href="/kb/setup-sessions" target="">Contribute Data</a></li>
+                        
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <script>
+    
+    var inhash = window.location.hash;
+    if (inhash == "#asinfo") {
+        
+    } else if (inhash == "#prefixes") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#prefix-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#prefixes-page');
+        aaa[0].style.display = "";
+
+    } else if (inhash == "#connectivity" || inhash == "#peers" || inhash == "#upstreams" || inhash == "#downstreams") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#connectivity-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#connectivity-page');
+        aaa[0].style.display = "";
+    } else if (inhash == "#whois") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#whois-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#whois-page');
+        aaa[0].style.display = "";
+    } else if (inhash == "#ix") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#ix-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#ix-page');
+        aaa[0].style.display = "";
+    }</script>
+
+    <script>
+    
+
+
+    ;(function() {
+  'use strict'
+
+  function scaleImageMap() {
+    function resizeMap() {
+      function resizeAreaTag(cachedAreaCoords, idx) {
+        function scale(coord) {
+          var dimension = 1 === (isWidth = 1 - isWidth) ? 'width' : 'height'
+          return (
+            padding[dimension] +
+            Math.floor(Number(coord) * scalingFactor[dimension])
+          )
+        }
+
+        var isWidth = 0
+        areas[idx].coords = cachedAreaCoords
+          .split(',')
+          .map(scale)
+          .join(',')
+      }
+
+      var scalingFactor = {
+        width: image.width / image.naturalWidth,
+        height: image.height / image.naturalHeight,
+      }
+
+      var padding = {
+        width: parseInt(
+          window.getComputedStyle(image, null).getPropertyValue('padding-left'),
+          10
+        ),
+        height: parseInt(
+          window.getComputedStyle(image, null).getPropertyValue('padding-top'),
+          10
+        ),
+      }
+
+      cachedAreaCoordsArray.forEach(resizeAreaTag)
+    }
+
+    function getCoords(e) {
+      
+      return e.coords.replace(/ *, */g, ',').replace(/ +/g, ',')
+    }
+
+    function debounce() {
+      clearTimeout(timer)
+      timer = setTimeout(resizeMap, 250)
+    }
+
+    function start() {
+      if (
+        image.width !== image.naturalWidth ||
+        image.height !== image.naturalHeight
+      ) {
+        resizeMap()
+      }
+    }
+
+    function addEventListeners() {
+      image.addEventListener('load', resizeMap, false) 
+      window.addEventListener('focus', resizeMap, false) 
+      window.addEventListener('resize', debounce, false)
+      window.addEventListener('readystatechange', resizeMap, false)
+      document.addEventListener('fullscreenchange', resizeMap, false)
+    }
+
+    function beenHere() {
+      return 'function' === typeof map._resize
+    }
+
+    function getImg(name) {
+      return document.querySelector('img[usemap="#world"]')
+    }
+
+    function setup() {
+      areas = map.getElementsByTagName('area')
+      cachedAreaCoordsArray = Array.prototype.map.call(areas, getCoords)
+      image = getImg('#' + map.name) || getImg(map.name)
+      map._resize = resizeMap 
+    }
+
+    var  
+      map = this,
+      areas = null,
+      cachedAreaCoordsArray = null,
+      image = null,
+      timer = null
+
+    if (!beenHere()) {
+      setup()
+      addEventListeners()
+      start()
+    } else {
+      map._resize() 
+    }
+  }
+
+  function factory() {
+    function chkMap(element) {
+      if (!element.tagName) {
+        throw new TypeError('Object is not a valid DOM element')
+      } else if ('MAP' !== element.tagName.toUpperCase()) {
+        throw new TypeError(
+          'Expected <MAP> tag, found <' + element.tagName + '>.'
+        )
+      }
+    }
+
+    function init(element) {
+      if (element) {
+        chkMap(element)
+        scaleImageMap.call(element)
+        maps.push(element)
+      }
+    }
+
+    var maps
+
+    return function imageMapResizeF(target) {
+      maps = [] 
+
+      switch (typeof target) {
+        case 'undefined':
+        case 'string':
+          Array.prototype.forEach.call(
+            document.querySelectorAll(target || 'map'),
+            init
+          )
+          break
+        case 'object':
+          init(target)
+          break
+        default:
+          throw new TypeError('Unexpected data type (' + typeof target + ').')
+      }
+
+      return maps
+    }
+  }
+
+  if (typeof define === 'function' && define.amd) {
+    define([], factory)
+  } else if (typeof module === 'object' && typeof module.exports === 'object') {
+    module.exports = factory() 
+  } else {
+    window.imageMapResize = factory()
+  }
+
+  if ('jQuery' in window) {
+    window.jQuery.fn.imageMapResize = function $imageMapResizeF() {
+      return this.filter('map')
+        .each(scaleImageMap)
+        .end()
+    }
+  }
+})()
+    
+    </script>
+    <script>
+        var imgEl = document.getElementById("pathimg");
+        imgEl.addEventListener("mouseover",function() {
+            imageMapResize('#world');
+        })
+    </script>
+    <script src="/assets/tablesort.min.js"></script>
+    <script>
+        addEventListener("load", (event) => {
+            
+            
+            var sort = new Tablesort(document.getElementById('donotscrapebgptools-upstreamTable'));
+            var sort2 = new Tablesort(document.getElementById('donotscrapebgptools-upstreamTablePeers'));
+            
+            
+            
+        });
+    </script>
+    
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        setTimeout(function() {
+
+        var beaconHttp = new XMLHttpRequest();
+        var url = '/performance-beacon';
+        var params = JSON.stringify(window.performance)
+        beaconHttp.open('POST', url, true);
+        
+        
+        beaconHttp.setRequestHeader('Content-type', 'application/json');
+        beaconHttp.setRequestHeader('visit-url', "/as/16150");
+        if (navigator.connection) {
+            beaconHttp.setRequestHeader('client-side-rtt', navigator.connection.rtt);
+        } else {
+            beaconHttp.setRequestHeader('client-side-rtt', '-2');
+        }
+        beaconHttp.onreadystatechange = function() {}
+        beaconHttp.send(params);
+        },1000)
+    }, false);
+</script>
+
+</body>
+
+
+</html>

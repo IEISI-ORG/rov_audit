@@ -1,0 +1,2453 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="JSC &#34;ER-Telecom Holding&#34; (AS31484) is a small BGP network that is peering with 2 other networks and has 2 upstream carriers">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000">
+    <link rel="search" type="application/opensearchdescription+xml" title="BGP.Tools" href="https://bgp.tools/opensearch.xml">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="theme-color" content="#000000">
+    <link href="https://social.bgp.tools/@bgptools" rel="me">
+    <link rel="canonical" href="https://bgp.tools/as/31484" />
+    <title>AS31484 JSC &#34;ER-Telecom Holding&#34; - bgp.tools</title>
+    <link rel="stylesheet" type="text/css" href="/assets/main-new.css?2025-12-13-1541%20UTC">
+</head>
+
+<body>
+    <div id="container">
+        
+<div id="global-header" class="global-header-top">
+    <div class="header-sitewide">
+        <div class="global-header">
+            <div class="header-logo">
+                <a href="/" id="logo" class="content">bgp.tools</a>
+            </div>
+            <form id="search" action="/search" method="get" accept-charset="utf-8" role="search" class="top-search-header js-search-hash">
+                <div class="searchfield">
+                    <input type="search" autocomplete="off" name="q" id="site-search-text" title="Search" value="" placeholder="Start here..." autofocus="autofocus" class="js-search-focus">
+                    <button type="submit" id="search-submit" class="search-submit">Search</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div id="global-header-blob" >
+    <a id="auth-header-text" href="/login">Login</a>
+    
+</div>
+<div id="global-header-bar" >
+    <a id="auth-header-bar-text" href="/login">Login</a>
+    
+</div>
+<div class="small-clearfix"></div>
+
+        <div id="global-container">
+            
+
+
+            
+            <div class="section-tabs js-tabs">
+                <ul>
+                    
+<li class="active">
+    <h1> <a id="viewbutton-tab" href="/as/31484">View</a></h1>
+</li>
+
+<li >
+    <a id="editbutton-tab" href="/edit/as/31484">Edit</a>
+</li>
+
+
+
+
+
+                    <li style="float: right;">
+                        
+                        <img id="ws-status" width="24" height="24" src="/assets/disconnected.png" title="Not Connected To realtime data updates">
+                        
+                    </li>
+                </ul>
+            </div>
+
+            <div id="search-container">
+
+                <div class="column-full-width">
+
+                    <div class="clearfix">
+                        
+                    </div>
+                    
+                    
+
+                    <div class="network-header">
+                        
+                        <p id="network-name" class="heading-xlarge">JSC &#34;ER-Telecom Holding&#34;</p>
+                        <p id="network-number">
+                            AS Number
+                            <strong id="ASNumberString" pure="31484">31484</strong>
+                            <br>
+                        
+                        </p>
+
+                    </div>
+
+
+                    <div class="clearfix">
+                        
+                    </div>
+
+
+                    <div class="section-tabs js-tabs">
+                        <ul>
+
+                            <li id="overview-tab-li" class="active">
+                                <a id="overview-tab" href="#asinfo">Overview</a>
+                            </li>
+                            
+                            <li id="prefix-tab-li">
+                                <a id="prefix-tab" href="#prefixes">Prefixes</a>
+                            </li>
+
+                            <li id="connectivity-tab-li">
+                                <a id="connectivity-tab" href="#connectivity">Connectivity</a>
+                            </li>
+                            
+                            <li id="whois-tab-li">
+                                <a id="whois-tab" href="#whois">Whois</a>
+                            </li>
+                        
+                        
+                        </ul>
+                    </div>
+
+<script>
+    function removeAllActiveTab() {
+        var tabs = [
+            "overview-tab-li", 
+            "prefix-tab-li", 
+            "connectivity-tab-li",
+            "whois-tab-li",
+            "ix-tab-li",
+            "issues-tab-li"
+        ];
+
+        tabs.forEach(element => {
+            var aaa = document.querySelectorAll('#'+element);
+            if(aaa.length != 0) {
+                aaa[0].classList.remove("active")
+            }
+        });
+    }
+
+    function hideAllContent() {
+        var tabs = [
+            "overview-page", 
+            "prefixes-page", 
+            "connectivity-page",
+            "whois-page",
+            "ix-page",
+            "issues-page"
+        ];
+
+        tabs.forEach(element => {
+            var aaa = document.querySelectorAll('#'+element);
+            if(aaa.length != 0) {
+                aaa[0].style.display = "none";
+            }
+        });
+        if (document.getElementById("donotscrapebgptools-prefixlist-tbody")) {
+            var prefixrows = document.getElementById("donotscrapebgptools-prefixlist-tbody").children;
+            for (var i = 0; i < prefixrows.length; i++) {
+                prefixrows[i].style = "";
+            }
+        }
+    }
+
+    var otab = document.querySelectorAll('#overview-tab');
+    otab[0].addEventListener("click", function () {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#overview-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#overview-page');
+        aaa[0].style.display = "";
+    });
+    
+
+    var ptab = document.querySelectorAll('#prefix-tab');
+    ptab[0].addEventListener("click", function () {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#prefix-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#prefixes-page');
+        aaa[0].style.display = "";
+    });
+
+    var ctab = document.querySelectorAll('#connectivity-tab');
+    ctab[0].addEventListener("click", function () {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#connectivity-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#connectivity-page');
+        aaa[0].style.display = "";
+    });
+    
+
+    var wtab = document.querySelectorAll('#whois-tab');
+    wtab[0].addEventListener("click", function () {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#whois-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#whois-page');
+        aaa[0].style.display = "";
+    });
+
+</script>
+
+
+
+                    
+                    <div id="overview-page">
+
+                        <div class="grid-row">
+                        
+                        <div class="column-two-thirds">
+                            <dl>
+                                <dt>Registered on</dt>
+                                <dd class="text data">
+                                    
+                                    26 May 2004 (21 years old)
+                                </dd>
+                            
+                            
+                            <dt>Registered to</dt>
+                            <dd class="text data">
+                                <a href="/rir-owner/ru.raid">ru.raid</a> (ripe)</dd>
+                                
+                                <dd class="text data" id="network-status">
+                                    <a href="/transfer-history/31484">[Transfer History]</a>
+                                </dd>
+                                
+                            
+                            </dl>
+                        </div>
+                        
+    
+                        <dl class="column-third">
+                            <dt>Network status</dt>
+                            <dd class="text data">
+                                
+                                Active, Allocated under RIPE
+                                
+                            </dd>
+                        </dl>
+    
+                        </div>
+    
+                        <div class="grid-row">
+                            <dl class="column-two-thirds">
+                                <dt>Network type</dt>
+                                <dd class="text data">
+                                    Eyeball
+                                </dd>
+                            </dl>
+    
+                            <dl class="column-third">
+                                <dt>Prefixes Originated</dt>
+                                <dd class="data">4 IPv4, 1 IPv6</dd>
+                            </dl>
+                        </div>
+                        <div class="grid-row">
+                            <div class="column-half">
+    
+                                <h2 class="heading-medium"><derp>Upstreams</derp></h2>
+                                <ul>
+                                    
+                                    <li>
+                                        <span id="sic0">
+                                          <a href="/as/25408">AS25408</a> - JSC &#34;ER-Telecom Holding&#34;
+                                        </span>
+                                    </li>
+                                    
+                                    <li>
+                                        <span id="sic0">
+                                          <a href="/as/3267">AS3267</a> - SCIENTIFIC RESEARCH INSTITUTE FOR SYSTEM ANALYSIS OF ...
+                                        </span>
+                                    </li>
+                                    
+                                </ul>
+    
+                            </div>
+    
+                            <div class="column-half">
+                                
+                                    <h2 class="heading-medium"><derp>Locations of Operation</derp></h2>
+                                    
+                                    <li><span id="sic0">Russian Federation</span></li>
+                                    
+                                
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+
+                    <div style="display: none" id="prefixes-page">
+                        
+
+                        
+                        <div style="float:left">
+                            <dt>Prefixes Originated</dt>
+                            <dd class="data">4 IPv4, 1 IPv6</dd>
+                            
+                            
+                        </div>
+                        <div style="float:right">
+                                <dt>Addresses Originated</dt>
+                                <dd class="data">36 /24's of IPv4</dd>
+                                <dd class="data">65536 /48's of IPv6</dd>
+                        </div>
+
+                        <div class="clearfix">
+                            
+                        </div>
+
+
+                        <table id="fhTable" class="full-width-table ">
+                            <tbody id="donotscrapebgptools-prefixlist-tbody">
+                                <tr>
+                                    <th class="nowrap">  &nbsp;  </th>
+                                    <th class="boldpls">Prefix</th>
+                                    <th class="nowrap boldpls">Description</th>
+                                </tr>
+                                <p id="readme-if-you-are-human" style="display: none;">If you are scraping this block for the prefixes that a AS originates, please use the data dumps in https://bgp.tools/kb/api and cache them</p>
+                                
+                                <tr id="pfx-80.246.240.0/20">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="RU" src="/assets/flags/RU.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/80.246.240.0/20">80.246.240.0/20</a></td>
+                                    <td class="smallonmobile nowrap">JSC &#34;ER-Telecom Holding&#34;</td>
+                                </tr>
+                                
+                                <tr id="pfx-83.136.240.0/21">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="RU" src="/assets/flags/RU.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/83.136.240.0/21">83.136.240.0/21</a></td>
+                                    <td class="smallonmobile nowrap">JSC &#34;ER-Telecom Holding&#34;</td>
+                                </tr>
+                                
+                                <tr id="pfx-176.221.8.0/21">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="RU" src="/assets/flags/RU.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/176.221.8.0/21">176.221.8.0/21</a></td>
+                                    <td class="smallonmobile nowrap">JSC &#34;ER-Telecom Holding&#34;</td>
+                                </tr>
+                                
+                                <tr id="pfx-185.7.200.0/22">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="RU" src="/assets/flags/RU.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/185.7.200.0/22">185.7.200.0/22</a></td>
+                                    <td class="smallonmobile nowrap">JSC &#34;ER-Telecom Holding&#34;</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a03:cf80::/32">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="RU" src="/assets/flags/RU.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/2a03:cf80::/32">2a03:cf80::/32</a></td>
+                                    <td class="smallonmobile nowrap">JSC &#34;ER-Telecom Holding&#34;</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div style="display: none" id="connectivity-page">
+
+                        <div class="grid-row">
+
+                            <dl class="column-two-thirds">
+                                <dt><a href="#upstreams">Upstreams</a></dt>
+                                <dd class="text data">
+                                    2
+                                </dd>
+                            </dl>
+
+                            <dl class="column-third">
+                                <dt><a href="#peers">Peers</a></dt>
+                                <dd class="data">2</dd>
+                            </dl>
+                        </div>
+
+
+                        <hr>
+                        <h3>Network Policy<img class="flag-img" src="/assets/info.png" style="padding-left: 12px;" title="This info can take up to 2 hours to fully update" alt="This info take up to 2 hours to fully update"/></h3></h3>
+                        <a style="font-size: small;" href="/kb/network-policy">Click here to learn more about what this graph means and what makes up a network policy</a>
+
+                        <select id="netpolicydropdown" class="dropdownmenu">
+                            
+                                <option value="default">Global Aggregation</option>
+                            
+
+                            
+                                
+                            
+                                <option value="31fd2d8e4ea923bfb6e66166173d6bfc83d06c9f2519578865ef722e">Policy dazzling_cori</option>
+                            
+                                <option value="d5ce50d053cff70c0cff75e154ebfa5d204ade4de0d19407c3cb8b9f">Policy admiring_roentgen</option>
+                            
+
+                            
+
+
+                        </select>
+
+                        <script>var netgroups = {"31fd2d8e4ea923bfb6e66166173d6bfc83d06c9f2519578865ef722e":["83.136.240.0/21","80.246.240.0/20","185.7.200.0/22","176.221.8.0/21"],"d5ce50d053cff70c0cff75e154ebfa5d204ade4de0d19407c3cb8b9f":["2a03:cf80::/32"]}</script>
+
+                        <div style="text-align: center;">
+                            <img id="pathimg" usemap="#world" src="">
+                            <div id="world2"></div>
+                        </div>
+
+                        <details>
+                            <summary>Chart Display Options</summary>
+                            <noscript>This requires javascript to work</noscript>
+                            <label for="graphOptionMoreWiggle" style="display: flex;align-items: center;font-size: 20px;">
+                                <input type="checkbox" id="graphOptionMoreWiggle" name="graphOptionMoreWiggle" style="width: 64px; height: 32px;">
+                                    <p id="graphOptionMoreWiggleLabel" style="width: 200%;">Display links using non straight lines</p>
+                            </label>
+                        </details>
+
+                        <h3 style="display: none;" id="PISPBanner">Prefixes in selected policy</h3>
+                        <table id="policytable" class="full-width-table">
+                        </table>
+                        <button style="width:100%;display: none;" id="ShowFullPolicyButton" class="bigButton" onclick="dropdownPoke()">Load all prefixes in policy</button>
+
+                        <script>
+                            !function(a,b){"function"==typeof define&&define.amd?define([],b):"undefined"!=typeof module&&module.exports?module.exports=b():a.ReconnectingWebSocket=b()}(this,function(){function a(b,c,d){function l(a,b){var c=document.createEvent("CustomEvent");return c.initCustomEvent(a,!1,!1,b),c}var e={debug:!1,automaticOpen:!0,reconnectInterval:1e3,maxReconnectInterval:3e4,reconnectDecay:1.5,timeoutInterval:2e3};d||(d={});for(var f in e)this[f]="undefined"!=typeof d[f]?d[f]:e[f];this.url=b,this.reconnectAttempts=0,this.readyState=WebSocket.CONNECTING,this.protocol=null;var h,g=this,i=!1,j=!1,k=document.createElement("div");k.addEventListener("open",function(a){g.onopen(a)}),k.addEventListener("close",function(a){g.onclose(a)}),k.addEventListener("connecting",function(a){g.onconnecting(a)}),k.addEventListener("message",function(a){g.onmessage(a)}),k.addEventListener("error",function(a){g.onerror(a)}),this.addEventListener=k.addEventListener.bind(k),this.removeEventListener=k.removeEventListener.bind(k),this.dispatchEvent=k.dispatchEvent.bind(k),this.open=function(b){h=new WebSocket(g.url,c||[]),b||k.dispatchEvent(l("connecting")),(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","attempt-connect",g.url);var d=h,e=setTimeout(function(){(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","connection-timeout",g.url),j=!0,d.close(),j=!1},g.timeoutInterval);h.onopen=function(){clearTimeout(e),(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","onopen",g.url),g.protocol=h.protocol,g.readyState=WebSocket.OPEN,g.reconnectAttempts=0;var d=l("open");d.isReconnect=b,b=!1,k.dispatchEvent(d)},h.onclose=function(c){if(clearTimeout(e),h=null,i)g.readyState=WebSocket.CLOSED,k.dispatchEvent(l("close"));else{g.readyState=WebSocket.CONNECTING;var d=l("connecting");d.code=c.code,d.reason=c.reason,d.wasClean=c.wasClean,k.dispatchEvent(d),b||j||((g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","onclose",g.url),k.dispatchEvent(l("close")));var e=g.reconnectInterval*Math.pow(g.reconnectDecay,g.reconnectAttempts);setTimeout(function(){g.reconnectAttempts++,g.open(!0)},e>g.maxReconnectInterval?g.maxReconnectInterval:e)}},h.onmessage=function(b){(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","onmessage",g.url,b.data);var c=l("message");c.data=b.data,k.dispatchEvent(c)},h.onerror=function(b){(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","onerror",g.url,b),k.dispatchEvent(l("error"))}},1==this.automaticOpen&&this.open(!1),this.send=function(b){if(h)return(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","send",g.url,b),h.send(b);throw"INVALID_STATE_ERR : Pausing to reconnect websocket"},this.close=function(a,b){"undefined"==typeof a&&(a=1e3),i=!0,h&&h.close(a,b)},this.refresh=function(){h&&h.close()}}return a.prototype.onopen=function(){},a.prototype.onclose=function(){},a.prototype.onconnecting=function(){},a.prototype.onmessage=function(){},a.prototype.onerror=function(){},a.debugAll=!1,a.CONNECTING=WebSocket.CONNECTING,a.OPEN=WebSocket.OPEN,a.CLOSING=WebSocket.CLOSING,a.CLOSED=WebSocket.CLOSED,a});
+                        </script>
+                        
+                        <script>
+                            var prefixinfo = [{"PrefixString":"80.246.240.0/20","WhoisName":"JSC \"ER-Telecom Holding\"","WhoisCountry":"RU"},{"PrefixString":"83.136.240.0/21","WhoisName":"JSC \"ER-Telecom Holding\"","WhoisCountry":"RU"},{"PrefixString":"176.221.8.0/21","WhoisName":"JSC \"ER-Telecom Holding\"","WhoisCountry":"RU"},{"PrefixString":"185.7.200.0/22","WhoisName":"JSC \"ER-Telecom Holding\"","WhoisCountry":"RU"},{"PrefixString":"2a03:cf80::/32","WhoisName":"JSC \"ER-Telecom Holding\"","WhoisCountry":"RU"}]
+                            var asn =  31484 
+
+                            var pfxExtraString = "";
+
+                            function saveGraphOptionsToLocalStorage() {
+                                localStorage.setItem("pfx-chart-options:wiggle", document.getElementById("graphOptionMoreWiggle").checked);
+                            }
+
+                            function loadGraphOptionsToLocalStorage() {
+                                document.getElementById("graphOptionMoreWiggle").checked = localStorage.getItem("pfx-chart-options:wiggle") == "true";
+                                pfxExtraString= "";
+                                if (document.getElementById("graphOptionMoreWiggle").checked) {
+                                    pfxExtraString = pfxExtraString + "&wiggly";
+                                }
+                            }
+                            loadGraphOptionsToLocalStorage();
+
+                            function graphOptionsChanged() {
+                                saveGraphOptionsToLocalStorage();
+                                handleImageChange();
+                            }
+                            document.getElementById("graphOptionMoreWiggle").addEventListener("click", graphOptionsChanged)
+
+
+                            function handleImageChange() {
+                                loadGraphOptionsToLocalStorage();
+                                
+                                document.getElementById("pathimg").src=("/pathimg/"+asn+ "-" + document.getElementById("netpolicydropdown").value +"?"+pfxExtraString);
+                                var request = new XMLHttpRequest();
+                                request.open('GET', "/pathimg/"+asn+ "-" + document.getElementById("netpolicydropdown").value + "?map=true" + pfxExtraString, true);
+
+                                request.onload = function() {
+                                    if (this.status >= 200 && this.status < 400) {
+                                        
+                                        
+                                        document.getElementById("world2").innerHTML = this.response;
+                                        setTimeout(function(){
+                                            imageMapResize('#world');
+                                        },1000)
+                                    }
+                                };
+                                request.send();
+                                buildPrefixTable();
+                            } 
+
+                            function encodeHTML(s) {
+                                return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
+                            }
+
+                            function dropdownPoke(){
+                                InteractedWithPolicyTableYet=true;
+                                handleImageChange();
+                            }
+
+                            var InteractedWithPolicyTableYet = false;
+                            var OverloadPolicySize = 0;
+                            function buildPrefixTable() {
+                                var policy = document.getElementById("netpolicydropdown").value;
+                                
+                                var cidrs = netgroups[policy];
+                                var ihtml = "<tbody> <tr> <th class=\"nowrap\">  -  </th> <th>Prefix</th> <th class=\"nowrap\">Description</th> </tr>";
+
+                                
+                                var aaa = document.querySelectorAll('#PISPBanner');
+                                var bbb = document.querySelectorAll('#policytable');
+                                var n = 0
+                                if (cidrs) {
+                                    aaa[0].style.display = "";
+                                    bbb[0].style.display = "";
+                                    cidrs.forEach(cidr => {
+                                        var obj = {};
+                                        var dont =false;
+                                        n++;
+                                        
+                                        if (!InteractedWithPolicyTableYet) {
+                                            if (n == 5) {
+                                                dont = true;
+                                            } else if (n > 5) {
+                                                dont = true;
+                                            }
+                                        }
+                                        
+                                        if (!dont) {
+                                            prefixinfo.forEach(el => {
+                                                if(el.PrefixString == cidr) {
+                                                    
+                                                        ihtml += "<tr><td class=\"nowrap ns\"><img class=\"flag-img\" src=\"/assets/flags/"+el.WhoisCountry+".png\" title=\""+el.WhoisCountry+"\"></td>"
+                                                        ihtml += "<td><a href=\"/prefix/"+el.PrefixString+"\">"+el.PrefixString+"</a></td>"
+                                                        ihtml += "<td class=\"nowrap\">"+encodeHTML(el.WhoisName)+"</td></tr>"
+                                                }
+                                            });
+                                        } else {
+                                            OverloadPolicySize++;
+                                        }
+                                    });
+                                    document.getElementById("policytable").innerHTML = ihtml
+                                    var PolButton = document.querySelectorAll('#ShowFullPolicyButton');
+                                    if (!InteractedWithPolicyTableYet && OverloadPolicySize!=0) {
+                                        PolButton[0].style="width:100%";
+                                        PolButton[0].innerHTML = "Load all "+OverloadPolicySize+" prefixes in policy"
+                                    } else {
+                                        PolButton[0].style="display:none;";
+                                    }
+                                    
+                                } else {
+                                    aaa[0].style.display = "none";
+                                    bbb[0].style.display = "none";
+                                }
+                            }
+
+
+                            var pathdropdown = document.querySelectorAll('#netpolicydropdown');
+                            pathdropdown[0].addEventListener("change",dropdownPoke)
+                            handleImageChange()
+                            buildPrefixTable()
+
+                            document.addEventListener("load", function(){
+                                
+                                handleImageChange()
+                            });
+
+                            function uuidv4() {
+                                return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+                                    var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+                                    return v.toString(16);
+                                });
+                            }
+
+                            
+                            let realTimeSocket = new ReconnectingWebSocket("wss://bgp.tools/ws/rt-asn?prefix=AS31484" + "&magic=" + encodeURIComponent("5FEZCIMGGSBEALZK27EWVTFNBTVOIVMVLDYO5QN57Y62XCWPYKJA===="));
+                            
+                            realTimeSocket.onmessage = function(event) {
+                                console.log(`[message] Data received from server: ${event.data}`);
+                                if (event.data == "Running.") {
+                                    document.getElementById("ws-status").src = "/assets/connected.png";
+                                    document.getElementById("ws-status").title = "Connected to realtime data";
+                                } else if (event.data == "STOP-CONNECTING") {
+                                    document.getElementById("ws-status").src = disconectedIcon;
+                                    document.getElementById("ws-status").title = "Not connected to realtime data";
+                                    realTimeSocket.maxReconnectAttempts = 1;
+                                    realTimeSocket.close()
+                                } else {
+                                    var obj = JSON.parse(event.data);
+                                    var elm = document.getElementById("pfx-"+obj.Prefix);
+                                    if (!elm && obj.Vis > 6) {
+                                        var tblist = document.getElementById("donotscrapebgptools-prefixlist-tbody");
+                                        var node = document.createElement("tr");                 
+                                        node.outerHTML = '<tr id="pfx-'+obj.Prefix+'"><td class="nowrap"><img class="flag-img" src="/assets/flags/'+obj.Whois.WhoisCountry+'.png" title="'+obj.Whois.WhoisCountry+'"></td><td><a href="/prefix/'+obj.Prefix+'">'+obj.Prefix+'</a></td><td class="smallonmobile nowrap">'+obj.Whois.WhoisName+'</td></tr>';
+                                        tblist.appendChild(node);                              
+                                    }
+                                    if (!elm) {
+                                        elm = document.getElementById("pfx-"+obj.Prefix);
+                                    }
+                                    
+                                    if (obj.Vis > 70) {
+                                        if (elm.style) {
+                                            var es = elm.style;
+                                            if (es.animation.includes("pulse1b")) {
+                                                elm.style = "animation: pulse2b 1s 1;";
+                                            } else if (es.animation.includes("pulse2b")) {
+                                                elm.style = "animation: pulse1b 1s 1;";
+                                            } else {
+                                                elm.style = "animation: pulse1b 1s 1;";
+                                            }
+                                        }
+                                    } else if (obj.Vis < 5) {
+                                        
+                                        var elm = document.getElementById("pfx-"+obj.Prefix);
+                                        if (elm) {
+                                            elm.parentNode.removeChild(elm);
+                                        }
+                                    } else {
+                                        if (elm.style) {
+                                            var es = elm.style;
+                                            if (es.animation.includes("pulse1r")) {
+                                                elm.style = "animation: pulse2r 1s 1;";
+                                            } else if (es.animation.includes("pulse2r")) {
+                                                elm.style = "animation: pulse1r 1s 1;";
+                                            } else {
+                                                elm.style = "animation: pulse1r 1s 1;";
+                                            }
+                                        }
+                                    }
+                                }
+                            };
+                            var disconectedIcon = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAAZlBMVEX/ewBZWVn/ewf/ew5fWljudiP8egp6XVT6eRHodSmVYU6hZEzObjrldCv3eRZ/XlNjWliHX1KrZkngci71eBl1XFXCa0CKYFHydx18XlSQYE+lZUq0aEbJbT3SbzhvXFaLYFG8akLYdYVFAAABQElEQVRIx5XV25KDIAwGYIKASLutqOtZ277/S26xK4ozJea/qRdfajATZaRkd6B6oPoL1d9QphUn+WvXmGF8TfN8yvNrDj6nvNj5Hu8n8HCh9ONiON5PEKuQx55DmFTHC1R9uMOjYkhFERbkEikofw8FGe5t0FWJ+kLvz5H+t8RdGD9k8TeebBXpzwIZT955XyVBtHHeXYzeJy5fhydtoZffZvUMSfvxT4BOeI/G/b9paxH1at8XQF8xNcV8aaQvHQBMhY/XttsdYp5nah3XdvIqui61Cjy+jqLwXp1cx9XLQZ5cR/vx1p8cez2IWrlxYY/T9bNVyCfmdQdbxNgs441FNRAEHS83oe9ahmTw1p88nhHCiAkpeIUeX5eJ6NlM9Gwm+uxO9/3F2PSR597jn1+udCWzUp7150P1jOoZ1f8BGPARG85JosIAAAAASUVORK5CYII=";
+                            realTimeSocket.onerror = function(error) {
+                                document.getElementById("ws-status").src = disconectedIcon;
+                                document.getElementById("ws-status").title = "Not connected to realtime data";
+
+                                console.log(`[error] ${error.message}`);
+                            };
+                            realTimeSocket.onclose = function(error) {
+                                document.getElementById("ws-status").src = disconectedIcon;
+                                document.getElementById("ws-status").title = "Not connected to realtime data";
+
+                                console.log(`[error] ${error.message}`);
+                            };
+                        </script>
+
+<div class="superclearfix">
+    
+</div>
+
+                        <hr>
+                        <a style="font-size: small;" href="/kb/what-is-a-upstream">How are upstreams and downstreams calculated?</a>
+                        <h3 id="upstreams">Upstreams<img class="flag-img" src="/assets/lightning.png" style="padding-left: 12px;" title="This information was fetched live at page load time" alt="This information was fetched live at page load time"/></h3>
+
+
+                        <table id="donotscrapebgptools-upstreamTable" class="full-width-table">
+                            <thead class="sortable">
+                                <tr>
+                                    <th class="nowrap boldpls">  &nbsp;  </th>
+                                    <th data-sort-method='number' class="boldpls">ASN</th>
+                                    <th class="nowrap boldpls">Description</th>
+                                    <th class="nowrap boldpls">IPv4</th>
+                                    <th class="nowrap boldpls">IPv6</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                <tr>
+                                    <td data-sort='RU' class="nowrap ns"><img class="flag-img" src="/assets/flags/RU.png" title="RU">
+                                        
+                                        </td>
+                                    <td data-sort='25408'><a href="/as/25408">AS25408</a></td>
+                                    <td class="smallonmobile nowrap">JSC &#34;ER-Telecom Holding&#34;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='RU' class="nowrap ns"><img class="flag-img" src="/assets/flags/RU.png" title="RU">
+                                        
+                                        </td>
+                                    <td data-sort='3267'><a href="/as/3267">AS3267</a></td>
+                                    <td class="smallonmobile nowrap">SCIENTIFIC RESEARCH INSTITUTE FOR SYSTEM ANALYSIS OF ...</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+
+                        <hr>
+                        <h3 id="peers">Peers<img class="flag-img" src="/assets/lightning.png" style="padding-left: 12px;" title="This information was fetched live at page load time" alt="This information was fetched live at page load time"/></h3>
+
+
+
+                        <table id="donotscrapebgptools-upstreamTablePeers" class="full-width-table">
+                            <thead class="sortable">
+                                <tr>
+                                    <th class="nowrap boldpls">  &nbsp;  </th>
+                                    <th data-sort-method='number' class="boldpls">ASN</th>
+                                    <th class="nowrap boldpls">Description</th>
+                                    <th class="nowrap boldpls">IPv4</th>
+                                    <th class="nowrap boldpls">IPv6</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                <tr>
+                                    <td data-sort='RU' class="nowrap ns"><img class="flag-img" src="/assets/flags/RU.png" title="RU"></td>
+                                    <td data-sort='25408'><a href="/as/25408">AS25408</a></td>
+                                    <td class="smallonmobile nowrap">JSC &#34;ER-Telecom Holding&#34;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='RU' class="nowrap ns"><img class="flag-img" src="/assets/flags/RU.png" title="RU"></td>
+                                    <td data-sort='3267'><a href="/as/3267">AS3267</a></td>
+                                    <td class="smallonmobile nowrap">SCIENTIFIC RESEARCH INSTITUTE FOR SYSTEM ANALYSIS OF ...</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+
+
+                    </div>
+
+                    <div style="display: none" id="whois-page">
+                        
+                        
+                        <pre style="white-space: pre-wrap;">aut-num:        <a href="/AS31484">AS31484</a>
+as-name:        Westcall-AS
+remarks:        -----------------
+remarks:        --- Uplinks ---
+remarks:        -----------------
+import:         from <a href="/AS25408">AS25408</a> action pref=120; accept ANY
+export:         to <a href="/AS25408">AS25408</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+import:         from <a href="/AS3267">AS3267</a> action pref=85; accept ANY
+export:         to <a href="/AS3267">AS3267</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+import:         from <a href="/AS20764">AS20764</a> action pref=85; accept ANY
+export:         to <a href="/AS20764">AS20764</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+import:         from <a href="/AS9002">AS9002</a> action pref=85; accept ANY
+export:         to <a href="/AS9002">AS9002</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:        ------------------------------------
+remarks:        --- Customers-BGP-peers ---
+remarks:        ------------------------------------
+import:         from <a href="/AS60252">AS60252</a> action pref=120; accept <a href="/as-set/AS-OST-LLC">AS-OST-LLC</a>
+export:         to <a href="/AS60252">AS60252</a> announce ANY
+import:         from <a href="/AS196931">AS196931</a> action pref=120; accept <a href="/AS196931">AS196931</a>
+export:         to <a href="/AS196931">AS196931</a> announce ANY
+import:         from <a href="/AS61259">AS61259</a> action pref=120; accept <a href="/AS61259">AS61259</a>
+export:         to <a href="/AS61259">AS61259</a> announce ANY
+import:         from <a href="/AS29450">AS29450</a> action pref=120; accept <a href="/AS29450">AS29450</a>
+export:         to <a href="/AS29450">AS29450</a> announce ANY
+import:         from <a href="/AS197905">AS197905</a> action pref=120; accept <a href="/AS197905">AS197905</a>
+export:         to <a href="/AS197905">AS197905</a> announce ANY
+import:         from <a href="/AS203395">AS203395</a> action pref=120; accept <a href="/AS203395">AS203395</a>
+export:         to <a href="/AS203395">AS203395</a> announce ANY
+import:         from <a href="/AS56353">AS56353</a> action pref=120; accept <a href="/AS56353">AS56353</a>
+export:         to <a href="/AS56353">AS56353</a> announce ANY
+remarks:        --------------------------
+remarks:        --- MSK-IX peering ---
+import:         from <a href="/AS8631">AS8631</a> action pref=110; accept <a href="/as-set/AS-MSKROUTESERVER">AS-MSKROUTESERVER</a>;
+export:         to <a href="/AS8631">AS8631</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>;
+remarks:        --------------------------
+remarks:        --- SPB-IX peering ---
+remarks:        --------------------------
+import:         from <a href="/AS43690">AS43690</a> action pref=110; accept <a href="/as-set/AS-SPBROUTESERVER">AS-SPBROUTESERVER</a>;
+import:         from <a href="/AS47395">AS47395</a> action pref=110; accept <a href="/as-set/AS-SCARTEL">AS-SCARTEL</a>;
+import:         from <a href="/AS5568">AS5568</a> action pref=110; accept <a href="/as-set/AS-RBNET">AS-RBNET</a>;
+import:         from <a href="/AS8377">AS8377</a> action pref=110; accept <a href="/as-set/AS-PETERLINK">AS-PETERLINK</a>;
+import:         from <a href="/AS2118">AS2118</a> action pref=110; accept <a href="/as-set/AS-RELCOM">AS-RELCOM</a>;
+import:         from <a href="/AS3267">AS3267</a> action pref=110; accept <a href="/as-set/AS-RUNNETIX">AS-RUNNETIX</a>;
+import:         from <a href="/AS41733">AS41733</a> action pref=110; accept <a href="/AS41733">AS41733</a>;
+import:         from <a href="/AS5433">AS5433</a> action pref=110; accept <a href="/AS5433">AS5433</a>;
+import:         from <a href="/AS5495">AS5495</a> action pref=110; accept <a href="/AS5495">AS5495</a> <a href="/AS6857">AS6857</a>;
+import:         from <a href="/AS2820">AS2820</a> action pref=110; accept <a href="/as-set/AS-ELVISPEERS">AS-ELVISPEERS</a>;
+import:         from <a href="/AS2854">AS2854</a> action pref=110; accept <a href="/as-set/AS-ROSPRINT">AS-ROSPRINT</a>;
+import:         from <a href="/AS8402">AS8402</a> action pref=110; accept <a href="/as-set/AS-CORBINA">AS-CORBINA</a>;
+import:         from <a href="/AS3277">AS3277</a> action pref=110; accept <a href="/as-set/AS-RUSNETIX">AS-RUSNETIX</a>;
+import:         from <a href="/AS31353">AS31353</a> action pref=110; accept <a href="/as-set/AS-PTT">AS-PTT</a>;
+import:         from <a href="/AS13302">AS13302</a> action pref=110; accept <a href="/as-set/AS-LINKEYCUS">AS-LINKEYCUS</a>;
+import:         from <a href="/AS20663">AS20663</a> action pref=110; accept <a href="/as-set/AS-INAR-SPB">AS-INAR-SPB</a> <a href="/as-set/AS-INAR-MSK">AS-INAR-MSK</a>;
+import:         from <a href="/AS12418">AS12418</a> action pref=110; accept <a href="/as-set/AS-QUANTUM">AS-QUANTUM</a>;
+import:         from <a href="/AS13062">AS13062</a> action pref=110; accept <a href="/as-set/AS-LANCK">AS-LANCK</a>;
+import:         from <a href="/AS8482">AS8482</a> action pref=110; accept <a href="/as-set/AS-DPBSPBIX">AS-DPBSPBIX</a>;
+import:         from <a href="/AS25520">AS25520</a> action pref=110; accept <a href="/as-set/AS-FUTURES">AS-FUTURES</a>;
+import:         from <a href="/AS20903">AS20903</a> action pref=110; accept <a href="/as-set/AS-VMB-SERVICE">AS-VMB-SERVICE</a>;
+import:         from <a href="/AS24739">AS24739</a> action pref=110; accept <a href="/as-set/AS-SEVEREN-TELECOM">AS-SEVEREN-TELECOM</a>;
+import:         from <a href="/AS20764">AS20764</a> action pref=110; accept <a href="/as-set/AS-RASCOM">AS-RASCOM</a>;
+import:         from <a href="/AS30968">AS30968</a> action pref=110; accept <a href="/as-set/AS-INFOBOX">AS-INFOBOX</a>;
+import:         from <a href="/AS35807">AS35807</a> action pref=110; accept <a href="/AS35807">AS35807</a>;
+import:         from <a href="/AS29329">AS29329</a> action pref=110; accept <a href="/as-set/AS-NODEX">AS-NODEX</a>;
+import:         from <a href="/AS28968">AS28968</a> action pref=110; accept <a href="/as-set/AS-EUT">AS-EUT</a>;
+import:         from <a href="/AS31191">AS31191</a> action pref=110; accept <a href="/AS31191">AS31191</a>;
+import:         from <a href="/AS6858">AS6858</a> action pref=110; accept <a href="/as-set/AS-COMLINK-IX">AS-COMLINK-IX</a>;
+import:         from <a href="/AS30943">AS30943</a> action pref=110; accept <a href="/as-set/AS-UTRANSIT-PG-EU">AS-UTRANSIT-PG-EU</a>;
+import:         from <a href="/AS21295">AS21295</a> action pref=110; accept <a href="/AS21295">AS21295</a>;
+import:         from <a href="/AS39598">AS39598</a> action pref=110; accept <a href="/as-set/AS-TIERA">AS-TIERA</a>;
+import:         from <a href="/AS21353">AS21353</a> action pref=110; accept <a href="/as-set/AS-ARTCOMS">AS-ARTCOMS</a>;
+import:         from <a href="/AS34102">AS34102</a> action pref=110; accept <a href="/as-set/AS-AWANTI">AS-AWANTI</a>;
+import:         from <a href="/AS25408">AS25408</a> action pref=110; accept <a href="/as-set/AS-WESTCALLSPB">AS-WESTCALLSPB</a>;
+import:         from <a href="/AS35511">AS35511</a> action pref=110; accept <a href="/as-set/AS-IWAN">AS-IWAN</a>;
+import:         from <a href="/AS31501">AS31501</a> action pref=110; accept <a href="/as-set/AS-SPBTELEPORT">AS-SPBTELEPORT</a>;
+import:         from <a href="/AS35616">AS35616</a> action pref=110; accept <a href="/as-set/AS-SILVERNET">AS-SILVERNET</a>;
+import:         from <a href="/AS31376">AS31376</a> action pref=110; accept <a href="/as-set/AS-SMART-C">AS-SMART-C</a>;
+import:         from <a href="/AS39390">AS39390</a> action pref=110; accept <a href="/AS39390">AS39390</a>;
+import:         from <a href="/AS39102">AS39102</a> action pref=110; accept <a href="/as-set/AS-NNZ">AS-NNZ</a>;
+import:         from <a href="/AS31500">AS31500</a> action pref=110; accept <a href="/as-set/AS-ETELECOM-2">AS-ETELECOM-2</a>;
+import:         from <a href="/AS35000">AS35000</a> action pref=110; accept <a href="/as-set/AS-PROMETEY-SPBIX">AS-PROMETEY-SPBIX</a>;
+import:         from <a href="/AS31444">AS31444</a> action pref=110; accept <a href="/AS31444">AS31444</a>;
+import:         from <a href="/AS13215">AS13215</a> action pref=110; accept <a href="/as-set/AS-CONVEYPLUS">AS-CONVEYPLUS</a>;
+import:         from <a href="/AS8492">AS8492</a> action pref=110; accept <a href="/as-set/AS-OBIT">AS-OBIT</a>;
+import:         from <a href="/AS38951">AS38951</a> action pref=110; accept <a href="/AS38951">AS38951</a>;
+import:         from <a href="/AS8634">AS8634</a> action pref=110; accept <a href="/as-set/AS-SOLARIS">AS-SOLARIS</a>;
+import:         from <a href="/AS45029">AS45029</a> action pref=110; accept <a href="/AS45029">AS45029</a>;
+import:         from <a href="/AS44050">AS44050</a> action pref=110; accept <a href="/AS44050">AS44050</a>;
+import:         from <a href="/AS43898">AS43898</a> action pref=110; accept <a href="/as-set/AS-RUATCOM">AS-RUATCOM</a>;
+import:         from <a href="/AS42668">AS42668</a> action pref=110; accept <a href="/AS42668">AS42668</a>;
+import:         from <a href="/AS13238">AS13238</a> action pref=110; accept <a href="/as-set/AS-YANDEX">AS-YANDEX</a>;
+import:         from <a href="/AS8997">AS8997</a> action pref=110; accept <a href="/as-set/AS-SPBNIT">AS-SPBNIT</a>;
+import:         from <a href="/AS43690">AS43690</a> action pref=110; accept <a href="/as-set/AS-SPBROUTESERVER">AS-SPBROUTESERVER</a>;
+import:         from <a href="/AS43926">AS43926</a> action pref=110; accept <a href="/AS43926">AS43926</a>;
+import:         from <a href="/AS8744">AS8744</a> action pref=110; accept <a href="/as-set/AS-WIMAX">AS-WIMAX</a>;
+import:         from <a href="/AS20597">AS20597</a> action pref=110; accept <a href="/as-set/AS-ELTEL">AS-ELTEL</a>;
+import:         from <a href="/AS34879">AS34879</a> action pref=110; accept <a href="/as-set/AS-NGENIX">AS-NGENIX</a>;
+import:         from <a href="/AS12555">AS12555</a> action pref=110; accept <a href="/as-set/AS-CUBIO-RUS">AS-CUBIO-RUS</a>;
+import:         from <a href="/AS39087">AS39087</a> action pref=110; accept <a href="/as-set/AS-PAKT">AS-PAKT</a>;
+import:         from <a href="/AS6820">AS6820</a> action pref=110; accept <a href="/as-set/AS-LEIVO">AS-LEIVO</a>;
+import:         from <a href="/AS42518">AS42518</a> action pref=110; accept <a href="/AS42518">AS42518</a>;
+import:         from <a href="/AS15169">AS15169</a> action pref=110; accept <a href="/as-set/AS-GOOGLE">AS-GOOGLE</a>;
+import:         from <a href="/AS28702">AS28702</a> action pref=110; accept <a href="/as-set/AS-DELTATELECOM">AS-DELTATELECOM</a>;
+import:         from <a href="/AS6690">AS6690</a> action pref=110; accept <a href="/as-set/AS-WEBPLUS">AS-WEBPLUS</a>;
+import:         from <a href="/AS6850">AS6850</a> action pref=110; accept <a href="/as-set/AS-METROCOM">AS-METROCOM</a>;
+import:         from <a href="/AS20632">AS20632</a> action pref=110; accept <a href="/as-set/AS-PETERSTAR">AS-PETERSTAR</a>;
+import:         from <a href="/AS48076">AS48076</a> action pref=110; accept <a href="/as-set/AS-Olymp-Telecom">AS-Olymp-Telecom</a>;
+remarks:
+export:         to <a href="/AS43690">AS43690</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>;
+export:         to <a href="/AS47395">AS47395</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>;
+export:         to <a href="/AS5568">AS5568</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>;
+export:         to <a href="/AS8377">AS8377</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>;
+export:         to <a href="/AS2118">AS2118</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>;
+export:         to <a href="/AS3267">AS3267</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>;
+export:         to <a href="/AS41733">AS41733</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>;
+export:         to <a href="/AS5433">AS5433</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>;
+export:         to <a href="/AS5495">AS5495</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>;
+export:         to <a href="/AS2820">AS2820</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>;
+export:         to <a href="/AS2854">AS2854</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>;
+export:         to <a href="/AS8402">AS8402</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>;
+export:         to <a href="/AS3277">AS3277</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>;
+export:         to <a href="/AS31353">AS31353</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>;
+export:         to <a href="/AS13302">AS13302</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>;
+export:         to <a href="/AS20663">AS20663</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>;
+export:         to <a href="/AS12418">AS12418</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>;
+export:         to <a href="/AS13062">AS13062</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>;
+export:         to <a href="/AS8482">AS8482</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>;
+export:         to <a href="/AS25520">AS25520</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>;
+export:         to <a href="/AS20903">AS20903</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>;
+export:         to <a href="/AS24739">AS24739</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>;
+export:         to <a href="/AS20764">AS20764</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>;
+export:         to <a href="/AS30968">AS30968</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>;
+export:         to <a href="/AS35807">AS35807</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>;
+export:         to <a href="/AS29329">AS29329</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>;
+export:         to <a href="/AS28968">AS28968</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>;
+export:         to <a href="/AS31191">AS31191</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>;
+export:         to <a href="/AS6858">AS6858</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>;
+export:         to <a href="/AS30943">AS30943</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>;
+export:         to <a href="/AS21295">AS21295</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>;
+export:         to <a href="/AS39598">AS39598</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>;
+export:         to <a href="/AS21353">AS21353</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>;
+export:         to <a href="/AS34102">AS34102</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>;
+export:         to <a href="/AS25408">AS25408</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>;
+export:         to <a href="/AS35511">AS35511</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>;
+export:         to <a href="/AS31501">AS31501</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>;
+export:         to <a href="/AS35616">AS35616</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>;
+export:         to <a href="/AS31376">AS31376</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>;
+export:         to <a href="/AS39390">AS39390</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>;
+export:         to <a href="/AS39102">AS39102</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>;
+export:         to <a href="/AS31500">AS31500</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>;
+export:         to <a href="/AS35000">AS35000</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>;
+export:         to <a href="/AS31444">AS31444</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>;
+export:         to <a href="/AS13215">AS13215</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>;
+export:         to <a href="/AS8492">AS8492</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>;
+export:         to <a href="/AS38951">AS38951</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>;
+export:         to <a href="/AS8634">AS8634</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>;
+export:         to <a href="/AS45029">AS45029</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>;
+export:         to <a href="/AS44050">AS44050</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>;
+export:         to <a href="/AS43898">AS43898</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>;
+export:         to <a href="/AS42668">AS42668</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>;
+export:         to <a href="/AS13238">AS13238</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>;
+export:         to <a href="/AS8997">AS8997</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>;
+export:         to <a href="/AS43690">AS43690</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>;
+export:         to <a href="/AS43926">AS43926</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>;
+export:         to <a href="/AS8744">AS8744</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>;
+export:         to <a href="/AS20597">AS20597</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>;
+export:         to <a href="/AS34879">AS34879</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>;
+export:         to <a href="/AS12555">AS12555</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>;
+export:         to <a href="/AS39087">AS39087</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>;
+export:         to <a href="/AS6820">AS6820</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>;
+export:         to <a href="/AS42518">AS42518</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>;
+export:         to <a href="/AS15169">AS15169</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>;
+export:         to <a href="/AS28702">AS28702</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>;
+export:         to <a href="/AS6690">AS6690</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>;
+export:         to <a href="/AS6850">AS6850</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>;
+export:         to <a href="/AS20632">AS20632</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>;
+remarks:
+remarks:
+remarks:        ---------------------------------------------
+remarks:        -------------------DATA-IX-------------------
+remarks:        ---------------------------------------------
+import:         from <a href="/AS8749">AS8749</a> action pref=110; accept <a href="/as-set/AS-REDCOM">AS-REDCOM</a>
+export:         TO <a href="/AS8749">AS8749</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS28709">AS28709</a> action pref=110; accept <a href="/AS28709">AS28709</a>
+export:         TO <a href="/AS28709">AS28709</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS8369">AS8369</a> action pref=110; accept <a href="/as-set/AS-INTERSVYAZ">AS-INTERSVYAZ</a>
+export:         TO <a href="/AS8369">AS8369</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS5563">AS5563</a> action pref=110; accept <a href="/as-set/AS-URAL">AS-URAL</a>
+export:         TO <a href="/AS5563">AS5563</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS49218">AS49218</a> action pref=110; accept <a href="/as-set/AS-NTKS">AS-NTKS</a>
+export:         TO <a href="/AS49218">AS49218</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS28890">AS28890</a> action pref=110; accept <a href="/as-set/AS-INSYS-EKB">AS-INSYS-EKB</a>
+export:         TO <a href="/AS28890">AS28890</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS12668">AS12668</a> action pref=110; accept <a href="/as-set/AS-EXTRIM">AS-EXTRIM</a>
+export:         TO <a href="/AS12668">AS12668</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS42676">AS42676</a> action pref=110; accept <a href="/as-set/AS-SMARTKOM">AS-SMARTKOM</a>
+export:         TO <a href="/AS42676">AS42676</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS31200">AS31200</a> action pref=110; accept <a href="/AS31200">AS31200</a>
+export:         TO <a href="/AS31200">AS31200</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS9107">AS9107</a> action pref=110; accept <a href="/AS9107">AS9107</a>
+export:         TO <a href="/AS9107">AS9107</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS57494">AS57494</a> action pref=110; accept <a href="/as-set/AS-ADMAN">AS-ADMAN</a>
+export:         TO <a href="/AS57494">AS57494</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS8410">AS8410</a> action pref=110; accept <a href="/as-set/AS-NIR">AS-NIR</a>
+export:         TO <a href="/AS8410">AS8410</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS16300">AS16300</a> action pref=110; accept <a href="/as-set/AS-INTERTAX">AS-INTERTAX</a>
+export:         TO <a href="/AS16300">AS16300</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS44587">AS44587</a> action pref=110; accept <a href="/as-set/AS-MEGACOM">AS-MEGACOM</a>
+export:         TO <a href="/AS44587">AS44587</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS42187">AS42187</a> action pref=110; accept <a href="/as-set/AS-NOVTEL">AS-NOVTEL</a>
+export:         TO <a href="/AS42187">AS42187</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS9107">AS9107</a> action pref=110; accept <a href="/as-set/AS-NOVTEL">AS-NOVTEL</a>
+export:         TO <a href="/AS9107">AS9107</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS60600">AS60600</a> action pref=110; accept <a href="/as-set/AS-E1RU">AS-E1RU</a>
+export:         TO <a href="/AS60600">AS60600</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS199728">AS199728</a> action pref=110; accept <a href="/AS199728">AS199728</a>
+export:         TO <a href="/AS199728">AS199728</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS199524">AS199524</a> action pref=110; accept <a href="/AS199524">AS199524</a>
+export:         TO <a href="/AS199524">AS199524</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS13094">AS13094</a> action pref=110; accept <a href="/as-set/AS-MILECOM-RS">AS-MILECOM-RS</a>
+export:         TO <a href="/AS13094">AS13094</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS47872">AS47872</a> action pref=110; accept <a href="/as-set/AS-SOFIA-CONNECT">AS-SOFIA-CONNECT</a>
+export:         TO <a href="/AS47872">AS47872</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS20771">AS20771</a> action pref=110; accept <a href="/as-set/AS-DELTA">AS-DELTA</a>
+export:         TO <a href="/AS20771">AS20771</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS47541">AS47541</a> action pref=110; accept <a href="/as-set/AS-VKONTAKTE">AS-VKONTAKTE</a>
+export:         TO <a href="/AS47541">AS47541</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS47542">AS47542</a> action pref=110; accept <a href="/as-set/AS-VKONTAKTE">AS-VKONTAKTE</a>
+export:         TO <a href="/AS47542">AS47542</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS35362">AS35362</a> action pref=110; accept <a href="/as-set/AS-35362">AS-35362</a>
+export:         TO <a href="/AS35362">AS35362</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS39608">AS39608</a> action pref=110; accept <a href="/as-set/AS-LANETUA">AS-LANETUA</a>
+export:         TO <a href="/AS39608">AS39608</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS25133">AS25133</a> action pref=110; accept <a href="/as-set/AS-MCLAUT">AS-MCLAUT</a>
+export:         TO <a href="/AS25133">AS25133</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS28761">AS28761</a> action pref=110; accept <a href="/as-set/AS28761:AS-CUSTOMERS">AS28761:AS-CUSTOMERS</a>
+export:         TO <a href="/AS28761">AS28761</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS6789">AS6789</a> action pref=110; accept <a href="/as-set/AS-CRELCOM">AS-CRELCOM</a>
+export:         TO <a href="/AS6789">AS6789</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS6712">AS6712</a> action pref=110; accept <a href="/as-set/AS-FORMAT">AS-FORMAT</a>
+export:         TO <a href="/AS6712">AS6712</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS15772">AS15772</a> action pref=110; accept <a href="/as-set/AS-WNET">AS-WNET</a>
+export:         TO <a href="/AS15772">AS15772</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS6849">AS6849</a> action pref=110; accept <a href="/as-set/AS-UKRTELBT">AS-UKRTELBT</a>
+export:         TO <a href="/AS6849">AS6849</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS43554">AS43554</a> action pref=110; accept <a href="/as-set/AS-MYTRINITY">AS-MYTRINITY</a>
+export:         TO <a href="/AS43554">AS43554</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS59815">AS59815</a> action pref=110; accept <a href="/as-set/AS-TRKMETRO">AS-TRKMETRO</a>
+export:         TO <a href="/AS59815">AS59815</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS34867">AS34867</a> action pref=110; accept <a href="/as-set/AS-COSMONOVA">AS-COSMONOVA</a>
+export:         TO <a href="/AS34867">AS34867</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS28773">AS28773</a> action pref=110; accept <a href="/as-set/AS-MASTER">AS-MASTER</a>
+export:         TO <a href="/AS28773">AS28773</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS8779">AS8779</a> action pref=110; accept <a href="/as-set/AS-IC">AS-IC</a>
+export:         TO <a href="/AS8779">AS8779</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS25372">AS25372</a> action pref=110; accept <a href="/as-set/AS-ITCON">AS-ITCON</a>
+export:         TO <a href="/AS25372">AS25372</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS31725">AS31725</a> action pref=110; accept <a href="/as-set/AS-SHTORM">AS-SHTORM</a>
+export:         TO <a href="/AS31725">AS31725</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS39047">AS39047</a> action pref=110; accept <a href="/AS39047">AS39047</a>
+export:         TO <a href="/AS39047">AS39047</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS15497">AS15497</a> action pref=110; accept <a href="/as-set/AS-COLOCALL">AS-COLOCALL</a>
+export:         TO <a href="/AS15497">AS15497</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS47702">AS47702</a> action pref=110; accept <a href="/as-set/AS-DISCOVERY">AS-DISCOVERY</a>
+export:         TO <a href="/AS47702">AS47702</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS13121">AS13121</a> action pref=110; accept <a href="/as-set/AS-NAVIGATOR-UA">AS-NAVIGATOR-UA</a>
+export:         TO <a href="/AS13121">AS13121</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS12883">AS12883</a> action pref=110; accept <a href="/as-set/AS-UCOMLINE">AS-UCOMLINE</a>
+export:         TO <a href="/AS12883">AS12883</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS34700">AS34700</a> action pref=110; accept <a href="/as-set/AS-KHMAXNET">AS-KHMAXNET</a>
+export:         TO <a href="/AS34700">AS34700</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS6846">AS6846</a> action pref=110; accept <a href="/as-set/AS-UKRPACK-EXT">AS-UKRPACK-EXT</a>
+export:         TO <a href="/AS6846">AS6846</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS21488">AS21488</a> action pref=110; accept <a href="/as-set/AS-EMPLOT">AS-EMPLOT</a>
+export:         TO <a href="/AS21488">AS21488</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS43668">AS43668</a> action pref=110; accept <a href="/as-set/AS-ELHIM">AS-ELHIM</a>
+export:         TO <a href="/AS43668">AS43668</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS47694">AS47694</a> action pref=110; accept <a href="/as-set/AS-DIDAN">AS-DIDAN</a>
+export:         TO <a href="/AS47694">AS47694</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS16066">AS16066</a> action pref=110; accept <a href="/as-set/AS-TESTUA">AS-TESTUA</a>
+export:         TO <a href="/AS16066">AS16066</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS39399">AS39399</a> action pref=110; accept <a href="/as-set/AS-FENIXVT">AS-FENIXVT</a>
+export:         TO <a href="/AS39399">AS39399</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS48239">AS48239</a> action pref=110; accept <a href="/as-set/AS-INFTECH">AS-INFTECH</a>
+export:         TO <a href="/AS48239">AS48239</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS6723">AS6723</a> action pref=110; accept <a href="/as-set/AS-SKIF">AS-SKIF</a>
+export:         TO <a href="/AS6723">AS6723</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS8343">AS8343</a> action pref=110; accept <a href="/as-set/AS-DORIS">AS-DORIS</a>
+export:         TO <a href="/AS8343">AS8343</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS6886">AS6886</a> action pref=110; accept <a href="/as-set/AS-INTS">AS-INTS</a>
+export:         TO <a href="/AS6886">AS6886</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS35144">AS35144</a> action pref=110; accept <a href="/as-set/AS-DREAM">AS-DREAM</a>
+export:         TO <a href="/AS35144">AS35144</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS6876">AS6876</a> action pref=110; accept <a href="/as-set/AS-TENET-UA">AS-TENET-UA</a>
+export:         TO <a href="/AS6876">AS6876</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS24703">AS24703</a> action pref=110; accept <a href="/as-set/AS-UNITED">AS-UNITED</a>
+export:         TO <a href="/AS24703">AS24703</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS12773">AS12773</a> action pref=110; accept <a href="/as-set/AS-MIXMEDIA">AS-MIXMEDIA</a>
+export:         TO <a href="/AS12773">AS12773</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS31343">AS31343</a> action pref=110; accept <a href="/as-set/AS-INTERTELECOM">AS-INTERTELECOM</a>
+export:         TO <a href="/AS31343">AS31343</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS8359">AS8359</a> action pref=110; accept <a href="/as-set/AS8359:AS-UKRAINE">AS8359:AS-UKRAINE</a>
+export:         TO <a href="/AS8359">AS8359</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS49125">AS49125</a> action pref=110; accept <a href="/AS49125">AS49125</a>
+export:         TO <a href="/AS49125">AS49125</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS33991">AS33991</a> action pref=110; accept <a href="/as-set/AS-SKALA">AS-SKALA</a>
+export:         TO <a href="/AS33991">AS33991</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS44310">AS44310</a> action pref=110; accept <a href="/AS44310">AS44310</a>
+export:         TO <a href="/AS44310">AS44310</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS62206">AS62206</a> action pref=110; accept <a href="/as-set/AS-PITLINE">AS-PITLINE</a> <a href="/as-set/AS-PITLINE-V6">AS-PITLINE-V6</a>
+export:         TO <a href="/AS62206">AS62206</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS41691">AS41691</a> action pref=110; accept <a href="/as-set/AS-SUMTEL">AS-SUMTEL</a>
+export:         TO <a href="/AS41691">AS41691</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS20807">AS20807</a> action pref=110; accept <a href="/as-set/AS-CREDOLINK">AS-CREDOLINK</a>
+export:         TO <a href="/AS20807">AS20807</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS47438">AS47438</a> action pref=110; accept <a href="/as-set/AS-PSKOVLINE">AS-PSKOVLINE</a>
+export:         TO <a href="/AS47438">AS47438</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS42518">AS42518</a> action pref=110; accept <a href="/as-set/AS-UNETCOMRU">AS-UNETCOMRU</a>
+export:         TO <a href="/AS42518">AS42518</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS43267">AS43267</a> action pref=110; accept <a href="/as-set/AS-LINETEL">AS-LINETEL</a>
+export:         TO <a href="/AS43267">AS43267</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS31444">AS31444</a> action pref=110; accept <a href="/AS31444">AS31444</a>
+export:         TO <a href="/AS31444">AS31444</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS58042">AS58042</a> action pref=110; accept <a href="/AS58042">AS58042</a>
+export:         TO <a href="/AS58042">AS58042</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS29329">AS29329</a> action pref=110; accept <a href="/as-set/AS-NODEX">AS-NODEX</a>
+export:         TO <a href="/AS29329">AS29329</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS44843">AS44843</a> action pref=110; accept <a href="/as-set/AS-AMSTEL">AS-AMSTEL</a>
+export:         TO <a href="/AS44843">AS44843</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS42775">AS42775</a> action pref=110; accept <a href="/as-set/AS-CELLMEDIA">AS-CELLMEDIA</a>
+export:         TO <a href="/AS42775">AS42775</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS50258">AS50258</a> action pref=110; accept <a href="/as-set/AS-TEYLA">AS-TEYLA</a>
+export:         TO <a href="/AS50258">AS50258</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS25408">AS25408</a> action pref=110; accept <a href="/as-set/AS-WESTCALLSPB">AS-WESTCALLSPB</a>
+export:         TO <a href="/AS25408">AS25408</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS8595">AS8595</a> action pref=110; accept <a href="/as-set/AS-WESTCALL-MSK">AS-WESTCALL-MSK</a>
+export:         TO <a href="/AS8595">AS8595</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS45051">AS45051</a> action pref=110; accept <a href="/as-set/AS-WESTCALLSPB">AS-WESTCALLSPB</a>
+export:         TO <a href="/AS45051">AS45051</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS47111">AS47111</a> action pref=110; accept <a href="/as-set/AS-R2TV">AS-R2TV</a>
+export:         TO <a href="/AS47111">AS47111</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS41733">AS41733</a> action pref=110; accept <a href="/AS41733">AS41733</a>
+export:         TO <a href="/AS41733">AS41733</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS39046">AS39046</a> action pref=110; accept <a href="/as-set/AS-THEOREMA">AS-THEOREMA</a>
+export:         TO <a href="/AS39046">AS39046</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS35000">AS35000</a> action pref=110; accept <a href="/as-set/AS-PROMETEY">AS-PROMETEY</a> <a href="/as-set/AS-PROMETEY-V6">AS-PROMETEY-V6</a>
+export:         TO <a href="/AS35000">AS35000</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS49505">AS49505</a> action pref=110; accept <a href="/as-set/AS-SELECTEL">AS-SELECTEL</a>
+export:         TO <a href="/AS49505">AS49505</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS12418">AS12418</a> action pref=110; accept <a href="/as-set/AS-QUANTUM">AS-QUANTUM</a>
+export:         TO <a href="/AS12418">AS12418</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS49542">AS49542</a> action pref=110; accept <a href="/as-set/AS-ARTPLANET">AS-ARTPLANET</a>
+export:         TO <a href="/AS49542">AS49542</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS30968">AS30968</a> action pref=110; accept <a href="/AS30968">AS30968</a>
+export:         TO <a href="/AS30968">AS30968</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS13238">AS13238</a> action pref=110; accept <a href="/as-set/AS-YANDEX">AS-YANDEX</a>
+export:         TO <a href="/AS13238">AS13238</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS42668">AS42668</a> action pref=110; accept <a href="/as-set/AS-NEVALINK">AS-NEVALINK</a>
+export:         TO <a href="/AS42668">AS42668</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS39087">AS39087</a> action pref=110; accept <a href="/as-set/AS-PAKT">AS-PAKT</a>
+export:         TO <a href="/AS39087">AS39087</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS39102">AS39102</a> action pref=110; accept <a href="/as-set/AS-NNZ">AS-NNZ</a>
+export:         TO <a href="/AS39102">AS39102</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS196750">AS196750</a> action pref=110; accept <a href="/AS196750">AS196750</a>
+export:         TO <a href="/AS196750">AS196750</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS34232">AS34232</a> action pref=110; accept <a href="/as-set/AS-PULNET">AS-PULNET</a>
+export:         TO <a href="/AS34232">AS34232</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS196739">AS196739</a> action pref=110; accept <a href="/AS196739">AS196739</a>
+export:         TO <a href="/AS196739">AS196739</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS44068">AS44068</a> action pref=110; accept <a href="/as-set/AS-ARBITAL">AS-ARBITAL</a>
+export:         TO <a href="/AS44068">AS44068</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS31484">AS31484</a> action pref=110; accept <a href="/as-set/AS-TELROS">AS-TELROS</a>
+export:         TO <a href="/AS31484">AS31484</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS44380">AS44380</a> action pref=110; accept <a href="/AS44380">AS44380</a>
+export:         TO <a href="/AS44380">AS44380</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS31277">AS31277</a> action pref=110; accept <a href="/as-set/AS-NEWLINESPB">AS-NEWLINESPB</a>
+export:         TO <a href="/AS31277">AS31277</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS48416">AS48416</a> action pref=110; accept <a href="/as-set/AS-INFOLAN">AS-INFOLAN</a>
+export:         TO <a href="/AS48416">AS48416</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS8492">AS8492</a> action pref=110; accept <a href="/as-set/AS-OBIT">AS-OBIT</a>
+export:         TO <a href="/AS8492">AS8492</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS6858">AS6858</a> action pref=110; accept <a href="/as-set/AS-COMLINK">AS-COMLINK</a>
+export:         TO <a href="/AS6858">AS6858</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS24955">AS24955</a> action pref=110; accept <a href="/as-set/AS-UBN">AS-UBN</a>
+export:         TO <a href="/AS24955">AS24955</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS44882">AS44882</a> action pref=110; accept <a href="/as-set/AS-VSEVNET">AS-VSEVNET</a>
+export:         TO <a href="/AS44882">AS44882</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS44030">AS44030</a> action pref=110; accept <a href="/as-set/AS-LENTEL">AS-LENTEL</a> <a href="/as-set/AS-LENTEL-IPV6">AS-LENTEL-IPV6</a>
+export:         TO <a href="/AS44030">AS44030</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS31376">AS31376</a> action pref=110; accept <a href="/as-set/AS-SMART-C">AS-SMART-C</a> <a href="/as-set/AS-SMART-V6">AS-SMART-V6</a>
+export:         TO <a href="/AS31376">AS31376</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS57629">AS57629</a> action pref=110; accept <a href="/AS57629">AS57629</a>
+export:         TO <a href="/AS57629">AS57629</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS43362">AS43362</a> action pref=110; accept <a href="/AS43362">AS43362</a>
+export:         TO <a href="/AS43362">AS43362</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS48370">AS48370</a> action pref=110; accept <a href="/as-set/AS-WESTCOM">AS-WESTCOM</a>
+export:         TO <a href="/AS48370">AS48370</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS2854">AS2854</a> action pref=110; accept <a href="/as-set/AS-ROSPRINT">AS-ROSPRINT</a>
+export:         TO <a href="/AS2854">AS2854</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS44050">AS44050</a> action pref=110; accept <a href="/as-set/AS-PIN">AS-PIN</a>
+export:         TO <a href="/AS44050">AS44050</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS50538">AS50538</a> action pref=110; accept <a href="/AS50538">AS50538</a>
+export:         TO <a href="/AS50538">AS50538</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS59440">AS59440</a> action pref=110; accept <a href="/as-set/AS-LIGHTPORT">AS-LIGHTPORT</a>
+export:         TO <a href="/AS59440">AS59440</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS5433">AS5433</a> action pref=110; accept <a href="/as-set/AS-ROKSON">AS-ROKSON</a>
+export:         TO <a href="/AS5433">AS5433</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS197888">AS197888</a> action pref=110; accept <a href="/AS197888">AS197888</a>
+export:         TO <a href="/AS197888">AS197888</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS198610">AS198610</a> action pref=110; accept <a href="/as-set/AS-BEGET">AS-BEGET</a>
+export:         TO <a href="/AS198610">AS198610</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS28917">AS28917</a> action pref=110; accept <a href="/as-set/AS-FIORD">AS-FIORD</a>
+export:         TO <a href="/AS28917">AS28917</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS41446">AS41446</a> action pref=110; accept <a href="/AS41446">AS41446</a>
+export:         TO <a href="/AS41446">AS41446</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS34879">AS34879</a> action pref=110; accept <a href="/as-set/AS-NGENIX">AS-NGENIX</a>
+export:         TO <a href="/AS34879">AS34879</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS57091">AS57091</a> action pref=110; accept <a href="/as-set/AS-MSNET">AS-MSNET</a>
+export:         TO <a href="/AS57091">AS57091</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS50453">AS50453</a> action pref=110; accept <a href="/AS50453">AS50453</a>
+export:         TO <a href="/AS50453">AS50453</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS42339">AS42339</a> action pref=110; accept <a href="/as-set/AS-CHTP">AS-CHTP</a>
+export:         TO <a href="/AS42339">AS42339</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS199805">AS199805</a> action pref=110; accept <a href="/AS199805">AS199805</a>
+export:         TO <a href="/AS199805">AS199805</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS57246">AS57246</a> action pref=110; accept <a href="/AS57246">AS57246</a>
+export:         TO <a href="/AS57246">AS57246</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS199860">AS199860</a> action pref=110; accept <a href="/as-set/AS-SDN">AS-SDN</a>
+export:         TO <a href="/AS199860">AS199860</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS199948">AS199948</a> action pref=110; accept <a href="/AS199948">AS199948</a>
+export:         TO <a href="/AS199948">AS199948</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS52201">AS52201</a> action pref=110; accept <a href="/as-set/AS-TCTEL">AS-TCTEL</a>
+export:         TO <a href="/AS52201">AS52201</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS25532">AS25532</a> action pref=110; accept <a href="/AS25532">AS25532</a>
+export:         TO <a href="/AS25532">AS25532</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS42368">AS42368</a> action pref=110; accept <a href="/as-set/AS-LKS">AS-LKS</a>
+export:         TO <a href="/AS42368">AS42368</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS43727">AS43727</a> action pref=110; accept <a href="/as-set/AS-SETKT">AS-SETKT</a>
+export:         TO <a href="/AS43727">AS43727</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS34456">AS34456</a> action pref=110; accept <a href="/as-set/AS-RCPEERS">AS-RCPEERS</a>
+export:         TO <a href="/AS34456">AS34456</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS6679">AS6679</a> action pref=110; accept <a href="/as-set/AS-SKADI-VK">AS-SKADI-VK</a> <a href="/as-set/AS-SKADI">AS-SKADI</a>
+export:         TO <a href="/AS6679">AS6679</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS34123">AS34123</a> action pref=110; accept <a href="/as-set/AS-NETORN">AS-NETORN</a>
+export:         TO <a href="/AS34123">AS34123</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS42511">AS42511</a> action pref=110; accept <a href="/as-set/AS-STATION">AS-STATION</a>
+export:         TO <a href="/AS42511">AS42511</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS35539">AS35539</a> action pref=110; accept <a href="/as-set/AS-INFOLINK">AS-INFOLINK</a>
+export:         TO <a href="/AS35539">AS35539</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS39153">AS39153</a> action pref=110; accept <a href="/as-set/AS-SETEL">AS-SETEL</a>
+export:         TO <a href="/AS39153">AS39153</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS42632">AS42632</a> action pref=110; accept <a href="/as-set/AS-MNOGOBYTE">AS-MNOGOBYTE</a>
+export:         TO <a href="/AS42632">AS42632</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS47764">AS47764</a> action pref=110; accept <a href="/as-set/AS-MAILRU">AS-MAILRU</a>
+export:         TO <a href="/AS47764">AS47764</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS48061">AS48061</a> action pref=110; accept <a href="/AS48061">AS48061</a>
+export:         TO <a href="/AS48061">AS48061</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS31261">AS31261</a> action pref=110; accept <a href="/as-set/AS-GARS">AS-GARS</a>
+export:         TO <a href="/AS31261">AS31261</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS8641">AS8641</a> action pref=110; accept <a href="/as-set/AS-NAUKANET">AS-NAUKANET</a>
+export:         TO <a href="/AS8641">AS8641</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS21453">AS21453</a> action pref=110; accept <a href="/as-set/AS-FLEX">AS-FLEX</a>
+export:         TO <a href="/AS21453">AS21453</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS49342">AS49342</a> action pref=110; accept <a href="/as-set/AS-SPEEDYLINE">AS-SPEEDYLINE</a>
+export:         TO <a href="/AS49342">AS49342</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS16083">AS16083</a> action pref=110; accept <a href="/as-set/AS-STACK">AS-STACK</a>
+export:         TO <a href="/AS16083">AS16083</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS5537">AS5537</a> action pref=110; accept <a href="/as-set/AS-GPT">AS-GPT</a>
+export:         TO <a href="/AS5537">AS5537</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS35297">AS35297</a> action pref=110; accept <a href="/as-set/AS-DL-WORLD">AS-DL-WORLD</a>
+export:         TO <a href="/AS35297">AS35297</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS12695">AS12695</a> action pref=110; accept <a href="/as-set/AS-DINET">AS-DINET</a>
+export:         TO <a href="/AS12695">AS12695</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS28968">AS28968</a> action pref=110; accept <a href="/as-set/AS-EUT">AS-EUT</a>
+export:         TO <a href="/AS28968">AS28968</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS58002">AS58002</a> action pref=110; accept <a href="/as-set/AS-SI">AS-SI</a>
+export:         TO <a href="/AS58002">AS58002</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS8331">AS8331</a> action pref=110; accept <a href="/as-set/AS-RINET">AS-RINET</a>
+export:         TO <a href="/AS8331">AS8331</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS48293">AS48293</a> action pref=110; accept <a href="/as-set/AS-UNIONTEL-RU">AS-UNIONTEL-RU</a>
+export:         TO <a href="/AS48293">AS48293</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS41802">AS41802</a> action pref=110; accept <a href="/as-set/AS-KVIDEX">AS-KVIDEX</a>
+export:         TO <a href="/AS41802">AS41802</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS49063">AS49063</a> action pref=110; accept <a href="/as-set/AS-DTLN">AS-DTLN</a>
+export:         TO <a href="/AS49063">AS49063</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS49813">AS49813</a> action pref=110; accept <a href="/as-set/AS-INN">AS-INN</a>
+export:         TO <a href="/AS49813">AS49813</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS30833">AS30833</a> action pref=110; accept <a href="/as-set/AS-TNC">AS-TNC</a>
+export:         TO <a href="/AS30833">AS30833</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS44927">AS44927</a> action pref=110; accept <a href="/as-set/AS-TMPK">AS-TMPK</a>
+export:         TO <a href="/AS44927">AS44927</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS9049">AS9049</a> action pref=110; accept <a href="/as-set/AS-ERTH">AS-ERTH</a>
+export:         TO <a href="/AS9049">AS9049</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS198459">AS198459</a> action pref=110; accept <a href="/AS198459">AS198459</a>
+export:         TO <a href="/AS198459">AS198459</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS50009">AS50009</a> action pref=110; accept <a href="/as-set/AS-QUARTZ">AS-QUARTZ</a> <a href="/as-set/AS-QUARTZ-V6">AS-QUARTZ-V6</a>
+export:         TO <a href="/AS50009">AS50009</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS35598">AS35598</a> action pref=110; accept <a href="/as-set/AS-ICNET">AS-ICNET</a>
+export:         TO <a href="/AS35598">AS35598</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS50473">AS50473</a> action pref=110; accept <a href="/as-set/AS-ECO">AS-ECO</a>
+export:         TO <a href="/AS50473">AS50473</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS34221">AS34221</a> action pref=110; accept <a href="/as-set/AS-QL">AS-QL</a>
+export:         TO <a href="/AS34221">AS34221</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS15756">AS15756</a> action pref=110; accept <a href="/as-set/AS-CARAVANRUS">AS-CARAVANRUS</a>
+export:         TO <a href="/AS15756">AS15756</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS51028">AS51028</a> action pref=110; accept <a href="/as-set/AS-SVOLS">AS-SVOLS</a>
+export:         TO <a href="/AS51028">AS51028</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS50169">AS50169</a> action pref=110; accept <a href="/AS50169">AS50169</a>
+export:         TO <a href="/AS50169">AS50169</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS47119">AS47119</a> action pref=110; accept <a href="/AS47119">AS47119</a>
+export:         TO <a href="/AS47119">AS47119</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS25189">AS25189</a> action pref=110; accept <a href="/as-set/AS-NLINE">AS-NLINE</a>
+export:         TO <a href="/AS25189">AS25189</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS47645">AS47645</a> action pref=110; accept <a href="/as-set/AS-SET-STC-NET">AS-SET-STC-NET</a>
+export:         TO <a href="/AS47645">AS47645</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS13249">AS13249</a> action pref=110; accept <a href="/as-set/AS-ITS-WORLD">AS-ITS-WORLD</a>
+export:         TO <a href="/AS13249">AS13249</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS48166">AS48166</a> action pref=110; accept <a href="/as-set/AS-FORTEX">AS-FORTEX</a>
+export:         TO <a href="/AS48166">AS48166</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS41268">AS41268</a> action pref=110; accept <a href="/as-set/AS-LANTA">AS-LANTA</a>
+export:         TO <a href="/AS41268">AS41268</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS49060">AS49060</a> action pref=110; accept <a href="/as-set/AS-UNIONLINE">AS-UNIONLINE</a>
+export:         TO <a href="/AS49060">AS49060</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS34602">AS34602</a> action pref=110; accept <a href="/as-set/AS-STARLNK">AS-STARLNK</a>
+export:         TO <a href="/AS34602">AS34602</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS43404">AS43404</a> action pref=110; accept <a href="/as-set/AS-UCANET">AS-UCANET</a> <a href="/as-set/AS-UCANETV6">AS-UCANETV6</a>
+export:         TO <a href="/AS43404">AS43404</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS44943">AS44943</a> action pref=110; accept <a href="/as-set/AS-RAMNET">AS-RAMNET</a>
+export:         TO <a href="/AS44943">AS44943</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS20655">AS20655</a> action pref=110; accept <a href="/as-set/AS-EST">AS-EST</a>
+export:         TO <a href="/AS20655">AS20655</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS20731">AS20731</a> action pref=110; accept <a href="/as-set/AS-MEGATON">AS-MEGATON</a>
+export:         TO <a href="/AS20731">AS20731</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS57363">AS57363</a> action pref=110; accept <a href="/as-set/AS-CDNVIDEO">AS-CDNVIDEO</a>
+export:         TO <a href="/AS57363">AS57363</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS24638">AS24638</a> action pref=110; accept <a href="/as-set/AS-RAMTEL">AS-RAMTEL</a>
+export:         TO <a href="/AS24638">AS24638</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS44436">AS44436</a> action pref=110; accept <a href="/AS44436">AS44436</a>
+export:         TO <a href="/AS44436">AS44436</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS51408">AS51408</a> action pref=110; accept <a href="/as-set/AS-DNX">AS-DNX</a>
+export:         TO <a href="/AS51408">AS51408</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS6903">AS6903</a> action pref=110; accept <a href="/as-set/AS-ZENON">AS-ZENON</a>
+export:         TO <a href="/AS6903">AS6903</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS24689">AS24689</a> action pref=110; accept <a href="/as-set/AS-ROSINTEL">AS-ROSINTEL</a>
+export:         TO <a href="/AS24689">AS24689</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS44670">AS44670</a> action pref=110; accept <a href="/AS44670">AS44670</a>
+export:         TO <a href="/AS44670">AS44670</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS44053">AS44053</a> action pref=110; accept <a href="/as-set/AS-UNILINK">AS-UNILINK</a>
+export:         TO <a href="/AS44053">AS44053</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS51596">AS51596</a> action pref=110; accept <a href="/AS51596">AS51596</a>
+export:         TO <a href="/AS51596">AS51596</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS42690">AS42690</a> action pref=110; accept <a href="/AS42690">AS42690</a>
+export:         TO <a href="/AS42690">AS42690</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS15895">AS15895</a> action pref=110; accept <a href="/as-set/AS15895:AS-ALL">AS15895:AS-ALL</a>
+export:         TO <a href="/AS15895">AS15895</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS60299">AS60299</a> action pref=110; accept <a href="/as-set/AS-MMTS">AS-MMTS</a>
+export:         TO <a href="/AS60299">AS60299</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS39134">AS39134</a> action pref=110; accept <a href="/as-set/AS-UNITEDNET">AS-UNITEDNET</a>
+export:         TO <a href="/AS39134">AS39134</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS35032">AS35032</a> action pref=110; accept <a href="/AS35032">AS35032</a>
+export:         TO <a href="/AS35032">AS35032</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS25308">AS25308</a> action pref=110; accept <a href="/as-set/AS-CITYLAN">AS-CITYLAN</a>
+export:         TO <a href="/AS25308">AS25308</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS47542">AS47542</a> action pref=110; accept <a href="/AS47542">AS47542</a>
+export:         TO <a href="/AS47542">AS47542</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS43146">AS43146</a> action pref=110; accept <a href="/as-set/AS-AGAVA">AS-AGAVA</a>
+export:         TO <a href="/AS43146">AS43146</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS47655">AS47655</a> action pref=110; accept <a href="/as-set/AS-SET-LINKINTEL">AS-SET-LINKINTEL</a>
+export:         TO <a href="/AS47655">AS47655</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS49830">AS49830</a> action pref=110; accept <a href="/AS49830">AS49830</a>
+export:         TO <a href="/AS49830">AS49830</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS47196">AS47196</a> action pref=110; accept <a href="/AS47196">AS47196</a>
+export:         TO <a href="/AS47196">AS47196</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS42429">AS42429</a> action pref=110; accept <a href="/as-set/AS-TELERU">AS-TELERU</a>
+export:         TO <a href="/AS42429">AS42429</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS48347">AS48347</a> action pref=110; accept <a href="/as-set/AS-MTW">AS-MTW</a>
+export:         TO <a href="/AS48347">AS48347</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS60388">AS60388</a> action pref=110; accept <a href="/as-set/AS-SIGMA-TELECOM">AS-SIGMA-TELECOM</a>
+export:         TO <a href="/AS60388">AS60388</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS15377">AS15377</a> action pref=110; accept <a href="/as-set/AS-FREGAT">AS-FREGAT</a>
+export:         TO <a href="/AS15377">AS15377</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS57174">AS57174</a> action pref=110; accept <a href="/as-set/AS-SSERV-RU">AS-SSERV-RU</a>
+export:         TO <a href="/AS57174">AS57174</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS61400">AS61400</a> action pref=110; accept <a href="/as-set/AS-NETRACK">AS-NETRACK</a>
+export:         TO <a href="/AS61400">AS61400</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS39264">AS39264</a> action pref=110; accept <a href="/as-set/AS-METROMAX">AS-METROMAX</a>
+export:         TO <a href="/AS39264">AS39264</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS61170">AS61170</a> action pref=110; accept <a href="/as-set/AS-MOYO">AS-MOYO</a>
+export:         TO <a href="/AS61170">AS61170</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS9198">AS9198</a> action pref=110; accept <a href="/as-set/AS-KAZTELECOMPEERS">AS-KAZTELECOMPEERS</a>
+export:         TO <a href="/AS9198">AS9198</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS48654">AS48654</a> action pref=110; accept <a href="/as-set/AS-BALNET">AS-BALNET</a>
+export:         TO <a href="/AS48654">AS48654</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS31059">AS31059</a> action pref=110; accept <a href="/as-set/AS-AVELACOM">AS-AVELACOM</a>
+export:         TO <a href="/AS31059">AS31059</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS21135">AS21135</a> action pref=110; accept <a href="/as-set/AS-MTT">AS-MTT</a>
+export:         TO <a href="/AS21135">AS21135</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS42239">AS42239</a> action pref=110; accept <a href="/as-set/AS-FARLINE">AS-FARLINE</a>
+export:         TO <a href="/AS42239">AS42239</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS29226">AS29226</a> action pref=110; accept <a href="/as-set/AS-MASTERTEL">AS-MASTERTEL</a>
+export:         TO <a href="/AS29226">AS29226</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS1547">AS1547</a> action pref=110; accept <a href="/as-set/AS-IDK">AS-IDK</a>
+export:         TO <a href="/AS1547">AS1547</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS3261">AS3261</a> action pref=110; accept <a href="/as-set/AS-DIPT">AS-DIPT</a>
+export:         TO <a href="/AS3261">AS3261</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS60764">AS60764</a> action pref=110; accept <a href="/as-set/AS-TKTEL">AS-TKTEL</a>
+export:         TO <a href="/AS60764">AS60764</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS197235">AS197235</a> action pref=110; accept <a href="/as-set/AS-SEVEREN-VOLGA">AS-SEVEREN-VOLGA</a>
+export:         TO <a href="/AS197235">AS197235</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS28709">AS28709</a> action pref=110; accept <a href="/as-set/AS-VKONTAKTE">AS-VKONTAKTE</a>
+export:         TO <a href="/AS28709">AS28709</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS35816">AS35816</a> action pref=110; accept <a href="/as-set/AS-LANCOM">AS-LANCOM</a>
+export:         TO <a href="/AS35816">AS35816</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS29076">AS29076</a> action pref=110; accept <a href="/AS29076">AS29076</a>
+export:         TO <a href="/AS29076">AS29076</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS200000">AS200000</a> action pref=110; accept <a href="/as-set/AS-DELTAX">AS-DELTAX</a>
+export:         TO <a href="/AS200000">AS200000</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS60280">AS60280</a> action pref=110; accept <a href="/as-set/AS-NTEC">AS-NTEC</a>
+export:         TO <a href="/AS60280">AS60280</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS41625">AS41625</a> action pref=110; accept <a href="/AS41625">AS41625</a>
+export:         TO <a href="/AS41625">AS41625</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS44020">AS44020</a> action pref=110; accept <a href="/as-set/AS-CLN">AS-CLN</a>
+export:         TO <a href="/AS44020">AS44020</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS12998">AS12998</a> action pref=110; accept <a href="/as-set/AS-BGN">AS-BGN</a>
+export:         TO <a href="/AS12998">AS12998</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS43139">AS43139</a> action pref=110; accept <a href="/as-set/AS-MAXIMUM">AS-MAXIMUM</a>
+export:         TO <a href="/AS43139">AS43139</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS13335">AS13335</a> action pref=110; accept <a href="/AS13335">AS13335</a>
+export:         TO <a href="/AS13335">AS13335</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS49183">AS49183</a> action pref=110; accept <a href="/as-set/AS49183:AS-CUSTOMERS">AS49183:AS-CUSTOMERS</a>
+export:         TO <a href="/AS49183">AS49183</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS20764">AS20764</a> action pref=110; accept <a href="/as-set/AS-RASCOM">AS-RASCOM</a>
+export:         TO <a href="/AS20764">AS20764</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS48964">AS48964</a> action pref=110; accept <a href="/as-set/AS-ENTERRA">AS-ENTERRA</a>
+export:         TO <a href="/AS48964">AS48964</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS16094">AS16094</a> action pref=110; accept <a href="/as-set/AS-ROILCOM">AS-ROILCOM</a>
+export:         TO <a href="/AS16094">AS16094</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS29182">AS29182</a> action pref=110; accept <a href="/as-set/AS-ISPSYSTEM">AS-ISPSYSTEM</a>
+export:         TO <a href="/AS29182">AS29182</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS51343">AS51343</a> action pref=110; accept <a href="/as-set/AS-FORCELINE">AS-FORCELINE</a>
+export:         TO <a href="/AS51343">AS51343</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS21257">AS21257</a> action pref=110; accept <a href="/as-set/AS-XUA">AS-XUA</a>
+export:         TO <a href="/AS21257">AS21257</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS6697">AS6697</a> action pref=110; accept <a href="/as-set/AS-BELPAK">AS-BELPAK</a>
+export:         TO <a href="/AS6697">AS6697</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS25292">AS25292</a> action pref=110; accept <a href="/AS25292">AS25292</a>
+export:         TO <a href="/AS25292">AS25292</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS50581">AS50581</a> action pref=110; accept <a href="/as-set/AS-UTG-UA">AS-UTG-UA</a> <a href="/as-set/AS-UTG-V6">AS-UTG-V6</a>
+export:         TO <a href="/AS50581">AS50581</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS51380">AS51380</a> action pref=110; accept <a href="/as-set/AS-GREY">AS-GREY</a>
+export:         TO <a href="/AS51380">AS51380</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS31415">AS31415</a> action pref=110; accept <a href="/as-set/AS-SVSCOMM">AS-SVSCOMM</a>
+export:         TO <a href="/AS31415">AS31415</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS202103">AS202103</a> action pref=110; accept <a href="/AS202103">AS202103</a>
+export:         TO <a href="/AS202103">AS202103</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS3252">AS3252</a> action pref=110; accept <a href="/as-set/AS-FBRX">AS-FBRX</a>
+export:         TO <a href="/AS3252">AS3252</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS196879">AS196879</a> action pref=110; accept <a href="/AS196879">AS196879</a>
+export:         TO <a href="/AS196879">AS196879</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS61316">AS61316</a> action pref=110; accept <a href="/as-set/AS-IPROSRV">AS-IPROSRV</a>
+export:         TO <a href="/AS61316">AS61316</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS201499">AS201499</a> action pref=110; accept <a href="/AS201499">AS201499</a>
+export:         TO <a href="/AS201499">AS201499</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS50222">AS50222</a> action pref=110; accept <a href="/AS50222">AS50222</a>
+export:         TO <a href="/AS50222">AS50222</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS56886">AS56886</a> action pref=110; accept <a href="/AS56886">AS56886</a>
+export:         TO <a href="/AS56886">AS56886</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS47211">AS47211</a> action pref=110; accept <a href="/AS47211">AS47211</a>
+export:         TO <a href="/AS47211">AS47211</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS51478">AS51478</a> action pref=110; accept <a href="/AS51478">AS51478</a>
+export:         TO <a href="/AS51478">AS51478</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS47363">AS47363</a> action pref=110; accept <a href="/AS47363">AS47363</a>
+export:         TO <a href="/AS47363">AS47363</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS43314">AS43314</a> action pref=110; accept <a href="/as-set/AS-DIANET">AS-DIANET</a>
+export:         TO <a href="/AS43314">AS43314</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS31257">AS31257</a> action pref=110; accept <a href="/as-set/AS-ORIONNET">AS-ORIONNET</a>
+export:         TO <a href="/AS31257">AS31257</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS33871">AS33871</a> action pref=110; accept <a href="/as-set/AS-NORCOM-KRSK">AS-NORCOM-KRSK</a>
+export:         TO <a href="/AS33871">AS33871</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS41560">AS41560</a> action pref=110; accept <a href="/as-set/AS-UT-SVR">AS-UT-SVR</a>
+export:         TO <a href="/AS41560">AS41560</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS62228">AS62228</a> action pref=110; accept <a href="/as-set/AS-DECISIONMARKETING">AS-DECISIONMARKETING</a>
+export:         TO <a href="/AS62228">AS62228</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS48235">AS48235</a> action pref=110; accept <a href="/AS48235">AS48235</a>
+export:         TO <a href="/AS48235">AS48235</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS21353">AS21353</a> action pref=110; accept <a href="/as-set/AS-ARTCOMS">AS-ARTCOMS</a>
+export:         TO <a href="/AS21353">AS21353</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS42893">AS42893</a> action pref=110; accept <a href="/AS42893">AS42893</a>
+export:         TO <a href="/AS42893">AS42893</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS3255">AS3255</a> action pref=110; accept <a href="/as-set/AS-UARNET">AS-UARNET</a>
+export:         TO <a href="/AS3255">AS3255</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS8926">AS8926</a> action pref=110; accept <a href="/as-set/AS-MOLDTELECOM">AS-MOLDTELECOM</a>
+export:         TO <a href="/AS8926">AS8926</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS200161">AS200161</a> action pref=110; accept <a href="/as-set/AS-DATAPRO">AS-DATAPRO</a>
+export:         TO <a href="/AS200161">AS200161</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS56592">AS56592</a> action pref=110; accept <a href="/as-set/AS-TELEWEST-INET">AS-TELEWEST-INET</a>
+export:         TO <a href="/AS56592">AS56592</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS57073">AS57073</a> action pref=110; accept <a href="/AS57073">AS57073</a>
+export:         TO <a href="/AS57073">AS57073</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS52041">AS52041</a> action pref=110; accept <a href="/as-set/AS-IRIDA">AS-IRIDA</a>
+export:         TO <a href="/AS52041">AS52041</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS39442">AS39442</a> action pref=110; accept <a href="/as-set/AS-UNICO">AS-UNICO</a>
+export:         TO <a href="/AS39442">AS39442</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS12714">AS12714</a> action pref=110; accept <a href="/as-set/AS-TI">AS-TI</a>
+export:         TO <a href="/AS12714">AS12714</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS45051">AS45051</a> action pref=110; accept <a href="/AS45051">AS45051</a>
+export:         TO <a href="/AS45051">AS45051</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS199599">AS199599</a> action pref=110; accept <a href="/as-set/AS-CIREX">AS-CIREX</a>
+export:         TO <a href="/AS199599">AS199599</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS21030">AS21030</a> action pref=110; accept <a href="/as-set/AS-CDNNOW">AS-CDNNOW</a>
+export:         TO <a href="/AS21030">AS21030</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS201008">AS201008</a> action pref=110; accept <a href="/AS201008">AS201008</a>
+export:         TO <a href="/AS201008">AS201008</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS48223">AS48223</a> action pref=110; accept <a href="/as-set/AS-SENATOR">AS-SENATOR</a>
+export:         TO <a href="/AS48223">AS48223</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS197080">AS197080</a> action pref=110; accept <a href="/AS197080">AS197080</a>
+export:         TO <a href="/AS197080">AS197080</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS43022">AS43022</a> action pref=110; accept <a href="/as-set/AS-UASEECH">AS-UASEECH</a>
+export:         TO <a href="/AS43022">AS43022</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS200015">AS200015</a> action pref=110; accept <a href="/as-set/AS-LIVETEX">AS-LIVETEX</a>
+export:         TO <a href="/AS200015">AS200015</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS60165">AS60165</a> action pref=110; accept <a href="/AS60165">AS60165</a>
+export:         TO <a href="/AS60165">AS60165</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS3202">AS3202</a> action pref=110; accept <a href="/AS3202">AS3202</a>
+export:         TO <a href="/AS3202">AS3202</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS31585">AS31585</a> action pref=110; accept <a href="/as-set/AS-SET-COLTEL">AS-SET-COLTEL</a>
+export:         TO <a href="/AS31585">AS31585</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS60357">AS60357</a> action pref=110; accept <a href="/AS60357">AS60357</a>
+export:         TO <a href="/AS60357">AS60357</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS43222">AS43222</a> action pref=110; accept <a href="/as-set/AS-CRIMEA-IX">AS-CRIMEA-IX</a>
+export:         TO <a href="/AS43222">AS43222</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS49588">AS49588</a> action pref=110; accept <a href="/as-set/AS-SDS">AS-SDS</a>
+export:         TO <a href="/AS49588">AS49588</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS50643">AS50643</a> action pref=110; accept <a href="/as-set/AS-LU">AS-LU</a>
+export:         TO <a href="/AS50643">AS50643</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS41798">AS41798</a> action pref=110; accept <a href="/as-set/AS-TRANSKZ">AS-TRANSKZ</a>
+export:         TO <a href="/AS41798">AS41798</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS41059">AS41059</a> action pref=110; accept <a href="/as-set/AS-T-CIX-INT">AS-T-CIX-INT</a> <a href="/as-set/AS-T-CIX-V6-INT">AS-T-CIX-V6-INT</a>
+export:         TO <a href="/AS41059">AS41059</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS201229">AS201229</a> action pref=110; accept <a href="/AS201229">AS201229</a>
+export:         TO <a href="/AS201229">AS201229</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS197556">AS197556</a> action pref=110; accept <a href="/as-set/AS-SET_TNSPLUS">AS-SET_TNSPLUS</a>
+export:         TO <a href="/AS197556">AS197556</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS201469">AS201469</a> action pref=110; accept <a href="/AS201469">AS201469</a>
+export:         TO <a href="/AS201469">AS201469</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS34866">AS34866</a> action pref=110; accept <a href="/AS34866">AS34866</a>
+export:         TO <a href="/AS34866">AS34866</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS41722">AS41722</a> action pref=110; accept <a href="/as-set/AS-MIRAN">AS-MIRAN</a>
+export:         TO <a href="/AS41722">AS41722</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS29069">AS29069</a> action pref=110; accept <a href="/as-set/AS-TRANSLINECOM">AS-TRANSLINECOM</a>
+export:         TO <a href="/AS29069">AS29069</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS31040">AS31040</a> action pref=110; accept <a href="/as-set/AS-CIBERTELPEER">AS-CIBERTELPEER</a>
+export:         TO <a href="/AS31040">AS31040</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS31252">AS31252</a> action pref=110; accept <a href="/as-set/AS-STARNET">AS-STARNET</a>
+export:         TO <a href="/AS31252">AS31252</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS8342">AS8342</a> action pref=110; accept <a href="/as-set/AS-RT">AS-RT</a>
+export:         TO <a href="/AS8342">AS8342</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS42331">AS42331</a> action pref=110; accept <a href="/as-set/AS-FREEHOST">AS-FREEHOST</a>
+export:         TO <a href="/AS42331">AS42331</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS43660">AS43660</a> action pref=110; accept <a href="/as-set/AS-ETHERWAY">AS-ETHERWAY</a>
+export:         TO <a href="/AS43660">AS43660</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS13188">AS13188</a> action pref=110; accept <a href="/AS13188">AS13188</a>
+export:         TO <a href="/AS13188">AS13188</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS25591">AS25591</a> action pref=110; accept <a href="/as-set/AS-BCLAN">AS-BCLAN</a>
+export:         TO <a href="/AS25591">AS25591</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS62066">AS62066</a> action pref=110; accept <a href="/AS62066">AS62066</a>
+export:         TO <a href="/AS62066">AS62066</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS56528">AS56528</a> action pref=110; accept <a href="/AS56528">AS56528</a>
+export:         TO <a href="/AS56528">AS56528</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS60771">AS60771</a> action pref=110; accept <a href="/as-set/AS-COMITEN">AS-COMITEN</a>
+export:         TO <a href="/AS60771">AS60771</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS200487">AS200487</a> action pref=110; accept <a href="/AS200487">AS200487</a>
+export:         TO <a href="/AS200487">AS200487</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS25251">AS25251</a> action pref=110; accept <a href="/as-set/AS-ABCNET-ALPHA">AS-ABCNET-ALPHA</a>
+export:         TO <a href="/AS25251">AS25251</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS62356">AS62356</a> action pref=110; accept <a href="/AS62356">AS62356</a>
+export:         TO <a href="/AS62356">AS62356</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS198227">AS198227</a> action pref=110; accept <a href="/as-set/AS-NEWTELECOM">AS-NEWTELECOM</a>
+export:         TO <a href="/AS198227">AS198227</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS35640">AS35640</a> action pref=110; accept <a href="/as-set/AS-MIGRAPH">AS-MIGRAPH</a>
+export:         TO <a href="/AS35640">AS35640</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS34056">AS34056</a> action pref=110; accept <a href="/as-set/AS-KIEVNET">AS-KIEVNET</a>
+export:         TO <a href="/AS34056">AS34056</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS29442">AS29442</a> action pref=110; accept <a href="/as-set/AS-INETCOM">AS-INETCOM</a>
+export:         TO <a href="/AS29442">AS29442</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS35213">AS35213</a> action pref=110; accept <a href="/as-set/AS-PCN">AS-PCN</a>
+export:         TO <a href="/AS35213">AS35213</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS52191">AS52191</a> action pref=110; accept <a href="/as-set/AS-LOCALKA">AS-LOCALKA</a> <a href="/as-set/AS-LOCALKA6">AS-LOCALKA6</a>
+export:         TO <a href="/AS52191">AS52191</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS48524">AS48524</a> action pref=110; accept <a href="/AS48524">AS48524</a>
+export:         TO <a href="/AS48524">AS48524</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS42396">AS42396</a> action pref=110; accept <a href="/as-set/AS-PPLNET">AS-PPLNET</a>
+export:         TO <a href="/AS42396">AS42396</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS15848">AS15848</a> action pref=110; accept <a href="/AS15848">AS15848</a>
+export:         TO <a href="/AS15848">AS15848</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS59600">AS59600</a> action pref=110; accept <a href="/AS59600">AS59600</a>
+export:         TO <a href="/AS59600">AS59600</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS60731">AS60731</a> action pref=110; accept <a href="/AS60731">AS60731</a>
+export:         TO <a href="/AS60731">AS60731</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS47522">AS47522</a> action pref=110; accept <a href="/as-set/AS-NETFORT">AS-NETFORT</a>
+export:         TO <a href="/AS47522">AS47522</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS48287">AS48287</a> action pref=110; accept <a href="/as-set/AS-RUCENTER">AS-RUCENTER</a>
+export:         TO <a href="/AS48287">AS48287</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS49963">AS49963</a> action pref=110; accept <a href="/as-set/AS-BELRTS">AS-BELRTS</a>
+export:         TO <a href="/AS49963">AS49963</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS47513">AS47513</a> action pref=110; accept <a href="/AS47513">AS47513</a>
+export:         TO <a href="/AS47513">AS47513</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS13188">AS13188</a> action pref=110; accept <a href="/as-set/AS-BANKINFORM">AS-BANKINFORM</a>
+export:         TO <a href="/AS13188">AS13188</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS24700">AS24700</a> action pref=110; accept <a href="/AS24700">AS24700</a>
+export:         TO <a href="/AS24700">AS24700</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS196709">AS196709</a> action pref=110; accept <a href="/as-set/AS-GNC">AS-GNC</a>
+export:         TO <a href="/AS196709">AS196709</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS197482">AS197482</a> action pref=110; accept <a href="/as-set/AS-2GIS">AS-2GIS</a>
+export:         TO <a href="/AS197482">AS197482</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS57724">AS57724</a> action pref=110; accept <a href="/as-set/AS-DDOS-GUARD">AS-DDOS-GUARD</a>
+export:         TO <a href="/AS57724">AS57724</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS50581">AS50581</a> action pref=110; accept <a href="/as-set/AS-UTG-UA">AS-UTG-UA</a>
+export:         TO <a href="/AS50581">AS50581</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS44128">AS44128</a> action pref=110; accept <a href="/AS44128">AS44128</a>
+export:         TO <a href="/AS44128">AS44128</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS56694">AS56694</a> action pref=110; accept <a href="/as-set/AS-DHUB">AS-DHUB</a>
+export:         TO <a href="/AS56694">AS56694</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS3327">AS3327</a> action pref=110; accept <a href="/as-set/AS-LINXTELECOM">AS-LINXTELECOM</a>
+export:         TO <a href="/AS3327">AS3327</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS8449">AS8449</a> action pref=110; accept <a href="/as-set/AS-ELCAT">AS-ELCAT</a> <a href="/as-set/AS-ELCAT-V6">AS-ELCAT-V6</a>
+export:         TO <a href="/AS8449">AS8449</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS6939">AS6939</a> action pref=110; accept ANY
+export:         TO <a href="/AS6939">AS6939</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS50060">AS50060</a> action pref=110; accept <a href="/AS50060">AS50060</a>
+export:         TO <a href="/AS50060">AS50060</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS24589">AS24589</a> action pref=110; accept <a href="/as-set/AS-TELENET-LATVIA">AS-TELENET-LATVIA</a>
+export:         TO <a href="/AS24589">AS24589</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS31214">AS31214</a> action pref=110; accept <a href="/as-set/AS-TISDIALOG">AS-TISDIALOG</a>
+export:         TO <a href="/AS31214">AS31214</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS12555">AS12555</a> action pref=110; accept <a href="/as-set/AS-CUBIO-RUS">AS-CUBIO-RUS</a>
+export:         TO <a href="/AS12555">AS12555</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS41096">AS41096</a> action pref=110; accept <a href="/AS41096">AS41096</a>
+export:         TO <a href="/AS41096">AS41096</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS56689">AS56689</a> action pref=110; accept <a href="/as-set/AS-ELITEL">AS-ELITEL</a>
+export:         TO <a href="/AS56689">AS56689</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS202058">AS202058</a> action pref=110; accept <a href="/as-set/AS-PERMTK">AS-PERMTK</a>
+export:         TO <a href="/AS202058">AS202058</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS7979">AS7979</a> action pref=110; accept <a href="/AS7979">AS7979</a>
+export:         TO <a href="/AS7979">AS7979</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+remarks:
+import:         from <a href="/AS35810">AS35810</a> action pref=110; accept <a href="/as-set/AS-BIGTELECOM">AS-BIGTELECOM</a>
+export:         TO <a href="/AS35810">AS35810</a> announce <a href="/as-set/AS-Direct-Telecom">AS-Direct-Telecom</a>
+org:            <a href="https://apps.db.ripe.net/db-web-ui/query?searchtext=ORG-RA21-RIPE">ORG-RA21-RIPE</a>
+admin-c:        DUMY-RIPE
+tech-c:         DUMY-RIPE
+status:         ASSIGNED
+notify:         lesha@westcall.net
+mnt-by:         RIPE-NCC-END-MNT
+mnt-by:         RAID-MNT
+created:        2004-05-26T14:49:52Z
+last-modified:  2025-10-21T06:39:05Z
+source:         RIPE
+remarks:        ****************************
+remarks:        * THIS OBJECT IS MODIFIED
+remarks:        * Please note that all data that is generally regarded as personal
+remarks:        * data has been removed from this object.
+remarks:        * To view the original object, please query the RIPE Database at:
+remarks:        * http://www.ripe.net/whois
+remarks:        ****************************
+
+
+organisation:   <a href="https://apps.db.ripe.net/db-web-ui/query?searchtext=ORG-RA21-RIPE">ORG-RA21-RIPE</a>
+org-name:       JSC &#34;ER-Telecom Holding&#34;
+country:        RU
+org-type:       LIR
+address:        Dummy address for <a href="https://apps.db.ripe.net/db-web-ui/query?searchtext=ORG-RA21-RIPE">ORG-RA21-RIPE</a>
+# Email removed, Log into bgp.tools to see whois emails
+abuse-c:        RAID1-RIPE
+mnt-ref:        RIPE-NCC-HM-MNT
+mnt-ref:        RAID-MNT
+mnt-ref:        ENFORTA-MNT
+mnt-ref:        AS8345-MNT
+mnt-ref:        RU-NTK-MNT
+mnt-by:         RIPE-NCC-HM-MNT
+mnt-by:         RAID-MNT
+created:        2004-04-17T11:56:55Z
+last-modified:  2024-01-18T14:09:09Z
+source:         RIPE
+remarks:        ****************************
+remarks:        * THIS OBJECT IS MODIFIED
+remarks:        * Please note that all data that is generally regarded as personal
+remarks:        * data has been removed from this object.
+remarks:        * To view the original object, please query the RIPE Database at:
+remarks:        * http://www.ripe.net/whois
+remarks:        ****************************
+
+</pre>
+                        
+                        
+                        <a style="font-size: small;">Last Update: 2025-12-11T03:25:11Z UTC </a>
+                        
+                        <hr>
+                        
+                            <h2>Member of the following AS-SETs</h2>
+
+                            <table id="fhTable" class="full-width-table ">
+                                <tbody id="prefixlist-tbody">
+                                    <tr>
+                                        <th class="boldpls nowrap"> - </th>
+                                        <th class="boldpls">Member</th>
+                                        
+                                        <th class="boldpls nowrap">ASN Count</th>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as3267:as-cust:as-biz:as-full">as3267:as-cust:as-biz:as-full</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">23</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-direct-telecom">as-direct-telecom</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">11</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-retn-actual-v6">as-retn-actual-v6</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">3842</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">LEVEL3</td>
+                                        
+                                        <td><a href="/as-set/LEVEL3::as-level3-origins-eu">as-level3-origins-eu</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">0</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as209141:as-rucust">as209141:as-rucust</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap boldpls"><p style="display: contents;color: red">67893</p></td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-rus-korabl-nahui">as-rus-korabl-nahui</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">641</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-rascom-amsix">as-rascom-amsix</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">75</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-telros">as-telros</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">6</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-blocked-ru">as-blocked-ru</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">641</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as50581:as-block">as50581:as-block</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">642</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as34251:as-rufile">as34251:as-rufile</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">143</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-block-set">as-block-set</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">638</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                        
+
+                    </div>
+
+                    
+
+                    
+
+                    
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="superclearfix">
+            
+            <div class="superclearfix">
+                
+            </div>
+
+            <div class="superclearfix">
+                
+            </div>
+
+
+        </div>
+
+
+        <div class="group js-footer" id="footer">
+            <nav>
+                <div>
+                    <ul>
+                        <li><a href="/kb/api" target="_blank">Scripting/API</a></li>
+                        <li><a href="/credits" target="_blank">Credits</a></li>
+                        <li><a href="/pricing" target="_blank">Pricing</a></li>
+                        <li><a href="/kb/contact" target="_blank">Contact Us</a></li>
+                        <li><a href="https://github.com/bgptools/issues" target="_blank">Issue Tracker</a></li>
+                        <li><a href="/kb/setup-sessions" target="">Contribute Data</a></li>
+                        
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <script>
+    
+    var inhash = window.location.hash;
+    if (inhash == "#asinfo") {
+        
+    } else if (inhash == "#prefixes") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#prefix-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#prefixes-page');
+        aaa[0].style.display = "";
+
+    } else if (inhash == "#connectivity" || inhash == "#peers" || inhash == "#upstreams" || inhash == "#downstreams") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#connectivity-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#connectivity-page');
+        aaa[0].style.display = "";
+    } else if (inhash == "#whois") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#whois-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#whois-page');
+        aaa[0].style.display = "";
+    } else if (inhash == "#ix") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#ix-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#ix-page');
+        aaa[0].style.display = "";
+    }</script>
+
+    <script>
+    
+
+
+    ;(function() {
+  'use strict'
+
+  function scaleImageMap() {
+    function resizeMap() {
+      function resizeAreaTag(cachedAreaCoords, idx) {
+        function scale(coord) {
+          var dimension = 1 === (isWidth = 1 - isWidth) ? 'width' : 'height'
+          return (
+            padding[dimension] +
+            Math.floor(Number(coord) * scalingFactor[dimension])
+          )
+        }
+
+        var isWidth = 0
+        areas[idx].coords = cachedAreaCoords
+          .split(',')
+          .map(scale)
+          .join(',')
+      }
+
+      var scalingFactor = {
+        width: image.width / image.naturalWidth,
+        height: image.height / image.naturalHeight,
+      }
+
+      var padding = {
+        width: parseInt(
+          window.getComputedStyle(image, null).getPropertyValue('padding-left'),
+          10
+        ),
+        height: parseInt(
+          window.getComputedStyle(image, null).getPropertyValue('padding-top'),
+          10
+        ),
+      }
+
+      cachedAreaCoordsArray.forEach(resizeAreaTag)
+    }
+
+    function getCoords(e) {
+      
+      return e.coords.replace(/ *, */g, ',').replace(/ +/g, ',')
+    }
+
+    function debounce() {
+      clearTimeout(timer)
+      timer = setTimeout(resizeMap, 250)
+    }
+
+    function start() {
+      if (
+        image.width !== image.naturalWidth ||
+        image.height !== image.naturalHeight
+      ) {
+        resizeMap()
+      }
+    }
+
+    function addEventListeners() {
+      image.addEventListener('load', resizeMap, false) 
+      window.addEventListener('focus', resizeMap, false) 
+      window.addEventListener('resize', debounce, false)
+      window.addEventListener('readystatechange', resizeMap, false)
+      document.addEventListener('fullscreenchange', resizeMap, false)
+    }
+
+    function beenHere() {
+      return 'function' === typeof map._resize
+    }
+
+    function getImg(name) {
+      return document.querySelector('img[usemap="#world"]')
+    }
+
+    function setup() {
+      areas = map.getElementsByTagName('area')
+      cachedAreaCoordsArray = Array.prototype.map.call(areas, getCoords)
+      image = getImg('#' + map.name) || getImg(map.name)
+      map._resize = resizeMap 
+    }
+
+    var  
+      map = this,
+      areas = null,
+      cachedAreaCoordsArray = null,
+      image = null,
+      timer = null
+
+    if (!beenHere()) {
+      setup()
+      addEventListeners()
+      start()
+    } else {
+      map._resize() 
+    }
+  }
+
+  function factory() {
+    function chkMap(element) {
+      if (!element.tagName) {
+        throw new TypeError('Object is not a valid DOM element')
+      } else if ('MAP' !== element.tagName.toUpperCase()) {
+        throw new TypeError(
+          'Expected <MAP> tag, found <' + element.tagName + '>.'
+        )
+      }
+    }
+
+    function init(element) {
+      if (element) {
+        chkMap(element)
+        scaleImageMap.call(element)
+        maps.push(element)
+      }
+    }
+
+    var maps
+
+    return function imageMapResizeF(target) {
+      maps = [] 
+
+      switch (typeof target) {
+        case 'undefined':
+        case 'string':
+          Array.prototype.forEach.call(
+            document.querySelectorAll(target || 'map'),
+            init
+          )
+          break
+        case 'object':
+          init(target)
+          break
+        default:
+          throw new TypeError('Unexpected data type (' + typeof target + ').')
+      }
+
+      return maps
+    }
+  }
+
+  if (typeof define === 'function' && define.amd) {
+    define([], factory)
+  } else if (typeof module === 'object' && typeof module.exports === 'object') {
+    module.exports = factory() 
+  } else {
+    window.imageMapResize = factory()
+  }
+
+  if ('jQuery' in window) {
+    window.jQuery.fn.imageMapResize = function $imageMapResizeF() {
+      return this.filter('map')
+        .each(scaleImageMap)
+        .end()
+    }
+  }
+})()
+    
+    </script>
+    <script>
+        var imgEl = document.getElementById("pathimg");
+        imgEl.addEventListener("mouseover",function() {
+            imageMapResize('#world');
+        })
+    </script>
+    <script src="/assets/tablesort.min.js"></script>
+    <script>
+        addEventListener("load", (event) => {
+            
+            
+            var sort = new Tablesort(document.getElementById('donotscrapebgptools-upstreamTable'));
+            var sort2 = new Tablesort(document.getElementById('donotscrapebgptools-upstreamTablePeers'));
+            
+            
+            
+        });
+    </script>
+    
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        setTimeout(function() {
+
+        var beaconHttp = new XMLHttpRequest();
+        var url = '/performance-beacon';
+        var params = JSON.stringify(window.performance)
+        beaconHttp.open('POST', url, true);
+        
+        
+        beaconHttp.setRequestHeader('Content-type', 'application/json');
+        beaconHttp.setRequestHeader('visit-url', "/as/31484");
+        if (navigator.connection) {
+            beaconHttp.setRequestHeader('client-side-rtt', navigator.connection.rtt);
+        } else {
+            beaconHttp.setRequestHeader('client-side-rtt', '-2');
+        }
+        beaconHttp.onreadystatechange = function() {}
+        beaconHttp.send(params);
+        },1000)
+    }, false);
+</script>
+
+</body>
+
+
+</html>

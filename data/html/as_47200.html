@@ -1,0 +1,1194 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="AS47200 (NIX.CZ Route Servers)&#39;s is a 17 year old BGP network that is peering with 12 other networks and has 0 upstream carriers">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000">
+    <link rel="search" type="application/opensearchdescription+xml" title="BGP.Tools" href="https://bgp.tools/opensearch.xml">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="theme-color" content="#000000">
+    <link href="https://social.bgp.tools/@bgptools" rel="me">
+    <link rel="canonical" href="https://bgp.tools/as/47200" />
+    <title>AS47200 NIX.CZ Route Servers - bgp.tools</title>
+    <link rel="stylesheet" type="text/css" href="/assets/main-new.css?2025-12-13-1541%20UTC">
+</head>
+
+<body>
+    <div id="container">
+        
+<div id="global-header" class="global-header-top">
+    <div class="header-sitewide">
+        <div class="global-header">
+            <div class="header-logo">
+                <a href="/" id="logo" class="content">bgp.tools</a>
+            </div>
+            <form id="search" action="/search" method="get" accept-charset="utf-8" role="search" class="top-search-header js-search-hash">
+                <div class="searchfield">
+                    <input type="search" autocomplete="off" name="q" id="site-search-text" title="Search" value="" placeholder="Start here..." autofocus="autofocus" class="js-search-focus">
+                    <button type="submit" id="search-submit" class="search-submit">Search</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div id="global-header-blob" >
+    <a id="auth-header-text" href="/login">Login</a>
+    
+</div>
+<div id="global-header-bar" >
+    <a id="auth-header-bar-text" href="/login">Login</a>
+    
+</div>
+<div class="small-clearfix"></div>
+
+        <div id="global-container">
+            
+
+
+            
+            <div class="section-tabs js-tabs">
+                <ul>
+                    
+<li class="active">
+    <h1> <a id="viewbutton-tab" href="/as/47200">View</a></h1>
+</li>
+
+<li >
+    <a id="editbutton-tab" href="/edit/as/47200">Edit</a>
+</li>
+
+
+
+
+
+                    <li style="float: right;">
+                        
+                        <img id="ws-status" width="24" height="24" src="/assets/disconnected.png" title="Not Connected To realtime data updates">
+                        
+                    </li>
+                </ul>
+            </div>
+
+            <div id="search-container">
+
+                <div class="column-full-width">
+
+                    <div class="clearfix">
+                        
+                    </div>
+                    
+                    <div class="warningbox">This ASN is not currently in the global routing table</div>
+                    
+                    
+
+                    <div class="network-header">
+                        
+                        
+                        <img width="334" height="250" src="/img/47200" alt="The website screenshot for http://www.nix.cz" >
+                        
+                        
+                        <p id="network-name" class="heading-xlarge">NIX.CZ Route Servers</p>
+                        <p id="network-number">
+                            AS Number
+                            <strong id="ASNumberString" pure="47200">47200</strong>
+                            <br>
+                        
+                            Website
+                            <strong><a href="http://www.nix.cz" rel="nofollow">http://www.nix.cz</a></strong>
+                        
+                        </p>
+
+                    </div>
+
+
+                    <div class="clearfix">
+                        
+                    </div>
+
+
+                    <div class="section-tabs js-tabs">
+                        <ul>
+
+                            <li id="overview-tab-li" class="active">
+                                <a id="overview-tab" href="#asinfo">Overview</a>
+                            </li>
+                            
+                            <li id="whois-tab-li">
+                                <a id="whois-tab" href="#whois">Whois</a>
+                            </li>
+                        
+                            <li id="ix-tab-li">
+                                <a id="ix-tab" href="#ix">IX</a>
+                            </li>
+                        
+                        
+                        </ul>
+                    </div>
+
+<script>
+    function removeAllActiveTab() {
+        var tabs = [
+            "overview-tab-li", 
+            "prefix-tab-li", 
+            "connectivity-tab-li",
+            "whois-tab-li",
+            "ix-tab-li",
+            "issues-tab-li"
+        ];
+
+        tabs.forEach(element => {
+            var aaa = document.querySelectorAll('#'+element);
+            if(aaa.length != 0) {
+                aaa[0].classList.remove("active")
+            }
+        });
+    }
+
+    function hideAllContent() {
+        var tabs = [
+            "overview-page", 
+            "prefixes-page", 
+            "connectivity-page",
+            "whois-page",
+            "ix-page",
+            "issues-page"
+        ];
+
+        tabs.forEach(element => {
+            var aaa = document.querySelectorAll('#'+element);
+            if(aaa.length != 0) {
+                aaa[0].style.display = "none";
+            }
+        });
+        if (document.getElementById("donotscrapebgptools-prefixlist-tbody")) {
+            var prefixrows = document.getElementById("donotscrapebgptools-prefixlist-tbody").children;
+            for (var i = 0; i < prefixrows.length; i++) {
+                prefixrows[i].style = "";
+            }
+        }
+    }
+
+    var otab = document.querySelectorAll('#overview-tab');
+    otab[0].addEventListener("click", function () {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#overview-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#overview-page');
+        aaa[0].style.display = "";
+    });
+    
+
+    var wtab = document.querySelectorAll('#whois-tab');
+    wtab[0].addEventListener("click", function () {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#whois-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#whois-page');
+        aaa[0].style.display = "";
+    });
+
+</script>
+
+
+<script>
+var wtab = document.querySelectorAll('#ix-tab');
+wtab[0].addEventListener("click", function () {
+    removeAllActiveTab()
+    hideAllContent()
+    var otab2 = document.querySelectorAll('#ix-tab-li');
+    otab2[0].classList.add("active");
+
+    var aaa = document.querySelectorAll('#ix-page');
+    aaa[0].style.display = "";
+});
+</script>
+
+
+                    
+                    <div id="overview-page">
+
+                        <div class="grid-row">
+                        
+                        <div class="column-two-thirds">
+                            <dl>
+                                <dt>Registered on</dt>
+                                <dd class="text data">
+                                    
+                                    15 May 2008 (17 years old)
+                                </dd>
+                            
+                            
+                            <dt>Registered to</dt>
+                            <dd class="text data">
+                                <a href="/rir-owner/cz.nix">cz.nix</a> (ripe)</dd>
+                                
+                            
+                            </dl>
+                        </div>
+                        
+    
+                        <dl class="column-third">
+                            <dt>Network status</dt>
+                            <dd class="text data">
+                                
+                                Active, Allocated under RIPE
+                                
+                            </dd>
+                        </dl>
+    
+                        </div>
+    
+                        <div class="grid-row">
+                            <dl class="column-two-thirds">
+                                <dt>Network type</dt>
+                                <dd class="text data">
+                                    Unknown
+                                </dd>
+                            </dl>
+    
+                            <dl class="column-third">
+                                <dt>Prefixes Originated</dt>
+                                <dd class="data">0 IPv4, 0 IPv6</dd>
+                            </dl>
+                        </div>
+                        <div class="grid-row">
+                            <div class="column-half">
+    
+                                <h2 class="heading-medium"><derp>Upstreams</derp></h2>
+                                <ul>
+                                    
+                                </ul>
+    
+                            </div>
+    
+                            <div class="column-half">
+                                
+                                    <h2 class="heading-medium"><derp>Rankings</derp></h2>
+                                    
+                                    <li><span id="sic0">#65 for <a href="/rankings/CZ?sort=peering">Known Peers  in Czech Republic</a></span></li>
+                                    
+                                
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                    <div style="display: none" id="whois-page">
+                        
+                        
+                        <pre style="white-space: pre-wrap;">aut-num:        <a href="/AS47200">AS47200</a>
+as-name:        NIXCZ-RS
+descr:          NIX.CZ z.s.p.o.
+descr:          routeservers at Neutral Internet eXchange of Czech Republic
+org:            <a href="https://apps.db.ripe.net/db-web-ui/query?searchtext=ORG-Nz2-RIPE">ORG-Nz2-RIPE</a>
+import:         from <a href="/AS35236">AS35236</a> accept <a href="/as-set/AS-2CONNECT">AS-2CONNECT</a>
+export:         to <a href="/AS35236">AS35236</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS25234">AS25234</a> accept <a href="/as-set/AS-ACTIVE24-CZ">AS-ACTIVE24-CZ</a>
+export:         to <a href="/AS25234">AS25234</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS2484">AS2484</a> accept <a href="/as-set/AS-AFNIC">AS-AFNIC</a>
+export:         to <a href="/AS2484">AS2484</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS42473">AS42473</a> accept <a href="/as-set/AS-ANEXIA">AS-ANEXIA</a>
+export:         to <a href="/AS42473">AS42473</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS42841">AS42841</a> accept <a href="/as-set/AS-ANTIK">AS-ANTIK</a>
+export:         to <a href="/AS42841">AS42841</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS112">AS112</a> accept <a href="/AS112">AS112</a>
+export:         to <a href="/AS112">AS112</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS2686">AS2686</a> accept <a href="/as-set/AS-IGNEMEA">AS-IGNEMEA</a>
+export:         to <a href="/AS2686">AS2686</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS198605">AS198605</a> accept <a href="/as-set/AS-ASW">AS-ASW</a>
+export:         to <a href="/AS198605">AS198605</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS20723">AS20723</a> accept <a href="/as-set/AS-AVONET-CZ">AS-AVONET-CZ</a>
+export:         to <a href="/AS20723">AS20723</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS13119">AS13119</a> accept <a href="/as-set/AS13119:AS-Szczecin-COM">AS13119:AS-Szczecin-COM</a>
+export:         to <a href="/AS13119">AS13119</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS20940">AS20940</a> accept <a href="/as-set/AS-AKAMAI">AS-AKAMAI</a>
+export:         to <a href="/AS20940">AS20940</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS32787">AS32787</a> accept <a href="/as-set/AS-PROLE">AS-PROLE</a>
+export:         to <a href="/AS32787">AS32787</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS52092">AS52092</a> accept <a href="/AS52092">AS52092</a>
+export:         to <a href="/AS52092">AS52092</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS42656">AS42656</a> accept <a href="/as-set/AS-ALLEGROGROUP">AS-ALLEGROGROUP</a>
+export:         to <a href="/AS42656">AS42656</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS44424">AS44424</a> accept <a href="/as-set/AS-ALLEGROGROUP">AS-ALLEGROGROUP</a>
+export:         to <a href="/AS44424">AS44424</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS59970">AS59970</a> accept <a href="/AS59970">AS59970</a>
+export:         to <a href="/AS59970">AS59970</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS1299">AS1299</a> accept <a href="/AS1299">AS1299</a>
+export:         to <a href="/AS1299">AS1299</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS201811">AS201811</a> accept <a href="/as-set/AS-A">AS-A</a>
+export:         to <a href="/AS201811">AS201811</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS208882">AS208882</a> accept <a href="/AS208882">AS208882</a>
+export:         to <a href="/AS208882">AS208882</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS197307">AS197307</a> accept <a href="/AS197307">AS197307</a>
+export:         to <a href="/AS197307">AS197307</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS4455">AS4455</a> accept <a href="/as-set/AS-BSO">AS-BSO</a>
+export:         to <a href="/AS4455">AS4455</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS4455">AS4455</a> accept <a href="/as-set/AS-IXREACH">AS-IXREACH</a>
+export:         to <a href="/AS4455">AS4455</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS31229">AS31229</a> accept  <a href="/as-set/AS-BEYOND">AS-BEYOND</a>
+export:         to <a href="/AS31229">AS31229</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS31229">AS31229</a> accept <a href="/as-set/AS-BEYOND">AS-BEYOND</a>
+export:         to <a href="/AS31229">AS31229</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS49025">AS49025</a> accept <a href="/as-set/AS-PROZETA-NET">AS-PROZETA-NET</a>
+export:         to <a href="/AS49025">AS49025</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS56456">AS56456</a> accept <a href="/AS56456">AS56456</a>
+export:         to <a href="/AS56456">AS56456</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS2852">AS2852</a> accept <a href="/as-set/AS2852:AS-CESNET-NIX">AS2852:AS-CESNET-NIX</a>
+export:         to <a href="/AS2852">AS2852</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS28725">AS28725</a> accept <a href="/as-set/AS-CETIN">AS-CETIN</a>
+export:         to <a href="/AS28725">AS28725</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS28978">AS28978</a> accept <a href="/as-set/AS-COIG">AS-COIG</a>
+export:         to <a href="/AS28978">AS28978</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS204394">AS204394</a> accept <a href="/AS204394">AS204394</a>
+export:         to <a href="/AS204394">AS204394</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS28892">AS28892</a> accept <a href="/AS28892">AS28892</a>
+export:         to <a href="/AS28892">AS28892</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS25192">AS25192</a> accept <a href="/as-set/AS-CZNIC-NIX">AS-CZNIC-NIX</a>
+export:         to <a href="/AS25192">AS25192</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS200070">AS200070</a> accept <a href="/as-set/AS-CZNIC-TRANSIT">AS-CZNIC-TRANSIT</a>
+export:         to <a href="/AS200070">AS200070</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS10906">AS10906</a> accept <a href="/as-set/AS-DNS-BR:AS-B">AS-DNS-BR:AS-B</a>
+export:         to <a href="/AS10906">AS10906</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS11284">AS11284</a> accept <a href="/as-set/AS-DNS-BR:AS-C">AS-DNS-BR:AS-C</a>
+export:         to <a href="/AS11284">AS11284</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS11644">AS11644</a> accept <a href="/as-set/AS-DNS-BR:AS-D">AS-DNS-BR:AS-D</a>
+export:         to <a href="/AS11644">AS11644</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS59747">AS59747</a> accept <a href="/as-set/AS-NIX-DR">AS-NIX-DR</a>
+export:         to <a href="/AS59747">AS59747</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS49206">AS49206</a> accept <a href="/AS49206">AS49206</a>
+export:         to <a href="/AS49206">AS49206</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS15685">AS15685</a> accept <a href="/as-set/AS-CASABLANCA-NIX">AS-CASABLANCA-NIX</a>
+export:         to <a href="/AS15685">AS15685</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS13150">AS13150</a> accept <a href="/AS13150">AS13150</a>
+export:         to <a href="/AS13150">AS13150</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS23764">AS23764</a> accept <a href="/as-set/AS-CTGNet">AS-CTGNet</a>
+export:         to <a href="/AS23764">AS23764</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS36692">AS36692</a> accept <a href="/AS36692">AS36692</a>
+export:         to <a href="/AS36692">AS36692</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS47110">AS47110</a> accept <a href="/as-set/AS-CLOUD4COM">AS-CLOUD4COM</a>
+export:         to <a href="/AS47110">AS47110</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS201730">AS201730</a> accept <a href="/as-set/AS201730:AS-CZ-DS">AS201730:AS-CZ-DS</a>
+export:         to <a href="/AS201730">AS201730</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS13335">AS13335</a> accept <a href="/as-set/AS-CLOUDFLARE">AS-CLOUDFLARE</a>
+export:         to <a href="/AS13335">AS13335</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS8646">AS8646</a> accept <a href="/as-set/AS-8646">AS-8646</a>
+export:         to <a href="/AS8646">AS8646</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS8220">AS8220</a> accept <a href="/as-set/AS-COLTEU">AS-COLTEU</a>
+export:         to <a href="/AS8220">AS8220</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS199803">AS199803</a> accept <a href="/as-set/AS-COMSOURCE">AS-COMSOURCE</a>
+export:         to <a href="/AS199803">AS199803</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS48602">AS48602</a> accept <a href="/as-set/AS-CONNECTPLUS">AS-CONNECTPLUS</a>
+export:         to <a href="/AS48602">AS48602</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS35592">AS35592</a> accept <a href="/as-set/AS-COOLHOUSING">AS-COOLHOUSING</a>
+export:         to <a href="/AS35592">AS35592</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS33891">AS33891</a> accept <a href="/as-set/AS-CORE-BACKBONE">AS-CORE-BACKBONE</a>
+export:         to <a href="/AS33891">AS33891</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS34820">AS34820</a> accept <a href="/as-set/AS-DOL">AS-DOL</a>
+export:         to <a href="/AS34820">AS34820</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS61342">AS61342</a> accept <a href="/AS61342">AS61342</a>
+export:         to <a href="/AS61342">AS61342</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS203072">AS203072</a> accept <a href="/as-set/AS-DOMATV">AS-DOMATV</a>
+export:         to <a href="/AS203072">AS203072</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS208060">AS208060</a> accept <a href="/AS208060">AS208060</a>
+export:         to <a href="/AS208060">AS208060</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS15614">AS15614</a> accept <a href="/as-set/AS15614:AS-DRAGON">AS15614:AS-DRAGON</a>
+export:         to <a href="/AS15614">AS15614</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS202605">AS202605</a> accept <a href="/as-set/AS-MORNET-NIX">AS-MORNET-NIX</a>
+export:         to <a href="/AS202605">AS202605</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS201053">AS201053</a> accept <a href="/as-set/AS-EPIX-TRANSIT">AS-EPIX-TRANSIT</a>
+export:         to <a href="/AS201053">AS201053</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS211816">AS211816</a> accept <a href="/AS211816">AS211816</a>
+export:         to <a href="/AS211816">AS211816</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS48448">AS48448</a> accept <a href="/as-set/AS-EMBARK">AS-EMBARK</a>
+export:         to <a href="/AS48448">AS48448</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS31117">AS31117</a> accept <a href="/as-set/AS-ENERGOTEL">AS-ENERGOTEL</a>
+export:         to <a href="/AS31117">AS31117</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS20804">AS20804</a> accept <a href="/as-set/AS-EXATEL-INT">AS-EXATEL-INT</a>
+export:         to <a href="/AS20804">AS20804</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS50833">AS50833</a> accept <a href="/AS50833">AS50833</a>
+export:         to <a href="/AS50833">AS50833</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS51800">AS51800</a> accept <a href="/as-set/AS-FIBERNET-SET">AS-FIBERNET-SET</a>
+export:         to <a href="/AS51800">AS51800</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS197046">AS197046</a> accept <a href="/as-set/AS-FIXNET">AS-FIXNET</a>
+export:         to <a href="/AS197046">AS197046</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS32934">AS32934</a> accept <a href="/as-set/AS-FACEBOOK">AS-FACEBOOK</a>
+export:         to <a href="/AS32934">AS32934</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS50398">AS50398</a> accept <a href="/AS50398">AS50398</a>
+export:         to <a href="/AS50398">AS50398</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS24641">AS24641</a> accept <a href="/as-set/AS-FASTER-CZNIX">AS-FASTER-CZNIX</a>
+export:         to <a href="/AS24641">AS24641</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS54113">AS54113</a> accept <a href="/as-set/AS-FASTLY">AS-FASTLY</a>
+export:         to <a href="/AS54113">AS54113</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS207187">AS207187</a> accept <a href="/as-set/AS-TKRJASEK:AS-NIXCZ">AS-TKRJASEK:AS-NIXCZ</a>
+export:         to <a href="/AS207187">AS207187</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS8251">AS8251</a> accept <a href="/as-set/AS-NFX-NIX">AS-NFX-NIX</a>
+export:         to <a href="/AS8251">AS8251</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS29504">AS29504</a> accept <a href="/as-set/AS-LBCFREE">AS-LBCFREE</a>
+export:         to <a href="/AS29504">AS29504</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS199524">AS199524</a> accept <a href="/AS199524">AS199524</a>
+export:         to <a href="/AS199524">AS199524</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS199298">AS199298</a> accept <a href="/as-set/AS-GIGANET-CZ">AS-GIGANET-CZ</a>
+export:         to <a href="/AS199298">AS199298</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS29086">AS29086</a> accept <a href="/as-set/AS-GITY">AS-GITY</a>
+export:         to <a href="/AS29086">AS29086</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS15169">AS15169</a> accept <a href="/as-set/AS-GOOGLE">AS-GOOGLE</a>
+export:         to <a href="/AS15169">AS15169</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS60592">AS60592</a> accept <a href="/AS60592">AS60592</a>
+export:         to <a href="/AS60592">AS60592</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS24940">AS24940</a> accept <a href="/as-set/AS-HETZNER">AS-HETZNER</a>
+export:         to <a href="/AS24940">AS24940</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS40994">AS40994</a> accept <a href="/as-set/AS40994:AS-ALWYZON">AS40994:AS-ALWYZON</a>
+export:         to <a href="/AS40994">AS40994</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS36236">AS36236</a> accept <a href="/as-set/AS-HOSTVIRTUAL">AS-HOSTVIRTUAL</a>
+export:         to <a href="/AS36236">AS36236</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS51248">AS51248</a> accept <a href="/as-set/AS-HOST-TELECOM-CZ">AS-HOST-TELECOM-CZ</a>
+export:         to <a href="/AS51248">AS51248</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS6939">AS6939</a> accept <a href="/as-set/AS-HURRICANE">AS-HURRICANE</a>
+export:         to <a href="/AS6939">AS6939</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS6939">AS6939</a> accept <a href="/as-set/AS-HURRICANEv6">AS-HURRICANEv6</a>
+export:         to <a href="/AS6939">AS6939</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS36351">AS36351</a> accept <a href="/as-set/AS-SOFTLAYER">AS-SOFTLAYER</a>
+export:         to <a href="/AS36351">AS36351</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS20144">AS20144</a> accept <a href="/as-set/AS-LROOT">AS-LROOT</a>
+export:         to <a href="/AS20144">AS20144</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS199490">AS199490</a> accept <a href="/as-set/AS-INTERCONNECT-CZ">AS-INTERCONNECT-CZ</a>
+export:         to <a href="/AS199490">AS199490</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS6204">AS6204</a> accept <a href="/as-set/AS-INTERKVM">AS-INTERKVM</a>
+export:         to <a href="/AS6204">AS6204</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS24806">AS24806</a> accept <a href="/as-set/AS-INTCZ-NIX">AS-INTCZ-NIX</a>
+export:         to <a href="/AS24806">AS24806</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS25424">AS25424</a> accept <a href="/as-set/AS-INEXT">AS-INEXT</a>
+export:         to <a href="/AS25424">AS25424</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS47232">AS47232</a> accept <a href="/as-set/AS-ISPALLIANCE-CZ">AS-ISPALLIANCE-CZ</a>
+export:         to <a href="/AS47232">AS47232</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS48417">AS48417</a> accept <a href="/as-set/AS-ITS-NETWORKS">AS-ITS-NETWORKS</a>
+export:         to <a href="/AS48417">AS48417</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS49121">AS49121</a> accept <a href="/as-set/AS-INFTELE">AS-INFTELE</a>
+export:         to <a href="/AS49121">AS49121</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS5405">AS5405</a> accept <a href="/as-set/AS5405:AS-INTERDOTLINK">AS5405:AS-INTERDOTLINK</a>
+export:         to <a href="/AS5405">AS5405</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS206784">AS206784</a> accept <a href="/AS206784">AS206784</a>
+export:         to <a href="/AS206784">AS206784</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS211826">AS211826</a> accept <a href="/as-set/AS211826:AS-ISTQ">AS211826:AS-ISTQ</a>
+export:         to <a href="/AS211826">AS211826</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS215582">AS215582</a> accept <a href="/as-set/AS215582:AS-IPV6PROJECT-EU">AS215582:AS-IPV6PROJECT-EU</a>
+export:         to <a href="/AS215582">AS215582</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS59984">AS59984</a> accept <a href="/as-set/AS-KLFNET">AS-KLFNET</a>
+export:         to <a href="/AS59984">AS59984</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS42000">AS42000</a> accept <a href="/as-set/AS-KAORA">AS-KAORA</a>
+export:         to <a href="/AS42000">AS42000</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS201163">AS201163</a> accept <a href="/AS201163">AS201163</a>
+export:         to <a href="/AS201163">AS201163</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS198101">AS198101</a> accept <a href="/as-set/AS-KOOPERATIVA">AS-KOOPERATIVA</a>
+export:         to <a href="/AS198101">AS198101</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS56800">AS56800</a> accept <a href="/AS56800">AS56800</a>
+export:         to <a href="/AS56800">AS56800</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS42005">AS42005</a> accept <a href="/as-set/AS-LIGHTSTORM">AS-LIGHTSTORM</a>
+export:         to <a href="/AS42005">AS42005</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS22822">AS22822</a> accept <a href="/as-set/AS-LLNW">AS-LLNW</a>
+export:         to <a href="/AS22822">AS22822</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS28972">AS28972</a> accept <a href="/as-set/AS-MSOFT-NETWORKS">AS-MSOFT-NETWORKS</a>
+export:         to <a href="/AS28972">AS28972</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS39904">AS39904</a> accept <a href="/as-set/AS-MERIT-NIX">AS-MERIT-NIX</a>
+export:         to <a href="/AS39904">AS39904</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS34080">AS34080</a> accept <a href="/AS34080">AS34080</a>
+export:         to <a href="/AS34080">AS34080</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS44522">AS44522</a> accept <a href="/as-set/AS-NS9_RIPN_NET">AS-NS9_RIPN_NET</a>
+export:         to <a href="/AS44522">AS44522</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS24971">AS24971</a> accept <a href="/as-set/AS24971:AS-MASTERCZ-CZNIX">AS24971:AS-MASTERCZ-CZNIX</a>
+export:         to <a href="/AS24971">AS24971</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS8075">AS8075</a> accept <a href="/AS8075">AS8075</a>
+export:         to <a href="/AS8075">AS8075</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS209719">AS209719</a> accept <a href="/AS209719">AS209719</a>
+export:         to <a href="/AS209719">AS209719</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS8913">AS8913</a> accept <a href="/as-set/AS-MOPOS-NIX">AS-MOPOS-NIX</a>
+export:         to <a href="/AS8913">AS8913</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS48298">AS48298</a> accept <a href="/AS48298">AS48298</a>
+export:         to <a href="/AS48298">AS48298</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS206703">AS206703</a> accept <a href="/AS206703">AS206703</a>
+export:         to <a href="/AS206703">AS206703</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS41711">AS41711</a> accept <a href="/as-set/AS-NFX-NIX">AS-NFX-NIX</a>
+export:         to <a href="/AS41711">AS41711</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS215704">AS215704</a> accept <a href="/AS215704">AS215704</a>
+export:         to <a href="/AS215704">AS215704</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS6881">AS6881</a> accept <a href="/as-set/AS-NIX">AS-NIX</a>
+export:         to <a href="/AS6881">AS6881</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS57463">AS57463</a> accept <a href="/as-set/AS-NETIX-INT">AS-NETIX-INT</a>
+export:         to <a href="/AS57463">AS57463</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS204860">AS204860</a> accept <a href="/as-set/AS-NETXAS">AS-NETXAS</a>
+export:         to <a href="/AS204860">AS204860</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS210111">AS210111</a> accept <a href="/AS210111">AS210111</a>
+export:         to <a href="/AS210111">AS210111</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS12741">AS12741</a> accept <a href="/as-set/AS-NETIA">AS-NETIA</a>
+export:         to <a href="/AS12741">AS12741</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS55256">AS55256</a> accept <a href="/as-set/AS-NETSKOPE">AS-NETSKOPE</a>
+export:         to <a href="/AS55256">AS55256</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS43413">AS43413</a> accept <a href="/as-set/AS43413:AS-NEWTEL">AS43413:AS-NEWTEL</a>
+export:         to <a href="/AS43413">AS43413</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS5610">AS5610</a> accept <a href="/as-set/AS-CTIOL">AS-CTIOL</a>
+export:         to <a href="/AS5610">AS5610</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS28952">AS28952</a> accept <a href="/as-set/AS-O2BSSK">AS-O2BSSK</a>
+export:         to <a href="/AS28952">AS28952</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS44306">AS44306</a> accept <a href="/as-set/AS-OMONIA">AS-OMONIA</a>
+export:         to <a href="/AS44306">AS44306</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS39817">AS39817</a> accept <a href="/as-set/AS-OVANET-NIX">AS-OVANET-NIX</a>
+export:         to <a href="/AS39817">AS39817</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS16276">AS16276</a> accept <a href="/as-set/AS-OVH">AS-OVH</a>
+export:         to <a href="/AS16276">AS16276</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS43542">AS43542</a> accept <a href="/as-set/AS-OPTONET-TRANSIT">AS-OPTONET-TRANSIT</a>
+export:         to <a href="/AS43542">AS43542</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS199405">AS199405</a> accept <a href="/AS199405">AS199405</a>
+export:         to <a href="/AS199405">AS199405</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS43653">AS43653</a> accept <a href="/as-set/AS-PEGONET">AS-PEGONET</a>
+export:         to <a href="/AS43653">AS43653</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS30764">AS30764</a> accept <a href="/as-set/AS-PODACZ">AS-PODACZ</a>
+export:         to <a href="/AS30764">AS30764</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS48451">AS48451</a> accept <a href="/AS48451">AS48451</a>
+export:         to <a href="/AS48451">AS48451</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS212232">AS212232</a> accept <a href="/AS212232">AS212232</a>
+export:         to <a href="/AS212232">AS212232</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS29208">AS29208</a> accept <a href="/as-set/as-dialtelecom">as-dialtelecom</a>
+export:         to <a href="/AS29208">AS29208</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS200970">AS200970</a> accept <a href="/as-set/AS200970:AS-RIEPERT">AS200970:AS-RIEPERT</a>
+export:         to <a href="/AS200970">AS200970</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS6507">AS6507</a> accept <a href="/AS6507">AS6507</a>
+export:         to <a href="/AS6507">AS6507</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS24482">AS24482</a> accept <a href="/as-set/AS-SGGS">AS-SGGS</a>
+export:         to <a href="/AS24482">AS24482</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS203165">AS203165</a> accept <a href="/AS203165">AS203165</a>
+export:         to <a href="/AS203165">AS203165</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS49931">AS49931</a> accept <a href="/AS49931">AS49931</a>
+export:         to <a href="/AS49931">AS49931</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS47868">AS47868</a> accept <a href="/as-set/AS-SUPRO-CZ">AS-SUPRO-CZ</a>
+export:         to <a href="/AS47868">AS47868</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS5578">AS5578</a> accept <a href="/as-set/AS-SWAN">AS-SWAN</a>
+export:         to <a href="/AS5578">AS5578</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS43037">AS43037</a> accept <a href="/as-set/AS-SEZNAM-CZ">AS-SEZNAM-CZ</a>
+export:         to <a href="/AS43037">AS43037</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS59959">AS59959</a> accept <a href="/as-set/AS59959:AS-SFERIA">AS59959:AS-SFERIA</a>
+export:         to <a href="/AS59959">AS59959</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS43709">AS43709</a> accept <a href="/as-set/AS-SILESNET">AS-SILESNET</a>
+export:         to <a href="/AS43709">AS43709</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS202297">AS202297</a> accept <a href="/as-set/AS-SKYLON">AS-SKYLON</a>
+export:         to <a href="/AS202297">AS202297</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS34955">AS34955</a> accept <a href="/AS34955">AS34955</a>
+export:         to <a href="/AS34955">AS34955</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS8778">AS8778</a> accept <a href="/as-set/AS-SLOVANET">AS-SLOVANET</a>
+export:         to <a href="/AS8778">AS8778</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS33353">AS33353</a> accept <a href="/as-set/AS-SBS">AS-SBS</a>
+export:         to <a href="/AS33353">AS33353</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS29583">AS29583</a> accept <a href="/AS29583">AS29583</a>
+export:         to <a href="/AS29583">AS29583</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS197013">AS197013</a> accept <a href="/as-set/AS-SPRINTEL">AS-SPRINTEL</a>
+export:         to <a href="/AS197013">AS197013</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS207153">AS207153</a> accept <a href="/AS207153">AS207153</a>
+export:         to <a href="/AS207153">AS207153</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS43070">AS43070</a> accept <a href="/as-set/AS-JAW">AS-JAW</a>
+export:         to <a href="/AS43070">AS43070</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS43070">AS43070</a> accept <a href="/as-set/AS-JAW-CORE">AS-JAW-CORE</a>
+export:         to <a href="/AS43070">AS43070</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS7713">AS7713</a> accept <a href="/AS7713">AS7713</a>
+export:         to <a href="/AS7713">AS7713</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS50698">AS50698</a> accept <a href="/as-set/AS-TETANET">AS-TETANET</a>
+export:         to <a href="/AS50698">AS50698</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS199657">AS199657</a> accept <a href="/AS199657">AS199657</a>
+export:         to <a href="/AS199657">AS199657</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS213387">AS213387</a> accept <a href="/AS213387">AS213387</a>
+export:         to <a href="/AS213387">AS213387</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS61296">AS61296</a> accept <a href="/as-set/as-techcom">as-techcom</a>
+export:         to <a href="/AS61296">AS61296</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS39791">AS39791</a> accept <a href="/as-set/AS39791:AS-TPS">AS39791:AS-TPS</a>
+export:         to <a href="/AS39791">AS39791</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS209369">AS209369</a> accept <a href="/as-set/AS209369:AS-TCPRO-NIX-CZ-IXP">AS209369:AS-TCPRO-NIX-CZ-IXP</a>
+export:         to <a href="/AS209369">AS209369</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS212974">AS212974</a> accept <a href="/AS212974">AS212974</a>
+export:         to <a href="/AS212974">AS212974</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS38949">AS38949</a> accept <a href="/as-set/AS-TRESTEL-SK">AS-TRESTEL-SK</a>
+export:         to <a href="/AS38949">AS38949</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS6663">AS6663</a> accept <a href="/as-set/AS-PANTEL">AS-PANTEL</a>
+export:         to <a href="/AS6663">AS6663</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS31042">AS31042</a> accept <a href="/as-set/AS-SBB-RS">AS-SBB-RS</a>
+export:         to <a href="/AS31042">AS31042</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS31042">AS31042</a> accept <a href="/as-set/AS-SBB-V6">AS-SBB-V6</a>
+export:         to <a href="/AS31042">AS31042</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS204384">AS204384</a> accept <a href="/AS204384">AS204384</a>
+export:         to <a href="/AS204384">AS204384</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS202877">AS202877</a> accept <a href="/AS202877">AS202877</a>
+export:         to <a href="/AS202877">AS202877</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS56344">AS56344</a> accept <a href="/AS56344">AS56344</a>
+export:         to <a href="/AS56344">AS56344</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS50695">AS50695</a> accept <a href="/AS50695">AS50695</a>
+export:         to <a href="/AS50695">AS50695</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS29405">AS29405</a> accept <a href="/as-set/AS29405:AS-VNET">AS29405:AS-VNET</a>
+export:         to <a href="/AS29405">AS29405</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS43541">AS43541</a> accept <a href="/as-set/AS-VSHOSTING-CZ">AS-VSHOSTING-CZ</a>
+export:         to <a href="/AS43541">AS43541</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS32590">AS32590</a> accept <a href="/as-set/AS-VALVE">AS-VALVE</a>
+export:         to <a href="/AS32590">AS32590</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS26415">AS26415</a> accept <a href="/as-set/AS-GTLD">AS-GTLD</a>
+export:         to <a href="/AS26415">AS26415</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS16019">AS16019</a> accept <a href="/as-set/AS-VODAFONE-CZ">AS-VODAFONE-CZ</a>
+export:         to <a href="/AS16019">AS16019</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS29134">AS29134</a> accept <a href="/as-set/AS-IGNUM-NIX">AS-IGNUM-NIX</a>
+export:         to <a href="/AS29134">AS29134</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS21430">AS21430</a> accept <a href="/as-set/AS-WIA-CUST">AS-WIA-CUST</a>
+export:         to <a href="/AS21430">AS21430</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS1820">AS1820</a> accept <a href="/as-set/AS-WTUC">AS-WTUC</a>
+export:         to <a href="/AS1820">AS1820</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS39790">AS39790</a> accept <a href="/as-set/AS-WEB4U">AS-WEB4U</a>
+export:         to <a href="/AS39790">AS39790</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS51013">AS51013</a> accept <a href="/as-set/AS-WEBSUPPORT">AS-WEBSUPPORT</a>
+export:         to <a href="/AS51013">AS51013</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS48689">AS48689</a> accept <a href="/as-set/AS48689:AS-WEBGLOBE-OUT">AS48689:AS-WEBGLOBE-OUT</a>
+export:         to <a href="/AS48689">AS48689</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS205535">AS205535</a> accept <a href="/AS205535">AS205535</a>
+export:         to <a href="/AS205535">AS205535</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS10310">AS10310</a> accept <a href="/as-set/AS-YAHOO">AS-YAHOO</a>
+export:         to <a href="/AS10310">AS10310</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS206548">AS206548</a> accept <a href="/AS206548">AS206548</a>
+export:         to <a href="/AS206548">AS206548</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS6461">AS6461</a> accept <a href="/as-set/AS-MFNX">AS-MFNX</a>
+export:         to <a href="/AS6461">AS6461</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS8218">AS8218</a> accept <a href="/as-set/AS-NEOT">AS-NEOT</a>
+export:         to <a href="/AS8218">AS8218</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS8218">AS8218</a> accept <a href="/as-set/AS-NEOT6">AS-NEOT6</a>
+export:         to <a href="/AS8218">AS8218</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS31349">AS31349</a> accept <a href="/AS31349">AS31349</a>
+export:         to <a href="/AS31349">AS31349</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS44185">AS44185</a> accept <a href="/as-set/AS-BNTS">AS-BNTS</a>
+export:         to <a href="/AS44185">AS44185</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS44712">AS44712</a> accept <a href="/as-set/AS-EHAMNET">AS-EHAMNET</a>
+export:         to <a href="/AS44712">AS44712</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS47949">AS47949</a> accept <a href="/as-set/AS-SET-COOLN-NIX">AS-SET-COOLN-NIX</a>
+export:         to <a href="/AS47949">AS47949</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS15935">AS15935</a> accept <a href="/as-set/AS-HA-VEL-CZNIX">AS-HA-VEL-CZNIX</a>
+export:         to <a href="/AS15935">AS15935</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS58239">AS58239</a> accept <a href="/as-set/as-hcncz">as-hcncz</a>
+export:         to <a href="/AS58239">AS58239</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS49544">AS49544</a> accept <a href="/as-set/AS-INTERACTIVE3D">AS-INTERACTIVE3D</a>
+export:         to <a href="/AS49544">AS49544</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS1764">AS1764</a> accept <a href="/as-set/AS-NEXTLAYER">AS-NEXTLAYER</a>
+export:         to <a href="/AS1764">AS1764</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS25512">AS25512</a> accept <a href="/as-set/AS-CDT-NETWORKS">AS-CDT-NETWORKS</a>
+export:         to <a href="/AS25512">AS25512</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS25248">AS25248</a> accept <a href="/as-set/AS-CRA-CZNIX">AS-CRA-CZNIX</a>
+export:         to <a href="/AS25248">AS25248</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS201594">AS201594</a> accept <a href="/AS201594">AS201594</a>
+export:         to <a href="/AS201594">AS201594</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+import:         from <a href="/AS204772">AS204772</a> accept <a href="/AS204772">AS204772</a>
+export:         to <a href="/AS204772">AS204772</a> announce <a href="/as-set/AS-NIXCZ-RSCLIENTS">AS-NIXCZ-RSCLIENTS</a>
+admin-c:        DUMY-RIPE
+tech-c:         DUMY-RIPE
+status:         ASSIGNED
+notify:         ripe@nix.cz
+mnt-by:         AS6881-MNT
+mnt-by:         NIXCZ_RS
+mnt-by:         RIPE-NCC-END-MNT
+created:        2008-05-15T11:32:50Z
+last-modified:  2025-04-01T09:10:00Z
+source:         RIPE
+remarks:        ****************************
+remarks:        * THIS OBJECT IS MODIFIED
+remarks:        * Please note that all data that is generally regarded as personal
+remarks:        * data has been removed from this object.
+remarks:        * To view the original object, please query the RIPE Database at:
+remarks:        * http://www.ripe.net/whois
+remarks:        ****************************
+
+
+organisation:   <a href="https://apps.db.ripe.net/db-web-ui/query?searchtext=ORG-Nz2-RIPE">ORG-Nz2-RIPE</a>
+org-name:       NIX.CZ z.s.p.o.
+country:        CZ
+org-type:       LIR
+address:        Dummy address for <a href="https://apps.db.ripe.net/db-web-ui/query?searchtext=ORG-Nz2-RIPE">ORG-Nz2-RIPE</a>
+# Email removed, Log into bgp.tools to see whois emails
+abuse-c:        NIXA-RIPE
+mnt-ref:        RIPE-NCC-HM-MNT
+mnt-ref:        AS6881-MNT
+mnt-by:         RIPE-NCC-HM-MNT
+mnt-by:         AS6881-MNT
+created:        2008-02-11T11:06:15Z
+last-modified:  2024-10-29T10:02:23Z
+source:         RIPE
+remarks:        ****************************
+remarks:        * THIS OBJECT IS MODIFIED
+remarks:        * Please note that all data that is generally regarded as personal
+remarks:        * data has been removed from this object.
+remarks:        * To view the original object, please query the RIPE Database at:
+remarks:        * http://www.ripe.net/whois
+remarks:        ****************************
+
+</pre>
+                        
+                        
+                        <a style="font-size: small;">Last Update: 2025-12-11T03:25:22Z UTC </a>
+                        
+                        <hr>
+                        
+                            <h2>Member of the following AS-SETs</h2>
+
+                            <table id="fhTable" class="full-width-table ">
+                                <tbody id="prefixlist-tbody">
+                                    <tr>
+                                        <th class="boldpls nowrap"> - </th>
+                                        <th class="boldpls">Member</th>
+                                        
+                                        <th class="boldpls nowrap">ASN Count</th>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-43413_nt-nix">as-43413_nt-nix</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">69</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as42000:as-nixcz-peerings">as42000:as-nixcz-peerings</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">80</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as11284:as-anycast">as11284:as-anycast</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">6</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as8251:as-nix-peerings">as8251:as-nix-peerings</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">49</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as24971:as-mai-nix-peer">as24971:as-mai-nix-peer</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap boldpls"><p style="display: contents;color: red">87687</p></td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                        
+
+                    </div>
+
+                    
+
+                    
+                    <div style="display: none" id="ix-page">
+                        <div class="grid-row">
+                            <dl class="column-two-thirds">
+                                <p style="margin: 0px;"><img style="vertical-align: middle; margin-left: 5px;" class="flag-img" src="/assets/peeringdb-icon.png" title="PeeringDB"><a href="https://www.peeringdb.com/asn/47200">Go to PeeringDB page</a></p>
+                            </dl>
+                            
+                            
+                        </div>
+                        <div class="grid-row">
+                            
+                        
+                        <div class="column-two-thirds">
+                            <dl>
+                                <dt>PeeringDB AS-SET:</dt>
+                                <dd class="text data">
+                                    
+                                    <a href="/as-set/as-nixcz-rsclients">AS-NIXCZ-RSCLIENTS</a>
+                                    
+                                </dd>
+                            </dl>
+                        </div>
+                        
+    
+    
+                        <dl class="column-third">
+                            <dt>Suggested Prefix Limits</dt>
+                            <dd class="text data">
+                                
+                                <p style="margin: 0px;"><b>IPv4:</b> 250000</p>
+                                
+                                <p style="margin: 0px;"><b>IPv6:</b> 120000</p>
+                            </dd>
+                        </dl>
+                        </div>
+
+                        
+
+                        <div id="normalixpsubpage">
+
+
+<h3>Internet Exchange Points</h3>
+
+<div class="scroll-ixp-div-on-small">
+<table id="ixpTable" class="full-width-table table-wide-to-force-scroll-on-mobile">
+    <thead class="sortable">
+        <tr>
+            <th class="nowrap boldpls">  &nbsp;  </th>
+            <th class="boldpls">Name</th>
+            <th class="nowrap boldpls">IPv4</th>
+            <th class="nowrap boldpls">IPv6</th>
+            <th data-sort-method='number' class="nowrap boldpls">Link Speed</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+        
+        <tr>
+            <td data-sort='CZ' class="nowrap ns"><img class="flag-img" src="/assets/flags/CZ.png" title="CZ"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/NIX.CZ">NIX.CZ</a></td>
+            <td class="smallonmobile">91.210.17.0</a></td>
+            <td class="smallonmobile nowrap">2001:7f8:14::100</td>
+            <td data-sort='3000' class="smallonmobile">3 gbps</td>
+        </tr>
+        
+        
+    </tbody>
+</table>
+</div>
+
+
+
+
+
+
+
+
+<a style="font-size: small;">Last Update: 2025-12-13T10:08:20Z UTC</a>
+
+
+                        </div>
+                        <div id="overlapixpsubpage">
+                        </div>
+                    </div>
+                    
+                    
+
+                    
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="superclearfix">
+            
+            <div class="superclearfix">
+                
+            </div>
+
+            <div class="superclearfix">
+                
+            </div>
+
+
+        </div>
+
+
+        <div class="group js-footer" id="footer">
+            <nav>
+                <div>
+                    <ul>
+                        <li><a href="/kb/api" target="_blank">Scripting/API</a></li>
+                        <li><a href="/credits" target="_blank">Credits</a></li>
+                        <li><a href="/pricing" target="_blank">Pricing</a></li>
+                        <li><a href="/kb/contact" target="_blank">Contact Us</a></li>
+                        <li><a href="https://github.com/bgptools/issues" target="_blank">Issue Tracker</a></li>
+                        <li><a href="/kb/setup-sessions" target="">Contribute Data</a></li>
+                        
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <script>
+    
+    var inhash = window.location.hash;
+    if (inhash == "#asinfo") {
+        
+    } else if (inhash == "#prefixes") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#prefix-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#prefixes-page');
+        aaa[0].style.display = "";
+
+    } else if (inhash == "#connectivity" || inhash == "#peers" || inhash == "#upstreams" || inhash == "#downstreams") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#connectivity-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#connectivity-page');
+        aaa[0].style.display = "";
+    } else if (inhash == "#whois") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#whois-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#whois-page');
+        aaa[0].style.display = "";
+    } else if (inhash == "#ix") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#ix-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#ix-page');
+        aaa[0].style.display = "";
+    }</script>
+
+    <script>
+    
+
+
+    ;(function() {
+  'use strict'
+
+  function scaleImageMap() {
+    function resizeMap() {
+      function resizeAreaTag(cachedAreaCoords, idx) {
+        function scale(coord) {
+          var dimension = 1 === (isWidth = 1 - isWidth) ? 'width' : 'height'
+          return (
+            padding[dimension] +
+            Math.floor(Number(coord) * scalingFactor[dimension])
+          )
+        }
+
+        var isWidth = 0
+        areas[idx].coords = cachedAreaCoords
+          .split(',')
+          .map(scale)
+          .join(',')
+      }
+
+      var scalingFactor = {
+        width: image.width / image.naturalWidth,
+        height: image.height / image.naturalHeight,
+      }
+
+      var padding = {
+        width: parseInt(
+          window.getComputedStyle(image, null).getPropertyValue('padding-left'),
+          10
+        ),
+        height: parseInt(
+          window.getComputedStyle(image, null).getPropertyValue('padding-top'),
+          10
+        ),
+      }
+
+      cachedAreaCoordsArray.forEach(resizeAreaTag)
+    }
+
+    function getCoords(e) {
+      
+      return e.coords.replace(/ *, */g, ',').replace(/ +/g, ',')
+    }
+
+    function debounce() {
+      clearTimeout(timer)
+      timer = setTimeout(resizeMap, 250)
+    }
+
+    function start() {
+      if (
+        image.width !== image.naturalWidth ||
+        image.height !== image.naturalHeight
+      ) {
+        resizeMap()
+      }
+    }
+
+    function addEventListeners() {
+      image.addEventListener('load', resizeMap, false) 
+      window.addEventListener('focus', resizeMap, false) 
+      window.addEventListener('resize', debounce, false)
+      window.addEventListener('readystatechange', resizeMap, false)
+      document.addEventListener('fullscreenchange', resizeMap, false)
+    }
+
+    function beenHere() {
+      return 'function' === typeof map._resize
+    }
+
+    function getImg(name) {
+      return document.querySelector('img[usemap="#world"]')
+    }
+
+    function setup() {
+      areas = map.getElementsByTagName('area')
+      cachedAreaCoordsArray = Array.prototype.map.call(areas, getCoords)
+      image = getImg('#' + map.name) || getImg(map.name)
+      map._resize = resizeMap 
+    }
+
+    var  
+      map = this,
+      areas = null,
+      cachedAreaCoordsArray = null,
+      image = null,
+      timer = null
+
+    if (!beenHere()) {
+      setup()
+      addEventListeners()
+      start()
+    } else {
+      map._resize() 
+    }
+  }
+
+  function factory() {
+    function chkMap(element) {
+      if (!element.tagName) {
+        throw new TypeError('Object is not a valid DOM element')
+      } else if ('MAP' !== element.tagName.toUpperCase()) {
+        throw new TypeError(
+          'Expected <MAP> tag, found <' + element.tagName + '>.'
+        )
+      }
+    }
+
+    function init(element) {
+      if (element) {
+        chkMap(element)
+        scaleImageMap.call(element)
+        maps.push(element)
+      }
+    }
+
+    var maps
+
+    return function imageMapResizeF(target) {
+      maps = [] 
+
+      switch (typeof target) {
+        case 'undefined':
+        case 'string':
+          Array.prototype.forEach.call(
+            document.querySelectorAll(target || 'map'),
+            init
+          )
+          break
+        case 'object':
+          init(target)
+          break
+        default:
+          throw new TypeError('Unexpected data type (' + typeof target + ').')
+      }
+
+      return maps
+    }
+  }
+
+  if (typeof define === 'function' && define.amd) {
+    define([], factory)
+  } else if (typeof module === 'object' && typeof module.exports === 'object') {
+    module.exports = factory() 
+  } else {
+    window.imageMapResize = factory()
+  }
+
+  if ('jQuery' in window) {
+    window.jQuery.fn.imageMapResize = function $imageMapResizeF() {
+      return this.filter('map')
+        .each(scaleImageMap)
+        .end()
+    }
+  }
+})()
+    
+    </script>
+    <script>
+        var imgEl = document.getElementById("pathimg");
+        imgEl.addEventListener("mouseover",function() {
+            imageMapResize('#world');
+        })
+    </script>
+    <script src="/assets/tablesort.min.js"></script>
+    <script>
+        addEventListener("load", (event) => {
+            
+            
+            var sort = new Tablesort(document.getElementById('donotscrapebgptools-upstreamTable'));
+            var sort2 = new Tablesort(document.getElementById('donotscrapebgptools-upstreamTablePeers'));
+            
+            
+            var sort4 = new Tablesort(document.getElementById('ixpTable'));
+            
+        });
+    </script>
+    
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        setTimeout(function() {
+
+        var beaconHttp = new XMLHttpRequest();
+        var url = '/performance-beacon';
+        var params = JSON.stringify(window.performance)
+        beaconHttp.open('POST', url, true);
+        
+        
+        beaconHttp.setRequestHeader('Content-type', 'application/json');
+        beaconHttp.setRequestHeader('visit-url', "/as/47200");
+        if (navigator.connection) {
+            beaconHttp.setRequestHeader('client-side-rtt', navigator.connection.rtt);
+        } else {
+            beaconHttp.setRequestHeader('client-side-rtt', '-2');
+        }
+        beaconHttp.onreadystatechange = function() {}
+        beaconHttp.send(params);
+        },1000)
+    }, false);
+</script>
+
+</body>
+
+
+</html>

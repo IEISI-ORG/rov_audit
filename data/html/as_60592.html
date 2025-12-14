@@ -1,0 +1,3204 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Gransy s.r.o. (AS60592) is a 12 year old internet critical network that is peering with 47 other networks and has 16 upstream carriers">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000">
+    <link rel="search" type="application/opensearchdescription+xml" title="BGP.Tools" href="https://bgp.tools/opensearch.xml">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="theme-color" content="#000000">
+    <link href="https://social.bgp.tools/@bgptools" rel="me">
+    <link rel="canonical" href="https://bgp.tools/as/60592" />
+    <title>AS60592 Gransy s.r.o. - bgp.tools</title>
+    <link rel="stylesheet" type="text/css" href="/assets/main-new.css?2025-12-13-1541%20UTC">
+</head>
+
+<body>
+    <div id="container">
+        
+<div id="global-header" class="global-header-top">
+    <div class="header-sitewide">
+        <div class="global-header">
+            <div class="header-logo">
+                <a href="/" id="logo" class="content">bgp.tools</a>
+            </div>
+            <form id="search" action="/search" method="get" accept-charset="utf-8" role="search" class="top-search-header js-search-hash">
+                <div class="searchfield">
+                    <input type="search" autocomplete="off" name="q" id="site-search-text" title="Search" value="" placeholder="Start here..." autofocus="autofocus" class="js-search-focus">
+                    <button type="submit" id="search-submit" class="search-submit">Search</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div id="global-header-blob" >
+    <a id="auth-header-text" href="/login">Login</a>
+    
+</div>
+<div id="global-header-bar" >
+    <a id="auth-header-bar-text" href="/login">Login</a>
+    
+</div>
+<div class="small-clearfix"></div>
+
+        <div id="global-container">
+            
+
+
+            
+            <div class="section-tabs js-tabs">
+                <ul>
+                    
+<li class="active">
+    <h1> <a id="viewbutton-tab" href="/as/60592">View</a></h1>
+</li>
+
+<li >
+    <a id="editbutton-tab" href="/edit/as/60592">Edit</a>
+</li>
+
+
+
+
+
+                    <li style="float: right;">
+                        
+                        <img id="ws-status" width="24" height="24" src="/assets/disconnected.png" title="Not Connected To realtime data updates">
+                        
+                    </li>
+                </ul>
+            </div>
+
+            <div id="search-container">
+
+                <div class="column-full-width">
+
+                    <div class="clearfix">
+                        
+                    </div>
+                    
+                    
+
+                    <div class="network-header">
+                        
+                        
+                        <img width="334" height="250" src="/img/60592" alt="The website screenshot for https://gransy.com/" >
+                        
+                        
+                        <p id="network-name" class="heading-xlarge">Gransy s.r.o.</p>
+                        <p id="network-number">
+                            AS Number
+                            <strong id="ASNumberString" pure="60592">60592</strong>
+                            <br>
+                        
+                            Website
+                            <strong><a href="https://gransy.com/" rel="nofollow">https://gransy.com/</a></strong>
+                        
+                        </p>
+
+                    </div>
+
+
+                    <div class="clearfix">
+                        
+                    </div>
+
+
+                    <div class="section-tabs js-tabs">
+                        <ul>
+
+                            <li id="overview-tab-li" class="active">
+                                <a id="overview-tab" href="#asinfo">Overview</a>
+                            </li>
+                            
+                            <li id="prefix-tab-li">
+                                <a id="prefix-tab" href="#prefixes">Prefixes</a>
+                            </li>
+
+                            <li id="connectivity-tab-li">
+                                <a id="connectivity-tab" href="#connectivity">Connectivity</a>
+                            </li>
+                            
+                            <li id="whois-tab-li">
+                                <a id="whois-tab" href="#whois">Whois</a>
+                            </li>
+                        
+                            <li id="ix-tab-li">
+                                <a id="ix-tab" href="#ix">IX</a>
+                            </li>
+                        
+                        
+                        </ul>
+                    </div>
+
+<script>
+    function removeAllActiveTab() {
+        var tabs = [
+            "overview-tab-li", 
+            "prefix-tab-li", 
+            "connectivity-tab-li",
+            "whois-tab-li",
+            "ix-tab-li",
+            "issues-tab-li"
+        ];
+
+        tabs.forEach(element => {
+            var aaa = document.querySelectorAll('#'+element);
+            if(aaa.length != 0) {
+                aaa[0].classList.remove("active")
+            }
+        });
+    }
+
+    function hideAllContent() {
+        var tabs = [
+            "overview-page", 
+            "prefixes-page", 
+            "connectivity-page",
+            "whois-page",
+            "ix-page",
+            "issues-page"
+        ];
+
+        tabs.forEach(element => {
+            var aaa = document.querySelectorAll('#'+element);
+            if(aaa.length != 0) {
+                aaa[0].style.display = "none";
+            }
+        });
+        if (document.getElementById("donotscrapebgptools-prefixlist-tbody")) {
+            var prefixrows = document.getElementById("donotscrapebgptools-prefixlist-tbody").children;
+            for (var i = 0; i < prefixrows.length; i++) {
+                prefixrows[i].style = "";
+            }
+        }
+    }
+
+    var otab = document.querySelectorAll('#overview-tab');
+    otab[0].addEventListener("click", function () {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#overview-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#overview-page');
+        aaa[0].style.display = "";
+    });
+    
+
+    var ptab = document.querySelectorAll('#prefix-tab');
+    ptab[0].addEventListener("click", function () {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#prefix-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#prefixes-page');
+        aaa[0].style.display = "";
+    });
+
+    var ctab = document.querySelectorAll('#connectivity-tab');
+    ctab[0].addEventListener("click", function () {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#connectivity-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#connectivity-page');
+        aaa[0].style.display = "";
+    });
+    
+
+    var wtab = document.querySelectorAll('#whois-tab');
+    wtab[0].addEventListener("click", function () {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#whois-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#whois-page');
+        aaa[0].style.display = "";
+    });
+
+</script>
+
+
+<script>
+var wtab = document.querySelectorAll('#ix-tab');
+wtab[0].addEventListener("click", function () {
+    removeAllActiveTab()
+    hideAllContent()
+    var otab2 = document.querySelectorAll('#ix-tab-li');
+    otab2[0].classList.add("active");
+
+    var aaa = document.querySelectorAll('#ix-page');
+    aaa[0].style.display = "";
+});
+</script>
+
+
+                    
+                    <div id="overview-page">
+
+                        <div class="grid-row">
+                        
+                        <div class="column-two-thirds">
+                            <dl>
+                                <dt>Registered on</dt>
+                                <dd class="text data">
+                                    
+                                    19 Jun 2013 (12 years old)
+                                </dd>
+                            
+                            
+                            <dt>Registered to</dt>
+                            <dd class="text data">
+                                <a href="/rir-owner/cz.gransy">cz.gransy</a> (ripe)</dd>
+                                
+                            
+                            </dl>
+                        </div>
+                        
+    
+                        <dl class="column-third">
+                            <dt>Network status</dt>
+                            <dd class="text data">
+                                
+                                Active, Allocated under RIPE
+                                
+                            </dd>
+                        </dl>
+    
+                        </div>
+    
+                        <div class="grid-row">
+                            <dl class="column-two-thirds">
+                                <dt>Network type</dt>
+                                <dd class="text data">
+                                    Content
+                                </dd>
+                            </dl>
+    
+                            <dl class="column-third">
+                                <dt>Prefixes Originated</dt>
+                                <dd class="data">19 IPv4, 3 IPv6</dd>
+                            </dl>
+                        </div>
+                        <div class="grid-row">
+                            <div class="column-half">
+    
+                                <h2 class="heading-medium"><derp>Upstreams</derp></h2>
+                                <ul>
+                                    
+                                    <li>
+                                        <span id="sic0">
+                                          <a href="/as/15685">AS15685</a> - CASABLANCA INT a.s.
+                                        </span>
+                                    </li>
+                                    
+                                    <li>
+                                        <span id="sic0">
+                                          <a href="/as/43541">AS43541</a> - VSHosting s.r.o.
+                                        </span>
+                                    </li>
+                                    
+                                    <li>
+                                        <span id="sic0">
+                                          <a href="/as/20473">AS20473</a> - The Constant Company, LLC
+                                        </span>
+                                    </li>
+                                    
+                                    <li>
+                                        <span id="sic0">
+                                          <a href="/as/29134">AS29134</a> - Webglobe, s.r.o.
+                                        </span>
+                                    </li>
+                                    
+                                    <li>
+                                        <span id="sic0">
+                                          <a href="/as/39122">AS39122</a> - Blacknight Internet Solutions Limited
+                                        </span>
+                                    </li>
+                                    
+                                    <li>
+                                        <span id="sic0">
+                                          <a href="/as/60733">AS60733</a> - ZORAN PEROVIC trading as Agencija Perke.NET
+                                        </span>
+                                    </li>
+                                    
+                                    <li>
+                                        <span id="sic0">
+                                          <a href="/as/917">AS917</a> - Misaka Network, Inc.
+                                        </span>
+                                    </li>
+                                    
+                                    <li>
+                                        <span id="sic0">
+                                          <a href="/as/57695">AS57695</a> - Misaka Network, Inc.
+                                        </span>
+                                    </li>
+                                    
+                                </ul>
+    
+                            </div>
+    
+                            <div class="column-half">
+                                
+                                    <h2 class="heading-medium"><derp>Rankings</derp></h2>
+                                    
+                                    <li><span id="sic0">#10 for <a href="/rankings/CZ?sort=dns">Unique Domains  in Czech Republic</a></span></li>
+                                    
+                                    <li><span id="sic0">#33 for <a href="/rankings/CZ?sort=peering">Known Peers  in Czech Republic</a></span></li>
+                                    
+                                    <li><span id="sic0">#65 for <a href="/rankings/CZ?sort=v4">Originated IPv4 Space  in Czech Republic</a></span></li>
+                                    
+                                    <li><span id="sic0">#24 for <a href="/rankings/CZ?sort=v6">Originated IPv6 Space  in Czech Republic</a></span></li>
+                                    
+                                
+                            </div>
+                        </div>
+                        
+                        <div class="grid-row" style="padding: 15px;">
+                            <h2 class="heading-medium"><derp>Tags:</derp></h2>
+                            <br>
+                            
+                            <a href="/tags/icrit"><span style="border: 5px solid #A73F73;" class="taglist"> Internet Critical Infra </span></a>
+                            
+                            <a href="/tags/anycast"><span style="border: 5px solid #C7FA93;" class="taglist"> Anycast </span></a>
+                            
+                        </div>
+                        
+                    </div>
+                    
+
+                    <div style="display: none" id="prefixes-page">
+                        
+
+                        
+                        <div style="float:left">
+                            <dt>Prefixes Originated</dt>
+                            <dd class="data">19 IPv4, 3 IPv6</dd>
+                            
+                            
+                        </div>
+                        <div style="float:right">
+                                <dt>Addresses Originated</dt>
+                                <dd class="data">20 /24's of IPv4</dd>
+                                <dd class="data">196608 /48's of IPv6</dd>
+                        </div>
+
+                        <div class="clearfix">
+                            
+                        </div>
+
+
+                        <table id="fhTable" class="full-width-table ">
+                            <tbody id="donotscrapebgptools-prefixlist-tbody">
+                                <tr>
+                                    <th class="nowrap">  &nbsp;  </th>
+                                    <th class="boldpls">Prefix</th>
+                                    <th class="nowrap boldpls">Description</th>
+                                </tr>
+                                <p id="readme-if-you-are-human" style="display: none;">If you are scraping this block for the prefixes that a AS originates, please use the data dumps in https://bgp.tools/kb/api and cache them</p>
+                                
+                                <tr id="pfx-46.8.8.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CZ" src="/assets/flags/CZ.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/46.8.8.0/24">46.8.8.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Gransy s.r.o.</td>
+                                </tr>
+                                
+                                <tr id="pfx-46.8.9.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CZ" src="/assets/flags/CZ.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/46.8.9.0/24">46.8.9.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Gransy s.r.o.</td>
+                                </tr>
+                                
+                                <tr id="pfx-46.175.135.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="GB" src="/assets/flags/GB.png">
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/tick.png" title="Matches a trusted IRR source">
+                                        
+                                        
+                                    </td>
+                                    <td><a href="/prefix/46.175.135.0/24">46.175.135.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Global WP Ltd</td>
+                                </tr>
+                                
+                                <tr id="pfx-91.207.188.0/23">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CZ" src="/assets/flags/CZ.png">
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/cross.png" title="Matches IRR source, but under a different ASN">
+                                    </td>
+                                    <td><a href="/prefix/91.207.188.0/23">91.207.188.0/23</a></td>
+                                    <td class="smallonmobile nowrap">Gransy s.r.o.</td>
+                                </tr>
+                                
+                                <tr id="pfx-91.207.188.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CZ" src="/assets/flags/CZ.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/91.207.188.0/24">91.207.188.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Gransy s.r.o.</td>
+                                </tr>
+                                
+                                <tr id="pfx-91.207.189.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CZ" src="/assets/flags/CZ.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/91.207.189.0/24">91.207.189.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Gransy s.r.o.</td>
+                                </tr>
+                                
+                                <tr id="pfx-91.224.58.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CZ" src="/assets/flags/CZ.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/91.224.58.0/24">91.224.58.0/24</a></td>
+                                    <td class="smallonmobile nowrap">For abuses: abuse@fibtel.net</td>
+                                </tr>
+                                
+                                <tr id="pfx-185.28.192.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CZ" src="/assets/flags/CZ.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/185.28.192.0/24">185.28.192.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Gransy s.r.o.</td>
+                                </tr>
+                                
+                                <tr id="pfx-185.28.193.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CZ" src="/assets/flags/CZ.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/185.28.193.0/24">185.28.193.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Gransy s.r.o.</td>
+                                </tr>
+                                
+                                <tr id="pfx-185.28.194.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="Anycast Detected" src="/assets/flags/ANY.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/185.28.194.0/24">185.28.194.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Gransy s.r.o.</td>
+                                </tr>
+                                
+                                <tr id="pfx-185.38.109.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CZ" src="/assets/flags/CZ.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/185.38.109.0/24">185.38.109.0/24</a></td>
+                                    <td class="smallonmobile nowrap">NEROSO Inst., s.r.o.</td>
+                                </tr>
+                                
+                                <tr id="pfx-185.38.110.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CZ" src="/assets/flags/CZ.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/185.38.110.0/24">185.38.110.0/24</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-185.38.111.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CZ" src="/assets/flags/CZ.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/185.38.111.0/24">185.38.111.0/24</a></td>
+                                    <td class="smallonmobile nowrap">NEROSO Inst., s.r.o.</td>
+                                </tr>
+                                
+                                <tr id="pfx-185.82.212.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CZ" src="/assets/flags/CZ.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/185.82.212.0/24">185.82.212.0/24</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-185.82.213.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CZ" src="/assets/flags/CZ.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/185.82.213.0/24">185.82.213.0/24</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-185.82.214.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CZ" src="/assets/flags/CZ.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/185.82.214.0/24">185.82.214.0/24</a></td>
+                                    <td class="smallonmobile nowrap">-</td>
+                                </tr>
+                                
+                                <tr id="pfx-193.150.130.0/23">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CZ" src="/assets/flags/CZ.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/193.150.130.0/23">193.150.130.0/23</a></td>
+                                    <td class="smallonmobile nowrap">FIBER TELECOM s.r.o.</td>
+                                </tr>
+                                
+                                <tr id="pfx-193.150.132.0/23">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CZ" src="/assets/flags/CZ.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/193.150.132.0/23">193.150.132.0/23</a></td>
+                                    <td class="smallonmobile nowrap">FIBER TELECOM s.r.o.</td>
+                                </tr>
+                                
+                                <tr id="pfx-185.38.108.0/24">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="Anycast Detected" src="/assets/flags/ANY.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/185.38.108.0/24">185.38.108.0/24</a></td>
+                                    <td class="smallonmobile nowrap">Gransy s.r.o.</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a00:a160::/32">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CZ" src="/assets/flags/CZ.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a00:a160::/32">2a00:a160::/32</a></td>
+                                    <td class="smallonmobile nowrap">Gransy s.r.o.</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a00:fea0::/32">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CZ" src="/assets/flags/CZ.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a00:fea0::/32">2a00:fea0::/32</a></td>
+                                    <td class="smallonmobile nowrap">Gransy s.r.o.</td>
+                                </tr>
+                                
+                                <tr id="pfx-2a03:6920::/32">
+                                    <td class="nowrap ns">
+                                        
+                                        <img class="flag-img" title="CZ" src="/assets/flags/CZ.png">
+                                        
+                                        
+                                        <img class="flag-img" src="/assets/rpki.png" title="Has a valid RPKI cert">
+                                    </td>
+                                    <td><a href="/prefix/2a03:6920::/32">2a03:6920::/32</a></td>
+                                    <td class="smallonmobile nowrap">Gransy s.r.o.</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div style="display: none" id="connectivity-page">
+
+                        <div class="grid-row">
+
+                            <dl class="column-two-thirds">
+                                <dt><a href="#upstreams">Upstreams</a></dt>
+                                <dd class="text data">
+                                    16
+                                </dd>
+                            </dl>
+
+                            <dl class="column-third">
+                                <dt><a href="#peers">Peers</a></dt>
+                                <dd class="data">47</dd>
+                            </dl>
+                        </div>
+
+
+                        <hr>
+                        <h3>Network Policy<img class="flag-img" src="/assets/info.png" style="padding-left: 12px;" title="This info can take up to 2 hours to fully update" alt="This info take up to 2 hours to fully update"/></h3></h3>
+                        <a style="font-size: small;" href="/kb/network-policy">Click here to learn more about what this graph means and what makes up a network policy</a>
+
+                        <select id="netpolicydropdown" class="dropdownmenu">
+                            
+                                <option disabled=true value="disabled-default">Global Aggregation (disabled due to size)</option>
+                            
+
+                            
+                                
+                            
+                                
+                                <option selected value="2c039d6c6cba270b5677a07e90beb58f49ab708e97983bc7854da4b8">Policy romantic_hodgkin</option>
+                                
+                            
+                                
+                                <option value="655d1a8d0e1abdcac67e95dae46b3cd657162e9c84a94ed84fa822fe">Policy heuristic_ellis</option>
+                                
+                            
+                                
+                                <option value="82793ad90d7097d57365509f8efe4fa715ff96de05ff23e6890f9f0c">Policy jovial_brown</option>
+                                
+                            
+                                
+                                <option value="dc9eca421b1bd79306a6821215c5f7965780b895d76c793be3ed69d1">Policy mystifying_solomon</option>
+                                
+                            
+                                
+                                <option value="e35c0ba8f0cf769e3a9d008a50fe4dcd959621b93320a37b0f383ff4">Policy quizzical_herschel</option>
+                                
+                            
+                                
+                                <option value="e36398783b62bc13254b0a97353bdc5aa1581c690e431ffc0a7b8ed7">Policy musing_nash</option>
+                                
+                            
+                                
+                                <option value="3d0fc7908b2f06fb6a01e11dd86b6e6a974a625bd79beda4156ef1c3">Policy elated_chaplygin</option>
+                                
+                            
+                                
+                                <option value="7fc0a224728698b2997aaa27884068083766555d0babbaf6a79b5f4d">Policy unruffled_meninsky</option>
+                                
+                            
+                                
+                                <option value="977fc7ebd7246ed7f9fc77d705b191dddc8693d2052d9835b4bfcaaf">Policy lucid_benz</option>
+                                
+                            
+                                
+                                <option value="d63d0c6fa3ece37991dcd3c21dddb159fa226e356d5b35a7d7b98b8e">Policy bold_roentgen</option>
+                                
+                            
+                                
+                                <option value="f6fab2bc1c51f76116640f90426dbbab68059f76a87fbf33ed2694e1">Policy stupefied_johnson</option>
+                                
+                            
+
+                            
+
+
+                        </select>
+
+                        <script>var netgroups = {"2c039d6c6cba270b5677a07e90beb58f49ab708e97983bc7854da4b8":["91.207.188.0/24","185.28.192.0/24","91.207.189.0/24","91.207.188.0/23","185.28.193.0/24"],"3d0fc7908b2f06fb6a01e11dd86b6e6a974a625bd79beda4156ef1c3":["185.38.110.0/24","46.175.135.0/24"],"655d1a8d0e1abdcac67e95dae46b3cd657162e9c84a94ed84fa822fe":["185.28.194.0/24","185.38.108.0/24"],"7fc0a224728698b2997aaa27884068083766555d0babbaf6a79b5f4d":["2a00:fea0::/32"],"82793ad90d7097d57365509f8efe4fa715ff96de05ff23e6890f9f0c":["185.38.109.0/24"],"977fc7ebd7246ed7f9fc77d705b191dddc8693d2052d9835b4bfcaaf":["185.82.213.0/24","185.82.212.0/24","185.82.214.0/24"],"d63d0c6fa3ece37991dcd3c21dddb159fa226e356d5b35a7d7b98b8e":["46.8.8.0/24","46.8.9.0/24"],"dc9eca421b1bd79306a6821215c5f7965780b895d76c793be3ed69d1":["2a03:6920::/32"],"e35c0ba8f0cf769e3a9d008a50fe4dcd959621b93320a37b0f383ff4":["185.38.111.0/24"],"e36398783b62bc13254b0a97353bdc5aa1581c690e431ffc0a7b8ed7":["2a00:a160::/32"],"f6fab2bc1c51f76116640f90426dbbab68059f76a87fbf33ed2694e1":["193.150.130.0/23","193.150.132.0/23","91.224.58.0/24"]}</script>
+
+                        <div style="text-align: center;">
+                            <img id="pathimg" usemap="#world" src="">
+                            <div id="world2"></div>
+                        </div>
+
+                        <details>
+                            <summary>Chart Display Options</summary>
+                            <noscript>This requires javascript to work</noscript>
+                            <label for="graphOptionMoreWiggle" style="display: flex;align-items: center;font-size: 20px;">
+                                <input type="checkbox" id="graphOptionMoreWiggle" name="graphOptionMoreWiggle" style="width: 64px; height: 32px;">
+                                    <p id="graphOptionMoreWiggleLabel" style="width: 200%;">Display links using non straight lines</p>
+                            </label>
+                        </details>
+
+                        <h3 style="display: none;" id="PISPBanner">Prefixes in selected policy</h3>
+                        <table id="policytable" class="full-width-table">
+                        </table>
+                        <button style="width:100%;display: none;" id="ShowFullPolicyButton" class="bigButton" onclick="dropdownPoke()">Load all prefixes in policy</button>
+
+                        <script>
+                            !function(a,b){"function"==typeof define&&define.amd?define([],b):"undefined"!=typeof module&&module.exports?module.exports=b():a.ReconnectingWebSocket=b()}(this,function(){function a(b,c,d){function l(a,b){var c=document.createEvent("CustomEvent");return c.initCustomEvent(a,!1,!1,b),c}var e={debug:!1,automaticOpen:!0,reconnectInterval:1e3,maxReconnectInterval:3e4,reconnectDecay:1.5,timeoutInterval:2e3};d||(d={});for(var f in e)this[f]="undefined"!=typeof d[f]?d[f]:e[f];this.url=b,this.reconnectAttempts=0,this.readyState=WebSocket.CONNECTING,this.protocol=null;var h,g=this,i=!1,j=!1,k=document.createElement("div");k.addEventListener("open",function(a){g.onopen(a)}),k.addEventListener("close",function(a){g.onclose(a)}),k.addEventListener("connecting",function(a){g.onconnecting(a)}),k.addEventListener("message",function(a){g.onmessage(a)}),k.addEventListener("error",function(a){g.onerror(a)}),this.addEventListener=k.addEventListener.bind(k),this.removeEventListener=k.removeEventListener.bind(k),this.dispatchEvent=k.dispatchEvent.bind(k),this.open=function(b){h=new WebSocket(g.url,c||[]),b||k.dispatchEvent(l("connecting")),(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","attempt-connect",g.url);var d=h,e=setTimeout(function(){(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","connection-timeout",g.url),j=!0,d.close(),j=!1},g.timeoutInterval);h.onopen=function(){clearTimeout(e),(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","onopen",g.url),g.protocol=h.protocol,g.readyState=WebSocket.OPEN,g.reconnectAttempts=0;var d=l("open");d.isReconnect=b,b=!1,k.dispatchEvent(d)},h.onclose=function(c){if(clearTimeout(e),h=null,i)g.readyState=WebSocket.CLOSED,k.dispatchEvent(l("close"));else{g.readyState=WebSocket.CONNECTING;var d=l("connecting");d.code=c.code,d.reason=c.reason,d.wasClean=c.wasClean,k.dispatchEvent(d),b||j||((g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","onclose",g.url),k.dispatchEvent(l("close")));var e=g.reconnectInterval*Math.pow(g.reconnectDecay,g.reconnectAttempts);setTimeout(function(){g.reconnectAttempts++,g.open(!0)},e>g.maxReconnectInterval?g.maxReconnectInterval:e)}},h.onmessage=function(b){(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","onmessage",g.url,b.data);var c=l("message");c.data=b.data,k.dispatchEvent(c)},h.onerror=function(b){(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","onerror",g.url,b),k.dispatchEvent(l("error"))}},1==this.automaticOpen&&this.open(!1),this.send=function(b){if(h)return(g.debug||a.debugAll)&&console.debug("ReconnectingWebSocket","send",g.url,b),h.send(b);throw"INVALID_STATE_ERR : Pausing to reconnect websocket"},this.close=function(a,b){"undefined"==typeof a&&(a=1e3),i=!0,h&&h.close(a,b)},this.refresh=function(){h&&h.close()}}return a.prototype.onopen=function(){},a.prototype.onclose=function(){},a.prototype.onconnecting=function(){},a.prototype.onmessage=function(){},a.prototype.onerror=function(){},a.debugAll=!1,a.CONNECTING=WebSocket.CONNECTING,a.OPEN=WebSocket.OPEN,a.CLOSING=WebSocket.CLOSING,a.CLOSED=WebSocket.CLOSED,a});
+                        </script>
+                        
+                        <script>
+                            var prefixinfo = [{"PrefixString":"46.8.8.0/24","WhoisName":"Gransy s.r.o.","WhoisCountry":"CZ"},{"PrefixString":"46.8.9.0/24","WhoisName":"Gransy s.r.o.","WhoisCountry":"CZ"},{"PrefixString":"46.175.135.0/24","WhoisName":"Global WP Ltd","WhoisCountry":"GB"},{"PrefixString":"91.207.188.0/23","WhoisName":"Gransy s.r.o.","WhoisCountry":"CZ"},{"PrefixString":"91.207.188.0/24","WhoisName":"Gransy s.r.o.","WhoisCountry":"CZ"},{"PrefixString":"91.207.189.0/24","WhoisName":"Gransy s.r.o.","WhoisCountry":"CZ"},{"PrefixString":"91.224.58.0/24","WhoisName":"For abuses: abuse@fibtel.net","WhoisCountry":"CZ"},{"PrefixString":"185.28.192.0/24","WhoisName":"Gransy s.r.o.","WhoisCountry":"CZ"},{"PrefixString":"185.28.193.0/24","WhoisName":"Gransy s.r.o.","WhoisCountry":"CZ"},{"PrefixString":"185.28.194.0/24","WhoisName":"Gransy s.r.o.","WhoisCountry":"ANY"},{"PrefixString":"185.38.109.0/24","WhoisName":"NEROSO Inst., s.r.o.","WhoisCountry":"CZ"},{"PrefixString":"185.38.110.0/24","WhoisName":"-","WhoisCountry":"CZ"},{"PrefixString":"185.38.111.0/24","WhoisName":"NEROSO Inst., s.r.o.","WhoisCountry":"CZ"},{"PrefixString":"185.82.212.0/24","WhoisName":"-","WhoisCountry":"CZ"},{"PrefixString":"185.82.213.0/24","WhoisName":"-","WhoisCountry":"CZ"},{"PrefixString":"185.82.214.0/24","WhoisName":"-","WhoisCountry":"CZ"},{"PrefixString":"193.150.130.0/23","WhoisName":"FIBER TELECOM s.r.o.","WhoisCountry":"CZ"},{"PrefixString":"193.150.132.0/23","WhoisName":"FIBER TELECOM s.r.o.","WhoisCountry":"CZ"},{"PrefixString":"185.38.108.0/24","WhoisName":"Gransy s.r.o.","WhoisCountry":"ANY"},{"PrefixString":"2a00:a160::/32","WhoisName":"Gransy s.r.o.","WhoisCountry":"CZ"},{"PrefixString":"2a00:fea0::/32","WhoisName":"Gransy s.r.o.","WhoisCountry":"CZ"},{"PrefixString":"2a03:6920::/32","WhoisName":"Gransy s.r.o.","WhoisCountry":"CZ"}]
+                            var asn =  60592 
+
+                            var pfxExtraString = "";
+
+                            function saveGraphOptionsToLocalStorage() {
+                                localStorage.setItem("pfx-chart-options:wiggle", document.getElementById("graphOptionMoreWiggle").checked);
+                            }
+
+                            function loadGraphOptionsToLocalStorage() {
+                                document.getElementById("graphOptionMoreWiggle").checked = localStorage.getItem("pfx-chart-options:wiggle") == "true";
+                                pfxExtraString= "";
+                                if (document.getElementById("graphOptionMoreWiggle").checked) {
+                                    pfxExtraString = pfxExtraString + "&wiggly";
+                                }
+                            }
+                            loadGraphOptionsToLocalStorage();
+
+                            function graphOptionsChanged() {
+                                saveGraphOptionsToLocalStorage();
+                                handleImageChange();
+                            }
+                            document.getElementById("graphOptionMoreWiggle").addEventListener("click", graphOptionsChanged)
+
+
+                            function handleImageChange() {
+                                loadGraphOptionsToLocalStorage();
+                                
+                                document.getElementById("pathimg").src=("/pathimg/"+asn+ "-" + document.getElementById("netpolicydropdown").value +"?"+pfxExtraString);
+                                var request = new XMLHttpRequest();
+                                request.open('GET', "/pathimg/"+asn+ "-" + document.getElementById("netpolicydropdown").value + "?map=true" + pfxExtraString, true);
+
+                                request.onload = function() {
+                                    if (this.status >= 200 && this.status < 400) {
+                                        
+                                        
+                                        document.getElementById("world2").innerHTML = this.response;
+                                        setTimeout(function(){
+                                            imageMapResize('#world');
+                                        },1000)
+                                    }
+                                };
+                                request.send();
+                                buildPrefixTable();
+                            } 
+
+                            function encodeHTML(s) {
+                                return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
+                            }
+
+                            function dropdownPoke(){
+                                InteractedWithPolicyTableYet=true;
+                                handleImageChange();
+                            }
+
+                            var InteractedWithPolicyTableYet = false;
+                            var OverloadPolicySize = 0;
+                            function buildPrefixTable() {
+                                var policy = document.getElementById("netpolicydropdown").value;
+                                
+                                var cidrs = netgroups[policy];
+                                var ihtml = "<tbody> <tr> <th class=\"nowrap\">  -  </th> <th>Prefix</th> <th class=\"nowrap\">Description</th> </tr>";
+
+                                
+                                var aaa = document.querySelectorAll('#PISPBanner');
+                                var bbb = document.querySelectorAll('#policytable');
+                                var n = 0
+                                if (cidrs) {
+                                    aaa[0].style.display = "";
+                                    bbb[0].style.display = "";
+                                    cidrs.forEach(cidr => {
+                                        var obj = {};
+                                        var dont =false;
+                                        n++;
+                                        
+                                        if (!InteractedWithPolicyTableYet) {
+                                            if (n == 5) {
+                                                dont = true;
+                                            } else if (n > 5) {
+                                                dont = true;
+                                            }
+                                        }
+                                        
+                                        if (!dont) {
+                                            prefixinfo.forEach(el => {
+                                                if(el.PrefixString == cidr) {
+                                                    
+                                                        ihtml += "<tr><td class=\"nowrap ns\"><img class=\"flag-img\" src=\"/assets/flags/"+el.WhoisCountry+".png\" title=\""+el.WhoisCountry+"\"></td>"
+                                                        ihtml += "<td><a href=\"/prefix/"+el.PrefixString+"\">"+el.PrefixString+"</a></td>"
+                                                        ihtml += "<td class=\"nowrap\">"+encodeHTML(el.WhoisName)+"</td></tr>"
+                                                }
+                                            });
+                                        } else {
+                                            OverloadPolicySize++;
+                                        }
+                                    });
+                                    document.getElementById("policytable").innerHTML = ihtml
+                                    var PolButton = document.querySelectorAll('#ShowFullPolicyButton');
+                                    if (!InteractedWithPolicyTableYet && OverloadPolicySize!=0) {
+                                        PolButton[0].style="width:100%";
+                                        PolButton[0].innerHTML = "Load all "+OverloadPolicySize+" prefixes in policy"
+                                    } else {
+                                        PolButton[0].style="display:none;";
+                                    }
+                                    
+                                } else {
+                                    aaa[0].style.display = "none";
+                                    bbb[0].style.display = "none";
+                                }
+                            }
+
+
+                            var pathdropdown = document.querySelectorAll('#netpolicydropdown');
+                            pathdropdown[0].addEventListener("change",dropdownPoke)
+                            handleImageChange()
+                            buildPrefixTable()
+
+                            document.addEventListener("load", function(){
+                                
+                                handleImageChange()
+                            });
+
+                            function uuidv4() {
+                                return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+                                    var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+                                    return v.toString(16);
+                                });
+                            }
+
+                            
+                            let realTimeSocket = new ReconnectingWebSocket("wss://bgp.tools/ws/rt-asn?prefix=AS60592" + "&magic=" + encodeURIComponent("UI6GMSRZ3TWPTSB3OYJFF4DWCL6KXIXVVIC7VYQQINOQUENLV2XQ===="));
+                            
+                            realTimeSocket.onmessage = function(event) {
+                                console.log(`[message] Data received from server: ${event.data}`);
+                                if (event.data == "Running.") {
+                                    document.getElementById("ws-status").src = "/assets/connected.png";
+                                    document.getElementById("ws-status").title = "Connected to realtime data";
+                                } else if (event.data == "STOP-CONNECTING") {
+                                    document.getElementById("ws-status").src = disconectedIcon;
+                                    document.getElementById("ws-status").title = "Not connected to realtime data";
+                                    realTimeSocket.maxReconnectAttempts = 1;
+                                    realTimeSocket.close()
+                                } else {
+                                    var obj = JSON.parse(event.data);
+                                    var elm = document.getElementById("pfx-"+obj.Prefix);
+                                    if (!elm && obj.Vis > 6) {
+                                        var tblist = document.getElementById("donotscrapebgptools-prefixlist-tbody");
+                                        var node = document.createElement("tr");                 
+                                        node.outerHTML = '<tr id="pfx-'+obj.Prefix+'"><td class="nowrap"><img class="flag-img" src="/assets/flags/'+obj.Whois.WhoisCountry+'.png" title="'+obj.Whois.WhoisCountry+'"></td><td><a href="/prefix/'+obj.Prefix+'">'+obj.Prefix+'</a></td><td class="smallonmobile nowrap">'+obj.Whois.WhoisName+'</td></tr>';
+                                        tblist.appendChild(node);                              
+                                    }
+                                    if (!elm) {
+                                        elm = document.getElementById("pfx-"+obj.Prefix);
+                                    }
+                                    
+                                    if (obj.Vis > 70) {
+                                        if (elm.style) {
+                                            var es = elm.style;
+                                            if (es.animation.includes("pulse1b")) {
+                                                elm.style = "animation: pulse2b 1s 1;";
+                                            } else if (es.animation.includes("pulse2b")) {
+                                                elm.style = "animation: pulse1b 1s 1;";
+                                            } else {
+                                                elm.style = "animation: pulse1b 1s 1;";
+                                            }
+                                        }
+                                    } else if (obj.Vis < 5) {
+                                        
+                                        var elm = document.getElementById("pfx-"+obj.Prefix);
+                                        if (elm) {
+                                            elm.parentNode.removeChild(elm);
+                                        }
+                                    } else {
+                                        if (elm.style) {
+                                            var es = elm.style;
+                                            if (es.animation.includes("pulse1r")) {
+                                                elm.style = "animation: pulse2r 1s 1;";
+                                            } else if (es.animation.includes("pulse2r")) {
+                                                elm.style = "animation: pulse1r 1s 1;";
+                                            } else {
+                                                elm.style = "animation: pulse1r 1s 1;";
+                                            }
+                                        }
+                                    }
+                                }
+                            };
+                            var disconectedIcon = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAAZlBMVEX/ewBZWVn/ewf/ew5fWljudiP8egp6XVT6eRHodSmVYU6hZEzObjrldCv3eRZ/XlNjWliHX1KrZkngci71eBl1XFXCa0CKYFHydx18XlSQYE+lZUq0aEbJbT3SbzhvXFaLYFG8akLYdYVFAAABQElEQVRIx5XV25KDIAwGYIKASLutqOtZ277/S26xK4ozJea/qRdfajATZaRkd6B6oPoL1d9QphUn+WvXmGF8TfN8yvNrDj6nvNj5Hu8n8HCh9ONiON5PEKuQx55DmFTHC1R9uMOjYkhFERbkEikofw8FGe5t0FWJ+kLvz5H+t8RdGD9k8TeebBXpzwIZT955XyVBtHHeXYzeJy5fhydtoZffZvUMSfvxT4BOeI/G/b9paxH1at8XQF8xNcV8aaQvHQBMhY/XttsdYp5nah3XdvIqui61Cjy+jqLwXp1cx9XLQZ5cR/vx1p8cez2IWrlxYY/T9bNVyCfmdQdbxNgs441FNRAEHS83oe9ahmTw1p88nhHCiAkpeIUeX5eJ6NlM9Gwm+uxO9/3F2PSR597jn1+udCWzUp7150P1jOoZ1f8BGPARG85JosIAAAAASUVORK5CYII=";
+                            realTimeSocket.onerror = function(error) {
+                                document.getElementById("ws-status").src = disconectedIcon;
+                                document.getElementById("ws-status").title = "Not connected to realtime data";
+
+                                console.log(`[error] ${error.message}`);
+                            };
+                            realTimeSocket.onclose = function(error) {
+                                document.getElementById("ws-status").src = disconectedIcon;
+                                document.getElementById("ws-status").title = "Not connected to realtime data";
+
+                                console.log(`[error] ${error.message}`);
+                            };
+                        </script>
+
+<div class="superclearfix">
+    
+</div>
+
+                        <hr>
+                        <a style="font-size: small;" href="/kb/what-is-a-upstream">How are upstreams and downstreams calculated?</a>
+                        <h3 id="upstreams">Upstreams<img class="flag-img" src="/assets/lightning.png" style="padding-left: 12px;" title="This information was fetched live at page load time" alt="This information was fetched live at page load time"/></h3>
+
+
+                        <table id="donotscrapebgptools-upstreamTable" class="full-width-table">
+                            <thead class="sortable">
+                                <tr>
+                                    <th class="nowrap boldpls">  &nbsp;  </th>
+                                    <th data-sort-method='number' class="boldpls">ASN</th>
+                                    <th class="nowrap boldpls">Description</th>
+                                    <th class="nowrap boldpls">IPv4</th>
+                                    <th class="nowrap boldpls">IPv6</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                <tr>
+                                    <td data-sort='CZ' class="nowrap ns"><img class="flag-img" src="/assets/flags/CZ.png" title="CZ">
+                                        
+                                        </td>
+                                    <td data-sort='15685'><a href="/as/15685">AS15685</a></td>
+                                    <td class="smallonmobile nowrap">CASABLANCA INT a.s.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CZ' class="nowrap ns"><img class="flag-img" src="/assets/flags/CZ.png" title="CZ">
+                                        
+                                        </td>
+                                    <td data-sort='43541'><a href="/as/43541">AS43541</a></td>
+                                    <td class="smallonmobile nowrap">VSHosting s.r.o.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US">
+                                        
+                                        </td>
+                                    <td data-sort='20473'><a href="/as/20473">AS20473</a></td>
+                                    <td class="smallonmobile nowrap">The Constant Company, LLC</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CZ' class="nowrap ns"><img class="flag-img" src="/assets/flags/CZ.png" title="CZ">
+                                        
+                                        </td>
+                                    <td data-sort='29134'><a href="/as/29134">AS29134</a></td>
+                                    <td class="smallonmobile nowrap">Webglobe, s.r.o.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='IE' class="nowrap ns"><img class="flag-img" src="/assets/flags/IE.png" title="IE">
+                                        
+                                        </td>
+                                    <td data-sort='39122'><a href="/as/39122">AS39122</a></td>
+                                    <td class="smallonmobile nowrap">Blacknight Internet Solutions Limited</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='RS' class="nowrap ns"><img class="flag-img" src="/assets/flags/RS.png" title="RS">
+                                        
+                                        </td>
+                                    <td data-sort='60733'><a href="/as/60733">AS60733</a></td>
+                                    <td class="smallonmobile nowrap">ZORAN PEROVIC trading as Agencija Perke.NET</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US">
+                                        
+                                        </td>
+                                    <td data-sort='917'><a href="/as/917">AS917</a></td>
+                                    <td class="smallonmobile nowrap">Misaka Network, Inc.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US">
+                                        
+                                        </td>
+                                    <td data-sort='57695'><a href="/as/57695">AS57695</a></td>
+                                    <td class="smallonmobile nowrap">Misaka Network, Inc.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='PA' class="nowrap ns"><img class="flag-img" src="/assets/flags/PA.png" title="PA">
+                                        
+                                        </td>
+                                    <td data-sort='3551'><a href="/as/3551">AS3551</a></td>
+                                    <td class="smallonmobile nowrap">Universidad Tecnologica de Panama</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='RS' class="nowrap ns"><img class="flag-img" src="/assets/flags/RS.png" title="RS">
+                                        
+                                        </td>
+                                    <td data-sort='13004'><a href="/as/13004">AS13004</a></td>
+                                    <td class="smallonmobile nowrap">Serbian Open Exchange DOO</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US">
+                                        
+                                        </td>
+                                    <td data-sort='23961'><a href="/as/23961">AS23961</a></td>
+                                    <td class="smallonmobile nowrap">Misaka Network, Inc.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CO' class="nowrap ns"><img class="flag-img" src="/assets/flags/CO.png" title="CO">
+                                        
+                                        </td>
+                                    <td data-sort='7195'><a href="/as/7195">AS7195</a></td>
+                                    <td class="smallonmobile nowrap">EdgeUno</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US">
+                                        
+                                        </td>
+                                    <td data-sort='51095'><a href="/as/51095">AS51095</a></td>
+                                    <td class="smallonmobile nowrap">EdgeUno, Inc.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US">
+                                        
+                                        </td>
+                                    <td data-sort='48386'><a href="/as/48386">AS48386</a></td>
+                                    <td class="smallonmobile nowrap">Misaka Network, Inc.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='HK' class="nowrap ns"><img class="flag-img" src="/assets/flags/HK.png" title="HK">
+                                        
+                                        </td>
+                                    <td data-sort='140951'><a href="/as/140951">AS140951</a></td>
+                                    <td class="smallonmobile nowrap">IPTP Networks</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='KZ' class="nowrap ns"><img class="flag-img" src="/assets/flags/KZ.png" title="KZ">
+                                        
+                                        </td>
+                                    <td data-sort='202958'><a href="/as/202958">AS202958</a></td>
+                                    <td class="smallonmobile nowrap">LLP &#34;Kompaniya Hoster.KZ&#34;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+
+                        <hr>
+                        <h3 id="peers">Peers<img class="flag-img" src="/assets/lightning.png" style="padding-left: 12px;" title="This information was fetched live at page load time" alt="This information was fetched live at page load time"/></h3>
+
+
+
+                        <table id="donotscrapebgptools-upstreamTablePeers" class="full-width-table">
+                            <thead class="sortable">
+                                <tr>
+                                    <th class="nowrap boldpls">  &nbsp;  </th>
+                                    <th data-sort-method='number' class="boldpls">ASN</th>
+                                    <th class="nowrap boldpls">Description</th>
+                                    <th class="nowrap boldpls">IPv4</th>
+                                    <th class="nowrap boldpls">IPv6</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                <tr>
+                                    <td data-sort='CZ' class="nowrap ns"><img class="flag-img" src="/assets/flags/CZ.png" title="CZ"></td>
+                                    <td data-sort='15685'><a href="/as/15685">AS15685</a></td>
+                                    <td class="smallonmobile nowrap">CASABLANCA INT a.s.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='20473'><a href="/as/20473">AS20473</a></td>
+                                    <td class="smallonmobile nowrap">The Constant Company, LLC</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CZ' class="nowrap ns"><img class="flag-img" src="/assets/flags/CZ.png" title="CZ"></td>
+                                    <td data-sort='43541'><a href="/as/43541">AS43541</a></td>
+                                    <td class="smallonmobile nowrap">VSHosting s.r.o.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CZ' class="nowrap ns"><img class="flag-img" src="/assets/flags/CZ.png" title="CZ"></td>
+                                    <td data-sort='29134'><a href="/as/29134">AS29134</a></td>
+                                    <td class="smallonmobile nowrap">Webglobe, s.r.o.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='RS' class="nowrap ns"><img class="flag-img" src="/assets/flags/RS.png" title="RS"></td>
+                                    <td data-sort='60733'><a href="/as/60733">AS60733</a></td>
+                                    <td class="smallonmobile nowrap">ZORAN PEROVIC trading as Agencija Perke.NET</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='IE' class="nowrap ns"><img class="flag-img" src="/assets/flags/IE.png" title="IE"></td>
+                                    <td data-sort='39122'><a href="/as/39122">AS39122</a></td>
+                                    <td class="smallonmobile nowrap">Blacknight Internet Solutions Limited</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='917'><a href="/as/917">AS917</a></td>
+                                    <td class="smallonmobile nowrap">Misaka Network, Inc.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='57695'><a href="/as/57695">AS57695</a></td>
+                                    <td class="smallonmobile nowrap">Misaka Network, Inc.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='23961'><a href="/as/23961">AS23961</a></td>
+                                    <td class="smallonmobile nowrap">Misaka Network, Inc.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CO' class="nowrap ns"><img class="flag-img" src="/assets/flags/CO.png" title="CO"></td>
+                                    <td data-sort='7195'><a href="/as/7195">AS7195</a></td>
+                                    <td class="smallonmobile nowrap">EdgeUno</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='RS' class="nowrap ns"><img class="flag-img" src="/assets/flags/RS.png" title="RS"></td>
+                                    <td data-sort='13004'><a href="/as/13004">AS13004</a></td>
+                                    <td class="smallonmobile nowrap">Serbian Open Exchange DOO</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='DE' class="nowrap ns"><img class="flag-img" src="/assets/flags/DE.png" title="DE"></td>
+                                    <td data-sort='5405'><a href="/as/5405">AS5405</a></td>
+                                    <td class="smallonmobile nowrap">Inter.link GmbH</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='PA' class="nowrap ns"><img class="flag-img" src="/assets/flags/PA.png" title="PA"></td>
+                                    <td data-sort='3551'><a href="/as/3551">AS3551</a></td>
+                                    <td class="smallonmobile nowrap">Universidad Tecnologica de Panama</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='HK' class="nowrap ns"><img class="flag-img" src="/assets/flags/HK.png" title="HK"></td>
+                                    <td data-sort='140951'><a href="/as/140951">AS140951</a></td>
+                                    <td class="smallonmobile nowrap">IPTP Networks</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='SC' class="nowrap ns"><img class="flag-img" src="/assets/flags/SC.png" title="SC"></td>
+                                    <td data-sort='37740'><a href="/as/37740">AS37740</a></td>
+                                    <td class="smallonmobile nowrap">IPTP Inc</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='DE' class="nowrap ns"><img class="flag-img" src="/assets/flags/DE.png" title="DE"></td>
+                                    <td data-sort='24940'><a href="/as/24940">AS24940</a></td>
+                                    <td class="smallonmobile nowrap">Hetzner Online GmbH</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='KZ' class="nowrap ns"><img class="flag-img" src="/assets/flags/KZ.png" title="KZ"></td>
+                                    <td data-sort='202958'><a href="/as/202958">AS202958</a></td>
+                                    <td class="smallonmobile nowrap">LLP &#34;Kompaniya Hoster.KZ&#34;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='51095'><a href="/as/51095">AS51095</a></td>
+                                    <td class="smallonmobile nowrap">EdgeUno, Inc.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='GB' class="nowrap ns"><img class="flag-img" src="/assets/flags/GB.png" title="GB"></td>
+                                    <td data-sort='52025'><a href="/as/52025">AS52025</a></td>
+                                    <td class="smallonmobile nowrap">ParadoxNetworks Limited</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='GB' class="nowrap ns"><img class="flag-img" src="/assets/flags/GB.png" title="GB"></td>
+                                    <td data-sort='41095'><a href="/as/41095">AS41095</a></td>
+                                    <td class="smallonmobile nowrap">IPTP LTD</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='RO' class="nowrap ns"><img class="flag-img" src="/assets/flags/RO.png" title="RO"></td>
+                                    <td data-sort='6204'><a href="/as/6204">AS6204</a></td>
+                                    <td class="smallonmobile nowrap">INTERKVM HOST SRL</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='NL' class="nowrap ns"><img class="flag-img" src="/assets/flags/NL.png" title="NL"></td>
+                                    <td data-sort='49544'><a href="/as/49544">AS49544</a></td>
+                                    <td class="smallonmobile nowrap">i3D.net B.V</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+                                    <td data-sort='14840'><a href="/as/14840">AS14840</a></td>
+                                    <td class="smallonmobile nowrap">BR.DIGITAL </td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='214022'><a href="/as/214022">AS214022</a></td>
+                                    <td class="smallonmobile nowrap">Joseph Rawlings trading as Virtnet.bond</td>
+                                    <td class="nowrap">&#10008;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='AT' class="nowrap ns"><img class="flag-img" src="/assets/flags/AT.png" title="AT"></td>
+                                    <td data-sort='1764'><a href="/as/1764">AS1764</a></td>
+                                    <td class="smallonmobile nowrap">Next Layer Telecommunications</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='48386'><a href="/as/48386">AS48386</a></td>
+                                    <td class="smallonmobile nowrap">Misaka Network, Inc.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='32590'><a href="/as/32590">AS32590</a></td>
+                                    <td class="smallonmobile nowrap">Valve Corporation</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CZ' class="nowrap ns"><img class="flag-img" src="/assets/flags/CZ.png" title="CZ"></td>
+                                    <td data-sort='50698'><a href="/as/50698">AS50698</a></td>
+                                    <td class="smallonmobile nowrap">TETA s.r.o.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='AT' class="nowrap ns"><img class="flag-img" src="/assets/flags/AT.png" title="AT"></td>
+                                    <td data-sort='40994'><a href="/as/40994">AS40994</a></td>
+                                    <td class="smallonmobile nowrap">Alwyzon (Hohl IT)</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='BG' class="nowrap ns"><img class="flag-img" src="/assets/flags/BG.png" title="BG"></td>
+                                    <td data-sort='31287'><a href="/as/31287">AS31287</a></td>
+                                    <td class="smallonmobile nowrap">IPACCT CABLE Ltd</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='NL' class="nowrap ns"><img class="flag-img" src="/assets/flags/NL.png" title="NL"></td>
+                                    <td data-sort='216107'><a href="/as/216107">AS216107</a></td>
+                                    <td class="smallonmobile nowrap">Noah van der Aa trading as Frumentum Media</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='HK' class="nowrap ns"><img class="flag-img" src="/assets/flags/HK.png" title="HK"></td>
+                                    <td data-sort='134666'><a href="/as/134666">AS134666</a></td>
+                                    <td class="smallonmobile nowrap">Hoshi Network</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='PR' class="nowrap ns"><img class="flag-img" src="/assets/flags/PR.png" title="PR"></td>
+                                    <td data-sort='6208'><a href="/as/6208">AS6208</a></td>
+                                    <td class="smallonmobile nowrap">FiberX</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='PR' class="nowrap ns"><img class="flag-img" src="/assets/flags/PR.png" title="PR"></td>
+                                    <td data-sort='399291'><a href="/as/399291">AS399291</a></td>
+                                    <td class="smallonmobile nowrap">Puerto Rico Fiber Network Inc</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='PR' class="nowrap ns"><img class="flag-img" src="/assets/flags/PR.png" title="PR"></td>
+                                    <td data-sort='21559'><a href="/as/21559">AS21559</a></td>
+                                    <td class="smallonmobile nowrap">OSNET</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='400671'><a href="/as/400671">AS400671</a></td>
+                                    <td class="smallonmobile nowrap">stypr LLC</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='206699'><a href="/as/206699">AS206699</a></td>
+                                    <td class="smallonmobile nowrap">Zoey Mertes</td>
+                                    <td class="nowrap">&#10008;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='TH' class="nowrap ns"><img class="flag-img" src="/assets/flags/TH.png" title="TH"></td>
+                                    <td data-sort='133504'><a href="/as/133504">AS133504</a></td>
+                                    <td class="smallonmobile nowrap">PAOCLOUD</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='LU' class="nowrap ns"><img class="flag-img" src="/assets/flags/LU.png" title="LU"></td>
+                                    <td data-sort='199524'><a href="/as/199524">AS199524</a></td>
+                                    <td class="smallonmobile nowrap">Gcore S.A.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='AT' class="nowrap ns"><img class="flag-img" src="/assets/flags/AT.png" title="AT"></td>
+                                    <td data-sort='42473'><a href="/as/42473">AS42473</a></td>
+                                    <td class="smallonmobile nowrap">Anexia Cloud Solutions GmbH</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CZ' class="nowrap ns"><img class="flag-img" src="/assets/flags/CZ.png" title="CZ"></td>
+                                    <td data-sort='21430'><a href="/as/21430">AS21430</a></td>
+                                    <td class="smallonmobile nowrap">WIA spol. s.r.o.</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='SG' class="nowrap ns"><img class="flag-img" src="/assets/flags/SG.png" title="SG"></td>
+                                    <td data-sort='24482'><a href="/as/24482">AS24482</a></td>
+                                    <td class="smallonmobile nowrap">SG.GS</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='36236'><a href="/as/36236">AS36236</a></td>
+                                    <td class="smallonmobile nowrap">NetActuate, Inc</td>
+                                    <td class="nowrap">&#10008;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='CZ' class="nowrap ns"><img class="flag-img" src="/assets/flags/CZ.png" title="CZ"></td>
+                                    <td data-sort='49121'><a href="/as/49121">AS49121</a></td>
+                                    <td class="smallonmobile nowrap">Infinity Telecom, s.r.o.</td>
+                                    <td class="nowrap">&#10008;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='US' class="nowrap ns"><img class="flag-img" src="/assets/flags/US.png" title="US"></td>
+                                    <td data-sort='33760'><a href="/as/33760">AS33760</a></td>
+                                    <td class="smallonmobile nowrap">Ashton Holmes, Sole Proprietorship</td>
+                                    <td class="nowrap">&#10008;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='GB' class="nowrap ns"><img class="flag-img" src="/assets/flags/GB.png" title="GB"></td>
+                                    <td data-sort='4455'><a href="/as/4455">AS4455</a></td>
+                                    <td class="smallonmobile nowrap">IX Reach Ltd</td>
+                                    <td class="nowrap">&#10004;</td>
+                                    <td class="nowrap">&#10008;</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td data-sort='TW' class="nowrap ns"><img class="flag-img" src="/assets/flags/TW.png" title="TW"></td>
+                                    <td data-sort='214821'><a href="/as/214821">AS214821</a></td>
+                                    <td class="smallonmobile nowrap">Wen-Ju, Chiang</td>
+                                    <td class="nowrap">&#10008;</td>
+                                    <td class="nowrap">&#10004;</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+
+
+                    </div>
+
+                    <div style="display: none" id="whois-page">
+                        
+                        
+                        <pre style="white-space: pre-wrap;">aut-num:        <a href="/AS60592">AS60592</a>
+as-name:        GRANSY
+descr:          Gransy s.r.o. http://gransy.com
+org:            <a href="https://apps.db.ripe.net/db-web-ui/query?searchtext=ORG-GS113-RIPE">ORG-GS113-RIPE</a>
+remarks:        == Casablanca CZ ==
+import:         from <a href="/AS15685">AS15685</a> action pref=100; accept ANY
+export:         to <a href="/AS15685">AS15685</a> announce <a href="/AS60592">AS60592</a>
+remarks:        == VSHosting CZ ==
+import:         from <a href="/AS43541">AS43541</a> action pref=100; accept ANY
+export:         to <a href="/AS43541">AS43541</a> announce <a href="/as-set/AS-GRANSY">AS-GRANSY</a>
+remarks:        == MasterInternet CZ ==
+import:         from <a href="/AS24971">AS24971</a> action pref=100; accept ANY
+export:         to <a href="/AS24971">AS24971</a> announce <a href="/AS60592">AS60592</a>
+remarks:        == SG.GS SG ==
+import:         from <a href="/AS24482">AS24482</a> action pref=100; accept ANY
+export:         to <a href="/AS24482">AS24482</a> announce <a href="/AS60592">AS60592</a>
+remarks:        == ARP Networks US ==
+import:         from <a href="/AS25795">AS25795</a> action pref=100; accept ANY
+export:         to <a href="/AS25795">AS25795</a> announce <a href="/AS60592">AS60592</a>
+remarks:        == ZettaGrid AU ==
+import:         from <a href="/AS7604">AS7604</a> action pref=100; accept ANY
+export:         to <a href="/AS7604">AS7604</a> announce <a href="/AS60592">AS60592</a>
+remarks:        == Hetzner ZA ==
+import:         from <a href="/AS37153">AS37153</a> action pref=100; accept ANY
+export:         to <a href="/AS37153">AS37153</a> announce <a href="/AS60592">AS60592</a>
+remarks:        == GleSYS SE ==
+import:         from <a href="/AS43948">AS43948</a> action pref=100; accept ANY
+export:         to <a href="/AS43948">AS43948</a> announce <a href="/AS60592">AS60592</a>
+remarks:        == Aptus Solutions TZ ==
+import:         from <a href="/AS37349">AS37349</a> action pref=100; accept ANY
+export:         to <a href="/AS37349">AS37349</a> announce <a href="/AS60592">AS60592</a>
+remarks:        == ANEXIA Internetdienstleistungs GmbH CL/AR ==
+import:         from <a href="/AS42473">AS42473</a> action pref=100; accept ANY
+export:         to <a href="/AS42473">AS42473</a> announce <a href="/AS60592">AS60592</a>
+remarks:        == SecureAX SG ==
+import:         from <a href="/AS58436">AS58436</a> action pref=100; accept ANY
+export:         to <a href="/AS58436">AS58436</a> announce <a href="/AS60592">AS60592</a>
+remarks:        == BezeQ Int IL ==
+import:         from <a href="/AS8551">AS8551</a> action pref=100; accept ANY
+export:         to <a href="/AS8551">AS8551</a> announce <a href="/AS60592">AS60592</a>
+remarks:        == Neterra ==
+import:         from <a href="/AS34224">AS34224</a> action pref=100; accept ANY
+export:         to <a href="/AS34224">AS34224</a> announce <a href="/AS60592">AS60592</a>
+remarks:        == ATE FR ==
+import:         from <a href="/AS35625">AS35625</a> action pref=100; accept ANY
+export:         to <a href="/AS35625">AS35625</a> announce <a href="/AS60592">AS60592</a>
+remarks:        == Velia DE, US ==
+import:         from <a href="/AS29066">AS29066</a> action pref=100; accept ANY
+export:         to <a href="/AS29066">AS29066</a> announce <a href="/AS60592">AS60592</a>
+remarks:        == <a href="/AS112">AS112</a> ==
+import:         from <a href="/AS112">AS112</a> action pref=120; accept <a href="/AS112">AS112</a>
+export:         to <a href="/AS112">AS112</a> announce ANY
+remarks:        == TerraHost, NO, <a href="/AS203629">AS203629</a> ==
+import:         from <a href="/AS203629">AS203629</a> action pref=100; accept ANY
+export:         to <a href="/AS203629">AS203629</a> announce <a href="/AS60592">AS60592</a>
+remarks:        == DevCapsule, NL, <a href="/AS9178">AS9178</a> ==
+import:         from <a href="/AS9178">AS9178</a> action pref=100; accept ANY
+export:         to <a href="/AS9178">AS9178</a> announce <a href="/AS60592">AS60592</a>
+remarks:        == Aus Net Servers, AU, <a href="/AS59256">AS59256</a> ==
+import:         from <a href="/AS59256">AS59256</a> action pref=100; accept ANY
+export:         to <a href="/AS59256">AS59256</a> announce <a href="/AS60592">AS60592</a>
+remarks:        == Vultr.NET, JP, <a href="/AS20473">AS20473</a> ==
+import:         from <a href="/AS20473">AS20473</a> action pref=100; accept ANY
+export:         to <a href="/AS20473">AS20473</a> announce <a href="/AS60592">AS60592</a>
+remarks:        == HostDime, US, BR, IN, HK, <a href="/AS33182">AS33182</a> ==
+import:         from <a href="/AS33182">AS33182</a> action pref=100; accept ANY
+export:         to <a href="/AS33182">AS33182</a> announce <a href="/AS60592">AS60592</a>
+remarks:        == NIC.AM, AM, <a href="/AS8226">AS8226</a> ==
+import:         from <a href="/AS8226">AS8226</a> action pref=100; accept ANY
+export:         to <a href="/AS8226">AS8226</a> announce <a href="/AS60592">AS60592</a>
+remarks:        == Angola IXP, AO, <a href="/AS327775">AS327775</a> ==
+import:         from <a href="/AS327775">AS327775</a> action pref=100; accept ANY
+export:         to <a href="/AS327775">AS327775</a> announce <a href="/AS60592">AS60592</a>
+remarks:        == Telecorp Colombia S.A., CO, <a href="/AS7195">AS7195</a> ==
+import:         from <a href="/AS7195">AS7195</a> action pref=100; accept ANY
+export:         to <a href="/AS7195">AS7195</a> announce <a href="/AS60592">AS60592</a>
+remarks:        == Infotechna, HU <a href="/AS15566">AS15566</a> ==
+import:         from <a href="/AS15566">AS15566</a> action pref=100; accept ANY
+export:         to <a href="/AS15566">AS15566</a> announce <a href="/AS60592">AS60592</a>
+remarks:        == Zappie, US <a href="/AS61138">AS61138</a> ==
+import:         from <a href="/AS61138">AS61138</a> action pref=100; accept ANY
+export:         to <a href="/AS61138">AS61138</a> announce <a href="/AS60592">AS60592</a>
+remarks:        == EdgeUno, Turkey <a href="/AS64124">AS64124</a> ==
+import:         from <a href="/AS64124">AS64124</a> action pref=100; accept ANY
+export:         to <a href="/AS64124">AS64124</a> announce <a href="/AS60592">AS60592</a>
+remarks:        == Securebit, Switzerland, <a href="/AS58057">AS58057</a> ==
+import:         from <a href="/AS58057">AS58057</a> action pref=100; accept ANY
+export:         to <a href="/AS58057">AS58057</a> announce <a href="/AS60592">AS60592</a>
+remarks:        == SBIX, Switzerland, <a href="/AS47422">AS47422</a> ==
+import:         from <a href="/AS47422">AS47422</a> action pref=100; accept ANY
+export:         to <a href="/AS47422">AS47422</a> announce <a href="/AS60592">AS60592</a>
+remarks:        == Misaka, USA, <a href="/AS57695">AS57695</a> ==
+import:         from <a href="/AS57695">AS57695</a> action pref=100; accept ANY
+export:         to <a href="/AS57695">AS57695</a> announce <a href="/AS60592">AS60592</a>
+remarks:        == Fishnet, RU, <a href="/AS43317">AS43317</a> ==
+import:         from <a href="/AS43317">AS43317</a> action pref=100; accept ANY
+export:         to <a href="/AS43317">AS43317</a> announce <a href="/AS60592">AS60592</a>
+remarks:        == LeapSwitch, IN, <a href="/AS132335">AS132335</a> ==
+import:         from <a href="/AS132335">AS132335</a> action pref=100; accept ANY
+export:         to <a href="/AS132335">AS132335</a> announce <a href="/AS60592">AS60592</a>
+remarks:        == Dataways, GR, <a href="/AS15544">AS15544</a> ==
+import:         from <a href="/AS15544">AS15544</a> action pref=100; accept ANY
+export:         to <a href="/AS15544">AS15544</a> announce <a href="/AS60592">AS60592</a>
+remarks:        == IPTP Vietnam, VN, <a href="/AS135993">AS135993</a> ==
+import:         from <a href="/AS135993">AS135993</a> action pref=100; accept ANY
+export:         to <a href="/AS135993">AS135993</a> announce <a href="/AS60592">AS60592</a>
+remarks:        == Psychz, (TW,SG), <a href="/AS40676">AS40676</a> ==
+import:         from <a href="/AS40676">AS40676</a> action pref=100; accept ANY
+export:         to <a href="/AS40676">AS40676</a> announce <a href="/AS60592">AS60592</a>
+remarks:        == Webglobe, (CZ), <a href="/AS29134">AS29134</a> ==
+import:         from <a href="/AS29134">AS29134</a> action pref=100; accept ANY
+export:         to <a href="/AS29134">AS29134</a> announce <a href="/AS60592">AS60592</a>
+admin-c:        DUMY-RIPE
+tech-c:         DUMY-RIPE
+status:         ASSIGNED
+notify:         info@gransy.com
+mnt-by:         RIPE-NCC-END-MNT
+mnt-by:         JH18407-MNT
+mnt-by:         MNT-GLUX
+mnt-by:         MNT-KRAJA
+created:        2013-06-19T12:14:45Z
+last-modified:  2021-07-23T10:03:59Z
+source:         RIPE
+remarks:        ****************************
+remarks:        * THIS OBJECT IS MODIFIED
+remarks:        * Please note that all data that is generally regarded as personal
+remarks:        * data has been removed from this object.
+remarks:        * To view the original object, please query the RIPE Database at:
+remarks:        * http://www.ripe.net/whois
+remarks:        ****************************
+
+
+organisation:   <a href="https://apps.db.ripe.net/db-web-ui/query?searchtext=ORG-GS113-RIPE">ORG-GS113-RIPE</a>
+org-name:       Gransy s.r.o.
+country:        CZ
+org-type:       LIR
+address:        Dummy address for <a href="https://apps.db.ripe.net/db-web-ui/query?searchtext=ORG-GS113-RIPE">ORG-GS113-RIPE</a>
+# Email removed, Log into bgp.tools to see whois emails
+abuse-c:        AR14418-RIPE
+mnt-ref:        JH79145-MNT
+mnt-ref:        MNT-NETART
+mnt-ref:        RIPE-NCC-HM-MNT
+mnt-by:         RIPE-NCC-HM-MNT
+mnt-by:         JH79145-MNT
+created:        2013-06-14T13:55:10Z
+last-modified:  2021-06-10T15:00:58Z
+source:         RIPE
+remarks:        ****************************
+remarks:        * THIS OBJECT IS MODIFIED
+remarks:        * Please note that all data that is generally regarded as personal
+remarks:        * data has been removed from this object.
+remarks:        * To view the original object, please query the RIPE Database at:
+remarks:        * http://www.ripe.net/whois
+remarks:        ****************************
+
+</pre>
+                        
+                        
+                        <a style="font-size: small;">Last Update: 2025-12-11T03:25:41Z UTC </a>
+                        
+                        <hr>
+                        
+                            <h2>Member of the following AS-SETs</h2>
+
+                            <table id="fhTable" class="full-width-table ">
+                                <tbody id="prefixlist-tbody">
+                                    <tr>
+                                        <th class="boldpls nowrap"> - </th>
+                                        <th class="boldpls">Member</th>
+                                         
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-vshosting-cz">as-vshosting-cz</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-ate">as-ate</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">ARIN</td>
+                                        
+                                        <td><a href="/as-set/ARIN::as917:as-customers-large">as917:as-customers-large</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-liquid-ext">as-liquid-ext</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-isza">as-isza</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-h1p-eu">as-h1p-eu</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-edgeuno-tr">as-edgeuno-tr</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-misaka-customers2">as-misaka-customers2</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-ps">as-ps</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-slt-global">as-slt-global</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-blacknight">as-blacknight</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-ctbc-customers171">as-ctbc-customers171</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-emix">as-emix</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-neterra-int">as-neterra-int</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-anx">as-anx</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-nwn-transit">as-nwn-transit</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-bbix-t">as-bbix-t</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-velianet">as-velianet</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-c3">as-c3</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as7606:as-vic-ix">as7606:as-vic-ix</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-gtscz-cust">as-gtscz-cust</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-perke-net-int">as-perke-net-int</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as47200:as-nixcz-rsclients">as47200:as-nixcz-rsclients</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as7606:as-wa-ix">as7606:as-wa-ix</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-sbix-rs">as-sbix-rs</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as20473:as-vultr">as20473:as-vultr</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">JPIRR</td>
+                                        
+                                        <td><a href="/as-set/JPIRR::as-bbix-t">as-bbix-t</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-sox-serbia">as-sox-serbia</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-set-hetzner-africa">as-set-hetzner-africa</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-udos">as-udos</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as8508:as-sask-upc-in">as8508:as-sask-upc-in</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-set-seacom-customers-customer">as-set-seacom-customers-customer</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">APNIC</td>
+                                        
+                                        <td><a href="/as-set/APNIC::as-iptp-140951">as-iptp-140951</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-ec-mx">as-ec-mx</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-ignum-out">as-ignum-out</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-itxbr1">as-itxbr1</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-iprosrv">as-iprosrv</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-netactuate">as-netactuate</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-set-dignus">as-set-dignus</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-ate-cust">as-ate-cust</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">ALTDB</td>
+                                        
+                                        <td><a href="/as-set/ALTDB::as-arpnetworks-customers">as-arpnetworks-customers</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-meer">as-meer</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as34224:as-neterra-int">as34224:as-neterra-int</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">ARIN</td>
+                                        
+                                        <td><a href="/as-set/ARIN::as917:as-customers-krixe">as917:as-customers-krixe</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">APNIC</td>
+                                        
+                                        <td><a href="/as-set/APNIC::as132335:as-set">as132335:as-set</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-kddcustomer2">as-kddcustomer2</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as15544:as-dataways-customers-ath">as15544:as-dataways-customers-ath</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-gridlane">as-gridlane</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">APNIC</td>
+                                        
+                                        <td><a href="/as-set/APNIC::as7713:as-telkom-transit">as7713:as-telkom-transit</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-gransy">as-gransy</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-ignum-nix">as-ignum-nix</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-dimenoc">as-dimenoc</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-transroute-spec">as-transroute-spec</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-misaka-premium">as-misaka-premium</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-nixcz-rsclients">as-nixcz-rsclients</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-4ixp-rs">as-4ixp-rs</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">ARIN</td>
+                                        
+                                        <td><a href="/as-set/ARIN::as917:as-core">as917:as-core</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">NTTCOM</td>
+                                        
+                                        <td><a href="/as-set/NTTCOM::as3741:as-isza">as3741:as-isza</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-sox">as-sox</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-fibertelecom">as-fibertelecom</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-casablanca-transit">as-casablanca-transit</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">APNIC</td>
+                                        
+                                        <td><a href="/as-set/APNIC::as132335:as-customers">as132335:as-customers</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">JPIRR</td>
+                                        
+                                        <td><a href="/as-set/JPIRR::as-bbix-t-v6">as-bbix-t-v6</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-portlane">as-portlane</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-anexia">as-anexia</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-4ixpv6">as-4ixpv6</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-terrahost">as-terrahost</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">ALTDB</td>
+                                        
+                                        <td><a href="/as-set/ALTDB::as-arpnet-customers">as-arpnet-customers</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-nforce-customers">as-nforce-customers</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-hurricane">as-hurricane</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-misaka-customers">as-misaka-customers</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-4ixp">as-4ixp</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-casablanca-nix">as-casablanca-nix</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-telstra-testing-1">as-telstra-testing-1</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">APNIC</td>
+                                        
+                                        <td><a href="/as-set/APNIC::as-iptp">as-iptp</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-hetnix">as-hetnix</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-40676">as-40676</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-arpnetworks-customers">as-arpnetworks-customers</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-telstra-intl-customers">as-telstra-intl-customers</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-rdsnet">as-rdsnet</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">AFRINIC</td>
+                                        
+                                        <td><a href="/as-set/AFRINIC::as-noor">as-noor</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-sox-int">as-sox-int</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as24971:as-mastercz-cust">as24971:as-mastercz-cust</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as8226:as-all">as8226:as-all</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as56308:as-telin-net-sg-transit">as56308:as-telin-net-sg-transit</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">ARIN</td>
+                                        
+                                        <td><a href="/as-set/ARIN::as917:as-customers">as917:as-customers</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-reliance">as-reliance</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">APNIC</td>
+                                        
+                                        <td><a href="/as-set/APNIC::as59256:as-ausnet">as59256:as-ausnet</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as43541:as-vshosting-cz">as43541:as-vshosting-cz</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">ARIN</td>
+                                        
+                                        <td><a href="/as-set/ARIN::as917:as-premium">as917:as-premium</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">APNIC</td>
+                                        
+                                        <td><a href="/as-set/APNIC::as1221:as-customers">as1221:as-customers</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-tixnet-cust">as-tixnet-cust</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">APNIC</td>
+                                        
+                                        <td><a href="/as-set/APNIC::as-iptp-vn">as-iptp-vn</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as7606:as-qld-ix">as7606:as-qld-ix</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as3491:as-customers-eu">as3491:as-customers-eu</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-kinx-transit">as-kinx-transit</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-ufla-transcust">as-ufla-transcust</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-deninet">as-deninet</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-unitedtelecom">as-unitedtelecom</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-atom">as-atom</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-hostvirtual">as-hostvirtual</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as7545:as-tpgn-customers">as7545:as-tpgn-customers</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as35625:as-eurofiber-fr">as35625:as-eurofiber-fr</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-webwerks-1">as-webwerks-1</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-nav">as-nav</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">AFRINIC</td>
+                                        
+                                        <td><a href="/as-set/AFRINIC::as-set-metrofibre">as-set-metrofibre</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as56655:as-gigahost">as56655:as-gigahost</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-iptp:as51601">as-iptp:as51601</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-set-hetzner-africa">as-set-hetzner-africa</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">AFRINIC</td>
+                                        
+                                        <td><a href="/as-set/AFRINIC::as-iptp-sa">as-iptp-sa</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-retn-actual-v4">as-retn-actual-v4</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-iptp">as-iptp</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">APNIC</td>
+                                        
+                                        <td><a href="/as-set/APNIC::as-zettagrid-cust">as-zettagrid-cust</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">ARIN</td>
+                                        
+                                        <td><a href="/as-set/ARIN::as917:as-customers-edge">as917:as-customers-edge</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-misaka-core">as-misaka-core</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-e1-automation-customer">as-e1-automation-customer</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-sox-srb">as-sox-srb</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-bbix-t-v6">as-bbix-t-v6</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-bezeqint">as-bezeqint</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-zenlayer">as-zenlayer</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-sox-addos">as-sox-addos</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-durand1-customer">as-durand1-customer</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-mob-customer-as33182">as-mob-customer-as33182</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-hurricanev6">as-hurricanev6</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">AFRINIC</td>
+                                        
+                                        <td><a href="/as-set/AFRINIC::as-set-hetzner-africa">as-set-hetzner-africa</a></td>
+                                        
+                                        
+                                    </tr>
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                        
+
+                    </div>
+
+                    
+
+                    
+                    <div style="display: none" id="ix-page">
+                        <div class="grid-row">
+                            <dl class="column-two-thirds">
+                                <p style="margin: 0px;"><img style="vertical-align: middle; margin-left: 5px;" class="flag-img" src="/assets/peeringdb-icon.png" title="PeeringDB"><a href="https://www.peeringdb.com/asn/60592">Go to PeeringDB page</a></p>
+                            </dl>
+                            
+                            
+                        </div>
+                        <div class="grid-row">
+                            
+                        
+    
+    
+                        <dl class="column-third">
+                            <dt>Suggested Prefix Limits</dt>
+                            <dd class="text data">
+                                
+                                <p style="margin: 0px;"><b>IPv4:</b> 7</p>
+                                
+                            </dd>
+                        </dl>
+                        </div>
+
+                        
+
+                        <div id="normalixpsubpage">
+
+
+<h3>Internet Exchange Points</h3>
+
+<div class="scroll-ixp-div-on-small">
+<table id="ixpTable" class="full-width-table table-wide-to-force-scroll-on-mobile">
+    <thead class="sortable">
+        <tr>
+            <th class="nowrap boldpls">  &nbsp;  </th>
+            <th class="boldpls">Name</th>
+            <th class="nowrap boldpls">IPv4</th>
+            <th class="nowrap boldpls">IPv6</th>
+            <th data-sort-method='number' class="nowrap boldpls">Link Speed</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+        
+        <tr>
+            <td data-sort='PR' class="nowrap ns"><img class="flag-img" src="/assets/flags/PR.png" title="PR"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/PR-IX">PR-IX</a></td>
+            <td class="smallonmobile">204.138.0.27</a></td>
+            <td class="smallonmobile nowrap">2620:102:b000::27</td>
+            <td data-sort='20000' class="smallonmobile">20 gbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='CZ' class="nowrap ns"><img class="flag-img" src="/assets/flags/CZ.png" title="CZ"><img style="margin-left: 5px;" class="flag-img" src="/assets/icons/supermicro.png" title="Detected Vendor: Super Micro Computer, Inc."><a href="/ixp-nexthop/?nh=91.210.17.38&nh=2001%3a7f8%3a14%3a%3ac6%3a2&rta=60592"><img class="flag-img" src="/assets/tick-rs.png" title="This ASN is peering with RS right now"></a></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/NIX.CZ">NIX.CZ</a></td>
+            <td class="smallonmobile">91.210.17.38</a></td>
+            <td class="smallonmobile nowrap">2001:7f8:14::c6:2</td>
+            <td data-sort='10000' class="smallonmobile"><abbr title="NIX2-acc4 - NIX2 - T-Mobile THP [CZ]">10 gbps</abbr></td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='AO' class="nowrap ns"><img class="flag-img" src="/assets/flags/AO.png" title="AO"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/Angola%20IXP">Angola IXP</a></td>
+            <td class="smallonmobile">196.49.6.15</a></td>
+            <td class="smallonmobile nowrap"></td>
+            <td data-sort='1000' class="smallonmobile">1000 mbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='RS' class="nowrap ns"><img class="flag-img" src="/assets/flags/RS.png" title="RS"><img style="margin-left: 5px;" class="flag-img" src="/assets/icons/private-localadmin.png" title="Detected Vendor: locally administered mac addresses"><a href="/ixp-nexthop/?nh=185.1.27.85&nh=&rta=60592"><img class="flag-img" src="/assets/tick-rs.png" title="This ASN is peering with RS right now"></a></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/SOX%20Serbia">SOX Serbia</a></td>
+            <td class="smallonmobile">185.1.27.85</a></td>
+            <td class="smallonmobile nowrap"></td>
+            <td data-sort='1000' class="smallonmobile">1000 mbps</td>
+        </tr>
+        
+        
+        
+        
+        
+        
+    </tbody>
+</table>
+</div>
+
+
+
+
+<h3>Virtual Internet Exchange Points</h3>
+<a style="font-size: small;" href="/kb/virtual-ixp">What is a Virtual Internet Exchange?</a>
+<div class="scroll-ixp-div-on-small">
+<table id="vixpTable" class="full-width-table">
+    <thead class="sortable">
+        <tr>
+            <th class="nowrap boldpls">  &nbsp;  </th>
+            <th class="boldpls">Name</th>
+            <th class="nowrap boldpls">IPv4</th>
+            <th class="nowrap boldpls">IPv6</th>
+            <th data-sort-method='number'  class="nowrap boldpls">Link Speed</th>
+        </tr>
+    </thead>
+        <tbody>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <tr>
+            <td class="nowrap ns"><img class="flag-img" src="/assets/flags/CH.png" title="CH"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/SBIX%20Zurich">SBIX Zurich</a></td>
+            <td class="smallonmobile">185.1.135.35</a></td>
+            <td class="smallonmobile nowrap">2001:7f8:d9:5b:b901::8723</td>
+            <td data-sort='1000' class="smallonmobile">1000 mbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td class="nowrap ns"><img class="flag-img" src="/assets/flags/CH.png" title="CH"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/4b42%20Internet%20Exchange%20Point">4b42 Internet Exchange Point</a></td>
+            <td class="smallonmobile"></a></td>
+            <td class="smallonmobile nowrap">2001:7f8:d0::ecb0:1</td>
+            <td data-sort='0' class="smallonmobile">n/a</td>
+        </tr>
+        
+        
+    </tbody>
+</table>
+</div>
+
+
+
+
+
+<a style="font-size: small;">Last Update: 2025-12-13T10:08:20Z UTC</a>
+
+
+                        </div>
+                        <div id="overlapixpsubpage">
+                        </div>
+                    </div>
+                    
+                    
+
+                    
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="superclearfix">
+            
+            <div class="superclearfix">
+                
+            </div>
+
+            <div class="superclearfix">
+                
+            </div>
+
+
+        </div>
+
+
+        <div class="group js-footer" id="footer">
+            <nav>
+                <div>
+                    <ul>
+                        <li><a href="/kb/api" target="_blank">Scripting/API</a></li>
+                        <li><a href="/credits" target="_blank">Credits</a></li>
+                        <li><a href="/pricing" target="_blank">Pricing</a></li>
+                        <li><a href="/kb/contact" target="_blank">Contact Us</a></li>
+                        <li><a href="https://github.com/bgptools/issues" target="_blank">Issue Tracker</a></li>
+                        <li><a href="/kb/setup-sessions" target="">Contribute Data</a></li>
+                        
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <script>
+    
+    var inhash = window.location.hash;
+    if (inhash == "#asinfo") {
+        
+    } else if (inhash == "#prefixes") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#prefix-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#prefixes-page');
+        aaa[0].style.display = "";
+
+    } else if (inhash == "#connectivity" || inhash == "#peers" || inhash == "#upstreams" || inhash == "#downstreams") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#connectivity-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#connectivity-page');
+        aaa[0].style.display = "";
+    } else if (inhash == "#whois") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#whois-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#whois-page');
+        aaa[0].style.display = "";
+    } else if (inhash == "#ix") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#ix-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#ix-page');
+        aaa[0].style.display = "";
+    }</script>
+
+    <script>
+    
+
+
+    ;(function() {
+  'use strict'
+
+  function scaleImageMap() {
+    function resizeMap() {
+      function resizeAreaTag(cachedAreaCoords, idx) {
+        function scale(coord) {
+          var dimension = 1 === (isWidth = 1 - isWidth) ? 'width' : 'height'
+          return (
+            padding[dimension] +
+            Math.floor(Number(coord) * scalingFactor[dimension])
+          )
+        }
+
+        var isWidth = 0
+        areas[idx].coords = cachedAreaCoords
+          .split(',')
+          .map(scale)
+          .join(',')
+      }
+
+      var scalingFactor = {
+        width: image.width / image.naturalWidth,
+        height: image.height / image.naturalHeight,
+      }
+
+      var padding = {
+        width: parseInt(
+          window.getComputedStyle(image, null).getPropertyValue('padding-left'),
+          10
+        ),
+        height: parseInt(
+          window.getComputedStyle(image, null).getPropertyValue('padding-top'),
+          10
+        ),
+      }
+
+      cachedAreaCoordsArray.forEach(resizeAreaTag)
+    }
+
+    function getCoords(e) {
+      
+      return e.coords.replace(/ *, */g, ',').replace(/ +/g, ',')
+    }
+
+    function debounce() {
+      clearTimeout(timer)
+      timer = setTimeout(resizeMap, 250)
+    }
+
+    function start() {
+      if (
+        image.width !== image.naturalWidth ||
+        image.height !== image.naturalHeight
+      ) {
+        resizeMap()
+      }
+    }
+
+    function addEventListeners() {
+      image.addEventListener('load', resizeMap, false) 
+      window.addEventListener('focus', resizeMap, false) 
+      window.addEventListener('resize', debounce, false)
+      window.addEventListener('readystatechange', resizeMap, false)
+      document.addEventListener('fullscreenchange', resizeMap, false)
+    }
+
+    function beenHere() {
+      return 'function' === typeof map._resize
+    }
+
+    function getImg(name) {
+      return document.querySelector('img[usemap="#world"]')
+    }
+
+    function setup() {
+      areas = map.getElementsByTagName('area')
+      cachedAreaCoordsArray = Array.prototype.map.call(areas, getCoords)
+      image = getImg('#' + map.name) || getImg(map.name)
+      map._resize = resizeMap 
+    }
+
+    var  
+      map = this,
+      areas = null,
+      cachedAreaCoordsArray = null,
+      image = null,
+      timer = null
+
+    if (!beenHere()) {
+      setup()
+      addEventListeners()
+      start()
+    } else {
+      map._resize() 
+    }
+  }
+
+  function factory() {
+    function chkMap(element) {
+      if (!element.tagName) {
+        throw new TypeError('Object is not a valid DOM element')
+      } else if ('MAP' !== element.tagName.toUpperCase()) {
+        throw new TypeError(
+          'Expected <MAP> tag, found <' + element.tagName + '>.'
+        )
+      }
+    }
+
+    function init(element) {
+      if (element) {
+        chkMap(element)
+        scaleImageMap.call(element)
+        maps.push(element)
+      }
+    }
+
+    var maps
+
+    return function imageMapResizeF(target) {
+      maps = [] 
+
+      switch (typeof target) {
+        case 'undefined':
+        case 'string':
+          Array.prototype.forEach.call(
+            document.querySelectorAll(target || 'map'),
+            init
+          )
+          break
+        case 'object':
+          init(target)
+          break
+        default:
+          throw new TypeError('Unexpected data type (' + typeof target + ').')
+      }
+
+      return maps
+    }
+  }
+
+  if (typeof define === 'function' && define.amd) {
+    define([], factory)
+  } else if (typeof module === 'object' && typeof module.exports === 'object') {
+    module.exports = factory() 
+  } else {
+    window.imageMapResize = factory()
+  }
+
+  if ('jQuery' in window) {
+    window.jQuery.fn.imageMapResize = function $imageMapResizeF() {
+      return this.filter('map')
+        .each(scaleImageMap)
+        .end()
+    }
+  }
+})()
+    
+    </script>
+    <script>
+        var imgEl = document.getElementById("pathimg");
+        imgEl.addEventListener("mouseover",function() {
+            imageMapResize('#world');
+        })
+    </script>
+    <script src="/assets/tablesort.min.js"></script>
+    <script>
+        addEventListener("load", (event) => {
+            
+            
+            var sort = new Tablesort(document.getElementById('donotscrapebgptools-upstreamTable'));
+            var sort2 = new Tablesort(document.getElementById('donotscrapebgptools-upstreamTablePeers'));
+            
+            
+            var sort4 = new Tablesort(document.getElementById('ixpTable'));
+            
+            var sort5 = new Tablesort(document.getElementById('vixpTable'));
+        });
+    </script>
+    
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        setTimeout(function() {
+
+        var beaconHttp = new XMLHttpRequest();
+        var url = '/performance-beacon';
+        var params = JSON.stringify(window.performance)
+        beaconHttp.open('POST', url, true);
+        
+        
+        beaconHttp.setRequestHeader('Content-type', 'application/json');
+        beaconHttp.setRequestHeader('visit-url', "/as/60592");
+        if (navigator.connection) {
+            beaconHttp.setRequestHeader('client-side-rtt', navigator.connection.rtt);
+        } else {
+            beaconHttp.setRequestHeader('client-side-rtt', '-2');
+        }
+        beaconHttp.onreadystatechange = function() {}
+        beaconHttp.send(params);
+        },1000)
+    }, false);
+</script>
+
+</body>
+
+
+</html>
