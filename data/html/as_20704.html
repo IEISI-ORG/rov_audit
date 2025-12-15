@@ -1,0 +1,1190 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Jumper GmbH (AS20704) is a 23 year old BGP network that is peering with 6 other networks and has 0 upstream carriers">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000">
+    <link rel="search" type="application/opensearchdescription+xml" title="BGP.Tools" href="https://bgp.tools/opensearch.xml">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="theme-color" content="#000000">
+    <link href="https://social.bgp.tools/@bgptools" rel="me">
+    <link rel="canonical" href="https://bgp.tools/as/20704" />
+    <title>AS20704 Jumper GmbH - bgp.tools</title>
+    <link rel="stylesheet" type="text/css" href="/assets/main-new.css?2025-12-13-1541%20UTC">
+</head>
+
+<body>
+    <div id="container">
+        
+<div id="global-header" class="global-header-top">
+    <div class="header-sitewide">
+        <div class="global-header">
+            <div class="header-logo">
+                <a href="/" id="logo" class="content">bgp.tools</a>
+            </div>
+            <form id="search" action="/search" method="get" accept-charset="utf-8" role="search" class="top-search-header js-search-hash">
+                <div class="searchfield">
+                    <input type="search" autocomplete="off" name="q" id="site-search-text" title="Search" value="" placeholder="Start here..." autofocus="autofocus" class="js-search-focus">
+                    <button type="submit" id="search-submit" class="search-submit">Search</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div id="global-header-blob" >
+    <a id="auth-header-text" href="/login">Login</a>
+    
+</div>
+<div id="global-header-bar" >
+    <a id="auth-header-bar-text" href="/login">Login</a>
+    
+</div>
+<div class="small-clearfix"></div>
+
+        <div id="global-container">
+            
+
+
+            
+            <div class="section-tabs js-tabs">
+                <ul>
+                    
+<li class="active">
+    <h1> <a id="viewbutton-tab" href="/as/20704">View</a></h1>
+</li>
+
+<li >
+    <a id="editbutton-tab" href="/edit/as/20704">Edit</a>
+</li>
+
+
+
+
+
+                    <li style="float: right;">
+                        
+                        <img id="ws-status" width="24" height="24" src="/assets/disconnected.png" title="Not Connected To realtime data updates">
+                        
+                    </li>
+                </ul>
+            </div>
+
+            <div id="search-container">
+
+                <div class="column-full-width">
+
+                    <div class="clearfix">
+                        
+                    </div>
+                    
+                    <div class="warningbox">This ASN is not currently in the global routing table</div>
+                    
+                    
+
+                    <div class="network-header">
+                        
+                        
+                        <img width="334" height="250" src="/img/20704" alt="The website screenshot for https://www.funknetz.at" >
+                        
+                        
+                        <p id="network-name" class="heading-xlarge">Jumper GmbH</p>
+                        <p id="network-number">
+                            AS Number
+                            <strong id="ASNumberString" pure="20704">20704</strong>
+                            <br>
+                        
+                            Website
+                            <strong><a href="https://www.funknetz.at" rel="nofollow">https://www.funknetz.at</a></strong>
+                        
+                        </p>
+
+                    </div>
+
+
+                    <div class="clearfix">
+                        
+                    </div>
+
+
+                    <div class="section-tabs js-tabs">
+                        <ul>
+
+                            <li id="overview-tab-li" class="active">
+                                <a id="overview-tab" href="#asinfo">Overview</a>
+                            </li>
+                            
+                            <li id="whois-tab-li">
+                                <a id="whois-tab" href="#whois">Whois</a>
+                            </li>
+                        
+                            <li id="ix-tab-li">
+                                <a id="ix-tab" href="#ix">IX</a>
+                            </li>
+                        
+                        
+                        </ul>
+                    </div>
+
+<script>
+    function removeAllActiveTab() {
+        var tabs = [
+            "overview-tab-li", 
+            "prefix-tab-li", 
+            "connectivity-tab-li",
+            "whois-tab-li",
+            "ix-tab-li",
+            "issues-tab-li"
+        ];
+
+        tabs.forEach(element => {
+            var aaa = document.querySelectorAll('#'+element);
+            if(aaa.length != 0) {
+                aaa[0].classList.remove("active")
+            }
+        });
+    }
+
+    function hideAllContent() {
+        var tabs = [
+            "overview-page", 
+            "prefixes-page", 
+            "connectivity-page",
+            "whois-page",
+            "ix-page",
+            "issues-page"
+        ];
+
+        tabs.forEach(element => {
+            var aaa = document.querySelectorAll('#'+element);
+            if(aaa.length != 0) {
+                aaa[0].style.display = "none";
+            }
+        });
+        if (document.getElementById("donotscrapebgptools-prefixlist-tbody")) {
+            var prefixrows = document.getElementById("donotscrapebgptools-prefixlist-tbody").children;
+            for (var i = 0; i < prefixrows.length; i++) {
+                prefixrows[i].style = "";
+            }
+        }
+    }
+
+    var otab = document.querySelectorAll('#overview-tab');
+    otab[0].addEventListener("click", function () {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#overview-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#overview-page');
+        aaa[0].style.display = "";
+    });
+    
+
+    var wtab = document.querySelectorAll('#whois-tab');
+    wtab[0].addEventListener("click", function () {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#whois-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#whois-page');
+        aaa[0].style.display = "";
+    });
+
+</script>
+
+
+<script>
+var wtab = document.querySelectorAll('#ix-tab');
+wtab[0].addEventListener("click", function () {
+    removeAllActiveTab()
+    hideAllContent()
+    var otab2 = document.querySelectorAll('#ix-tab-li');
+    otab2[0].classList.add("active");
+
+    var aaa = document.querySelectorAll('#ix-page');
+    aaa[0].style.display = "";
+});
+</script>
+
+
+                    
+                    <div id="overview-page">
+
+                        <div class="grid-row">
+                        
+                        <div class="column-two-thirds">
+                            <dl>
+                                <dt>Registered on</dt>
+                                <dd class="text data">
+                                    
+                                     3 Sep 2002 (23 years old)
+                                </dd>
+                            
+                            
+                            <dt>Registered to</dt>
+                            <dd class="text data">
+                                <a href="/rir-owner/at.funknetz">at.funknetz</a> (ripe)</dd>
+                                
+                                <dd class="text data" id="network-status">
+                                    <a href="/transfer-history/20704">[Transfer History]</a>
+                                </dd>
+                                
+                            
+                            </dl>
+                        </div>
+                        
+    
+                        <dl class="column-third">
+                            <dt>Network status</dt>
+                            <dd class="text data">
+                                
+                                Active, Allocated under RIPE
+                                
+                            </dd>
+                        </dl>
+    
+                        </div>
+    
+                        <div class="grid-row">
+                            <dl class="column-two-thirds">
+                                <dt>Network type</dt>
+                                <dd class="text data">
+                                    Unknown
+                                </dd>
+                            </dl>
+    
+                            <dl class="column-third">
+                                <dt>Prefixes Originated</dt>
+                                <dd class="data">0 IPv4, 0 IPv6</dd>
+                            </dl>
+                        </div>
+                        <div class="grid-row">
+                            <div class="column-half">
+    
+                                <h2 class="heading-medium"><derp>Upstreams</derp></h2>
+                                <ul>
+                                    
+                                </ul>
+    
+                            </div>
+    
+                            <div class="column-half">
+                                
+                                    <h2 class="heading-medium"><derp>Rankings</derp></h2>
+                                    
+                                    <li><span id="sic0">#72 for <a href="/rankings/AT?sort=peering">Known Peers  in Austria</a></span></li>
+                                    
+                                
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                    <div style="display: none" id="whois-page">
+                        
+                        
+                        <pre style="white-space: pre-wrap;">aut-num:        <a href="/AS20704">AS20704</a>
+as-name:        FUNKNETZ-AS
+org:            <a href="https://apps.db.ripe.net/db-web-ui/query?searchtext=ORG-FA1-RIPE">ORG-FA1-RIPE</a>
+descr:          Holz Steiner-Strasse 6/ Obj. 6/ 1. Stock
+descr:          A-2201 Seyring
+descr:          Austria
+remarks:
+remarks:        http://www.funknetz.at
+remarks:        http://www.jumper.at
+remarks:
+remarks:        NOC: noc@funknetz.at
+remarks:        Abuse and SPAM: abuse@funknetz.at
+remarks:        NOC (24/7/365): &#43;43 2262 2364010
+remarks:
+descr:          ---------------------------------------
+descr:          - Peers / VIX
+descr:          ---------------------------------------
+import:         from <a href="/AS42">AS42</a> accept <a href="/as-set/AS-PCH">AS-PCH</a>
+export:         to <a href="/AS42">AS42</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS1120">AS1120</a> accept <a href="/as-set/AS-ACOSERV">AS-ACOSERV</a>
+export:         to <a href="/AS1120">AS1120</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS1853">AS1853</a> accept <a href="/as-set/AS-ACONETTOVIX">AS-ACONETTOVIX</a>
+export:         to <a href="/AS1853">AS1853</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS2614">AS2614</a> accept <a href="/as-set/AS-ROEDUNET">AS-ROEDUNET</a>
+export:         to <a href="/AS2614">AS2614</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS2635">AS2635</a> accept <a href="/as-set/AS-AUTOMATTIC">AS-AUTOMATTIC</a>
+export:         to <a href="/AS2635">AS2635</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS2686">AS2686</a> accept <a href="/as-set/AS-IGNEMEA">AS-IGNEMEA</a>
+export:         to <a href="/AS2686">AS2686</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS2906">AS2906</a> accept <a href="/as-set/AS-NFLX">AS-NFLX</a>
+export:         to <a href="/AS2906">AS2906</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS3212">AS3212</a> accept <a href="/as-set/AS3212:AS-TELEMACH">AS3212:AS-TELEMACH</a>
+export:         to <a href="/AS3212">AS3212</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS3223">AS3223</a> accept <a href="/as-set/AS-VOXILITY-SET">AS-VOXILITY-SET</a>
+export:         to <a href="/AS3223">AS3223</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS3330">AS3330</a> accept <a href="/as-set/AS-PROFINET">AS-PROFINET</a>
+export:         to <a href="/AS3330">AS3330</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS3856">AS3856</a> accept <a href="/as-set/AS-PCH">AS-PCH</a>
+export:         to <a href="/AS3856">AS3856</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS5403">AS5403</a> accept <a href="/as-set/AS-APA">AS-APA</a>
+export:         to <a href="/AS5403">AS5403</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS5405">AS5405</a> accept <a href="/as-set/AS-INTERDOTLINK">AS-INTERDOTLINK</a>
+export:         to <a href="/AS5405">AS5405</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS5578">AS5578</a> accept <a href="/as-set/AS-BENESTRA">AS-BENESTRA</a>
+export:         to <a href="/AS5578">AS5578</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS5606">AS5606</a> accept <a href="/as-set/AS-GTSRO">AS-GTSRO</a>
+export:         to <a href="/AS5606">AS5606</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS6204">AS6204</a> accept <a href="/as-set/AS-INTERKVM">AS-INTERKVM</a>
+export:         to <a href="/AS6204">AS6204</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS6663">AS6663</a> accept <a href="/as-set/AS-PANTEL">AS-PANTEL</a>
+export:         to <a href="/AS6663">AS6663</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS6720">AS6720</a> accept <a href="/as-set/AS-MAGWIEN">AS-MAGWIEN</a>
+export:         to <a href="/AS6720">AS6720</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS6798">AS6798</a> accept <a href="/AS6798">AS6798</a>
+export:         to <a href="/AS6798">AS6798</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS7713">AS7713</a> accept <a href="/as-set/AS7713:AS-TELKOM-TRANSIT">AS7713:AS-TELKOM-TRANSIT</a>
+export:         to <a href="/AS7713">AS7713</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS8075">AS8075</a> accept <a href="/as-set/AS-MICROSOFT">AS-MICROSOFT</a>
+export:         to <a href="/AS8075">AS8075</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS8218">AS8218</a> accept <a href="/as-set/AS8218:AS-CUSTOMERS">AS8218:AS-CUSTOMERS</a>
+export:         to <a href="/AS8218">AS8218</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS8245">AS8245</a> accept <a href="/as-set/AS-VB-PEERS">AS-VB-PEERS</a>
+export:         to <a href="/AS8245">AS8245</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS8302">AS8302</a> accept <a href="/as-set/AS-ZATTOO">AS-ZATTOO</a>
+export:         to <a href="/AS8302">AS8302</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS8339">AS8339</a> accept <a href="/as-set/AS-KABS">AS-KABS</a>
+export:         to <a href="/AS8339">AS8339</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS8387">AS8387</a> accept <a href="/as-set/AS8387:AS-T-SYSTEMS-AT">AS8387:AS-T-SYSTEMS-AT</a>
+export:         to <a href="/AS8387">AS8387</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS8400">AS8400</a> accept <a href="/as-set/AS-TELEKOM">AS-TELEKOM</a>
+export:         to <a href="/AS8400">AS8400</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS8540">AS8540</a> accept <a href="/as-set/AS-AMANET">AS-AMANET</a>
+export:         to <a href="/AS8540">AS8540</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS8560">AS8560</a> accept <a href="/as-set/AS-IONOS">AS-IONOS</a>
+export:         to <a href="/AS8560">AS8560</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS8596">AS8596</a> accept <a href="/as-set/AS-HOTZE">AS-HOTZE</a>
+export:         to <a href="/AS8596">AS8596</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS8674">AS8674</a> accept <a href="/as-set/AS-NETNOD-ANYCAST">AS-NETNOD-ANYCAST</a>
+export:         to <a href="/AS8674">AS8674</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS9009">AS9009</a> accept <a href="/as-set/AS-GBXS">AS-GBXS</a>
+export:         to <a href="/AS9009">AS9009</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS9119">AS9119</a> accept <a href="/as-set/AS-SOFTNET">AS-SOFTNET</a>
+export:         to <a href="/AS9119">AS9119</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS9146">AS9146</a> accept <a href="/as-set/AS-BIHNET-ALL">AS-BIHNET-ALL</a>
+export:         to <a href="/AS9146">AS9146</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS10310">AS10310</a> accept <a href="/as-set/AS-YAHOO">AS-YAHOO</a>
+export:         to <a href="/AS10310">AS10310</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS12401">AS12401</a> accept <a href="/as-set/AS-INIC">AS-INIC</a>
+export:         to <a href="/AS12401">AS12401</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS12453">AS12453</a> accept <a href="/as-set/AS-KRAFTCOM">AS-KRAFTCOM</a>
+export:         to <a href="/AS12453">AS12453</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS12577">AS12577</a> accept <a href="/as-set/AS-MMC-AT">AS-MMC-AT</a>
+export:         to <a href="/AS12577">AS12577</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS12605">AS12605</a> accept <a href="/as-set/AS-LIWESTAT">AS-LIWESTAT</a>
+export:         to <a href="/AS12605">AS12605</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS13004">AS13004</a> accept <a href="/as-set/AS-SOX">AS-SOX</a>
+export:         to <a href="/AS13004">AS13004</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS13237">AS13237</a> accept <a href="/as-set/AS-LAMBDANET">AS-LAMBDANET</a>
+export:         to <a href="/AS13237">AS13237</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS13335">AS13335</a> accept <a href="/AS13335">AS13335</a>
+export:         to <a href="/AS13335">AS13335</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS15576">AS15576</a> accept <a href="/as-set/AS-NTS">AS-NTS</a>
+export:         to <a href="/AS15576">AS15576</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS15702">AS15702</a> accept <a href="/as-set/AS-ONSTAGE">AS-ONSTAGE</a>
+export:         to <a href="/AS15702">AS15702</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS15958">AS15958</a> accept <a href="/as-set/AS-TELENORDOO">AS-TELENORDOO</a>
+export:         to <a href="/AS15958">AS15958</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS16276">AS16276</a> accept <a href="/AS16276">AS16276</a>
+export:         to <a href="/AS16276">AS16276</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS16314">AS16314</a> accept <a href="/AS16314">AS16314</a>
+export:         to <a href="/AS16314">AS16314</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS20546">AS20546</a> accept <a href="/as-set/AS-MYRASEC">AS-MYRASEC</a>
+export:         to <a href="/AS20546">AS20546</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS20751">AS20751</a> accept <a href="/as-set/AS-MAX4EU">AS-MAX4EU</a>
+export:         to <a href="/AS20751">AS20751</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS20804">AS20804</a> accept <a href="/as-set/AS-EXATEL-INT">AS-EXATEL-INT</a>
+export:         to <a href="/AS20804">AS20804</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS20940">AS20940</a> accept <a href="/as-set/AS-AKAMAI">AS-AKAMAI</a>
+export:         to <a href="/AS20940">AS20940</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS21013">AS21013</a> accept <a href="/as-set/AS-ITANDTEL">AS-ITANDTEL</a>
+export:         to <a href="/AS21013">AS21013</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS21360">AS21360</a> accept <a href="/as-set/AS-EMPIRION">AS-EMPIRION</a>
+export:         to <a href="/AS21360">AS21360</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS21385">AS21385</a> accept <a href="/as-set/AS-TNIB">AS-TNIB</a>
+export:         to <a href="/AS21385">AS21385</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS24864">AS24864</a> accept <a href="/as-set/AS-R-IT">AS-R-IT</a>
+export:         to <a href="/AS24864">AS24864</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS24940">AS24940</a> accept <a href="/as-set/AS-HETZNER">AS-HETZNER</a>
+export:         to <a href="/AS24940">AS24940</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS24953">AS24953</a> accept <a href="/as-set/AS-24953">AS-24953</a>
+export:         to <a href="/AS24953">AS24953</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS25011">AS25011</a> accept <a href="/AS25011">AS25011</a>
+export:         to <a href="/AS25011">AS25011</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS25152">AS25152</a> accept <a href="/AS25152">AS25152</a>
+export:         to <a href="/AS25152">AS25152</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS25255">AS25255</a> accept <a href="/as-set/AS-H3G-AUSTRIA">AS-H3G-AUSTRIA</a>
+export:         to <a href="/AS25255">AS25255</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS25447">AS25447</a> accept <a href="/as-set/AS-JM-DATA">AS-JM-DATA</a>
+export:         to <a href="/AS25447">AS25447</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS25467">AS25467</a> accept <a href="/as-set/AS-AKTON">AS-AKTON</a>
+export:         to <a href="/AS25467">AS25467</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS25575">AS25575</a> accept <a href="/as-set/AS-DOMAINTECHNIK">AS-DOMAINTECHNIK</a>
+export:         to <a href="/AS25575">AS25575</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS26415">AS26415</a> accept <a href="/as-set/AS-GTLD">AS-GTLD</a>
+export:         to <a href="/AS26415">AS26415</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS28760">AS28760</a> accept <a href="/as-set/AS-INFOTECH">AS-INFOTECH</a>
+export:         to <a href="/AS28760">AS28760</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS28889">AS28889</a> accept <a href="/as-set/AS-LINZNET">AS-LINZNET</a>
+export:         to <a href="/AS28889">AS28889</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS29056">AS29056</a> accept <a href="/as-set/AS-GSTWAT">AS-GSTWAT</a>
+export:         to <a href="/AS29056">AS29056</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS29081">AS29081</a> accept <a href="/as-set/AS-WVNETAT">AS-WVNETAT</a>
+export:         to <a href="/AS29081">AS29081</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS29208">AS29208</a> accept <a href="/as-set/AS-DIALTELECOM">AS-DIALTELECOM</a>
+export:         to <a href="/AS29208">AS29208</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS30971">AS30971</a> accept <a href="/as-set/AS-NICAT">AS-NICAT</a>
+export:         to <a href="/AS30971">AS30971</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS31042">AS31042</a> accept <a href="/as-set/AS-SBB">AS-SBB</a>
+export:         to <a href="/AS31042">AS31042</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS31229">AS31229</a> accept <a href="/as-set/AS-BEYOND">AS-BEYOND</a>
+export:         to <a href="/AS31229">AS31229</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS31317">AS31317</a> accept <a href="/as-set/AS-ANSCHLUSSWERK">AS-ANSCHLUSSWERK</a>
+export:         to <a href="/AS31317">AS31317</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS31510">AS31510</a> accept <a href="/as-set/AS-IKB">AS-IKB</a>
+export:         to <a href="/AS31510">AS31510</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS31529">AS31529</a> accept <a href="/as-set/AS-DENIC-ANY">AS-DENIC-ANY</a>
+export:         to <a href="/AS31529">AS31529</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS31543">AS31543</a> accept <a href="/as-set/AS-MYNET-AT">AS-MYNET-AT</a>
+export:         to <a href="/AS31543">AS31543</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS32590">AS32590</a> accept <a href="/as-set/AS-VALVE">AS-VALVE</a>
+export:         to <a href="/AS32590">AS32590</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS32787">AS32787</a> accept <a href="/as-set/AS-PROLE">AS-PROLE</a>
+export:         to <a href="/AS32787">AS32787</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS32934">AS32934</a> accept <a href="/AS32934">AS32934</a>
+export:         to <a href="/AS32934">AS32934</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS34183">AS34183</a> accept <a href="/as-set/AS-BMG">AS-BMG</a>
+export:         to <a href="/AS34183">AS34183</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS34288">AS34288</a> accept <a href="/as-set/AS34288:AS-IX:AS-VIX">AS34288:AS-IX:AS-VIX</a>
+export:         to <a href="/AS34288">AS34288</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS34347">AS34347</a> accept <a href="/as-set/AS-CNHAT">AS-CNHAT</a>
+export:         to <a href="/AS34347">AS34347</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS34758">AS34758</a> accept <a href="/as-set/AS-AXERA">AS-AXERA</a>
+export:         to <a href="/AS34758">AS34758</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS34772">AS34772</a> accept <a href="/as-set/AS-NEOTEL-SET">AS-NEOTEL-SET</a>
+export:         to <a href="/AS34772">AS34772</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS34779">AS34779</a> accept <a href="/as-set/AS-T2-CUST">AS-T2-CUST</a>
+export:         to <a href="/AS34779">AS34779</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS35339">AS35339</a> accept <a href="/as-set/AS-ATNOC">AS-ATNOC</a>
+export:         to <a href="/AS35339">AS35339</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS35369">AS35369</a> accept <a href="/as-set/AS-LAGIS">AS-LAGIS</a>
+export:         to <a href="/AS35369">AS35369</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS39560">AS39560</a> accept <a href="/as-set/AS-KT-NET">AS-KT-NET</a>
+export:         to <a href="/AS39560">AS39560</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS39878">AS39878</a> accept <a href="/as-set/as-rauter">as-rauter</a>
+export:         to <a href="/AS39878">AS39878</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS39912">AS39912</a> accept <a href="/as-set/AS-I3B-TRANSIT-V4">AS-I3B-TRANSIT-V4</a>
+export:         to <a href="/AS39912">AS39912</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS40994">AS40994</a> accept <a href="/as-set/AS-ALWYZON">AS-ALWYZON</a>
+export:         to <a href="/AS40994">AS40994</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS41491">AS41491</a> accept <a href="/AS41491">AS41491</a>
+export:         to <a href="/AS41491">AS41491</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS43061">AS43061</a> accept <a href="/as-set/AS-STELKOM-CUST">AS-STELKOM-CUST</a>
+export:         to <a href="/AS43061">AS43061</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS43848">AS43848</a> accept <a href="/as-set/AS-GAMSJAEGER">AS-GAMSJAEGER</a>
+export:         to <a href="/AS43848">AS43848</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS43957">AS43957</a> accept <a href="/as-set/AS-WNTNEWMEDIA">AS-WNTNEWMEDIA</a>
+export:         to <a href="/AS43957">AS43957</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS44306">AS44306</a> accept <a href="/as-set/AS-OMONIA">AS-OMONIA</a>
+export:         to <a href="/AS44306">AS44306</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS44765">AS44765</a> accept <a href="/as-set/AS-MAKENEWMEDIA">AS-MAKENEWMEDIA</a>
+export:         to <a href="/AS44765">AS44765</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS44865">AS44865</a> accept <a href="/AS44865">AS44865</a>
+export:         to <a href="/AS44865">AS44865</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS47147">AS47147</a> accept <a href="/as-set/AS-ANX">AS-ANX</a>
+export:         to <a href="/AS47147">AS47147</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS47692">AS47692</a> accept <a href="/as-set/AS-NESSUS">AS-NESSUS</a>
+export:         to <a href="/AS47692">AS47692</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS48362">AS48362</a> accept <a href="/as-set/AS-TKSWF">AS-TKSWF</a>
+export:         to <a href="/AS48362">AS48362</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS48943">AS48943</a> accept <a href="/as-set/AS-KAPPERNET">AS-KAPPERNET</a>
+export:         to <a href="/AS48943">AS48943</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS49322">AS49322</a> accept <a href="/AS49322">AS49322</a>
+export:         to <a href="/AS49322">AS49322</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS49544">AS49544</a> accept <a href="/as-set/AS-INTERACTIVE3D">AS-INTERACTIVE3D</a>
+export:         to <a href="/AS49544">AS49544</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS49808">AS49808</a> accept <a href="/as-set/AS-POWERSPEED">AS-POWERSPEED</a>
+export:         to <a href="/AS49808">AS49808</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS50226">AS50226</a> accept <a href="/as-set/AS-NETCOMPANY">AS-NETCOMPANY</a>
+export:         to <a href="/AS50226">AS50226</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS50507">AS50507</a> accept <a href="/as-set/AS-EURACTOVIX">AS-EURACTOVIX</a>
+export:         to <a href="/AS50507">AS50507</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS50629">AS50629</a> accept <a href="/AS50629">AS50629</a>
+export:         to <a href="/AS50629">AS50629</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS50782">AS50782</a> accept <a href="/as-set/AS50782:AS-COSYS">AS50782:AS-COSYS</a>
+export:         to <a href="/AS50782">AS50782</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS51184">AS51184</a> accept <a href="/as-set/AS-MEDIAINVENT">AS-MEDIAINVENT</a>
+export:         to <a href="/AS51184">AS51184</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS51265">AS51265</a> accept <a href="/AS51265">AS51265</a>
+export:         to <a href="/AS51265">AS51265</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS51776">AS51776</a> accept <a href="/AS51776">AS51776</a>
+export:         to <a href="/AS51776">AS51776</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS54113">AS54113</a> accept <a href="/as-set/AS-FASTLY">AS-FASTLY</a>
+export:         to <a href="/AS54113">AS54113</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS54994">AS54994</a> accept <a href="/AS54994">AS54994</a>
+export:         to <a href="/AS54994">AS54994</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS55256">AS55256</a> accept <a href="/AS55256">AS55256</a>
+export:         to <a href="/AS55256">AS55256</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS57169">AS57169</a> accept <a href="/as-set/AS-EDIS">AS-EDIS</a>
+export:         to <a href="/AS57169">AS57169</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS57463">AS57463</a> accept <a href="/as-set/AS-NETIX-INT">AS-NETIX-INT</a>
+export:         to <a href="/AS57463">AS57463</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS59890">AS59890</a> accept <a href="/as-set/AS-LAMPERT">AS-LAMPERT</a>
+export:         to <a href="/AS59890">AS59890</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS60274">AS60274</a> accept <a href="/AS60274">AS60274</a>
+export:         to <a href="/AS60274">AS60274</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS60517">AS60517</a> accept <a href="/as-set/AS-CABLEVISION">AS-CABLEVISION</a>
+export:         to <a href="/AS60517">AS60517</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS60587">AS60587</a> accept <a href="/as-set/AS-XINON-CARRIER-V4">AS-XINON-CARRIER-V4</a>
+export:         to <a href="/AS60587">AS60587</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS60823">AS60823</a> accept <a href="/as-set/AS-IFORCE">AS-IFORCE</a>
+export:         to <a href="/AS60823">AS60823</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS61211">AS61211</a> accept <a href="/as-set/AS-Datacross">AS-Datacross</a>
+export:         to <a href="/AS61211">AS61211</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS61423">AS61423</a> accept <a href="/as-set/AS-JMP">AS-JMP</a>
+export:         to <a href="/AS61423">AS61423</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS62363">AS62363</a> accept <a href="/as-set/AS-EGW">AS-EGW</a>
+export:         to <a href="/AS62363">AS62363</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS62373">AS62373</a> accept <a href="/AS62373">AS62373</a>
+export:         to <a href="/AS62373">AS62373</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS198524">AS198524</a> accept <a href="/as-set/AS-ILOL">AS-ILOL</a>
+export:         to <a href="/AS198524">AS198524</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS200070">AS200070</a> accept <a href="/as-set/AS-CZNIC-TRANSIT">AS-CZNIC-TRANSIT</a>
+export:         to <a href="/AS200070">AS200070</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS200970">AS200970</a> accept <a href="/as-set/AS-RIEPERT">AS-RIEPERT</a>
+export:         to <a href="/AS200970">AS200970</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS203752">AS203752</a> accept <a href="/as-set/AS-E-CAPS">AS-E-CAPS</a>
+export:         to <a href="/AS203752">AS203752</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS204419">AS204419</a> accept <a href="/AS204419">AS204419</a>
+export:         to <a href="/AS204419">AS204419</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS205243">AS205243</a> accept <a href="/as-set/as-cloudnow-v4">as-cloudnow-v4</a>
+export:         to <a href="/AS205243">AS205243</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS207203">AS207203</a> accept <a href="/as-set/AS-TIMEWARP-SET">AS-TIMEWARP-SET</a>
+export:         to <a href="/AS207203">AS207203</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS208414">AS208414</a> accept <a href="/as-set/AS-WEDOS-GLOBAL">AS-WEDOS-GLOBAL</a>
+export:         to <a href="/AS208414">AS208414</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS211510">AS211510</a> accept <a href="/AS211510">AS211510</a>
+export:         to <a href="/AS211510">AS211510</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS212131">AS212131</a> accept <a href="/AS212131">AS212131</a>
+export:         to <a href="/AS212131">AS212131</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS215219">AS215219</a> accept <a href="/AS215219">AS215219</a>
+export:         to <a href="/AS215219">AS215219</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS216369">AS216369</a> accept <a href="/as-set/AS216369:AS-JKDEV-OUT">AS216369:AS-JKDEV-OUT</a>
+export:         to <a href="/AS216369">AS216369</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS328126">AS328126</a> accept <a href="/AS328126">AS328126</a>
+export:         to <a href="/AS328126">AS328126</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+import:         from <a href="/AS396986">AS396986</a> accept <a href="/AS396986">AS396986</a>
+export:         to <a href="/AS396986">AS396986</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+descr:          ---------------------------------------
+descr:          - Downstreams
+descr:          ---------------------------------------
+descr:          -- LKW-Walter-AG
+import:         from <a href="/AS34735">AS34735</a> action pref=200; accept <a href="/AS34735">AS34735</a>
+export:         to <a href="/AS34735">AS34735</a> announce ANY
+descr:          -- ASFINAG
+import:         from <a href="/AS39478">AS39478</a> action pref=100; accept <a href="/AS39478">AS39478</a>
+export:         to <a href="/AS39478">AS39478</a> announce ANY
+descr:          -- LOOP21
+import:         from <a href="/AS208645">AS208645</a> action pref=200; accept <a href="/AS208645">AS208645</a>
+export:         to <a href="/AS208645">AS208645</a> announce ANY
+descr:          -- Alpha Networks
+import:         from <a href="/AS41363">AS41363</a> action pref=300; accept <a href="/AS41363">AS41363</a>
+export:         to <a href="/AS41363">AS41363</a> announce ANY
+descr:          -- Smart Force eU
+import:         from <a href="/AS35609">AS35609</a> action pref=300; accept <a href="/AS35609">AS35609</a>
+export:         to <a href="/AS35609">AS35609</a> announce ANY
+descr:          ---------------------------------------
+descr:          - Upstreams
+descr:          ---------------------------------------
+descr:          -- Jumper
+import:         from <a href="/AS202664">AS202664</a> action pref=260; accept ANY
+export:         to <a href="/AS202664">AS202664</a> announce <a href="/as-set/AS-FUNKNETZ">AS-FUNKNETZ</a>
+descr:          ---------------------------------------
+admin-c:        DUMY-RIPE
+tech-c:         DUMY-RIPE
+status:         ASSIGNED
+mnt-by:         RIPE-NCC-END-MNT
+notify:         hostmaster@funknetz.at
+mnt-by:         FUNKNETZ-MNT
+created:        2002-09-03T08:29:14Z
+last-modified:  2025-07-23T09:38:34Z
+source:         RIPE
+remarks:        ****************************
+remarks:        * THIS OBJECT IS MODIFIED
+remarks:        * Please note that all data that is generally regarded as personal
+remarks:        * data has been removed from this object.
+remarks:        * To view the original object, please query the RIPE Database at:
+remarks:        * http://www.ripe.net/whois
+remarks:        ****************************
+
+
+organisation:   <a href="https://apps.db.ripe.net/db-web-ui/query?searchtext=ORG-FA1-RIPE">ORG-FA1-RIPE</a>
+org-name:       Jumper GmbH
+country:        AT
+org-type:       LIR
+address:        Dummy address for <a href="https://apps.db.ripe.net/db-web-ui/query?searchtext=ORG-FA1-RIPE">ORG-FA1-RIPE</a>
+# Email removed, Log into bgp.tools to see whois emails
+mnt-ref:        FUNKNETZ-MNT
+mnt-ref:        RIPE-NCC-HM-MNT
+mnt-by:         RIPE-NCC-HM-MNT
+mnt-by:         FUNKNETZ-MNT
+abuse-c:        FNK1-RIPE
+created:        2004-04-17T10:58:39Z
+last-modified:  2025-07-16T12:25:40Z
+source:         RIPE
+remarks:        ****************************
+remarks:        * THIS OBJECT IS MODIFIED
+remarks:        * Please note that all data that is generally regarded as personal
+remarks:        * data has been removed from this object.
+remarks:        * To view the original object, please query the RIPE Database at:
+remarks:        * http://www.ripe.net/whois
+remarks:        ****************************
+
+</pre>
+                        
+                        
+                        <a style="font-size: small;">Last Update: 2025-12-14T14:52:26Z UTC </a>
+                        
+                        <hr>
+                        
+                            <h2>Member of the following AS-SETs</h2>
+
+                            <table id="fhTable" class="full-width-table ">
+                                <tbody id="prefixlist-tbody">
+                                    <tr>
+                                        <th class="boldpls nowrap"> - </th>
+                                        <th class="boldpls">Member</th>
+                                        
+                                        <th class="boldpls nowrap">ASN Count</th>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">LEVEL3</td>
+                                        
+                                        <td><a href="/as-set/LEVEL3::as-sprint-origins">as-sprint-origins</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">7309</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as42000:as-sixsk-peerings">as42000:as-sixsk-peerings</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">35</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-vix-members">as-vix-members</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">188</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-sixstip-set">as-sixstip-set</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">47</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-funknetz">as-funknetz</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">7</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">LEVEL3</td>
+                                        
+                                        <td><a href="/as-set/LEVEL3::as-level3-origins-na">as-level3-origins-na</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">0</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-ris-rrc05">as-ris-rrc05</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">43</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-ebone">as-ebone</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap boldpls"><p style="display: contents;color: red">79078</p></td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-set-jumper">as-set-jumper</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">8</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">LEVEL3</td>
+                                        
+                                        <td><a href="/as-set/LEVEL3::as-level3-origins-eu">as-level3-origins-eu</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">0</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as-energotel_six_peers">as-energotel_six_peers</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">52</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                        
+
+                    </div>
+
+                    
+
+                    
+                    <div style="display: none" id="ix-page">
+                        <div class="grid-row">
+                            <dl class="column-two-thirds">
+                                <p style="margin: 0px;"><img style="vertical-align: middle; margin-left: 5px;" class="flag-img" src="/assets/peeringdb-icon.png" title="PeeringDB"><a href="https://www.peeringdb.com/asn/20704">Go to PeeringDB page</a></p>
+                            </dl>
+                            
+                            
+                        </div>
+                        <div class="grid-row">
+                            
+                        
+                        <div class="column-two-thirds">
+                            <dl>
+                                <dt>PeeringDB AS-SET:</dt>
+                                <dd class="text data">
+                                    
+                                    <a href="/as-set/ripe::as-funknetz">RIPE::AS-FUNKNETZ</a>
+                                    
+                                </dd>
+                            </dl>
+                        </div>
+                        
+    
+    
+                        <dl class="column-third">
+                            <dt>Suggested Prefix Limits</dt>
+                            <dd class="text data">
+                                
+                                <p style="margin: 0px;"><b>IPv4:</b> 14</p>
+                                
+                                <p style="margin: 0px;"><b>IPv6:</b> 1</p>
+                            </dd>
+                        </dl>
+                        </div>
+
+                        
+
+                        <div id="normalixpsubpage">
+
+
+<h3>Internet Exchange Points</h3>
+
+<div class="scroll-ixp-div-on-small">
+<table id="ixpTable" class="full-width-table table-wide-to-force-scroll-on-mobile">
+    <thead class="sortable">
+        <tr>
+            <th class="nowrap boldpls">  &nbsp;  </th>
+            <th class="boldpls">Name</th>
+            <th class="nowrap boldpls">IPv4</th>
+            <th class="nowrap boldpls">IPv6</th>
+            <th data-sort-method='number' class="nowrap boldpls">Link Speed</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+        
+        <tr>
+            <td data-sort='AT' class="nowrap ns"><img class="flag-img" src="/assets/flags/AT.png" title="AT"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/VIX">VIX</a></td>
+            <td class="smallonmobile">193.203.0.80</a></td>
+            <td class="smallonmobile nowrap">2001:7f8:30:0:2:1:2:704</td>
+            <td data-sort='10000' class="smallonmobile">10 gbps</td>
+        </tr>
+        
+        
+    </tbody>
+</table>
+</div>
+
+
+
+
+
+
+
+
+<a style="font-size: small;">Last Update: 2025-12-15T10:08:19Z UTC</a>
+
+
+                        </div>
+                        <div id="overlapixpsubpage">
+                        </div>
+                    </div>
+                    
+                    
+
+                    
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="superclearfix">
+            
+            <div class="superclearfix">
+                
+            </div>
+
+            <div class="superclearfix">
+                
+            </div>
+
+
+        </div>
+
+
+        <div class="group js-footer" id="footer">
+            <nav>
+                <div>
+                    <ul>
+                        <li><a href="/kb/api" target="_blank">Scripting/API</a></li>
+                        <li><a href="/credits" target="_blank">Credits</a></li>
+                        <li><a href="/pricing" target="_blank">Pricing</a></li>
+                        <li><a href="/kb/contact" target="_blank">Contact Us</a></li>
+                        <li><a href="https://github.com/bgptools/issues" target="_blank">Issue Tracker</a></li>
+                        <li><a href="/kb/setup-sessions" target="">Contribute Data</a></li>
+                        
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <script>
+    
+    var inhash = window.location.hash;
+    if (inhash == "#asinfo") {
+        
+    } else if (inhash == "#prefixes") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#prefix-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#prefixes-page');
+        aaa[0].style.display = "";
+
+    } else if (inhash == "#connectivity" || inhash == "#peers" || inhash == "#upstreams" || inhash == "#downstreams") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#connectivity-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#connectivity-page');
+        aaa[0].style.display = "";
+    } else if (inhash == "#whois") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#whois-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#whois-page');
+        aaa[0].style.display = "";
+    } else if (inhash == "#ix") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#ix-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#ix-page');
+        aaa[0].style.display = "";
+    }</script>
+
+    <script>
+    
+
+
+    ;(function() {
+  'use strict'
+
+  function scaleImageMap() {
+    function resizeMap() {
+      function resizeAreaTag(cachedAreaCoords, idx) {
+        function scale(coord) {
+          var dimension = 1 === (isWidth = 1 - isWidth) ? 'width' : 'height'
+          return (
+            padding[dimension] +
+            Math.floor(Number(coord) * scalingFactor[dimension])
+          )
+        }
+
+        var isWidth = 0
+        areas[idx].coords = cachedAreaCoords
+          .split(',')
+          .map(scale)
+          .join(',')
+      }
+
+      var scalingFactor = {
+        width: image.width / image.naturalWidth,
+        height: image.height / image.naturalHeight,
+      }
+
+      var padding = {
+        width: parseInt(
+          window.getComputedStyle(image, null).getPropertyValue('padding-left'),
+          10
+        ),
+        height: parseInt(
+          window.getComputedStyle(image, null).getPropertyValue('padding-top'),
+          10
+        ),
+      }
+
+      cachedAreaCoordsArray.forEach(resizeAreaTag)
+    }
+
+    function getCoords(e) {
+      
+      return e.coords.replace(/ *, */g, ',').replace(/ +/g, ',')
+    }
+
+    function debounce() {
+      clearTimeout(timer)
+      timer = setTimeout(resizeMap, 250)
+    }
+
+    function start() {
+      if (
+        image.width !== image.naturalWidth ||
+        image.height !== image.naturalHeight
+      ) {
+        resizeMap()
+      }
+    }
+
+    function addEventListeners() {
+      image.addEventListener('load', resizeMap, false) 
+      window.addEventListener('focus', resizeMap, false) 
+      window.addEventListener('resize', debounce, false)
+      window.addEventListener('readystatechange', resizeMap, false)
+      document.addEventListener('fullscreenchange', resizeMap, false)
+    }
+
+    function beenHere() {
+      return 'function' === typeof map._resize
+    }
+
+    function getImg(name) {
+      return document.querySelector('img[usemap="#world"]')
+    }
+
+    function setup() {
+      areas = map.getElementsByTagName('area')
+      cachedAreaCoordsArray = Array.prototype.map.call(areas, getCoords)
+      image = getImg('#' + map.name) || getImg(map.name)
+      map._resize = resizeMap 
+    }
+
+    var  
+      map = this,
+      areas = null,
+      cachedAreaCoordsArray = null,
+      image = null,
+      timer = null
+
+    if (!beenHere()) {
+      setup()
+      addEventListeners()
+      start()
+    } else {
+      map._resize() 
+    }
+  }
+
+  function factory() {
+    function chkMap(element) {
+      if (!element.tagName) {
+        throw new TypeError('Object is not a valid DOM element')
+      } else if ('MAP' !== element.tagName.toUpperCase()) {
+        throw new TypeError(
+          'Expected <MAP> tag, found <' + element.tagName + '>.'
+        )
+      }
+    }
+
+    function init(element) {
+      if (element) {
+        chkMap(element)
+        scaleImageMap.call(element)
+        maps.push(element)
+      }
+    }
+
+    var maps
+
+    return function imageMapResizeF(target) {
+      maps = [] 
+
+      switch (typeof target) {
+        case 'undefined':
+        case 'string':
+          Array.prototype.forEach.call(
+            document.querySelectorAll(target || 'map'),
+            init
+          )
+          break
+        case 'object':
+          init(target)
+          break
+        default:
+          throw new TypeError('Unexpected data type (' + typeof target + ').')
+      }
+
+      return maps
+    }
+  }
+
+  if (typeof define === 'function' && define.amd) {
+    define([], factory)
+  } else if (typeof module === 'object' && typeof module.exports === 'object') {
+    module.exports = factory() 
+  } else {
+    window.imageMapResize = factory()
+  }
+
+  if ('jQuery' in window) {
+    window.jQuery.fn.imageMapResize = function $imageMapResizeF() {
+      return this.filter('map')
+        .each(scaleImageMap)
+        .end()
+    }
+  }
+})()
+    
+    </script>
+    <script>
+        var imgEl = document.getElementById("pathimg");
+        imgEl.addEventListener("mouseover",function() {
+            imageMapResize('#world');
+        })
+    </script>
+    <script src="/assets/tablesort.min.js"></script>
+    <script>
+        addEventListener("load", (event) => {
+            
+            
+            var sort = new Tablesort(document.getElementById('donotscrapebgptools-upstreamTable'));
+            var sort2 = new Tablesort(document.getElementById('donotscrapebgptools-upstreamTablePeers'));
+            
+            
+            var sort4 = new Tablesort(document.getElementById('ixpTable'));
+            
+        });
+    </script>
+    
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        setTimeout(function() {
+
+        var beaconHttp = new XMLHttpRequest();
+        var url = '/performance-beacon';
+        var params = JSON.stringify(window.performance)
+        beaconHttp.open('POST', url, true);
+        
+        
+        beaconHttp.setRequestHeader('Content-type', 'application/json');
+        beaconHttp.setRequestHeader('visit-url', "/as/20704");
+        if (navigator.connection) {
+            beaconHttp.setRequestHeader('client-side-rtt', navigator.connection.rtt);
+        } else {
+            beaconHttp.setRequestHeader('client-side-rtt', '-2');
+        }
+        beaconHttp.onreadystatechange = function() {}
+        beaconHttp.send(params);
+        },1000)
+    }, false);
+</script>
+
+</body>
+
+
+</html>
