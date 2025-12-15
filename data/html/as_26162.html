@@ -1,0 +1,1748 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="IX.br Route Servers (AS26162) is a small BGP network that is peering with 2 other networks and has 0 upstream carriers">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000">
+    <link rel="search" type="application/opensearchdescription+xml" title="BGP.Tools" href="https://bgp.tools/opensearch.xml">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="theme-color" content="#000000">
+    <link href="https://social.bgp.tools/@bgptools" rel="me">
+    <link rel="canonical" href="https://bgp.tools/as/26162" />
+    <title>AS26162 IX.br Route Servers - bgp.tools</title>
+    <link rel="stylesheet" type="text/css" href="/assets/main-new.css?2025-12-13-1541%20UTC">
+</head>
+
+<body>
+    <div id="container">
+        
+<div id="global-header" class="global-header-top">
+    <div class="header-sitewide">
+        <div class="global-header">
+            <div class="header-logo">
+                <a href="/" id="logo" class="content">bgp.tools</a>
+            </div>
+            <form id="search" action="/search" method="get" accept-charset="utf-8" role="search" class="top-search-header js-search-hash">
+                <div class="searchfield">
+                    <input type="search" autocomplete="off" name="q" id="site-search-text" title="Search" value="" placeholder="Start here..." autofocus="autofocus" class="js-search-focus">
+                    <button type="submit" id="search-submit" class="search-submit">Search</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div id="global-header-blob" >
+    <a id="auth-header-text" href="/login">Login</a>
+    
+</div>
+<div id="global-header-bar" >
+    <a id="auth-header-bar-text" href="/login">Login</a>
+    
+</div>
+<div class="small-clearfix"></div>
+
+        <div id="global-container">
+            
+
+
+            
+            <div class="section-tabs js-tabs">
+                <ul>
+                    
+<li class="active">
+    <h1> <a id="viewbutton-tab" href="/as/26162">View</a></h1>
+</li>
+
+<li >
+    <a id="editbutton-tab" href="/edit/as/26162">Edit</a>
+</li>
+
+
+
+<li >
+  <h1> <a id="viewbutton-tab" href="/communities/26162">Communities</a></h1>
+</li>
+
+
+
+                    <li style="float: right;">
+                        
+                        <img id="ws-status" width="24" height="24" src="/assets/disconnected.png" title="Not Connected To realtime data updates">
+                        
+                    </li>
+                </ul>
+            </div>
+
+            <div id="search-container">
+
+                <div class="column-full-width">
+
+                    <div class="clearfix">
+                        
+                    </div>
+                    
+                    <div class="warningbox">This ASN is not currently in the global routing table</div>
+                    
+                    
+
+                    <div class="network-header">
+                        
+                        
+                        <img width="334" height="250" src="/img/26162" alt="The website screenshot for https://ix.br/" >
+                        
+                        
+                        <p id="network-name" class="heading-xlarge">IX.br Route Servers</p>
+                        <p id="network-number">
+                            AS Number
+                            <strong id="ASNumberString" pure="26162">26162</strong>
+                            <br>
+                        
+                            Website
+                            <strong><a href="https://ix.br/" rel="nofollow">https://ix.br/</a></strong>
+                        
+                        </p>
+
+                    </div>
+
+
+                    <div class="clearfix">
+                        
+                    </div>
+
+
+                    <div class="section-tabs js-tabs">
+                        <ul>
+
+                            <li id="overview-tab-li" class="active">
+                                <a id="overview-tab" href="#asinfo">Overview</a>
+                            </li>
+                            
+                            <li id="whois-tab-li">
+                                <a id="whois-tab" href="#whois">Whois</a>
+                            </li>
+                        
+                            <li id="ix-tab-li">
+                                <a id="ix-tab" href="#ix">IX</a>
+                            </li>
+                        
+                        
+                        </ul>
+                    </div>
+
+<script>
+    function removeAllActiveTab() {
+        var tabs = [
+            "overview-tab-li", 
+            "prefix-tab-li", 
+            "connectivity-tab-li",
+            "whois-tab-li",
+            "ix-tab-li",
+            "issues-tab-li"
+        ];
+
+        tabs.forEach(element => {
+            var aaa = document.querySelectorAll('#'+element);
+            if(aaa.length != 0) {
+                aaa[0].classList.remove("active")
+            }
+        });
+    }
+
+    function hideAllContent() {
+        var tabs = [
+            "overview-page", 
+            "prefixes-page", 
+            "connectivity-page",
+            "whois-page",
+            "ix-page",
+            "issues-page"
+        ];
+
+        tabs.forEach(element => {
+            var aaa = document.querySelectorAll('#'+element);
+            if(aaa.length != 0) {
+                aaa[0].style.display = "none";
+            }
+        });
+        if (document.getElementById("donotscrapebgptools-prefixlist-tbody")) {
+            var prefixrows = document.getElementById("donotscrapebgptools-prefixlist-tbody").children;
+            for (var i = 0; i < prefixrows.length; i++) {
+                prefixrows[i].style = "";
+            }
+        }
+    }
+
+    var otab = document.querySelectorAll('#overview-tab');
+    otab[0].addEventListener("click", function () {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#overview-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#overview-page');
+        aaa[0].style.display = "";
+    });
+    
+
+    var wtab = document.querySelectorAll('#whois-tab');
+    wtab[0].addEventListener("click", function () {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#whois-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#whois-page');
+        aaa[0].style.display = "";
+    });
+
+</script>
+
+
+<script>
+var wtab = document.querySelectorAll('#ix-tab');
+wtab[0].addEventListener("click", function () {
+    removeAllActiveTab()
+    hideAllContent()
+    var otab2 = document.querySelectorAll('#ix-tab-li');
+    otab2[0].classList.add("active");
+
+    var aaa = document.querySelectorAll('#ix-page');
+    aaa[0].style.display = "";
+});
+</script>
+
+
+                    
+                    <div id="overview-page">
+
+                        <div class="grid-row">
+                        
+                        <div class="column-two-thirds">
+                            <dl>
+                                <dt>Registered on</dt>
+                                <dd class="text data">
+                                    
+                                    29 Apr 2009 (16 years old)
+                                </dd>
+                            
+                            
+                            <dt>Registered to</dt>
+                            <dd class="text data">
+                                <a href="/rir-owner/114721">114721</a> (lacnic)</dd>
+                                
+                            
+                            </dl>
+                        </div>
+                        
+    
+                        <dl class="column-third">
+                            <dt>Network status</dt>
+                            <dd class="text data">
+                                
+                                Active, Allocated under NIC.BR
+                                
+                            </dd>
+                        </dl>
+    
+                        </div>
+    
+                        <div class="grid-row">
+                            <dl class="column-two-thirds">
+                                <dt>Network type</dt>
+                                <dd class="text data">
+                                    Unknown
+                                </dd>
+                            </dl>
+    
+                            <dl class="column-third">
+                                <dt>Prefixes Originated</dt>
+                                <dd class="data">0 IPv4, 0 IPv6</dd>
+                            </dl>
+                        </div>
+                        <div class="grid-row">
+                            <div class="column-half">
+    
+                                <h2 class="heading-medium"><derp>Upstreams</derp></h2>
+                                <ul>
+                                    
+                                </ul>
+    
+                            </div>
+    
+                            <div class="column-half">
+                                
+                                    <h2 class="heading-medium"><derp>Locations of Operation</derp></h2>
+                                    
+                                    <li><span id="sic0">Brazil</span></li>
+                                    
+                                
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                    <div style="display: none" id="whois-page">
+                        
+                        
+                        <pre style="white-space: pre-wrap;">% IP Client: 2a0c:2f07:9459:443:0:0:0:155
+ % Copyright (c) Nic.br - Use of this data is governed by the Use and
+% Privacy Policy at https://registro.br/upp . Distribution,
+% commercialization, reproduction, and use for advertising or similar
+% purposes are expressly prohibited.
+% 2025-11-19T12:01:34-03:00 - 2a0c:2f07:9459:443::155
+
+aut-num:     <a href="/AS26162">AS26162</a>
+owner:       N�cleo de Inf. e Coord. do Ponto BR - NIC.BR
+ownerid:     <a href="https://portaldatransparencia.gov.br/pessoa-juridica/05506560000136">05.506.560/0001-36</a>
+responsible: Demi Getschko
+country:     BR
+owner-c:     FAN
+routing-c:   ROPTT
+abuse-c:     ABPTT
+created:     20090429
+changed:     20130306
+inetnum:     200.219.130.0/23
+inetnum:     200.219.138.0/23
+inetnum:     200.219.140.0/23
+inetnum:     200.219.143.0/24
+inetnum:     200.219.144.0/22
+inetnum:     2001:12f8::/48
+inetnum:     200.192.108.0/22
+inetnum:     187.16.192.0/19
+inetnum:     45.6.52.0/22
+inetnum:     45.227.0.0/22
+inetnum:     45.184.144.0/22
+inetnum:     177.52.38.0/23
+inetnum:     45.68.72.0/22
+inetnum:     45.68.76.0/22
+inetnum:     45.68.80.0/22
+inetnum:     45.68.84.0/22
+
+nic-hdl-br:  FAN
+person:      Frederico Augusto de Carvalho Neves
+# Email removed, Log into bgp.tools to see whois emails
+country:     BR
+created:     19971217
+changed:     20241121
+
+nic-hdl-br:  ROPTT
+person:      Routing PTT.br
+# Email removed, Log into bgp.tools to see whois emails
+country:     BR
+created:     20110608
+changed:     20250204
+
+nic-hdl-br:  ABPTT
+person:      Abuse PTT.br
+# Email removed, Log into bgp.tools to see whois emails
+country:     BR
+created:     20110608
+changed:     20110608
+
+% Security and mail abuse issues should also be addressed to cert.br,
+% respectivelly to cert@cert.br and mail-abuse@cert.br
+%
+% whois.registro.br only accepts exact match queries for domains,
+% registrants, contacts, tickets, providers, IPs, and ASNs.
+
+</pre>
+                        
+                        
+                        <a style="font-size: small;">Last Update: 2025-11-19T15:01:34Z UTC  / <a style="font-size: small;" onclick="requestWhoisReload()" id="whoisReloadButton" href="#whois">(Click here to force a refresh)</a></a>
+                        
+                        <hr>
+                        
+                            <h2>Member of the following AS-SETs</h2>
+
+                            <table id="fhTable" class="full-width-table ">
+                                <tbody id="prefixlist-tbody">
+                                    <tr>
+                                        <th class="boldpls nowrap"> - </th>
+                                        <th class="boldpls">Member</th>
+                                        
+                                        <th class="boldpls nowrap">ASN Count</th>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">ALTDB</td>
+                                        
+                                        <td><a href="/as-set/ALTDB::as262507:as-announcements">as262507:as-announcements</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">20</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-opcao:as-peering">as-opcao:as-peering</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">7</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">LACNIC</td>
+                                        
+                                        <td><a href="/as-set/LACNIC::as11014:as-peers">as11014:as-peers</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">5</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">NTTCOM</td>
+                                        
+                                        <td><a href="/as-set/NTTCOM::as13495:as-nttbrazil">as13495:as-nttbrazil</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">4</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">LACNIC</td>
+                                        
+                                        <td><a href="/as-set/LACNIC::as52444:as-ixp">as52444:as-ixp</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">21</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">LACNIC</td>
+                                        
+                                        <td><a href="/as-set/LACNIC::as52455:as-announcements">as52455:as-announcements</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">6</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as52320:as-customers">as52320:as-customers</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">1282</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-gnt-customers">as-gnt-customers</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">1312</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">ALTDB</td>
+                                        
+                                        <td><a href="/as-set/ALTDB::as-webfoco-transit">as-webfoco-transit</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">152</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-ctbc-customers16">as-ctbc-customers16</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">50</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">ALTDB</td>
+                                        
+                                        <td><a href="/as-set/ALTDB::as265152:as-upstreams">as265152:as-upstreams</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">5</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as264144:as-customers">as264144:as-customers</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">114</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-nic-br">as-nic-br</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">14</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-embratelnet">as-embratelnet</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">6218</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as16921:as-naps">as16921:as-naps</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">2</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RADB</td>
+                                        
+                                        <td><a href="/as-set/RADB::as-18881-customers1">as-18881-customers1</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">412</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="nowrap ns">RIPE</td>
+                                        
+                                        <td><a href="/as-set/RIPE::as8801:as-peers-br">as8801:as-peers-br</a></td>
+                                        
+                                        
+                                            
+                                            <td class="smallonmobile nowrap">1</td>
+                                            
+                                        
+                                    </tr>
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                        
+
+                    </div>
+
+                    
+                    <script>
+                        var reloadingWhois = false;
+                        function requestWhoisReload() {
+                            if (!reloadingWhois) {
+                                reloadingWhois = true; 
+                                document.getElementById("whoisReloadButton").innerHTML = "Reloading Whois..."
+                                var request = new XMLHttpRequest();
+                                request.open('GET', "/internal/reload-whois?k=WRL-AS26162-1765777473!TT-G-o4uMZlkiyqkh29mMrK08SaTW4IWCAQu1MYyNec", true);
+                                request.onload = function() {
+                                    if (this.status >= 200 && this.status < 400) {
+                                        location.reload();
+                                    }
+                                };
+                                request.send();
+                            }
+                        }
+                    </script>
+                    
+
+                    
+                    <div style="display: none" id="ix-page">
+                        <div class="grid-row">
+                            <dl class="column-two-thirds">
+                                <p style="margin: 0px;"><img style="vertical-align: middle; margin-left: 5px;" class="flag-img" src="/assets/peeringdb-icon.png" title="PeeringDB"><a href="https://www.peeringdb.com/asn/26162">Go to PeeringDB page</a></p>
+                            </dl>
+                            
+                            
+                        </div>
+                        <div class="grid-row">
+                            
+                        
+    
+    
+                        <dl class="column-third">
+                            <dt>Suggested Prefix Limits</dt>
+                            <dd class="text data">
+                                
+                                <p style="margin: 0px;"><b>IPv4:</b> 460000</p>
+                                
+                                <p style="margin: 0px;"><b>IPv6:</b> 260000</p>
+                            </dd>
+                        </dl>
+                        </div>
+
+                        
+
+                        <div id="normalixpsubpage">
+
+
+<h3>Internet Exchange Points</h3>
+
+<div class="scroll-ixp-div-on-small">
+<table id="ixpTable" class="full-width-table table-wide-to-force-scroll-on-mobile">
+    <thead class="sortable">
+        <tr>
+            <th class="nowrap boldpls">  &nbsp;  </th>
+            <th class="boldpls">Name</th>
+            <th class="nowrap boldpls">IPv4</th>
+            <th class="nowrap boldpls">IPv6</th>
+            <th data-sort-method='number' class="nowrap boldpls">Link Speed</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+        
+        <tr>
+            <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"><img style="margin-left: 5px;" class="flag-img" src="/assets/icons/nic.png" title="Detected Vendor: NIC.br- Nucleo de Informacao e Coordenacao do Ponto BR"><img class="flag-img" src="/assets/tick.png" title="Last seen online 5 hours ago"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/IX.br%20%28PTT.br%29%20S%c3%a3o%20Paulo">IX.br (PTT.br) São Paulo</a></td>
+            <td class="smallonmobile">187.16.216.253</a></td>
+            <td class="smallonmobile nowrap">2001:12f8::253</td>
+            <td data-sort='1000' class="smallonmobile">1000 mbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"><img style="margin-left: 5px;" class="flag-img" src="/assets/icons/nic.png" title="Detected Vendor: NIC.br- Nucleo de Informacao e Coordenacao do Ponto BR"><img class="flag-img" src="/assets/tick.png" title="Last seen online 5 hours ago"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/IX.br%20%28PTT.br%29%20S%c3%a3o%20Paulo">IX.br (PTT.br) São Paulo</a></td>
+            <td class="smallonmobile">187.16.216.254</a></td>
+            <td class="smallonmobile nowrap">2001:12f8::254</td>
+            <td data-sort='1000' class="smallonmobile">1000 mbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/IX.br%20%28PTT.br%29%20Salvador">IX.br (PTT.br) Salvador</a></td>
+            <td class="smallonmobile">200.219.145.253</a></td>
+            <td class="smallonmobile nowrap">2001:12f8:0:8::253</td>
+            <td data-sort='1000' class="smallonmobile">1000 mbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/IX.br%20%28PTT.br%29%20Salvador">IX.br (PTT.br) Salvador</a></td>
+            <td class="smallonmobile">200.219.145.254</a></td>
+            <td class="smallonmobile nowrap">2001:12f8:0:8::254</td>
+            <td data-sort='1000' class="smallonmobile">1000 mbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/IX.br%20%28PTT.br%29%20Caxias%20do%20Sul">IX.br (PTT.br) Caxias do Sul</a></td>
+            <td class="smallonmobile">187.16.197.253</a></td>
+            <td class="smallonmobile nowrap">2001:12f8:0:20::253</td>
+            <td data-sort='1000' class="smallonmobile">1000 mbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/IX.br%20%28PTT.br%29%20Caxias%20do%20Sul">IX.br (PTT.br) Caxias do Sul</a></td>
+            <td class="smallonmobile">187.16.197.254</a></td>
+            <td class="smallonmobile nowrap">2001:12f8:0:20::254</td>
+            <td data-sort='1000' class="smallonmobile">1000 mbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/IX.br%20%28PTT.br%29%20Campinas">IX.br (PTT.br) Campinas</a></td>
+            <td class="smallonmobile">200.192.108.253</a></td>
+            <td class="smallonmobile nowrap">2001:12f8:0:11::253</td>
+            <td data-sort='1000' class="smallonmobile">1000 mbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/IX.br%20%28PTT.br%29%20Campinas">IX.br (PTT.br) Campinas</a></td>
+            <td class="smallonmobile">200.192.108.254</a></td>
+            <td class="smallonmobile nowrap">2001:12f8:0:11::254</td>
+            <td data-sort='1000' class="smallonmobile">1000 mbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/IX.br%20%28PTT.br%29%20Porto%20Alegre">IX.br (PTT.br) Porto Alegre</a></td>
+            <td class="smallonmobile">177.52.38.253</a></td>
+            <td class="smallonmobile nowrap">2001:12f8:0:6::a253</td>
+            <td data-sort='1000' class="smallonmobile">1000 mbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/IX.br%20%28PTT.br%29%20Porto%20Alegre">IX.br (PTT.br) Porto Alegre</a></td>
+            <td class="smallonmobile">177.52.38.254</a></td>
+            <td class="smallonmobile nowrap">2001:12f8:0:6::a254</td>
+            <td data-sort='1000' class="smallonmobile">1000 mbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/IX.br%20%28PTT.br%29%20Caruaru">IX.br (PTT.br) Caruaru</a></td>
+            <td class="smallonmobile">200.219.140.253</a></td>
+            <td class="smallonmobile nowrap">2001:12f8:1:39::253</td>
+            <td data-sort='1000' class="smallonmobile">1000 mbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/IX.br%20%28PTT.br%29%20Caruaru">IX.br (PTT.br) Caruaru</a></td>
+            <td class="smallonmobile">200.219.140.254</a></td>
+            <td class="smallonmobile nowrap">2001:12f8:1:39::254</td>
+            <td data-sort='1000' class="smallonmobile">1000 mbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/IX.br%20%28PTT.br%29%20Florian%c3%b3polis">IX.br (PTT.br) Florianópolis</a></td>
+            <td class="smallonmobile">200.219.141.253</a></td>
+            <td class="smallonmobile nowrap">2001:12f8:0:5::253</td>
+            <td data-sort='1000' class="smallonmobile">1000 mbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/IX.br%20%28PTT.br%29%20Florian%c3%b3polis">IX.br (PTT.br) Florianópolis</a></td>
+            <td class="smallonmobile">200.219.141.254</a></td>
+            <td class="smallonmobile nowrap">2001:12f8:0:5::254</td>
+            <td data-sort='1000' class="smallonmobile">1000 mbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/IX.br%20%28PTT.br%29%20Belo%20Horizonte">IX.br (PTT.br) Belo Horizonte</a></td>
+            <td class="smallonmobile">200.219.139.253</a></td>
+            <td class="smallonmobile nowrap">2001:12f8:0:3::253</td>
+            <td data-sort='1000' class="smallonmobile">1000 mbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/IX.br%20%28PTT.br%29%20Belo%20Horizonte">IX.br (PTT.br) Belo Horizonte</a></td>
+            <td class="smallonmobile">200.219.139.254</a></td>
+            <td class="smallonmobile nowrap">2001:12f8:0:3::254</td>
+            <td data-sort='1000' class="smallonmobile">1000 mbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/IX.br%20%28PTT.br%29%20Ribeir%c3%a3o%20Preto">IX.br (PTT.br) Ribeirão Preto</a></td>
+            <td class="smallonmobile">200.192.110.253</a></td>
+            <td class="smallonmobile nowrap">2001:12f8:0:1040::253</td>
+            <td data-sort='1000' class="smallonmobile">1000 mbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/IX.br%20%28PTT.br%29%20Ribeir%c3%a3o%20Preto">IX.br (PTT.br) Ribeirão Preto</a></td>
+            <td class="smallonmobile">200.192.110.254</a></td>
+            <td class="smallonmobile nowrap">2001:12f8:0:1040::254</td>
+            <td data-sort='1000' class="smallonmobile">1000 mbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/IX.br%20%28PTT.br%29%20Goi%c3%a2nia">IX.br (PTT.br) Goiânia</a></td>
+            <td class="smallonmobile">200.192.111.253</a></td>
+            <td class="smallonmobile nowrap">2001:12f8:0:14::253</td>
+            <td data-sort='1000' class="smallonmobile">1000 mbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/IX.br%20%28PTT.br%29%20Goi%c3%a2nia">IX.br (PTT.br) Goiânia</a></td>
+            <td class="smallonmobile">200.192.111.254</a></td>
+            <td class="smallonmobile nowrap">2001:12f8:0:14::254</td>
+            <td data-sort='1000' class="smallonmobile">1000 mbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/IX.br%20%28PTT.br%29%20Recife">IX.br (PTT.br) Recife</a></td>
+            <td class="smallonmobile">200.219.147.253</a></td>
+            <td class="smallonmobile nowrap">2001:12f8:0:10::253</td>
+            <td data-sort='1000' class="smallonmobile">1000 mbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/IX.br%20%28PTT.br%29%20Recife">IX.br (PTT.br) Recife</a></td>
+            <td class="smallonmobile">200.219.147.254</a></td>
+            <td class="smallonmobile nowrap">2001:12f8:0:10::254</td>
+            <td data-sort='1000' class="smallonmobile">1000 mbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/IX.br%20%28PTT.br%29%20Vit%c3%b3ria">IX.br (PTT.br) Vitória</a></td>
+            <td class="smallonmobile">187.16.194.253</a></td>
+            <td class="smallonmobile nowrap">2001:12f8:0:17::253</td>
+            <td data-sort='1000' class="smallonmobile">1000 mbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/IX.br%20%28PTT.br%29%20Vit%c3%b3ria">IX.br (PTT.br) Vitória</a></td>
+            <td class="smallonmobile">187.16.194.254</a></td>
+            <td class="smallonmobile nowrap">2001:12f8:0:17::254</td>
+            <td data-sort='1000' class="smallonmobile">1000 mbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/IX.br%20%28PTT.br%29%20Manaus">IX.br (PTT.br) Manaus</a></td>
+            <td class="smallonmobile">187.16.198.253</a></td>
+            <td class="smallonmobile nowrap">2001:12f8:0:21::253</td>
+            <td data-sort='1000' class="smallonmobile">1000 mbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/IX.br%20%28PTT.br%29%20Manaus">IX.br (PTT.br) Manaus</a></td>
+            <td class="smallonmobile">187.16.198.254</a></td>
+            <td class="smallonmobile nowrap">2001:12f8:0:21::254</td>
+            <td data-sort='1000' class="smallonmobile">1000 mbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/IX.br%20%28PTT.br%29%20Natal">IX.br (PTT.br) Natal</a></td>
+            <td class="smallonmobile">187.16.196.253</a></td>
+            <td class="smallonmobile nowrap">2001:12f8:0:19::253</td>
+            <td data-sort='1000' class="smallonmobile">1000 mbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/IX.br%20%28PTT.br%29%20Natal">IX.br (PTT.br) Natal</a></td>
+            <td class="smallonmobile">187.16.196.254</a></td>
+            <td class="smallonmobile nowrap">2001:12f8:0:19::254</td>
+            <td data-sort='1000' class="smallonmobile">1000 mbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/IX.br%20%28PTT.br%29%20S%c3%a3o%20Jos%c3%a9%20do%20Rio%20Preto">IX.br (PTT.br) São José do Rio Preto</a></td>
+            <td class="smallonmobile">187.16.199.253</a></td>
+            <td class="smallonmobile nowrap">2001:12f8:0:22::253</td>
+            <td data-sort='1000' class="smallonmobile">1000 mbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/IX.br%20%28PTT.br%29%20S%c3%a3o%20Jos%c3%a9%20do%20Rio%20Preto">IX.br (PTT.br) São José do Rio Preto</a></td>
+            <td class="smallonmobile">187.16.199.254</a></td>
+            <td class="smallonmobile nowrap">2001:12f8:0:22::254</td>
+            <td data-sort='1000' class="smallonmobile">1000 mbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/IX.br%20%28PTT.br%29%20Bel%c3%a9m">IX.br (PTT.br) Belém</a></td>
+            <td class="smallonmobile">187.16.195.253</a></td>
+            <td class="smallonmobile nowrap">2001:12f8:0:18::253</td>
+            <td data-sort='1000' class="smallonmobile">1000 mbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/IX.br%20%28PTT.br%29%20Bel%c3%a9m">IX.br (PTT.br) Belém</a></td>
+            <td class="smallonmobile">187.16.195.254</a></td>
+            <td class="smallonmobile nowrap">2001:12f8:0:18::254</td>
+            <td data-sort='1000' class="smallonmobile">1000 mbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/IX.br%20%28PTT.br%29%20Campina%20Grande">IX.br (PTT.br) Campina Grande</a></td>
+            <td class="smallonmobile">200.192.109.253</a></td>
+            <td class="smallonmobile nowrap">2001:12f8:0:12::253</td>
+            <td data-sort='1000' class="smallonmobile">1000 mbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/IX.br%20%28PTT.br%29%20Campina%20Grande">IX.br (PTT.br) Campina Grande</a></td>
+            <td class="smallonmobile">200.192.109.254</a></td>
+            <td class="smallonmobile nowrap">2001:12f8:0:12::254</td>
+            <td data-sort='1000' class="smallonmobile">1000 mbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/IX.br%20%28PTT.br%29%20Lajeado">IX.br (PTT.br) Lajeado</a></td>
+            <td class="smallonmobile">187.16.202.253</a></td>
+            <td class="smallonmobile nowrap">2001:12f8:0:25::253</td>
+            <td data-sort='1000' class="smallonmobile">1000 mbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/IX.br%20%28PTT.br%29%20Lajeado">IX.br (PTT.br) Lajeado</a></td>
+            <td class="smallonmobile">187.16.202.254</a></td>
+            <td class="smallonmobile nowrap">2001:12f8:0:25::254</td>
+            <td data-sort='1000' class="smallonmobile">1000 mbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/IX.br%20%28PTT.br%29%20Porto%20Velho">IX.br (PTT.br) Porto Velho</a></td>
+            <td class="smallonmobile">187.16.200.253</a></td>
+            <td class="smallonmobile nowrap">2001:12f8:1:23::253</td>
+            <td data-sort='1000' class="smallonmobile">1000 mbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/IX.br%20%28PTT.br%29%20Porto%20Velho">IX.br (PTT.br) Porto Velho</a></td>
+            <td class="smallonmobile">187.16.200.254</a></td>
+            <td class="smallonmobile nowrap">2001:12f8:1:23::254</td>
+            <td data-sort='1000' class="smallonmobile">1000 mbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/IX.br%20%28PTT.br%29%20Maring%c3%a1">IX.br (PTT.br) Maringá</a></td>
+            <td class="smallonmobile">187.16.201.253</a></td>
+            <td class="smallonmobile nowrap">2001:12f8:0:24::253</td>
+            <td data-sort='1000' class="smallonmobile">1000 mbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/IX.br%20%28PTT.br%29%20Maring%c3%a1">IX.br (PTT.br) Maringá</a></td>
+            <td class="smallonmobile">187.16.201.254</a></td>
+            <td class="smallonmobile nowrap">2001:12f8:0:24::254</td>
+            <td data-sort='1000' class="smallonmobile">1000 mbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/IX.br%20%28PTT.br%29%20Cuiab%c3%a1">IX.br (PTT.br) Cuiabá</a></td>
+            <td class="smallonmobile">187.16.203.253</a></td>
+            <td class="smallonmobile nowrap">2001:12f8:0:26::253</td>
+            <td data-sort='1000' class="smallonmobile">1000 mbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/IX.br%20%28PTT.br%29%20Cuiab%c3%a1">IX.br (PTT.br) Cuiabá</a></td>
+            <td class="smallonmobile">187.16.203.254</a></td>
+            <td class="smallonmobile nowrap">2001:12f8:0:26::254</td>
+            <td data-sort='1000' class="smallonmobile">1000 mbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/IX.br%20%28PTT.br%29%20Londrina">IX.br (PTT.br) Londrina</a></td>
+            <td class="smallonmobile">200.219.144.253</a></td>
+            <td class="smallonmobile nowrap">2001:12f8:0:7::253</td>
+            <td data-sort='1000' class="smallonmobile">1000 mbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/IX.br%20%28PTT.br%29%20Londrina">IX.br (PTT.br) Londrina</a></td>
+            <td class="smallonmobile">200.219.144.254</a></td>
+            <td class="smallonmobile nowrap">2001:12f8:0:7::254</td>
+            <td data-sort='1000' class="smallonmobile">1000 mbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/IX.br%20%28PTT.br%29%20Foz%20do%20Igua%c3%a7u">IX.br (PTT.br) Foz do Iguaçu</a></td>
+            <td class="smallonmobile">187.16.204.253</a></td>
+            <td class="smallonmobile nowrap">2001:12f8:0:27::253</td>
+            <td data-sort='1000' class="smallonmobile">1000 mbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/IX.br%20%28PTT.br%29%20Foz%20do%20Igua%c3%a7u">IX.br (PTT.br) Foz do Iguaçu</a></td>
+            <td class="smallonmobile">187.16.204.254</a></td>
+            <td class="smallonmobile nowrap">2001:12f8:0:27::254</td>
+            <td data-sort='1000' class="smallonmobile">1000 mbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/IX.br%20%28PTT.br%29%20Aracaju">IX.br (PTT.br) Aracaju</a></td>
+            <td class="smallonmobile">200.219.130.253</a></td>
+            <td class="smallonmobile nowrap">2001:12f8:0:1::253</td>
+            <td data-sort='1000' class="smallonmobile">1000 mbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/IX.br%20%28PTT.br%29%20Aracaju">IX.br (PTT.br) Aracaju</a></td>
+            <td class="smallonmobile">200.219.130.254</a></td>
+            <td class="smallonmobile nowrap">2001:12f8:0:1::254</td>
+            <td data-sort='1000' class="smallonmobile">1000 mbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/IX.br%20%28PTT.br%29%20Santa%20Maria">IX.br (PTT.br) Santa Maria</a></td>
+            <td class="smallonmobile">187.16.205.253</a></td>
+            <td class="smallonmobile nowrap">2001:12f8:0:28::253</td>
+            <td data-sort='1000' class="smallonmobile">1000 mbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/IX.br%20%28PTT.br%29%20Santa%20Maria">IX.br (PTT.br) Santa Maria</a></td>
+            <td class="smallonmobile">187.16.205.254</a></td>
+            <td class="smallonmobile nowrap">2001:12f8:0:28::254</td>
+            <td data-sort='1000' class="smallonmobile">1000 mbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/IX.br%20%28PTT.br%29%20Jo%c3%a3o%20Pessoa">IX.br (PTT.br) João Pessoa</a></td>
+            <td class="smallonmobile">187.16.193.253</a></td>
+            <td class="smallonmobile nowrap">2001:12f8:0:16::253</td>
+            <td data-sort='1000' class="smallonmobile">1000 mbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/IX.br%20%28PTT.br%29%20Jo%c3%a3o%20Pessoa">IX.br (PTT.br) João Pessoa</a></td>
+            <td class="smallonmobile">187.16.193.254</a></td>
+            <td class="smallonmobile nowrap">2001:12f8:0:16::254</td>
+            <td data-sort='1000' class="smallonmobile">1000 mbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/IX.br%20%28PTT.br%29%20Teresina">IX.br (PTT.br) Teresina</a></td>
+            <td class="smallonmobile">200.219.138.253</a></td>
+            <td class="smallonmobile nowrap">2001:12f8:0:29::253</td>
+            <td data-sort='1000' class="smallonmobile">1000 mbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/IX.br%20%28PTT.br%29%20Teresina">IX.br (PTT.br) Teresina</a></td>
+            <td class="smallonmobile">200.219.138.254</a></td>
+            <td class="smallonmobile nowrap">2001:12f8:0:29::254</td>
+            <td data-sort='1000' class="smallonmobile">1000 mbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/IX.br%20%28PTT.br%29%20S%c3%a3o%20Lu%c3%ads">IX.br (PTT.br) São Luís</a></td>
+            <td class="smallonmobile">45.227.0.253</a></td>
+            <td class="smallonmobile nowrap">2001:12f8:0:30::253</td>
+            <td data-sort='1000' class="smallonmobile">1000 mbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/IX.br%20%28PTT.br%29%20S%c3%a3o%20Lu%c3%ads">IX.br (PTT.br) São Luís</a></td>
+            <td class="smallonmobile">45.227.0.254</a></td>
+            <td class="smallonmobile nowrap">2001:12f8:0:30::254</td>
+            <td data-sort='1000' class="smallonmobile">1000 mbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/IX.br%20%28PTT.br%29%20Macei%c3%b3">IX.br (PTT.br) Maceió</a></td>
+            <td class="smallonmobile">45.227.1.253</a></td>
+            <td class="smallonmobile nowrap">2001:12f8:0:31::253</td>
+            <td data-sort='1000' class="smallonmobile">1000 mbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/IX.br%20%28PTT.br%29%20Macei%c3%b3">IX.br (PTT.br) Maceió</a></td>
+            <td class="smallonmobile">45.227.1.254</a></td>
+            <td class="smallonmobile nowrap">2001:12f8:0:31::254</td>
+            <td data-sort='1000' class="smallonmobile">1000 mbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/IX.br%20%28PTT.br%29%20Cascavel">IX.br (PTT.br) Cascavel</a></td>
+            <td class="smallonmobile">45.227.3.253</a></td>
+            <td class="smallonmobile nowrap">2001:12f8:0:33::253</td>
+            <td data-sort='1000' class="smallonmobile">1000 mbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/IX.br%20%28PTT.br%29%20Cascavel">IX.br (PTT.br) Cascavel</a></td>
+            <td class="smallonmobile">45.227.3.254</a></td>
+            <td class="smallonmobile nowrap">2001:12f8:0:33::254</td>
+            <td data-sort='1000' class="smallonmobile">1000 mbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/IX.br%20%28PTT.br%29%20Campo%20Grande">IX.br (PTT.br) Campo Grande</a></td>
+            <td class="smallonmobile">45.227.2.253</a></td>
+            <td class="smallonmobile nowrap">2001:12f8:0:32::253</td>
+            <td data-sort='1000' class="smallonmobile">1000 mbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/IX.br%20%28PTT.br%29%20Campo%20Grande">IX.br (PTT.br) Campo Grande</a></td>
+            <td class="smallonmobile">45.227.2.254</a></td>
+            <td class="smallonmobile nowrap">2001:12f8:0:32::254</td>
+            <td data-sort='1000' class="smallonmobile">1000 mbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/IX.br%20%28PTT.br%29%20Boa%20Vista">IX.br (PTT.br) Boa Vista</a></td>
+            <td class="smallonmobile">200.219.146.253</a></td>
+            <td class="smallonmobile nowrap">2001:12f8:0:36::253</td>
+            <td data-sort='1000' class="smallonmobile">1000 mbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/IX.br%20%28PTT.br%29%20Boa%20Vista">IX.br (PTT.br) Boa Vista</a></td>
+            <td class="smallonmobile">200.219.146.254</a></td>
+            <td class="smallonmobile nowrap">2001:12f8:0:36::254</td>
+            <td data-sort='1000' class="smallonmobile">1000 mbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/IX.br%20%28PTT.br%29%20Palmas">IX.br (PTT.br) Palmas</a></td>
+            <td class="smallonmobile">187.16.207.253</a></td>
+            <td class="smallonmobile nowrap">2001:12f8:0:34::253</td>
+            <td data-sort='1000' class="smallonmobile">1000 mbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/IX.br%20%28PTT.br%29%20Palmas">IX.br (PTT.br) Palmas</a></td>
+            <td class="smallonmobile">187.16.207.254</a></td>
+            <td class="smallonmobile nowrap">2001:12f8:0:34::254</td>
+            <td data-sort='1000' class="smallonmobile">1000 mbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/IX.br%20%28PTT.br%29%20Rio%20Branco">IX.br (PTT.br) Rio Branco</a></td>
+            <td class="smallonmobile">200.219.143.253</a></td>
+            <td class="smallonmobile nowrap">2001:12f8:0:37::253</td>
+            <td data-sort='1000' class="smallonmobile">1000 mbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/IX.br%20%28PTT.br%29%20Rio%20Branco">IX.br (PTT.br) Rio Branco</a></td>
+            <td class="smallonmobile">200.219.143.254</a></td>
+            <td class="smallonmobile nowrap">2001:12f8:0:37::254</td>
+            <td data-sort='1000' class="smallonmobile">1000 mbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/IX.br%20%28PTT.br%29%20Fortaleza">IX.br (PTT.br) Fortaleza</a></td>
+            <td class="smallonmobile">45.68.79.253</a></td>
+            <td class="smallonmobile nowrap">2001:12f8:0:9::253</td>
+            <td data-sort='1000' class="smallonmobile">1000 mbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/IX.br%20%28PTT.br%29%20Fortaleza">IX.br (PTT.br) Fortaleza</a></td>
+            <td class="smallonmobile">45.68.79.254</a></td>
+            <td class="smallonmobile nowrap">2001:12f8:0:9::254</td>
+            <td data-sort='1000' class="smallonmobile">1000 mbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/IX.br%20%28PTT.br%29%20Curitiba">IX.br (PTT.br) Curitiba</a></td>
+            <td class="smallonmobile">45.184.147.253</a></td>
+            <td class="smallonmobile nowrap">2001:12f8:0:4::253</td>
+            <td data-sort='1000' class="smallonmobile">1000 mbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/IX.br%20%28PTT.br%29%20Curitiba">IX.br (PTT.br) Curitiba</a></td>
+            <td class="smallonmobile">45.184.147.254</a></td>
+            <td class="smallonmobile nowrap">2001:12f8:0:4::254</td>
+            <td data-sort='1000' class="smallonmobile">1000 mbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/IX.br%20%28PTT.br%29%20Feira%20de%20Santana">IX.br (PTT.br) Feira de Santana</a></td>
+            <td class="smallonmobile">200.219.131.253</a></td>
+            <td class="smallonmobile nowrap">2001:12f8:1:38::253</td>
+            <td data-sort='1000' class="smallonmobile">1000 mbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/IX.br%20%28PTT.br%29%20Feira%20de%20Santana">IX.br (PTT.br) Feira de Santana</a></td>
+            <td class="smallonmobile">200.219.131.254</a></td>
+            <td class="smallonmobile nowrap">2001:12f8:1:38::254</td>
+            <td data-sort='1000' class="smallonmobile">1000 mbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/IX.br%20%28PTT.br%29%20Bras%c3%adlia">IX.br (PTT.br) Brasília</a></td>
+            <td class="smallonmobile">45.184.145.253</a></td>
+            <td class="smallonmobile nowrap">2001:12f8:0:13::253</td>
+            <td data-sort='1000' class="smallonmobile">1000 mbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/IX.br%20%28PTT.br%29%20Bras%c3%adlia">IX.br (PTT.br) Brasília</a></td>
+            <td class="smallonmobile">45.184.145.254</a></td>
+            <td class="smallonmobile nowrap">2001:12f8:0:13::254</td>
+            <td data-sort='1000' class="smallonmobile">1000 mbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/IX.br%20%28PTT.br%29%20Rio%20de%20Janeiro">IX.br (PTT.br) Rio de Janeiro</a></td>
+            <td class="smallonmobile">45.68.80.253</a></td>
+            <td class="smallonmobile nowrap">2001:12f8:0:2::52:253</td>
+            <td data-sort='1000' class="smallonmobile">1000 mbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/IX.br%20%28PTT.br%29%20Rio%20de%20Janeiro">IX.br (PTT.br) Rio de Janeiro</a></td>
+            <td class="smallonmobile">45.68.80.254</a></td>
+            <td class="smallonmobile nowrap">2001:12f8:0:2::52:254</td>
+            <td data-sort='1000' class="smallonmobile">1000 mbps</td>
+        </tr>
+        
+        
+        
+        <tr>
+            <td data-sort='BR' class="nowrap ns"><img class="flag-img" src="/assets/flags/BR.png" title="BR"></td>
+            <td class="smallonmobile nowrap"><a href="/ixp/IX.br%20%28PTT.br%29%20Porto%20Alegre">IX.br (PTT.br) Porto Alegre</a></td>
+            <td class="smallonmobile">177.52.39.0</a></td>
+            <td class="smallonmobile nowrap"></td>
+            <td data-sort='0' class="smallonmobile">n/a</td>
+        </tr>
+        
+        
+    </tbody>
+</table>
+</div>
+
+
+
+
+
+
+
+
+<a style="font-size: small;">Last Update: 2025-12-13T10:08:20Z UTC</a>
+
+
+                        </div>
+                        <div id="overlapixpsubpage">
+                        </div>
+                    </div>
+                    
+                    
+
+                    
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="superclearfix">
+            
+            <div class="superclearfix">
+                
+            </div>
+
+            <div class="superclearfix">
+                
+            </div>
+
+
+        </div>
+
+
+        <div class="group js-footer" id="footer">
+            <nav>
+                <div>
+                    <ul>
+                        <li><a href="/kb/api" target="_blank">Scripting/API</a></li>
+                        <li><a href="/credits" target="_blank">Credits</a></li>
+                        <li><a href="/pricing" target="_blank">Pricing</a></li>
+                        <li><a href="/kb/contact" target="_blank">Contact Us</a></li>
+                        <li><a href="https://github.com/bgptools/issues" target="_blank">Issue Tracker</a></li>
+                        <li><a href="/kb/setup-sessions" target="">Contribute Data</a></li>
+                        
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <script>
+    
+    var inhash = window.location.hash;
+    if (inhash == "#asinfo") {
+        
+    } else if (inhash == "#prefixes") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#prefix-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#prefixes-page');
+        aaa[0].style.display = "";
+
+    } else if (inhash == "#connectivity" || inhash == "#peers" || inhash == "#upstreams" || inhash == "#downstreams") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#connectivity-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#connectivity-page');
+        aaa[0].style.display = "";
+    } else if (inhash == "#whois") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#whois-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#whois-page');
+        aaa[0].style.display = "";
+    } else if (inhash == "#ix") {
+        removeAllActiveTab()
+        hideAllContent()
+        var otab2 = document.querySelectorAll('#ix-tab-li');
+        otab2[0].classList.add("active");
+
+        var aaa = document.querySelectorAll('#ix-page');
+        aaa[0].style.display = "";
+    }</script>
+
+    <script>
+    
+
+
+    ;(function() {
+  'use strict'
+
+  function scaleImageMap() {
+    function resizeMap() {
+      function resizeAreaTag(cachedAreaCoords, idx) {
+        function scale(coord) {
+          var dimension = 1 === (isWidth = 1 - isWidth) ? 'width' : 'height'
+          return (
+            padding[dimension] +
+            Math.floor(Number(coord) * scalingFactor[dimension])
+          )
+        }
+
+        var isWidth = 0
+        areas[idx].coords = cachedAreaCoords
+          .split(',')
+          .map(scale)
+          .join(',')
+      }
+
+      var scalingFactor = {
+        width: image.width / image.naturalWidth,
+        height: image.height / image.naturalHeight,
+      }
+
+      var padding = {
+        width: parseInt(
+          window.getComputedStyle(image, null).getPropertyValue('padding-left'),
+          10
+        ),
+        height: parseInt(
+          window.getComputedStyle(image, null).getPropertyValue('padding-top'),
+          10
+        ),
+      }
+
+      cachedAreaCoordsArray.forEach(resizeAreaTag)
+    }
+
+    function getCoords(e) {
+      
+      return e.coords.replace(/ *, */g, ',').replace(/ +/g, ',')
+    }
+
+    function debounce() {
+      clearTimeout(timer)
+      timer = setTimeout(resizeMap, 250)
+    }
+
+    function start() {
+      if (
+        image.width !== image.naturalWidth ||
+        image.height !== image.naturalHeight
+      ) {
+        resizeMap()
+      }
+    }
+
+    function addEventListeners() {
+      image.addEventListener('load', resizeMap, false) 
+      window.addEventListener('focus', resizeMap, false) 
+      window.addEventListener('resize', debounce, false)
+      window.addEventListener('readystatechange', resizeMap, false)
+      document.addEventListener('fullscreenchange', resizeMap, false)
+    }
+
+    function beenHere() {
+      return 'function' === typeof map._resize
+    }
+
+    function getImg(name) {
+      return document.querySelector('img[usemap="#world"]')
+    }
+
+    function setup() {
+      areas = map.getElementsByTagName('area')
+      cachedAreaCoordsArray = Array.prototype.map.call(areas, getCoords)
+      image = getImg('#' + map.name) || getImg(map.name)
+      map._resize = resizeMap 
+    }
+
+    var  
+      map = this,
+      areas = null,
+      cachedAreaCoordsArray = null,
+      image = null,
+      timer = null
+
+    if (!beenHere()) {
+      setup()
+      addEventListeners()
+      start()
+    } else {
+      map._resize() 
+    }
+  }
+
+  function factory() {
+    function chkMap(element) {
+      if (!element.tagName) {
+        throw new TypeError('Object is not a valid DOM element')
+      } else if ('MAP' !== element.tagName.toUpperCase()) {
+        throw new TypeError(
+          'Expected <MAP> tag, found <' + element.tagName + '>.'
+        )
+      }
+    }
+
+    function init(element) {
+      if (element) {
+        chkMap(element)
+        scaleImageMap.call(element)
+        maps.push(element)
+      }
+    }
+
+    var maps
+
+    return function imageMapResizeF(target) {
+      maps = [] 
+
+      switch (typeof target) {
+        case 'undefined':
+        case 'string':
+          Array.prototype.forEach.call(
+            document.querySelectorAll(target || 'map'),
+            init
+          )
+          break
+        case 'object':
+          init(target)
+          break
+        default:
+          throw new TypeError('Unexpected data type (' + typeof target + ').')
+      }
+
+      return maps
+    }
+  }
+
+  if (typeof define === 'function' && define.amd) {
+    define([], factory)
+  } else if (typeof module === 'object' && typeof module.exports === 'object') {
+    module.exports = factory() 
+  } else {
+    window.imageMapResize = factory()
+  }
+
+  if ('jQuery' in window) {
+    window.jQuery.fn.imageMapResize = function $imageMapResizeF() {
+      return this.filter('map')
+        .each(scaleImageMap)
+        .end()
+    }
+  }
+})()
+    
+    </script>
+    <script>
+        var imgEl = document.getElementById("pathimg");
+        imgEl.addEventListener("mouseover",function() {
+            imageMapResize('#world');
+        })
+    </script>
+    <script src="/assets/tablesort.min.js"></script>
+    <script>
+        addEventListener("load", (event) => {
+            
+            
+            var sort = new Tablesort(document.getElementById('donotscrapebgptools-upstreamTable'));
+            var sort2 = new Tablesort(document.getElementById('donotscrapebgptools-upstreamTablePeers'));
+            
+            
+            var sort4 = new Tablesort(document.getElementById('ixpTable'));
+            
+        });
+    </script>
+    
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        setTimeout(function() {
+
+        var beaconHttp = new XMLHttpRequest();
+        var url = '/performance-beacon';
+        var params = JSON.stringify(window.performance)
+        beaconHttp.open('POST', url, true);
+        
+        
+        beaconHttp.setRequestHeader('Content-type', 'application/json');
+        beaconHttp.setRequestHeader('visit-url', "/as/26162");
+        if (navigator.connection) {
+            beaconHttp.setRequestHeader('client-side-rtt', navigator.connection.rtt);
+        } else {
+            beaconHttp.setRequestHeader('client-side-rtt', '-2');
+        }
+        beaconHttp.onreadystatechange = function() {}
+        beaconHttp.send(params);
+        },1000)
+    }, false);
+</script>
+
+</body>
+
+
+</html>
