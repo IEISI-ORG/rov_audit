@@ -1,7 +1,9 @@
 
-python3 rov_global_audit_v12.py
+./cone-calculator -input results/relationships.csv -output final_as_rank.csv
 
-python3 build_topology_v2.py
+python3 rov_global_audit_v13.py
+
+exit 1
 
 python3 analyze_cone_quality.py
 
