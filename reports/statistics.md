@@ -1,38 +1,30 @@
-    [*] Loading rov_audit_v18_final.csv...
+    [*] Loading rov_audit_v19_final.csv...
 
     ===============================================================================================
      GLOBAL VERDICT STATISTICS
     ===============================================================================================
-    VERDICT                             |     ASNs |  % ASNs |   Avg Cone |   Median
+    VERDICT                             |     ASNs |  % ASNs |   Avg Cone | Impact%
     -----------------------------------------------------------------------------------------------
-    Stub / Leaf (No Data)               |   36,768 |   30.7% |        0.0 |        0
-    VULNERABLE (No Coverage)            |   36,020 |   30.1% |        0.1 |        0
-    PARTIAL (Mixed Feeds)               |   23,722 |   19.8% |        3.9 |        0
-    SECURE (Full Coverage)              |   21,357 |   17.8% |       36.1 |        0
-    SECURE (Active Local ROV)           |    1,642 |    1.4% |       27.0 |        0
-    Unverified (Transit/Peer?)          |      145 |    0.1% |      398.6 |        9
-    VULNERABLE (Verified Active)        |       56 |    0.0% |      395.2 |       36
-    SECURE (Verified Active)            |       34 |    0.0% |     8244.1 |       78
-    CORE: PROTECTED                     |       15 |    0.0% |    16764.1 |     8388
-    CORE: UNPROTECTED                   |        5 |    0.0% |      110.2 |       61
-
-    ===============================================================================================
-     RIPE ATLAS VERIFICATION RESULTS
-    ===============================================================================================
-    ATLAS RESULT                        |     ASNs |   Avg Cone
-    ------------------------------------------------------------
-    VULNERABLE                          |       56 |      395.2
-    SECURE                              |       34 |     8244.1
-    MIXED                               |        7 |     1337.4
-    INCONCLUSIVE                        |        2 |       61.0
+    STUB: VULNERABLE                    |   55,285 |   46.1% |        0.0 |    0.0%
+    NOT ROUTED (Registry)               |   36,803 |   30.7% |        0.0 |    0.0%
+    STUB: SECURE (Full Coverage)        |   20,161 |   16.8% |        0.0 |    0.0%
+    PARTIAL (Mixed Feeds)               |    3,997 |    3.3% |       23.0 |    6.1%
+    SECURE (Full Coverage)              |    1,166 |    1.0% |      683.3 |   52.3%
+    STUB: SECURE (Active ROV)           |    1,011 |    0.8% |        0.0 |    0.0%
+    SECURE (Active Local ROV)           |      643 |    0.5% |       78.2 |    3.3%
+    VULNERABLE (No Coverage)            |      515 |    0.4% |        7.6 |    0.3%
+    Unverified (Transit/Peer?)          |      191 |    0.2% |      953.5 |   12.0%
+    CORE: PROTECTED                     |       22 |    0.0% |    18042.8 |   26.1%
+    CORE: UNPROTECTED                   |        5 |    0.0% |      110.2 |    0.0%
 
     ===============================================================================================
      SUMMARY
     ===============================================================================================
-    Total Networks Analyzed: 119,764
+    Total Networks in DB: 119,799
+    Active / Routed:      119,799
     ------------------------------------------------------------
-    SECURE:       23,053 Networks  (Avg Cone: 58.5)
-    PARTIAL:      23,722 Networks  (Avg Cone: 3.9)
-    VULNERABLE:   36,081 Networks  (Avg Cone: 0.7)
-    ------------------------------------------------------------
-    Observation: Secure networks are, on average, LARGER than vulnerable ones.
+    SECURE:       23,008  (19.2% of Active)
+    PARTIAL:       3,997  (3.3% of Active)
+    VULNERABLE:   55,805  (46.6% of Active)
+
+    [!] Note: 'atlas_result' column missing. Atlas stats skipped.
