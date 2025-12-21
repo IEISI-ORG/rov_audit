@@ -1,84 +1,69 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<!-- This file was created with the aha Ansi HTML Adapter. https://github.com/theZiz/aha -->
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="application/xml+xhtml; charset=UTF-8"/>
-<title>stdin</title>
-</head>
-<body style="color:white; background-color:black">
-<pre>
-[*] Loading ROV Audit Data...
-[*] Loading Signing Stats from JSON Cache...
+    [*] Loading ROV Audit Data...
+    [*] Loading Signing Stats from JSON Cache...
 
-================================================================================
-GLOBAL ROA SIGNING REPORT
-================================================================================
-Total Networks: 119,764
-  - Fully Signed (&gt;90%):  38,577  (32.2%)
-  - Partially Signed:      6,746  (5.6%)
-  - Totally Unsigned:     74,441  (62.2%)
+    ================================================================================
+    GLOBAL ROA SIGNING REPORT
+    ================================================================================
+    Total Networks: 119,764
+      - Fully Signed (>90%):  38,577  (32.2%)
+      - Partially Signed:      6,746  (5.6%)
+      - Totally Unsigned:     74,441  (62.2%)
 
-================================================================================
-THE 'GLASS HOUSES' (Secure Provider, but Unsigned Routes)
-These giants protect the internet, but don't protect themselves.
---------------------------------------------------------------------------------
-ASN      | CC | Cone     | Signed | Name
---------------------------------------------------------------------------------
-AS3216   | RU | 38203    |   0.2% | Vimpelcom PJSC
-AS33891  | XX | 34949    |   0.0% | Core-Backbone GmbH
-AS48858  | RU | 10871    |   0.0% | JSC &quot;ER-Telecom Holding&quot;
-AS7575   | AU | 7508     |   3.8% | Australian Academic and Research Network
-AS16735  | BR | 2656     |   0.0% | Algar Telecom
-AS53062  | BR | 1482     |   1.0% | ALT | GRUPO BRASIL TECPAR
-AS46887  | US | 1402     |   0.4% | Crown Castle Fiber LLC
-AS1764   | AT | 1382     |   5.8% | Next Layer Telecommunications
-AS4766   | KR | 1090     |   3.6% | Korea Telecom
-AS201054 | XX | 966      |   0.0% | Stowarzyszenie e-Poludnie
-AS209    | US | 701      |   1.4% | Lumen (ex. Qwest)
-AS3549   | US | 700      |   6.4% | Lumen (fka. Global Crossing)
-AS9318   | KR | 569      |   2.8% | SK Broadband Co Ltd
-AS61568  | BR | 569      |   0.0% | ALOO TELECOM - FSF TECNOLOGIA SA
-AS10429  | BR | 498      |   0.0% | Vivo (TELEFÔNICA BRASIL)
+    ================================================================================
+    THE 'GLASS HOUSES' (Secure Provider, but Unsigned Routes)
+    These giants protect the internet, but don't protect themselves.
+    --------------------------------------------------------------------------------
+    ASN      | CC | Cone     | Signed | Name
+    --------------------------------------------------------------------------------
+    AS3216   | RU | 38203    |   0.2% | Vimpelcom PJSC
+    AS33891  | XX | 34949    |   0.0% | Core-Backbone GmbH
+    AS48858  | RU | 10871    |   0.0% | JSC "ER-Telecom Holding"
+    AS7575   | AU | 7508     |   3.8% | Australian Academic and Research Network
+    AS16735  | BR | 2656     |   0.0% | Algar Telecom
+    AS53062  | BR | 1482     |   1.0% | ALT | GRUPO BRASIL TECPAR
+    AS46887  | US | 1402     |   0.4% | Crown Castle Fiber LLC
+    AS1764   | AT | 1382     |   5.8% | Next Layer Telecommunications
+    AS4766   | KR | 1090     |   3.6% | Korea Telecom
+    AS201054 | XX | 966      |   0.0% | Stowarzyszenie e-Poludnie
+    AS209    | US | 701      |   1.4% | Lumen (ex. Qwest)
+    AS3549   | US | 700      |   6.4% | Lumen (fka. Global Crossing)
+    AS9318   | KR | 569      |   2.8% | SK Broadband Co Ltd
+    AS61568  | BR | 569      |   0.0% | ALOO TELECOM - FSF TECNOLOGIA SA
+    AS10429  | BR | 498      |   0.0% | Vivo (TELEFÔNICA BRASIL)
 
-================================================================================
-SCREAMING INTO THE VOID (Fully Signed, but Vulnerable Upstreams)
-They did their job (ROA), but their providers are failing them.
---------------------------------------------------------------------------------
-ASN      | CC | Cone     | Feeds  | Name
---------------------------------------------------------------------------------
-AS12389  | RU | 13483    | 0/3    | Rostelecom PJSC
-AS37468  | AO | 942      | 0/26   | Angola Cables
-AS6327   | CA | 528      | 0/10   | Shaw Communications
-AS9121   | TR | 508      | 0/10   | Turk Telekom
-AS55836  | IN | 392      | 0/1    | Reliance Jio Infocomm Limited
-AS45820  | IN | 320      | 1/1    | Tata Teleservices ISP
-AS42337  | IR | 239      | 0/0    | Respina Networks &amp; Beyond PJSC
-AS3209   | DE | 132      | 0/11   | Vodafone GmbH
-AS45117  | IN | 116      | 0/2    | Ishan's Network
-AS17762  | IN | 115      | 2/2    | Tata Teleservices Maharashtra Ltd
-AS9198   | KZ | 98       | 0/15   | JSC Kazakhtelecom
-AS135718 | IN | 43       | 1/1    | DISHAWAVES INFONET PVT. LTD
-AS141731 | BD | 42       | 2/2    | Max Hub Limited
-AS49100  | IR | 41       | 0/0    | Pishgaman Toseeh Ertebatat Company (Priv
-AS23688  | BD | 39       | 1/1    | Link3 Technologies Ltd.
+    ================================================================================
+    SCREAMING INTO THE VOID (Fully Signed, but Vulnerable Upstreams)
+    They did their job (ROA), but their providers are failing them.
+    --------------------------------------------------------------------------------
+    ASN      | CC | Cone     | Feeds  | Name
+    --------------------------------------------------------------------------------
+    AS12389  | RU | 13483    | 0/3    | Rostelecom PJSC
+    AS37468  | AO | 942      | 0/26   | Angola Cables
+    AS6327   | CA | 528      | 0/10   | Shaw Communications
+    AS9121   | TR | 508      | 0/10   | Turk Telekom
+    AS55836  | IN | 392      | 0/1    | Reliance Jio Infocomm Limited
+    AS45820  | IN | 320      | 1/1    | Tata Teleservices ISP
+    AS42337  | IR | 239      | 0/0    | Respina Networks & Beyond PJSC
+    AS3209   | DE | 132      | 0/11   | Vodafone GmbH
+    AS45117  | IN | 116      | 0/2    | Ishan's Network
+    AS17762  | IN | 115      | 2/2    | Tata Teleservices Maharashtra Ltd
+    AS9198   | KZ | 98       | 0/15   | JSC Kazakhtelecom
+    AS135718 | IN | 43       | 1/1    | DISHAWAVES INFONET PVT. LTD
+    AS141731 | BD | 42       | 2/2    | Max Hub Limited
+    AS49100  | IR | 41       | 0/0    | Pishgaman Toseeh Ertebatat Company (Priv
+    AS23688  | BD | 39       | 1/1    | Link3 Technologies Ltd.
 
-================================================================================
-THE WILD WEST (Vulnerable Upstreams + 0% Signed)
-The most dangerous networks on the internet.
---------------------------------------------------------------------------------
-AS33132  | US | 100      | Crown Castle Fiber LLC
-AS35708  | XX | 88       | 4b42 UG
-AS4808   | CN | 79       | China Unicom Beijing Province Network
-AS38272  | XX | 40       | China Education and Research Network (CERNET)
-AS9425   | XX | 40       | Future Internet Technology Infrastructure (FI
-AS43531  | XX | 36       | BSO Network Solutions SAS
-AS57681  | RU | 23       | PJSC Moscow city telephone network
-AS37084  | TZ | 22       | Simbanet (T) Limited
-AS396926 | US | 22       | C Spire Fiber
-AS16629  | CL | 19       | CTC. CORP S.A. (TELEFONICA EMPRESAS)
-
-
-</pre>
-</body>
-</html>
+    ================================================================================
+    THE WILD WEST (Vulnerable Upstreams + 0% Signed)
+    The most dangerous networks on the internet.
+    --------------------------------------------------------------------------------
+    AS33132  | US | 100      | Crown Castle Fiber LLC
+    AS35708  | XX | 88       | 4b42 UG
+    AS4808   | CN | 79       | China Unicom Beijing Province Network
+    AS38272  | XX | 40       | China Education and Research Network (CERNET)
+    AS9425   | XX | 40       | Future Internet Technology Infrastructure (FI
+    AS43531  | XX | 36       | BSO Network Solutions SAS
+    AS57681  | RU | 23       | PJSC Moscow city telephone network
+    AS37084  | TZ | 22       | Simbanet (T) Limited
+    AS396926 | US | 22       | C Spire Fiber
+    AS16629  | CL | 19       | CTC. CORP S.A. (TELEFONICA EMPRESAS)
