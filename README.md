@@ -1,63 +1,50 @@
-# Global ROV Audit & Triangulation Tool
+# Global ROV Audit & Triangulation Tool (No-Scrape Edition)
 
-**A research framework to analyze the true state of RPKI Route Origin Validation (ROV) adoption across the global internet.**
+**A comprehensive, non-scraping framework to audit RPKI Route Origin Validation (ROV) and ROA Signing adoption across the global internet, analyzing AS dependencies to measure true security.**
 
-This project moves beyond simple "Is ROV enabled?" lists by analyzing the **upstream connectivity graph**. It determines if a network is protected actively (by its own routers) or passively (by "clean pipe" inheritance from secure upstream providers).
-
-## 🚀 Key Capabilities
-
-*   **Data Triangulation:** Combines data from **BGP.Tools** (Topology/Tags), **APNIC Labs** (Measurement Probes), and **Cloudflare** (Community Data).
-*   **Deep Dependency Analysis:** Scrapes and maps upstream transit providers to determine "Inherited Protection."
-*   **Vulnerability Detection:** Identifies "Vulnerable Giants" — large ISPs with non-ROV upstream feeds and no local protection.
-*   **"Dead" Network Filtering:** Automatically detects and excludes inactive ASNs (Zero Cone, No Peers, No Country) to clean research stats.
-*   **Resilient Caching:** Implements a robust local caching system (HTML & JSON) to minimize network load and adhere to scraping etiquette.
+This project leverages robust data sources and a multi-stage analysis pipeline to determine:
+1.  Which networks actively filter invalid routes.
+2.  Which networks are protected by their upstreams ("clean pipes").
+3.  Which networks are vulnerable to hijacks.
+4.  The overall "herd immunity" status of the internet.
 
 ---
 
-## 📊 Data Sources & Methodology
+## ✨ Key Features
 
-The tool classifies every ASN into one of several security states based on the following logic:
-
-### 1. The Inputs
-| Source | Purpose | Method |
-| :--- | :--- | :--- |
-| **BGP.Tools** | Connectivity Graph (Upstreams/Downstreams), Tier 1 Status, Country Data. | HTML Scraping & CSV Dumps |
-| **APNIC Labs** | Real-world measurement of invalid route rejection (Scores >95%). | JSON/JS Extraction |
-| **Cloudflare** | "Is BGP Safe Yet" operator list for validation. | CSV Import |
-
-### 2. The Verdict Logic
-The script audits every ASN and assigns a verdict:
-
-*   **🟢 SECURE (Active Local ROV):** The network has "Dirty" (Non-ROV) upstreams but actively filters invalids itself (Verified by APNIC >95%).
-*   **🟢 SECURE (Full Coverage):** The network may not filter locally, but **100%** of its upstream providers are confirmed secure. It inherits a "Clean Pipe."
-*   **🟡 PARTIAL (Mixed Feeds):** The network has a mix of Secure and Insecure upstreams and does not filter locally.
-*   **🔴 VULNERABLE (No Coverage):** The network has dirty upstreams and performs no local filtering.
-*   **🔴 CORE: UNPROTECTED:** A Tier 1 or Global Core network that is not filtering.
-*   **💀 DEAD / INACTIVE:** An ASN with no cone, no upstreams, and no routed prefixes (Excluded from stats).
+*   **No Web Scraping:** Relies entirely on public CSV/TSV dumps (BGP.Tools, Cloudflare, IPtoASN) and raw BGP RIS data (processed by Go).
+*   **Go-Powered Topology:** Uses a custom Go tool for high-performance processing of the full BGP routing table to infer accurate AS relationships (Provider-Customer).
+*   **Multi-Source Validation:** Integrates data from BGP.Tools (ROV Tags), Cloudflare (Safe List), APNIC Labs (Measurement Probes), and RIPE Atlas (Active Verification).
+*   **Dependency-Aware Audit:** Classifies ASNs based on their own ROV status AND the status of their upstream providers.
+*   **Herd Immunity Analysis:** Assesses global ROV adoption by focusing on the protection level of the core internet transit networks.
+*   **Resilient Caching:** All fetched external data is cached locally to minimize downloads and maximize speed on subsequent runs.
 
 ---
 
-## 📂 Project Structure
+## 🚀 Quick Start Workflow
 
-```text
-rov_coverage/
-├── data/
-│   ├── html/          # Raw cached HTML files from bgp.tools
-│   ├── parsed/        # Processed JSON files (Metadata, Connectivity, Status)
-│   ├── apnic/         # Cached country-level stats from APNIC Labs
-│   └── asns.csv       # Global ASN metadata cache
-├── scrape_single_asn.py        # Surgical scraper for specific ASNs
-├── bulk_html_parser.py         # Converts raw HTML cache to structured JSON
-├── rov_global_audit_v10.py     # Main analysis engine (Generates the report)
-├── requirements.txt            # Python dependencies
-└── README.md                   # This file
-```
+Follow these steps to generate the full audit report and analyses.
 
----
+### 1. **Initial Setup (Once)**
 
-## Notes / TODO
+```bash
+# Clone the repository
+git clone https://github.com/yourusername/rov_audit.git
+cd rov_audit
 
-* Cached data is not refreshed often or at all
-* There are false negatives and positives: submit an issue to tell me!
-* Fork and contribute as collaboration is very welcome.
+# Create data directories
+mkdir -p data/apnic data/parsed data/html output
+
+# Install Python dependencies
+pip install pandas requests beautifulsoup4 pyyaml ripe.atlas.cousteau
+
+# Install Go (if not already installed)
+# Download from https://golang.org/dl/ or use your package manager.
+
+# Compile the Go BGP Relationship Extractor
+go build -o bgp-extractor go-bgp-relationships.go.txt
+
+# Compile the Go Cone Calculator (for accurate Cone Sizes)
+go build -o cone-calculator cone-calculator-v2.go
+
 
