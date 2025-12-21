@@ -1,0 +1,10 @@
+#!/bin/bash
+
+FILES=*.html
+
+for f in $FILES; do
+    filename="${f%.*}"
+    echo "Converting $f to $filename.md"
+    pandoc "$f" -t markdown -o "reports/$filename.md"
+done
+
