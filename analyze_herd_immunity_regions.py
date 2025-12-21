@@ -4,7 +4,7 @@ import os
 import sys
 
 # --- CONFIGURATION ---
-DEFAULT_INPUT = "rov_audit_v18_final.csv"
+DEFAULT_INPUT = "rov_audit_v19_final.csv"
 
 # --- STATIC MAPPING (ISO-2 -> RIR/Region) ---
 def get_geo_info(cc):
@@ -18,7 +18,7 @@ def get_geo_info(cc):
     if cc == 'EU': return "Europe", "RIPE NCC"
     
     # 2. NORTH AMERICA (ARIN)
-    if cc in ['US', 'CA', 'PR', 'VI', 'UM']: 
+    if cc in ['US', 'CA', 'PR', 'VI', 'UM', 'VG', 'CW', 'TT', 'DM', 'JM', 'BB']: 
         return "Americas", "ARIN"
     
     # 3. LATIN AMERICA (LACNIC)
@@ -27,18 +27,18 @@ def get_geo_info(cc):
     
     # 4. EUROPE / MIDDLE EAST / RUSSIA (RIPE)
     # Common codes found in BGP data
-    if cc in ['GB', 'DE', 'FR', 'NL', 'IT', 'ES', 'RU', 'UA', 'PL', 'SE', 'NO', 'FI', 'DK', 'CH', 'AT', 'BE', 'CZ', 'IE', 'RO', 'TR', 'IL', 'SA', 'AE', 'IR', 'GR', 'PT', 'HU', 'SK', 'BG', 'HR', 'RS', 'SI', 'EE', 'LV', 'LT']:
+    if cc in ['GB', 'DE', 'FR', 'NL', 'IT', 'ES', 'RU', 'UA', 'PL', 'SE', 'NO', 'FI', 'DK', 'CH', 'AT', 'BE', 'CZ', 'IE', 'RO', 'TR', 'IL', 'SA', 'AE', 'IR', 'GR', 'PT', 'HU', 'SK', 'BG', 'HR', 'RS', 'SI', 'EE', 'LV', 'LT', 'KZ', 'IQ', 'GE', 'BA', 'KG', 'AM', 'OM', 'TJ', 'QA', 'BY', 'MD', 'BH', 'ME', 'JO']:
         return "Europe/ME", "RIPE NCC"
         
     # 5. ASIA / PACIFIC (APNIC)
-    if cc in ['CN', 'IN', 'JP', 'KR', 'SG', 'ID', 'TH', 'MY', 'VN', 'PH', 'PK', 'BD', 'HK', 'TW', 'NP', 'LK', 'MM', 'KH']:
+    if cc in ['CN', 'IN', 'JP', 'KR', 'SG', 'ID', 'TH', 'MY', 'VN', 'PH', 'PK', 'BD', 'HK', 'TW', 'NP', 'LK', 'MM', 'KH', 'AF', 'BT', 'AZ']:
         return "Asia", "APNIC"
-    if cc in ['AU', 'NZ', 'FJ', 'PG', 'NC', 'PF']:
+    if cc in ['AU', 'NZ', 'FJ', 'PG', 'NC', 'PF', 'SB']:
         return "Pacific", "APNIC"
 
     # 6. AFRICA (AFRINIC)
     # Often grouped in EMEA by businesses, but for RIR stats we want them separate
-    if cc in ['ZA', 'NG', 'KE', 'EG', 'MA', 'GH', 'TZ', 'UG', 'AO', 'DZ', 'SD', 'ET', 'SN', 'ZM', 'ZW']:
+    if cc in ['ZA', 'NG', 'KE', 'EG', 'MA', 'GH', 'TZ', 'UG', 'AO', 'DZ', 'SD', 'ET', 'SN', 'ZM', 'ZW', 'CI', 'RW', 'MZ', 'MW', 'SO', 'BI', 'SS', 'LS']:
         return "Africa", "AFRINIC"
 
     # FALLBACKS (The Long Tail)

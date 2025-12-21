@@ -4,7 +4,7 @@ import os
 import sys
 
 # --- CONFIGURATION ---
-DEFAULT_INPUT = "rov_audit_v18_final.csv"
+DEFAULT_INPUT = "rov_audit_v19_final.csv"
 
 def print_header(title):
     print("\n" + "="*80)
@@ -67,14 +67,14 @@ def analyze(csv_file):
     # ---------------------------------------------------------
     # 2. THE HOLDOUTS (Who is holding us back?)
     # ---------------------------------------------------------
-    print_header("THE HOLDOUTS (Top Vulnerable Giants)")
-    print("If these networks enable ROV, global immunity jumps significantly.")
+    print_header("THE HOLDOUTS (Top Vulnerable Transit Nets)")
+    print("If these networks enable ROV, global immunity jumps.")
     print("-" * 80)
     print(f"{'Rank':<5} | {'ASN':<8} | {'CC':<2} | {'Cone Size':<10} | {'Name'}")
     print("-" * 80)
     
-    # Show top 15 from the Top 100 list that are failing
-    for i, row in enumerate(vuln_top100.head(15).iterrows()):
+    # Show top 25 from the Top 1000 list that are failing
+    for i, row in enumerate(vuln_top1000.head(25).iterrows()):
         _, r = row
         rank = df_transit.index.get_loc(r.name) + 1
         print(f"#{rank:<4} | AS{r['asn']:<6} | {r['cc']:<2} | {r['cone']:<10} | {r['name'][:40]}")
