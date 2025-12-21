@@ -1,0 +1,995 @@
+<html>
+<head>
+<title>I-RoV Filtering Metrics</title>
+<style type="text/css">
+<!--
+  body { font-family: "Trebuchet MS", "Bitstream Vera Sans", verdana, lucida, arial, helvetica, sans-serif;font-size: 0.9em;}
+  a:link {color: #660066; text-decoration: none}
+  a:active {color: #0000ee; text-decoration: none}
+  a:visited {color: #666633; text-decoration: none}
+#chart_div div {
+    background-color: transparent;
+    }
+#chart_div table {
+    background-color: transparent;
+    }
+#chart_div > div {
+    background: transparent url(/images/bg-watermark.png) no-repeat;
+}
+#Map_canvas > div > div > div {
+    background: transparent url(/images/bg-watermark.png) no-repeat;
+}
+#Map_canvas rect {
+    opacity: 0;
+}
+-->
+/* Tooltip container */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 250px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+</style>
+  <script type='text/javascript' src='https://www.gstatic.com/charts/loader.js'></script>
+  <script type='text/javascript'>
+   google.charts.load('current', {'packages': ['annotationchart']});
+   google.charts.setOnLoadCallback(drawLine);
+  function drawLine() {
+      var data = new google.visualization.arrayToDataTable([
+        ['Date', 'Route Object data'],
+      [new Date('2019-01-09'),0],
+      [new Date('2019-01-10'),0],
+      [new Date('2019-01-11'),0],
+      [new Date('2019-01-12'),0],
+      [new Date('2019-01-13'),0],
+      [new Date('2019-01-14'),0],
+      [new Date('2019-01-15'),0],
+      [new Date('2019-01-16'),0],
+      [new Date('2019-01-17'),0],
+      [new Date('2019-01-18'),0],
+      [new Date('2019-02-05'),0],
+      [new Date('2019-02-06'),0],
+      [new Date('2019-02-07'),0],
+      [new Date('2019-02-08'),0],
+      [new Date('2019-02-09'),0],
+      [new Date('2019-02-10'),0],
+      [new Date('2019-02-11'),0],
+      [new Date('2019-02-12'),0],
+      [new Date('2019-02-13'),0],
+      [new Date('2019-02-14'),0],
+      [new Date('2019-02-15'),0],
+      [new Date('2019-02-16'),0],
+      [new Date('2019-02-17'),0],
+      [new Date('2019-02-18'),0],
+      [new Date('2019-02-19'),0],
+      [new Date('2019-02-20'),0],
+      [new Date('2019-02-21'),0],
+      [new Date('2019-02-22'),0],
+      [new Date('2019-02-23'),0],
+      [new Date('2019-02-24'),0],
+      [new Date('2019-02-25'),0],
+      [new Date('2019-02-26'),0],
+      [new Date('2019-02-27'),0],
+      [new Date('2019-02-28'),0],
+      [new Date('2019-03-01'),0],
+      [new Date('2019-03-02'),0],
+      [new Date('2019-03-03'),0],
+      [new Date('2019-03-04'),0],
+      [new Date('2019-03-05'),0],
+      [new Date('2019-03-06'),0],
+      [new Date('2019-03-07'),0],
+      [new Date('2019-03-08'),0],
+      [new Date('2019-03-09'),0],
+      [new Date('2019-03-10'),0],
+      [new Date('2019-03-12'),0],
+      [new Date('2019-03-13'),0],
+      [new Date('2019-03-14'),0],
+      [new Date('2019-03-15'),0],
+      [new Date('2019-03-16'),0],
+      [new Date('2019-03-17'),0],
+      [new Date('2019-03-18'),0],
+      [new Date('2019-03-19'),0],
+      [new Date('2019-03-20'),0],
+      [new Date('2019-03-21'),0],
+      [new Date('2019-03-22'),0],
+      [new Date('2019-03-23'),0],
+      [new Date('2019-03-24'),0],
+      [new Date('2019-03-25'),0],
+      [new Date('2019-03-26'),0],
+      [new Date('2019-03-27'),0],
+      [new Date('2019-03-28'),0],
+      [new Date('2019-04-08'),0],
+      [new Date('2019-04-09'),0],
+      [new Date('2019-04-10'),0],
+      [new Date('2019-04-11'),0],
+      [new Date('2019-04-12'),0],
+      [new Date('2019-04-13'),0],
+      [new Date('2019-04-14'),0],
+      [new Date('2019-04-15'),0],
+      [new Date('2019-04-16'),0],
+      [new Date('2019-04-17'),0],
+      [new Date('2019-04-19'),0],
+      [new Date('2019-04-20'),0],
+      [new Date('2019-04-21'),0],
+      [new Date('2019-04-22'),0],
+      [new Date('2019-04-23'),0],
+      [new Date('2019-04-24'),0],
+      [new Date('2019-04-25'),0],
+      [new Date('2019-04-26'),0],
+      [new Date('2019-04-27'),0],
+      [new Date('2019-04-28'),0],
+      [new Date('2019-04-29'),0],
+      [new Date('2019-04-30'),0],
+      [new Date('2019-05-01'),0],
+      [new Date('2019-05-02'),0],
+      [new Date('2019-05-03'),0],
+      [new Date('2019-05-04'),0],
+      [new Date('2019-05-05'),0],
+      [new Date('2019-05-06'),0],
+      [new Date('2019-05-07'),0],
+      [new Date('2019-05-08'),0],
+      [new Date('2019-06-03'),0],
+      [new Date('2019-06-04'),0],
+      [new Date('2019-06-05'),0],
+      [new Date('2019-06-06'),0],
+      [new Date('2019-06-07'),0],
+      [new Date('2019-06-08'),0],
+      [new Date('2019-06-09'),0],
+      [new Date('2019-06-10'),0],
+      [new Date('2019-06-11'),0],
+      [new Date('2019-06-12'),0],
+      [new Date('2019-06-13'),0],
+      [new Date('2019-06-14'),0],
+      [new Date('2019-06-15'),0],
+      [new Date('2019-06-16'),0],
+      [new Date('2019-06-17'),0],
+      [new Date('2019-06-18'),0],
+      [new Date('2019-06-19'),0],
+      [new Date('2019-06-24'),0],
+      [new Date('2019-06-25'),0],
+      [new Date('2019-06-26'),0],
+      [new Date('2019-06-27'),0],
+      [new Date('2019-06-28'),0],
+      [new Date('2019-06-29'),0],
+      [new Date('2019-06-30'),0],
+      [new Date('2019-07-01'),0],
+      [new Date('2019-07-02'),0],
+      [new Date('2019-07-03'),0],
+      [new Date('2019-07-04'),0],
+      [new Date('2019-07-05'),0],
+      [new Date('2019-07-06'),0],
+      [new Date('2019-07-07'),0],
+      [new Date('2019-07-08'),0],
+      [new Date('2019-07-09'),0],
+      [new Date('2019-07-10'),0],
+      [new Date('2019-07-11'),0],
+      [new Date('2019-07-12'),0],
+      [new Date('2019-07-13'),0],
+      [new Date('2019-07-14'),0],
+      [new Date('2019-07-15'),0],
+      [new Date('2019-07-16'),0],
+      [new Date('2019-07-17'),0],
+      [new Date('2019-07-18'),0],
+      [new Date('2019-07-19'),0],
+      [new Date('2019-07-20'),0],
+      [new Date('2019-07-21'),0],
+      [new Date('2019-07-22'),0],
+      [new Date('2019-07-23'),0],
+      [new Date('2019-07-24'),0],
+      [new Date('2019-07-25'),0],
+      [new Date('2019-07-26'),0],
+      [new Date('2019-07-27'),0],
+      [new Date('2019-07-28'),0],
+      [new Date('2019-07-29'),0],
+      [new Date('2019-07-30'),0],
+      [new Date('2019-07-31'),0],
+      [new Date('2019-08-01'),0],
+      [new Date('2019-08-02'),0],
+      [new Date('2019-08-03'),0],
+      [new Date('2019-08-04'),0],
+      [new Date('2019-08-05'),0],
+      [new Date('2019-08-06'),0],
+      [new Date('2019-08-07'),0],
+      [new Date('2019-08-08'),0],
+      [new Date('2019-08-09'),0],
+      [new Date('2019-08-10'),0],
+      [new Date('2019-08-11'),0],
+      [new Date('2019-08-12'),0],
+      [new Date('2019-08-13'),0],
+      [new Date('2019-08-14'),0],
+      [new Date('2019-08-15'),0],
+      [new Date('2019-08-16'),0],
+      [new Date('2019-08-17'),0],
+      [new Date('2019-08-18'),0],
+      [new Date('2019-08-19'),0],
+      [new Date('2019-08-20'),0],
+      [new Date('2019-08-21'),0],
+      [new Date('2019-08-22'),0],
+      [new Date('2019-08-23'),0],
+      [new Date('2019-08-24'),0],
+      [new Date('2019-08-25'),0],
+      [new Date('2019-08-26'),0],
+      [new Date('2019-08-27'),0],
+      [new Date('2019-08-28'),0],
+      [new Date('2019-08-29'),0],
+      [new Date('2019-08-30'),0],
+      [new Date('2019-08-31'),0],
+      [new Date('2019-09-01'),0],
+      [new Date('2019-09-02'),0],
+      [new Date('2019-09-03'),0],
+      [new Date('2019-09-04'),0],
+      [new Date('2019-09-05'),0],
+      [new Date('2019-09-06'),0],
+      [new Date('2019-09-07'),0],
+      [new Date('2019-09-08'),0],
+      [new Date('2019-09-09'),0],
+      [new Date('2019-09-10'),0],
+      [new Date('2019-09-11'),0],
+      [new Date('2019-09-12'),0],
+      [new Date('2019-09-13'),0],
+      [new Date('2019-09-14'),0],
+      [new Date('2019-09-15'),0],
+      [new Date('2019-09-16'),0],
+      [new Date('2019-09-17'),0],
+      [new Date('2019-09-18'),0],
+      [new Date('2019-09-23'),0],
+      [new Date('2019-09-24'),0],
+      [new Date('2019-09-25'),0],
+      [new Date('2019-09-30'),0],
+      [new Date('2019-10-02'),0],
+      [new Date('2019-10-03'),0],
+      [new Date('2019-10-05'),0],
+      [new Date('2019-10-06'),0],
+      [new Date('2019-10-07'),0],
+      [new Date('2019-10-08'),0],
+      [new Date('2019-10-09'),0],
+      [new Date('2019-10-10'),0],
+      [new Date('2019-10-11'),0],
+      [new Date('2019-10-12'),0],
+      [new Date('2019-10-13'),0],
+      [new Date('2019-10-14'),0],
+      [new Date('2019-10-15'),0],
+      [new Date('2019-10-16'),0],
+      [new Date('2019-10-17'),0],
+      [new Date('2019-10-19'),0],
+      [new Date('2019-10-20'),0],
+      [new Date('2019-10-21'),0],
+      [new Date('2019-10-22'),0],
+      [new Date('2019-10-23'),0],
+      [new Date('2019-10-24'),0],
+      [new Date('2019-10-25'),0],
+      [new Date('2019-10-26'),0],
+      [new Date('2019-10-27'),0],
+      [new Date('2019-10-28'),0],
+      [new Date('2019-10-29'),0],
+      [new Date('2019-10-30'),0],
+      [new Date('2019-10-31'),0],
+      [new Date('2019-11-01'),0],
+      [new Date('2019-11-02'),0],
+      [new Date('2019-11-03'),0],
+      [new Date('2019-11-04'),0],
+      [new Date('2019-11-05'),0],
+      [new Date('2019-11-06'),0],
+      [new Date('2019-11-07'),0],
+      [new Date('2019-11-08'),0],
+      [new Date('2019-11-09'),0],
+      [new Date('2019-11-10'),0],
+      [new Date('2019-11-11'),0],
+      [new Date('2019-11-12'),0],
+      [new Date('2019-11-13'),0],
+      [new Date('2019-11-14'),0],
+      [new Date('2019-11-15'),0],
+      [new Date('2019-11-16'),0],
+      [new Date('2019-11-17'),0],
+      [new Date('2019-11-18'),0],
+      [new Date('2019-11-19'),0],
+      [new Date('2019-11-20'),0],
+      [new Date('2019-11-21'),0],
+      [new Date('2019-11-22'),0],
+      [new Date('2019-11-23'),0],
+      [new Date('2019-11-24'),0],
+      [new Date('2019-11-25'),0],
+      [new Date('2019-11-26'),0],
+      [new Date('2019-11-27'),0],
+      [new Date('2019-11-28'),0],
+      [new Date('2019-11-29'),0],
+      [new Date('2019-11-30'),0],
+      [new Date('2019-12-01'),0],
+      [new Date('2019-12-02'),0],
+      [new Date('2019-12-03'),0],
+      [new Date('2019-12-04'),0],
+      [new Date('2019-12-05'),0],
+      [new Date('2019-12-06'),0],
+      [new Date('2019-12-07'),0],
+      [new Date('2019-12-08'),0],
+      [new Date('2019-12-09'),0],
+      [new Date('2019-12-10'),0],
+      [new Date('2019-12-11'),0],
+      [new Date('2019-12-12'),0],
+      [new Date('2019-12-13'),0],
+      [new Date('2019-12-14'),0],
+      [new Date('2019-12-15'),0],
+      [new Date('2019-12-16'),0],
+      [new Date('2019-12-17'),0],
+      [new Date('2019-12-18'),0],
+      [new Date('2019-12-19'),0],
+      [new Date('2019-12-20'),0],
+      [new Date('2019-12-21'),0],
+      [new Date('2019-12-22'),0],
+      [new Date('2019-12-23'),0],
+      [new Date('2019-12-24'),0],
+      [new Date('2019-12-25'),0],
+      [new Date('2019-12-26'),0],
+      [new Date('2019-12-27'),0],
+      [new Date('2019-12-28'),0],
+      [new Date('2019-12-29'),0],
+      [new Date('2019-12-30'),0],
+      [new Date('2019-12-31'),0],
+      [new Date('2020-01-01'),0],
+      [new Date('2020-01-02'),0],
+      [new Date('2020-01-03'),0],
+      [new Date('2020-01-04'),0],
+      [new Date('2020-01-05'),0],
+      [new Date('2020-01-06'),0],
+      [new Date('2020-01-07'),0],
+      [new Date('2020-01-08'),0],
+      [new Date('2020-01-09'),0],
+      [new Date('2020-01-10'),0],
+      [new Date('2020-01-11'),0],
+      [new Date('2020-01-12'),0],
+      [new Date('2020-01-13'),100],
+      [new Date('2020-01-14'),100],
+      [new Date('2020-01-15'),100],
+      [new Date('2020-01-16'),100],
+      [new Date('2020-01-17'),100],
+      [new Date('2020-01-18'),100],
+      [new Date('2020-01-19'),100],
+      [new Date('2020-01-20'),100],
+      [new Date('2020-01-21'),100],
+      [new Date('2020-01-22'),100],
+      [new Date('2020-01-23'),100],
+      [new Date('2020-01-24'),100],
+      [new Date('2020-01-25'),100],
+      [new Date('2020-01-26'),100],
+      [new Date('2020-01-27'),100],
+      [new Date('2020-01-28'),100],
+      [new Date('2020-01-29'),100],
+      [new Date('2020-01-30'),100],
+      [new Date('2020-01-31'),100],
+      [new Date('2020-02-01'),100],
+      [new Date('2020-02-02'),100],
+      [new Date('2020-02-03'),100],
+      [new Date('2020-02-04'),100],
+      [new Date('2020-02-05'),100],
+      [new Date('2020-02-06'),100],
+      [new Date('2020-02-07'),100],
+      [new Date('2020-02-08'),100],
+      [new Date('2020-02-09'),100],
+      [new Date('2020-02-10'),100],
+      [new Date('2020-02-11'),100],
+      [new Date('2020-02-12'),100],
+      [new Date('2020-02-13'),100],
+      [new Date('2020-02-14'),100],
+      [new Date('2020-02-15'),100],
+      [new Date('2020-02-16'),100],
+      [new Date('2020-02-17'),0],
+      [new Date('2020-02-18'),100],
+      [new Date('2020-02-19'),100],
+      [new Date('2020-02-20'),100],
+      [new Date('2020-02-21'),100],
+      [new Date('2020-02-22'),100],
+      [new Date('2020-02-23'),100],
+      [new Date('2020-02-24'),100],
+      [new Date('2020-02-25'),100],
+      [new Date('2020-02-26'),100],
+      [new Date('2020-02-27'),100],
+      [new Date('2020-02-28'),66.6666666666667],
+      [new Date('2020-02-29'),66.6666666666667],
+      [new Date('2020-03-01'),66.6666666666667],
+      [new Date('2020-03-02'),66.6666666666667],
+      [new Date('2020-03-03'),66.6666666666667],
+      [new Date('2020-03-04'),66.6666666666667],
+      [new Date('2020-03-05'),66.6666666666667],
+      [new Date('2020-03-06'),66.6666666666667],
+      [new Date('2020-03-07'),66.6666666666667],
+      [new Date('2020-03-08'),66.6666666666667],
+      [new Date('2020-03-09'),66.6666666666667],
+      [new Date('2020-03-10'),66.6666666666667],
+      [new Date('2020-03-11'),66.6666666666667],
+      [new Date('2020-03-12'),66.6666666666667],
+      [new Date('2020-03-13'),66.6666666666667],
+      [new Date('2020-03-14'),66.6666666666667],
+      [new Date('2020-03-15'),66.6666666666667],
+      [new Date('2020-03-16'),0],
+      [new Date('2020-03-17'),66.6666666666667],
+      [new Date('2020-03-18'),66.6666666666667],
+      [new Date('2020-03-19'),66.6666666666667],
+      [new Date('2020-03-20'),66.6666666666667],
+      [new Date('2020-03-21'),66.6666666666667],
+      [new Date('2020-03-22'),66.6666666666667],
+      [new Date('2020-03-23'),66.6666666666667],
+      [new Date('2020-03-24'),66.6666666666667],
+      [new Date('2020-03-25'),66.6666666666667],
+      [new Date('2020-03-26'),66.6666666666667],
+      [new Date('2020-03-27'),66.6666666666667],
+      [new Date('2020-03-28'),66.6666666666667],
+      [new Date('2020-03-29'),66.6666666666667],
+      [new Date('2020-03-30'),66.6666666666667],
+      [new Date('2020-03-31'),66.6666666666667],
+      [new Date('2020-04-01'),66.6666666666667],
+      [new Date('2020-04-02'),66.6666666666667],
+      [new Date('2020-04-03'),66.6666666666667],
+      [new Date('2020-04-04'),66.6666666666667],
+      [new Date('2020-04-05'),66.6666666666667],
+      [new Date('2020-04-06'),66.6666666666667],
+      [new Date('2020-04-07'),66.6666666666667],
+      [new Date('2020-04-08'),66.6666666666667],
+      [new Date('2020-04-09'),66.6666666666667],
+      [new Date('2020-04-10'),66.6666666666667],
+      [new Date('2020-04-11'),66.6666666666667],
+      [new Date('2020-04-12'),66.6666666666667],
+      [new Date('2020-04-13'),66.6666666666667],
+      [new Date('2020-04-14'),66.6666666666667],
+      [new Date('2020-04-15'),66.6666666666667],
+      [new Date('2020-04-16'),66.6666666666667],
+      [new Date('2020-04-17'),66.6666666666667],
+      [new Date('2020-04-18'),66.6666666666667],
+      [new Date('2020-04-19'),66.6666666666667],
+      [new Date('2020-04-20'),66.6666666666667],
+      [new Date('2020-04-21'),66.6666666666667],
+      [new Date('2020-04-22'),66.6666666666667],
+      [new Date('2020-04-23'),66.6666666666667],
+      [new Date('2020-04-24'),66.6666666666667],
+      [new Date('2020-04-25'),66.6666666666667],
+      [new Date('2020-04-26'),66.6666666666667],
+      [new Date('2020-04-27'),66.6666666666667],
+      [new Date('2020-04-28'),66.6666666666667],
+      [new Date('2020-04-29'),66.6666666666667],
+      [new Date('2020-04-30'),66.6666666666667],
+      [new Date('2020-05-01'),66.6666666666667],
+      [new Date('2020-05-02'),66.6666666666667],
+      [new Date('2020-05-03'),66.6666666666667],
+      [new Date('2020-05-04'),66.6666666666667],
+      [new Date('2020-05-05'),66.6666666666667],
+      [new Date('2020-05-06'),66.6666666666667],
+      [new Date('2020-05-07'),66.6666666666667],
+      [new Date('2020-05-08'),66.6666666666667],
+      [new Date('2020-05-09'),66.6666666666667],
+      [new Date('2020-05-10'),66.6666666666667],
+      [new Date('2020-05-11'),66.6666666666667],
+      [new Date('2020-05-12'),66.6666666666667],
+      [new Date('2020-05-13'),66.6666666666667],
+      [new Date('2020-05-14'),66.6666666666667],
+      [new Date('2020-05-15'),66.6666666666667],
+      [new Date('2020-05-16'),66.6666666666667],
+      [new Date('2020-05-17'),66.6666666666667],
+      [new Date('2020-05-18'),66.6666666666667],
+      [new Date('2020-05-20'),66.6666666666667],
+      [new Date('2020-05-21'),66.6666666666667],
+      [new Date('2020-05-22'),66.6666666666667],
+      [new Date('2020-05-23'),66.6666666666667],
+      [new Date('2020-05-24'),66.6666666666667],
+      [new Date('2020-05-25'),66.6666666666667],
+      [new Date('2020-05-26'),66.6666666666667],
+      [new Date('2020-05-27'),66.6666666666667],
+      [new Date('2020-05-28'),66.6666666666667],
+      [new Date('2020-05-29'),66.6666666666667],
+      [new Date('2020-05-30'),66.6666666666667],
+      [new Date('2020-05-31'),66.6666666666667],
+      [new Date('2020-06-01'),66.6666666666667],
+      [new Date('2020-06-02'),66.6666666666667],
+      [new Date('2020-06-03'),66.6666666666667],
+      [new Date('2020-06-04'),66.6666666666667],
+      [new Date('2020-06-05'),66.6666666666667],
+      [new Date('2020-06-06'),66.6666666666667],
+      [new Date('2020-06-07'),66.6666666666667],
+      [new Date('2020-06-08'),66.6666666666667],
+      [new Date('2020-06-09'),66.6666666666667],
+      [new Date('2020-06-10'),66.6666666666667],
+      [new Date('2020-06-11'),66.6666666666667],
+      [new Date('2020-06-12'),66.6666666666667],
+      [new Date('2020-06-13'),66.6666666666667],
+      [new Date('2020-06-14'),66.6666666666667],
+      [new Date('2020-06-15'),66.6666666666667],
+      [new Date('2020-06-16'),66.6666666666667],
+      [new Date('2020-06-17'),66.6666666666667],
+      [new Date('2020-06-18'),66.6666666666667],
+      [new Date('2020-06-19'),66.6666666666667],
+      [new Date('2020-06-20'),66.6666666666667],
+      [new Date('2020-06-21'),66.6666666666667],
+      [new Date('2020-06-22'),66.6666666666667],
+      [new Date('2020-06-23'),66.6666666666667],
+      [new Date('2020-06-24'),66.6666666666667],
+      [new Date('2020-06-25'),66.6666666666667],
+      [new Date('2020-06-26'),66.6666666666667],
+      [new Date('2020-06-27'),66.6666666666667],
+      [new Date('2020-06-28'),66.6666666666667],
+      [new Date('2020-06-29'),66.6666666666667],
+      [new Date('2020-06-30'),66.6666666666667],
+      [new Date('2020-07-01'),66.6666666666667],
+      [new Date('2020-07-02'),66.6666666666667],
+      [new Date('2020-07-03'),66.6666666666667],
+      [new Date('2020-07-04'),66.6666666666667],
+      [new Date('2020-07-05'),66.6666666666667],
+      [new Date('2020-07-06'),66.6666666666667],
+      [new Date('2020-07-07'),66.6666666666667],
+      [new Date('2020-07-08'),66.6666666666667],
+      [new Date('2020-07-09'),66.6666666666667],
+      [new Date('2020-07-10'),66.6666666666667],
+      [new Date('2020-07-11'),66.6666666666667],
+      [new Date('2020-07-12'),66.6666666666667],
+      [new Date('2020-07-13'),66.6666666666667],
+      [new Date('2020-07-14'),66.6666666666667],
+      [new Date('2020-07-15'),66.6666666666667],
+      [new Date('2020-07-16'),66.6666666666667],
+      [new Date('2020-07-17'),66.6666666666667],
+      [new Date('2020-07-18'),66.6666666666667],
+      [new Date('2020-07-19'),66.6666666666667],
+      [new Date('2020-07-20'),66.6666666666667],
+      [new Date('2020-07-21'),66.6666666666667],
+      [new Date('2020-07-22'),66.6666666666667],
+      [new Date('2020-07-23'),66.6666666666667],
+      [new Date('2020-07-24'),66.6666666666667],
+      [new Date('2020-07-25'),66.6666666666667],
+      [new Date('2020-07-26'),66.6666666666667],
+      [new Date('2020-07-27'),66.6666666666667],
+      [new Date('2020-07-28'),66.6666666666667],
+      [new Date('2020-07-29'),66.6666666666667],
+      [new Date('2020-07-30'),66.6666666666667],
+      [new Date('2020-07-31'),66.6666666666667],
+      [new Date('2020-08-01'),66.6666666666667],
+      [new Date('2020-08-02'),66.6666666666667],
+      [new Date('2020-08-03'),66.6666666666667],
+      [new Date('2020-08-04'),66.6666666666667],
+      [new Date('2020-08-05'),66.6666666666667],
+      [new Date('2020-08-06'),66.6666666666667],
+      [new Date('2020-08-07'),66.6666666666667],
+      [new Date('2020-08-08'),66.6666666666667],
+      [new Date('2020-08-09'),66.6666666666667],
+      [new Date('2020-08-10'),66.6666666666667],
+      [new Date('2020-08-11'),66.6666666666667],
+      [new Date('2020-08-12'),66.6666666666667],
+      [new Date('2020-08-13'),66.6666666666667],
+      [new Date('2020-08-14'),66.6666666666667],
+      [new Date('2020-08-15'),66.6666666666667],
+      [new Date('2020-08-16'),66.6666666666667],
+      [new Date('2020-08-17'),66.6666666666667],
+      [new Date('2020-08-18'),66.6666666666667],
+      [new Date('2020-08-19'),66.6666666666667],
+      [new Date('2020-08-20'),66.6666666666667],
+      [new Date('2020-08-21'),66.6666666666667],
+      [new Date('2020-08-22'),66.6666666666667],
+      [new Date('2020-08-23'),66.6666666666667],
+      [new Date('2020-08-24'),66.6666666666667],
+      [new Date('2020-08-25'),66.6666666666667],
+      [new Date('2020-08-26'),66.6666666666667],
+      [new Date('2020-08-27'),66.6666666666667],
+      [new Date('2020-08-28'),66.6666666666667],
+      [new Date('2020-08-29'),66.6666666666667],
+      [new Date('2020-08-30'),66.6666666666667],
+      [new Date('2020-08-31'),66.6666666666667],
+      [new Date('2020-09-01'),66.6666666666667],
+      [new Date('2020-09-02'),66.6666666666667],
+      [new Date('2020-09-03'),66.6666666666667],
+      [new Date('2020-09-04'),66.6666666666667],
+      [new Date('2020-09-05'),66.6666666666667],
+      [new Date('2020-09-06'),66.6666666666667],
+      [new Date('2020-09-07'),66.6666666666667],
+      [new Date('2020-09-08'),66.6666666666667],
+      [new Date('2020-09-09'),66.6666666666667],
+      [new Date('2020-09-10'),66.6666666666667],
+      [new Date('2020-09-11'),66.6666666666667],
+      [new Date('2020-09-12'),66.6666666666667],
+      [new Date('2020-09-13'),66.6666666666667],
+      [new Date('2020-09-14'),66.6666666666667],
+      [new Date('2020-09-15'),66.6666666666667],
+      [new Date('2020-09-16'),66.6666666666667],
+      [new Date('2020-09-17'),66.6666666666667],
+      [new Date('2020-09-18'),66.6666666666667],
+      [new Date('2020-09-19'),66.6666666666667],
+      [new Date('2020-09-20'),66.6666666666667],
+      [new Date('2020-09-21'),66.6666666666667],
+      [new Date('2020-09-22'),66.6666666666667],
+      [new Date('2020-09-23'),66.6666666666667],
+      [new Date('2020-09-24'),66.6666666666667],
+      [new Date('2020-09-25'),66.6666666666667],
+      [new Date('2020-09-26'),66.6666666666667],
+      [new Date('2020-09-27'),66.6666666666667],
+      [new Date('2020-09-28'),66.6666666666667],
+      [new Date('2020-09-29'),66.6666666666667],
+      [new Date('2020-09-30'),66.6666666666667],
+      [new Date('2020-10-01'),66.6666666666667],
+      [new Date('2020-10-02'),66.6666666666667],
+      [new Date('2020-10-03'),66.6666666666667],
+      [new Date('2020-10-04'),66.6666666666667],
+      [new Date('2020-10-05'),66.6666666666667],
+      [new Date('2020-10-06'),66.6666666666667],
+      [new Date('2020-10-07'),66.6666666666667],
+      [new Date('2020-10-08'),66.6666666666667],
+      [new Date('2020-10-09'),66.6666666666667],
+      [new Date('2020-10-10'),66.6666666666667],
+      [new Date('2020-10-11'),66.6666666666667],
+      [new Date('2020-10-12'),66.6666666666667],
+      [new Date('2020-10-13'),66.6666666666667],
+      [new Date('2020-10-14'),66.6666666666667],
+      [new Date('2020-10-15'),66.6666666666667],
+      [new Date('2020-10-16'),66.6666666666667],
+      [new Date('2020-10-17'),66.6666666666667],
+      [new Date('2020-10-18'),66.6666666666667],
+      [new Date('2020-10-19'),66.6666666666667],
+      [new Date('2020-10-20'),66.6666666666667],
+      [new Date('2020-10-21'),66.6666666666667],
+      [new Date('2020-10-22'),66.6666666666667],
+      [new Date('2020-10-23'),66.6666666666667],
+      [new Date('2020-10-24'),66.6666666666667],
+      [new Date('2020-10-25'),66.6666666666667],
+      [new Date('2020-10-26'),66.6666666666667],
+      [new Date('2020-10-27'),66.6666666666667],
+      [new Date('2020-10-28'),66.6666666666667],
+      [new Date('2020-10-29'),66.6666666666667],
+      [new Date('2020-10-30'),66.6666666666667],
+      [new Date('2020-10-31'),66.6666666666667],
+      [new Date('2020-11-01'),66.6666666666667],
+      [new Date('2020-11-02'),66.6666666666667],
+      [new Date('2020-11-03'),66.6666666666667],
+      [new Date('2020-11-04'),66.6666666666667],
+      [new Date('2020-11-05'),66.6666666666667],
+      [new Date('2020-11-06'),66.6666666666667],
+      [new Date('2020-11-07'),66.6666666666667],
+      [new Date('2020-11-08'),66.6666666666667],
+      [new Date('2020-11-09'),66.6666666666667],
+      [new Date('2020-11-10'),66.6666666666667],
+      [new Date('2020-11-11'),66.6666666666667],
+      [new Date('2020-11-12'),66.6666666666667],
+      [new Date('2020-11-13'),66.6666666666667],
+      [new Date('2020-11-14'),66.6666666666667],
+      [new Date('2020-11-15'),66.6666666666667],
+      [new Date('2020-11-16'),66.6666666666667],
+      [new Date('2020-11-17'),66.6666666666667],
+      [new Date('2020-11-18'),66.6666666666667],
+      [new Date('2020-11-19'),66.6666666666667],
+      [new Date('2020-11-20'),66.6666666666667],
+      [new Date('2020-11-21'),66.6666666666667],
+      [new Date('2020-11-22'),66.6666666666667],
+      [new Date('2020-11-23'),66.6666666666667],
+      [new Date('2020-11-24'),66.6666666666667],
+      [new Date('2020-11-25'),66.6666666666667],
+      [new Date('2020-11-26'),66.6666666666667],
+      [new Date('2020-11-27'),66.6666666666667],
+      [new Date('2020-11-28'),66.6666666666667],
+      [new Date('2020-11-29'),66.6666666666667],
+      [new Date('2020-11-30'),66.6666666666667],
+      [new Date('2020-12-01'),66.6666666666667],
+      [new Date('2020-12-02'),66.6666666666667],
+      [new Date('2020-12-03'),66.6666666666667],
+      [new Date('2020-12-04'),66.6666666666667],
+      [new Date('2020-12-05'),66.6666666666667],
+      [new Date('2020-12-06'),66.6666666666667],
+      [new Date('2020-12-07'),66.6666666666667],
+      [new Date('2020-12-08'),66.6666666666667],
+      [new Date('2020-12-09'),66.6666666666667],
+      [new Date('2020-12-10'),66.6666666666667],
+      [new Date('2020-12-11'),66.6666666666667],
+      [new Date('2020-12-12'),66.6666666666667],
+      [new Date('2020-12-13'),66.6666666666667],
+      [new Date('2020-12-14'),66.6666666666667],
+      [new Date('2020-12-15'),66.6666666666667],
+      [new Date('2020-12-16'),100],
+      [new Date('2020-12-17'),100],
+      [new Date('2020-12-18'),100],
+      [new Date('2020-12-19'),100],
+      [new Date('2020-12-20'),100],
+      [new Date('2020-12-21'),100],
+      [new Date('2020-12-22'),100],
+      [new Date('2020-12-23'),100],
+      [new Date('2020-12-24'),100],
+      [new Date('2020-12-25'),100],
+      [new Date('2020-12-26'),100],
+      [new Date('2020-12-27'),100],
+      [new Date('2020-12-28'),100],
+      [new Date('2020-12-29'),100],
+      [new Date('2020-12-30'),100],
+      [new Date('2020-12-31'),100],
+      [new Date('2021-01-01'),100],
+      [new Date('2021-01-02'),100],
+      [new Date('2021-01-03'),100],
+      [new Date('2021-01-04'),100],
+      [new Date('2021-01-05'),100],
+      [new Date('2021-01-06'),100],
+      [new Date('2021-01-07'),100],
+      [new Date('2021-01-08'),100],
+      [new Date('2021-01-09'),100],
+      [new Date('2021-01-10'),100],
+      [new Date('2021-01-11'),100],
+      [new Date('2021-01-12'),100],
+      [new Date('2021-01-13'),100],
+      [new Date('2021-01-14'),100],
+      [new Date('2021-01-15'),100],
+      [new Date('2021-01-16'),100],
+      [new Date('2021-01-17'),100],
+      [new Date('2021-01-18'),100],
+      [new Date('2021-01-19'),100],
+      [new Date('2021-01-20'),100],
+      [new Date('2021-01-21'),100],
+      [new Date('2021-01-22'),100],
+      [new Date('2021-01-23'),100],
+      [new Date('2021-01-24'),100],
+      [new Date('2021-01-25'),100],
+      [new Date('2021-01-26'),100],
+      [new Date('2021-01-27'),100],
+      [new Date('2021-01-28'),100],
+      [new Date('2021-01-29'),100],
+      [new Date('2021-01-30'),100],
+      [new Date('2021-01-31'),100],
+      [new Date('2021-02-01'),100],
+      [new Date('2021-02-02'),100],
+      [new Date('2021-02-03'),100],
+      [new Date('2021-02-04'),100],
+      [new Date('2021-02-05'),100],
+      [new Date('2021-02-06'),100],
+      [new Date('2021-02-07'),100],
+      [new Date('2021-02-08'),100],
+      [new Date('2021-02-09'),100],
+      [new Date('2021-02-10'),100],
+      [new Date('2021-02-11'),100],
+      [new Date('2021-02-12'),100],
+      [new Date('2021-02-13'),100],
+      [new Date('2021-02-14'),100],
+      [new Date('2021-02-15'),100],
+      [new Date('2021-02-16'),100]
+     ]);
+
+        var options = {
+          displayAnnotations: false,
+          scaleType: 'fixed',
+          thickness: 2,
+          'chart': {
+              'backgroundColor': 'transparent',
+              'chartArea': {
+                  'backgroundColor': 'transparent'
+              },
+          },
+          'range': {
+              'ui': {
+                  'chartOptions': {
+                      'backgroundColor': 'transparent',
+                      'chartArea': {
+                          'backgroundColor': 'transparent'
+                      },
+                  }
+              },
+          'table': {
+                  'backgroundColor': 'transparent'
+              }
+          }
+          };
+
+        var chart = new google.visualization.AnnotationChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+
+    };
+    </script>
+    <script type='text/javascript'>
+     google.charts.load('current', {'packages': ['table']});
+     google.charts.setOnLoadCallback(drawTable);
+  function drawTable() {
+      var table = new google.visualization.arrayToDataTable([
+        ['AS', 'AS Name', 'V4 Valid','Pc','V4 Invalid','Pc','V4 Unknwn','Pc','V4 Total Addrs','V6 Valid','Pc','V6 Invalid','Pc','V6 Unknwn','Pc','V6 Total /32 Addrs'],
+        ["<a href=\"/roa/AS55784?c=AP&l=1&v=4&t=thist&d=thisd\">AS55784</a>","AU-SYD-MARLINK-MSS MARLINK AU-SYD",768,{v: 100.0, f:'100.0%'},0,{v: 0.0, f:'0.0%'},0,{v: 0.0, f:'0.0%'},768,0,{v: 0.0, f:'0.0%'},0,{v: 0.0, f:'0.0%'},0,{v: 0.0, f:'0.0%'},0]
+    ]);
+        var options = {
+          'allowHtml' : 'true'
+          };
+
+        var astable = new google.visualization.Table(document.getElementById('table_div'));
+        astable.draw(table, options);
+
+    };
+    </script>
+<script type='text/javascript'>
+  function drawCharts() {
+      var mapdata = new google.visualization.arrayToDataTable([
+        ['Country', 'Validating']        ,
+['AP', {v: 100.00, f:'100.00%'}],
+['AQ', {v: 100.00, f:'100.00%'}],
+['BV', {v: 100.00, f:'100.00%'}],
+['CC', {v: 0.00, f:'0.00%'}],
+['CX', {v: 0.00, f:'0.00%'}],
+['GS', {v: 66.67, f:'66.67%'}],
+['HM', {v: 0.00, f:'0.00%'}],
+['IO', {v: 100.00, f:'100.00%'}],
+['TF', {v: 0.00, f:'0.00%'}],
+['UM', {v: 0.00, f:'0.00%'}],
+['XA', {v: 26.83, f:'26.83%'}],
+['XG', {v: 70.97, f:'70.97%'}]
+      ]);
+        var mapOptions =    {   legend:     { position: 'none' },
+                                region:     '990',
+                                resolution: 'countries',
+                                width:      620,
+                                height:     380,
+                                colorAxis:  { minValue: 0,
+                                              maxValue: 100,
+                                colors:   ['#FF0000','#FFF60D','#25F60D'] } 
+                            };
+
+        var Container = document.getElementById('Map_canvas');
+        var GeoChart = new google.visualization.GeoChart(Container);
+        var myMapView = new google.visualization.DataView(mapdata)
+        myMapView.setColumns([0,1]);
+        // register the 'select' event handler
+        google.visualization.events.addListener(GeoChart, 'select', function () {
+                // GeoChart selections return an array of objects 
+                // with a row property; no column information
+                var selection = GeoChart.getSelection();
+                window.location = '/roa/'+myMapView.getValue(selection[0].row, 0);
+        });
+
+        mapOptions.region = "990";
+        GeoChart.draw(myMapView, mapOptions);
+
+     };
+
+     google.charts.load('current', {'packages': ['corechart', 'geochart']});
+     google.charts.setOnLoadCallback(drawCharts);
+   </script>
+    <script type='text/javascript'>
+     google.charts.load('current', {'packages': ['table']});
+     google.charts.setOnLoadCallback(drawTable);
+    function drawTable() {
+      var table2 = new google.visualization.arrayToDataTable([
+        ['Code', 'Region', 'V4 Valid','Pc','V4 Invalid','Pc','V4 Unknwn','Pc','V4 Total Addrs','V6 Valid','Pc','V6 Invalid','Pc','V6 Unknwn','Pc','V6 Total /32 Addrs']        ,
+["<a href=\"/roa/XA\">XA</a>","<a href=\"/roa/XA?o=v4tadpl1\">World</a>",781105776,{v: 26.8, f:'26.8%'},1821712,{v: 0.1, f:'0.1%'},2128651264,{v: 73.1, f:'73.1%'},2911578752,49394,{v: 36.9, f:'36.9%'},45,{v: 0.0, f:'0.0%'},84319,{v: 63.0, f:'63.0%'},133760]        ,
+["<a href=\"/roa/XG\">XG</a>","<a href=\"/roa/XG?o=v4tadpl1\">Unclassified</a>",5632,{v: 71.0, f:'71.0%'},0,{v: 0.0, f:'0.0%'},2304,{v: 29.0, f:'29.0%'},7936,0,{v: 0.0, f:'0.0%'},0,{v: 0.0, f:'0.0%'},0,{v: 0.0, f:'0.0%'},0]
+    ]);
+        var options = {
+          'allowHtml' : 'true'
+          };
+
+        var astable = new google.visualization.Table(document.getElementById('table2_div'));
+        astable.draw(table2, options);
+
+    };
+    </script>
+    <script type='text/javascript'>
+     google.charts.load('current', {'packages': ['table']});
+     google.charts.setOnLoadCallback(drawTable);
+    function drawTable() {
+      var table3 = new google.visualization.arrayToDataTable([
+        ['Code', 'Region', 'V4 Valid','Pc','V4 Invalid','Pc','V4 Unknwn','Pc','V4 Total Addrs','V6 Valid','Pc','V6 Invalid','Pc','V6 Unknwn','Pc','V6 Total /32 Addrs']        
+    ]);
+        var options = {
+          'allowHtml' : 'true'
+          };
+
+        var astable = new google.visualization.Table(document.getElementById('table3_div'));
+        astable.draw(table3, options);
+
+    };
+    </script>
+    <script type='text/javascript'>
+     google.charts.load('current', {'packages': ['table']});
+     google.charts.setOnLoadCallback(drawTable);
+    function drawTable() {
+      var table4 = new google.visualization.arrayToDataTable([
+        ['Code', 'Region', 'V4 Valid','Pc','V4 Invalid','Pc','V4 Unknwn','Pc','V4 Total Addrs','V6 Valid','Pc','V6 Invalid','Pc','V6 Unknwn','Pc','V6 Total /32 Addrs']        ,
+["<a href=\"/roa/AP\">AP</a>","<a href=\"/roa/AP?o=v4tadpl1\">Asia Pacific code</a>, <a href=\"/roa/XG?o=v4tadpl1\">Unclassified</a>, <a href=\"/roa/XA?o=v4tadpl1\">World</a>",768,{v: 100.0, f:'100.0%'},0,{v: 0.0, f:'0.0%'},0,{v: 0.0, f:'0.0%'},768,0,{v: 0.0, f:'0.0%'},0,{v: 0.0, f:'0.0%'},0,{v: 0.0, f:'0.0%'},0],
+["<a href=\"/roa/AQ\">AQ</a>","<a href=\"/roa/AQ?o=v4tadpl1\">Antartica</a>, <a href=\"/roa/XG?o=v4tadpl1\">Unclassified</a>, <a href=\"/roa/XA?o=v4tadpl1\">World</a>",512,{v: 100.0, f:'100.0%'},0,{v: 0.0, f:'0.0%'},0,{v: 0.0, f:'0.0%'},512,0,{v: 0.0, f:'0.0%'},0,{v: 0.0, f:'0.0%'},0,{v: 0.0, f:'0.0%'},0],
+["<a href=\"/roa/BV\">BV</a>","<a href=\"/roa/BV?o=v4tadpl1\">Bouvet Island</a>, <a href=\"/roa/XG?o=v4tadpl1\">Unclassified</a>, <a href=\"/roa/XA?o=v4tadpl1\">World</a>",256,{v: 100.0, f:'100.0%'},0,{v: 0.0, f:'0.0%'},0,{v: 0.0, f:'0.0%'},256,0,{v: 0.0, f:'0.0%'},0,{v: 0.0, f:'0.0%'},0,{v: 0.0, f:'0.0%'},0],
+["<a href=\"/roa/CC\">CC</a>","<a href=\"/roa/CC?o=v4tadpl1\">Cocos and Keeling Islands</a>, <a href=\"/roa/XG?o=v4tadpl1\">Unclassified</a>, <a href=\"/roa/XA?o=v4tadpl1\">World</a>",0,{v: 0.0, f:'0.0%'},0,{v: 0.0, f:'0.0%'},1024,{v: 100.0, f:'100.0%'},1024,0,{v: 0.0, f:'0.0%'},0,{v: 0.0, f:'0.0%'},0,{v: 0.0, f:'0.0%'},0],
+["<a href=\"/roa/CX\">CX</a>","<a href=\"/roa/CX?o=v4tadpl1\">Christmas Island</a>, <a href=\"/roa/XG?o=v4tadpl1\">Unclassified</a>, <a href=\"/roa/XA?o=v4tadpl1\">World</a>",0,{v: 0.0, f:'0.0%'},0,{v: 0.0, f:'0.0%'},256,{v: 100.0, f:'100.0%'},256,0,{v: 0.0, f:'0.0%'},0,{v: 0.0, f:'0.0%'},0,{v: 0.0, f:'0.0%'},0],
+["<a href=\"/roa/GS\">GS</a>","<a href=\"/roa/GS?o=v4tadpl1\">South Georgia and South Sandwich Islands</a>, <a href=\"/roa/XG?o=v4tadpl1\">Unclassified</a>, <a href=\"/roa/XA?o=v4tadpl1\">World</a>",1024,{v: 66.7, f:'66.7%'},0,{v: 0.0, f:'0.0%'},512,{v: 33.3, f:'33.3%'},1536,0,{v: 0.0, f:'0.0%'},0,{v: 0.0, f:'0.0%'},0,{v: 0.0, f:'0.0%'},0],
+["<a href=\"/roa/HM\">HM</a>","<a href=\"/roa/HM?o=v4tadpl1\">Heard and McDonald Islands</a>, <a href=\"/roa/XG?o=v4tadpl1\">Unclassified</a>, <a href=\"/roa/XA?o=v4tadpl1\">World</a>",0,{v: 0.0, f:'0.0%'},0,{v: 0.0, f:'0.0%'},256,{v: 100.0, f:'100.0%'},256,0,{v: 0.0, f:'0.0%'},0,{v: 0.0, f:'0.0%'},0,{v: 0.0, f:'0.0%'},0],
+["<a href=\"/roa/IO\">IO</a>","<a href=\"/roa/IO?o=v4tadpl1\">British Indian Ocean Territory</a>, <a href=\"/roa/XG?o=v4tadpl1\">Unclassified</a>, <a href=\"/roa/XA?o=v4tadpl1\">World</a>",3072,{v: 100.0, f:'100.0%'},0,{v: 0.0, f:'0.0%'},0,{v: 0.0, f:'0.0%'},3072,0,{v: 0.0, f:'0.0%'},0,{v: 0.0, f:'0.0%'},0,{v: 0.0, f:'0.0%'},0],
+["<a href=\"/roa/TF\">TF</a>","<a href=\"/roa/TF?o=v4tadpl1\">French Southern Territories</a>, <a href=\"/roa/XG?o=v4tadpl1\">Unclassified</a>, <a href=\"/roa/XA?o=v4tadpl1\">World</a>",0,{v: 0.0, f:'0.0%'},0,{v: 0.0, f:'0.0%'},256,{v: 100.0, f:'100.0%'},256,0,{v: 0.0, f:'0.0%'},0,{v: 0.0, f:'0.0%'},0,{v: 0.0, f:'0.0%'},0],
+["<a href=\"/roa/UM\">UM</a>","<a href=\"/roa/UM?o=v4tadpl1\">United States Minor Outlying Islands</a>, <a href=\"/roa/XG?o=v4tadpl1\">Unclassified</a>, <a href=\"/roa/XA?o=v4tadpl1\">World</a>",0,{v: 0.0, f:'0.0%'},0,{v: 0.0, f:'0.0%'},0,{v: 0.0, f:'0.0%'},0,0,{v: 0.0, f:'0.0%'},0,{v: 0.0, f:'0.0%'},0,{v: 0.0, f:'0.0%'},0]
+    ]);
+        var options = {
+          'allowHtml' : 'true'
+          };
+
+        var astable = new google.visualization.Table(document.getElementById('table4_div'));
+        astable.draw(table4, options);
+
+    };
+    </script>
+
+ </head>
+  <body>
+    <h1>Use of Route Object Validation for Asia Pacific code (AP)</h1>
+    <p>Display:  <b>Addresses</b> (Advertised ROA-Valid Advertised Addresses), <b>IPv4</b>, <b>Percent</b> (of Total)</p>
+<table border=0>
+<tr><td>
+                    <div id="chart_div" style="width: 1000px; height: 500px;"></div>
+<br>&nbsp;<br>&nbsp;<br>
+                    <div id="chart_ad_div" style="width: 1000px; height: 200px;"></div>
+</td><td>&nbsp;&nbsp;&nbsp;&nbsp;
+</td><td>
+<Form Action="/roa/AP">
+<input type="hidden" name="o" value="cAPl1r1v4tadpxv">
+<SELECT NAME="t">
+<OPTION>Route Objects
+<OPTION SELECTED>Address Span
+</SELECT>&nbsp;&nbsp;
+<SELECT NAME="x">
+<OPTION SELECTED>Valid
+<OPTION>Invalid
+<OPTION>Unknown
+</SELECT>&nbsp;&nbsp;
+<SELECT NAME="v">
+<OPTION SELECTED>IPv4
+<OPTION>IPv6
+<OPTION>Total
+</SELECT>&nbsp;&nbsp;
+<SELECT NAME="d">
+<OPTION>Count
+<OPTION SELECTED>Percent
+</SELECT><p>
+<br>&nbsp;<br>
+<input type="checkbox" name="l" value="0"> Hide country ASN List <br>
+<input type="checkbox" name="r" value="0"> Hide Regional Use<br>
+<input type="submit" value="Redraw">
+</form>
+<Form Action="/roa/AP">
+<input type="hidden" name="hc" value="AP">
+<input type="hidden" name="hf" value="1">
+<input type="submit" value="JSON Data Set">
+</form>
+<Form Action="/roa/AP">
+<input type="hidden" name="hc" value="AP">
+<input type="hidden" name="hf" value="2">
+<input type="submit" value="CSV Data Set">
+</form>
+<p>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></tr>
+</table>
+<pre>
+
+</pre><p>Region Map for Unclassified (990)</p>
+    <div id='Map_canvas' style="width: 640px; height: 400px; margin: 0"></div>
+<pre>
+
+
+
+
+
+
+</pre>
+<hr>
+ 
+<div id="table2_div"></div>
+<pre>
+
+</pre>
+<div id="table3_div"></div>
+<pre>
+
+</pre>
+<div id="table4_div"></div>
+<pre>
+
+</pre>
+<div id="table_div"></div>
+
+  </body>
+</html>
