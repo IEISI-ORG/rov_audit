@@ -1,0 +1,12 @@
+#!/bin/bash
+
+
+
+wget --timestamping --output-document=latest-bview.gz http://data.ris.ripe.net/rrc00/latest-bview.gz
+
+bgpdump -m latest-bview.gz | ./bgp-extractor -input /dev/stdin -output output -workers 16
+
+./cone-calculator -input output/relationships.csv -output final_as_rank.csv -top 0
+
+
+

@@ -1,5 +1,35 @@
 #!/bin/bash
 
+
+echo MAIN FETCH AND REPORT ... 
+python3 rov_no_scrape_v19.py                | aha --black | tee reports/rov_no_scrape_v19.html
+
+echo ANALYSIS
+python3 analyze_roa_signing.py              | aha --black | tee reports/analyze_roa_signing.html
+python3 analyze_herd_immunity.py            | aha --black | tee reports/analyze_herd_immunity.html
+
+echo BASIC STATS
+python3 statistics_v5.py                    | aha --black | tee reports/statistics.html
+
+echo CCTLD DEEP DIVES
+python3 analyze_country_deep_dive.py NP     | aha --black | tee reports/nepal_report.html
+python3 analyze_country_deep_dive.py BT     | aha --black | tee reports/bhutan_report.html
+python3 analyze_country_deep_dive.py BD     | aha --black | tee reports/bangladesh_report.html
+python3 analyze_country_deep_dive.py IN     | aha --black | tee reports/india_report.html
+
+python3 analyze_country_deep_dive.py AU     | aha --black | tee reports/australia_report.html
+python3 analyze_country_deep_dive.py NZ     | aha --black | tee reports/newzleand_report.html
+
+python3 analyze_country_deep_dive.py FJ     | aha --black | tee reports/fiji_report.html
+python3 analyze_country_deep_dive.py CK     | aha --black | tee reports/cookislands_report.html
+
+python3 analyze_country_deep_dive.py FR     | aha --black | tee reports/france_report.html
+python3 analyze_country_deep_dive.py DE     | aha --black | tee reports/germany_report.html
+python3 analyze_country_deep_dive.py GR     | aha --black | tee reports/greece_report.html
+
+python3 analyze_country_deep_dive.py ZA     | aha --black | tee reports/south_africa_report.html
+
+
 FILES=*.html
 
 for f in $FILES; do
