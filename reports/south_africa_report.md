@@ -6,8 +6,8 @@
     Total Networks:      653
     Total Cone Gravity:  825
     ------------------------------------------------------------
-    SECURE NETWORKS:       238 (36.4%) -> Protects 15.6% of Traffic
-    VULNERABLE NETWORKS:   362 (55.4%) -> Exposes  3.3% of Traffic
+    SECURE NETWORKS:       237 (36.3%) -> Protects 15.6% of Traffic
+    VULNERABLE NETWORKS:   363 (55.6%) -> Exposes  3.3% of Traffic
 
     ====================================================================================================
      THE ZA CORE (Top 20 Networks)
@@ -70,8 +70,7 @@
     --------------------------------------------------------------------------------
     AS9129   | 23       | 1/1    | MTN Business Kenya
     AS36937  | 4        | 1/1    | Liquid Telecommunications South Africa (Pty) Ltd
-    AS329075 | 0        | 1/1    | Transnet Limited
-    AS329016 | 0        | 2/2    | Adumo Technologies  (Pty) Ltd
+    AS329012 | 0        | 1/1    | Motus Corporation (Pty) Ltd
     AS329028 | 0        | 1/3    | Rapid Networks (Pty) Ltd
     AS329036 | 0        | 1/3    | The Expert Company (Pty) Ltd
     AS329039 | 0        | 1/3    | LINK CONNECT SERVICES (PTY) LTD
@@ -83,3 +82,4 @@
     AS329139 | 0        | 1/1    | Mthinte Communication Pty Ltd
     AS329151 | 0        | 1/2    | MR Price Group Limited
     AS329084 | 0        | 1/4    | Global Platinum Solutions (Pty) Ltd
+    AS329089 | 0        | 2/2    | Boost Networks

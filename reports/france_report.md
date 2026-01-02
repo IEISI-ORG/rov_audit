@@ -6,8 +6,8 @@
     Total Networks:      1,453
     Total Cone Gravity:  117,826
     ------------------------------------------------------------
-    SECURE NETWORKS:       647 (44.5%) -> Protects 56.3% of Traffic
-    VULNERABLE NETWORKS:   657 (45.2%) -> Exposes  0.0% of Traffic
+    SECURE NETWORKS:       646 (44.5%) -> Protects 56.3% of Traffic
+    VULNERABLE NETWORKS:   658 (45.3%) -> Exposes  0.0% of Traffic
 
     ====================================================================================================
      THE FR CORE (Top 20 Networks)
@@ -70,7 +70,6 @@
     --------------------------------------------------------------------------------
     AS52073  | 6        | 2/2    | I2SNETWORK SAS
     AS48732  | 1        | 1/1    | Martial Duboc
-    AS30741  | 0        | 1/3    | DDO ORGANISATION SAS
     AS29092  | 0        | 1/1    | NXO France SAS
     AS28708  | 0        | 1/3    | Orange S.A.
     AS29301  | 0        | 3/4    | KARAVEL SAS
@@ -78,8 +77,9 @@
     AS29246  | 0        | 1/6    | OPTILIAN SARL
     AS29513  | 0        | 2/10   | Foliateam Operateur SAS
     AS8255   | 0        | 1/2    | Euro-Information-Europeenne de Traitement de l'Inf
-    AS30839  | 0        | 1/1    | Chambre de Commerce et d'Industrie Pau Bearn
-    AS886    | 0        | 1/1    | COLLECTIVITE DE SAINT BARTHELEMY
+    AS6738   | 0        | 3/10   | DRI SAS
+    AS30741  | 0        | 1/3    | DDO ORGANISATION SAS
     AS3299   | 0        | 2/4    | Societe Generale S.A.
     AS3298   | 0        | 1/3    | Societe Generale S.A.
     AS3296   | 0        | 1/3    | Societe Generale S.A.
+    AS3295   | 0        | 2/4    | Societe Generale S.A.

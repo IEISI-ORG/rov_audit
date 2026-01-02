@@ -6,8 +6,8 @@
     Total Networks:      2,467
     Total Cone Gravity:  42,152
     ------------------------------------------------------------
-    SECURE NETWORKS:      1074 (43.5%) -> Protects 96.4% of Traffic
-    VULNERABLE NETWORKS:  1138 (46.1%) -> Exposes  0.0% of Traffic
+    SECURE NETWORKS:      1073 (43.5%) -> Protects 96.4% of Traffic
+    VULNERABLE NETWORKS:  1139 (46.2%) -> Exposes  0.0% of Traffic
 
     ====================================================================================================
      THE DE CORE (Top 20 Networks)
@@ -70,16 +70,16 @@
     --------------------------------------------------------------------------------
     AS200461 | 5        | 1/1    | Ian David Klemm
     AS50873  | 3        | 1/1    | David Doepelheuer
+    AS29515  | 0        | 1/2    | Hessische Zentrale fuer Datenverarbeitung
     AS29507  | 0        | 1/2    | WHEELS Logistics GmbH & Co. KG
     AS29510  | 0        | 1/2    | internett GmbH
     AS29236  | 0        | 2/2    | Schweickert GmbH
     AS29239  | 0        | 1/2    | I-NetPartner GmbH
     AS29317  | 0        | 1/1    | Sascha Lenz
     AS29298  | 0        | 2/5    | SUSE Software Solutions Germany GmbH
-    AS29515  | 0        | 1/2    | Hessische Zentrale fuer Datenverarbeitung
-    AS29627  | 0        | 1/2    | Saechsische Aufbaubank - Foerderbank
+    AS29624  | 0        | 8/17   | Krick Management GmbH trading as iWelt GmbH + Co. 
+    AS28979  | 0        | 8/15   | dm-drogerie markt GmbH + Co. KG
     AS29658  | 0        | 1/1    | HeureCom GmbH
     AS29682  | 0        | 1/2    | Landeskreditbank Baden-Wuerttemberg - Foerderbank
     AS28753  | 0        | 2/6    | Leaseweb Deutschland GmbH
     AS28756  | 0        | 1/6    | European Patent Organisation
-    AS28693  | 0        | 8/17   | KHS GmbH

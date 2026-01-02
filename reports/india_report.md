@@ -6,8 +6,8 @@
     Total Networks:      2,849
     Total Cone Gravity:  14,386
     ------------------------------------------------------------
-    SECURE NETWORKS:       223 ( 7.8%) -> Protects 77.4% of Traffic
-    VULNERABLE NETWORKS:  2368 (83.1%) -> Exposes  7.3% of Traffic
+    SECURE NETWORKS:       222 ( 7.8%) -> Protects 77.4% of Traffic
+    VULNERABLE NETWORKS:  2369 (83.2%) -> Exposes  7.3% of Traffic
 
     ====================================================================================================
      THE IN CORE (Top 20 Networks)
@@ -73,12 +73,12 @@
     AS17762  | 116      | 2/2    | Tata Teleservices Maharashtra Ltd
     AS45117  | 115      | 2/2    | Ishan's Network
     AS135718 | 44       | 1/1    | DISHAWAVES INFONET PVT. LTD
-    AS133676 | 18       | 2/2    | Precious netcom pvt ltd
     AS133694 | 18       | 2/2    | EMAX GLOBAL MEDIA PVT. LTD
+    AS133676 | 18       | 2/2    | Precious netcom pvt ltd
     AS136284 | 17       | 2/2    | Paradise Telecom Pvt Ltd
     AS151732 | 14       | 2/2    | ONREMOTE TELECOM PRIVATE LIMITED
-    AS133278 | 12       | 2/2    | Dehradun Enet Solutions Private Ltd
     AS136634 | 12       | 1/1    | Navkar Netsol Private Ltd
+    AS133278 | 12       | 2/2    | Dehradun Enet Solutions Private Ltd
     AS134041 | 11       | 1/1    | Ncore Creative Technologies Pvt.Ltd.
     AS132420 | 9        | 1/1    | 282, Sector 19
     AS45194  | 7        | 1/1    | Syscon Infoway Pvt. Ltd.
