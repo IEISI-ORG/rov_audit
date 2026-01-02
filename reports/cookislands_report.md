@@ -14,8 +14,8 @@
     ====================================================================================================
     ASN      | Verdict                        | Cone     | APNIC% | Name
     ----------------------------------------------------------------------------------------------------
-    AS10131  | STUB: VULNERABLE               | 0        | 0%     | Telecom Cook Islands
     AS152093 | STUB: VULNERABLE               | 0        | -      | VakaNet Limited
+    AS10131  | STUB: VULNERABLE               | 0        | 0%     | Telecom Cook Islands
 
     ====================================================================================================
      TRANSIT SUPPLY CHAIN (Who provides to CK?)
@@ -24,15 +24,15 @@
         - Analyzed connectivity for 2 networks.
     Rank | Upstream | Dependents | Global Status                  | Name
     ----------------------------------------------------------------------------------------------------
-    #1   | AS45177  | 1          | SECURE (Active Local ROV)      | Devoli
-    #2   | AS12684  | 1          | PARTIAL (Mixed Feeds)          | SES ASTRA S.A.
-    #3   | AS174    | 1          | CORE: PROTECTED                | Cogent Communications, LLC
-    #4   | AS9507   | 1          | PARTIAL (Mixed Feeds)          | NextHop Pty Ltd
+    #1   | AS9507   | 1          | PARTIAL (Mixed Feeds)          | NextHop Pty Ltd
+    #2   | AS45177  | 1          | SECURE (Active Local ROV)      | Devoli
+    #3   | AS12684  | 1          | PARTIAL (Mixed Feeds)          | SES ASTRA S.A.
+    #4   | AS174    | 1          | CORE: PROTECTED                | Cogent Communications, LLC
 
     ====================================================================================================
      TOP VULNERABLE CK NETWORKS
     ====================================================================================================
     ASN      | Cone     | Feeds  | Name
     --------------------------------------------------------------------------------
-    AS10131  | 0        | 3/6    | Telecom Cook Islands
     AS152093 | 0        | 2/3    | VakaNet Limited
+    AS10131  | 0        | 3/6    | Telecom Cook Islands

@@ -3,11 +3,11 @@
     ====================================================================================================
      NATIONAL ROUTING SECURITY: GR
     ====================================================================================================
-    Total Networks:      224
+    Total Networks:      256
     Total Cone Gravity:  515
     ------------------------------------------------------------
-    SECURE NETWORKS:       106 (47.3%) -> Protects 83.9% of Traffic
-    VULNERABLE NETWORKS:   106 (47.3%) -> Exposes  0.0% of Traffic
+    SECURE NETWORKS:       106 (41.4%) -> Protects 83.9% of Traffic
+    VULNERABLE NETWORKS:   107 (41.8%) -> Exposes  0.0% of Traffic
 
     ====================================================================================================
      THE GR CORE (Top 20 Networks)
@@ -26,27 +26,27 @@
     AS206735 | PARTIAL (Mixed Feeds)          | 13       | 0%     | Novelcomm LP
     AS216285 | PARTIAL (Mixed Feeds)          | 3        | -      | MYIP NETWORKS G.P.
     AS196945 | PARTIAL (Mixed Feeds)          | 1        | -      | Microbase PC
+    AS8522   | PARTIAL (Mixed Feeds)          | 1        | -      | Foundation of Research and Technology He
     AS200736 | PARTIAL (Mixed Feeds)          | 1        | 0%     | MEDIANET INVEST AE
+    AS56457  | SECURE (Full Coverage)         | 1        | -      | FASTPATH IKE
     AS206652 | SECURE (Full Coverage)         | 1        | -      | Ioannis Roditis trading as Greekstream N
     AS4601   | PARTIAL (Mixed Feeds)          | 1        | -      | Antonios A. Chariton
+    AS50919  | PARTIAL (Mixed Feeds)          | 1        | -      | INTERWORKS Single Member S.A.
     AS51505  | PARTIAL (Mixed Feeds)          | 1        | 0%     | Dimosia Epicheirisi Ilektrismou Anonymi 
     AS35506  | SECURE (Full Coverage)         | 1        | 91%    | INFORMATION SOCIETY S.A.
-    AS50919  | PARTIAL (Mixed Feeds)          | 1        | -      | INTERWORKS Single Member S.A.
-    AS56457  | SECURE (Full Coverage)         | 1        | -      | FASTPATH IKE
-    AS8522   | PARTIAL (Mixed Feeds)          | 1        | -      | Foundation of Research and Technology He
 
     ====================================================================================================
      TRANSIT SUPPLY CHAIN (Who provides to GR?)
     ====================================================================================================
-    [*] Analyzing Upstream Supply Chain for 224 networks...
-        - Analyzed connectivity for 224 networks.
+    [*] Analyzing Upstream Supply Chain for 256 networks...
+        - Analyzed connectivity for 256 networks.
     Rank | Upstream | Dependents | Global Status                  | Name
     ----------------------------------------------------------------------------------------------------
     #1   | AS1241   | 30         | SECURE (Active Local ROV)      | Nova Telecommunications & Media Single M
     #2   | AS6799   | 30         | Unverified (Transit/Peer?)     | Ote SA (Hellenic Telecommunications Orga
     #3   | AS174    | 28         | CORE: PROTECTED                | Cogent Communications, LLC
     #4   | AS5408   | 28         | SECURE (Full Coverage)         | National Infrastructures for Research an
-    #5   | AS3329   | 23         | SECURE (Full Coverage)         | Vodafone Greece
+    #5   | AS3329   | 24         | SECURE (Full Coverage)         | Vodafone Greece
     #6   | AS198477 | 22         | SECURE (Full Coverage)         | TI SPARKLE GREECE SA
     #7   | AS199081 | 21         | SECURE (Active Local ROV)      | Lancom Ltd.
     #8   | AS25472  | 20         | PARTIAL (Mixed Feeds)          | Nova Telecommunications & Media Single M
@@ -68,18 +68,18 @@
     ====================================================================================================
     ASN      | Cone     | Feeds  | Name
     --------------------------------------------------------------------------------
-    AS8396   | 0        | 1/2    | Technical Chamber of Greece
-    AS8499   | 0        | 2/3    | Space Hellas S.A.
-    AS9128   | 0        | 1/1    | Alpha Bank SA
-    AS6674   | 0        | 2/3    | NATIONAL BANK OF GREECE S.A.
-    AS12713  | 0        | 16/31  | Ote SA (Hellenic Telecommunications Organisation)
-    AS13153  | 0        | 1/1    | SingularLogic S.A.
-    AS15430  | 0        | 1/3    | European Dynamics S.A.
-    AS15439  | 0        | 1/1    | Eurobank Ergasias Services and Holdings S.A.
-    AS15617  | 0        | 1/1    | Nova Telecommunications & Media Single Member S.A
-    AS15853  | 0        | 1/1    | NBG Securities SA
-    AS16013  | 0        | 1/2    | Unisystems SA
-    AS16200  | 0        | 1/1    | GeniusMind S.A.
-    AS20506  | 0        | 1/1    | SingularLogic S.A.
-    AS28953  | 0        | 1/1    | Piraeus Financial Holdings SA
-    AS28969  | 0        | 1/2    | AB VASSILOPOULOS S.A.
+    AS199246 | 0        | 1/1    | ENARTIA Single Member S.A.
+    AS197389 | 0        | 1/3    | CBS-LAN S.A.
+    AS197580 | 0        | 1/4    | CONNECTICORE TELECOMMUNICATIONS INFORMATION TECHNO
+    AS198188 | 0        | 1/2    | Ventzislav Nikolov Trading as MTEL
+    AS197899 | 0        | 6/14   | LAN SINGLE MEMBER P.C.
+    AS204399 | 0        | 1/1    | Stavros Charos
+    AS206697 | 0        | 1/2    | Eurolife ERB General Insurance SA
+    AS207540 | 0        | 2/3    | Cloud Concept S.A.
+    AS205904 | 0        | 1/1    | VOICELAND SA
+    AS206456 | 0        | 2/4    | Citiwave Systems Ltd.
+    AS206529 | 0        | 1/3    | Metadosis SA
+    AS201494 | 0        | 4/10   | MODULUS A.E.
+    AS201293 | 0        | 2/2    | OPAP S.A
+    AS199375 | 0        | 1/3    | Service 800 Teleperformance Single Member S.A.
+    AS200314 | 0        | 2/2    | Algosystems S.A.

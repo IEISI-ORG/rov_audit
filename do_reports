@@ -2,13 +2,14 @@
 
 
 echo MAIN FETCH AND REPORT ... 
-python3 rov_no_scrape_v19.py                | aha --black | tee reports/rov_no_scrape_v19.html
+python3 rov_no_scrape_v20.py                | aha --black | tee reports/rov_no_scrape_v20.html
 
 echo ANALYSIS
 python3 analyze_roa_signing.py              | aha --black | tee reports/analyze_roa_signing.html
 python3 analyze_herd_immunity.py            | aha --black | tee reports/analyze_herd_immunity.html
 python3 analyze_roa_strategy_v2.py          | aha --black | tee reports/analyze_roa_strategy.html
 python3 analyze_aspa_realistic_v4.py        | aha --black | tee reports/analyze_aspa_realistic.html
+python3 analyze_rov_quadrants_v3.py         | aha --black | tee reports/analyze_rov_quadrants.html
 
 echo BASIC STATS
 python3 statistics_v5.py                    | aha --black | tee reports/statistics.html
@@ -21,6 +22,9 @@ python3 analyze_country_deep_dive.py IN     | aha --black | tee reports/india_re
 
 python3 analyze_country_deep_dive.py AU     | aha --black | tee reports/australia_report.html
 python3 analyze_country_deep_dive.py NZ     | aha --black | tee reports/newzealand_report.html
+
+python3 analyze_country_deep_dive.py CN     | aha --black | tee reports/china_report.html
+python3 analyze_country_deep_dive.py JP     | aha --black | tee reports/japan_report.html
 
 python3 analyze_country_deep_dive.py FJ     | aha --black | tee reports/fiji_report.html
 python3 analyze_country_deep_dive.py CK     | aha --black | tee reports/cookislands_report.html

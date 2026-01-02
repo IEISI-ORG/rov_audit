@@ -10,7 +10,7 @@ from io import StringIO
 # --- CONFIGURATION ---
 HEADERS = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0 Safari/537.36'}
 DIR_JSON = "data/parsed"
-FILE_AUDIT = "rov_audit_v19_final.csv"
+FILE_AUDIT = "rov_audit_v20_final.csv"
 
 # URLs
 URL_CDN_TAGS = "https://bgp.tools/tags/cdn.csv"

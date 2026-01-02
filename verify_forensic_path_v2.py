@@ -14,7 +14,7 @@ from ripe.atlas.cousteau import (
 # --- CONFIGURATION ---
 SECRETS_FILE = "secrets.yaml"
 DIR_ATLAS = "data/atlas"
-FILE_AUDIT = "rov_audit_v17_final.csv"
+FILE_AUDIT = "rov_audit_v20_final.csv"
 RIPE_STAT_URL = "https://stat.ripe.net/data/network-info/data.json?resource="
 
 DOMAIN_VALID   = "valid.rpki.isbgpsafeyet.com"

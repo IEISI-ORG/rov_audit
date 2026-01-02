@@ -1,13 +1,13 @@
     [*] Loading Topology & Cleaning Noise...
         - Fetching CDN List... OK (108 Networks)
-        - Modeled:  117,387 'Regular' Networks
+        - Modeled:  117,508 'Regular' Networks
 
     ==========================================================================================
      1. ASPA READINESS (Simplicity vs Complexity)
     ==========================================================================================
-    Total Networks: 117,387
+    Total Networks: 117,508
     ------------------------------------------------------------
-      - Trivial (1-2 Providers):   64,773 (55.2%)
+      - Trivial (1-2 Providers):   64,773 (55.1%)
       - Moderate (3-5 Providers):  13,647 (11.6%)
       - Complex (>5 Providers):     2,234 ( 1.9%) -> Target for Engineering Support
 
@@ -80,7 +80,7 @@
     ASN      | Providers  | Cone     | Name
     ------------------------------------------------------------------------------------------
     AS3573   | 96         | 118      | Accenture LLP
-    AS262663 | 93         | 188      | METROFLEX TELECOMUNICACOES LTDA
+    AS262663 | 93         | 190      | METROFLEX TELECOMUNICACOES LTDA
     AS21433  | 80         | 64       | Accenture UK Limited
     AS13150  | 48         | 21       | CATO NETWORKS LTD
     AS55256  | 48         | 14       | Netskope Inc
@@ -91,8 +91,8 @@
     AS23154  | 37         | 5        | Sanmina-SCI Corporation
     AS31898  | 36         | 45       | Oracle Cloud
     AS209847 | 33         | 14       | WorkTitans B.V.
-    AS52468  | 32         | 4616     | UFINET PANAMA S.A.
-    AS14593  | 32         | 27       | SpaceX Starlink
+    AS52468  | 32         | 4483     | UFINET PANAMA S.A.
+    AS14593  | 32         | 29       | SpaceX Starlink
     AS136258 | 32         | 10       | BrainStorm Network, Inc
     AS72     | 32         | 1        | Schlumberger Limited
     AS16839  | 32         | 0        | SERVICENOW, INC.
@@ -100,13 +100,13 @@
     AS53153  | 30         | 10       | CINTE Telecom Comercio e Servicos Ltda.
     AS262727 | 30         | 10       | AtualNet Provedor de Internet Ltda
     AS30012  | 30         | 9        | Universal Music Group, INC.
-    AS45102  | 30         | 2        | Alibaba (US) Technology Co., Ltd.
+    AS45102  | 30         | 1        | Alibaba (US) Technology Co., Ltd.
     AS35928  | 30         | 0        | BECKMAN COULTER, INC.
-    AS20473  | 29         | 10227    | The Constant Company, LLC
-    AS9498   | 29         | 7841     | Bharti Airtel Ltd.
+    AS20473  | 29         | 10169    | The Constant Company, LLC
+    AS9498   | 29         | 7921     | Bharti Airtel Ltd.
     AS15695  | 29         | 21       | Expereo International BV
     AS203391 | 29         | 0        | Cloud DNS Ltd
-    AS9002   | 28         | 44765    | RETN Limited
+    AS9002   | 28         | 44394    | RETN Limited
     AS40934  | 28         | 7        | Fortinet Inc.
     AS272218 | 28         | 3        | Luiz Henrique Rocha Maciel
     AS12222  | 28         | 1        | Akamai Technologies, Inc.
@@ -115,11 +115,11 @@
     AS10798  | 27         | 15       | The Standard Bank of South Africa (Proprietary) Li
     AS212085 | 27         | 4        | Alexander Bruegmann
     AS54253  | 27         | 1        | Oracle Corporation
-    AS23764  | 26         | 2295     | China Telecom Global
+    AS23764  | 26         | 2319     | China Telecom Global
     AS56910  | 26         | 18       | Digital Realty Hellas Single Member S.A
     AS25818  | 26         | 8        | cmcnetworks
     AS36224  | 26         | 4        | HCL AMERICA INC
-    AS30844  | 25         | 565      | Liquid Intelligent Technologies 
+    AS30844  | 25         | 564      | Liquid Intelligent Technologies 
     AS398465 | 25         | 28       | Rackdog LLC
     AS28590  | 25         | 10       | Directnet Prestacao de Servicos Ltda.
     AS54119  | 25         | 2        | WhiteSky Communications, LLC.
