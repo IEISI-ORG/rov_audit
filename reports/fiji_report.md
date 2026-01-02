@@ -17,15 +17,15 @@
     AS38442  | PARTIAL (Mixed Feeds)          | 5        | 0%     | Vodafone Fiji Limited
     AS4638   | Unverified (Transit/Peer?)     | 2        | 88%    | Telecom Fiji Limited
     AS45355  | SECURE (Full Coverage)         | 1        | 0%     | Digicel Fiji Limited
-    AS141470 | STUB: VULNERABLE               | 0        | -      | ITC Services
-    AS137890 | STUB: VULNERABLE               | 0        | -      | Walesi Ltd
-    AS136921 | STUB: SECURE (Full Coverage)   | 0        | -      | Fiji National University
-    AS149429 | STUB: VULNERABLE               | 0        | -      | Reserve Bank of Fiji
-    AS24390  | STUB: SECURE (Full Coverage)   | 0        | -      | The University of the South Pacific
     AS9241   | STUB: VULNERABLE               | 0        | -      | Fiji International Telecomunications Ltd
-    AS135647 | NOT ROUTED (Registry)          | 0        | -      | Airports Fiji Limited
-    AS132248 | STUB: VULNERABLE               | 0        | -      | Reserve Bank of Fiji
+    AS24390  | STUB: SECURE (Full Coverage)   | 0        | -      | The University of the South Pacific
     AS45349  | STUB: VULNERABLE               | 0        | -      | Telecom Fiji Ltd
+    AS132248 | STUB: VULNERABLE               | 0        | -      | Reserve Bank of Fiji
+    AS135647 | NOT ROUTED (Registry)          | 0        | -      | Airports Fiji Limited
+    AS136921 | STUB: SECURE (Full Coverage)   | 0        | -      | Fiji National University
+    AS137890 | STUB: VULNERABLE               | 0        | -      | Walesi Ltd
+    AS141470 | STUB: VULNERABLE               | 0        | -      | ITC Services
+    AS149429 | STUB: VULNERABLE               | 0        | -      | Reserve Bank of Fiji
 
     ====================================================================================================
      TRANSIT SUPPLY CHAIN (Who provides to FJ?)
@@ -39,9 +39,9 @@
     #3   | AS4637   | 3          | CORE: PROTECTED                | Telstra Global
     #4   | AS4638   | 3          | Unverified (Transit/Peer?)     | Telecom Fiji Limited
     #5   | AS7474   | 2          | SECURE (Full Coverage)         | SingTel Optus Pty Ltd
-    #6   | AS38442  | 2          | PARTIAL (Mixed Feeds)          | Vodafone Fiji Limited
+    #6   | AS4648   | 2          | PARTIAL (Mixed Feeds)          | Spark New Zealand
     #7   | AS7575   | 2          | SECURE (Full Coverage)         | Australian Academic and Research Network
-    #8   | AS4648   | 2          | PARTIAL (Mixed Feeds)          | Spark New Zealand
+    #8   | AS38442  | 2          | PARTIAL (Mixed Feeds)          | Vodafone Fiji Limited
     #9   | AS2914   | 1          | CORE: PROTECTED                | NTT America, Inc.
     #10  | AS7473   | 1          | SECURE (Active Local ROV)      | Singapore Telecommunications Ltd
     #11  | AS45349  | 1          | STUB: VULNERABLE               | Telecom Fiji Ltd
@@ -53,9 +53,9 @@
     ====================================================================================================
     ASN      | Cone     | Feeds  | Name
     --------------------------------------------------------------------------------
-    AS141470 | 0        | 1/1    | ITC Services
-    AS137890 | 0        | 1/1    | Walesi Ltd
-    AS149429 | 0        | 1/1    | Reserve Bank of Fiji
     AS9241   | 0        | 1/3    | Fiji International Telecomunications Ltd
-    AS132248 | 0        | 1/1    | Reserve Bank of Fiji
     AS45349  | 0        | 3/7    | Telecom Fiji Ltd
+    AS132248 | 0        | 1/1    | Reserve Bank of Fiji
+    AS137890 | 0        | 1/1    | Walesi Ltd
+    AS141470 | 0        | 1/1    | ITC Services
+    AS149429 | 0        | 1/1    | Reserve Bank of Fiji

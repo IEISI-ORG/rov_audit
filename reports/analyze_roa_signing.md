@@ -4,10 +4,10 @@
     ================================================================================
     GLOBAL ROA SIGNING REPORT
     ================================================================================
-    Total Networks: 119,863
-      - Fully Signed (>90%):  38,503  (32.1%)
-      - Partially Signed:      6,922  (5.8%)
-      - Totally Unsigned:     74,438  (62.1%)
+    Total Networks: 119,849
+      - Fully Signed (>90%):  38,497  (32.1%)
+      - Partially Signed:      7,787  (6.5%)
+      - Totally Unsigned:     73,565  (61.4%)
 
     ================================================================================
     THE 'GLASS HOUSES' (Secure Provider, but Unsigned Routes)
@@ -47,11 +47,11 @@
     AS24323  | BD | 36       | 2/2    | aamra networks limited
     AS25184  | IR | 30       | 1/1    | Afranet
     AS4007   | NP | 28       | 1/1    | Subisu Cablenet (Pvt) Ltd, Baluwatar, Ka
-    AS23956  | BD | 26       | 3/3    | AmberIT Limited
     AS9230   | BD | 26       | 1/1    | Bangladesh Online Ltd.
+    AS23956  | BD | 26       | 3/3    | AmberIT Limited
     AS11556  | PA | 24       | 1/1    | Cable & Wireless Panama
-    AS9129   | ZA | 23       | 1/1    | MTN Business Kenya
     AS141898 | ID | 23       | 5/5    | PT Milenial Inti Telekomunikasi
+    AS9129   | ZA | 23       | 1/1    | MTN Business Kenya
 
     ================================================================================
     THE WILD WEST (Vulnerable Upstreams + 0% Signed)
@@ -59,8 +59,8 @@
     --------------------------------------------------------------------------------
     AS33132  | US | 100      | Crown Castle Fiber LLC
     AS35708  | XX | 93       | 4b42 UG
-    AS38272  | CN | 40       | China Education and Research Network (CERNET)
     AS9425   | CN | 40       | Future Internet Technology Infrastructure (FI
+    AS38272  | CN | 40       | China Education and Research Network (CERNET)
     AS43531  | XX | 35       | BSO Network Solutions SAS
     AS396926 | US | 22       | C Spire Fiber
     AS19024  | US | 18       | Unitas Global

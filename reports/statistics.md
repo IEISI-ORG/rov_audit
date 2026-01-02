@@ -5,13 +5,13 @@
     ===============================================================================================
     VERDICT                             |     ASNs |  % ASNs |   Avg Cone | Impact%
     -----------------------------------------------------------------------------------------------
-    STUB: VULNERABLE                    |   55,225 |   46.1% |        0.0 |    0.0%
-    NOT ROUTED (Registry)               |   36,823 |   30.7% |        0.0 |    0.0%
-    STUB: SECURE (Full Coverage)        |   20,287 |   16.9% |        0.0 |    0.0%
-    PARTIAL (Mixed Feeds)               |    4,019 |    3.4% |       23.0 |    6.1%
-    SECURE (Full Coverage)              |    1,181 |    1.0% |      661.7 |   51.8%
-    STUB: SECURE (Active ROV)           |      960 |    0.8% |        0.0 |    0.0%
-    SECURE (Active Local ROV)           |      649 |    0.5% |       76.8 |    3.3%
+    STUB: VULNERABLE                    |   55,241 |   46.1% |        0.0 |    0.0%
+    NOT ROUTED (Registry)               |   36,809 |   30.7% |        0.0 |    0.0%
+    STUB: SECURE (Full Coverage)        |   20,267 |   16.9% |        0.0 |    0.0%
+    PARTIAL (Mixed Feeds)               |    4,023 |    3.4% |       23.0 |    6.1%
+    SECURE (Full Coverage)              |    1,180 |    1.0% |      662.2 |   51.8%
+    STUB: SECURE (Active ROV)           |      964 |    0.8% |        0.0 |    0.0%
+    SECURE (Active Local ROV)           |      646 |    0.5% |       77.1 |    3.3%
     VULNERABLE (No Coverage)            |      502 |    0.4% |        7.7 |    0.3%
     Unverified (Transit/Peer?)          |      190 |    0.2% |      956.4 |   12.1%
     CORE: PROTECTED                     |       22 |    0.0% |    18080.4 |   26.4%
@@ -20,11 +20,11 @@
     ===============================================================================================
      SUMMARY
     ===============================================================================================
-    Total Networks in DB: 119,863
-    Active / Routed:      119,863
+    Total Networks in DB: 119,849
+    Active / Routed:      119,849
     ------------------------------------------------------------
-    SECURE:       23,104  (19.3% of Active)
-    PARTIAL:       4,019  (3.4% of Active)
-    VULNERABLE:   55,732  (46.5% of Active)
+    SECURE:       23,084  (19.3% of Active)
+    PARTIAL:       4,023  (3.4% of Active)
+    VULNERABLE:   55,748  (46.5% of Active)
 
     [!] Note: 'atlas_result' column missing. Atlas stats skipped.

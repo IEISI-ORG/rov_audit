@@ -3,11 +3,11 @@
     ====================================================================================================
      NATIONAL ROUTING SECURITY: IN
     ====================================================================================================
-    Total Networks:      2,849
+    Total Networks:      2,850
     Total Cone Gravity:  14,386
     ------------------------------------------------------------
-    SECURE NETWORKS:       222 ( 7.8%) -> Protects 77.4% of Traffic
-    VULNERABLE NETWORKS:  2369 (83.2%) -> Exposes  7.3% of Traffic
+    SECURE NETWORKS:       224 ( 7.9%) -> Protects 77.4% of Traffic
+    VULNERABLE NETWORKS:  2369 (83.1%) -> Exposes  7.3% of Traffic
 
     ====================================================================================================
      THE IN CORE (Top 20 Networks)
@@ -38,14 +38,14 @@
     ====================================================================================================
      TRANSIT SUPPLY CHAIN (Who provides to IN?)
     ====================================================================================================
-    [*] Analyzing Upstream Supply Chain for 2849 networks...
-        - Analyzed connectivity for 2848 networks.
+    [*] Analyzing Upstream Supply Chain for 2850 networks...
+        - Analyzed connectivity for 2850 networks.
     Rank | Upstream | Dependents | Global Status                  | Name
     ----------------------------------------------------------------------------------------------------
     #1   | AS9498   | 679        | SECURE (Full Coverage)         | Bharti Airtel Ltd.
     #2   | AS4755   | 558        | SECURE (Full Coverage)         | TATA Communications (formerly VSNL)
-    #3   | AS45820  | 184        | VULNERABLE (No Coverage)       | Tata Teleservices ISP
-    #4   | AS9730   | 170        | VULNERABLE (No Coverage)       | Bharti Telesonic Ltd
+    #3   | AS45820  | 185        | VULNERABLE (No Coverage)       | Tata Teleservices ISP
+    #4   | AS9730   | 171        | VULNERABLE (No Coverage)       | Bharti Telesonic Ltd
     #5   | AS9583   | 166        | PARTIAL (Mixed Feeds)          | Sify Limited
     #6   | AS55410  | 155        | SECURE (Active Local ROV)      | Vodafone Idea Ltd
     #7   | AS55836  | 143        | SECURE (Full Coverage)         | Reliance Jio Infocomm Limited
@@ -81,5 +81,5 @@
     AS133278 | 12       | 2/2    | Dehradun Enet Solutions Private Ltd
     AS134041 | 11       | 1/1    | Ncore Creative Technologies Pvt.Ltd.
     AS132420 | 9        | 1/1    | 282, Sector 19
-    AS45194  | 7        | 1/1    | Syscon Infoway Pvt. Ltd.
     AS134316 | 7        | 2/2    | IAXN Telecom Pvt. Ltd.
+    AS45194  | 7        | 1/1    | Syscon Infoway Pvt. Ltd.

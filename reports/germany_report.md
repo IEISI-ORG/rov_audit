@@ -3,11 +3,11 @@
     ====================================================================================================
      NATIONAL ROUTING SECURITY: DE
     ====================================================================================================
-    Total Networks:      2,467
+    Total Networks:      2,468
     Total Cone Gravity:  42,152
     ------------------------------------------------------------
-    SECURE NETWORKS:      1073 (43.5%) -> Protects 96.4% of Traffic
-    VULNERABLE NETWORKS:  1139 (46.2%) -> Exposes  0.0% of Traffic
+    SECURE NETWORKS:      1074 (43.5%) -> Protects 96.4% of Traffic
+    VULNERABLE NETWORKS:  1138 (46.1%) -> Exposes  0.0% of Traffic
 
     ====================================================================================================
      THE DE CORE (Top 20 Networks)
@@ -38,8 +38,8 @@
     ====================================================================================================
      TRANSIT SUPPLY CHAIN (Who provides to DE?)
     ====================================================================================================
-    [*] Analyzing Upstream Supply Chain for 2467 networks...
-        - Analyzed connectivity for 2466 networks.
+    [*] Analyzing Upstream Supply Chain for 2468 networks...
+        - Analyzed connectivity for 2468 networks.
     Rank | Upstream | Dependents | Global Status                  | Name
     ----------------------------------------------------------------------------------------------------
     #1   | AS3320   | 503        | CORE: PROTECTED                | Deutsche Telekom AG
@@ -70,16 +70,16 @@
     --------------------------------------------------------------------------------
     AS200461 | 5        | 1/1    | Ian David Klemm
     AS50873  | 3        | 1/1    | David Doepelheuer
-    AS29515  | 0        | 1/2    | Hessische Zentrale fuer Datenverarbeitung
-    AS29507  | 0        | 1/2    | WHEELS Logistics GmbH & Co. KG
-    AS29510  | 0        | 1/2    | internett GmbH
-    AS29236  | 0        | 2/2    | Schweickert GmbH
-    AS29239  | 0        | 1/2    | I-NetPartner GmbH
-    AS29317  | 0        | 1/1    | Sascha Lenz
-    AS29298  | 0        | 2/5    | SUSE Software Solutions Germany GmbH
-    AS29624  | 0        | 8/17   | Krick Management GmbH trading as iWelt GmbH + Co. 
-    AS28979  | 0        | 8/15   | dm-drogerie markt GmbH + Co. KG
-    AS29658  | 0        | 1/1    | HeureCom GmbH
-    AS29682  | 0        | 1/2    | Landeskreditbank Baden-Wuerttemberg - Foerderbank
-    AS28753  | 0        | 2/6    | Leaseweb Deutschland GmbH
-    AS28756  | 0        | 1/6    | European Patent Organisation
+    AS206303 | 0        | 2/2    | IT Heinrich GmbH
+    AS206313 | 0        | 3/5    | Freifunk Nordwest e. V.
+    AS206293 | 0        | 1/1    | proIO GmbH
+    AS206272 | 0        | 1/2    | Bluvisio GmbH
+    AS206285 | 0        | 1/1    | GERRY WEBER International AG
+    AS206240 | 0        | 2/2    | pdv-systeme Sachsen GmbH
+    AS206341 | 0        | 1/2    | Stadt Dortmund
+    AS206149 | 0        | 2/2    | R+V Allgemeine Versicherung Aktiengesellschaft
+    AS206141 | 0        | 10/20  | Duisburger Versorgungs- und Verkehrsgesellschaft m
+    AS206028 | 0        | 1/1    | Datenreisen UG
+    AS205969 | 0        | 1/2    | Peter Hessler
+    AS205948 | 0        | 2/2    | creoline GmbH
+    AS205931 | 0        | 1/1    | Guenther Direct Services GmbH

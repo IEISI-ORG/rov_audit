@@ -25,15 +25,15 @@
     AS199081 | SECURE (Active Local ROV)      | 17       | 100%   | Lancom Ltd.
     AS206735 | PARTIAL (Mixed Feeds)          | 13       | 0%     | Novelcomm LP
     AS216285 | PARTIAL (Mixed Feeds)          | 3        | -      | MYIP NETWORKS G.P.
-    AS56457  | SECURE (Full Coverage)         | 1        | -      | FASTPATH IKE
     AS196945 | PARTIAL (Mixed Feeds)          | 1        | -      | Microbase PC
-    AS8522   | PARTIAL (Mixed Feeds)          | 1        | -      | Foundation of Research and Technology He
     AS200736 | PARTIAL (Mixed Feeds)          | 1        | 0%     | MEDIANET INVEST AE
-    AS50919  | PARTIAL (Mixed Feeds)          | 1        | -      | INTERWORKS Single Member S.A.
-    AS35506  | SECURE (Full Coverage)         | 1        | 91%    | INFORMATION SOCIETY S.A.
     AS206652 | SECURE (Full Coverage)         | 1        | -      | Ioannis Roditis trading as Greekstream N
     AS4601   | PARTIAL (Mixed Feeds)          | 1        | -      | Antonios A. Chariton
     AS51505  | PARTIAL (Mixed Feeds)          | 1        | 0%     | Dimosia Epicheirisi Ilektrismou Anonymi 
+    AS35506  | SECURE (Full Coverage)         | 1        | 91%    | INFORMATION SOCIETY S.A.
+    AS50919  | PARTIAL (Mixed Feeds)          | 1        | -      | INTERWORKS Single Member S.A.
+    AS56457  | SECURE (Full Coverage)         | 1        | -      | FASTPATH IKE
+    AS8522   | PARTIAL (Mixed Feeds)          | 1        | -      | Foundation of Research and Technology He
 
     ====================================================================================================
      TRANSIT SUPPLY CHAIN (Who provides to GR?)
@@ -68,18 +68,18 @@
     ====================================================================================================
     ASN      | Cone     | Feeds  | Name
     --------------------------------------------------------------------------------
-    AS199246 | 0        | 1/1    | ENARTIA Single Member S.A.
-    AS198188 | 0        | 1/2    | Ventzislav Nikolov Trading as MTEL
-    AS197389 | 0        | 1/3    | CBS-LAN S.A.
-    AS197899 | 0        | 6/14   | LAN SINGLE MEMBER P.C.
-    AS197580 | 0        | 1/4    | CONNECTICORE TELECOMMUNICATIONS INFORMATION TECHNO
-    AS204399 | 0        | 1/1    | Stavros Charos
-    AS206697 | 0        | 1/2    | Eurolife ERB General Insurance SA
-    AS207540 | 0        | 2/3    | Cloud Concept S.A.
-    AS205904 | 0        | 1/1    | VOICELAND SA
-    AS206456 | 0        | 2/4    | Citiwave Systems Ltd.
-    AS206529 | 0        | 1/3    | Metadosis SA
-    AS201494 | 0        | 4/10   | MODULUS A.E.
-    AS201293 | 0        | 2/2    | OPAP S.A
-    AS199375 | 0        | 1/3    | Service 800 Teleperformance Single Member S.A.
-    AS200314 | 0        | 2/2    | Algosystems S.A.
+    AS8396   | 0        | 1/2    | Technical Chamber of Greece
+    AS8499   | 0        | 2/3    | Space Hellas S.A.
+    AS9128   | 0        | 1/1    | Alpha Bank SA
+    AS6674   | 0        | 2/3    | NATIONAL BANK OF GREECE S.A.
+    AS12713  | 0        | 16/31  | Ote SA (Hellenic Telecommunications Organisation)
+    AS13153  | 0        | 1/1    | SingularLogic S.A.
+    AS15430  | 0        | 1/3    | European Dynamics S.A.
+    AS15439  | 0        | 1/1    | Eurobank Ergasias Services and Holdings S.A.
+    AS15617  | 0        | 1/1    | Nova Telecommunications & Media Single Member S.A
+    AS15853  | 0        | 1/1    | NBG Securities SA
+    AS16013  | 0        | 1/2    | Unisystems SA
+    AS16200  | 0        | 1/1    | GeniusMind S.A.
+    AS20506  | 0        | 1/1    | SingularLogic S.A.
+    AS28953  | 0        | 1/1    | Piraeus Financial Holdings SA
+    AS28969  | 0        | 1/2    | AB VASSILOPOULOS S.A.

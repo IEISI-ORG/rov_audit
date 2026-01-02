@@ -3,11 +3,11 @@
     ====================================================================================================
      NATIONAL ROUTING SECURITY: BD
     ====================================================================================================
-    Total Networks:      1,483
+    Total Networks:      1,484
     Total Cone Gravity:  3,178
     ------------------------------------------------------------
     SECURE NETWORKS:        15 ( 1.0%) -> Protects 2.4% of Traffic
-    VULNERABLE NETWORKS:  1397 (94.2%) -> Exposes  14.2% of Traffic
+    VULNERABLE NETWORKS:  1397 (94.1%) -> Exposes  14.2% of Traffic
 
     ====================================================================================================
      THE BD CORE (Top 20 Networks)
@@ -27,19 +27,19 @@
     AS58656  | VULNERABLE (No Coverage)       | 57       | 0%     | bdHUB Limited
     AS150748 | PARTIAL (Mixed Feeds)          | 46       | 0%     | Gmax
     AS141731 | VULNERABLE (No Coverage)       | 43       | 0%     | Max Hub Limited
-    AS23688  | VULNERABLE (No Coverage)       | 42       | 0%     | Link3 Technologies Ltd.
     AS58945  | PARTIAL (Mixed Feeds)          | 42       | 0%     | Virgo Communication Ltd
+    AS23688  | VULNERABLE (No Coverage)       | 42       | 0%     | Link3 Technologies Ltd.
     AS24323  | VULNERABLE (No Coverage)       | 36       | 0%     | aamra networks limited
     AS149765 | PARTIAL (Mixed Feeds)          | 35       | 0%     | Coronet Corporation Limited
     AS63961  | Unverified (Transit/Peer?)     | 33       | 0%     | Bangladesh Research and Education Networ
-    AS23956  | VULNERABLE (No Coverage)       | 26       | 0%     | AmberIT Limited
     AS9230   | VULNERABLE (No Coverage)       | 26       | 0%     | Bangladesh Online Ltd.
+    AS23956  | VULNERABLE (No Coverage)       | 26       | 0%     | AmberIT Limited
 
     ====================================================================================================
      TRANSIT SUPPLY CHAIN (Who provides to BD?)
     ====================================================================================================
-    [*] Analyzing Upstream Supply Chain for 1483 networks...
-        - Analyzed connectivity for 1478 networks.
+    [*] Analyzing Upstream Supply Chain for 1484 networks...
+        - Analyzed connectivity for 1484 networks.
     Rank | Upstream | Dependents | Global Status                  | Name
     ----------------------------------------------------------------------------------------------------
     #1   | AS58717  | 451        | PARTIAL (Mixed Feeds)          | Summit Communications Ltd
@@ -54,7 +54,7 @@
     #10  | AS17494  | 52         | PARTIAL (Mixed Feeds)          | Bangladesh Telegraph & Telephone Board
     #11  | AS58656  | 49         | VULNERABLE (No Coverage)       | bdHUB Limited
     #12  | AS150748 | 44         | PARTIAL (Mixed Feeds)          | Gmax
-    #13  | AS141731 | 41         | VULNERABLE (No Coverage)       | Max Hub Limited
+    #13  | AS141731 | 42         | VULNERABLE (No Coverage)       | Max Hub Limited
     #14  | AS58945  | 39         | PARTIAL (Mixed Feeds)          | Virgo Communication Ltd
     #15  | AS23688  | 38         | VULNERABLE (No Coverage)       | Link3 Technologies Ltd.
     #16  | AS140684 | 37         | Unverified (Transit/Peer?)     | Bangladesh Internet Exchange Trust
@@ -72,14 +72,14 @@
     AS141731 | 43       | 2/2    | Max Hub Limited
     AS23688  | 42       | 1/1    | Link3 Technologies Ltd.
     AS24323  | 36       | 2/2    | aamra networks limited
-    AS23956  | 26       | 3/3    | AmberIT Limited
     AS9230   | 26       | 1/1    | Bangladesh Online Ltd.
+    AS23956  | 26       | 3/3    | AmberIT Limited
     AS38203  | 21       | 4/4    | ADN Telecom Ltd.
     AS56264  | 20       | 3/3    | Tomato Web (Pvt) Limited
     AS45588  | 17       | 1/1    | Bangladesh Telecommunications Company Limited (BTC
     AS23923  | 14       | 2/2    | Agni Systems Limited
-    AS134732 | 12       | 3/3    | Dot Internet
-    AS63969  | 12       | 3/3    | Race Online Limited
     AS17469  | 12       | 5/5    | Access Telecom (BD) Ltd.
     AS24342  | 12       | 4/4    | BRACNet Limited
+    AS134732 | 12       | 3/3    | Dot Internet
+    AS63969  | 12       | 3/3    | Race Online Limited
     AS132366 | 11       | 3/3    | Alfaz Network

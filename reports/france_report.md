@@ -6,8 +6,8 @@
     Total Networks:      1,453
     Total Cone Gravity:  117,826
     ------------------------------------------------------------
-    SECURE NETWORKS:       646 (44.5%) -> Protects 56.3% of Traffic
-    VULNERABLE NETWORKS:   658 (45.3%) -> Exposes  0.0% of Traffic
+    SECURE NETWORKS:       641 (44.1%) -> Protects 56.3% of Traffic
+    VULNERABLE NETWORKS:   662 (45.6%) -> Exposes  0.0% of Traffic
 
     ====================================================================================================
      THE FR CORE (Top 20 Networks)
@@ -31,15 +31,15 @@
     AS35661  | PARTIAL (Mixed Feeds)          | 69       | 1%     | VIRTUA SYSTEMS SAS
     AS2200   | PARTIAL (Mixed Feeds)          | 40       | 0%     | Renater
     AS49434  | PARTIAL (Mixed Feeds)          | 27       | -      | FBW NETWORKS SAS
-    AS16347  | PARTIAL (Mixed Feeds)          | 22       | 0%     | ADISTA SAS
     AS39180  | PARTIAL (Mixed Feeds)          | 22       | -      | LASOTEL SAS
-    AS62000  | PARTIAL (Mixed Feeds)          | 21       | -      | SERVERD SAS
+    AS16347  | PARTIAL (Mixed Feeds)          | 22       | 0%     | ADISTA SAS
+    AS39801  | PARTIAL (Mixed Feeds)          | 21       | -      | France-IX L3 Services
 
     ====================================================================================================
      TRANSIT SUPPLY CHAIN (Who provides to FR?)
     ====================================================================================================
     [*] Analyzing Upstream Supply Chain for 1453 networks...
-        - Analyzed connectivity for 1451 networks.
+        - Analyzed connectivity for 1453 networks.
     Rank | Upstream | Dependents | Global Status                  | Name
     ----------------------------------------------------------------------------------------------------
     #1   | AS174    | 321        | CORE: PROTECTED                | Cogent Communications, LLC
@@ -70,16 +70,16 @@
     --------------------------------------------------------------------------------
     AS52073  | 6        | 2/2    | I2SNETWORK SAS
     AS48732  | 1        | 1/1    | Martial Duboc
-    AS29092  | 0        | 1/1    | NXO France SAS
-    AS28708  | 0        | 1/3    | Orange S.A.
-    AS29301  | 0        | 3/4    | KARAVEL SAS
-    AS29199  | 0        | 1/1    | Chambre De Commerce et d'Industrie De region Paris
-    AS29246  | 0        | 1/6    | OPTILIAN SARL
-    AS29513  | 0        | 2/10   | Foliateam Operateur SAS
-    AS8255   | 0        | 1/2    | Euro-Information-Europeenne de Traitement de l'Inf
-    AS6738   | 0        | 3/10   | DRI SAS
-    AS30741  | 0        | 1/3    | DDO ORGANISATION SAS
-    AS3299   | 0        | 2/4    | Societe Generale S.A.
-    AS3298   | 0        | 1/3    | Societe Generale S.A.
-    AS3296   | 0        | 1/3    | Societe Generale S.A.
-    AS3295   | 0        | 2/4    | Societe Generale S.A.
+    AS206390 | 0        | 1/1    | ReportLinker SAS
+    AS206450 | 0        | 1/1    | BNP PARIBAS S.A.
+    AS206569 | 0        | 2/2    | Paul-Henri Zimmerlin
+    AS206568 | 0        | 4/10   | ALTSYSNET.COM SAS
+    AS206599 | 0        | 1/3    | FNAC DARTY PARTICIPATIONS ET SERVICES SA
+    AS206656 | 0        | 1/1    | AUDAXIS SAS
+    AS206720 | 0        | 2/3    | AIRBUS SAS
+    AS206841 | 0        | 2/2    | Everko SASU
+    AS206856 | 0        | 1/2    | Ecommerce Informatique Services SARL
+    AS206869 | 0        | 1/2    | Associations Mutuelles Le Conservateur SAM
+    AS206865 | 0        | 1/3    | COAXIS ASP SAS
+    AS206874 | 0        | 3/4    | Kyxar SARL
+    AS206914 | 0        | 1/1    | Open Networks Engineering SAS

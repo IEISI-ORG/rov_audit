@@ -1,14 +1,14 @@
     [1/6] Loading Metadata & Geography...
-        - Fetching BGP.Tools ASN Names... OK (5333 KB)
-        - Fetching IPv4 Country Codes... OK (458,300 records)
-        - Fetching IPv6 Country Codes... OK (110,148 records)
-        - Geo-tagged 80690 ASNs across 240 countries.
+        - Fetching BGP.Tools ASN Names... OK (5123 KB)
+        - Fetching IPv4 Country Codes... OK (458,355 records)
+        - Fetching IPv6 Country Codes... OK (109,952 records)
+        - Geo-tagged 80694 ASNs across 240 countries.
     [2/6] Syncing APNIC RPKI Data (240 Countries)...
         - Sync Complete: 0 Fetched, 229 Cached.
     [3/6] Loading Security Data...
         - Fetching ROV Tags... OK (36 KB)
         - Fetching Cloudflare List... OK (19 KB)
-        - Loaded: 1237 Tagged, 453 CF-Safe, 18773 APNIC Scores
+        - Loaded: 1236 Tagged, 453 CF-Safe, 18773 APNIC Scores
     [4/6] Building Topology from RIS (Go Output)...
     [5/6] Calculating Cone Sizes...
     [6/6] Generating Audit...
@@ -16,9 +16,9 @@
     ================================================================================
     NO-SCRAPE GLOBAL AUDIT (V19 - DUAL STACK GEO)
     ================================================================================
-    Total Networks:          119,863
+    Total Networks:          119,849
     Active Stubs:            76,472
-    Vulnerable Stubs:        55,225
+    Vulnerable Stubs:        55,241
     Vulnerable Providers:    502
 
     [TOP 20 VULNERABLE PROVIDERS]

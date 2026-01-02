@@ -6,8 +6,8 @@
     Total Networks:      653
     Total Cone Gravity:  825
     ------------------------------------------------------------
-    SECURE NETWORKS:       237 (36.3%) -> Protects 15.6% of Traffic
-    VULNERABLE NETWORKS:   363 (55.6%) -> Exposes  3.3% of Traffic
+    SECURE NETWORKS:       238 (36.4%) -> Protects 15.6% of Traffic
+    VULNERABLE NETWORKS:   362 (55.4%) -> Exposes  3.3% of Traffic
 
     ====================================================================================================
      THE ZA CORE (Top 20 Networks)
@@ -70,16 +70,16 @@
     --------------------------------------------------------------------------------
     AS9129   | 23       | 1/1    | MTN Business Kenya
     AS36937  | 4        | 1/1    | Liquid Telecommunications South Africa (Pty) Ltd
-    AS329012 | 0        | 1/1    | Motus Corporation (Pty) Ltd
-    AS329028 | 0        | 1/3    | Rapid Networks (Pty) Ltd
-    AS329036 | 0        | 1/3    | The Expert Company (Pty) Ltd
-    AS329039 | 0        | 1/3    | LINK CONNECT SERVICES (PTY) LTD
-    AS329042 | 0        | 1/4    | VAIMO ECOMMERCE SERVICES (PTY) LTD
-    AS329122 | 0        | 1/3    | FiberFly PTY Ltd
-    AS329124 | 0        | 1/1    | True Technologies cc
-    AS329126 | 0        | 1/5    | IIP1 Pty Ltd
-    AS329133 | 0        | 1/1    | East London Industrial Development Zone SOC LTD
-    AS329139 | 0        | 1/1    | Mthinte Communication Pty Ltd
-    AS329151 | 0        | 1/2    | MR Price Group Limited
-    AS329084 | 0        | 1/4    | Global Platinum Solutions (Pty) Ltd
-    AS329089 | 0        | 2/2    | Boost Networks
+    AS328712 | 0        | 2/2    | Keter Technologies (Pty) Ltd
+    AS328670 | 0        | 1/1    | Nowtech PTY Ltd
+    AS328677 | 0        | 1/6    | KorCom (Pty) Ltd
+    AS328691 | 0        | 1/3    | Global Network Systems (PTY) LTD
+    AS328694 | 0        | 1/1    | IMS Ventures
+    AS328660 | 0        | 1/1    | Davo Corp CC
+    AS328633 | 0        | 1/5    | MikroTikSA Networks CC
+    AS328638 | 0        | 1/4    | Letaba Wireless Internet CC
+    AS328641 | 0        | 1/1    | Open Fibre (Pty) Ltd
+    AS328643 | 0        | 1/4    | Masstores (Proprietary) Limited
+    AS328644 | 0        | 1/3    | World Sports Betting Services (Pty) Ltd
+    AS328612 | 0        | 2/2    | Zarclear (Pty) Ltd
+    AS328622 | 0        | 1/2    | MHYAS HOLDINGS (PTY) LTD
