@@ -18,7 +18,7 @@ python3 analyze_country_deep_dive.py BD     | aha --black | tee reports/banglade
 python3 analyze_country_deep_dive.py IN     | aha --black | tee reports/india_report.html
 
 python3 analyze_country_deep_dive.py AU     | aha --black | tee reports/australia_report.html
-python3 analyze_country_deep_dive.py NZ     | aha --black | tee reports/newzleand_report.html
+python3 analyze_country_deep_dive.py NZ     | aha --black | tee reports/newzealand_report.html
 
 python3 analyze_country_deep_dive.py FJ     | aha --black | tee reports/fiji_report.html
 python3 analyze_country_deep_dive.py CK     | aha --black | tee reports/cookislands_report.html
@@ -30,11 +30,11 @@ python3 analyze_country_deep_dive.py GR     | aha --black | tee reports/greece_r
 python3 analyze_country_deep_dive.py ZA     | aha --black | tee reports/south_africa_report.html
 
 
-FILES=*.html
+FILES=reports/*.html
 
 for f in $FILES; do
     filename="${f%.*}"
     echo "Converting $f to $filename.md"
-    pandoc "$f" -t markdown -o "reports/$filename.md"
+    pandoc "$f" -t markdown -o "$filename.md"
 done
 
