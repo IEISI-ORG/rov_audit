@@ -17,23 +17,23 @@
     AS38740  | PARTIAL (Mixed Feeds)          | 15       | -      | Tashi InfoComm Limited
     AS17660  | PARTIAL (Mixed Feeds)          | 8        | 0%     | DrukNet ISP
     AS18024  | Unverified (Transit/Peer?)     | 1        | 0%     | Bhutan Telecom Ltd
-    AS152315 | NOT ROUTED                     | 0        | -      | Sarpang Dzongkhag Administration
-    AS152316 | NOT ROUTED                     | 0        | -      | Punakha Dzongkhag Administration
-    AS152317 | STUB: VULNERABLE               | 0        | 0%     | Wangdue Phodrang Dzongkhag Administratio
-    AS152318 | NOT ROUTED                     | 0        | -      | Gelephu Thromde
-    AS152308 | NOT ROUTED                     | 0        | -      | Bumthang Dzongkhag Administration
-    AS152309 | NOT ROUTED                     | 0        | -      | Gasa Dzongkhag Administration
-    AS152314 | NOT ROUTED                     | 0        | -      | Chhukha Dzongkhag Administration
-    AS152310 | NOT ROUTED                     | 0        | -      | Thimphu Dzongkhag Administration
-    AS152311 | NOT ROUTED                     | 0        | -      | Haa Dzongkhag Administration
-    AS152312 | NOT ROUTED                     | 0        | -      | Paro Dzongkhag Administration
-    AS152313 | NOT ROUTED                     | 0        | -      | Samtse Dzongkhag Administration
+    AS138558 | STUB: VULNERABLE               | 0        | 0%     | Gelephu Digital Network
+    AS138529 | STUB: VULNERABLE               | 0        | 0%     | DATANET WIFI
+    AS137994 | NOT ROUTED                     | 0        | -      | Bhutan National Bank limited
+    AS137925 | NOT ROUTED                     | 0        | -      | GIC-Bhutan Reinsurance Co. Ltd.
     AS153740 | STUB: VULNERABLE               | 0        | -      | Bhutan Development Bank
     AS153779 | STUB: VULNERABLE               | 0        | 0%     | Nilo FiberNet
+    AS138920 | NOT ROUTED                     | 0        | -      | Royal University of Bhutan
+    AS137412 | STUB: SECURE (Active ROV)      | 0        | 100%   | Tashicell Domestic AS Thimphu Bhutan
     AS141680 | STUB: VULNERABLE               | 0        | 0%     | SuperNet Infocomm
-    AS140695 | STUB: VULNERABLE               | 0        | -      | Bank of Bhutan Limited
-    AS137925 | NOT ROUTED                     | 0        | -      | GIC-Bhutan Reinsurance Co. Ltd.
-    AS137994 | NOT ROUTED                     | 0        | -      | Bhutan National Bank limited
+    AS151498 | STUB: VULNERABLE               | 0        | -      | Bhutan Power Corporation Ltd
+    AS151955 | STUB: VULNERABLE               | 0        | -      | DRUK PNB BANK LIMITED
+    AS152318 | NOT ROUTED                     | 0        | -      | Gelephu Thromde
+    AS152317 | STUB: VULNERABLE               | 0        | 0%     | Wangdue Phodrang Dzongkhag Administratio
+    AS152316 | NOT ROUTED                     | 0        | -      | Punakha Dzongkhag Administration
+    AS152315 | NOT ROUTED                     | 0        | -      | Sarpang Dzongkhag Administration
+    AS152314 | NOT ROUTED                     | 0        | -      | Chhukha Dzongkhag Administration
+    AS152313 | NOT ROUTED                     | 0        | -      | Samtse Dzongkhag Administration
 
     ====================================================================================================
      TRANSIT SUPPLY CHAIN (Who provides to BT?)
@@ -56,15 +56,15 @@
     ====================================================================================================
     ASN      | Cone     | Feeds  | Name
     --------------------------------------------------------------------------------
-    AS152317 | 0        | 2/2    | Wangdue Phodrang Dzongkhag Administration
+    AS138558 | 0        | 2/2    | Gelephu Digital Network
+    AS138529 | 0        | 1/1    | DATANET WIFI
     AS153740 | 0        | 1/1    | Bhutan Development Bank
     AS153779 | 0        | 1/1    | Nilo FiberNet
     AS141680 | 0        | 1/1    | SuperNet Infocomm
-    AS140695 | 0        | 1/1    | Bank of Bhutan Limited
-    AS138558 | 0        | 2/2    | Gelephu Digital Network
-    AS138529 | 0        | 1/1    | DATANET WIFI
     AS151498 | 0        | 1/1    | Bhutan Power Corporation Ltd
     AS151955 | 0        | 1/1    | DRUK PNB BANK LIMITED
+    AS152317 | 0        | 2/2    | Wangdue Phodrang Dzongkhag Administration
+    AS140695 | 0        | 1/1    | Bank of Bhutan Limited
     AS23955  | 0        | 1/1    | Tashi InfoComm Limited
     AS18025  | 0        | 1/1    | Bhutan Telecom Ltd
     AS7615   | 0        | 1/1    | Bhutan Internet Exchange

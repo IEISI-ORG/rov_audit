@@ -3,11 +3,11 @@
     ====================================================================================================
      NATIONAL ROUTING SECURITY: CN
     ====================================================================================================
-    Total Networks:      4,071
+    Total Networks:      6,463
     Total Cone Gravity:  5,892
     ------------------------------------------------------------
-    SECURE NETWORKS:        80 ( 2.0%) -> Protects 11.8% of Traffic
-    VULNERABLE NETWORKS:  2634 (64.7%) -> Exposes  14.3% of Traffic
+    SECURE NETWORKS:        80 ( 1.2%) -> Protects 11.8% of Traffic
+    VULNERABLE NETWORKS:  5024 (77.7%) -> Exposes  14.3% of Traffic
 
     ====================================================================================================
      THE CN CORE (Top 20 Networks)
@@ -23,7 +23,7 @@
     AS4808   | Unverified (Transit/Peer?)     | 75       | 0%     | China Unicom Beijing Province Network
     AS4847   | Unverified (Transit/Peer?)     | 70       | 0%     | China Telecom Beijing Province Network
     AS9808   | CORE: UNPROTECTED              | 60       | 0%     | China Mobile Backbone
-    AS4809   | CORE: PROTECTED                | 54       | 7%     | China Telecom Next Generation Carrier Ne
+    AS4809   | CORE: PROTECTED                | 54       | 2%     | China Telecom Next Generation Carrier Ne
     AS56048  | Unverified (Transit/Peer?)     | 48       | 0%     | China Mobile Group Beijing Company
     AS4812   | VULNERABLE (No Coverage)       | 42       | 0%     | China Telecom Shanghai Province Network
     AS9425   | VULNERABLE (No Coverage)       | 40       | -      | Future Internet Technology Infrastructur
@@ -33,16 +33,16 @@
     AS146788 | VULNERABLE (No Coverage)       | 29       | -      | China Broadcasting Network Co., Ltd
     AS4538   | PARTIAL (Mixed Feeds)          | 26       | 3%     | China Education and Research Network Cen
     AS56040  | Unverified (Transit/Peer?)     | 21       | 0%     | China Mobile Group GuangDong Company
-    AS23650  | VULNERABLE (No Coverage)       | 17       | -      | AS Number for CHINANET jiangsu province 
+    AS140083 | VULNERABLE (No Coverage)       | 17       | -      | China Telecom Anhui Province Mobile Data
 
     ====================================================================================================
      TRANSIT SUPPLY CHAIN (Who provides to CN?)
     ====================================================================================================
-    [*] Analyzing Upstream Supply Chain for 4071 networks...
-        - Analyzed connectivity for 4071 networks.
+    [*] Analyzing Upstream Supply Chain for 6463 networks...
+        - Analyzed connectivity for 6463 networks.
     Rank | Upstream | Dependents | Global Status                  | Name
     ----------------------------------------------------------------------------------------------------
-    #1   | AS38255  | 1613       | Unverified (Transit/Peer?)     | China Education and Research Network (CE
+    #1   | AS38255  | 3859       | Unverified (Transit/Peer?)     | China Education and Research Network (CE
     #2   | AS4134   | 142        | CORE: UNPROTECTED              | China Telecom Backbone
     #3   | AS20473  | 94         | SECURE (Full Coverage)         | The Constant Company, LLC
     #4   | AS139317 | 70         | SECURE (Full Coverage)         | Ningbo Dahuamao Information Technology C
@@ -75,11 +75,11 @@
     AS9425   | 40       | 1/1    | Future Internet Technology Infrastructure (FITI)
     AS38272  | 40       | 1/1    | China Education and Research Network (CERNET)
     AS146788 | 29       | 1/1    | China Broadcasting Network Co., Ltd
-    AS23650  | 17       | 1/1    | AS Number for CHINANET jiangsu province backbone
     AS140083 | 17       | 1/1    | China Telecom Anhui Province Mobile Data Network
+    AS23650  | 17       | 1/1    | AS Number for CHINANET jiangsu province backbone
     AS140345 | 16       | 1/1    | CHINATELECOM Yunnan province Shengji 5G network
     AS138169 | 15       | 1/1    | China Telecom Guangxi Province Mobile Data Network
     AS131285 | 14       | 1/1    | CHINATELECOM Hubei province Shengji 5G network
     AS134238 | 12       | 1/1    | CHINANET Jiangx province IDC network
-    AS134768 | 10       | 1/1    | CHINANET SHAANXI province Cloud Base network
     AS9929   | 10       | 0/0    | CHINA UNICOM Industrial Internet Backbone
+    AS134768 | 10       | 1/1    | CHINANET SHAANXI province Cloud Base network

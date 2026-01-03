@@ -14,7 +14,7 @@
     ====================================================================================================
     ASN      | Verdict                        | Cone     | APNIC% | Name
     ----------------------------------------------------------------------------------------------------
-    AS8280   | SECURE (Active Local ROV)      | 283      | 100%   | SYNAPSECOM S.A. Provider of Telecommunic
+    AS8280   | SECURE (Active Local ROV)      | 283      | -      | SYNAPSECOM S.A. Provider of Telecommunic
     AS6799   | Unverified (Transit/Peer?)     | 37       | 99%    | Ote SA (Hellenic Telecommunications Orga
     AS1241   | SECURE (Active Local ROV)      | 32       | 99%    | Nova Telecommunications & Media Single M
     AS5408   | SECURE (Full Coverage)         | 30       | 100%   | National Infrastructures for Research an
@@ -22,18 +22,18 @@
     AS198477 | SECURE (Full Coverage)         | 24       | -      | TI SPARKLE GREECE SA
     AS25472  | PARTIAL (Mixed Feeds)          | 24       | 0%     | Nova Telecommunications & Media Single M
     AS56910  | SECURE (Full Coverage)         | 18       | -      | Digital Realty Hellas Single Member S.A
-    AS199081 | SECURE (Active Local ROV)      | 17       | 100%   | Lancom Ltd.
+    AS199081 | SECURE (Active Local ROV)      | 17       | -      | Lancom Ltd.
     AS206735 | PARTIAL (Mixed Feeds)          | 13       | 0%     | Novelcomm LP
     AS216285 | PARTIAL (Mixed Feeds)          | 3        | -      | MYIP NETWORKS G.P.
-    AS196945 | PARTIAL (Mixed Feeds)          | 1        | -      | Microbase PC
+    AS35506  | SECURE (Full Coverage)         | 1        | 86%    | INFORMATION SOCIETY S.A.
     AS8522   | PARTIAL (Mixed Feeds)          | 1        | -      | Foundation of Research and Technology He
-    AS200736 | PARTIAL (Mixed Feeds)          | 1        | 0%     | MEDIANET INVEST AE
-    AS56457  | SECURE (Full Coverage)         | 1        | -      | FASTPATH IKE
     AS206652 | SECURE (Full Coverage)         | 1        | -      | Ioannis Roditis trading as Greekstream N
-    AS4601   | PARTIAL (Mixed Feeds)          | 1        | -      | Antonios A. Chariton
+    AS200736 | PARTIAL (Mixed Feeds)          | 1        | 0%     | MEDIANET INVEST AE
     AS50919  | PARTIAL (Mixed Feeds)          | 1        | -      | INTERWORKS Single Member S.A.
     AS51505  | PARTIAL (Mixed Feeds)          | 1        | 0%     | Dimosia Epicheirisi Ilektrismou Anonymi 
-    AS35506  | SECURE (Full Coverage)         | 1        | 91%    | INFORMATION SOCIETY S.A.
+    AS196945 | PARTIAL (Mixed Feeds)          | 1        | -      | Microbase PC
+    AS56457  | SECURE (Full Coverage)         | 1        | -      | FASTPATH IKE
+    AS4601   | PARTIAL (Mixed Feeds)          | 1        | -      | Antonios A. Chariton
 
     ====================================================================================================
      TRANSIT SUPPLY CHAIN (Who provides to GR?)
@@ -69,17 +69,17 @@
     ASN      | Cone     | Feeds  | Name
     --------------------------------------------------------------------------------
     AS199246 | 0        | 1/1    | ENARTIA Single Member S.A.
-    AS197389 | 0        | 1/3    | CBS-LAN S.A.
-    AS197580 | 0        | 1/4    | CONNECTICORE TELECOMMUNICATIONS INFORMATION TECHNO
+    AS199375 | 0        | 1/3    | Service 800 Teleperformance Single Member S.A.
+    AS201293 | 0        | 2/2    | OPAP S.A
+    AS201494 | 0        | 4/10   | MODULUS A.E.
+    AS200368 | 0        | 2/2    | Abnormal Frequency Single Member P.C.
+    AS200128 | 0        | 1/1    | DNHOST IKE
+    AS200314 | 0        | 2/2    | Algosystems S.A.
     AS198188 | 0        | 1/2    | Ventzislav Nikolov Trading as MTEL
     AS197899 | 0        | 6/14   | LAN SINGLE MEMBER P.C.
-    AS204399 | 0        | 1/1    | Stavros Charos
-    AS206697 | 0        | 1/2    | Eurolife ERB General Insurance SA
-    AS207540 | 0        | 2/3    | Cloud Concept S.A.
+    AS197389 | 0        | 1/3    | CBS-LAN S.A.
+    AS197580 | 0        | 1/4    | CONNECTICORE TELECOMMUNICATIONS INFORMATION TECHNO
     AS205904 | 0        | 1/1    | VOICELAND SA
+    AS207540 | 0        | 2/3    | Cloud Concept S.A.
     AS206456 | 0        | 2/4    | Citiwave Systems Ltd.
-    AS206529 | 0        | 1/3    | Metadosis SA
-    AS201494 | 0        | 4/10   | MODULUS A.E.
-    AS201293 | 0        | 2/2    | OPAP S.A
-    AS199375 | 0        | 1/3    | Service 800 Teleperformance Single Member S.A.
-    AS200314 | 0        | 2/2    | Algosystems S.A.
+    AS206697 | 0        | 1/2    | Eurolife ERB General Insurance SA

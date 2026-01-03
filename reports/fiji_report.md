@@ -15,12 +15,12 @@
     ASN      | Verdict                        | Cone     | APNIC% | Name
     ----------------------------------------------------------------------------------------------------
     AS38442  | PARTIAL (Mixed Feeds)          | 5        | 0%     | Vodafone Fiji Limited
-    AS4638   | Unverified (Transit/Peer?)     | 2        | 88%    | Telecom Fiji Limited
+    AS4638   | Unverified (Transit/Peer?)     | 2        | 86%    | Telecom Fiji Limited
     AS45355  | SECURE (Full Coverage)         | 1        | 0%     | Digicel Fiji Limited
-    AS154229 | NOT ROUTED                     | 0        | -      | Fiji National Provident Fund
-    AS141470 | STUB: VULNERABLE               | 0        | -      | ITC Services
     AS137890 | STUB: VULNERABLE               | 0        | -      | Walesi Ltd
+    AS154229 | NOT ROUTED                     | 0        | -      | Fiji National Provident Fund
     AS136921 | STUB: SECURE (Full Coverage)   | 0        | -      | Fiji National University
+    AS141470 | STUB: VULNERABLE               | 0        | -      | ITC Services
     AS140046 | NOT ROUTED                     | 0        | -      | Telecommunications Authority of Fiji
     AS149429 | STUB: VULNERABLE               | 0        | -      | Reserve Bank of Fiji
     AS24390  | STUB: SECURE (Full Coverage)   | 0        | -      | The University of the South Pacific
@@ -60,8 +60,8 @@
     ====================================================================================================
     ASN      | Cone     | Feeds  | Name
     --------------------------------------------------------------------------------
-    AS141470 | 0        | 1/1    | ITC Services
     AS137890 | 0        | 1/1    | Walesi Ltd
+    AS141470 | 0        | 1/1    | ITC Services
     AS149429 | 0        | 1/1    | Reserve Bank of Fiji
     AS9241   | 0        | 1/3    | Fiji International Telecomunications Ltd
     AS132248 | 0        | 1/1    | Reserve Bank of Fiji

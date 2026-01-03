@@ -3,22 +3,22 @@
     ====================================================================================================
      NATIONAL ROUTING SECURITY: IN
     ====================================================================================================
-    Total Networks:      6,037
+    Total Networks:      6,040
     Total Cone Gravity:  14,471
     ------------------------------------------------------------
     SECURE NETWORKS:       223 ( 3.7%) -> Protects 77.5% of Traffic
-    VULNERABLE NETWORKS:  2380 (39.4%) -> Exposes  7.3% of Traffic
+    VULNERABLE NETWORKS:  2381 (39.4%) -> Exposes  7.3% of Traffic
 
     ====================================================================================================
      THE IN CORE (Top 20 Networks)
     ====================================================================================================
     ASN      | Verdict                        | Cone     | APNIC% | Name
     ----------------------------------------------------------------------------------------------------
-    AS9498   | SECURE (Full Coverage)         | 7921     | 0%     | Bharti Airtel Ltd.
-    AS4755   | SECURE (Full Coverage)         | 2349     | 3%     | TATA Communications (formerly VSNL)
+    AS9498   | SECURE (Full Coverage)         | 7921     | 1%     | Bharti Airtel Ltd.
+    AS4755   | SECURE (Full Coverage)         | 2349     | 4%     | TATA Communications (formerly VSNL)
     AS9583   | PARTIAL (Mixed Feeds)          | 682      | 2%     | Sify Limited
     AS55836  | SECURE (Full Coverage)         | 449      | 0%     | Reliance Jio Infocomm Limited
-    AS55410  | SECURE (Active Local ROV)      | 358      | 2%     | Vodafone Idea Ltd
+    AS55410  | SECURE (Active Local ROV)      | 358      | 3%     | Vodafone Idea Ltd
     AS45820  | VULNERABLE (No Coverage)       | 306      | 1%     | Tata Teleservices ISP
     AS18229  | PARTIAL (Mixed Feeds)          | 260      | 0%     | CtrlS
     AS9730   | VULNERABLE (No Coverage)       | 230      | -      | Bharti Telesonic Ltd
@@ -38,12 +38,12 @@
     ====================================================================================================
      TRANSIT SUPPLY CHAIN (Who provides to IN?)
     ====================================================================================================
-    [*] Analyzing Upstream Supply Chain for 6037 networks...
-        - Analyzed connectivity for 6037 networks.
+    [*] Analyzing Upstream Supply Chain for 6040 networks...
+        - Analyzed connectivity for 6040 networks.
     Rank | Upstream | Dependents | Global Status                  | Name
     ----------------------------------------------------------------------------------------------------
     #1   | AS9498   | 682        | SECURE (Full Coverage)         | Bharti Airtel Ltd.
-    #2   | AS4755   | 562        | SECURE (Full Coverage)         | TATA Communications (formerly VSNL)
+    #2   | AS4755   | 563        | SECURE (Full Coverage)         | TATA Communications (formerly VSNL)
     #3   | AS45820  | 185        | VULNERABLE (No Coverage)       | Tata Teleservices ISP
     #4   | AS9730   | 171        | VULNERABLE (No Coverage)       | Bharti Telesonic Ltd
     #5   | AS9583   | 167        | PARTIAL (Mixed Feeds)          | Sify Limited
@@ -73,13 +73,13 @@
     AS17762  | 116      | 2/2    | Tata Teleservices Maharashtra Ltd
     AS45117  | 115      | 2/2    | Ishan's Network
     AS135718 | 44       | 1/1    | DISHAWAVES INFONET PVT. LTD
-    AS133694 | 18       | 2/2    | EMAX GLOBAL MEDIA PVT. LTD
     AS133676 | 18       | 2/2    | Precious netcom pvt ltd
+    AS133694 | 18       | 2/2    | EMAX GLOBAL MEDIA PVT. LTD
     AS136284 | 17       | 2/2    | Paradise Telecom Pvt Ltd
     AS151732 | 14       | 2/2    | ONREMOTE TELECOM PRIVATE LIMITED
     AS136634 | 12       | 1/1    | Navkar Netsol Private Ltd
     AS133278 | 12       | 2/2    | Dehradun Enet Solutions Private Ltd
     AS134041 | 11       | 1/1    | Ncore Creative Technologies Pvt.Ltd.
     AS132420 | 9        | 1/1    | 282, Sector 19
-    AS45194  | 7        | 1/1    | Syscon Infoway Pvt. Ltd.
     AS134316 | 7        | 2/2    | IAXN Telecom Pvt. Ltd.
+    AS45194  | 7        | 1/1    | Syscon Infoway Pvt. Ltd.

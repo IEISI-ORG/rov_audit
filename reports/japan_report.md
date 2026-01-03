@@ -6,8 +6,8 @@
     Total Networks:      976
     Total Cone Gravity:  1,709
     ------------------------------------------------------------
-    SECURE NETWORKS:       186 (19.1%) -> Protects 59.5% of Traffic
-    VULNERABLE NETWORKS:   482 (49.4%) -> Exposes  1.8% of Traffic
+    SECURE NETWORKS:       187 (19.2%) -> Protects 59.5% of Traffic
+    VULNERABLE NETWORKS:   481 (49.3%) -> Exposes  1.8% of Traffic
 
     ====================================================================================================
      THE JP CORE (Top 20 Networks)
@@ -25,14 +25,14 @@
     AS59105  | SECURE (Active Local ROV)      | 21       | -      | Home NOC Operators Group
     AS7529   | PARTIAL (Mixed Feeds)          | 15       | -      | NetIRD Inc.
     AS7670   | PARTIAL (Mixed Feeds)          | 14       | 0%     | Enecom,Inc.
-    AS2500   | PARTIAL (Mixed Feeds)          | 14       | -      | WIDE Project
     AS9824   | SECURE (Active Local ROV)      | 14       | 0%     | JCOM Co., Ltd.
+    AS2500   | PARTIAL (Mixed Feeds)          | 14       | -      | WIDE Project
     AS38074  | VULNERABLE (No Coverage)       | 12       | -      | SDCC Japan-West Area
-    AS59103  | VULNERABLE (No Coverage)       | 12       | -      | SoftEther Corporation
     AS150369 | SECURE (Full Coverage)         | 12       | -      | TelHi Corporation
-    AS9354   | PARTIAL (Mixed Feeds)          | 11       | 0%     | Community Network Center Inc.
-    AS7679   | PARTIAL (Mixed Feeds)          | 11       | 0%     | QTnet,Inc.
+    AS59103  | VULNERABLE (No Coverage)       | 12       | -      | SoftEther Corporation
     AS9607   | SECURE (Active Local ROV)      | 11       | -      | BroadBand Tower, Inc.
+    AS7679   | PARTIAL (Mixed Feeds)          | 11       | 0%     | QTnet,Inc.
+    AS9354   | PARTIAL (Mixed Feeds)          | 11       | 0%     | Community Network Center Inc.
     AS4725   | SECURE (Full Coverage)         | 9        | 99%    | SoftBank Corp.
 
     ====================================================================================================
@@ -72,14 +72,14 @@
     AS38074  | 12       | 1/1    | SDCC Japan-West Area
     AS17675  | 5        | 2/2    | PacketFabric (Japan) Co., Ltd.
     AS63798  | 2        | 1/1    | Industrial Cyber Security Center of Excellence
-    AS55907  | 0        | 1/1    | GMO Internet Group, Inc.
-    AS55909  | 0        | 1/1    | National Institute of Technology, Kochi College
-    AS55912  | 0        | 2/2    | University of Kochi
-    AS55373  | 0        | 1/1    | Foundation for Biomedical Research and Innovation
-    AS55374  | 0        | 1/1    | FUJITSU LIMITED
-    AS60445  | 0        | 1/1    | DODO K.K.
-    AS58645  | 0        | 2/4    | Miyagi Cable TV Co.,Ltd
-    AS58647  | 0        | 2/2    | Kagawa University
-    AS58649  | 0        | 1/1    | GMO Internet Group, Inc.
+    AS58788  | 0        | 1/2    | Chiroro-Net Co.,Ltd.
+    AS58793  | 0        | 1/6    | FUJITSU CLOUD TECHNOLOGIES LIMITED
     AS59349  | 0        | 1/2    | GMO-Z.COM PTE. LTD.
+    AS58652  | 0        | 1/1    | Kochi University
+    AS58784  | 0        | 1/1    | Rissho University
     AS58650  | 0        | 1/5    | Warabi Cable Vision Co., Ltd.
+    AS58649  | 0        | 1/1    | GMO Internet Group, Inc.
+    AS58647  | 0        | 2/2    | Kagawa University
+    AS58645  | 0        | 2/4    | Miyagi Cable TV Co.,Ltd
+    AS60445  | 0        | 1/1    | DODO K.K.
+    AS55382  | 0        | 3/5    | Nagato city office

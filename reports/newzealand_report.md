@@ -14,16 +14,16 @@
     ====================================================================================================
     ASN      | Verdict                        | Cone     | APNIC% | Name
     ----------------------------------------------------------------------------------------------------
-    AS64073  | SECURE (Full Coverage)         | 2007     | 2%     | Vetta Online Ltd
+    AS64073  | SECURE (Full Coverage)         | 2007     | 7%     | Vetta Online Ltd
     AS9790   | SECURE (Active Local ROV)      | 112      | 0%     | Two Degrees Networks Limited
     AS135069 | PARTIAL (Mixed Feeds)          | 64       | 0%     | Feenix Communications Limited
     AS4648   | PARTIAL (Mixed Feeds)          | 60       | -      | Spark New Zealand
     AS45177  | SECURE (Active Local ROV)      | 54       | 99%    | Devoli
     AS55850  | SECURE (Active Local ROV)      | 44       | 99%    | Mercury NZ Limited
-    AS4768   | Unverified (Transit/Peer?)     | 32       | 7%     | One New Zealand Group Limited
     AS38022  | PARTIAL (Mixed Feeds)          | 32       | -      | REANNZ National Research and Education N
+    AS4768   | Unverified (Transit/Peer?)     | 32       | 7%     | One New Zealand Group Limited
     AS23838  | PARTIAL (Mixed Feeds)          | 23       | -      | Solarix Networks Limited
-    AS24324  | PARTIAL (Mixed Feeds)          | 15       | -      | Kordia Limited
+    AS24324  | PARTIAL (Mixed Feeds)          | 15       | 0%     | Kordia Limited
     AS18400  | PARTIAL (Mixed Feeds)          | 15       | -      | Xtreme Networks Limited
     AS23655  | SECURE (Active Local ROV)      | 11       | 0%     | 2degrees Networks Limited
     AS4049   | PARTIAL (Mixed Feeds)          | 11       | 0%     | CELLO GROUP LIMITED
@@ -31,8 +31,8 @@
     AS17705  | PARTIAL (Mixed Feeds)          | 7        | 0%     | InSPire Net Ltd
     AS9500   | PARTIAL (Mixed Feeds)          | 6        | 0%     | One New Zealand Group Limited
     AS151336 | PARTIAL (Mixed Feeds)          | 5        | -      | Verge
-    AS45637  | PARTIAL (Mixed Feeds)          | 4        | 0%     | UniFone New Zealand Ltd
     AS45267  | PARTIAL (Mixed Feeds)          | 4        | 0%     | Lightwire LTD
+    AS45637  | PARTIAL (Mixed Feeds)          | 4        | 0%     | UniFone New Zealand Ltd
     AS132040 | PARTIAL (Mixed Feeds)          | 4        | -      | Vital Data Ltd
 
     ====================================================================================================
@@ -69,17 +69,17 @@
     ASN      | Cone     | Feeds  | Name
     --------------------------------------------------------------------------------
     AS4771   | 3        | 1/1    | Spark New Zealand Trading Ltd.
-    AS133218 | 0        | 1/2    | Network Edge NZ Limited
-    AS133187 | 0        | 1/4    | Ashnet Limited
-    AS133499 | 0        | 1/1    | HostRoyale Technologies Pvt Ltd
+    AS133192 | 0        | 1/1    | Ultimate Mobile limited
     AS133532 | 0        | 1/1    | ASN for .nz InternetNZ Registry Content
+    AS133499 | 0        | 1/1    | HostRoyale Technologies Pvt Ltd
     AS133537 | 0        | 1/1    | Downer New Zealand Limited
-    AS133370 | 0        | 2/2    | TODD ENERGY LIMITED
     AS133393 | 0        | 1/2    | Naki Host Limited
     AS133396 | 0        | 1/1    | TEAMnetwork Systems Ltd
+    AS133399 | 0        | 2/3    | HI-TECH SOLUTIONS LIMITED
+    AS133370 | 0        | 2/2    | TODD ENERGY LIMITED
     AS45140  | 0        | 1/1    | Christ College Christchurch ASN
-    AS132744 | 0        | 1/1    | The Virus Centre Ltd
     AS132745 | 0        | 1/1    | Blast Internet Ltd
     AS132840 | 0        | 1/2    | Neos Systems Limited
     AS132822 | 0        | 1/1    | Fidelity Life Assurance Company Limited
+    AS132727 | 0        | 1/1    | Strata Networks Ltd
     AS132712 | 0        | 1/1    | Daifuku Oceania

@@ -3,7 +3,7 @@
     ====================================================================================================
      NATIONAL ROUTING SECURITY: BD
     ====================================================================================================
-    Total Networks:      1,943
+    Total Networks:      1,944
     Total Cone Gravity:  3,142
     ------------------------------------------------------------
     SECURE NETWORKS:        15 ( 0.8%) -> Protects 2.4% of Traffic
@@ -38,8 +38,8 @@
     ====================================================================================================
      TRANSIT SUPPLY CHAIN (Who provides to BD?)
     ====================================================================================================
-    [*] Analyzing Upstream Supply Chain for 1943 networks...
-        - Analyzed connectivity for 1943 networks.
+    [*] Analyzing Upstream Supply Chain for 1944 networks...
+        - Analyzed connectivity for 1944 networks.
     Rank | Upstream | Dependents | Global Status                  | Name
     ----------------------------------------------------------------------------------------------------
     #1   | AS58717  | 451        | PARTIAL (Mixed Feeds)          | Summit Communications Ltd
@@ -80,6 +80,6 @@
     AS23923  | 14       | 2/2    | Agni Systems Limited
     AS63969  | 12       | 3/3    | Race Online Limited
     AS24342  | 12       | 4/4    | BRACNet Limited
-    AS134732 | 12       | 3/3    | Dot Internet
     AS17469  | 12       | 5/5    | Access Telecom (BD) Ltd.
+    AS134732 | 12       | 3/3    | Dot Internet
     AS132366 | 11       | 3/3    | Alfaz Network

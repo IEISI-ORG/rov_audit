@@ -6,8 +6,8 @@
     Total Networks:      1,859
     Total Cone Gravity:  117,795
     ------------------------------------------------------------
-    SECURE NETWORKS:       659 (35.4%) -> Protects 56.2% of Traffic
-    VULNERABLE NETWORKS:   663 (35.7%) -> Exposes  0.0% of Traffic
+    SECURE NETWORKS:       667 (35.9%) -> Protects 56.2% of Traffic
+    VULNERABLE NETWORKS:   658 (35.4%) -> Exposes  0.0% of Traffic
 
     ====================================================================================================
      THE FR CORE (Top 20 Networks)
@@ -25,15 +25,15 @@
     AS35625  | PARTIAL (Mixed Feeds)          | 283      | -      | Eurofiber France SAS
     AS16276  | SECURE (Active Local ROV)      | 218      | 0%     | OVH SAS
     AS3215   | SECURE (Active Local ROV)      | 146      | 100%   | Orange S.A.
-    AS29075  | SECURE (Active Local ROV)      | 143      | 0%     | IELO-LIAZO SERVICES SAS
+    AS29075  | SECURE (Active Local ROV)      | 143      | 1%     | IELO-LIAZO SERVICES SAS
     AS15557  | SECURE (Active Local ROV)      | 88       | 1%     | SFR SA
     AS31216  | PARTIAL (Mixed Feeds)          | 76       | -      | BSO Network Solutions SAS
-    AS35661  | PARTIAL (Mixed Feeds)          | 69       | 1%     | VIRTUA SYSTEMS SAS
+    AS35661  | PARTIAL (Mixed Feeds)          | 69       | -      | VIRTUA SYSTEMS SAS
     AS2200   | PARTIAL (Mixed Feeds)          | 40       | 0%     | Renater
     AS43531  | VULNERABLE (No Coverage)       | 35       | -      | BSO Network Solutions SAS
     AS49434  | PARTIAL (Mixed Feeds)          | 27       | -      | FBW NETWORKS SAS
     AS16347  | PARTIAL (Mixed Feeds)          | 22       | 0%     | ADISTA SAS
-    AS62000  | PARTIAL (Mixed Feeds)          | 21       | -      | SERVERD SAS
+    AS62000  | SECURE (Active Local ROV)      | 21       | -      | SERVERD SAS
 
     ====================================================================================================
      TRANSIT SUPPLY CHAIN (Who provides to FR?)
@@ -70,16 +70,16 @@
     --------------------------------------------------------------------------------
     AS43531  | 35       | 1/1    | BSO Network Solutions SAS
     AS52073  | 6        | 2/2    | I2SNETWORK SAS
-    AS24990  | 1        | 1/1    | Equinix France SAS
     AS48732  | 1        | 1/1    | Martial Duboc
-    AS29301  | 0        | 3/4    | KARAVEL SAS
-    AS29199  | 0        | 1/1    | Chambre De Commerce et d'Industrie De region Paris
-    AS29246  | 0        | 1/6    | OPTILIAN SARL
-    AS29513  | 0        | 2/10   | Foliateam Operateur SAS
+    AS24990  | 1        | 1/1    | Equinix France SAS
     AS5583   | 0        | 9/21   | Orange S.A.
     AS8255   | 0        | 1/2    | Euro-Information-Europeenne de Traitement de l'Inf
     AS6738   | 0        | 3/10   | DRI SAS
     AS886    | 0        | 1/1    | COLLECTIVITE DE SAINT BARTHELEMY
+    AS29513  | 0        | 2/10   | Foliateam Operateur SAS
     AS3299   | 0        | 2/4    | Societe Generale S.A.
-    AS28708  | 0        | 1/3    | Orange S.A.
+    AS3298   | 0        | 1/3    | Societe Generale S.A.
     AS3296   | 0        | 1/3    | Societe Generale S.A.
+    AS3295   | 0        | 2/4    | Societe Generale S.A.
+    AS16140  | 0        | 1/1    | MEDIACTIVE SAS
+    AS2280   | 0        | 3/9    | Orange S.A.

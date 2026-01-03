@@ -1,5 +1,5 @@
     [*] Loading V19 Data Sets...
-        - Scanning JSON cache for ROA stats... OK (120195 records)
+        - Scanning JSON cache for ROA stats... OK (120196 records)
         - Loading Topology... OK
 
     ===============================================================================================
@@ -31,18 +31,18 @@
     AS45820  | IN | 306      |  98.7%  | Tata Teleservices ISP
     AS17762  | IN | 116      |  99.6%  | Tata Teleservices Maharashtra Ltd
     AS45117  | IN | 115      | 100.0%  | Ishan's Network
-    AS141731 | BD | 44       | 100.0%  | Max Hub Limited
     AS135718 | IN | 44       | 100.0%  | DISHAWAVES INFONET PVT. LTD
+    AS141731 | BD | 44       | 100.0%  | Max Hub Limited
     AS23688  | BD | 42       |  99.6%  | Link3 Technologies Ltd.
     AS212330 | IQ | 40       | 100.0%  | Civilisation Information Technology, communic
     AS24323  | BD | 36       |  98.0%  | aamra networks limited
     AS25184  | IR | 30       | 100.0%  | Afranet
     AS4007   | NP | 28       | 100.0%  | Subisu Cablenet (Pvt) Ltd, Baluwatar, Kathman
-    AS23956  | BD | 26       |  99.5%  | AmberIT Limited
     AS9230   | BD | 26       | 100.0%  | Bangladesh Online Ltd.
+    AS23956  | BD | 26       |  99.5%  | AmberIT Limited
     AS11556  | PA | 24       | 100.0%  | Cable & Wireless Panama
-    AS141898 | ID | 23       | 100.0%  | PT Milenial Inti Telekomunikasi
     AS9129   | ZA | 23       | 100.0%  | MTN Business Kenya
+    AS401753 | VG | 23       | 100.0%  | BIXCE Inc
 
     ===============================================================================================
     3. WEIGHTED EVANGELISM TARGETS

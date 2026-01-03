@@ -6,8 +6,8 @@
     Total Networks:      3,157
     Total Cone Gravity:  99,431
     ------------------------------------------------------------
-    SECURE NETWORKS:      1082 (34.3%) -> Protects 98.4% of Traffic
-    VULNERABLE NETWORKS:  1151 (36.5%) -> Exposes  0.1% of Traffic
+    SECURE NETWORKS:      1064 (33.7%) -> Protects 98.4% of Traffic
+    VULNERABLE NETWORKS:  1166 (36.9%) -> Exposes  0.1% of Traffic
 
     ====================================================================================================
      THE DE CORE (Top 20 Networks)
@@ -23,11 +23,11 @@
     AS212895 | PARTIAL (Mixed Feeds)          | 206      | -      | Johannes Ernst
     AS8881   | SECURE (Active Local ROV)      | 200      | 0%     | 1&1 Versatel GmbH
     AS57821  | SECURE (Active Local ROV)      | 168      | -      | Nonattached Network e.V.
-    AS3209   | SECURE (Active Local ROV)      | 131      | 1%     | Vodafone GmbH
-    AS24961  | PARTIAL (Mixed Feeds)          | 124      | 2%     | WIIT AG (fka. myLoc Managed IT AG)
+    AS3209   | SECURE (Active Local ROV)      | 131      | 2%     | Vodafone GmbH
+    AS24961  | PARTIAL (Mixed Feeds)          | 124      | 1%     | WIIT AG (fka. myLoc Managed IT AG)
     AS50629  | SECURE (Active Local ROV)      | 105      | -      | LWLcom GmbH
     AS35708  | VULNERABLE (No Coverage)       | 92       | -      | 4b42 UG
-    AS49581  | PARTIAL (Mixed Feeds)          | 71       | 0%     | Ferdinand Zink trading as Tube-Hosting
+    AS49581  | PARTIAL (Mixed Feeds)          | 71       | 1%     | Ferdinand Zink trading as Tube-Hosting
     AS8767   | SECURE (Active Local ROV)      | 66       | 99%    | M-net Telekommunikations GmbH
     AS58212  | PARTIAL (Mixed Feeds)          | 65       | 1%     | dataforest GmbH
     AS34309  | PARTIAL (Mixed Feeds)          | 64       | -      | Link11 GmbH
@@ -71,8 +71,9 @@
     AS35708  | 92       | 1/1    | 4b42 UG
     AS200461 | 5        | 1/1    | Ian David Klemm
     AS50873  | 3        | 1/1    | David Doepelheuer
-    AS29515  | 0        | 1/2    | Hessische Zentrale fuer Datenverarbeitung
+    AS29408  | 0        | 1/1    | Gustav Alberts GmbH & Co. KG
     AS29510  | 0        | 1/2    | internett GmbH
+    AS29515  | 0        | 1/2    | Hessische Zentrale fuer Datenverarbeitung
     AS29236  | 0        | 2/2    | Schweickert GmbH
     AS29239  | 0        | 1/2    | I-NetPartner GmbH
     AS29317  | 0        | 1/1    | Sascha Lenz
@@ -82,4 +83,3 @@
     AS29658  | 0        | 1/1    | HeureCom GmbH
     AS29682  | 0        | 1/2    | Landeskreditbank Baden-Wuerttemberg - Foerderbank
     AS28753  | 0        | 2/6    | Leaseweb Deutschland GmbH
-    AS28756  | 0        | 1/6    | European Patent Organisation

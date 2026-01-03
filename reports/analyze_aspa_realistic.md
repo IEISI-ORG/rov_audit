@@ -1,11 +1,11 @@
     [*] Loading Topology & Cleaning Noise...
         - Fetching CDN List... OK (108 Networks)
-        - Modeled:  117,508 'Regular' Networks
+        - Modeled:  117,509 'Regular' Networks
 
     ==========================================================================================
      1. ASPA READINESS (Simplicity vs Complexity)
     ==========================================================================================
-    Total Networks: 117,508
+    Total Networks: 117,509
     ------------------------------------------------------------
       - Trivial (1-2 Providers):   64,773 (55.1%)
       - Moderate (3-5 Providers):  13,647 (11.6%)
