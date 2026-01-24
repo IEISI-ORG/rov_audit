@@ -4,42 +4,42 @@
      NATIONAL ROUTING SECURITY: ZA
     ====================================================================================================
     Total Networks:      731
-    Total Cone Gravity:  817
+    Total Cone Gravity:  790
     ------------------------------------------------------------
-    SECURE NETWORKS:       238 (32.6%) -> Protects 15.1% of Traffic
-    VULNERABLE NETWORKS:   365 (49.9%) -> Exposes  3.3% of Traffic
+    SECURE NETWORKS:       229 (31.3%) -> Protects 13.5% of Traffic
+    VULNERABLE NETWORKS:   373 (51.0%) -> Exposes  0.5% of Traffic
 
     ====================================================================================================
      THE ZA CORE (Top 20 Networks)
     ====================================================================================================
     ASN      | Verdict                        | Cone     | APNIC% | Name
     ----------------------------------------------------------------------------------------------------
-    AS37271  | PARTIAL (Mixed Feeds)          | 158      | -      | Workonline Communications(Pty) Ltd
-    AS16637  | PARTIAL (Mixed Feeds)          | 118      | 0%     | MTN SA (Bayobab)
-    AS3741   | PARTIAL (Mixed Feeds)          | 88       | 2%     | Dimension Data
-    AS5713   | PARTIAL (Mixed Feeds)          | 57       | 0%     | Telkom SA Ltd.
+    AS37271  | PARTIAL (Mixed Feeds)          | 154      | -      | Workonline Communications(Pty) Ltd
+    AS16637  | PARTIAL (Mixed Feeds)          | 94       | 0%     | MTN SA (Bayobab)
+    AS3741   | PARTIAL (Mixed Feeds)          | 87       | 3%     | Dimension Data
+    AS5713   | PARTIAL (Mixed Feeds)          | 55       | 0%     | Telkom SA Ltd.
+    AS36994  | PARTIAL (Mixed Feeds)          | 37       | 0%     | Vodacom
     AS327782 | PARTIAL (Mixed Feeds)          | 34       | 0%     | Metrofibre Networx
     AS37497  | SECURE (Active Local ROV)      | 32       | -      | Network Platforms (PTY) LTD
     AS328748 | PARTIAL (Mixed Feeds)          | 31       | -      | Agile Solutions Provider (PTY) LTD
-    AS327693 | SECURE (Active Local ROV)      | 29       | 99%    | Echotel Pty Ltd
-    AS36994  | PARTIAL (Mixed Feeds)          | 28       | 0%     | Vodacom
-    AS9129   | VULNERABLE (No Coverage)       | 23       | 0%     | MTN Business Kenya
-    AS328333 | PARTIAL (Mixed Feeds)          | 16       | 0%     | Fixed Mobile Telecommunications (Pty) LT
+    AS327693 | SECURE (Active Local ROV)      | 27       | 84%    | Echotel Pty Ltd
+    AS9129   | Unverified (Transit/Peer?)     | 25       | 0%     | MTN Business Kenya
+    AS328333 | PARTIAL (Mixed Feeds)          | 16       | 1%     | Fixed Mobile Telecommunications (Pty) LT
     AS37358  | PARTIAL (Mixed Feeds)          | 16       | 1%     | BitCo
-    AS10798  | PARTIAL (Mixed Feeds)          | 15       | -      | The Standard Bank of South Africa (Propr
-    AS37179  | SECURE (Full Coverage)         | 15       | -      | Africa Independent Network Exchange (Pty
+    AS37179  | SECURE (Full Coverage)         | 16       | -      | Africa Independent Network Exchange (Pty
     AS36874  | PARTIAL (Mixed Feeds)          | 14       | 0%     | Cybersmart
-    AS37239  | PARTIAL (Mixed Feeds)          | 10       | 0%     | ICTGlobe Management (Pty) Ltd
-    AS37739  | SECURE (Active Local ROV)      | 9        | -      | Abantu Cloud Africa (Pty) Ltd
+    AS37239  | PARTIAL (Mixed Feeds)          | 10       | 1%     | ICTGlobe Management (Pty) Ltd
+    AS10798  | PARTIAL (Mixed Feeds)          | 9        | -      | The Standard Bank of South Africa (Propr
     AS37731  | PARTIAL (Mixed Feeds)          | 9        | -      | Web Squad Connect (Pty) Ltd
-    AS25818  | PARTIAL (Mixed Feeds)          | 8        | -      | cmcnetworks
-    AS37153  | SECURE (Active Local ROV)      | 8        | 2%     | Xneelo (Pty) Ltd
+    AS37739  | PARTIAL (Mixed Feeds)          | 8        | -      | Abantu Cloud Africa (Pty) Ltd
+    AS37153  | SECURE (Active Local ROV)      | 8        | 1%     | Xneelo (Pty) Ltd
+    AS37680  | PARTIAL (Mixed Feeds)          | 7        | 0%     | Cool Ideas Service Provider (Pty) Ltd
 
     ====================================================================================================
      TRANSIT SUPPLY CHAIN (Who provides to ZA?)
     ====================================================================================================
     [*] Analyzing Upstream Supply Chain for 731 networks...
-        - Analyzed connectivity for 731 networks.
+        - Analyzed connectivity for 730 networks.
     Rank | Upstream | Dependents | Global Status                  | Name
     ----------------------------------------------------------------------------------------------------
     #1   | AS37100  | 130        | SECURE (Active Local ROV)      | SEACOM Limited
@@ -68,18 +68,18 @@
     ====================================================================================================
     ASN      | Cone     | Feeds  | Name
     --------------------------------------------------------------------------------
-    AS9129   | 23       | 1/1    | MTN Business Kenya
     AS36937  | 4        | 1/1    | Liquid Telecommunications South Africa (Pty) Ltd
-    AS329075 | 0        | 1/1    | Transnet Limited
-    AS329012 | 0        | 1/1    | Motus Corporation (Pty) Ltd
-    AS329016 | 0        | 2/2    | Adumo Technologies  (Pty) Ltd
-    AS329028 | 0        | 1/3    | Rapid Networks (Pty) Ltd
-    AS329036 | 0        | 1/3    | The Expert Company (Pty) Ltd
-    AS329039 | 0        | 1/3    | LINK CONNECT SERVICES (PTY) LTD
-    AS329133 | 0        | 1/1    | East London Industrial Development Zone SOC LTD
-    AS329122 | 0        | 1/3    | FiberFly PTY Ltd
-    AS329124 | 0        | 1/1    | True Technologies cc
     AS329063 | 0        | 2/5    | Flex Serve IT (Pty) Ltd
+    AS329122 | 0        | 1/3    | FiberFly PTY Ltd
+    AS329075 | 0        | 1/1    | Transnet Limited
+    AS329084 | 0        | 1/4    | Global Platinum Solutions (Pty) Ltd
+    AS329165 | 0        | 1/1    | Wild Peach Trading 52 (PTY) LTD
+    AS329166 | 0        | 2/6    | Absolute Hosting (Pty) Ltd
+    AS329184 | 0        | 2/5    | Host Africa (Pty) Ltd
+    AS329124 | 0        | 1/1    | True Technologies cc
+    AS329126 | 0        | 1/5    | IIP1 Pty Ltd
+    AS23058  | 0        | 4/7    | Discovery Health
+    AS329331 | 0        | 2/2    | Flash Mobile Vending (Pty) Ltd
     AS329139 | 0        | 1/1    | Mthinte Communication Pty Ltd
     AS329151 | 0        | 1/2    | MR Price Group Limited
-    AS329084 | 0        | 1/4    | Global Platinum Solutions (Pty) Ltd
+    AS329153 | 0        | 1/4    | SWDconnect (ISWCORP) 

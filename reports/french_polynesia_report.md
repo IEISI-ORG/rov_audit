@@ -18,7 +18,7 @@
     AS138179 | STUB: VULNERABLE               | 0        | 0%     | PACIFIC MOBILE TELECOM
     AS139263 | STUB: VULNERABLE               | 0        | -      | Universite de la Polynesie Francaise
     AS9471   | STUB: VULNERABLE               | 0        | 0%     | ONATI
-    AS56017  | STUB: VULNERABLE               | 0        | 0%     | VITI
+    AS56017  | STUB: VULNERABLE               | 0        | 3%     | VITI
     AS133896 | NOT ROUTED                     | 0        | -      | Tahiti Nui Telecom
 
     ====================================================================================================

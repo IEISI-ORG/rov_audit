@@ -4,9 +4,9 @@
      NATIONAL ROUTING SECURITY: WS
     ====================================================================================================
     Total Networks:      10
-    Total Cone Gravity:  0
+    Total Cone Gravity:  1
     ------------------------------------------------------------
-    SECURE NETWORKS:         1 (10.0%) -> Protects 0.0% of Traffic
+    SECURE NETWORKS:         2 (20.0%) -> Protects 100.0% of Traffic
     VULNERABLE NETWORKS:     1 (10.0%) -> Exposes  0.0% of Traffic
 
     ====================================================================================================
@@ -14,11 +14,11 @@
     ====================================================================================================
     ASN      | Verdict                        | Cone     | APNIC% | Name
     ----------------------------------------------------------------------------------------------------
-    AS138356 | NOT ROUTED                     | 0        | -      | National University of Samoa
+    AS17993  | SECURE (Active Local ROV)      | 1        | 100%   | Vodafone Samoa Limited
     AS153053 | STUB: VULNERABLE               | 0        | -      | Lesamoa.net
+    AS138356 | NOT ROUTED                     | 0        | -      | National University of Samoa
     AS139679 | NOT ROUTED                     | 0        | -      | Office of the Electoral Commission
-    AS150321 | NOT ROUTED                     | 0        | -      | Secretariat of the Pacific Regional Envi
-    AS17993  | STUB: SECURE (Active ROV)      | 0        | 99%    | Vodafone Samoa Limited
+    AS150321 | STUB: SECURE (Full Coverage)   | 0        | -      | Secretariat of the Pacific Regional Envi
     AS9218   | NOT ROUTED                     | 0        | -      | WISEVAN GUARD Limited
     AS55579  | NOT ROUTED                     | 0        | -      | Computer Services Ltd
     AS134376 | NOT ROUTED                     | 0        | -      | Samoa IXP
@@ -33,11 +33,11 @@
     Rank | Upstream | Dependents | Global Status                  | Name
     ----------------------------------------------------------------------------------------------------
     #1   | AS38227  | 2          | NOT ROUTED                     | Computer Services Limited (CSL)
-    #2   | AS18400  | 1          | PARTIAL (Mixed Feeds)          | Xtreme Networks Limited
-    #3   | AS9241   | 1          | STUB: VULNERABLE               | Fiji International Telecomunications Ltd
-    #4   | AS4826   | 1          | SECURE (Full Coverage)         | Vocus Connect International Backbone
-    #5   | AS6939   | 1          | CORE: PROTECTED                | Hurricane Electric LLC
-    #6   | AS174    | 1          | CORE: PROTECTED                | Cogent Communications, LLC
+    #2   | AS9241   | 1          | STUB: VULNERABLE               | Fiji International Telecomunications Ltd
+    #3   | AS4826   | 1          | SECURE (Full Coverage)         | Vocus Connect International Backbone
+    #4   | AS6939   | 1          | CORE: PROTECTED                | Hurricane Electric LLC
+    #5   | AS174    | 1          | CORE: PROTECTED                | Cogent Communications, LLC
+    #6   | AS18400  | 1          | PARTIAL (Mixed Feeds)          | Xtreme Networks Limited
     #7   | AS38800  | 1          | NOT ROUTED                     | Digicel Samoa Ltd
     #8   | AS132528 | 1          | STUB: VULNERABLE               | DIGICEL (AUS) PTY LTD
 
@@ -46,4 +46,4 @@
     ====================================================================================================
     ASN      | Cone     | Feeds  | Name
     --------------------------------------------------------------------------------
-    AS153053 | 0        | 2/2    | Lesamoa.net
+    AS153053 | 0        | 1/1    | Lesamoa.net

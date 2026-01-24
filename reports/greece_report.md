@@ -4,36 +4,36 @@
      NATIONAL ROUTING SECURITY: GR
     ====================================================================================================
     Total Networks:      256
-    Total Cone Gravity:  515
+    Total Cone Gravity:  533
     ------------------------------------------------------------
-    SECURE NETWORKS:       106 (41.4%) -> Protects 83.9% of Traffic
-    VULNERABLE NETWORKS:   107 (41.8%) -> Exposes  0.0% of Traffic
+    SECURE NETWORKS:       108 (42.2%) -> Protects 84.8% of Traffic
+    VULNERABLE NETWORKS:   104 (40.6%) -> Exposes  0.0% of Traffic
 
     ====================================================================================================
      THE GR CORE (Top 20 Networks)
     ====================================================================================================
     ASN      | Verdict                        | Cone     | APNIC% | Name
     ----------------------------------------------------------------------------------------------------
-    AS8280   | SECURE (Active Local ROV)      | 283      | -      | SYNAPSECOM S.A. Provider of Telecommunic
+    AS8280   | SECURE (Active Local ROV)      | 310      | 100%   | SYNAPSECOM S.A. Provider of Telecommunic
     AS6799   | Unverified (Transit/Peer?)     | 37       | 99%    | Ote SA (Hellenic Telecommunications Orga
-    AS1241   | SECURE (Active Local ROV)      | 32       | 99%    | Nova Telecommunications & Media Single M
+    AS1241   | SECURE (Active Local ROV)      | 31       | 99%    | Nova Telecommunications & Media Single M
     AS5408   | SECURE (Full Coverage)         | 30       | 100%   | National Infrastructures for Research an
-    AS3329   | SECURE (Full Coverage)         | 25       | 99%    | Vodafone Greece
     AS198477 | SECURE (Full Coverage)         | 24       | -      | TI SPARKLE GREECE SA
-    AS25472  | PARTIAL (Mixed Feeds)          | 24       | 0%     | Nova Telecommunications & Media Single M
+    AS25472  | PARTIAL (Mixed Feeds)          | 22       | 0%     | Nova Telecommunications & Media Single M
+    AS3329   | SECURE (Full Coverage)         | 19       | 99%    | Vodafone Greece
     AS56910  | SECURE (Full Coverage)         | 18       | -      | Digital Realty Hellas Single Member S.A
-    AS199081 | SECURE (Active Local ROV)      | 17       | -      | Lancom Ltd.
-    AS206735 | PARTIAL (Mixed Feeds)          | 13       | 0%     | Novelcomm LP
+    AS199081 | SECURE (Active Local ROV)      | 17       | 100%   | Lancom Ltd.
+    AS206735 | PARTIAL (Mixed Feeds)          | 12       | 0%     | Novelcomm LP
     AS216285 | PARTIAL (Mixed Feeds)          | 3        | -      | MYIP NETWORKS G.P.
-    AS35506  | SECURE (Full Coverage)         | 1        | 86%    | INFORMATION SOCIETY S.A.
-    AS8522   | PARTIAL (Mixed Feeds)          | 1        | -      | Foundation of Research and Technology He
-    AS206652 | SECURE (Full Coverage)         | 1        | -      | Ioannis Roditis trading as Greekstream N
-    AS200736 | PARTIAL (Mixed Feeds)          | 1        | 0%     | MEDIANET INVEST AE
-    AS50919  | PARTIAL (Mixed Feeds)          | 1        | -      | INTERWORKS Single Member S.A.
-    AS51505  | PARTIAL (Mixed Feeds)          | 1        | 0%     | Dimosia Epicheirisi Ilektrismou Anonymi 
+    AS4601   | PARTIAL (Mixed Feeds)          | 2        | -      | Antonios A. Chariton
     AS196945 | PARTIAL (Mixed Feeds)          | 1        | -      | Microbase PC
     AS56457  | SECURE (Full Coverage)         | 1        | -      | FASTPATH IKE
-    AS4601   | PARTIAL (Mixed Feeds)          | 1        | -      | Antonios A. Chariton
+    AS51505  | PARTIAL (Mixed Feeds)          | 1        | 0%     | Dimosia Epicheirisi Ilektrismou Anonymi 
+    AS35506  | SECURE (Full Coverage)         | 1        | 89%    | INFORMATION SOCIETY S.A.
+    AS206652 | SECURE (Full Coverage)         | 1        | -      | Ioannis Roditis trading as Greekstream N
+    AS50919  | PARTIAL (Mixed Feeds)          | 1        | -      | INTERWORKS Single Member S.A.
+    AS8522   | PARTIAL (Mixed Feeds)          | 1        | -      | Foundation of Research and Technology He
+    AS200736 | PARTIAL (Mixed Feeds)          | 1        | 0%     | MEDIANET INVEST AE
 
     ====================================================================================================
      TRANSIT SUPPLY CHAIN (Who provides to GR?)
@@ -68,18 +68,18 @@
     ====================================================================================================
     ASN      | Cone     | Feeds  | Name
     --------------------------------------------------------------------------------
-    AS199246 | 0        | 1/1    | ENARTIA Single Member S.A.
     AS199375 | 0        | 1/3    | Service 800 Teleperformance Single Member S.A.
+    AS199246 | 0        | 1/1    | ENARTIA Single Member S.A.
+    AS198188 | 0        | 1/2    | Ventzislav Nikolov Trading as MTEL
+    AS197389 | 0        | 1/3    | CBS-LAN S.A.
+    AS197899 | 0        | 7/15   | LAN SINGLE MEMBER P.C.
+    AS197580 | 0        | 1/4    | CONNECTICORE TELECOMMUNICATIONS INFORMATION TECHNO
+    AS204399 | 0        | 1/1    | Stavros Charos
+    AS206697 | 0        | 1/2    | Eurolife ERB General Insurance SA
+    AS205904 | 0        | 1/1    | VOICELAND SA
+    AS206456 | 0        | 2/4    | Citiwave Systems Ltd.
+    AS201494 | 0        | 5/11   | MODULUS A.E.
     AS201293 | 0        | 2/2    | OPAP S.A
-    AS201494 | 0        | 4/10   | MODULUS A.E.
+    AS200314 | 0        | 2/2    | Algosystems S.A.
     AS200368 | 0        | 2/2    | Abnormal Frequency Single Member P.C.
     AS200128 | 0        | 1/1    | DNHOST IKE
-    AS200314 | 0        | 2/2    | Algosystems S.A.
-    AS198188 | 0        | 1/2    | Ventzislav Nikolov Trading as MTEL
-    AS197899 | 0        | 6/14   | LAN SINGLE MEMBER P.C.
-    AS197389 | 0        | 1/3    | CBS-LAN S.A.
-    AS197580 | 0        | 1/4    | CONNECTICORE TELECOMMUNICATIONS INFORMATION TECHNO
-    AS205904 | 0        | 1/1    | VOICELAND SA
-    AS207540 | 0        | 2/3    | Cloud Concept S.A.
-    AS206456 | 0        | 2/4    | Citiwave Systems Ltd.
-    AS206697 | 0        | 1/2    | Eurolife ERB General Insurance SA

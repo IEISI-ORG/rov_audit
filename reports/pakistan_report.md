@@ -3,43 +3,43 @@
     ====================================================================================================
      NATIONAL ROUTING SECURITY: PK
     ====================================================================================================
-    Total Networks:      438
-    Total Cone Gravity:  543
+    Total Networks:      441
+    Total Cone Gravity:  560
     ------------------------------------------------------------
-    SECURE NETWORKS:        39 ( 8.9%) -> Protects 3.7% of Traffic
-    VULNERABLE NETWORKS:   217 (49.5%) -> Exposes  9.8% of Traffic
+    SECURE NETWORKS:        38 ( 8.6%) -> Protects 3.6% of Traffic
+    VULNERABLE NETWORKS:   220 (49.9%) -> Exposes  9.5% of Traffic
 
     ====================================================================================================
      THE PK CORE (Top 20 Networks)
     ====================================================================================================
     ASN      | Verdict                        | Cone     | APNIC% | Name
     ----------------------------------------------------------------------------------------------------
-    AS17557  | PARTIAL (Mixed Feeds)          | 192      | 0%     | Pakistan Telecommunication Company Limit
-    AS38193  | PARTIAL (Mixed Feeds)          | 156      | 6%     | Transworld Associates (Pvt.) Ltd.
+    AS17557  | PARTIAL (Mixed Feeds)          | 195      | 0%     | Pakistan Telecommunication Company Limit
+    AS38193  | PARTIAL (Mixed Feeds)          | 157      | 2%     | Transworld Associates (Pvt.) Ltd.
+    AS38264  | Unverified (Transit/Peer?)     | 43       | 96%    | Wateen Telecom
     AS138423 | Unverified (Transit/Peer?)     | 38       | 1%     | CMPak Limited
-    AS38264  | Unverified (Transit/Peer?)     | 37       | 96%    | Wateen Telecom
-    AS9541   | SECURE (Active Local ROV)      | 18       | 69%    | Cyber Internet Services (Pvt) Ltd.
-    AS58470  | PARTIAL (Mixed Feeds)          | 17       | 0%     | Jazz Pakistan
+    AS9541   | SECURE (Active Local ROV)      | 19       | 74%    | Cyber Internet Services (Pvt) Ltd.
+    AS58470  | PARTIAL (Mixed Feeds)          | 18       | 0%     | Jazz Pakistan
     AS24499  | PARTIAL (Mixed Feeds)          | 12       | 1%     | Telenor Pakistan
-    AS135523 | Unverified (Transit/Peer?)     | 11       | 2%     | Multinet Broadband
+    AS135523 | Unverified (Transit/Peer?)     | 11       | 1%     | Multinet Broadband
     AS138655 | VULNERABLE (No Coverage)       | 10       | 0%     | Trans World Enterprise Services (Private
     AS139820 | VULNERABLE (No Coverage)       | 8        | 1%     | HG TELECOMMUNICATION PRIVATE LIMITED
-    AS9260   | VULNERABLE (No Coverage)       | 7        | 2%     | Multinet Pakistan Pvt. Ltd.
-    AS23966  | Unverified (Transit/Peer?)     | 6        | 1%     | LINKdotNET Telecom Limited
-    AS132165 | VULNERABLE (No Coverage)       | 6        | 19%    | Connect Communications
-    AS23750  | VULNERABLE (No Coverage)       | 6        | 1%     | GERRYS INFORMATION TECHNOLOGY PVT LTD.
-    AS23674  | VULNERABLE (No Coverage)       | 4        | 0%     | Nayatel (Pvt) Ltd
-    AS136969 | VULNERABLE (No Coverage)       | 4        | 1%     | KK Networks (Pvt) Ltd.
+    AS9260   | VULNERABLE (No Coverage)       | 7        | 1%     | Multinet Pakistan Pvt. Ltd.
+    AS23750  | VULNERABLE (No Coverage)       | 7        | 1%     | GERRYS INFORMATION TECHNOLOGY PVT LTD.
+    AS23966  | Unverified (Transit/Peer?)     | 6        | 3%     | LINKdotNET Telecom Limited
+    AS132165 | VULNERABLE (No Coverage)       | 6        | 25%    | Connect Communications
+    AS23674  | VULNERABLE (No Coverage)       | 5        | 1%     | Nayatel (Pvt) Ltd
+    AS136969 | PARTIAL (Mixed Feeds)          | 4        | 1%     | KK Networks (Pvt) Ltd.
+    AS137561 | VULNERABLE (No Coverage)       | 3        | 1%     | WAYLINK
+    AS138926 | PARTIAL (Mixed Feeds)          | 2        | 94%    | Netpoint IT & Communications Pvt. Ltd
     AS141031 | VULNERABLE (No Coverage)       | 2        | 0%     | Connect Communication
-    AS138926 | SECURE (Active Local ROV)      | 2        | 96%    | Netpoint IT & Communications Pvt. Ltd
-    AS58895  | VULNERABLE (No Coverage)       | 2        | 4%     | Ebone Network (PVT.) Limited
-    AS151330 | VULNERABLE (No Coverage)       | 1        | 2%     | PLAY BROADBAND (PRIVATE) LIMITED
+    AS140607 | VULNERABLE (No Coverage)       | 1        | 0%     | Sign In (PVT) LTD
 
     ====================================================================================================
      TRANSIT SUPPLY CHAIN (Who provides to PK?)
     ====================================================================================================
-    [*] Analyzing Upstream Supply Chain for 438 networks...
-        - Analyzed connectivity for 438 networks.
+    [*] Analyzing Upstream Supply Chain for 441 networks...
+        - Analyzed connectivity for 441 networks.
     Rank | Upstream | Dependents | Global Status                  | Name
     ----------------------------------------------------------------------------------------------------
     #1   | AS17557  | 80         | PARTIAL (Mixed Feeds)          | Pakistan Telecommunication Company Limit
@@ -57,10 +57,10 @@
     #13  | AS23966  | 7          | Unverified (Transit/Peer?)     | LINKdotNET Telecom Limited
     #14  | AS23750  | 7          | VULNERABLE (No Coverage)       | GERRYS INFORMATION TECHNOLOGY PVT LTD.
     #15  | AS23674  | 6          | VULNERABLE (No Coverage)       | Nayatel (Pvt) Ltd
-    #16  | AS141031 | 5          | VULNERABLE (No Coverage)       | Connect Communication
-    #17  | AS138926 | 5          | SECURE (Active Local ROV)      | Netpoint IT & Communications Pvt. Ltd
-    #18  | AS131471 | 5          | STUB: VULNERABLE               | Login.Me (Pvt) Ltd
-    #19  | AS136969 | 5          | VULNERABLE (No Coverage)       | KK Networks (Pvt) Ltd.
+    #16  | AS138926 | 5          | PARTIAL (Mixed Feeds)          | Netpoint IT & Communications Pvt. Ltd
+    #17  | AS141031 | 5          | VULNERABLE (No Coverage)       | Connect Communication
+    #18  | AS136969 | 5          | PARTIAL (Mixed Feeds)          | KK Networks (Pvt) Ltd.
+    #19  | AS131471 | 5          | STUB: VULNERABLE               | Login.Me (Pvt) Ltd
     #20  | AS8529   | 4          | PARTIAL (Mixed Feeds)          | Zain Omantel International FZ-LLC
 
     ====================================================================================================
@@ -70,16 +70,16 @@
     --------------------------------------------------------------------------------
     AS138655 | 10       | 1/1    | Trans World Enterprise Services (Private) Limited
     AS139820 | 8        | 1/1    | HG TELECOMMUNICATION PRIVATE LIMITED
+    AS23750  | 7        | 1/1    | GERRYS INFORMATION TECHNOLOGY PVT LTD.
     AS9260   | 7        | 3/3    | Multinet Pakistan Pvt. Ltd.
     AS132165 | 6        | 2/2    | Connect Communications
-    AS23750  | 6        | 1/1    | GERRYS INFORMATION TECHNOLOGY PVT LTD.
-    AS23674  | 4        | 4/4    | Nayatel (Pvt) Ltd
-    AS136969 | 4        | 1/1    | KK Networks (Pvt) Ltd.
+    AS23674  | 5        | 4/4    | Nayatel (Pvt) Ltd
+    AS137561 | 3        | 1/1    | WAYLINK
     AS141031 | 2        | 1/1    | Connect Communication
-    AS58895  | 2        | 2/2    | Ebone Network (PVT.) Limited
-    AS150371 | 1        | 1/1    | Pace Telecom and Brodcasting Private Limited
     AS151330 | 1        | 1/1    | PLAY BROADBAND (PRIVATE) LIMITED
     AS150750 | 1        | 1/1    | IN CABLE INTERNET (PRIVATE) LIMITED
+    AS58895  | 1        | 2/2    | Ebone Network (PVT.) Limited
     AS140607 | 1        | 2/2    | Sign In (PVT) LTD
-    AS138324 | 0        | 2/2    | JHELUM NETWORKS PVT LTD
-    AS138432 | 0        | 1/1    | SKYWORLD TELECOMMUNICATIONS (PRIVATE) LIMITED
+    AS150371 | 1        | 1/1    | Pace Telecom and Brodcasting Private Limited
+    AS153321 | 0        | 1/1    | Smart Net (Private) Limited
+    AS153354 | 0        | 2/2    | Dinco Pakistan private limited
