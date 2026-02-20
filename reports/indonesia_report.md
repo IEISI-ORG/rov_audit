@@ -3,83 +3,83 @@
     ====================================================================================================
      NATIONAL ROUTING SECURITY: ID
     ====================================================================================================
-    Total Networks:      2,752
-    Total Cone Gravity:  12,058
+    Total Networks:      3,816
+    Total Cone Gravity:  12,164
     ------------------------------------------------------------
-    SECURE NETWORKS:       146 ( 5.3%) -> Protects 59.3% of Traffic
-    VULNERABLE NETWORKS:  2360 (85.8%) -> Exposes  0.7% of Traffic
+    SECURE NETWORKS:       146 ( 3.8%) -> Protects 58.8% of Traffic
+    VULNERABLE NETWORKS:  2375 (62.2%) -> Exposes  0.7% of Traffic
 
     ====================================================================================================
      THE ID CORE (Top 20 Networks)
     ====================================================================================================
     ASN      | Verdict                        | Cone     | APNIC% | Name
     ----------------------------------------------------------------------------------------------------
-    AS7713   | SECURE (Full Coverage)         | 5632     | 0%     | Unknown
-    AS4800   | PARTIAL (Mixed Feeds)          | 585      | 1%     | Unknown
-    AS136106 | PARTIAL (Mixed Feeds)          | 528      | -      | Unknown
-    AS23947  | SECURE (Active Local ROV)      | 447      | -      | Unknown
-    AS138840 | PARTIAL (Mixed Feeds)          | 424      | 0%     | Unknown
-    AS55655  | PARTIAL (Mixed Feeds)          | 393      | -      | Unknown
-    AS7717   | PARTIAL (Mixed Feeds)          | 343      | -      | Unknown
-    AS38158  | PARTIAL (Mixed Feeds)          | 292      | -      | Unknown
-    AS131111 | SECURE (Full Coverage)         | 222      | 0%     | Unknown
-    AS45296  | PARTIAL (Mixed Feeds)          | 220      | 5%     | Unknown
-    AS4787   | SECURE (Full Coverage)         | 202      | 1%     | Unknown
-    AS58389  | PARTIAL (Mixed Feeds)          | 201      | 0%     | Unknown
-    AS4761   | PARTIAL (Mixed Feeds)          | 162      | 89%    | Unknown
-    AS17995  | SECURE (Full Coverage)         | 147      | 1%     | Unknown
-    AS64315  | PARTIAL (Mixed Feeds)          | 142      | 0%     | Unknown
-    AS58495  | PARTIAL (Mixed Feeds)          | 137      | 1%     | Unknown
-    AS55685  | PARTIAL (Mixed Feeds)          | 137      | 0%     | Unknown
-    AS45147  | SECURE (Full Coverage)         | 115      | -      | Unknown
-    AS24534  | SECURE (Full Coverage)         | 105      | 0%     | Unknown
-    AS137366 | SECURE (Full Coverage)         | 98       | -      | Unknown
+    AS7713   | SECURE (Full Coverage)         | 5632     | 0%     | PT Telkom Indonesia Tbk
+    AS4800   | PARTIAL (Mixed Feeds)          | 585      | 1%     | PT Aplikanusa Lintasarta
+    AS136106 | PARTIAL (Mixed Feeds)          | 528      | -      | PT Mega Akses Persada
+    AS23947  | SECURE (Active Local ROV)      | 447      | -      | PT Mora Telematika Indonesia Tbk
+    AS138840 | PARTIAL (Mixed Feeds)          | 424      | 0%     | PT Parsaoran Global Datatrans
+    AS55655  | PARTIAL (Mixed Feeds)          | 393      | -      | PT Sarana Insan Muda Selaras
+    AS7717   | PARTIAL (Mixed Feeds)          | 343      | -      | OpenIXP Route Servers
+    AS38158  | PARTIAL (Mixed Feeds)          | 292      | -      | PT Cyberindo Aditama
+    AS131111 | SECURE (Full Coverage)         | 222      | 0%     | PT Mora Telematika Indonesia Tbk
+    AS45296  | PARTIAL (Mixed Feeds)          | 220      | 5%     | PT Rabik Bangun Nusantara
+    AS4787   | SECURE (Full Coverage)         | 202      | 1%     | PT Cyberindo Aditama
+    AS58389  | PARTIAL (Mixed Feeds)          | 201      | 0%     | PT Sumber Data Indonesia
+    AS4761   | PARTIAL (Mixed Feeds)          | 162      | 89%    | PT Indosat Tbk
+    AS17995  | SECURE (Full Coverage)         | 147      | 1%     | PT iForte Global Internet
+    AS64315  | PARTIAL (Mixed Feeds)          | 142      | 0%     | PT Mitra Visioner Pratama
+    AS55685  | PARTIAL (Mixed Feeds)          | 137      | 0%     | PT Jala Lintas Media
+    AS58495  | PARTIAL (Mixed Feeds)          | 137      | 1%     | PT Parsaoran Global Datatrans
+    AS45147  | SECURE (Full Coverage)         | 115      | -      | PT NAP Info Lintas Nusa
+    AS24534  | SECURE (Full Coverage)         | 105      | 0%     | PT Trans Hybrid Communication
+    AS137366 | SECURE (Full Coverage)         | 98       | -      | PT iForte Solusi Infotek
 
     ====================================================================================================
      TRANSIT SUPPLY CHAIN (Who provides to ID?)
     ====================================================================================================
-    [*] Analyzing Upstream Supply Chain for 2752 networks...
-        - Analyzed connectivity for 2740 networks.
+    [*] Analyzing Upstream Supply Chain for 3816 networks...
+        - Analyzed connectivity for 3804 networks.
     Rank | Upstream | Dependents | Global Status                  | Name
     ----------------------------------------------------------------------------------------------------
-    #1   | AS7713   | 466        | SECURE (Full Coverage)         | Unknown
-    #2   | AS55655  | 273        | PARTIAL (Mixed Feeds)          | Unknown
-    #3   | AS4800   | 259        | PARTIAL (Mixed Feeds)          | Unknown
-    #4   | AS138840 | 244        | PARTIAL (Mixed Feeds)          | Unknown
-    #5   | AS136106 | 231        | PARTIAL (Mixed Feeds)          | Unknown
-    #6   | AS23947  | 205        | SECURE (Active Local ROV)      | Unknown
-    #7   | AS38158  | 187        | PARTIAL (Mixed Feeds)          | Unknown
-    #8   | AS4761   | 134        | PARTIAL (Mixed Feeds)          | Unknown
-    #9   | AS4787   | 105        | SECURE (Full Coverage)         | Unknown
-    #10  | AS45296  | 99         | PARTIAL (Mixed Feeds)          | Unknown
-    #11  | AS55685  | 97         | PARTIAL (Mixed Feeds)          | Unknown
-    #12  | AS17995  | 90         | SECURE (Full Coverage)         | Unknown
-    #13  | AS58389  | 89         | PARTIAL (Mixed Feeds)          | Unknown
-    #14  | AS58552  | 87         | STUB: VULNERABLE               | Unknown
-    #15  | AS24534  | 79         | SECURE (Full Coverage)         | Unknown
-    #16  | AS134654 | 67         | PARTIAL (Mixed Feeds)          | Unknown
-    #17  | AS45147  | 63         | SECURE (Full Coverage)         | Unknown
-    #18  | AS138128 | 58         | PARTIAL (Mixed Feeds)          | Unknown
-    #19  | AS137366 | 55         | SECURE (Full Coverage)         | Unknown
-    #20  | AS56258  | 52         | PARTIAL (Mixed Feeds)          | Unknown
+    #1   | AS7713   | 467        | SECURE (Full Coverage)         | PT Telkom Indonesia Tbk
+    #2   | AS55655  | 274        | PARTIAL (Mixed Feeds)          | PT Sarana Insan Muda Selaras
+    #3   | AS4800   | 261        | PARTIAL (Mixed Feeds)          | PT Aplikanusa Lintasarta
+    #4   | AS138840 | 249        | PARTIAL (Mixed Feeds)          | PT Parsaoran Global Datatrans
+    #5   | AS136106 | 234        | PARTIAL (Mixed Feeds)          | PT Mega Akses Persada
+    #6   | AS23947  | 207        | SECURE (Active Local ROV)      | PT Mora Telematika Indonesia Tbk
+    #7   | AS38158  | 187        | PARTIAL (Mixed Feeds)          | PT Cyberindo Aditama
+    #8   | AS4761   | 139        | PARTIAL (Mixed Feeds)          | PT Indosat Tbk
+    #9   | AS4787   | 108        | SECURE (Full Coverage)         | PT Cyberindo Aditama
+    #10  | AS45296  | 99         | PARTIAL (Mixed Feeds)          | PT Rabik Bangun Nusantara
+    #11  | AS55685  | 98         | PARTIAL (Mixed Feeds)          | PT Jala Lintas Media
+    #12  | AS17995  | 90         | SECURE (Full Coverage)         | PT iForte Global Internet
+    #13  | AS58389  | 89         | PARTIAL (Mixed Feeds)          | PT Sumber Data Indonesia
+    #14  | AS58552  | 87         | STUB: VULNERABLE               | PT Multidata Rancana Prima
+    #15  | AS24534  | 79         | SECURE (Full Coverage)         | PT Trans Hybrid Communication
+    #16  | AS134654 | 67         | PARTIAL (Mixed Feeds)          | PT Data Utama Dinamika
+    #17  | AS45147  | 64         | SECURE (Full Coverage)         | PT NAP Info Lintas Nusa
+    #18  | AS138128 | 58         | PARTIAL (Mixed Feeds)          | PT Solnet Indonesia
+    #19  | AS137366 | 56         | SECURE (Full Coverage)         | PT iForte Solusi Infotek
+    #20  | AS56258  | 52         | PARTIAL (Mixed Feeds)          | PT PGAS Telekomunikasi Nusantara
 
     ====================================================================================================
      TOP VULNERABLE ID NETWORKS
     ====================================================================================================
     ASN      | Cone     | Feeds  | Name
     --------------------------------------------------------------------------------
-    AS9905   | 35       | 1/1    | Unknown
-    AS141898 | 23       | 5/5    | Unknown
-    AS45735  | 10       | 1/1    | Unknown
-    AS141639 | 3        | 4/4    | Unknown
-    AS45317  | 2        | 1/1    | Unknown
-    AS18351  | 2        | 1/1    | Unknown
-    AS149409 | 1        | 4/4    | Unknown
-    AS150942 | 1        | 2/2    | Unknown
-    AS139415 | 1        | 4/4    | Unknown
-    AS38146  | 1        | 2/2    | Unknown
-    AS152363 | 1        | 2/2    | Unknown
-    AS147159 | 1        | 2/2    | Unknown
-    AS141966 | 1        | 4/4    | Unknown
-    AS138862 | 0        | 2/3    | Unknown
-    AS138860 | 0        | 5/6    | Unknown
+    AS9905   | 35       | 1/1    | PT Link Net Tbk
+    AS141898 | 23       | 5/5    | PT Milenial Inti Telekomunikasi
+    AS45735  | 10       | 1/1    | PT Uninet Media Sakti
+    AS141639 | 3        | 4/4    | PT Lintas Satu Visi
+    AS45317  | 2        | 1/1    | PT Jaringan Lintas Utara
+    AS18351  | 2        | 1/1    | PT Media Akses Global Indo
+    AS147159 | 1        | 2/2    | PT Beibi Cemerlang Indonesia
+    AS139415 | 1        | 4/4    | PT Trinity Teknologi Nusantara
+    AS38146  | 1        | 2/2    | PT Digital Wireless Indonesia
+    AS149409 | 1        | 4/4    | PT Core Digital Network
+    AS141966 | 1        | 4/4    | PT Instanet Media Nusantara
+    AS152363 | 1        | 2/2    | PT Delapan Broadband Intermedia
+    AS150942 | 1        | 2/2    | PT Lambda Sinergi Telekomunikasi
+    AS151588 | 0        | 2/2    | PT Arjuna Lancar Teknologi
+    AS151586 | 0        | 3/3    | PT Bintang Semesta Telematika
