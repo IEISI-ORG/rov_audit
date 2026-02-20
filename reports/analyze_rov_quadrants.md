@@ -1,7 +1,7 @@
     [*] Loading Data...
-        - Scanning JSON cache for ROA stats... OK (120467 records)
+        - Scanning JSON cache for ROA stats... OK (120468 records)
     [*] Classifying Quadrants (this takes a moment)...
-        - Processing 200/1178...    - Processing 400/1178...    - Processing 600/1178...    - Processing 800/1178...    - Processing 1000/1178...
+        - Processing 200/1181...    - Processing 400/1181...    - Processing 600/1181...    - Processing 800/1181...    - Processing 1000/1181...
     ==============================================================================================================
     ROV STRATEGIC QUADRANT REPORT
     ==============================================================================================================
@@ -12,11 +12,11 @@
     --------------------------------------------------------------------------------------------------------------
     ASN      | CC | Cone     | % Sign | Name
     --------------------------------------------------------------------------------------------------------------
-    AS1299   | SE | 47707    |  65.1% | Arelion (fka. Telia Carrier)
-    AS9002   | GB | 44712    |  67.7% | RETN Limited
-    AS17639  | PH | 41976    |  84.7% | Converge ICT Solutions Inc.
-    AS34549  | DE | 34174    |  63.8% | meerfarbig GmbH & Co. KG
-    AS33891  | DE | 33875    |  68.1% | Core-Backbone GmbH
+    AS6939   | US | 67852    |  60.1% | Unknown
+    AS1299   | SE | 47379    |  65.8% | Unknown
+    AS9002   | GB | 44443    |  67.7% | Unknown
+    AS17639  | PH | 40743    |  84.8% | Unknown
+    AS33891  | XX | 33990    |  68.2% | Unknown
 
     === Q2: THE VICTIMS ===
        SCREAMING INTO THE VOID: Customers have signed ROAs (>60%), but Provider is LEAKING.
@@ -24,11 +24,11 @@
     --------------------------------------------------------------------------------------------------------------
     ASN      | CC | Cone     | % Sign | Name
     --------------------------------------------------------------------------------------------------------------
-    AS24482  | SG | 65008    |  73.6% | SG.GS
-    AS37721  | BF | 58249    |  66.6% | Virtual Technologies & Solutions
-    AS35280  | FR | 50699    |  66.2% | F5 Networks SARL
-    AS8966   | AE | 6022     |  75.5% | Etisalat (ETC)
-    AS57304  | RU | 4144     |  71.6% | RETN Russia
+    AS24482  | SG | 65092    |  74.0% | Unknown
+    AS37721  | BF | 57511    |  66.6% | Unknown
+    AS35280  | FR | 51600    |  66.2% | Unknown
+    AS8966   | AE | 4152     |  75.6% | Unknown
+    AS24115  | XX | 2965     |  77.2% | Unknown
 
     === Q3: WASTED TECH ===
        GLASS HOUSES: Provider filters invalids, but Customers (<60%) haven't signed ROAs.
@@ -36,11 +36,11 @@
     --------------------------------------------------------------------------------------------------------------
     ASN      | CC | Cone     | % Sign | Name
     --------------------------------------------------------------------------------------------------------------
-    AS6939   | US | 67716    |  59.7% | Hurricane Electric LLC
-    AS3356   | US | 66883    |  33.1% | Lumen (Level 3)
-    AS174    | US | 64425    |  43.1% | Cogent Communications, LLC
-    AS6461   | US | 43299    |  31.9% | Zayo Bandwidth
-    AS3216   | RU | 38493    |  31.4% | Vimpelcom PJSC
+    AS3356   | US | 65297    |  33.5% | Unknown
+    AS174    | US | 64638    |  43.8% | Unknown
+    AS6461   | US | 42904    |  32.7% | Unknown
+    AS3216   | RU | 36753    |  31.9% | Unknown
+    AS3257   | US | 30050    |  50.0% | Unknown
 
     === Q4: THE SWAMP ===
        TOTAL FAILURE: Vulnerable Provider + Unsigned Customers.
@@ -48,10 +48,10 @@
     --------------------------------------------------------------------------------------------------------------
     ASN      | CC | Cone     | % Sign | Name
     --------------------------------------------------------------------------------------------------------------
-    AS38255  | CN | 4183     |   0.0% | China Education and Research Network (CERNET)
-    AS9930   | MY | 2439     |  51.8% | TIME dotCom Bhd
-    AS23764  | HK | 2197     |  58.5% | China Telecom Global
-    AS9049   | RU | 1132     |  33.0% | JSC "ER-Telecom Holding"
-    AS202365 | TR | 1108     |  47.8% | Chronos
+    AS38255  | CN | 4183     |   0.0% | Unknown
+    AS9930   | MY | 2727     |  52.8% | Unknown
+    AS23764  | HK | 2500     |  58.0% | Unknown
+    AS52025  | GB | 1929     |  56.4% | Unknown
+    AS56662  | PL | 1890     |   0.0% | Unknown
 
     [+] Full quadrant data saved to rov_quadrant_top5_v3.csv

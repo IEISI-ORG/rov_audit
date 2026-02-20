@@ -1,15 +1,15 @@
     [*] Loading Topology & Cleaning Noise...
         - Fetching CDN List... OK (108 Networks)
-        - Modeled:  117,783 'Regular' Networks
+        - Modeled:  120,313 'Regular' Networks
 
     ==========================================================================================
      1. ASPA READINESS (Simplicity vs Complexity)
     ==========================================================================================
-    Total Networks: 117,783
+    Total Networks: 120,313
     ------------------------------------------------------------
-      - Trivial (1-2 Providers):   64,775 (55.0%)
-      - Moderate (3-5 Providers):  13,646 (11.6%)
-      - Complex (>5 Providers):     2,234 ( 1.9%) -> Target for Engineering Support
+      - Trivial (1-2 Providers):   65,737 (54.6%)
+      - Moderate (3-5 Providers):  14,354 (11.9%)
+      - Complex (>5 Providers):     2,440 ( 2.0%) -> Target for Engineering Support
 
     ==========================================================================================
      2. THE ASPV ENFORCERS (Top Validators)
@@ -19,58 +19,58 @@
     ------------------------------------------------------------------------------------------
     ASN      | Cust. Links  | Name
     ------------------------------------------------------------------------------------------
-    AS174    | 6,559        | Cogent Communications, LLC
-    AS3356   | 6,433        | Lumen (Level 3)
-    AS38255  | 3,859        | China Education and Research Network (CERNET)
-    AS6939   | 3,727        | Hurricane Electric LLC
-    AS1299   | 2,448        | Arelion (fka. Telia Carrier)
-    AS7018   | 2,267        | AT&T Enterprises, LLC
-    AS6461   | 2,177        | Zayo Bandwidth
-    AS3257   | 1,736        | GTT Communications Inc.
-    AS2914   | 1,401        | NTT America, Inc.
-    AS701    | 1,213        | Verizon Business
-    AS9002   | 1,130        | RETN Limited
-    AS12389  | 1,125        | Rostelecom PJSC
-    AS8220   | 1,039        | COLT
-    AS46887  | 998          | Crown Castle Fiber LLC
-    AS20473  | 919          | The Constant Company, LLC
-    AS9498   | 865          | Bharti Airtel Ltd.
-    AS3216   | 857          | Vimpelcom PJSC
-    AS52468  | 821          | UFINET PANAMA S.A.
-    AS4755   | 715          | TATA Communications (formerly VSNL)
-    AS20485  | 662          | TransTeleCom JSC
-    AS32787  | 646          | Akamai (Prolexic)
-    AS3320   | 618          | Deutsche Telekom AG
-    AS31133  | 586          | MegaFon PJSC
-    AS6762   | 579          | Telecom Italia Sparkle (Seabone)
-    AS3491   | 574          | PCCW Global, Inc.
-    AS6453   | 561          | TATA Communications (America) Inc
-    AS16735  | 545          | Algar Telecom
-    AS5617   | 487          | Orange Polska Spolka Akcyjna
-    AS14840  | 483          | BR.DIGITAL 
-    AS4766   | 482          | Korea Telecom
-    AS7713   | 482          | PT Telkom Indonesia Tbk
-    AS22773  | 468          | Cox Communications Inc.
-    AS8359   | 458          | MTS PJSC
-    AS58717  | 448          | Summit Communications Ltd
-    AS4826   | 434          | Vocus Connect International Backbone
-    AS12741  | 414          | Netia SA
-    AS9049   | 403          | JSC "ER-Telecom Holding"
-    AS34927  | 400          | iFog GmbH
-    AS53062  | 394          | ALT | GRUPO BRASIL TECPAR
-    AS209    | 378          | Lumen (ex. Qwest)
-    AS3786   | 365          | LG DACOM Corporation
-    AS9318   | 362          | SK Broadband Co Ltd
-    AS8708   | 362          | DIGI ROMANIA S.A.
-    AS4230   | 355          | Claro (Embratel)
-    AS4637   | 345          | Telstra International Limited
-    AS3549   | 325          | Lumen (fka. Global Crossing)
-    AS54004  | 323          | Cablevision Lightpath LLC
-    AS5511   | 309          | Orange S.A.
-    AS7545   | 292          | TPG Telecom Limited
-    AS9121   | 287          | Turk Telekom
+    AS174    | 6,668        | Unknown
+    AS3356   | 6,543        | Unknown
+    AS38255  | 3,859        | Unknown
+    AS6939   | 3,831        | Unknown
+    AS1299   | 2,515        | Unknown
+    AS7018   | 2,298        | Unknown
+    AS6461   | 2,214        | Unknown
+    AS3257   | 1,773        | Unknown
+    AS2914   | 1,435        | Unknown
+    AS701    | 1,227        | Unknown
+    AS9002   | 1,156        | Unknown
+    AS12389  | 1,135        | Unknown
+    AS8220   | 1,059        | Unknown
+    AS46887  | 1,006        | Unknown
+    AS20473  | 934          | Unknown
+    AS9498   | 887          | Unknown
+    AS3216   | 860          | Unknown
+    AS52468  | 827          | Unknown
+    AS4755   | 738          | Unknown
+    AS15830  | 687          | Unknown
+    AS20485  | 672          | Unknown
+    AS32787  | 656          | Unknown
+    AS3320   | 622          | Unknown
+    AS6762   | 594          | Unknown
+    AS31133  | 590          | Unknown
+    AS3491   | 590          | Unknown
+    AS6453   | 586          | Unknown
+    AS16735  | 550          | Unknown
+    AS5617   | 491          | Unknown
+    AS14840  | 488          | Unknown
+    AS4766   | 485          | Unknown
+    AS7713   | 483          | Unknown
+    AS22773  | 472          | Unknown
+    AS8359   | 460          | Unknown
+    AS58717  | 453          | Unknown
+    AS4826   | 439          | Unknown
+    AS12741  | 416          | Unknown
+    AS9049   | 405          | Unknown
+    AS34927  | 404          | Unknown
+    AS53062  | 399          | Unknown
+    AS209    | 383          | Unknown
+    AS3786   | 368          | Unknown
+    AS9318   | 367          | Unknown
+    AS8708   | 366          | Unknown
+    AS4230   | 362          | Unknown
+    AS4637   | 362          | Unknown
+    AS3549   | 330          | Unknown
+    AS54004  | 324          | Unknown
+    AS5511   | 322          | Unknown
+    AS7545   | 293          | Unknown
     ------------------------------------------------------------------------------------------
-    Top 50 Enforcers cover 54,116 / 158,995 links (34.0%)
+    Top 50 Enforcers cover 55,384 / 165,071 links (33.6%)
 
     ==========================================================================================
      3. COMPLEXITY GIANTS (Traffic Engineering Heavyweights)
@@ -79,55 +79,55 @@
     ------------------------------------------------------------------------------------------
     ASN      | Providers  | Cone     | Name
     ------------------------------------------------------------------------------------------
-    AS3573   | 96         | 120      | Accenture LLP
-    AS262663 | 93         | 188      | METROFLEX TELECOMUNICACOES LTDA
-    AS21433  | 80         | 62       | Accenture UK Limited
-    AS13150  | 48         | 40       | CATO NETWORKS LTD
-    AS55256  | 48         | 14       | Netskope Inc
-    AS42473  | 46         | 81       | Anexia Cloud Solutions GmbH
-    AS268314 | 46         | 62       | SUPORTI TELECOM
-    AS25369  | 39         | 35       | Hydra Communications Ltd
-    AS205563 | 38         | 11       | Marc Gomez
-    AS23154  | 37         | 5        | Sanmina-SCI Corporation
-    AS31898  | 36         | 45       | Oracle Cloud
-    AS209847 | 33         | 14       | WorkTitans B.V.
-    AS52468  | 32         | 4642     | UFINET PANAMA S.A.
-    AS14593  | 32         | 29       | SpaceX Starlink
-    AS136258 | 32         | 9        | BrainStorm Network, Inc
-    AS72     | 32         | 1        | Schlumberger Limited
-    AS16839  | 32         | 0        | SERVICENOW, INC.
-    AS205080 | 31         | 0        | SITA
-    AS30012  | 30         | 9        | Universal Music Group, INC.
-    AS53153  | 30         | 5        | CINTE Telecom Comercio e Servicos Ltda.
-    AS262727 | 30         | 5        | AtualNet Provedor de Internet Ltda
-    AS45102  | 30         | 1        | Alibaba (US) Technology Co., Ltd.
-    AS35928  | 30         | 0        | BECKMAN COULTER, INC.
-    AS20473  | 29         | 10041    | The Constant Company, LLC
-    AS9498   | 29         | 7660     | Bharti Airtel Ltd.
-    AS15695  | 29         | 20       | Expereo International BV
-    AS203391 | 29         | 0        | Cloud DNS Ltd
-    AS9002   | 28         | 44712    | RETN Limited
-    AS40934  | 28         | 2        | Fortinet Inc.
-    AS272218 | 28         | 2        | Luiz Henrique Rocha Maciel
-    AS12222  | 28         | 1        | Akamai Technologies, Inc.
-    AS52025  | 27         | 1812     | ParadoxNetworks Limited
-    AS45204  | 27         | 21       | GEMNET LLC
-    AS10798  | 27         | 9        | The Standard Bank of South Africa (Proprietary) Li
-    AS212085 | 27         | 5        | Alexander Bruegmann
-    AS54253  | 27         | 1        | Oracle Corporation
-    AS23764  | 26         | 2197     | China Telecom Global
-    AS56910  | 26         | 18       | Digital Realty Hellas Single Member S.A
-    AS25818  | 26         | 7        | cmcnetworks
-    AS36224  | 26         | 3        | HCL AMERICA INC
-    AS30844  | 25         | 549      | Liquid Intelligent Technologies 
-    AS398465 | 25         | 28       | Rackdog LLC
-    AS28590  | 25         | 9        | Directnet Prestacao de Servicos Ltda.
-    AS54119  | 25         | 1        | WhiteSky Communications, LLC.
-    AS30103  | 25         | 0        | Zoom Video Communications, Inc
-    AS10122  | 24         | 14       | NETSTAR (SG) PTE. LTD.
-    AS6507   | 24         | 2        | Riot Games, Inc
-    AS43009  | 24         | 1        | Infobip Limited
-    AS14630  | 24         | 0        | Invesco Group Services, Inc.
-    AS47583  | 24         | 0        | Hostinger International Limited
+    AS3573   | 98         | 121      | Unknown
+    AS262663 | 94         | 217      | Unknown
+    AS21433  | 82         | 31       | Unknown
+    AS13150  | 51         | 18       | Unknown
+    AS55256  | 50         | 14       | Unknown
+    AS42473  | 48         | 79       | Unknown
+    AS268314 | 47         | 61       | Unknown
+    AS25369  | 42         | 26       | Unknown
+    AS205563 | 39         | 10       | Unknown
+    AS31898  | 37         | 68       | Unknown
+    AS23154  | 37         | 5        | Unknown
+    AS15830  | 35         | 3696     | Unknown
+    AS14593  | 34         | 28       | Unknown
+    AS209847 | 34         | 14       | Unknown
+    AS52468  | 33         | 4691     | Unknown
+    AS136258 | 33         | 14       | Unknown
+    AS72     | 33         | 2        | Unknown
+    AS15695  | 32         | 19       | Unknown
+    AS16839  | 32         | 0        | Unknown
+    AS20473  | 31         | 14661    | Unknown
+    AS30012  | 31         | 9        | Unknown
+    AS45102  | 31         | 1        | Unknown
+    AS205080 | 31         | 0        | Unknown
+    AS53153  | 30         | 10       | Unknown
+    AS262727 | 30         | 5        | Unknown
+    AS35928  | 30         | 0        | Unknown
+    AS9498   | 29         | 7889     | Unknown
+    AS40934  | 29         | 5        | Unknown
+    AS12222  | 29         | 1        | Unknown
+    AS203391 | 29         | 0        | Unknown
+    AS9002   | 28         | 44443    | Unknown
+    AS52025  | 28         | 1929     | Unknown
+    AS272218 | 28         | 2        | Unknown
+    AS54253  | 28         | 1        | Unknown
+    AS45204  | 27         | 21       | Unknown
+    AS56910  | 27         | 17       | Unknown
+    AS10798  | 27         | 13       | Unknown
+    AS25818  | 27         | 7        | Unknown
+    AS212085 | 27         | 6        | Unknown
+    AS23764  | 26         | 2500     | Unknown
+    AS36224  | 26         | 3        | Unknown
+    AS7713   | 25         | 5632     | Unknown
+    AS30844  | 25         | 514      | Unknown
+    AS398465 | 25         | 28       | Unknown
+    AS8674   | 25         | 12       | Unknown
+    AS28590  | 25         | 9        | Unknown
+    AS6507   | 25         | 2        | Unknown
+    AS54119  | 25         | 1        | Unknown
+    AS30103  | 25         | 0        | Unknown
+    AS11179  | 25         | 0        | Unknown
 
-    [+] Full list of 2234 complex networks saved to 'aspa_complexity_list.csv'
+    [+] Full list of 2440 complex networks saved to 'aspa_complexity_list.csv'

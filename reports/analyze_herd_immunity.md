@@ -5,13 +5,13 @@
     ================================================================================
 
     [GLOBAL CORE] (The 100 largest networks)
-      Networks Secure:      86 / 100  (86.0%)
-      Traffic Protected:   85.4% (by Cone Weight)
+      Networks Secure:      84 / 100  (84.0%)
+      Traffic Protected:   85.1% (by Cone Weight)
       Progress: |██████████████████████████████████████████░░░░░░░░|
 
     [TRANSIT LAYER] (The 1000 largest networks)
-      Networks Secure:     478 / 1000  (47.8%)
-      Traffic Protected:   82.8% (by Cone Weight)
+      Networks Secure:     495 / 1000  (49.5%)
+      Traffic Protected:   82.6% (by Cone Weight)
       Progress: |█████████████████████████████████████████░░░░░░░░░|
 
     ================================================================================
@@ -21,31 +21,31 @@
     --------------------------------------------------------------------------------
     Rank  | ASN      | CC | Cone Size  | Name
     --------------------------------------------------------------------------------
-    #158  | AS4134   | CN | 378        | China Telecom Backbone
-    #177  | AS45820  | IN | 306        | Tata Teleservices ISP
-    #214  | AS9730   | IN | 241        | Bharti Telesonic Ltd
-    #363  | AS45117  | IN | 111        | Ishan's Network
-    #376  | AS4837   | CN | 103        | China Unicom Backbone
-    #377  | AS33132  | US | 103        | Crown Castle Fiber LLC
-    #383  | AS17762  | IN | 100        | Tata Teleservices Maharashtra Ltd
-    #404  | AS35708  | DE | 94         | 4b42 UG
-    #419  | AS12357  | ES | 91         | VODAFONE ESPANA S.A.U.
-    #515  | AS9808   | CN | 68         | China Mobile Backbone
-    #542  | AS58656  | BD | 62         | bdHUB Limited
-    #675  | AS25227  | RU | 45         | JSC Avantel
-    #683  | AS135718 | IN | 44         | DISHAWAVES INFONET PVT. LTD
-    #693  | AS141731 | BD | 43         | Max Hub Limited
-    #705  | AS212330 | IQ | 42         | Civilisation Information Technology, com
-    #710  | AS23688  | BD | 42         | Link3 Technologies Ltd.
-    #711  | AS4812   | CN | 41         | China Telecom Shanghai Province Network
-    #729  | AS38272  | CN | 40         | China Education and Research Network (CE
-    #732  | AS9425   | CN | 40         | Future Internet Technology Infrastructur
-    #772  | AS22974  | US | 36         | Charter Communications LLC
-    #788  | AS43531  | FR | 35         | BSO Network Solutions SAS
-    #791  | AS9905   | ID | 35         | PT Link Net Tbk
-    #793  | AS24323  | BD | 35         | aamra networks limited
-    #819  | AS5384   | AE | 33         | EMIRATES TELECOMMUNICATIONS GROUP COMPAN
-    #885  | AS63969  | BD | 30         | Race Online Limited
+    #153  | AS4134   | CN | 383        | Unknown
+    #175  | AS45820  | IN | 315        | Unknown
+    #212  | AS9730   | IN | 238        | Unknown
+    #345  | AS17762  | IN | 123        | Unknown
+    #358  | AS45117  | IN | 113        | Unknown
+    #363  | AS4837   | CN | 111        | Unknown
+    #376  | AS33132  | US | 105        | Unknown
+    #402  | AS35708  | XX | 96         | Unknown
+    #412  | AS12357  | ES | 94         | Unknown
+    #499  | AS9808   | CN | 69         | Unknown
+    #612  | AS58656  | BD | 53         | Unknown
+    #668  | AS25227  | RU | 46         | Unknown
+    #686  | AS135718 | IN | 44         | Unknown
+    #702  | AS141731 | BD | 42         | Unknown
+    #706  | AS4812   | CN | 42         | Unknown
+    #713  | AS212330 | IQ | 41         | Unknown
+    #721  | AS38272  | CN | 40         | Unknown
+    #727  | AS9425   | CN | 40         | Unknown
+    #733  | AS23688  | BD | 39         | Unknown
+    #773  | AS22974  | US | 36         | Unknown
+    #779  | AS149765 | BD | 36         | Unknown
+    #786  | AS9905   | ID | 35         | Unknown
+    #805  | AS24323  | BD | 34         | Unknown
+    #806  | AS43531  | XX | 34         | Unknown
+    #808  | AS15836  | MD | 34         | Unknown
     --------------------------------------------------------------------------------
 
     CONCLUSION:

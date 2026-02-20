@@ -3,81 +3,81 @@
     ====================================================================================================
      NATIONAL ROUTING SECURITY: PG
     ====================================================================================================
-    Total Networks:      39
-    Total Cone Gravity:  23
+    Total Networks:      30
+    Total Cone Gravity:  19
     ------------------------------------------------------------
-    SECURE NETWORKS:         2 ( 5.1%) -> Protects 0.0% of Traffic
-    VULNERABLE NETWORKS:    26 (66.7%) -> Exposes  0.0% of Traffic
+    SECURE NETWORKS:         3 (10.0%) -> Protects 0.0% of Traffic
+    VULNERABLE NETWORKS:    23 (76.7%) -> Exposes  0.0% of Traffic
 
     ====================================================================================================
      THE PG CORE (Top 20 Networks)
     ====================================================================================================
     ASN      | Verdict                        | Cone     | APNIC% | Name
     ----------------------------------------------------------------------------------------------------
-    AS17828  | PARTIAL (Mixed Feeds)          | 18       | 69%    | PNG DATACO LTD
-    AS58460  | PARTIAL (Mixed Feeds)          | 5        | 16%    | Digicel (PNG) Ltd
-    AS153781 | STUB: VULNERABLE               | 0        | -      | Wintop Investment Limited
-    AS153621 | STUB: VULNERABLE               | 0        | -      | GIT LIMITED
-    AS152477 | STUB: VULNERABLE               | 0        | -      | LOTIC Bige Limited
-    AS152883 | NOT ROUTED                     | 0        | -      | Teachers Savings and Loan Society Limite
-    AS152655 | STUB: VULNERABLE               | 0        | 25%    | Digicel (PNG) Ltd
-    AS142269 | STUB: SECURE (Full Coverage)   | 0        | -      | KINA BANK
-    AS140935 | NOT ROUTED                     | 0        | -      | Asia Pacific Communication Specialist (P
-    AS140665 | STUB: VULNERABLE               | 0        | -      | KINECT LIMITED
-    AS138506 | STUB: VULNERABLE               | 0        | -      | PNG Nambawan Trophy Ltd
-    AS136802 | STUB: VULNERABLE               | 0        | -      | LBP Holdings Limited
-    AS136940 | STUB: VULNERABLE               | 0        | -      | ComSat Ltd
-    AS136587 | STUB: VULNERABLE               | 0        | -      | PNG DATACO LIMITED
-    AS137068 | NOT ROUTED                     | 0        | -      | Digitec PNG Limited
-    AS137064 | NOT ROUTED                     | 0        | -      | ISC F-ROOT ABQ1
-    AS137054 | STUB: VULNERABLE               | 0        | -      | OFC
-    AS139898 | STUB: VULNERABLE               | 0        | 0%     | Digitec Communications Limited
-    AS139783 | STUB: VULNERABLE               | 0        | -      | Genesis Communications (PNG) Limited
-    AS139778 | STUB: VULNERABLE               | 0        | -      | DALTRON
+    AS17828  | PARTIAL (Mixed Feeds)          | 19       | 6%     | Unknown
+    AS146949 | NOT ROUTED                     | 0        | -      | Unknown
+    AS147024 | STUB: VULNERABLE               | 0        | -      | Unknown
+    AS142269 | STUB: SECURE (Full Coverage)   | 0        | -      | Unknown
+    AS153621 | STUB: VULNERABLE               | 0        | -      | Unknown
+    AS153781 | STUB: VULNERABLE               | 0        | -      | Unknown
+    AS151398 | STUB: SECURE (Full Coverage)   | 0        | -      | Unknown
+    AS152655 | STUB: SECURE (Active ROV)      | 0        | 100%   | Unknown
+    AS151647 | STUB: VULNERABLE               | 0        | -      | Unknown
+    AS152477 | STUB: VULNERABLE               | 0        | -      | Unknown
+    AS38009  | STUB: VULNERABLE               | 0        | 4%     | Unknown
+    AS63945  | STUB: VULNERABLE               | 0        | 5%     | Unknown
+    AS132786 | NOT ROUTED                     | 0        | -      | Unknown
+    AS58460  | STUB: VULNERABLE               | 0        | 6%     | Unknown
+    AS138506 | STUB: VULNERABLE               | 0        | -      | Unknown
+    AS138902 | STUB: VULNERABLE               | 0        | -      | Unknown
+    AS140665 | STUB: VULNERABLE               | 0        | -      | Unknown
+    AS139783 | STUB: VULNERABLE               | 0        | -      | Unknown
+    AS139778 | STUB: VULNERABLE               | 0        | -      | Unknown
+    AS139898 | STUB: VULNERABLE               | 0        | 1%     | Unknown
 
     ====================================================================================================
      TRANSIT SUPPLY CHAIN (Who provides to PG?)
     ====================================================================================================
-    [*] Analyzing Upstream Supply Chain for 39 networks...
-        - Analyzed connectivity for 39 networks.
+    [*] Analyzing Upstream Supply Chain for 30 networks...
+        - Analyzed connectivity for 30 networks.
     Rank | Upstream | Dependents | Global Status                  | Name
     ----------------------------------------------------------------------------------------------------
-    #1   | AS17828  | 18         | PARTIAL (Mixed Feeds)          | PNG DATACO LTD
-    #2   | AS58460  | 4          | PARTIAL (Mixed Feeds)          | Digicel (PNG) Ltd
-    #3   | AS6939   | 3          | CORE: PROTECTED                | Hurricane Electric LLC
-    #4   | AS4637   | 3          | CORE: PROTECTED                | Telstra International Limited
-    #5   | AS135409 | 3          | PARTIAL (Mixed Feeds)          | Kacific Broadband Satellites Pte Ltd
-    #6   | AS4826   | 2          | SECURE (Full Coverage)         | Vocus Connect International Backbone
-    #7   | AS12684  | 2          | PARTIAL (Mixed Feeds)          | SES ASTRA S.A.
-    #8   | AS13335  | 2          | SECURE (Full Coverage)         | Cloudflare, Inc.
-    #9   | AS7474   | 1          | SECURE (Full Coverage)         | SingTel Optus Pty Ltd
-    #10  | AS1299   | 1          | CORE: PROTECTED                | Arelion (fka. Telia Carrier)
-    #11  | AS58453  | 1          | PARTIAL (Mixed Feeds)          | China Mobile International
-    #12  | AS152655 | 1          | STUB: VULNERABLE               | Digicel (PNG) Ltd
-    #13  | AS38442  | 1          | PARTIAL (Mixed Feeds)          | Vodafone Fiji Limited
-    #14  | AS31732  | 1          | PARTIAL (Mixed Feeds)          | Parsun Network Solutions PTY LTD
-    #15  | AS55792  | 1          | STUB: VULNERABLE               | Datec-PNG
-    #16  | AS45411  | 1          | STUB: VULNERABLE               | APCS Australia
-    #17  | AS139898 | 1          | STUB: VULNERABLE               | Digitec Communications Limited
-    #18  | AS24516  | 1          | PARTIAL (Mixed Feeds)          | Virtutel Pty Ltd
+    #1   | AS17828  | 18         | PARTIAL (Mixed Feeds)          | Unknown
+    #2   | AS58460  | 4          | STUB: VULNERABLE               | Unknown
+    #3   | AS6939   | 3          | CORE: PROTECTED                | Unknown
+    #4   | AS4637   | 3          | CORE: PROTECTED                | Unknown
+    #5   | AS135409 | 3          | PARTIAL (Mixed Feeds)          | Unknown
+    #6   | AS4826   | 2          | SECURE (Full Coverage)         | Unknown
+    #7   | AS13335  | 2          | SECURE (Full Coverage)         | Unknown
+    #8   | AS12684  | 2          | PARTIAL (Mixed Feeds)          | Unknown
+    #9   | AS7474   | 1          | SECURE (Full Coverage)         | Unknown
+    #10  | AS1299   | 1          | CORE: PROTECTED                | Unknown
+    #11  | AS58453  | 1          | PARTIAL (Mixed Feeds)          | Unknown
+    #12  | AS31732  | 1          | PARTIAL (Mixed Feeds)          | Unknown
+    #13  | AS139898 | 1          | STUB: VULNERABLE               | Unknown
+    #14  | AS45411  | 1          | STUB: VULNERABLE               | Unknown
+    #15  | AS152655 | 1          | STUB: SECURE (Active ROV)      | Unknown
+    #16  | AS38442  | 1          | PARTIAL (Mixed Feeds)          | Unknown
+    #17  | AS55792  | 1          | STUB: VULNERABLE               | Unknown
+    #18  | AS24516  | 1          | PARTIAL (Mixed Feeds)          | Unknown
 
     ====================================================================================================
      TOP VULNERABLE PG NETWORKS
     ====================================================================================================
     ASN      | Cone     | Feeds  | Name
     --------------------------------------------------------------------------------
-    AS153781 | 0        | 1/1    | Wintop Investment Limited
-    AS153621 | 0        | 1/1    | GIT LIMITED
-    AS152477 | 0        | 1/1    | LOTIC Bige Limited
-    AS152655 | 0        | 2/2    | Digicel (PNG) Ltd
-    AS140665 | 0        | 1/1    | KINECT LIMITED
-    AS138506 | 0        | 2/2    | PNG Nambawan Trophy Ltd
-    AS136802 | 0        | 1/1    | LBP Holdings Limited
-    AS136940 | 0        | 1/1    | ComSat Ltd
-    AS136587 | 0        | 1/1    | PNG DATACO LIMITED
-    AS137054 | 0        | 1/1    | OFC
-    AS139898 | 0        | 3/4    | Digitec Communications Limited
-    AS139783 | 0        | 1/1    | Genesis Communications (PNG) Limited
-    AS139778 | 0        | 1/1    | DALTRON
-    AS138902 | 0        | 1/1    | Emstret Holdings Ltd
-    AS151647 | 0        | 1/1    | Rural Tech Development
+    AS147024 | 0        | 1/2    | Unknown
+    AS153621 | 0        | 1/1    | Unknown
+    AS153781 | 0        | 1/1    | Unknown
+    AS151647 | 0        | 1/1    | Unknown
+    AS152477 | 0        | 1/1    | Unknown
+    AS38009  | 0        | 1/2    | Unknown
+    AS63945  | 0        | 1/1    | Unknown
+    AS58460  | 0        | 1/2    | Unknown
+    AS138506 | 0        | 1/1    | Unknown
+    AS138902 | 0        | 1/1    | Unknown
+    AS140665 | 0        | 1/1    | Unknown
+    AS139783 | 0        | 1/1    | Unknown
+    AS139778 | 0        | 1/1    | Unknown
+    AS139898 | 0        | 3/4    | Unknown
+    AS134605 | 0        | 1/1    | Unknown
