@@ -4,36 +4,36 @@
      NATIONAL ROUTING SECURITY: CL
     ====================================================================================================
     Total Networks:      391
-    Total Cone Gravity:  308
+    Total Cone Gravity:  312
     ------------------------------------------------------------
-    SECURE NETWORKS:        66 (16.9%) -> Protects 64.6% of Traffic
-    VULNERABLE NETWORKS:   229 (58.6%) -> Exposes  8.8% of Traffic
+    SECURE NETWORKS:        55 (14.1%) -> Protects 62.8% of Traffic
+    VULNERABLE NETWORKS:   239 (61.1%) -> Exposes  10.6% of Traffic
 
     ====================================================================================================
      THE CL CORE (Top 20 Networks)
     ====================================================================================================
     ASN      | Verdict                        | Cone     | APNIC% | Name
     ----------------------------------------------------------------------------------------------------
-    AS14259  | SECURE (Full Coverage)         | 61       | 0%     | Gtd Internet S.A.
+    AS14259  | SECURE (Full Coverage)         | 62       | 0%     | Gtd Internet S.A.
     AS263702 | SECURE (Full Coverage)         | 57       | 0%     | GRUPO ZGH SPA
-    AS7004   | SECURE (Full Coverage)         | 35       | 5%     | TELEFÓNICA CHILE S.A.
-    AS6471   | Unverified (Transit/Peer?)     | 19       | -      | ENTEL CHILE S.A.
-    AS16629  | VULNERABLE (No Coverage)       | 19       | 4%     | CTC. CORP S.A. (TELEFONICA EMPRESAS)
-    AS263237 | PARTIAL (Mixed Feeds)          | 17       | -      | PowerHost Telecom SPA
+    AS7004   | SECURE (Full Coverage)         | 36       | 30%    | TELEFÓNICA CHILE S.A.
+    AS263237 | PARTIAL (Mixed Feeds)          | 20       | -      | PowerHost Telecom SPA
+    AS6471   | Unverified (Transit/Peer?)     | 18       | -      | ENTEL CHILE S.A.
+    AS16629  | VULNERABLE (No Coverage)       | 18       | 15%    | CTC. CORP S.A. (TELEFONICA EMPRESAS)
     AS61503  | SECURE (Full Coverage)         | 17       | 0%     | SERVICIOS DE TELECOMUNICACIONES INTERCAB
-    AS6429   | Unverified (Transit/Peer?)     | 16       | 23%    | Telmex Chile Internet S.A.
-    AS266771 | SECURE (Full Coverage)         | 14       | 14%    | MAKRONET CONSULTING TECNOLOGIA E INFORMA
-    AS266830 | PARTIAL (Mixed Feeds)          | 10       | 3%     | AIRPOINT TELECOMUNICACIONES LIMITADA
+    AS6429   | Unverified (Transit/Peer?)     | 16       | 13%    | Telmex Chile Internet S.A.
+    AS266771 | SECURE (Full Coverage)         | 14       | 15%    | MAKRONET CONSULTING TECNOLOGIA E INFORMA
+    AS266830 | PARTIAL (Mixed Feeds)          | 9        | 0%     | AIRPOINT TELECOMUNICACIONES LIMITADA
     AS14117  | VULNERABLE (No Coverage)       | 8        | 0%     | Telefonica del Sur S.A.
     AS27901  | PARTIAL (Mixed Feeds)          | 7        | 0%     | Pacifico Cable SPA.
-    AS11340  | SECURE (Active Local ROV)      | 7        | -      | Red Universitaria Nacional
-    AS64139  | PARTIAL (Mixed Feeds)          | 4        | 0%     | GRUPO METROWAN TELECOM SPA
+    AS11340  | VULNERABLE (No Coverage)       | 7        | 0%     | Red Universitaria Nacional
+    AS10778  | PARTIAL (Mixed Feeds)          | 5        | -      | MCL Internet
     AS264827 | SECURE (Full Coverage)         | 4        | 100%   | WIRCOM S.P.A.
-    AS10778  | PARTIAL (Mixed Feeds)          | 4        | -      | MCL Internet
     AS27986  | SECURE (Full Coverage)         | 2        | -      | ENTEL CHILE S.A.
+    AS27978  | SECURE (Full Coverage)         | 2        | -      | Telmex Servicios Empresariales S.A.
+    AS265757 | PARTIAL (Mixed Feeds)          | 2        | 0%     | Intersur Limitada
     AS262237 | PARTIAL (Mixed Feeds)          | 2        | -      | Orbyta S.A.
-    AS64112  | SECURE (Full Coverage)         | 1        | -      | PIT CHILE SP
-    AS27659  | SECURE (Full Coverage)         | 1        | -      | Ingeniería e Informática Asociada Ltda (
+    AS27678  | PARTIAL (Mixed Feeds)          | 1        | -      | NIC Chile
 
     ====================================================================================================
      TRANSIT SUPPLY CHAIN (Who provides to CL?)
@@ -68,18 +68,18 @@
     ====================================================================================================
     ASN      | Cone     | Feeds  | Name
     --------------------------------------------------------------------------------
-    AS16629  | 19       | 1/1    | CTC. CORP S.A. (TELEFONICA EMPRESAS)
+    AS16629  | 18       | 1/1    | CTC. CORP S.A. (TELEFONICA EMPRESAS)
     AS14117  | 8        | 1/1    | Telefonica del Sur S.A.
-    AS274199 | 0        | 1/1    | INGENIERIA INVERSIONES TECNOLOGIA Y CONSTRUCCION E
-    AS274225 | 0        | 1/1    | TELECOMUNICACIONES WIFINET RUPERTO TRONCOSO E.I.R.
+    AS11340  | 7        | 1/1    | Red Universitaria Nacional
+    AS274042 | 0        | 1/2    | INVERSIONES SB S.A. (SALCOBRAND)
+    AS274073 | 0        | 1/1    | Texus Networks SpA
     AS273973 | 0        | 1/1    | APOAPSIS SPA
     AS273955 | 0        | 1/1    | XHOST Servicios Informáticos SPA
-    AS274000 | 0        | 1/1    | CYBEWARD CL SPA
-    AS273988 | 0        | 1/2    | VALLENET SPA
-    AS273886 | 0        | 1/1    | NET GROUP-CHILE LTDA
-    AS273879 | 0        | 1/1    | CRONET TELECOM SPA
-    AS273920 | 0        | 1/1    | TU ESPACIO NET SPA
+    AS274025 | 0        | 1/1    | SERVICIOS INTEGRALES METFY TELECOM SPA
+    AS274000 | 0        | 2/2    | CYBEWARD CL SPA
+    AS274199 | 0        | 1/1    | INGENIERIA INVERSIONES TECNOLOGIA Y CONSTRUCCION E
+    AS274225 | 0        | 1/1    | TELECOMUNICACIONES WIFINET RUPERTO TRONCOSO E.I.R.
     AS274099 | 0        | 1/1    | VALLENET SPA
     AS274136 | 0        | 1/1    | DB TERRA CHILE HOLDCO SpA
-    AS274042 | 0        | 1/2    | INVERSIONES SB S.A. (SALCOBRAND)
-    AS274025 | 0        | 1/1    | SERVICIOS INTEGRALES METFY TELECOM SPA
+    AS270102 | 0        | 1/1    | LINENET LIMITADA
+    AS270094 | 0        | 1/1    | CONEXIONES REDES Y TELECOMUNICACIONES SPA

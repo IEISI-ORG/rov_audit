@@ -3,43 +3,43 @@
     ====================================================================================================
      NATIONAL ROUTING SECURITY: FR
     ====================================================================================================
-    Total Networks:      1,861
-    Total Cone Gravity:  117,246
+    Total Networks:      1,860
+    Total Cone Gravity:  121,876
     ------------------------------------------------------------
-    SECURE NETWORKS:       702 (37.7%) -> Protects 55.3% of Traffic
-    VULNERABLE NETWORKS:   635 (34.1%) -> Exposes  0.0% of Traffic
+    SECURE NETWORKS:       699 (37.6%) -> Protects 56.5% of Traffic
+    VULNERABLE NETWORKS:   642 (34.5%) -> Exposes  0.0% of Traffic
 
     ====================================================================================================
      THE FR CORE (Top 20 Networks)
     ====================================================================================================
     ASN      | Verdict                        | Cone     | APNIC% | Name
     ----------------------------------------------------------------------------------------------------
-    AS35280  | Unverified (Transit/Peer?)     | 51600    | -      | F5 Networks SARL
-    AS34019  | SECURE (Full Coverage)         | 25612    | -      | Hivane Association
-    AS212024 | SECURE (Full Coverage)         | 14312    | -      | Marc Schmitt
-    AS30781  | SECURE (Full Coverage)         | 11912    | 99%    | Free Pro SAS
-    AS8218   | SECURE (Full Coverage)         | 4249     | -      | Zayo Europe
-    AS204092 | SECURE (Active Local ROV)      | 3274     | -      | Association GRIFON
-    AS50628  | SECURE (Full Coverage)         | 2557     | -      | Leonix Telecom SAS
-    AS5511   | CORE: PROTECTED                | 2068     | 97%    | Orange S.A.
-    AS35625  | PARTIAL (Mixed Feeds)          | 291      | 0%     | Eurofiber France SAS
-    AS16276  | SECURE (Active Local ROV)      | 244      | 0%     | OVH SAS
-    AS3215   | SECURE (Active Local ROV)      | 150      | 27%    | Orange S.A.
-    AS29075  | SECURE (Active Local ROV)      | 146      | 1%     | IELO-LIAZO SERVICES SAS
-    AS15557  | SECURE (Active Local ROV)      | 89       | 9%     | SFR SA
-    AS31216  | PARTIAL (Mixed Feeds)          | 71       | -      | BSO Network Solutions SAS
-    AS35661  | PARTIAL (Mixed Feeds)          | 71       | 0%     | VIRTUA SYSTEMS SAS
-    AS2200   | PARTIAL (Mixed Feeds)          | 38       | 7%     | Renater
-    AS43531  | VULNERABLE (No Coverage)       | 34       | -      | BSO Network Solutions SAS
-    AS34177  | PARTIAL (Mixed Feeds)          | 26       | 0%     | CELESTE SAS
+    AS35280  | Unverified (Transit/Peer?)     | 52107    | -      | F5 Networks SARL
+    AS34019  | SECURE (Full Coverage)         | 30745    | -      | Hivane Association
+    AS212024 | SECURE (Full Coverage)         | 14259    | -      | Marc Schmitt
+    AS30781  | SECURE (Full Coverage)         | 11253    | 96%    | Free Pro SAS
+    AS8218   | SECURE (Full Coverage)         | 4075     | -      | Zayo Europe
+    AS204092 | SECURE (Active Local ROV)      | 3187     | -      | Association GRIFON
+    AS50628  | SECURE (Full Coverage)         | 2556     | -      | Leonix Telecom SAS
+    AS5511   | CORE: PROTECTED                | 1951     | 98%    | Orange S.A.
+    AS35625  | PARTIAL (Mixed Feeds)          | 358      | 0%     | Eurofiber France SAS
+    AS16276  | SECURE (Active Local ROV)      | 248      | 0%     | OVH SAS
+    AS3215   | SECURE (Active Local ROV)      | 150      | 99%    | Orange S.A.
+    AS29075  | SECURE (Active Local ROV)      | 147      | 0%     | IELO-LIAZO SERVICES SAS
+    AS15557  | SECURE (Active Local ROV)      | 88       | 58%    | SFR SA
+    AS35661  | PARTIAL (Mixed Feeds)          | 79       | -      | VIRTUA SYSTEMS SAS
+    AS31216  | PARTIAL (Mixed Feeds)          | 69       | -      | BSO Network Solutions SAS
+    AS43531  | VULNERABLE (No Coverage)       | 39       | -      | BSO Network Solutions SAS
+    AS2200   | PARTIAL (Mixed Feeds)          | 38       | 2%     | Renater
+    AS34177  | PARTIAL (Mixed Feeds)          | 25       | 0%     | CELESTE SAS
     AS39801  | PARTIAL (Mixed Feeds)          | 24       | -      | France-IX L3 Services
-    AS16347  | PARTIAL (Mixed Feeds)          | 22       | 3%     | ADISTA SAS
+    AS212815 | SECURE (Active Local ROV)      | 23       | -      | Dyjix SAS
 
     ====================================================================================================
      TRANSIT SUPPLY CHAIN (Who provides to FR?)
     ====================================================================================================
-    [*] Analyzing Upstream Supply Chain for 1861 networks...
-        - Analyzed connectivity for 1859 networks.
+    [*] Analyzing Upstream Supply Chain for 1860 networks...
+        - Analyzed connectivity for 1856 networks.
     Rank | Upstream | Dependents | Global Status                  | Name
     ----------------------------------------------------------------------------------------------------
     #1   | AS174    | 322        | CORE: PROTECTED                | Cogent Communications, LLC
@@ -68,18 +68,18 @@
     ====================================================================================================
     ASN      | Cone     | Feeds  | Name
     --------------------------------------------------------------------------------
-    AS43531  | 34       | 1/1    | BSO Network Solutions SAS
+    AS43531  | 39       | 2/2    | BSO Network Solutions SAS
     AS24990  | 1        | 1/1    | Equinix France SAS
-    AS29092  | 0        | 1/1    | NXO France SAS
+    AS30839  | 0        | 1/1    | Chambre de Commerce et d'Industrie Pau Bearn
+    AS30889  | 0        | 2/5    | ADISTA SAS
+    AS30801  | 0        | 1/1    | Nomotech SAS
+    AS30919  | 0        | 1/2    | Expertise France SAS
     AS29104  | 0        | 3/11   | Thales Services Numeriques SAS
+    AS29092  | 0        | 1/1    | NXO France SAS
     AS29301  | 0        | 3/4    | KARAVEL SAS
     AS29199  | 0        | 1/1    | Chambre De Commerce et d'Industrie De region Paris
-    AS29246  | 0        | 1/6    | OPTILIAN SARL
+    AS3296   | 0        | 1/3    | Societe Generale S.A.
     AS28708  | 0        | 1/3    | Orange S.A.
-    AS29513  | 0        | 3/11   | Foliateam Operateur SAS
-    AS5583   | 0        | 10/22  | Orange S.A.
+    AS29513  | 0        | 2/10   | Foliateam Operateur SAS
+    AS5583   | 0        | 11/23  | Orange S.A.
     AS8399   | 0        | 11/23  | SEWAN SAS
-    AS30919  | 0        | 1/2    | Expertise France SAS
-    AS6738   | 0        | 3/10   | DRI SAS
-    AS3259   | 0        | 1/7    | DOCAPOST BPO SAS
-    AS3299   | 0        | 2/4    | Societe Generale S.A.

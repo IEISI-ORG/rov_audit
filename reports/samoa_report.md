@@ -14,16 +14,16 @@
     ====================================================================================================
     ASN      | Verdict                        | Cone     | APNIC% | Name
     ----------------------------------------------------------------------------------------------------
-    AS17993  | SECURE (Active Local ROV)      | 1        | 100%   | Vodafone Samoa Limited
+    AS17993  | SECURE (Active Local ROV)      | 1        | 99%    | Vodafone Samoa Limited
     AS153053 | STUB: VULNERABLE               | 0        | -      | Lesamoa.net
+    AS138356 | NOT ROUTED                     | 0        | -      | National University of Samoa
     AS139679 | NOT ROUTED                     | 0        | -      | Office of the Electoral Commission
     AS150321 | STUB: SECURE (Full Coverage)   | 0        | -      | Secretariat of the Pacific Regional Envi
-    AS138356 | NOT ROUTED                     | 0        | -      | National University of Samoa
     AS9218   | NOT ROUTED                     | 0        | -      | WISEVAN GUARD Limited
     AS55579  | NOT ROUTED                     | 0        | -      | Computer Services Ltd
     AS134376 | NOT ROUTED                     | 0        | -      | Samoa IXP
     AS38227  | NOT ROUTED                     | 0        | -      | Computer Services Limited (CSL)
-    AS38800  | NOT ROUTED                     | 0        | 1%     | Digicel Samoa Ltd
+    AS38800  | NOT ROUTED                     | 0        | 0%     | Digicel Samoa Ltd
 
     ====================================================================================================
      TRANSIT SUPPLY CHAIN (Who provides to WS?)
@@ -37,7 +37,7 @@
     #3   | AS4826   | 1          | SECURE (Full Coverage)         | Vocus Connect International Backbone
     #4   | AS6939   | 1          | CORE: PROTECTED                | Hurricane Electric LLC
     #5   | AS174    | 1          | CORE: PROTECTED                | Cogent Communications, LLC
-    #6   | AS18400  | 1          | PARTIAL (Mixed Feeds)          | Xtreme Networks Limited
+    #6   | AS18400  | 1          | VULNERABLE (No Coverage)       | Xtreme Networks Limited
     #7   | AS38800  | 1          | NOT ROUTED                     | Digicel Samoa Ltd
     #8   | AS132528 | 1          | STUB: VULNERABLE               | DIGICEL (AUS) PTY LTD
 

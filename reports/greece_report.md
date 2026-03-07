@@ -4,36 +4,36 @@
      NATIONAL ROUTING SECURITY: GR
     ====================================================================================================
     Total Networks:      255
-    Total Cone Gravity:  485
+    Total Cone Gravity:  476
     ------------------------------------------------------------
-    SECURE NETWORKS:       111 (43.5%) -> Protects 83.3% of Traffic
-    VULNERABLE NETWORKS:   103 (40.4%) -> Exposes  0.0% of Traffic
+    SECURE NETWORKS:       111 (43.5%) -> Protects 87.4% of Traffic
+    VULNERABLE NETWORKS:   105 (41.2%) -> Exposes  0.2% of Traffic
 
     ====================================================================================================
      THE GR CORE (Top 20 Networks)
     ====================================================================================================
     ASN      | Verdict                        | Cone     | APNIC% | Name
     ----------------------------------------------------------------------------------------------------
-    AS8280   | SECURE (Active Local ROV)      | 249      | 100%   | SYNAPSECOM S.A. Provider of Telecommunic
-    AS6799   | Unverified (Transit/Peer?)     | 37       | 99%    | Ote SA (Hellenic Telecommunications Orga
-    AS1241   | SECURE (Active Local ROV)      | 31       | 99%    | Nova Telecommunications & Media Single M
-    AS3329   | SECURE (Full Coverage)         | 30       | 99%    | Vodafone Greece
+    AS8280   | SECURE (Active Local ROV)      | 236      | 100%   | SYNAPSECOM S.A. Provider of Telecommunic
+    AS6799   | Unverified (Transit/Peer?)     | 38       | 99%    | Ote SA (Hellenic Telecommunications Orga
+    AS3329   | SECURE (Full Coverage)         | 31       | 99%    | Vodafone Greece
+    AS1241   | SECURE (Active Local ROV)      | 30       | 99%    | Nova Telecommunications & Media Single M
     AS5408   | SECURE (Full Coverage)         | 29       | 100%   | National Infrastructures for Research an
     AS198477 | SECURE (Full Coverage)         | 24       | -      | TI SPARKLE GREECE SA
-    AS25472  | PARTIAL (Mixed Feeds)          | 22       | 0%     | Nova Telecommunications & Media Single M
-    AS199081 | SECURE (Active Local ROV)      | 21       | 100%   | Lancom Ltd.
+    AS199081 | SECURE (Active Local ROV)      | 23       | 100%   | Lancom Ltd.
+    AS25472  | SECURE (Full Coverage)         | 22       | 0%     | Nova Telecommunications & Media Single M
     AS56910  | SECURE (Full Coverage)         | 17       | -      | Digital Realty Hellas Single Member S.A
     AS206735 | PARTIAL (Mixed Feeds)          | 13       | 0%     | Novelcomm LP
     AS216285 | PARTIAL (Mixed Feeds)          | 3        | -      | MYIP NETWORKS G.P.
     AS4601   | PARTIAL (Mixed Feeds)          | 2        | -      | Antonios A. Chariton
-    AS51505  | PARTIAL (Mixed Feeds)          | 1        | 5%     | Dimosia Epicheirisi Ilektrismou Anonymi 
-    AS206652 | SECURE (Full Coverage)         | 1        | -      | Ioannis Roditis trading as Greekstream N
-    AS196945 | PARTIAL (Mixed Feeds)          | 1        | -      | Microbase PC
-    AS200736 | PARTIAL (Mixed Feeds)          | 1        | 0%     | MEDIANET INVEST AE
     AS56457  | SECURE (Full Coverage)         | 1        | -      | FASTPATH IKE
-    AS35506  | SECURE (Full Coverage)         | 1        | 98%    | INFORMATION SOCIETY S.A.
+    AS206652 | SECURE (Full Coverage)         | 1        | -      | Ioannis Roditis trading as Greekstream N
+    AS200736 | PARTIAL (Mixed Feeds)          | 1        | 0%     | MEDIANET INVEST AE
     AS50919  | PARTIAL (Mixed Feeds)          | 1        | -      | INTERWORKS Single Member S.A.
-    AS199370 | STUB: SECURE (Full Coverage)   | 0        | -      | Athens International Airport SA
+    AS196945 | SECURE (Full Coverage)         | 1        | -      | Microbase PC
+    AS35506  | SECURE (Full Coverage)         | 1        | 99%    | INFORMATION SOCIETY S.A.
+    AS35372  | VULNERABLE (No Coverage)       | 1        | -      | GeniusMind S.A.
+    AS51505  | PARTIAL (Mixed Feeds)          | 1        | 0%     | Dimosia Epicheirisi Ilektrismou Anonymi 
 
     ====================================================================================================
      TRANSIT SUPPLY CHAIN (Who provides to GR?)
@@ -49,7 +49,7 @@
     #5   | AS3329   | 24         | SECURE (Full Coverage)         | Vodafone Greece
     #6   | AS198477 | 22         | SECURE (Full Coverage)         | TI SPARKLE GREECE SA
     #7   | AS199081 | 21         | SECURE (Active Local ROV)      | Lancom Ltd.
-    #8   | AS25472  | 20         | PARTIAL (Mixed Feeds)          | Nova Telecommunications & Media Single M
+    #8   | AS25472  | 20         | SECURE (Full Coverage)         | Nova Telecommunications & Media Single M
     #9   | AS6762   | 17         | CORE: PROTECTED                | Telecom Italia Sparkle (Seabone)
     #10  | AS6939   | 17         | CORE: PROTECTED                | Hurricane Electric LLC
     #11  | AS56910  | 17         | SECURE (Full Coverage)         | Digital Realty Hellas Single Member S.A
@@ -68,18 +68,18 @@
     ====================================================================================================
     ASN      | Cone     | Feeds  | Name
     --------------------------------------------------------------------------------
-    AS200128 | 0        | 1/1    | DNHOST IKE
-    AS200368 | 0        | 1/1    | Abnormal Frequency Single Member P.C.
-    AS200314 | 0        | 2/2    | Algosystems S.A.
-    AS197899 | 0        | 6/14   | LAN SINGLE MEMBER P.C.
-    AS197580 | 0        | 1/4    | CONNECTICORE TELECOMMUNICATIONS INFORMATION TECHNO
+    AS35372  | 1        | 1/1    | GeniusMind S.A.
+    AS199375 | 0        | 1/3    | Service 800 Teleperformance Single Member S.A.
+    AS197899 | 0        | 5/13   | LAN SINGLE MEMBER P.C.
+    AS197580 | 0        | 1/4    | Connecticore Telecommunications Information Techno
     AS198188 | 0        | 1/2    | Ventzislav Nikolov Trading as MTEL
     AS197389 | 0        | 1/3    | CBS-LAN S.A.
     AS204399 | 0        | 1/1    | Stavros Charos
+    AS206697 | 0        | 1/2    | Eurolife ERB General Insurance SA
     AS207540 | 0        | 2/3    | Cloud Concept S.A.
     AS205904 | 0        | 1/1    | VOICELAND SA
-    AS206697 | 0        | 1/2    | Eurolife ERB General Insurance SA
     AS206456 | 0        | 2/4    | Citiwave Systems Ltd.
-    AS201494 | 0        | 5/11   | MODULUS A.E.
-    AS202224 | 0        | 10/15  | Giannis Kontos
-    AS202042 | 0        | 1/5    | Skroutz Internet Services S.A.
+    AS201293 | 0        | 2/2    | OPAP S.A
+    AS201494 | 0        | 4/10   | MODULUS A.E.
+    AS200128 | 0        | 1/1    | DNHOST IKE
+    AS200368 | 0        | 2/2    | Abnormal Frequency Single Member P.C.

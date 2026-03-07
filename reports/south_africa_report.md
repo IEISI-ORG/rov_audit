@@ -3,43 +3,43 @@
     ====================================================================================================
      NATIONAL ROUTING SECURITY: ZA
     ====================================================================================================
-    Total Networks:      731
-    Total Cone Gravity:  794
+    Total Networks:      732
+    Total Cone Gravity:  803
     ------------------------------------------------------------
-    SECURE NETWORKS:       268 (36.7%) -> Protects 34.4% of Traffic
-    VULNERABLE NETWORKS:   336 (46.0%) -> Exposes  0.5% of Traffic
+    SECURE NETWORKS:       268 (36.6%) -> Protects 35.7% of Traffic
+    VULNERABLE NETWORKS:   335 (45.8%) -> Exposes  0.5% of Traffic
 
     ====================================================================================================
      THE ZA CORE (Top 20 Networks)
     ====================================================================================================
     ASN      | Verdict                        | Cone     | APNIC% | Name
     ----------------------------------------------------------------------------------------------------
-    AS37271  | SECURE (Active Local ROV)      | 157      | 100%   | Workonline Communications(Pty) Ltd
-    AS3741   | PARTIAL (Mixed Feeds)          | 92       | 3%     | Dimension Data
-    AS16637  | PARTIAL (Mixed Feeds)          | 87       | 0%     | MTN SA (Bayobab)
+    AS37271  | SECURE (Active Local ROV)      | 165      | 100%   | Workonline Communications(Pty) Ltd
+    AS3741   | PARTIAL (Mixed Feeds)          | 90       | 5%     | Dimension Data
+    AS16637  | PARTIAL (Mixed Feeds)          | 71       | 0%     | MTN SA (Bayobab)
     AS5713   | PARTIAL (Mixed Feeds)          | 55       | 0%     | Telkom SA Ltd.
     AS36994  | PARTIAL (Mixed Feeds)          | 39       | 0%     | Vodacom
-    AS327782 | PARTIAL (Mixed Feeds)          | 33       | 0%     | Metrofibre Networx
-    AS37497  | SECURE (Active Local ROV)      | 32       | -      | Network Platforms (PTY) LTD
+    AS37497  | SECURE (Active Local ROV)      | 35       | -      | Network Platforms (PTY) LTD
+    AS327782 | PARTIAL (Mixed Feeds)          | 32       | 0%     | Metrofibre Networx
     AS328748 | PARTIAL (Mixed Feeds)          | 30       | -      | Agile Solutions Provider (PTY) LTD
-    AS327693 | SECURE (Active Local ROV)      | 27       | 86%    | Echotel Pty Ltd
-    AS9129   | Unverified (Transit/Peer?)     | 23       | 0%     | MTN Business Kenya
-    AS37179  | SECURE (Full Coverage)         | 16       | 1%     | Africa Independent Network Exchange (Pty
-    AS37358  | PARTIAL (Mixed Feeds)          | 16       | 1%     | BitCo
+    AS327693 | SECURE (Active Local ROV)      | 29       | 84%    | Echotel Pty Ltd
+    AS9129   | Unverified (Transit/Peer?)     | 24       | 0%     | MTN Business Kenya
+    AS10798  | PARTIAL (Mixed Feeds)          | 19       | -      | The Standard Bank of South Africa (Propr
+    AS37179  | SECURE (Full Coverage)         | 16       | 0%     | Africa Independent Network Exchange (Pty
+    AS37358  | PARTIAL (Mixed Feeds)          | 16       | 2%     | BitCo
+    AS328333 | PARTIAL (Mixed Feeds)          | 16       | 0%     | Fixed Mobile Telecommunications (Pty) LT
     AS36874  | PARTIAL (Mixed Feeds)          | 15       | 0%     | Cybersmart
-    AS328333 | PARTIAL (Mixed Feeds)          | 15       | 1%     | Fixed Mobile Telecommunications (Pty) LT
-    AS10798  | PARTIAL (Mixed Feeds)          | 13       | -      | The Standard Bank of South Africa (Propr
-    AS37731  | PARTIAL (Mixed Feeds)          | 13       | -      | Web Squad Connect (Pty) Ltd
+    AS37731  | PARTIAL (Mixed Feeds)          | 11       | -      | Web Squad Connect (Pty) Ltd
+    AS25818  | PARTIAL (Mixed Feeds)          | 10       | 18%    | cmcnetworks
     AS37239  | PARTIAL (Mixed Feeds)          | 10       | 1%     | ICTGlobe Management (Pty) Ltd
-    AS37153  | SECURE (Active Local ROV)      | 8        | 1%     | Xneelo (Pty) Ltd
+    AS37153  | SECURE (Active Local ROV)      | 9        | 0%     | Xneelo (Pty) Ltd
     AS37739  | SECURE (Active Local ROV)      | 8        | -      | Abantu Cloud Africa (Pty) Ltd
-    AS25818  | PARTIAL (Mixed Feeds)          | 7        | -      | cmcnetworks
 
     ====================================================================================================
      TRANSIT SUPPLY CHAIN (Who provides to ZA?)
     ====================================================================================================
-    [*] Analyzing Upstream Supply Chain for 731 networks...
-        - Analyzed connectivity for 730 networks.
+    [*] Analyzing Upstream Supply Chain for 732 networks...
+        - Analyzed connectivity for 731 networks.
     Rank | Upstream | Dependents | Global Status                  | Name
     ----------------------------------------------------------------------------------------------------
     #1   | AS37100  | 130        | SECURE (Active Local ROV)      | SEACOM Limited
@@ -69,17 +69,17 @@
     ASN      | Cone     | Feeds  | Name
     --------------------------------------------------------------------------------
     AS36937  | 4        | 1/1    | Liquid Telecommunications South Africa (Pty) Ltd
-    AS329165 | 0        | 1/1    | Wild Peach Trading 52 (PTY) LTD
-    AS329166 | 0        | 2/6    | Absolute Hosting (Pty) Ltd
-    AS329122 | 0        | 1/3    | FiberFly PTY Ltd
-    AS329124 | 0        | 1/1    | True Technologies cc
-    AS329126 | 0        | 1/5    | IIP1 Pty Ltd
-    AS329133 | 0        | 1/1    | East London Industrial Development Zone SOC LTD
-    AS329139 | 0        | 1/1    | Mthinte Communication Pty Ltd
-    AS329229 | 0        | 1/1    | Stellar Technology Solutions (Pty) Ltd
-    AS329153 | 0        | 1/4    | SWDconnect (ISWCORP) 
-    AS329243 | 0        | 1/4    | One Mile Telecoms (Pty) Ltd.
-    AS329247 | 0        | 1/1    | Swift Fibre
+    AS329578 | 0        | 1/1    | URBANXCONNECT (PTY) LTD
+    AS329234 | 0        | 1/1    | ISPA SA
     AS329184 | 0        | 2/5    | Host Africa (Pty) Ltd
-    AS329214 | 0        | 1/1    | MASTERCARD SOUTHERN AFRICA (PTY) LTD
-    AS329606 | 0        | 1/1    | Blue Turtle Technologies (Pty) Ltd
+    AS329277 | 0        | 1/1    | e-centric Switch (Proprietary) Limited
+    AS329279 | 0        | 1/3    | N W Internet Service
+    AS329284 | 0        | 1/1    | Invisible Waves
+    AS329291 | 0        | 1/3    | Euphoria Telecom (PTY) LTD
+    AS329294 | 0        | 1/1    | SOUTHERN CROSS SOLUTIONS (PTY) LTD
+    AS329295 | 0        | 1/1    | Pepkor Trading (Pty) Ltd
+    AS329300 | 0        | 1/1    | Valostar 139 (Pty) Ltd
+    AS329243 | 0        | 1/4    | One Mile Telecoms (Pty) Ltd.
+    AS329501 | 0        | 1/1    | Old Mutual Investment Group (PTY) Ltd
+    AS329502 | 0        | 1/1    | INDEPENDENT MONITORING SERVICES (PTY) LTD
+    AS329515 | 0        | 1/1    | Hubtech Investments

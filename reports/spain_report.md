@@ -3,43 +3,43 @@
     ====================================================================================================
      NATIONAL ROUTING SECURITY: ES
     ====================================================================================================
-    Total Networks:      1,161
-    Total Cone Gravity:  2,853
+    Total Networks:      1,163
+    Total Cone Gravity:  2,934
     ------------------------------------------------------------
-    SECURE NETWORKS:       226 (19.5%) -> Protects 66.7% of Traffic
-    VULNERABLE NETWORKS:   656 (56.5%) -> Exposes  3.7% of Traffic
+    SECURE NETWORKS:       224 (19.3%) -> Protects 67.0% of Traffic
+    VULNERABLE NETWORKS:   658 (56.6%) -> Exposes  3.5% of Traffic
 
     ====================================================================================================
      THE ES CORE (Top 20 Networks)
     ====================================================================================================
     ASN      | Verdict                        | Cone     | APNIC% | Name
     ----------------------------------------------------------------------------------------------------
-    AS12956  | CORE: PROTECTED                | 1371     | -      | Telxius (Telefonica Global)
-    AS29119  | PARTIAL (Mixed Feeds)          | 331      | 0%     | AIRE NETWORKS DEL MEDITERRANEO SL UNIPER
-    AS60171  | SECURE (Active Local ROV)      | 189      | 100%   | AFR-IX TELECOM S.A.
-    AS12357  | VULNERABLE (No Coverage)       | 94       | 0%     | VODAFONE ESPANA S.A.U.
+    AS12956  | CORE: PROTECTED                | 1411     | -      | Telxius (Telefonica Global)
+    AS29119  | PARTIAL (Mixed Feeds)          | 329      | 0%     | AIRE NETWORKS DEL MEDITERRANEO SL UNIPER
+    AS60171  | SECURE (Active Local ROV)      | 209      | 99%    | AFR-IX TELECOM S.A.
+    AS12357  | VULNERABLE (No Coverage)       | 92       | 0%     | VODAFONE ESPANA S.A.U.
+    AS3352   | Unverified (Transit/Peer?)     | 85       | 99%    | TELEFONICA DE ESPANA S.A.U.
     AS12479  | SECURE (Active Local ROV)      | 79       | 99%    | Orange Espagne SA
-    AS3352   | Unverified (Transit/Peer?)     | 78       | 99%    | TELEFONICA DE ESPANA S.A.U.
-    AS8903   | PARTIAL (Mixed Feeds)          | 67       | 6%     | LYNTIA NETWORKS S.A.
-    AS12541  | SECURE (Full Coverage)         | 58       | -      | LYNTIA NETWORKS S.A.
-    AS202766 | SECURE (Full Coverage)         | 57       | -      | LYNTIA NETWORKS S.A.
-    AS35699  | PARTIAL (Mixed Feeds)          | 54       | 20%    | Adamo Telecom Iberia S.A.
+    AS8903   | PARTIAL (Mixed Feeds)          | 67       | 0%     | LYNTIA NETWORKS S.A.
+    AS12541  | SECURE (Full Coverage)         | 59       | -      | LYNTIA NETWORKS S.A.
+    AS202766 | SECURE (Full Coverage)         | 59       | -      | LYNTIA NETWORKS S.A.
+    AS35699  | PARTIAL (Mixed Feeds)          | 57       | 0%     | Adamo Telecom Iberia S.A.
     AS49600  | PARTIAL (Mixed Feeds)          | 45       | -      | NEAR IP, S.L.
-    AS207336 | PARTIAL (Mixed Feeds)          | 43       | -      | Netassist SL
-    AS15704  | SECURE (Active Local ROV)      | 28       | 19%    | XTRA TELECOM S.A.
-    AS3262   | SECURE (Full Coverage)         | 26       | 89%    | SAREnet, S.A.
-    AS766    | SECURE (Full Coverage)         | 22       | 5%     | Entidad Publica Empresarial Red.es
+    AS207336 | PARTIAL (Mixed Feeds)          | 39       | -      | Netassist SL
+    AS15704  | SECURE (Active Local ROV)      | 28       | 18%    | XTRA TELECOM S.A.
+    AS3262   | SECURE (Full Coverage)         | 26       | 86%    | SAREnet, S.A.
+    AS766    | SECURE (Full Coverage)         | 22       | 2%     | Entidad Publica Empresarial Red.es
+    AS200845 | PARTIAL (Mixed Feeds)          | 21       | 0%     | AVATEL TELECOM, SA
+    AS34696  | PARTIAL (Mixed Feeds)          | 19       | -      | MISMELINK NETWORKS, SL
     AS8637   | PARTIAL (Mixed Feeds)          | 19       | -      | SpainWISP, S.L.
     AS34471  | PARTIAL (Mixed Feeds)          | 18       | 0%     | Free Technologies Excom S.L.
-    AS200845 | PARTIAL (Mixed Feeds)          | 17       | 0%     | AVATEL TELECOM, SA
-    AS34696  | PARTIAL (Mixed Feeds)          | 17       | -      | MISMELINK NETWORKS, SL
     AS49353  | SECURE (Full Coverage)         | 16       | -      | Valor Information Technologies, S.L.
 
     ====================================================================================================
      TRANSIT SUPPLY CHAIN (Who provides to ES?)
     ====================================================================================================
-    [*] Analyzing Upstream Supply Chain for 1161 networks...
-        - Analyzed connectivity for 1159 networks.
+    [*] Analyzing Upstream Supply Chain for 1163 networks...
+        - Analyzed connectivity for 1161 networks.
     Rank | Upstream | Dependents | Global Status                  | Name
     ----------------------------------------------------------------------------------------------------
     #1   | AS29119  | 188        | PARTIAL (Mixed Feeds)          | AIRE NETWORKS DEL MEDITERRANEO SL UNIPER
@@ -68,18 +68,18 @@
     ====================================================================================================
     ASN      | Cone     | Feeds  | Name
     --------------------------------------------------------------------------------
-    AS12357  | 94       | 1/1    | VODAFONE ESPANA S.A.U.
+    AS12357  | 92       | 1/1    | VODAFONE ESPANA S.A.U.
     AS50977  | 6        | 1/1    | AVATEL TELECOM, SA
     AS202636 | 2        | 1/1    | Invermae Solutions SL
     AS12462  | 2        | 3/3    | Evolutio Cloud Enabler S.A. Unipersonal
     AS31577  | 1        | 1/1    | AIRE NETWORKS DEL MEDITERRANEO SL UNIPERSONAL
-    AS210319 | 0        | 1/1    | Telecable Cartaya S.L.
+    AS209688 | 0        | 1/1    | TELE RED S.A.
+    AS210395 | 0        | 1/2    | INTERNET MANTENIMIENTOS SL
     AS210472 | 0        | 1/1    | Parlem Telecom Companyia de Telecomunicacions SA
     AS210469 | 0        | 1/1    | Carlos Latorre Sanchez
-    AS210395 | 0        | 1/2    | INTERNET MANTENIMIENTOS SL
     AS210423 | 0        | 2/3    | ATUAXANELA, S.L.
-    AS210086 | 0        | 2/2    | CONNECTA 1876 SLU
-    AS210007 | 0        | 1/2    | INSTITUCION FERIAL DE MADRID
-    AS210048 | 0        | 1/1    | Oficina Semat Data, SL
     AS210123 | 0        | 4/10   | NUBBITEL TELECOM,S.L.
-    AS210181 | 0        | 2/2    | Pablo Sarria Perez
+    AS210048 | 0        | 1/1    | Oficina Semat Data, SL
+    AS210086 | 0        | 2/2    | CONNECTA 1876 SLU
+    AS210158 | 0        | 1/3    | AGENCIA PARA LA ADMINITRACION DIGITAL DE LA COMUNI
+    AS210181 | 0        | 1/1    | Pablo Sarria Perez

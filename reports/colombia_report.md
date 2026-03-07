@@ -3,43 +3,43 @@
     ====================================================================================================
      NATIONAL ROUTING SECURITY: CO
     ====================================================================================================
-    Total Networks:      467
-    Total Cone Gravity:  1,804
+    Total Networks:      473
+    Total Cone Gravity:  1,735
     ------------------------------------------------------------
-    SECURE NETWORKS:        88 (18.8%) -> Protects 84.5% of Traffic
-    VULNERABLE NETWORKS:   278 (59.5%) -> Exposes  0.0% of Traffic
+    SECURE NETWORKS:        75 (15.9%) -> Protects 82.4% of Traffic
+    VULNERABLE NETWORKS:   289 (61.1%) -> Exposes  0.1% of Traffic
 
     ====================================================================================================
      THE CO CORE (Top 20 Networks)
     ====================================================================================================
     ASN      | Verdict                        | Cone     | APNIC% | Name
     ----------------------------------------------------------------------------------------------------
-    AS7195   | SECURE (Active Local ROV)      | 1242     | -      | EdgeUno
-    AS18678  | PARTIAL (Mixed Feeds)          | 169      | 60%    | INTERNEXA S.A. E.S.P
-    AS52320  | SECURE (Active Local ROV)      | 108      | 0%     | V.tal (GlobeNet)
-    AS262191 | Unverified (Transit/Peer?)     | 60       | 1%     | LIBERTY NETWORKS DE COLOMBIA S.A.S
-    AS3816   | SECURE (Full Coverage)         | 46       | 5%     | COLOMBIA TELECOMUNICACIONES S.A. ESP BIC
-    AS27951  | SECURE (Active Local ROV)      | 42       | 37%    | Media Commerce Partners S.A
-    AS262186 | SECURE (Full Coverage)         | 34       | 18%    | TV AZTECA SUCURSAL COLOMBIA
+    AS7195   | SECURE (Active Local ROV)      | 1197     | -      | EdgeUno
+    AS18678  | PARTIAL (Mixed Feeds)          | 158      | 62%    | INTERNEXA S.A. E.S.P
+    AS52320  | SECURE (Active Local ROV)      | 104      | -      | V.tal (GlobeNet)
+    AS262191 | Unverified (Transit/Peer?)     | 57       | 0%     | LIBERTY NETWORKS DE COLOMBIA S.A.S
+    AS3816   | SECURE (Full Coverage)         | 45       | 4%     | COLOMBIA TELECOMUNICACIONES S.A. ESP BIC
+    AS27951  | SECURE (Active Local ROV)      | 41       | 36%    | Media Commerce Partners S.A
+    AS262186 | SECURE (Full Coverage)         | 30       | 11%    | TV AZTECA SUCURSAL COLOMBIA
     AS13489  | PARTIAL (Mixed Feeds)          | 28       | 0%     | EPM Telecomunicaciones S.A. E.S.P.
-    AS14080  | SECURE (Full Coverage)         | 25       | 24%    | Telmex Colombia S.A.
-    AS19429  | SECURE (Full Coverage)         | 17       | 0%     | ETB - Colombia
-    AS273103 | SECURE (Active Local ROV)      | 11       | 84%    | TV&MÁS S.A.S
-    AS265688 | PARTIAL (Mixed Feeds)          | 5        | 65%    | SINERGY SOLUCIONES INTEGRALES
-    AS267708 | PARTIAL (Mixed Feeds)          | 5        | 0%     | SP SISTEMAS PALACIOS LTDA
+    AS14080  | PARTIAL (Mixed Feeds)          | 27       | 25%    | Telmex Colombia S.A.
+    AS19429  | PARTIAL (Mixed Feeds)          | 13       | 0%     | ETB - Colombia
+    AS273103 | SECURE (Active Local ROV)      | 12       | 74%    | TV&MÁS S.A.S
+    AS267708 | PARTIAL (Mixed Feeds)          | 6        | 0%     | SP SISTEMAS PALACIOS LTDA
+    AS265688 | PARTIAL (Mixed Feeds)          | 5        | 90%    | SINERGY SOLUCIONES INTEGRALES
     AS270075 | PARTIAL (Mixed Feeds)          | 4        | 0%     | SUPER REDES S.A.S
-    AS27845  | PARTIAL (Mixed Feeds)          | 2        | 0%     | Empresa de Recursos Tecnologicos S.A E.S
+    AS267788 | PARTIAL (Mixed Feeds)          | 2        | 20%    | IP TECHNOLOGIES S.A.S.
     AS272156 | PARTIAL (Mixed Feeds)          | 2        | 87%    | WEB MASTER COLOMBIA SAS
-    AS271957 | PARTIAL (Mixed Feeds)          | 1        | 0%     | SOMOS NETWORKS COLOMBIA S.A.S. BIC
-    AS269742 | PARTIAL (Mixed Feeds)          | 1        | 0%     | AVIDTEL E.U.
-    AS27837  | PARTIAL (Mixed Feeds)          | 1        | 0%     | Dialnet de Colombia S.A. E.S.P.
-    AS26619  | PARTIAL (Mixed Feeds)          | 1        | 0%     | GTD COLOMBIA S.A.S
+    AS271957 | PARTIAL (Mixed Feeds)          | 2        | 0%     | SOMOS NETWORKS COLOMBIA S.A.S. BIC
+    AS27845  | VULNERABLE (No Coverage)       | 1        | 0%     | Empresa de Recursos Tecnologicos S.A E.S
+    AS26619  | PARTIAL (Mixed Feeds)          | 1        | 2%     | GTD COLOMBIA S.A.S
+    AS265696 | STUB: SECURE (Full Coverage)   | 0        | 7%     | Asociación Red Universitaria de Alta Vel
 
     ====================================================================================================
      TRANSIT SUPPLY CHAIN (Who provides to CO?)
     ====================================================================================================
-    [*] Analyzing Upstream Supply Chain for 467 networks...
-        - Analyzed connectivity for 462 networks.
+    [*] Analyzing Upstream Supply Chain for 473 networks...
+        - Analyzed connectivity for 463 networks.
     Rank | Upstream | Dependents | Global Status                  | Name
     ----------------------------------------------------------------------------------------------------
     #1   | AS18678  | 65         | PARTIAL (Mixed Feeds)          | INTERNEXA S.A. E.S.P
@@ -52,9 +52,9 @@
     #8   | AS262186 | 32         | SECURE (Full Coverage)         | TV AZTECA SUCURSAL COLOMBIA
     #9   | AS262589 | 30         | SECURE (Active Local ROV)      | SAMM (Internexa)
     #10  | AS13489  | 24         | PARTIAL (Mixed Feeds)          | EPM Telecomunicaciones S.A. E.S.P.
-    #11  | AS14080  | 23         | SECURE (Full Coverage)         | Telmex Colombia S.A.
+    #11  | AS14080  | 23         | PARTIAL (Mixed Feeds)          | Telmex Colombia S.A.
     #12  | AS7195   | 21         | SECURE (Active Local ROV)      | EdgeUno
-    #13  | AS19429  | 20         | SECURE (Full Coverage)         | ETB - Colombia
+    #13  | AS19429  | 20         | PARTIAL (Mixed Feeds)          | ETB - Colombia
     #14  | AS23520  | 18         | PARTIAL (Mixed Feeds)          | Columbus Networks USA, Inc.
     #15  | AS52320  | 15         | SECURE (Active Local ROV)      | V.tal (GlobeNet)
     #16  | AS174    | 13         | CORE: PROTECTED                | Cogent Communications, LLC
@@ -68,18 +68,18 @@
     ====================================================================================================
     ASN      | Cone     | Feeds  | Name
     --------------------------------------------------------------------------------
-    AS52258  | 0        | 1/2    | Digiware S.A.
-    AS274200 | 0        | 1/1    | SERVIRED LMA COMUNICACIONES S.A.S.
-    AS274193 | 0        | 1/2    | Unknown
-    AS274249 | 0        | 1/1    | DEVELOPMENT OF BIG TECHNOLOGIES - DOBIT S.A.S.
-    AS274248 | 0        | 1/2    | REINTECH SAS
-    AS274245 | 0        | 1/1    | WIFIMAX S.A.S.
+    AS27845  | 1        | 3/3    | Empresa de Recursos Tecnologicos S.A E.S.P
+    AS269737 | 0        | 1/1    | QUALITY NET JM S.A.S. ZOMAC
+    AS269742 | 0        | 1/1    | AVIDTEL E.U.
+    AS269743 | 0        | 1/2    | UNIMOS EMPRESA MUNICIPAL DE TELECOMUNICACIONES DE 
+    AS266669 | 0        | 2/2    | SUPERINTENDENCIA DE INDUSTRIA Y COMERCIO
+    AS265833 | 0        | 1/2    | COMUNICACIONES WIFI COLOMBIA S.A.S
+    AS265652 | 0        | 1/1    | SISTEMAS Y COMPUTADORES S.A.
+    AS265693 | 0        | 1/1    | Caldas Data Company LTDA
     AS14187  | 0        | 2/4    | SENCINET LATAM COLOMBIA S.A.
-    AS3603   | 0        | 2/2    | University de Los Andes
-    AS7087   | 0        | 2/2    | Administración de Redes Colomsat S.A.
-    AS8026   | 0        | 1/1    | EMPRESA COLOMBIANA DE PETROLEOS, ECOPETROL
-    AS8163   | 0        | 1/1    | Metrotel SA ESP
-    AS5722   | 0        | 3/4    | Universidad Nacional de Colombia
-    AS28085  | 0        | 1/1    | Sociedad Portuaria Regional de Cartagena S.A.
-    AS27975  | 0        | 2/4    | SYNAPSIS COLOMBIA SAS
-    AS27989  | 0        | 2/3    | BANCOLOMBIA S.A
+    AS265682 | 0        | 1/1    | JAIME TORRES C Y CIA SA
+    AS265855 | 0        | 3/7    | LEGON TELECOMUNICACIONES SAS
+    AS265861 | 0        | 1/1    | SISTEMAS SATELITALES DE COLOMBIA SA ESP
+    AS267691 | 0        | 2/2    | ENTER TELECOMUNICACIONES BANDA ANCHA SAS
+    AS267678 | 0        | 1/2    | AYA RADIOCOMUNICACIONES SAS
+    AS267682 | 0        | 1/2    | WIFAO COLOMBIA S A S

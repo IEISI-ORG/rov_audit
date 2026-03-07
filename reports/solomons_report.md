@@ -16,15 +16,15 @@
     ----------------------------------------------------------------------------------------------------
     AS139609 | PARTIAL (Mixed Feeds)          | 3        | -      | Solomon Islands Submarine Cable Company
     AS45891  | VULNERABLE (No Coverage)       | 2        | 2%     | Solomon Telekom Co Ltd
-    AS139277 | NOT ROUTED                     | 0        | -      | Solomon Islands Government ICT Support D
     AS142279 | STUB: VULNERABLE               | 0        | -      | Solitech Ltd
-    AS150403 | STUB: VULNERABLE               | 0        | -      | Solomon Islands National Provident Fund 
+    AS139277 | NOT ROUTED                     | 0        | -      | Solomon Islands Government ICT Support D
     AS150349 | STUB: VULNERABLE               | 0        | -      | Pacific Vaizeds Enterprise Ltd
+    AS150403 | STUB: VULNERABLE               | 0        | -      | Solomon Islands National Provident Fund 
     AS24013  | STUB: VULNERABLE               | 0        | -      | SB Professional Services
     AS134525 | STUB: VULNERABLE               | 0        | -      | Solomon Telekom Co Ltd
-    AS132260 | NOT ROUTED                     | 0        | -      | SATSOL LIMITED
     AS132468 | STUB: VULNERABLE               | 0        | 0%     | SATSOL LIMITED
     AS132462 | STUB: VULNERABLE               | 0        | 0%     | Bemobile Solomon Islands Ltd
+    AS132260 | NOT ROUTED                     | 0        | -      | SATSOL LIMITED
 
     ====================================================================================================
      TRANSIT SUPPLY CHAIN (Who provides to SB?)
@@ -48,9 +48,9 @@
     --------------------------------------------------------------------------------
     AS45891  | 2        | 1/1    | Solomon Telekom Co Ltd
     AS142279 | 0        | 1/1    | Solitech Ltd
-    AS150403 | 0        | 1/1    | Solomon Islands National Provident Fund Board
     AS150349 | 0        | 1/1    | Pacific Vaizeds Enterprise Ltd
-    AS24013  | 0        | 10/16  | SB Professional Services
+    AS150403 | 0        | 1/1    | Solomon Islands National Provident Fund Board
+    AS24013  | 0        | 5/7    | SB Professional Services
     AS134525 | 0        | 1/1    | Solomon Telekom Co Ltd
     AS132468 | 0        | 1/1    | SATSOL LIMITED
     AS132462 | 0        | 1/1    | Bemobile Solomon Islands Ltd

@@ -5,13 +5,13 @@
     ================================================================================
 
     [GLOBAL CORE] (The 100 largest networks)
-      Networks Secure:      84 / 100  (84.0%)
-      Traffic Protected:   85.1% (by Cone Weight)
+      Networks Secure:      86 / 100  (86.0%)
+      Traffic Protected:   85.3% (by Cone Weight)
       Progress: |██████████████████████████████████████████░░░░░░░░|
 
     [TRANSIT LAYER] (The 1000 largest networks)
-      Networks Secure:     492 / 1000  (49.2%)
-      Traffic Protected:   82.6% (by Cone Weight)
+      Networks Secure:     489 / 1000  (48.9%)
+      Traffic Protected:   82.5% (by Cone Weight)
       Progress: |█████████████████████████████████████████░░░░░░░░░|
 
     ================================================================================
@@ -21,31 +21,31 @@
     --------------------------------------------------------------------------------
     Rank  | ASN      | CC | Cone Size  | Name
     --------------------------------------------------------------------------------
-    #153  | AS4134   | CN | 383        | China Telecom Backbone
-    #175  | AS45820  | IN | 315        | Tata Teleservices ISP
-    #212  | AS9730   | IN | 238        | Bharti Telesonic Ltd
-    #345  | AS17762  | IN | 123        | Tata Teleservices Maharashtra Ltd
-    #358  | AS45117  | IN | 113        | Ishan's Network
-    #363  | AS4837   | CN | 111        | China Unicom Backbone
-    #376  | AS33132  | US | 105        | Crown Castle Fiber LLC
-    #404  | AS35708  | DE | 96         | 4b42 UG
-    #412  | AS12357  | ES | 94         | VODAFONE ESPANA S.A.U.
-    #504  | AS9808   | CN | 69         | China Mobile Backbone
-    #614  | AS58656  | BD | 53         | bdHUB Limited
-    #659  | AS25227  | RU | 46         | JSC Avantel
-    #681  | AS135718 | IN | 44         | DISHAWAVES INFONET PVT. LTD
-    #702  | AS141731 | BD | 42         | Max Hub Limited
-    #706  | AS4812   | CN | 42         | China Telecom Shanghai Province Network
-    #719  | AS212330 | IQ | 41         | Civilisation Information Technology, com
-    #722  | AS9425   | CN | 40         | Future Internet Technology Infrastructur
+    #154  | AS4134   | CN | 387        | China Telecom Backbone
+    #177  | AS45820  | IN | 319        | Tata Teleservices ISP
+    #217  | AS9730   | IN | 234        | Bharti Telesonic Ltd
+    #342  | AS17762  | IN | 129        | Tata Teleservices Maharashtra Ltd
+    #363  | AS45117  | IN | 112        | Ishan Netsol Pvt Ltd
+    #364  | AS4837   | CN | 111        | China Unicom Backbone
+    #377  | AS33132  | US | 104        | Crown Castle Fiber LLC
+    #414  | AS12357  | ES | 92         | VODAFONE ESPANA S.A.U.
+    #432  | AS35708  | DE | 89         | 4b42 UG
+    #507  | AS9808   | CN | 69         | China Mobile Backbone
+    #679  | AS25227  | RU | 45         | JSC Avantel
+    #691  | AS4812   | CN | 44         | China Telecom Shanghai Province Network
+    #693  | AS135718 | IN | 44         | DISHAWAVES INFONET PVT. LTD
+    #694  | AS23688  | BD | 44         | Link3 Technologies Ltd.
+    #724  | AS141731 | BD | 41         | Max Hub Limited
+    #726  | AS212330 | IQ | 40         | Civilisation Information Technology, com
     #727  | AS38272  | CN | 40         | China Education and Research Network (CE
-    #731  | AS23688  | BD | 39         | Link3 Technologies Ltd.
-    #776  | AS22974  | US | 36         | Charter Communications LLC
-    #783  | AS149765 | BD | 36         | Coronet Corporation Limited
-    #789  | AS9905   | ID | 35         | PT Link Net Tbk
-    #809  | AS24323  | BD | 34         | aamra networks limited
-    #817  | AS43531  | FR | 34         | BSO Network Solutions SAS
-    #819  | AS15836  | MD | 34         | Arax-Impex s.r.l.
+    #728  | AS9425   | CN | 40         | Future Internet Technology Infrastructur
+    #745  | AS43531  | FR | 39         | BSO Network Solutions SAS
+    #785  | AS22974  | US | 36         | Charter Communications LLC
+    #795  | AS149765 | BD | 35         | Coronet Corporation Limited
+    #810  | AS24323  | BD | 34         | aamra networks limited
+    #813  | AS15836  | MD | 34         | Arax-Impex s.r.l.
+    #828  | AS5384   | AE | 33         | EMIRATES TELECOMMUNICATIONS GROUP COMPAN
+    #856  | AS4007   | NP | 32         | Subisu Cablenet (Pvt) Ltd, Baluwatar, Ka
     --------------------------------------------------------------------------------
 
     CONCLUSION:
