@@ -2,6 +2,10 @@
 GO := go
 BINARY_EXTRACTOR := bgp-extractor
 BINARY_CALCULATOR := cone-calculator
+MARP := npx @marp-team/marp-cli
+PRESENTATION_SRC := ietf_presentation.md
+PRESENTATION_PDF := ietf_presentation.pdf
+PRESENTATION_HTML := ietf_presentation.html
 
 # Source files
 SRC_EXTRACTOR := bgp-extractor.go
@@ -16,7 +20,7 @@ OUTPUT_DIR := output
 
 # --- Main Targets ---
 
-.PHONY: all build clean setup download pipeline help
+.PHONY: all build clean setup download pipeline present present-pdf present-html help
 
 # Default target
 all: build
@@ -24,11 +28,14 @@ all: build
 # Help menu
 help:
 	@echo "Available commands:"
-	@echo "  make build       - Compile the Go binaries"
-	@echo "  make setup       - Initialize Go module and tidy dependencies"
-	@echo "  make download    - Download the latest RIPE RIS BGP dump"
-	@echo "  make pipeline    - Run the full extraction and calculation pipeline"
-	@echo "  make clean       - Remove binaries and output directory"
+	@echo "  make build         - Compile the Go binaries"
+	@echo "  make setup         - Initialize Go module and tidy dependencies"
+	@echo "  make download      - Download the latest RIPE RIS BGP dump"
+	@echo "  make pipeline      - Run the full extraction and calculation pipeline"
+	@echo "  make present       - Build both PDF and HTML presentations"
+	@echo "  make present-pdf   - Build PDF presentation ($(PRESENTATION_PDF))"
+	@echo "  make present-html  - Build HTML presentation ($(PRESENTATION_HTML))"
+	@echo "  make clean         - Remove binaries and output directory"
 
 # 1. Setup Environment
 setup:
@@ -62,6 +69,19 @@ pipeline: build download
 	./$(BINARY_CALCULATOR) -input $(OUTPUT_DIR)/relationships.csv -output final_as_rank.csv -top 0
 	
 	@echo "\n[+] Pipeline Complete. Topology saved to 'final_as_rank.csv'"
+
+# Presentation targets
+present: present-pdf present-html
+
+present-pdf: $(PRESENTATION_SRC)
+	@echo "[*] Building PDF presentation..."
+	$(MARP) --pdf --allow-local-files $(PRESENTATION_SRC) -o $(PRESENTATION_PDF)
+	@echo "[+] PDF saved to $(PRESENTATION_PDF)"
+
+present-html: $(PRESENTATION_SRC)
+	@echo "[*] Building HTML presentation..."
+	$(MARP) --html $(PRESENTATION_SRC) -o $(PRESENTATION_HTML)
+	@echo "[+] HTML saved to $(PRESENTATION_HTML)"
 
 # Cleanup
 clean:
