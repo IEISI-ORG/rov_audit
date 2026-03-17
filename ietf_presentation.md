@@ -3,10 +3,24 @@ marp: true
 theme: default
 paginate: true
 footer: tcs@ieisi.org | https://github.com/IEISI-ORG/rov_audit | WIP YMMV :)
+header: '![IEISI logo](https://www.ieisi.org/images/apac_logo.png)'
 backgroundColor: #F8F9FA
 color: #333333
 style: |
   @import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wdth,wght@25..151,100..1000&display=swap');
+  header {
+    position: absolute;
+    top: 15px;
+    right: 60px;
+    padding: 0;
+    height: 50px;
+    display: flex;
+    align-items: center;
+  }
+  header img {
+    height: 45px;
+    width: auto;
+  }
   section {
     font-family: 'Roboto Flex', sans-serif;
     font-size: 18px;
