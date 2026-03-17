@@ -2,42 +2,47 @@
 marp: true
 theme: default
 paginate: true
-backgroundColor: #0d1117
-color: #e6edf3
+footer: tcs@ieisi.org | https://github.com/IEISI-ORG/rov_audit | WIP YMMV :)
+backgroundColor: #F8F9FA
+color: #333333
 style: |
+  @import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wdth,wght@25..151,100..1000&display=swap');
   section {
-    font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+    font-family: 'Roboto Flex', sans-serif;
     font-size: 18px;
     padding: 40px 60px;
+    background-color: #F8F9FA;
+    color: #333333;
   }
   h1 {
-    color: #58a6ff;
+    color: #0F2C59;
     font-size: 2em;
-    border-bottom: 2px solid #21262d;
+    border-bottom: 2px solid #1A5B8F;
     padding-bottom: 10px;
   }
   h2 {
-    color: #79c0ff;
+    color: #0F2C59;
     font-size: 1.4em;
   }
   h3 {
-    color: #56d364;
+    color: #1A5B8F;
     font-size: 1.1em;
   }
-  a { color: #58a6ff; }
+  a { color: #1A5B8F; }
   code {
-    background: #161b22;
-    color: #e6edf3;
+    background: #e2eaf3;
+    color: #0F2C59;
     padding: 2px 6px;
     border-radius: 4px;
     font-size: 0.85em;
   }
   pre {
-    background: #161b22;
-    border: 1px solid #30363d;
-    border-radius: 8px;
+    background: #e2eaf3;
+    border: 1px solid #1A5B8F;
+    border-radius: 4px;
     padding: 16px;
     font-size: 0.75em;
+    color: #333333;
   }
   table {
     width: 100%;
@@ -45,14 +50,14 @@ style: |
     font-size: 0.85em;
   }
   th {
-    background: #21262d;
-    color: #79c0ff;
+    background: #0F2C59;
+    color: #ffffff;
     padding: 6px 12px;
     text-align: left;
   }
   td {
     padding: 5px 12px;
-    border-bottom: 1px solid #21262d;
+    border-bottom: 1px solid #1A5B8F;
   }
   .columns {
     display: grid;
@@ -65,30 +70,34 @@ style: |
     gap: 20px;
   }
   .box {
-    background: #161b22;
-    border: 1px solid #30363d;
-    border-radius: 8px;
+    background: #ffffff;
+    border-top: 4px solid #1A5B8F;
+    border-radius: 4px;
     padding: 16px;
     margin: 8px 0;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
   }
-  .green { color: #56d364; }
-  .red { color: #f85149; }
-  .yellow { color: #e3b341; }
-  .blue { color: #58a6ff; }
-  .muted { color: #8b949e; font-size: 0.85em; }
+  .green { color: #1e6b2e; }
+  .red { color: #D94838; }
+  .yellow { color: #7a5200; }
+  .blue { color: #1A5B8F; }
+  .muted { color: #4a4a4a; font-size: 0.85em; }
   section.title {
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    background: #0F2C59;
+    color: #081832;
   }
   section.title h1 {
     font-size: 2.4em;
     border: none;
     margin-bottom: 10px;
+    color: #081832;
   }
   section.title h2 {
-    color: #8b949e;
+    color: rgba(26,91,143,0.90);
     font-size: 1em;
     font-weight: normal;
   }
@@ -97,21 +106,22 @@ style: |
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    background: #161b22;
+    background: #0F2C59;
+    color: #081832;
   }
   section.section-break h1 {
     font-size: 2.6em;
     border: none;
-    color: #58a6ff;
+    color: #081832;
   }
   section.section-break h2 {
-    color: #8b949e;
+    color: rgba(15,44,89,0.90);
     font-weight: normal;
   }
   blockquote {
-    border-left: 4px solid #58a6ff;
-    padding-left: 16px;
-    color: #8b949e;
+    border-left: 4px solid #1A5B8F;
+    padding-left: 20px;
+    color: #4a4a4a;
     font-style: italic;
     margin: 16px 0;
   }
@@ -663,7 +673,7 @@ If these networks enabled ROV, global protection would jump meaningfully.
 
 <div class="muted">
 
-India (IN) appears 4× in the top holdouts. South Asia is the primary geographic gap in global ROV adoption.
+India (IN) also appears 4× in the top holdouts. South Asia is the primary geographic gap in global ROV adoption after China.
 
 </div>
 
