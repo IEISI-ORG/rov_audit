@@ -3,9 +3,9 @@ GO := go
 BINARY_EXTRACTOR := bgp-extractor
 BINARY_CALCULATOR := cone-calculator
 MARP := npx @marp-team/marp-cli
-PRESENTATION_SRC := ietf_presentation.md
-PRESENTATION_PDF := ietf_presentation.pdf
-PRESENTATION_HTML := ietf_presentation.html
+PITA30_SRC := pita30_presentation.md
+PITA30_PDF := pita30_presentation.pdf
+PITA30_HTML := pita30_presentation.html
 
 # Source files
 SRC_EXTRACTOR := bgp-extractor.go
@@ -32,9 +32,9 @@ help:
 	@echo "  make setup         - Initialize Go module and tidy dependencies"
 	@echo "  make download      - Download the latest RIPE RIS BGP dump"
 	@echo "  make pipeline      - Run the full extraction and calculation pipeline"
-	@echo "  make present       - Build both PDF and HTML presentations"
-	@echo "  make present-pdf   - Build PDF presentation ($(PRESENTATION_PDF))"
-	@echo "  make present-html  - Build HTML presentation ($(PRESENTATION_HTML))"
+	@echo "  make present       - Build both PDF and HTML for PITA30 presentation"
+	@echo "  make present-pdf   - Build PDF presentation ($(PITA30_PDF))"
+	@echo "  make present-html  - Build HTML presentation ($(PITA30_HTML))"
 	@echo "  make clean         - Remove binaries and output directory"
 
 # 1. Setup Environment
@@ -70,18 +70,18 @@ pipeline: build download
 	
 	@echo "\n[+] Pipeline Complete. Topology saved to 'final_as_rank.csv'"
 
-# Presentation targets
+# Presentation targets (PITA30 only — ietf_presentation is not managed here)
 present: present-pdf present-html
 
-present-pdf: $(PRESENTATION_SRC)
-	@echo "[*] Building PDF presentation..."
-	$(MARP) --pdf --allow-local-files $(PRESENTATION_SRC) -o $(PRESENTATION_PDF)
-	@echo "[+] PDF saved to $(PRESENTATION_PDF)"
+present-pdf: $(PITA30_SRC)
+	@echo "[*] Building PITA30 PDF presentation..."
+	$(MARP) --pdf --allow-local-files $(PITA30_SRC) -o $(PITA30_PDF)
+	@echo "[+] PDF saved to $(PITA30_PDF)"
 
-present-html: $(PRESENTATION_SRC)
-	@echo "[*] Building HTML presentation..."
-	$(MARP) --html $(PRESENTATION_SRC) -o $(PRESENTATION_HTML)
-	@echo "[+] HTML saved to $(PRESENTATION_HTML)"
+present-html: $(PITA30_SRC)
+	@echo "[*] Building PITA30 HTML presentation..."
+	$(MARP) --html --allow-local-files $(PITA30_SRC) -o $(PITA30_HTML)
+	@echo "[+] HTML saved to $(PITA30_HTML)"
 
 # Cleanup
 clean:

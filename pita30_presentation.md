@@ -3,44 +3,55 @@ marp: true
 theme: default
 paginate: true
 footer: PITA 30 · Cook Islands · April 2026 · tcs@ieisi.org
-header: '![IEISI logo](https://www.ieisi.org/images/apac_logo.png)'
-backgroundColor: #F8F9FA
-color: #333333
+header: '![IEISI logo](images/apac_logo.png)'
+backgroundColor: "#ffffff"
+color: "#333333"
 style: |
-  @import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wdth,wght@25..151,100..1000&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wdth,wght@25..151,25..151,100..1000&display=swap&family=DM+Sans:wght@400;500;700&display=swap');
   header {
     position: absolute;
-    top: 15px;
-    right: 60px;
+    top: 20px;
+    right: 40px;
     padding: 0;
     height: 50px;
     display: flex;
     align-items: center;
   }
   header img {
-    height: 45px;
+    height: 40px;
     width: auto;
+    margin: 8px;
   }
   section {
-    font-family: 'Roboto Flex', sans-serif;
+    font-family: 'DM Sans', sans-serif;
     font-size: 18px;
-    padding: 40px 60px;
-    background-color: #F8F9FA;
+    line-height: 1.6;
+    padding: 80px 60px 40px;
+    background-color: #ffffff;
     color: #333333;
   }
-  h1 {
+  section h1 {
+    font-family: 'Roboto Flex', sans-serif;
+    font-variation-settings: 'wght' 800, 'wdth' 100, 'opsz' 144;
     color: #0F2C59;
     font-size: 2em;
+    line-height: 1.05;
     border-bottom: 2px solid #1A5B8F;
     padding-bottom: 10px;
   }
-  h2 {
+  section h2 {
+    font-family: 'Roboto Flex', sans-serif;
+    font-variation-settings: 'wght' 700, 'wdth' 100, 'opsz' 36;
     color: #0F2C59;
     font-size: 1.4em;
+    line-height: 1.3;
   }
-  h3 {
+  section h3 {
+    font-family: 'Roboto Flex', sans-serif;
+    font-variation-settings: 'wght' 700, 'wdth' 100, 'opsz' 36;
     color: #1A5B8F;
     font-size: 1.1em;
+    line-height: 1.3;
   }
   a { color: #1A5B8F; }
   table {
@@ -69,28 +80,28 @@ style: |
     gap: 20px;
   }
   .box {
-    background: #ffffff;
+    background: #F8F9FA;
     border-top: 4px solid #1A5B8F;
     border-radius: 4px;
     padding: 16px;
     margin: 8px 0;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.08);
   }
   .box-red {
-    background: #fff5f5;
+    background: #fff0ef;
     border-top: 4px solid #D94838;
     border-radius: 4px;
     padding: 16px;
     margin: 8px 0;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.08);
   }
   .box-green {
-    background: #f0fff4;
+    background: #edfaf1;
     border-top: 4px solid #1e6b2e;
     border-radius: 4px;
     padding: 16px;
     margin: 8px 0;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.08);
   }
   .big-number {
     font-size: 3em;
@@ -114,18 +125,23 @@ style: |
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    background: #ffffff;
-    color: #0F2C59;
-    border-top: 8px solid #0F2C59;
+    background: #0F2C59 !important;
+    color: #ffffff !important;
+    border-top: none;
   }
   section.title h1 {
+    font-family: 'Roboto Flex', sans-serif;
+    font-variation-settings: 'wght' 800, 'wdth' 100, 'opsz' 144;
     font-size: 2.2em;
+    line-height: 1.05;
     border: none;
     margin-bottom: 10px;
-    color: #0F2C59;
+    color: #ffffff;
   }
   section.title h2 {
-    color: #1A5B8F;
+    font-family: 'Roboto Flex', sans-serif;
+    font-variation-settings: 'wght' 400, 'wdth' 100, 'opsz' 14;
+    color: rgba(255,255,255,0.80);
     font-size: 1em;
     font-weight: normal;
   }
@@ -134,17 +150,22 @@ style: |
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    background: #ffffff;
-    color: #0F2C59;
-    border-top: 8px solid #1A5B8F;
+    background: #1A5B8F !important;
+    color: #ffffff !important;
+    border-top: none;
   }
   section.section-break h1 {
+    font-family: 'Roboto Flex', sans-serif;
+    font-variation-settings: 'wght' 800, 'wdth' 100, 'opsz' 144;
     font-size: 2.4em;
+    line-height: 1.05;
     border: none;
-    color: #0F2C59;
+    color: #ffffff;
   }
   section.section-break h2 {
-    color: #1A5B8F;
+    font-family: 'Roboto Flex', sans-serif;
+    font-variation-settings: 'wght' 400, 'wdth' 100, 'opsz' 14;
+    color: rgba(255,255,255,0.85);
     font-weight: normal;
   }
   blockquote {
@@ -153,6 +174,14 @@ style: |
     color: #4a4a4a;
     font-style: italic;
     margin: 16px 0;
+  }
+  section.title header,
+  section.section-break header {
+    display: none;
+  }
+  section.title footer,
+  section.section-break footer {
+    color: rgba(255,255,255,0.65);
   }
 ---
 

@@ -94,3 +94,64 @@ Many scripts have `_v2`, `_v12` etc. suffixes. Always use the highest-versioned 
 ## Presentation
 
 `ietf_presentation.md` and `ietf_presentation.html` are a Marp-format slide deck. Render with the Marp CLI or VS Code Marp extension.
+
+## IEISI Presentation Style (Standing Order)
+
+All presentations created for or on behalf of IEISI **must** follow the IEISI Brand Style Guide (source: https://www.ieisi.org/ieisi-style-guide). Apply these rules to any Marp slide deck, HTML presentation, or other visual output.
+
+### Colors
+
+| Role | Name | Hex |
+|------|------|-----|
+| Primary (headings, hero backgrounds) | Deep Corporate Blue | `#0F2C59` |
+| Secondary (borders, supporting elements) | IEISI Blue | `#1A5B8F` |
+| Accent (CTAs, emphasis) | Action Red | `#D94838` |
+| Accent hover/active | — | `#C0392B` |
+| Footer / darkest background | Midnight | `#081832` |
+| Alternating section background | Cloud | `#F8F9FA` |
+| Body text | Charcoal | `#333333` |
+| Secondary text | Slate | `#666666` |
+| Navigation text | — | `#2C3E50` |
+| Fine print / copyright | Ash | `#888888` |
+
+Recommended proportions: Primary 50%, Secondary 20%, Accent 10%, Neutral 15%, Text 5%.
+
+### Typography
+
+- **Primary font:** Roboto Flex (Google variable font) — `--font-main`
+- **Body font:** DM Sans
+- **H1 headings:** wght 800, wdth 100, opsz 144 — 3rem, line-height 1.05
+- **H2 headings:** wght 700, wdth 100, opsz 36 — 1.8rem, line-height 1.3
+- **H3 headings:** wght 700, wdth 100, opsz 36 — 1.2rem, line-height 1.3
+- **Body text:** wght 400, wdth 100, opsz 14 — 1rem, line-height 1.6
+- **Navigation / labels:** wght 500, wdth 100, opsz 14 — 0.8rem
+- **Small / fine print:** 0.9rem
+
+Heading color rule: h1–h3 use `#0F2C59` on light backgrounds; white (`#FFFFFF`) on dark backgrounds.
+
+### Logo
+
+- Maintain clear space equal to the cap-height of "I" on all sides.
+- Use the APAC logo graphic alongside the wordmark.
+- Never stretch, rotate, add drop shadows, or substitute a different typeface.
+- Avoid low-resolution versions.
+
+### Voice & Tone
+
+- **Be:** Authoritative, direct, principled, human (first-person where appropriate).
+- **Use:** governance, stewardship, operational discipline, capability building, ecosystem mindset, evidence-based, mission-critical, independent oversight.
+- **Avoid:** synergy, thought leader, disruptive, best-in-class, pivot, paradigm shift.
+
+### Components & Layout
+
+- **Cards/callout boxes:** 4px top or left border in Secondary (`#1A5B8F`), subtle shadow.
+- **Pull quotes:** 4px left border in `#1A5B8F`, 20px padding-left.
+- **Buttons / accent elements:** `#D94838` fill, 4px border-radius.
+- **Max content width:** 1100px; section padding 80px desktop / 50px tablet.
+
+### Accessibility
+
+Minimum contrast ratios (WCAG 2.1 AA required, AAA preferred):
+- White on Primary `#0F2C59`: 12.63:1 (AAA)
+- White on Accent `#D94838`: 4.56:1 (AA)
+- Charcoal `#333333` on white: 12.63:1 (AAA)
