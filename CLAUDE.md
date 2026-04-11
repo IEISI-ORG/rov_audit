@@ -42,19 +42,19 @@ Output: `data/apnic/<CC>.json` (keyed by country code)
 
 ### Step 4: Run the global audit
 ```bash
-python3 rov_global_audit_v12.py   # current production version
+python3 rov_no_scrape_v20.py   # current production version
 ```
-Output: `rov_audit_v12.csv`
+Output: `rov_audit_v20_final.csv`
 
 ### Step 5: Statistical summary
 ```bash
-python3 statistics.py rov_audit_v12.csv
+python3 statistics_v5.py rov_audit_v20_final.csv
 ```
 
 ### Step 6 (Optional): RIPE Atlas active verification
 ```bash
 # Find high-value vulnerable targets not yet tested:
-python3 find_atlas_targets.py rov_audit_v12.csv --limit 20
+python3 find_atlas_targets.py rov_audit_v20_final.csv --limit 20
 
 # Actively verify ROV behavior via traceroute (requires secrets.yaml):
 python3 verify_path_ripe_native.py <target_asn> --proxy-asn <customer_asn>
@@ -71,7 +71,7 @@ Output: `data/atlas/as_<ASN>_via_<proxy_asn>_trace.json`
 | `data/atlas/` | RIPE Atlas traceroute results (`as_<ASN>.json` or `as_<ASN>_via_<proxy>_trace.json`) |
 | `data/asns.csv` | ASN metadata (name, country) from bgp.tools/asns.csv |
 
-## Verdict Categories (rov_global_audit_v12.py)
+## Verdict Categories (rov_no_scrape_v20.py)
 
 - **SECURE (Full Coverage)** — all upstreams are in the ROV set
 - **SECURE (Active Local ROV)** — network itself does ROV (APNIC score ≥ 95%)
@@ -84,12 +84,12 @@ Output: `data/atlas/as_<ASN>_via_<proxy_asn>_trace.json`
 ## Configuration
 
 - `secrets.yaml` — stores `ripe_atlas_key` for Atlas measurement API
-- `KNOWN_TIER_1` set in `rov_global_audit_v12.py` — hardcoded list of Tier 1 ASNs
+- `KNOWN_TIER_1` set in `rov_no_scrape_v20.py` — hardcoded list of Tier 1 ASNs
 - An ASN is considered "safe" if it appears in bgp.tools `rpkirov.csv` tag OR has APNIC score ≥ 95%
 
 ## Script Versioning
 
-Many scripts have `_v2`, `_v12` etc. suffixes. Always use the highest-versioned variant unless debugging an earlier stage. The authoritative analysis script is `rov_global_audit_v12.py`.
+Many scripts have `_v2`, `_v20` etc. suffixes. Always use the highest-versioned variant unless debugging an earlier stage. The authoritative analysis script is `rov_no_scrape_v20.py`.
 
 ## Presentation
 
