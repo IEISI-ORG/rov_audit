@@ -43,16 +43,18 @@ ripe_atlas_key: "YOUR_UUID_HERE"
 
 ## ⚙️ Usage Workflow
 
+The two shell scripts `do_data_gathering` and `do_reports` automate the full pipeline. Run them in order.
+
 ### Phase 1: Build the Internet Topology (Go)
 We use raw BGP data from RIPE RIS to determine who provides transit to whom.
 
-1.  **Compile the Tool:**
+1.  **Compile the Tools:**
     ```bash
     go build -o bgp-extractor go-bgp-relationships.go.txt
     go build -o cone-calculator cone-calculator-v2.go
     ```
 
-2.  **Download & Process:**
+2.  **Download & Process** (via `do_data_gathering`):
     ```bash
     # Download latest RIB (~400MB)
     wget http://data.ris.ripe.net/rrc00/latest-bview.gz
@@ -62,58 +64,49 @@ We use raw BGP data from RIPE RIS to determine who provides transit to whom.
 
     # Calculate Customer Cones (The "Gravity" of each network)
     ./cone-calculator -input output/relationships.csv -output final_as_rank.csv -top 0
+
+    # Fetch ROA signing stats for all ASNs
+    python3 fetch_roa_bulk_async_v6.py
     ```
 
-### Phase 2: Data Ingestion (Python)
-We hydrate the topology with metadata, geolocation, and passive security scores.
-
-1.  **Fetch Metadata & APNIC Scores:**
-    ```bash
-    python3 rov_no_scrape_v17.py
-    ```
-    *Builds `data/parsed/*.json` with Country Codes, Names, and Validation Scores.*
-
-2.  **Fetch ROA Signing Stats (Aggregated):**
-    ```bash
-    python3 fetch_roa_bulk_async_v5_aggregated.py
-    ```
-    *Fetches global signing percentages for all 80k+ ASNs, correcting for APNIC's per-country data fragmentation.*
-
-### Phase 3: The Audit
-Generate the master report.
+### Phase 2: The Audit
+Generate the master report (via `do_reports`):
 
 ```bash
-python3 rov_global_audit_v18.py
+python3 rov_no_scrape_v20.py
 ```
-*   **Input:** Topology, Metadata, APNIC Cache, Atlas Results.
-*   **Output:** `rov_audit_v18_final.csv`.
+*   **Input:** Topology (`final_as_rank.csv`), parsed ASN data (`data/parsed/`), APNIC cache (`data/apnic/`), Atlas results (`data/atlas/`).
+*   **Output:** `rov_audit_v20_final.csv`
 *   **Logic:** Determines if a network is `SECURE`, `VULNERABLE`, or `PARTIAL` based on its own status **AND** its upstream providers.
 
-### Phase 4: Forensics & Analysis
-Now that we have the map, we analyze it.
+### Phase 3: Analysis
+Run all analysis scripts (via `do_reports`):
 
-1.  **Check Herd Immunity:**
-    ```bash
-    python3 analyze_herd_immunity.py
-    ```
-    *Reports what % of global traffic is protected by the Core.*
+```bash
+python3 analyze_roa_signing.py          # "Glass Houses" — filters but doesn't sign
+python3 analyze_herd_immunity.py        # % of global traffic protected by Core
+python3 analyze_roa_strategy_v2.py      # ROA signing strategy recommendations
+python3 analyze_aspa_realistic_v4.py    # ASPA deployment readiness
+python3 analyze_rov_quadrants_v3.py     # ROV/ROA quadrant analysis
+python3 statistics_v5.py               # Summary statistics
+```
 
-2.  **Check Signing Hygiene:**
-    ```bash
-    python3 analyze_roa_signing.py
-    ```
-    *Identifies "Glass Houses" (Networks that filter others but don't sign their own routes).*
+Country deep-dives:
+```bash
+python3 analyze_country_deep_dive.py <CC>   # e.g. FJ, PG, WS, CK
+```
 
-3.  **Active Target Hunting (RIPE Atlas):**
-    Find "Unknown" giants and test them.
-    ```bash
-    # Find targets
-    python3 find_atlas_targets.py rov_audit_v18_final.csv
+### Phase 4: Forensics (RIPE Atlas)
+Find and actively verify unknown/unverified networks:
 
-    # Run Forensic Trace (Trace Valid vs Invalid path)
-    python3 verify_forensic_path_v2.py [TARGET_ASN]
-    ```
-    *If you verify a network, re-run `rov_global_audit_v18.py` to integrate the findings.*
+```bash
+# Find high-value targets not yet tested
+python3 find_atlas_targets.py rov_audit_v20_final.csv --limit 20
+
+# Run forensic trace (Valid vs Invalid path comparison)
+python3 verify_forensic_path_v2.py [TARGET_ASN]
+```
+*Requires `secrets.yaml` with a RIPE Atlas API key.*
 
 ---
 
@@ -121,13 +114,23 @@ Now that we have the map, we analyze it.
 
 | File | Description |
 | :--- | :--- |
-| `rov_global_audit_v18.py` | **Main Engine.** Generates the final CSV audit. |
-| `fetch_roa_bulk_async_v5...py` | Mass-fetches ROA signing stats (handling aggregations). |
-| `verify_forensic_path_v2.py` | Active RIPE Atlas tool. Compares Valid vs Invalid traceroutes. |
-| `analyze_herd_immunity.py` | Calculates global protection statistics based on Cone Weight. |
-| `analyze_cone_quality_v3.py` | Deep recursion to find "Toxic" vs "Clean" upstream providers. |
-| `go-bgp-relationships.go` | High-performance Go tool to parse MRT/BGP dumps. |
-| `cone-calculator-v2.go` | Go tool to implement "Valley-Free" logic and calculate cones. |
+| `do_data_gathering` | Shell script — runs full data collection pipeline |
+| `do_reports` | Shell script — runs audit and all analysis/reporting |
+| `rov_no_scrape_v20.py` | **Main audit engine.** Generates `rov_audit_v20_final.csv` |
+| `fetch_roa_bulk_async_v6.py` | Mass-fetches ROA signing stats for all ASNs |
+| `statistics_v5.py` | Summary statistics from the audit CSV |
+| `analyze_herd_immunity.py` | Global protection stats based on Cone Weight |
+| `analyze_roa_signing.py` | Identifies "Glass Houses" |
+| `analyze_roa_strategy_v2.py` | ROA signing strategy recommendations |
+| `analyze_aspa_realistic_v4.py` | ASPA deployment readiness analysis |
+| `analyze_rov_quadrants_v3.py` | ROV/ROA quadrant breakdown |
+| `analyze_cone_quality_v2.py` | Upstream provider quality analysis |
+| `analyze_country_deep_dive.py` | Per-country detailed report |
+| `verify_forensic_path_v2.py` | Active RIPE Atlas tool — Valid vs Invalid traceroutes |
+| `find_atlas_targets.py` | Identifies best candidates for active verification |
+| `rov_global_audit_v18.py` | Alternate audit engine (retained for reference) |
+| `go-bgp-relationships.go.txt` | Go source — parses MRT/BGP dumps |
+| `cone-calculator-v2.go` | Go source — Valley-Free logic, calculates customer cones |
 
 ---
 
