@@ -5,14 +5,14 @@
     ================================================================================
 
     [GLOBAL CORE] (The 100 largest networks)
-      Networks Secure:      86 / 100  (86.0%)
-      Traffic Protected:   85.3% (by Cone Weight)
-      Progress: |██████████████████████████████████████████░░░░░░░░|
+      Networks Secure:      66 / 100  (66.0%)
+      Traffic Protected:   72.5% (by Cone Weight)
+      Progress: |████████████████████████████████████░░░░░░░░░░░░░░|
 
     [TRANSIT LAYER] (The 1000 largest networks)
-      Networks Secure:     489 / 1000  (48.9%)
-      Traffic Protected:   82.5% (by Cone Weight)
-      Progress: |█████████████████████████████████████████░░░░░░░░░|
+      Networks Secure:     424 / 1000  (42.4%)
+      Traffic Protected:   70.5% (by Cone Weight)
+      Progress: |███████████████████████████████████░░░░░░░░░░░░░░░|
 
     ================================================================================
      THE HOLDOUTS (Top Vulnerable Transit Nets)
@@ -21,31 +21,31 @@
     --------------------------------------------------------------------------------
     Rank  | ASN      | CC | Cone Size  | Name
     --------------------------------------------------------------------------------
-    #154  | AS4134   | CN | 387        | China Telecom Backbone
-    #177  | AS45820  | IN | 319        | Tata Teleservices ISP
-    #217  | AS9730   | IN | 234        | Bharti Telesonic Ltd
-    #342  | AS17762  | IN | 129        | Tata Teleservices Maharashtra Ltd
-    #363  | AS45117  | IN | 112        | Ishan Netsol Pvt Ltd
-    #364  | AS4837   | CN | 111        | China Unicom Backbone
-    #377  | AS33132  | US | 104        | Crown Castle Fiber LLC
-    #414  | AS12357  | ES | 92         | VODAFONE ESPANA S.A.U.
-    #432  | AS35708  | DE | 89         | 4b42 UG
-    #507  | AS9808   | CN | 69         | China Mobile Backbone
-    #679  | AS25227  | RU | 45         | JSC Avantel
-    #691  | AS4812   | CN | 44         | China Telecom Shanghai Province Network
-    #693  | AS135718 | IN | 44         | DISHAWAVES INFONET PVT. LTD
-    #694  | AS23688  | BD | 44         | Link3 Technologies Ltd.
-    #724  | AS141731 | BD | 41         | Max Hub Limited
-    #726  | AS212330 | IQ | 40         | Civilisation Information Technology, com
-    #727  | AS38272  | CN | 40         | China Education and Research Network (CE
-    #728  | AS9425   | CN | 40         | Future Internet Technology Infrastructur
-    #745  | AS43531  | FR | 39         | BSO Network Solutions SAS
-    #785  | AS22974  | US | 36         | Charter Communications LLC
-    #795  | AS149765 | BD | 35         | Coronet Corporation Limited
-    #810  | AS24323  | BD | 34         | aamra networks limited
-    #813  | AS15836  | MD | 34         | Arax-Impex s.r.l.
-    #828  | AS5384   | AE | 33         | EMIRATES TELECOMMUNICATIONS GROUP COMPAN
-    #856  | AS4007   | NP | 32         | Subisu Cablenet (Pvt) Ltd, Baluwatar, Ka
+    #157  | AS4134   | CN | 363        | China Telecom Backbone
+    #160  | AS45820  | IN | 347        | Tata Teleservices ISP
+    #216  | AS9730   | IN | 236        | Bharti Telesonic Ltd
+    #344  | AS17762  | IN | 127        | Tata Teleservices Maharashtra Ltd
+    #357  | AS45117  | IN | 118        | Ishan Netsol Pvt Ltd
+    #365  | AS4837   | CN | 113        | China Unicom Backbone
+    #381  | AS33132  | US | 104        | Crown Castle Fiber LLC
+    #407  | AS12357  | ES | 95         | VODAFONE ESPANA S.A.U.
+    #471  | AS35708  | DE | 78         | 4b42 UG
+    #507  | AS29465  | NG | 69         | MTN NIGERIA Communication limited
+    #565  | AS9808   | CN | 60         | China Mobile Backbone
+    #679  | AS23688  | BD | 46         | Link3 Technologies Ltd.
+    #692  | AS135718 | IN | 44         | DISHAWAVES INFONET PVT. LTD
+    #709  | AS141731 | BD | 42         | Max Hub Limited
+    #732  | AS9425   | CN | 40         | Future Internet Technology Infrastructur
+    #743  | AS38272  | CN | 39         | China Education and Research Network (CE
+    #758  | AS212330 | IQ | 38         | Civilisation Information Technology, com
+    #774  | AS151690 | IN | 37         | FAB FIVE NETWORK PRIVATE LIMITED
+    #789  | AS9905   | ID | 36         | PT Link Net Tbk
+    #792  | AS22974  | US | 35         | Charter Communications LLC
+    #794  | AS23910  | CN | 35         | China Next Generation Internet CERNET2
+    #820  | AS149765 | BD | 34         | Coronet Corporation Limited
+    #823  | AS24323  | BD | 34         | aamra networks limited
+    #826  | AS15836  | MD | 33         | Arax-Impex s.r.l.
+    #837  | AS25019  | SA | 32         | Saudi Telecom Company JSC
     --------------------------------------------------------------------------------
 
     CONCLUSION:

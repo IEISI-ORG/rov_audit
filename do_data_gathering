@@ -1,7 +1,6 @@
 #!/bin/bash
 
 
-
 wget --timestamping --output-document=latest-bview.gz http://data.ris.ripe.net/rrc00/latest-bview.gz
 
 bgpdump -m latest-bview.gz | ./bgp-extractor -input /dev/stdin -output output -workers 16

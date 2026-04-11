@@ -3,42 +3,42 @@
     ====================================================================================================
      NATIONAL ROUTING SECURITY: CL
     ====================================================================================================
-    Total Networks:      391
-    Total Cone Gravity:  312
+    Total Networks:      392
+    Total Cone Gravity:  316
     ------------------------------------------------------------
-    SECURE NETWORKS:        55 (14.1%) -> Protects 62.8% of Traffic
-    VULNERABLE NETWORKS:   239 (61.1%) -> Exposes  10.6% of Traffic
+    SECURE NETWORKS:        50 (12.8%) -> Protects 63.3% of Traffic
+    VULNERABLE NETWORKS:   245 (62.5%) -> Exposes  10.1% of Traffic
 
     ====================================================================================================
      THE CL CORE (Top 20 Networks)
     ====================================================================================================
     ASN      | Verdict                        | Cone     | APNIC% | Name
     ----------------------------------------------------------------------------------------------------
-    AS14259  | SECURE (Full Coverage)         | 62       | 0%     | Gtd Internet S.A.
-    AS263702 | SECURE (Full Coverage)         | 57       | 0%     | GRUPO ZGH SPA
-    AS7004   | SECURE (Full Coverage)         | 36       | 30%    | TELEFÓNICA CHILE S.A.
-    AS263237 | PARTIAL (Mixed Feeds)          | 20       | -      | PowerHost Telecom SPA
-    AS6471   | Unverified (Transit/Peer?)     | 18       | -      | ENTEL CHILE S.A.
-    AS16629  | VULNERABLE (No Coverage)       | 18       | 15%    | CTC. CORP S.A. (TELEFONICA EMPRESAS)
-    AS61503  | SECURE (Full Coverage)         | 17       | 0%     | SERVICIOS DE TELECOMUNICACIONES INTERCAB
-    AS6429   | Unverified (Transit/Peer?)     | 16       | 13%    | Telmex Chile Internet S.A.
-    AS266771 | SECURE (Full Coverage)         | 14       | 15%    | MAKRONET CONSULTING TECNOLOGIA E INFORMA
-    AS266830 | PARTIAL (Mixed Feeds)          | 9        | 0%     | AIRPOINT TELECOMUNICACIONES LIMITADA
-    AS14117  | VULNERABLE (No Coverage)       | 8        | 0%     | Telefonica del Sur S.A.
-    AS27901  | PARTIAL (Mixed Feeds)          | 7        | 0%     | Pacifico Cable SPA.
-    AS11340  | VULNERABLE (No Coverage)       | 7        | 0%     | Red Universitaria Nacional
+    AS14259  | SECURE (Full Coverage)         | 63       | 1%     | Gtd Internet S.A.
+    AS263702 | SECURE (Full Coverage)         | 59       | 0%     | GRUPO ZGH SPA
+    AS7004   | SECURE (Full Coverage)         | 35       | 30%    | TELEFÓNICA CHILE S.A.
+    AS6471   | Unverified (Transit/Peer?)     | 19       | -      | ENTEL CHILE S.A.
+    AS263237 | PARTIAL (Mixed Feeds)          | 18       | -      | PowerHost Telecom SPA
+    AS61503  | SECURE (Full Coverage)         | 18       | 0%     | SERVICIOS DE TELECOMUNICACIONES INTERCAB
+    AS6429   | Unverified (Transit/Peer?)     | 18       | 47%    | Telmex Chile Internet S.A.
+    AS16629  | VULNERABLE (No Coverage)       | 17       | 0%     | CTC. CORP S.A. (TELEFONICA EMPRESAS)
+    AS266771 | SECURE (Full Coverage)         | 15       | 12%    | MAKRONET CONSULTING TECNOLOGIA E INFORMA
+    AS14117  | VULNERABLE (No Coverage)       | 9        | 0%     | Telefonica del Sur S.A.
+    AS266830 | PARTIAL (Mixed Feeds)          | 8        | 0%     | AIRPOINT TELECOMUNICACIONES LIMITADA
+    AS27901  | PARTIAL (Mixed Feeds)          | 8        | 0%     | Pacifico Cable SPA.
+    AS11340  | VULNERABLE (No Coverage)       | 6        | 41%    | Red Universitaria Nacional
     AS10778  | PARTIAL (Mixed Feeds)          | 5        | -      | MCL Internet
-    AS264827 | SECURE (Full Coverage)         | 4        | 100%   | WIRCOM S.P.A.
-    AS27986  | SECURE (Full Coverage)         | 2        | -      | ENTEL CHILE S.A.
+    AS264827 | SECURE (Full Coverage)         | 4        | 0%     | WIRCOM S.P.A.
+    AS262237 | PARTIAL (Mixed Feeds)          | 3        | -      | Orbyta S.A.
     AS27978  | SECURE (Full Coverage)         | 2        | -      | Telmex Servicios Empresariales S.A.
-    AS265757 | PARTIAL (Mixed Feeds)          | 2        | 0%     | Intersur Limitada
-    AS262237 | PARTIAL (Mixed Feeds)          | 2        | -      | Orbyta S.A.
-    AS27678  | PARTIAL (Mixed Feeds)          | 1        | -      | NIC Chile
+    AS27986  | SECURE (Full Coverage)         | 2        | -      | ENTEL CHILE S.A.
+    AS64112  | SECURE (Full Coverage)         | 1        | -      | PIT CHILE SP
+    AS64139  | PARTIAL (Mixed Feeds)          | 1        | 0%     | GRUPO METROWAN TELECOM SPA
 
     ====================================================================================================
      TRANSIT SUPPLY CHAIN (Who provides to CL?)
     ====================================================================================================
-    [*] Analyzing Upstream Supply Chain for 391 networks...
+    [*] Analyzing Upstream Supply Chain for 392 networks...
         - Analyzed connectivity for 389 networks.
     Rank | Upstream | Dependents | Global Status                  | Name
     ----------------------------------------------------------------------------------------------------
@@ -60,7 +60,7 @@
     #16  | AS266771 | 12         | SECURE (Full Coverage)         | MAKRONET CONSULTING TECNOLOGIA E INFORMA
     #17  | AS262589 | 11         | SECURE (Active Local ROV)      | SAMM (Internexa)
     #18  | AS266830 | 11         | PARTIAL (Mixed Feeds)          | AIRPOINT TELECOMUNICACIONES LIMITADA
-    #19  | AS52468  | 10         | SECURE (Full Coverage)         | UFINET PANAMA S.A.
+    #19  | AS52468  | 10         | PARTIAL (Mixed Feeds)          | UFINET PANAMA S.A.
     #20  | AS14117  | 9          | VULNERABLE (No Coverage)       | Telefonica del Sur S.A.
 
     ====================================================================================================
@@ -68,18 +68,18 @@
     ====================================================================================================
     ASN      | Cone     | Feeds  | Name
     --------------------------------------------------------------------------------
-    AS16629  | 18       | 1/1    | CTC. CORP S.A. (TELEFONICA EMPRESAS)
-    AS14117  | 8        | 1/1    | Telefonica del Sur S.A.
-    AS11340  | 7        | 1/1    | Red Universitaria Nacional
-    AS274042 | 0        | 1/2    | INVERSIONES SB S.A. (SALCOBRAND)
-    AS274073 | 0        | 1/1    | Texus Networks SpA
-    AS273973 | 0        | 1/1    | APOAPSIS SPA
-    AS273955 | 0        | 1/1    | XHOST Servicios Informáticos SPA
-    AS274025 | 0        | 1/1    | SERVICIOS INTEGRALES METFY TELECOM SPA
-    AS274000 | 0        | 2/2    | CYBEWARD CL SPA
-    AS274199 | 0        | 1/1    | INGENIERIA INVERSIONES TECNOLOGIA Y CONSTRUCCION E
+    AS16629  | 17       | 1/1    | CTC. CORP S.A. (TELEFONICA EMPRESAS)
+    AS14117  | 9        | 1/1    | Telefonica del Sur S.A.
+    AS11340  | 6        | 1/1    | Red Universitaria Nacional
     AS274225 | 0        | 1/1    | TELECOMUNICACIONES WIFINET RUPERTO TRONCOSO E.I.R.
-    AS274099 | 0        | 1/1    | VALLENET SPA
+    AS274199 | 0        | 1/1    | INGENIERIA INVERSIONES TECNOLOGIA Y CONSTRUCCION E
     AS274136 | 0        | 1/1    | DB TERRA CHILE HOLDCO SpA
-    AS270102 | 0        | 1/1    | LINENET LIMITADA
-    AS270094 | 0        | 1/1    | CONEXIONES REDES Y TELECOMUNICACIONES SPA
+    AS271849 | 0        | 1/1    | EQUIPOS ELECTRONICOS Y COMPUTACION S.A.
+    AS271846 | 0        | 1/1    | NANOTIK TELECOMUNICACIONES SPA
+    AS271843 | 0        | 1/1    | LARA INGENIERIA EN TECNOLOGIA Y TELECOMUNICACIONES
+    AS271836 | 0        | 1/1    | Compañia de Comunicaciones Coyhaique Ltda.
+    AS271871 | 0        | 2/2    | ENGIE ENERGIA CHILE S.A.
+    AS271869 | 0        | 2/2    | SERVICIOS ZONALES DE INTERNET LIMITADA
+    AS271867 | 0        | 2/2    | MARIO BENAVIDES SERVICIO DE TELEVISION POR CABLE E
+    AS271788 | 0        | 1/1    | SOCIEDAD COMUNICACIONES PUNTA SUR LIMITADA
+    AS271783 | 0        | 1/1    | GRUPO ULLOA SpA

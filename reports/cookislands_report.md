@@ -26,7 +26,7 @@
     ----------------------------------------------------------------------------------------------------
     #1   | AS9507   | 1          | PARTIAL (Mixed Feeds)          | NextHop Pty Ltd
     #2   | AS45177  | 1          | SECURE (Active Local ROV)      | Devoli
-    #3   | AS12684  | 1          | PARTIAL (Mixed Feeds)          | SES ASTRA S.A.
+    #3   | AS12684  | 1          | SECURE (Active Local ROV)      | SES ASTRA S.A.
     #4   | AS174    | 1          | CORE: PROTECTED                | Cogent Communications, LLC
 
     ====================================================================================================
@@ -35,4 +35,4 @@
     ASN      | Cone     | Feeds  | Name
     --------------------------------------------------------------------------------
     AS152093 | 0        | 2/3    | VakaNet Limited
-    AS10131  | 0        | 3/6    | Telecom Cook Islands
+    AS10131  | 0        | 1/5    | Telecom Cook Islands

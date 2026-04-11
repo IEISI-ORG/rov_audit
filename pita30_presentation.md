@@ -308,17 +308,15 @@ Your customers' traffic can be redirected, intercepted, or disrupted — and you
 
 ### What vulnerable means, in practice
 
-| Network | Country | Status |
-|---------|---------|--------|
-| Telecom Fiji | FJ | VULNERABLE |
-| Digicel Fiji | FJ | VULNERABLE |
-| Digicel PNG | PG | VULNERABLE |
-| Solomon Telekom | SB | VULNERABLE |
-| Digicel Samoa | WS | VULNERABLE |
-| Digicel Tonga | TO | VULNERABLE |
-| FSM Telecom | FM | VULNERABLE |
-| Vodafone Fiji | FJ | PARTIAL |
-| PNG DATACO | PG | PARTIAL |
+| Network | Country | APNIC | Status |
+|---------|---------|-------|--------|
+| Vodafone Samoa | WS | 97% | SECURE |
+| Telecom Cook Islands | CK | 0% | PARTIAL |
+| VakaNet | CK | N/A | VULNERABLE |
+| Digicel Samoa | WS | 1% | VULNERABLE |
+| Telecom Fiji | FJ | 75% | PARTIAL |
+| Tonga Communications | TO | 93% | PARTIAL |
+| Solomon Telekom | SB | 1% | VULNERABLE |
 
 </div>
 </div>
@@ -327,17 +325,17 @@ Your customers' traffic can be redirected, intercepted, or disrupted — and you
 
 # One Pacific Network Got This Right
 
-Not all Pacific operators are behind. One is a regional leader.
+Not all Pacific operators are behind. One commercial ISP is a regional leader.
 
 <div class="box-green">
 
-### Tonga Communications Corporation — SECURE (Active Local ROV)
+### Vodafone Samoa — SECURE (Active Local ROV)
 
-TCC has implemented full route filtering. Their APNIC routing security score is **98.3%** — among the highest of any network in the Pacific.
+Vodafone Samoa has implemented full route filtering. Their APNIC routing security score is **97%** — among the highest of any commercial ISP in the Pacific.
 
 They made a decision. They assigned a technical resource. It is done.
 
-**This is not a large-network problem. TCC is not the biggest ISP in the region. They just decided.**
+**This is not a large-network problem. Vodafone Samoa is not the biggest ISP in the region. They just decided.**
 
 </div>
 
@@ -591,7 +589,7 @@ Your network should no longer appear as VULNERABLE in public global audits.
 
 Both are free, public tools that take five minutes to check.
 
-**"My team said it's done" is not verification. A 98% APNIC score is verification — the same score Tonga Communications achieved.**
+**"My team said it's done" is not verification. A 97% APNIC score is verification — the same score Vodafone Samoa achieved.**
 
 ---
 
@@ -628,7 +626,7 @@ RPKI is the standard fix. It is:
 - Free to implement
 - Supported on all major network hardware
 - Already in use by 86% of the world's top 100 networks
-- Already implemented by Tonga Communications Corporation in the Pacific
+- Already implemented by Vodafone Samoa in the Pacific
 
 ### Your role
 
@@ -643,6 +641,39 @@ That decision sits with the people in this room.
 
 **One ask:** Leave today with a named person, a target date, and a commitment to check your APNIC score at PITA 31. That is all it takes to start.
 
+</div>
+
+---
+
+# Get Involved: APNIC Routing Security SIG
+
+<div style="display:grid; grid-template-columns:1fr 1fr; gap:30px;">
+<div style="font-size:0.82em; line-height:1.4;">
+
+**What the SIG does**
+- Clearinghouse for adoption and technical stories at events like this
+- Mailing list discussion of news and developments in routing security
+- Two in-person conferences per year — standalone forums outside APNIC conferences
+- Capacity building and deployment guidance across Asia-Pacific
+
+The SIG is an advisory body to APNIC on routing security policy and services (RPKI, IRRd, RRDP).
+
+<div class="box" style="margin-top:12px; padding:10px 14px;">
+
+Chair: **Terry Sweetser** · Co-Chair: Taiji Kimura · apnic.net/community/participate/sigs/routing-security-sig/
+
+</div>
+
+</div>
+<div style="display:flex; flex-direction:column; align-items:center; justify-content:center; gap:10px;">
+
+**Subscribe to the mailing list:**
+
+![Routing Security SIG mailing list QR code w:200](rs_sig_mail_list.png)
+
+<span class="muted" style="font-size:0.78em;">sig-routingsecurity@apnic.net</span>
+
+</div>
 </div>
 
 ---
