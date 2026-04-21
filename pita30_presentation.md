@@ -3,7 +3,7 @@ marp: true
 theme: default
 paginate: true
 footer: PITA 30 · Cook Islands · April 2026 · tcs@ieisi.org
-header: '![IEISI logo](images/apac_logo.png)'
+header: '![IEISI logo](https://www.ieisi.org/images/apac_logo.png)'
 backgroundColor: "#ffffff"
 color: "#333333"
 style: |
