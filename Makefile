@@ -2,6 +2,7 @@
 GO := go
 BINARY_EXTRACTOR := bgp-extractor
 BINARY_CALCULATOR := cone-calculator
+BINARY_FETCHROA := fetch-roa
 MARP := npx @marp-team/marp-cli
 PITA30_SRC := pita30_presentation.md
 PITA30_PDF := pita30_presentation.pdf
@@ -10,6 +11,7 @@ PITA30_HTML := pita30_presentation.html
 # Source files
 SRC_EXTRACTOR := bgp-extractor.go
 SRC_CALCULATOR := cone-calculator.go
+SRC_FETCHROA := fetch-roa.go
 
 # Data URLs
 RIB_URL := http://data.ris.ripe.net/rrc00/latest-bview.gz
@@ -43,7 +45,7 @@ setup:
 	$(GO) mod tidy
 
 # 2. Compile Binaries
-build: $(BINARY_EXTRACTOR) $(BINARY_CALCULATOR)
+build: $(BINARY_EXTRACTOR) $(BINARY_CALCULATOR) $(BINARY_FETCHROA)
 
 $(BINARY_EXTRACTOR): $(SRC_EXTRACTOR)
 	@echo "[*] Building $(BINARY_EXTRACTOR)..."
@@ -52,6 +54,10 @@ $(BINARY_EXTRACTOR): $(SRC_EXTRACTOR)
 $(BINARY_CALCULATOR): $(SRC_CALCULATOR)
 	@echo "[*] Building $(BINARY_CALCULATOR)..."
 	$(GO) build -o $(BINARY_CALCULATOR) $(SRC_CALCULATOR)
+
+$(BINARY_FETCHROA): $(SRC_FETCHROA)
+	@echo "[*] Building $(BINARY_FETCHROA)..."
+	$(GO) build -o $(BINARY_FETCHROA) $(SRC_FETCHROA)
 
 # 3. Download Data
 download:
@@ -86,7 +92,7 @@ present-html: $(PITA30_SRC)
 # Cleanup
 clean:
 	@echo "[*] Cleaning up..."
-	rm -f $(BINARY_EXTRACTOR) $(BINARY_CALCULATOR)
+	rm -f $(BINARY_EXTRACTOR) $(BINARY_CALCULATOR) $(BINARY_FETCHROA)
 	rm -rf $(OUTPUT_DIR)
 	# Note: We do not delete the large .gz file by default to save bandwidth
 

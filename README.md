@@ -73,27 +73,27 @@ We use raw BGP data from RIPE RIS to determine who provides transit to whom.
 Generate the master report (via `do_reports`):
 
 ```bash
-python3 rov_no_scrape_v20.py
+python3 rov_no_scrape_v21.py
 ```
 *   **Input:** Topology (`final_as_rank.csv`), parsed ASN data (`data/parsed/`), APNIC cache (`data/apnic/`), Atlas results (`data/atlas/`).
-*   **Output:** `rov_audit_v20_final.csv`
+*   **Output:** `rov_audit_v21_final.csv`
 *   **Logic:** Determines if a network is `SECURE`, `VULNERABLE`, or `PARTIAL` based on its own status **AND** its upstream providers.
 
 ### Phase 3: Analysis
 Run all analysis scripts (via `do_reports`):
 
 ```bash
-python3 analyze_roa_signing.py          # "Glass Houses" — filters but doesn't sign
-python3 analyze_herd_immunity.py        # % of global traffic protected by Core
-python3 analyze_roa_strategy_v2.py      # ROA signing strategy recommendations
-python3 analyze_aspa_realistic_v4.py    # ASPA deployment readiness
+python3 analyze_roa_signing_v2.py       # "Glass Houses" — filters but doesn't sign
+python3 analyze_herd_immunity_v2.py     # % of global traffic protected by Core
+python3 analyze_roa_strategy_v3.py      # ROA signing strategy recommendations
+python3 analyze_aspa_readiness.py       # ASPA deployment readiness
 python3 analyze_rov_quadrants_v3.py     # ROV/ROA quadrant analysis
-python3 statistics_v5.py               # Summary statistics
+python3 statistics_v6.py               # Summary statistics
 ```
 
 Country deep-dives:
 ```bash
-python3 analyze_country_deep_dive.py <CC>   # e.g. FJ, PG, WS, CK
+python3 analyze_country_deep_dive_v2.py <CC>   # e.g. FJ, PG, WS, CK
 ```
 
 ### Phase 4: Forensics (RIPE Atlas)
@@ -101,7 +101,7 @@ Find and actively verify unknown/unverified networks:
 
 ```bash
 # Find high-value targets not yet tested
-python3 find_atlas_targets.py rov_audit_v20_final.csv --limit 20
+python3 find_atlas_targets.py rov_audit_v21_final.csv --limit 20
 
 # Run forensic trace (Valid vs Invalid path comparison)
 python3 verify_forensic_path_v2.py [TARGET_ASN]
@@ -116,19 +116,21 @@ python3 verify_forensic_path_v2.py [TARGET_ASN]
 | :--- | :--- |
 | `do_data_gathering` | Shell script — runs full data collection pipeline |
 | `do_reports` | Shell script — runs audit and all analysis/reporting |
-| `rov_no_scrape_v20.py` | **Main audit engine.** Generates `rov_audit_v20_final.csv` |
+| `rov_no_scrape_v21.py` | **Main audit engine.** Generates `rov_audit_v21_final.csv` |
 | `fetch_roa_bulk_async_v6.py` | Mass-fetches ROA signing stats for all ASNs |
-| `statistics_v5.py` | Summary statistics from the audit CSV |
-| `analyze_herd_immunity.py` | Global protection stats based on Cone Weight |
-| `analyze_roa_signing.py` | Identifies "Glass Houses" |
-| `analyze_roa_strategy_v2.py` | ROA signing strategy recommendations |
-| `analyze_aspa_realistic_v4.py` | ASPA deployment readiness analysis |
+| `statistics_v6.py` | Summary statistics from the audit CSV |
+| `analyze_herd_immunity_v2.py` | Global protection stats based on Cone Weight |
+| `analyze_roa_signing_v2.py` | Identifies "Glass Houses" |
+| `analyze_roa_strategy_v3.py` | ROA signing strategy recommendations |
+| `analyze_aspa_readiness.py` | ASPA deployment readiness analysis |
 | `analyze_rov_quadrants_v3.py` | ROV/ROA quadrant breakdown |
 | `analyze_cone_quality_v2.py` | Upstream provider quality analysis |
-| `analyze_country_deep_dive.py` | Per-country detailed report |
+| `analyze_country_deep_dive_v2.py` | Per-country detailed report |
 | `verify_forensic_path_v2.py` | Active RIPE Atlas tool — Valid vs Invalid traceroutes |
 | `find_atlas_targets.py` | Identifies best candidates for active verification |
-| `rov_global_audit_v18.py` | Alternate audit engine (retained for reference) |
+| `TODO.md` | Tracked tasks, identified regressions, and feature requests |
+| `reports/` | Directory containing generated audit reports (CC-named) |
+| `reports/old/` | Archive for legacy or non-standardized reports |
 | `go-bgp-relationships.go.txt` | Go source — parses MRT/BGP dumps |
 | `cone-calculator-v2.go` | Go source — Valley-Free logic, calculates customer cones |
 
