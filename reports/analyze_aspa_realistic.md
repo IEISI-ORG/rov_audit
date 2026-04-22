@@ -1,15 +1,15 @@
     [*] Loading Topology & Cleaning Noise...
         - Fetching CDN List... OK (108 Networks)
-        - Modeled:  118,669 'Regular' Networks
+        - Modeled:  118,863 'Regular' Networks
 
     ==========================================================================================
      1. ASPA READINESS (Simplicity vs Complexity)
     ==========================================================================================
-    Total Networks: 118,669
+    Total Networks: 118,863
     ------------------------------------------------------------
-      - Trivial (1-2 Providers):   64,782 (54.6%)
+      - Trivial (1-2 Providers):   64,781 (54.5%)
       - Moderate (3-5 Providers):  13,646 (11.5%)
-      - Complex (>5 Providers):     2,233 ( 1.9%) -> Target for Engineering Support
+      - Complex (>5 Providers):     2,232 ( 1.9%) -> Target for Engineering Support
 
     ==========================================================================================
      2. THE ASPV ENFORCERS (Top Validators)
@@ -25,14 +25,14 @@
     AS6939   | 3,726        | Hurricane Electric LLC
     AS1299   | 2,448        | Arelion (fka. Telia Carrier)
     AS7018   | 2,267        | AT&T Enterprises, LLC
-    AS6461   | 2,177        | Zayo Bandwidth
+    AS6461   | 2,176        | Zayo Bandwidth
     AS3257   | 1,735        | GTT Communications Inc.
     AS2914   | 1,400        | NTT America, Inc.
     AS701    | 1,213        | Verizon Business
     AS9002   | 1,130        | RETN Limited
     AS12389  | 1,125        | Rostelecom PJSC
     AS8220   | 1,039        | COLT
-    AS46887  | 999          | Crown Castle Fiber LLC
+    AS46887  | 998          | Crown Castle Fiber LLC
     AS20473  | 919          | The Constant Company, LLC
     AS9498   | 865          | Bharti Airtel Ltd.
     AS3216   | 857          | Vimpelcom PJSC
@@ -70,7 +70,7 @@
     AS7545   | 292          | TPG Telecom Limited
     AS9121   | 287          | Turk Telekom
     ------------------------------------------------------------------------------------------
-    Top 50 Enforcers cover 54,107 / 158,997 links (34.0%)
+    Top 50 Enforcers cover 54,105 / 158,984 links (34.0%)
 
     ==========================================================================================
      3. COMPLEXITY GIANTS (Traffic Engineering Heavyweights)
@@ -130,4 +130,4 @@
     AS14630  | 24         | 0        | Invesco Group Services, Inc.
     AS47583  | 24         | 0        | Hostinger International Limited
 
-    [+] Full list of 2233 complex networks saved to 'aspa_complexity_list.csv'
+    [+] Full list of 2232 complex networks saved to 'aspa_complexity_list.csv'

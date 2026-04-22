@@ -1,5 +1,5 @@
     [*] Loading Data...
-        - Scanning JSON cache for ROA stats... OK (121350 records)
+        - Scanning JSON cache for ROA stats... OK (121549 records)
     [*] Classifying Quadrants (this takes a moment)...
         - Processing 200/1191...    - Processing 400/1191...    - Processing 600/1191...    - Processing 800/1191...    - Processing 1000/1191...
     ==============================================================================================================
@@ -13,10 +13,10 @@
     ASN      | CC | Cone     | % Sign | Name
     --------------------------------------------------------------------------------------------------------------
     AS6939   | US | 68256    |  61.1% | Hurricane Electric LLC
+    AS24482  | SG | 65410    |  73.6% | SG.GS
     AS1299   | SE | 48082    |  66.4% | Arelion (fka. Telia Carrier)
     AS9002   | GB | 46955    |  67.8% | RETN Limited
     AS17639  | PH | 42567    |  85.7% | Converge ICT Solutions Inc.
-    AS34549  | DE | 34154    |  67.2% | meerfarbig GmbH & Co. KG
 
     === Q2: THE VICTIMS ===
        SCREAMING INTO THE VOID: Customers have signed ROAs (>60%), but Provider is LEAKING.
@@ -24,11 +24,11 @@
     --------------------------------------------------------------------------------------------------------------
     ASN      | CC | Cone     | % Sign | Name
     --------------------------------------------------------------------------------------------------------------
-    AS24482  | SG | 65410    |  73.6% | SG.GS
     AS37721  | BF | 58181    |  66.8% | Virtual Technologies & Solutions
     AS35280  | FR | 50969    |  66.2% | F5 Networks SARL
     AS50300  | GB | 22908    |  85.3% | CustodianDC Limited
     AS48185  | BE | 21510    |  68.6% | team.blue NV
+    AS3214   | DE | 21309    |  80.8% | xTom GmbH
 
     === Q3: WASTED TECH ===
        GLASS HOUSES: Provider filters invalids, but Customers (<60%) haven't signed ROAs.
@@ -49,9 +49,9 @@
     ASN      | CC | Cone     | % Sign | Name
     --------------------------------------------------------------------------------------------------------------
     AS213241 | BE | 24556    |   0.0% | TECHIT.BE SRL
+    AS56655  | NO | 14362    |  56.0% | Gigahost AS
     AS212024 | FR | 13883    |   0.0% | Marc Schmitt
     AS31500  | AG | 12515    |  59.1% | Global Network Management Inc
-    AS9498   | IN | 7821     |  57.7% | Bharti Airtel Ltd.
-    AS58057  | CH | 6662     |  43.6% | Securebit AG
+    AS12389  | RU | 10447    |  37.3% | Rostelecom PJSC
 
     [+] Full quadrant data saved to rov_quadrant_top5_v3.csv

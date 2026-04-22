@@ -30,15 +30,17 @@ The cost framing is equally straightforward: ROA registration through APNIC is f
 
 Our global audit covers 120,000+ routable networks across 249 territories. The Pacific picture, as of April 2026, is this:
 
-Of the 116 routable ASNs across Pacific island nations, **49 are vulnerable in some form** — either fully exposed or protected only on some paths. Only **three incumbent operators are doing active local ROV**: Vodafone Samoa, OPT New Caledonia, and PNG DATACO. The rest are either relying entirely on their upstreams' filtering — which varies — or unprotected.
+Of the roughly 120 routable ASNs across Pacific island nations, **64 are vulnerable in some form** — either fully exposed or protected only on some paths. The gap is not in documentation: **90 of these networks (75%) have already signed ROAs** for more than half of their address space. The bottleneck is the "dropping" side: Route Origin Validation (ROV).
 
-The headline measurement tool here is APNIC Labs' routing security measurement, developed by Geoff Huston. It independently tests both sides of the equation — whether your routes are signed (ROA) and whether your network is actually dropping invalid announcements (ROV) — and reports a single percentile score from 0 to 100%. Think of it as a publicly visible test result for your network's routing hygiene. Vodafone Samoa scores 97%. OPT New Caledonia scores 100%. My own audit goes further, using RIPE Atlas traceroutes to actively verify filtering behaviour from inside the network — and at PITA 30 I encouraged every operator in the room to get a RIPE Atlas probe running. It is free, and it makes your network observable to the global measurement community.
+Currently, only a handful of major incumbent operators in the region are doing active local ROV filtering. The rest are either relying entirely on their upstreams' filtering — which varies significantly in consistency — or are entirely unprotected.
 
-The most striking single data point is Solomon Telekom (AS45891), the only network in the entire Pacific with a **VULNERABLE (No Coverage)** verdict: no upstream filtering, no local ROV, an APNIC Labs score of 1%. The Solomon Islands' primary incumbent ISP is, in our audit's terms, a fully open conduit for route hijacks affecting every customer on that network.
+The headline measurement tool here is APNIC Labs' routing security measurement, developed by Geoff Huston. It independently tests both sides of the equation — whether your routes are signed (ROA) and whether your network is actually dropping invalid announcements (ROV) — and reports a single percentile score from 0 to 100%. Think of it as a publicly visible test result for your network's routing hygiene. 
 
-Tonga Communications is an interesting partial success: their APNIC Labs score of 93% shows substantial ROA coverage, but the audit verdict is still STUB: VULNERABLE — the filtering side is not yet in place. They have done more than most. The last step is actually dropping the invalid routes, and at their scale that is a day's work.
+We see a clear divide in the region: a small group of "early adopters" have reached scores of 95-100%, proving that full deployment is achievable with existing hardware. However, a significant portion of the region's primary transit providers still score below 10%, effectively acting as open conduits for route hijacks that affect every customer on their networks.
 
-Vodafone Samoa is worth saying again: a commercial ISP in a small island nation, not the largest network in the region, with a 97% test result. The difference between them and most of their neighbours is not budget or hardware. It is that someone made a decision and it became a project with a named owner.
+My own audit goes further, using RIPE Atlas traceroutes to actively verify filtering behaviour from inside the network — and at PITA 30 I encouraged every operator in the room to get a RIPE Atlas probe running. It is free, and it makes your network observable to the global measurement community.
+
+The success stories in the region prove that this is not a budget or hardware issue. Whether it is a commercial ISP in a small island nation or a government-owned incumbent, those who have reached 100% security did so because someone made a decision and it became a project with a named owner. For most operators in this region, the final step from vulnerable to secure is a day's work once that decision is made.
 
 ## What needs to happen before PITA 31
 

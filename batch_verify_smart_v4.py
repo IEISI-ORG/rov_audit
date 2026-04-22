@@ -16,7 +16,7 @@ from ripe.atlas.cousteau import (
 HEADERS = {'User-Agent': 'ResearchScript/1.0'}
 SECRETS_FILE = "secrets.yaml"
 DIR_ATLAS = "data/atlas"
-FILE_AUDIT = "rov_audit_v19_final.csv" # Updated to v19
+FILE_AUDIT = "rov_audit_v20_final.csv"
 FILE_GRAPH = "data/downstream_graph.json"
 RIPE_STAT_URL = "https://stat.ripe.net/data/network-info/data.json?resource="
 
@@ -124,34 +124,39 @@ def find_test_strategy(target_asn, probe_map, topology):
             
     return None, "NONE", "No probes found in ASN or Customers"
 
-def get_targets(probe_map, topology):
-    print(f"[*] Analyzing Targets...")
+def get_atlas_tested_asns():
+    tested = set()
+    for f in os.listdir(DIR_ATLAS):
+        if f.startswith("as_") and f.endswith(".json") and "_via_" not in f:
+            try: tested.add(int(f.replace("as_", "").replace(".json", "")))
+            except: pass
+    return tested
+
+def get_targets(probe_map, topology, retest=False):
+    print(f"[*] Analyzing Targets ({'RETEST mode' if retest else 'new targets'})...")
     if not os.path.exists(FILE_AUDIT): return []
 
     df = pd.read_csv(FILE_AUDIT, low_memory=False)
-    
-    # Filter: Unverified
-    mask = df['verdict'].str.contains("Unverified", na=False) | df['verdict'].str.contains("Unknown", na=False)
-    
-    # Filter: Not already tested
-    tested = set()
-    for f in os.listdir(DIR_ATLAS):
-        if f.startswith("as_") and f.endswith(".json"):
-            try: tested.add(int(f.split("_")[1].split(".")[0]))
-            except: pass
-            
-    candidates = df[mask & ~df['asn'].isin(tested)].copy()
+    tested = get_atlas_tested_asns()
+
+    if retest:
+        # Retest: ASNs that already have Atlas results
+        candidates = df[df['asn'].isin(tested)].copy()
+        print(f"    - {len(candidates)} ASNs have existing Atlas results to retest.")
+    else:
+        # Normal: unverified ASNs not yet tested
+        mask = df['verdict'].str.contains("Unverified", na=False) | df['verdict'].str.contains("Unknown", na=False)
+        candidates = df[mask & ~df['asn'].isin(tested)].copy()
+
     candidates['cone'] = pd.to_numeric(candidates['cone'], errors='coerce').fillna(0)
     candidates = candidates.sort_values(by='cone', ascending=False)
-    
+
     work_queue = []
-    
     print(f"    - Scanning {len(candidates)} candidates for testability...")
-    
+
     for _, row in candidates.iterrows():
         asn = int(row['asn'])
         pid, strat, desc = find_test_strategy(asn, probe_map, topology)
-        
         if pid:
             work_queue.append({
                 'asn': asn,
@@ -161,7 +166,7 @@ def get_targets(probe_map, topology):
                 'strategy': strat,
                 'desc': desc
             })
-            
+
     return work_queue
 
 # ==============================================================================
@@ -234,7 +239,7 @@ def analyze_trace_result(target_asn, res_v, res_i, strategy):
         verdict = "INCONCLUSIVE (Bypassed)"
         notes = f"Valid path did not traverse Target AS{target_asn}"
     elif reached_cf:
-        verdict = "VULNERABLE (Verified Active)"
+        verdict = "VULNERABLE (ATLAS Verified)"
         notes = "Invalid route reached Cloudflare"
     else:
         # It stopped.
@@ -263,6 +268,7 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--limit", type=int, default=10, help="Max tests to run")
     parser.add_argument("--dry-run", action="store_true")
+    parser.add_argument("--retest", action="store_true", help="Re-test ASNs that already have Atlas results")
     args = parser.parse_args()
 
     if not ATLAS_API_KEY and not args.dry_run:
@@ -270,7 +276,7 @@ def main():
 
     probe_map = get_asn_probe_map()
     topology = load_topology()
-    queue = get_targets(probe_map, topology)
+    queue = get_targets(probe_map, topology, retest=args.retest)
     
     print("-" * 60)
     print(f"Total Testable Candidates: {len(queue)}")
@@ -287,9 +293,18 @@ def main():
     ip_i = resolve_ip(DOMAIN_INVALID)
     if not ip_v: print("[-] DNS Error"); return
 
-    print(f"\n[*] Executing {min(len(queue), args.limit)} Tests...")
+    batch = queue[:args.limit]
+
+    if args.retest:
+        print(f"\n[*] Clearing {len(batch)} stale Atlas cache files...")
+        for item in batch:
+            stale = os.path.join(DIR_ATLAS, f"as_{item['asn']}.json")
+            if os.path.exists(stale):
+                os.remove(stale)
+
+    print(f"\n[*] Executing {len(batch)} Tests...")
     
-    for i, item in enumerate(queue[:args.limit]):
+    for i, item in enumerate(batch):
         asn = item['asn']
         print(f"\n[{i+1}] Testing AS{asn} ({item['strategy']})...")
         
@@ -330,7 +345,7 @@ def main():
         except Exception as e:
             print(f"    [!] Error processing results: {e}")
 
-    print("\n[*] Batch Complete. Run 'rov_global_audit_v18.py' to update report.")
+    print("\n[*] Batch Complete. Run 'rov_no_scrape_v20.py' to update report.")
 
 if __name__ == "__main__":
     main()

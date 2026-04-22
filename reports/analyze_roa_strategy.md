@@ -1,81 +1,80 @@
-    [*] Loading V19 Data Sets...
-        - Scanning JSON cache for ROA stats... OK (121350 records)
-        - Loading Topology... OK
+    [*] Loading Data for ROA Strategy Report...
+        - Loading Cones from final_as_rank.csv... OK (86333 ASNs)
+        - Loading Graph from data/downstream_graph.json... OK
+    [4] Loading ROA Stats from data/parsed... OK (122180 records)
 
     ===============================================================================================
     1. THE GLASS HOUSES (Secure Providers, Unsigned Routes)
     -----------------------------------------------------------------------------------------------
     ASN      | CC | Cone     | Signed%  | Name
     -----------------------------------------------------------------------------------------------
-    AS3356   | US | 64668    |   5.0%  | Lumen (Level 3)
-    AS174    | US | 64504    |   9.6%  | Cogent Communications, LLC
-    AS3216   | RU | 35508    |   0.3%  | Vimpelcom PJSC
-    AS33891  | DE | 33865    |   0.0%  | Core-Backbone GmbH
-    AS29632  | DE | 21725    |   0.0%  | Netassist International EOOD
-    AS56662  | PL | 12408    |   0.0%  | Marcin Gondek
-    AS16735  | BR | 2836     |   0.0%  | Algar Telecom
-    AS1764   | AT | 1927     |   5.8%  | Next Layer Telecommunications
-    AS14840  | BR | 1653     |   0.0%  | BR.DIGITAL 
-    AS46887  | US | 1370     |   0.4%  | Crown Castle Fiber LLC
-    AS4766   | KR | 1022     |   4.0%  | Korea Telecom
-    AS201054 | PL | 792      |   0.0%  | Stowarzyszenie e-Poludnie
-    AS9318   | KR | 543      |   8.9%  | SK Broadband Co Ltd
-    AS3549   | US | 536      |   0.6%  | Lumen (fka. Global Crossing)
-    AS10429  | BR | 515      |   0.0%  | Vivo (TELEFÔNICA BRASIL)
+    AS46887  | US | 1375     |   0.3%  | Crown Castle Fiber LLC
+    AS4766   | KR | 1242     |   0.1%  | Korea Telecom
+    AS50263  | UA | 625      |   0.0%  | A-Systems Sp. z o.o.
+    AS3549   | US | 524      |   1.2%  | Lumen (fka. Global Crossing)
+    AS209    | US | 504      |   1.3%  | Lumen (ex. Qwest)
+    AS3786   | KR | 458      |   0.2%  | LG DACOM Corporation
+    AS4134   | CN | 419      |   2.4%  | China Telecom Backbone
+    AS10429  | BR | 406      |   0.0%  | Vivo (TELEFÔNICA BRASIL)
+    AS28368  | BR | 332      |   0.0%  | Wirelink (Sobralnet)
+    AS7738   | BR | 188      |   0.0%  | V.tal
+    AS1031   | US | 178      |   0.0%  | PEER 1031 LLC
+    AS3269   | IT | 173      |   0.1%  | TIM S.p.A. (fka. Telecom Italia S.p.A.)
+    AS13649  | US | 172      |   1.7%  | Flexential Colorado Corp.
+    AS23005  | US | 140      |   0.1%  | SWITCH, LTD
+    AS4837   | CN | 116      |   1.2%  | China Unicom Backbone
 
     ===============================================================================================
     2. SCREAMING INTO THE VOID (Fully Signed, Vulnerable Upstreams)
     -----------------------------------------------------------------------------------------------
     ASN      | CC | Cone     | Signed%  | Name
     -----------------------------------------------------------------------------------------------
-    AS45820  | IN | 347      |  98.8%  | Tata Teleservices ISP
-    AS17762  | IN | 127      |  99.4%  | Tata Teleservices Maharashtra Ltd
-    AS45117  | IN | 118      | 100.0%  | Ishan Netsol Pvt Ltd
-    AS29465  | NG | 69       |  98.4%  | MTN NIGERIA Communication limited
-    AS23688  | BD | 46       |  99.6%  | Link3 Technologies Ltd.
-    AS135718 | IN | 44       | 100.0%  | DISHAWAVES INFONET PVT. LTD
-    AS141731 | BD | 42       | 100.0%  | Max Hub Limited
-    AS151690 | IN | 37       | 100.0%  | FAB FIVE NETWORK PRIVATE LIMITED
-    AS24323  | BD | 34       |  99.0%  | aamra networks limited
-    AS149765 | BD | 34       | 100.0%  | Coronet Corporation Limited
-    AS15836  | MD | 33       | 100.0%  | Arax-Impex s.r.l.
-    AS25019  | SA | 32       |  97.8%  | Saudi Telecom Company JSC
-    AS16010  | GE | 31       | 100.0%  | Magticom Ltd.
-    AS4007   | NP | 31       | 100.0%  | Subisu Cablenet (Pvt) Ltd, Baluwatar, Kathman
-    AS25184  | IR | 26       | 100.0%  | Afranet
+    AS37721  | BF | 60817    | 100.0%  | Virtual Technologies & Solutions
+    AS35280  | FR | 53251    | 100.0%  | F5 Networks SARL
+    AS17639  | PH | 43164    |  97.8%  | Converge ICT Solutions Inc.
+    AS34927  | CH | 34524    | 100.0%  | iFog GmbH
+    AS48362  | AT | 33110    | 100.0%  | Stadtwerke Feldkirch
+    AS213241 | BE | 25054    | 100.0%  | TECHIT.BE SRL
+    AS3214   | DE | 21983    | 100.0%  | xTom GmbH
+    AS56655  | NO | 14403    | 100.0%  | Gigahost AS
+    AS212024 | FR | 14225    | 100.0%  | Marc Schmitt
+    AS25091  | CH | 13758    | 100.0%  | IP-Max SA
+    AS1836   | CH | 13396    |  99.9%  | green.ch AG
+    AS31133  | RU | 11436    |  99.8%  | MegaFon PJSC
+    AS12389  | RU | 11001    |  99.3%  | Rostelecom PJSC
+    AS49673  | RU | 8979     | 100.0%  | Truenetwork LLC
+    AS208972 | TR | 8197     | 100.0%  | GIBIRNet Iletisim
 
     ===============================================================================================
     3. WEIGHTED EVANGELISM TARGETS
        Metric = (Provider Cone Size) * (Count of Unsigned Customers)
-       Highlighting massive providers with dirty customer bases.
     -----------------------------------------------------------------------------------------------
     ASN      | CC | Cone     | Unsigned | Impact Score   | Name
     -----------------------------------------------------------------------------------------------
-        (Calculating weighted metrics for 638 providers...)
-    AS6939   | US | 68256    | 32224    | 2,199,481,344  | Hurricane Electric LLC
-    AS3356   | US | 64668    | 32281    | 2,087,547,708  | Lumen (Level 3)
-    AS174    | US | 64504    | 30073    | 1,939,828,792  | Cogent Communications, LLC
-    AS1299   | SE | 48082    | 30224    | 1,453,230,368  | Arelion (fka. Telia Carrier)
-    AS24482  | SG | 65410    | 18343    | 1,199,815,630  | SG.GS
-    AS9002   | GB | 46955    | 22073    | 1,036,437,715  | RETN Limited
-    AS6461   | US | 40790    | 24973    | 1,018,648,670  | Zayo Bandwidth
-    AS3257   | US | 30274    | 26916    | 814,854,984    | GTT Communications Inc.
-    AS2914   | US | 28854    | 25706    | 741,720,924    | NTT America, Inc.
-    AS33891  | DE | 33865    | 18211    | 616,715,515    | Core-Backbone GmbH
-    AS3216   | RU | 35508    | 17343    | 615,815,244    | Vimpelcom PJSC
-    AS20485  | RU | 30619    | 17344    | 531,055,936    | TransTeleCom JSC
-    AS6762   | IT | 10469    | 23303    | 243,959,107    | Telecom Italia Sparkle (Seabone)
-    AS6453   | US | 8822     | 25078    | 221,238,116    | TATA Communications (America) Inc
-    AS31500  | AG | 12515    | 17354    | 217,185,310    | Global Network Management Inc
-    AS3491   | HK | 8891     | 22321    | 198,456,011    | PCCW Global (HK) Ltd.
-    AS35280  | FR | 50969    | 3686     | 187,871,734    | F5 Networks SARL
-    AS12389  | RU | 10447    | 17344    | 181,192,768    | Rostelecom PJSC
-    AS31133  | RU | 10436    | 17344    | 181,001,984    | MegaFon PJSC
-    AS9498   | IN | 7821     | 19486    | 152,400,006    | Bharti Airtel Ltd.
-    AS13335  | US | 16573    | 7566     | 125,391,318    | Cloudflare, Inc.
-    AS7713   | ID | 6908     | 17344    | 119,812,352    | PT Telkom Indonesia Tbk
-    AS8966   | AE | 6759     | 17344    | 117,228,096    | Etisalat (ETC)
-    AS4637   | HK | 4944     | 21968    | 108,609,792    | Telstra International Limited
-    AS7018   | US | 5316     | 19474    | 103,523,784    | AT&T Enterprises, LLC
+    AS6939   | US | 73872    | 32248    | 2,382,224,256  | Hurricane Electric LLC
+    AS3356   | US | 67438    | 32309    | 2,178,854,342  | Lumen (Level 3)
+    AS174    | US | 68044    | 30106    | 2,048,532,664  | Cogent Communications, LLC
+    AS1299   | SE | 50745    | 30248    | 1,534,934,760  | Arelion (fka. Telia Carrier)
+    AS24482  | SG | 67784    | 18331    | 1,242,548,504  | SG.GS
+    AS6461   | US | 47351    | 24969    | 1,182,307,119  | Zayo Bandwidth
+    AS9002   | GB | 48418    | 22062    | 1,068,197,916  | RETN Limited
+    AS3257   | US | 32706    | 26928    | 880,707,168    | GTT Communications Inc.
+    AS2914   | US | 31341    | 25707    | 805,683,087    | NTT America, Inc.
+    AS3216   | RU | 35392    | 17324    | 613,131,008    | Vimpelcom PJSC
+    AS33891  | DE | 33704    | 18191    | 613,109,464    | Core-Backbone GmbH
+    AS20485  | RU | 28956    | 17325    | 501,662,700    | TransTeleCom JSC
+    AS6762   | IT | 10841    | 23289    | 252,476,049    | Telecom Italia Sparkle (Seabone)
+    AS31500  | AG | 13373    | 17335    | 231,820,955    | Global Network Management Inc
+    AS6453   | US | 8959     | 25087    | 224,754,433    | TATA Communications (America) Inc
+    AS3491   | HK | 9349     | 22300    | 208,482,700    | PCCW Global (HK) Ltd.
+    AS31133  | RU | 11436    | 17325    | 198,128,700    | MegaFon PJSC
+    AS35280  | FR | 53251    | 3679     | 195,910,429    | F5 Networks SARL
+    AS12389  | RU | 11001    | 17325    | 190,592,325    | Rostelecom PJSC
+    AS7018   | US | 9438     | 19466    | 183,720,108    | AT&T Enterprises, LLC
+    AS701    | US | 6880     | 23976    | 164,954,880    | Verizon Business
+    AS9498   | IN | 8034     | 19460    | 156,341,640    | Bharti Airtel Ltd.
+    AS13335  | US | 18764    | 7537     | 141,424,268    | Cloudflare, Inc.
+    AS7713   | ID | 6914     | 17325    | 119,785,050    | PT Telkom Indonesia Tbk
+    AS8966   | AE | 6882     | 17325    | 119,230,650    | Etisalat (E&)
 
-    [+] Saved strategy to roa_strategy_weighted.csv
+    [+] Saved strategy to roa_strategy_weighted_v2.csv

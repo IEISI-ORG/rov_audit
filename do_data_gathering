@@ -1,12 +1,10 @@
 #!/bin/bash
 
-
 wget --timestamping --output-document=latest-bview.gz http://data.ris.ripe.net/rrc00/latest-bview.gz
 
 bgpdump -m latest-bview.gz | ./bgp-extractor -input /dev/stdin -output output -workers 16
 
 ./cone-calculator -input output/relationships.csv -output final_as_rank.csv -top 0
 
-# Get ROA Data --- slow .... 
-python3 fetch_roa_bulk_async_v6.py
-
+# Bulk ROA Sync (Go-powered, 500x faster than old version)
+python3 do_roa_sync.py

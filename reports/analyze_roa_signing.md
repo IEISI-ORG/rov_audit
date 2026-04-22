@@ -1,13 +1,13 @@
-    [*] Loading ROV Audit Data...
-    [*] Loading Signing Stats from JSON Cache...
+    [*] Loading Data for ROA Signing Report...
+    [4] Loading ROA Stats from data/parsed... OK (122180 records)
 
     ================================================================================
     GLOBAL ROA SIGNING REPORT
     ================================================================================
-    Total Networks: 120,707
-      - Fully Signed (>90%):  39,643  (32.8%)
-      - Partially Signed:      7,713  (6.4%)
-      - Totally Unsigned:     73,351  (60.8%)
+    Total Networks: 121,148
+      - Fully Signed (>90%):  42,473  (35.1%)
+      - Partially Signed:      5,818  (4.8%)
+      - Totally Unsigned:     72,857  (60.1%)
 
     ================================================================================
     THE 'GLASS HOUSES' (Secure Provider, but Unsigned Routes)
@@ -15,55 +15,39 @@
     --------------------------------------------------------------------------------
     ASN      | CC | Cone     | Signed | Name
     --------------------------------------------------------------------------------
-    AS3356   | US | 64668    |   5.0% | Lumen (Level 3)
-    AS174    | US | 64504    |   9.6% | Cogent Communications, LLC
-    AS3216   | RU | 35508    |   0.3% | Vimpelcom PJSC
-    AS33891  | DE | 33865    |   0.0% | Core-Backbone GmbH
-    AS29632  | DE | 21725    |   0.0% | Netassist International EOOD
-    AS56662  | PL | 12408    |   0.0% | Marcin Gondek
-    AS16735  | BR | 2836     |   0.0% | Algar Telecom
-    AS1764   | AT | 1927     |   5.8% | Next Layer Telecommunications
-    AS14840  | BR | 1653     |   0.0% | BR.DIGITAL 
-    AS46887  | US | 1370     |   0.4% | Crown Castle Fiber LLC
-    AS4766   | KR | 1022     |   4.0% | Korea Telecom
-    AS201054 | PL | 792      |   0.0% | Stowarzyszenie e-Poludnie
-    AS9318   | KR | 543      |   8.9% | SK Broadband Co Ltd
-    AS3549   | US | 536      |   0.6% | Lumen (fka. Global Crossing)
-    AS10429  | BR | 515      |   0.0% | Vivo (TELEFÔNICA BRASIL)
+    AS46887  | US | 1375     |   0.3% | Crown Castle Fiber LLC
+    AS4766   | KR | 1242     |   0.1% | Korea Telecom
+    AS50263  | UA | 625      |   0.0% | A-Systems Sp. z o.o.
+    AS3549   | US | 524      |   1.2% | Lumen (fka. Global Crossing)
+    AS209    | US | 504      |   1.3% | Lumen (ex. Qwest)
+    AS3786   | KR | 458      |   0.2% | LG DACOM Corporation
+    AS4134   | CN | 419      |   2.4% | China Telecom Backbone
+    AS10429  | BR | 406      |   0.0% | Vivo (TELEFÔNICA BRASIL)
+    AS28368  | BR | 332      |   0.0% | Wirelink (Sobralnet)
+    AS7738   | BR | 188      |   0.0% | V.tal
+    AS1031   | US | 178      |   0.0% | PEER 1031 LLC
+    AS3269   | IT | 173      |   0.1% | TIM S.p.A. (fka. Telecom Italia S.p.A.)
+    AS13649  | US | 172      |   1.7% | Flexential Colorado Corp.
+    AS23005  | US | 140      |   0.1% | SWITCH, LTD
+    AS4837   | CN | 116      |   1.2% | China Unicom Backbone
 
     ================================================================================
     SCREAMING INTO THE VOID (Fully Signed, but Vulnerable Upstreams)
-    They did their job (ROA), but their providers are failing them.
     --------------------------------------------------------------------------------
     ASN      | CC | Cone     | Feeds  | Name
     --------------------------------------------------------------------------------
-    AS45820  | IN | 347      | 1/1    | Tata Teleservices ISP
-    AS17762  | IN | 127      | 2/2    | Tata Teleservices Maharashtra Ltd
-    AS45117  | IN | 118      | 2/2    | Ishan Netsol Pvt Ltd
-    AS29465  | NG | 69       | 1/1    | MTN NIGERIA Communication limited
-    AS23688  | BD | 46       | 1/1    | Link3 Technologies Ltd.
-    AS135718 | IN | 44       | 2/2    | DISHAWAVES INFONET PVT. LTD
-    AS141731 | BD | 42       | 3/3    | Max Hub Limited
-    AS151690 | IN | 37       | 2/2    | FAB FIVE NETWORK PRIVATE LIMITED
-    AS24323  | BD | 34       | 3/3    | aamra networks limited
-    AS149765 | BD | 34       | 2/2    | Coronet Corporation Limited
-    AS15836  | MD | 33       | 1/1    | Arax-Impex s.r.l.
-    AS25019  | SA | 32       | 1/1    | Saudi Telecom Company JSC
-    AS16010  | GE | 31       | 1/1    | Magticom Ltd.
-    AS4007   | NP | 31       | 1/1    | Subisu Cablenet (Pvt) Ltd, Baluwatar, Ka
-    AS25184  | IR | 26       | 1/1    | Afranet
-
-    ================================================================================
-    THE WILD WEST (Vulnerable Upstreams + 0% Signed)
-    The most dangerous networks on the internet.
-    --------------------------------------------------------------------------------
-    AS33132  | US | 104      | Crown Castle Fiber LLC
-    AS35708  | DE | 78       | 4b42 UG
-    AS9425   | CN | 40       | Future Internet Technology Infrastructure (FI
-    AS38272  | CN | 39       | China Education and Research Network (CERNET)
-    AS23910  | CN | 35       | China Next Generation Internet CERNET2
-    AS396926 | US | 24       | C Spire Fiber
-    AS57681  | RU | 22       | PJSC Moscow city telephone network
-    AS3112   | US | 21       | OARnet
-    AS19024  | US | 18       | Unitas Global
-    AS140083 | CN | 17       | China Telecom Anhui Province Mobile Data Netw
+    AS37721  | BF | 60817    | 0/14   | Virtual Technologies & Solutions
+    AS35280  | FR | 53251    | 1/6    | F5 Networks SARL
+    AS17639  | PH | 43164    | 4/16   | Converge ICT Solutions Inc.
+    AS34927  | CH | 34524    | 2/11   | iFog GmbH
+    AS48362  | AT | 33110    | 1/4    | Stadtwerke Feldkirch
+    AS213241 | BE | 25054    | 2/3    | TECHIT.BE SRL
+    AS3214   | DE | 21983    | 1/7    | xTom GmbH
+    AS56655  | NO | 14403    | 1/3    | Gigahost AS
+    AS212024 | FR | 14225    | 1/2    | Marc Schmitt
+    AS25091  | CH | 13758    | 2/8    | IP-Max SA
+    AS1836   | CH | 13396    | 3/7    | green.ch AG
+    AS31133  | RU | 11436    | 1/6    | MegaFon PJSC
+    AS12389  | RU | 11001    | 1/11   | Rostelecom PJSC
+    AS49673  | RU | 8979     | 5/6    | Truenetwork LLC
+    AS208972 | TR | 8197     | 5/6    | GIBIRNet Iletisim
