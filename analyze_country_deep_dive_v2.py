@@ -33,7 +33,7 @@ def analyze_country(target_cc):
     total_asns = len(country_df)
     total_cone = country_df['cone'].sum()
     
-    secure = country_df[country_df['verdict'].str.contains("SECURE") | country_df['verdict'].str.contains("PROTECTED")]
+    secure = country_df[country_df['verdict'].str.contains("ACTIVE") | country_df['verdict'].str.contains("PASSIVE") | country_df['verdict'].str.contains("PROTECTOR")]
     vuln = country_df[country_df['verdict'].str.contains("VULNERABLE") | country_df['verdict'].str.contains("UNPROTECTED")]
     
     pct_secure_traffic = (secure['cone'].sum() / total_cone * 100) if total_cone > 0 else 0
@@ -42,8 +42,8 @@ def analyze_country(target_cc):
     print(f"Total Networks:      {total_asns:,}")
     print(f"Total Cone Gravity:  {total_cone:,}")
     print("-" * 60)
-    print(f"\033[92mSECURE NETWORKS:\033[0m     {len(secure):>5} ({len(secure)/total_asns*100:>4.1f}%) -> Protects {pct_secure_traffic:.1f}% of Traffic")
-    print(f"\033[91mVULNERABLE NETWORKS:\033[0m {len(vuln):>5} ({len(vuln)/total_asns*100:>4.1f}%) -> Exposes  {pct_vuln_traffic:.1f}% of Traffic")
+    print(f"\033[92mSECURE (ACTIVE/PASSIVE):\033[0m {len(secure):>5} ({len(secure)/total_asns*100:>4.1f}%) -> Protects {pct_secure_traffic:.1f}% of Traffic")
+    print(f"\033[91mVULNERABLE NETWORKS:\033[0m     {len(vuln):>5} ({len(vuln)/total_asns*100:>4.1f}%) -> Exposes  {pct_vuln_traffic:.1f}% of Traffic")
     
     # SECTION 2: THE NATIONAL GIANTS
     print_header(f"THE {target_cc} CORE (Top 20 Networks)")
@@ -53,7 +53,7 @@ def analyze_country(target_cc):
     giants = country_df.sort_values(by='cone', ascending=False).head(20)
     for _, r in giants.iterrows():
         v = r['verdict']
-        color = "\033[92m" if ("SECURE" in v or "PROTECTED" in v) else "\033[91m" if ("VULNERABLE" in v or "UNPROTECTED" in v) else "\033[93m" if "PARTIAL" in v else "\033[90m"
+        color = "\033[92m" if ("ACTIVE" in v or "PASSIVE" in v or "PROTECTOR" in v) else "\033[91m" if ("VULNERABLE" in v or "UNPROTECTED" in v) else "\033[93m" if "PARTIAL" in v else "\033[90m"
         score = f"{int(r['apnic_score'])}%" if r['apnic_score'] > -1 else "-"
         print(f"AS{r['asn']:<6} | {color}{v:<30}\033[0m | {r['cone']:<8} | {score:<6} | {r['name'][:40]}")
 
@@ -70,7 +70,7 @@ def analyze_country(target_cc):
         if not provider_row.empty:
             r = provider_row.iloc[0]
             v = r['verdict']
-            color = "\033[92m" if ("SECURE" in v or "PROTECTED" in v) else "\033[91m" if ("VULNERABLE" in v or "UNPROTECTED" in v) else "\033[90m"
+            color = "\033[92m" if ("ACTIVE" in v or "PASSIVE" in v or "PROTECTOR" in v) else "\033[91m" if ("VULNERABLE" in v or "UNPROTECTED" in v) else "\033[90m"
             print(f"#{i+1:<3} | AS{asn:<6} | {count:<10} | {color}{v:<30}\033[0m | {r['name'][:40]}")
         else:
             print(f"#{i+1:<3} | AS{asn:<6} | {count:<10} | {'Unknown (Not in Audit)':<30} | -")

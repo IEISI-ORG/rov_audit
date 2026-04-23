@@ -233,7 +233,7 @@ def analyze():
         d_name = row['name'][:40]
         score = f"{int(row['apnic_score'])}%" if row['apnic_score'] > -1 else "-"
         
-        if "ACTIVE" in v: color = "\033[92m" 
+        if "ACTIVE" in v or "PASSIVE" in v or "PROTECTOR" in v: color = "\033[92m" 
         elif "Tier 1" in v: color = "\033[94m" 
         elif "LEAKING" in v: color = "\033[91m" 
         else: color = "\033[90m" 

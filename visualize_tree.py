@@ -18,8 +18,8 @@ def load_db():
     status = {}
     for _, r in df.iterrows():
         v = str(r['verdict'])
-        if "SECURE" in v or "PROTECTED" in v: s = "SECURE"
-        elif "VULNERABLE" in v: s = "VULNERABLE"
+        if "ACTIVE" in v or "PASSIVE" in v or "PROTECTOR" in v: s = "SECURE"
+        elif "VULNERABLE" in v or "UNPROTECTED" in v: s = "VULNERABLE"
         elif "DEAD" in v: s = "DEAD"
         else: s = "UNKNOWN"
         status[r['asn']] = s

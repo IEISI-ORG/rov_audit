@@ -115,7 +115,7 @@ def analyze():
         
         # 1. Get Provider ROV Status (The Shield)
         verdict = rov_map.get(asn, "Unknown")
-        is_secure = "SECURE" in verdict or "PROTECTED" in verdict
+        is_secure = "ACTIVE" in verdict or "PASSIVE" in verdict or "PROTECTOR" in verdict
         is_vuln = "VULNERABLE" in verdict or "UNPROTECTED" in verdict
         
         # 2. Get Customer ROA Health (The Identity)

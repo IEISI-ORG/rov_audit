@@ -23,7 +23,7 @@ def analyze():
     def analyze_tier(top_n, label):
         subset = df_transit.head(top_n)
         
-        secure = subset[subset['verdict'].str.contains("SECURE") | subset['verdict'].str.contains("PROTECTED")]
+        secure = subset[subset['verdict'].str.contains("ACTIVE") | subset['verdict'].str.contains("PASSIVE") | subset['verdict'].str.contains("PROTECTOR")]
         vuln = subset[subset['verdict'].str.contains("VULNERABLE") | subset['verdict'].str.contains("UNPROTECTED")]
         
         total_power = subset['cone'].sum()

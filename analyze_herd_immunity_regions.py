@@ -80,7 +80,7 @@ def analyze_group(df, group_name, top_n=20):
         if total_cone < 100: continue # Skip empty groups
         
         # Secure = Local ROV or Inherited
-        secure = group[group['verdict'].str.contains("SECURE") | group['verdict'].str.contains("PROTECTED")]
+        secure = group[group['verdict'].str.contains("ACTIVE") | group['verdict'].str.contains("PASSIVE") | group['verdict'].str.contains("PROTECTOR")]
         secure_cone = secure['cone'].sum()
         
         summary_data.append({
@@ -131,7 +131,7 @@ def analyze_countries(df):
         subset = df[df['cc'] == cc]
         
         total_cone = subset['cone'].sum()
-        secure = subset[subset['verdict'].str.contains("SECURE") | subset['verdict'].str.contains("PROTECTED")]
+        secure = subset[subset['verdict'].str.contains("ACTIVE") | subset['verdict'].str.contains("PASSIVE") | subset['verdict'].str.contains("PROTECTOR")]
         secure_cone = secure['cone'].sum()
         
         print("-" * 60)

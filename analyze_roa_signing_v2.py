@@ -21,7 +21,7 @@ def analyze():
     partial_signed = df[(df['signed_pct'] > 0) & (df['signed_pct'] < 90.0)]
     unsigned = df[df['signed_pct'] == 0.0]
     
-    is_secure = df['verdict'].str.contains("SECURE") | df['verdict'].str.contains("PROTECTED")
+    is_secure = df['verdict'].str.contains("ACTIVE") | df['verdict'].str.contains("PASSIVE") | df['verdict'].str.contains("PROTECTOR")
     is_vuln = df['verdict'].str.contains("VULNERABLE") | df['verdict'].str.contains("UNPROTECTED")
 
     print("\n" + "="*80)

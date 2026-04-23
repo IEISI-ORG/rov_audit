@@ -45,7 +45,7 @@ def analyze_cones():
         v = str(row['verdict']).upper()
         
         # Status
-        if "SECURE" in v or "PROTECTED" in v: status = "SECURE"
+        if "ACTIVE" in v or "PASSIVE" in v or "PROTECTOR" in v: status = "SECURE"
         elif "VULNERABLE" in v or "UNPROTECTED" in v: status = "VULNERABLE"
         elif "DEAD" in v: status = "DEAD"
         else: status = "UNKNOWN"

@@ -62,7 +62,7 @@ def analyze(csv_file):
         pct_impact = (cone_sum / global_cone_sum) * 100 if global_cone_sum > 0 else 0.0
         
         color = ""
-        if "SECURE" in v or "PROTECTED" in v: color = "\033[92m" 
+        if "ACTIVE" in v or "PASSIVE" in v or "PROTECTOR" in v: color = "\033[92m" 
         elif "VULNERABLE" in v or "UNPROTECTED" in v: color = "\033[91m" 
         elif "PARTIAL" in v: color = "\033[93m" 
         reset = "\033[0m"
@@ -85,12 +85,13 @@ def analyze(csv_file):
                 r = str(row[atlas_col])
                 cnt = int(row['Count'])
                 avg = row['Avg_Cone']
-                color = "\033[92m" if "SECURE" in r else "\033[91m" if "VULNERABLE" in r else "\033[93m"
+                # Atlas results still use SECURE/VULNERABLE strings internally
+                color = "\033[92m" if "SECURE" in r or "ACTIVE" in r else "\033[91m" if "VULNERABLE" in r else "\033[93m"
                 print(f"{color}{r:<35}\033[0m | {cnt:>8,} | {avg:>10.1f}")
 
     # 3. HIGH LEVEL SUMMARY
     print_header("SUMMARY")
-    mask_secure = df['verdict'].str.contains("SECURE") | df['verdict'].str.contains("PROTECTED")
+    mask_secure = df['verdict'].str.contains("ACTIVE") | df['verdict'].str.contains("PASSIVE") | df['verdict'].str.contains("PROTECTOR")
     mask_vuln   = df['verdict'].str.contains("VULNERABLE") | df['verdict'].str.contains("UNPROTECTED")
     mask_partial = df['verdict'].str.contains("PARTIAL")
     

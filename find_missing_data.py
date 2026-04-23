@@ -55,7 +55,7 @@ def scan_dataset(csv_file):
             stats['total_rows'] = len(df)
             stats['unverified'] = len(df[df['verdict'].str.contains("Unverified", na=False)])
             stats['vulnerable'] = len(df[df['verdict'].str.contains("VULNERABLE", na=False)])
-            stats['secure'] = len(df[df['verdict'].str.contains("SECURE", na=False)])
+            stats['secure'] = len(df[df['verdict'].str.contains("ACTIVE|PASSIVE|PROTECTOR", na=False)])
             stats['dead'] = len(df[df['verdict'].str.contains("DEAD", na=False)])
         except Exception as e:
             print(f"[-] Error reading CSV: {e}")

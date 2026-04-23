@@ -298,6 +298,34 @@ def load_atlas_verdicts() -> tuple[set, set, dict]:
     print(f"    - Atlas Data: {len(secure)} Secure, {len(vulnerable)} Vulnerable")
     return secure, vulnerable, raw
 
+def load_atlas_boundaries() -> dict:
+    """
+    Analyzes Atlas invalid paths to identify the 'Hard Boundary' ASNs 
+    that are actively filtering. Returns a mapping of boundary_asn -> count of blocks.
+    """
+    print("[3.5] Analyzing Atlas Hard Boundaries...")
+    boundaries = Counter()
+    for f in glob.glob(os.path.join(DIR_ATLAS, "*.json")):
+        try:
+            with open(f) as h:
+                d = json.load(h)
+            
+            # If it's SECURE and has an invalid path that died
+            verdict = d.get('verdict', '')
+            invalid_path = d.get('invalid_path', [])
+            score_i = d.get('score_invalid', 100.0)
+            
+            if "SECURE" in verdict and score_i < 10.0 and invalid_path:
+                # The last ASN in the invalid path is the one that dropped it (or passed it to a dropper)
+                # But more accurately, if it died after AS-X, and AS-X is NOT the destination,
+                # then AS-X or its immediate next hop is the boundary.
+                last_hop = invalid_path[-1]
+                boundaries[last_hop] += 1
+        except: pass
+    
+    print(f"    - Found {len(boundaries)} filtering boundary ASNs via Atlas.")
+    return dict(boundaries)
+
 def load_signing_stats() -> dict:
     """Load ROA signing percentages from JSON cache."""
     print(f"[4] Loading ROA Stats from {DIR_PARSED}...", end=" ", flush=True)
@@ -350,29 +378,33 @@ def load_upstreams_from_cache(target_asns: list) -> Counter:
 def assign_verdict(asn: int, is_safe: bool, cone: int, parents: list, dirty_feeds: int, volatile: bool, atlas_v: str = "") -> str:
     """Standardized logic for assigning safety verdicts."""
     if asn in HARDCODED_SECURE:
-        return "SECURE STABLE (Hardcoded)"
+        return "ACTIVE LOCAL ROV (Hardcoded)"
     if asn in TIER_1_ASNS:
-        return "CORE: PROTECTED" if is_safe else "CORE: UNPROTECTED"
+        return "CORE: ACTIVE PROTECTOR" if is_safe else "CORE: UNPROTECTED"
     if atlas_v:
         if 'VULNERABLE' in atlas_v: return "VULNERABLE (Atlas Verified)"
-        if 'SECURE' in atlas_v: return "SECURE (Verified ROV)"
+        if 'SECURE' in atlas_v: return "ACTIVE (Atlas Verified)"
     if not parents:
         return "Unverified (Transit/Peer?)" if cone > 0 else "NOT ROUTED"
     total_feeds = len(parents)
     if cone == 0: # STUB
         if dirty_feeds == 0:
-            return "STUB: SECURE UNSTABLE" if volatile else "STUB: SECURE STABLE"
+            if not is_safe:
+                return "STUB: PASSIVE (Clean Pipe)"
+            return "STUB: ACTIVE UNSTABLE" if volatile else "STUB: ACTIVE LOCAL ROV"
         elif is_safe:
-            return "STUB: SECURE UNSTABLE"
+            return "STUB: ACTIVE UNSTABLE"
         else:
             return "STUB: VULNERABLE UNSTABLE" if volatile else "STUB: VULNERABLE STABLE"
     else: # TRANSIT
         if dirty_feeds == 0:
-            return "SECURE UNSTABLE" if volatile else "SECURE STABLE"
+            if not is_safe:
+                return "PASSIVE (Clean Pipe)"
+            return "ACTIVE UNSTABLE" if volatile else "ACTIVE LOCAL ROV"
         elif dirty_feeds < total_feeds:
             return "PARTIAL: VULNERABLE (Mixed)"
         elif is_safe:
-            return "SECURE UNSTABLE" 
+            return "ACTIVE UNSTABLE" 
         else:
             return "VULNERABLE UNSTABLE" if volatile else "VULNERABLE STABLE"
     return "Unknown"

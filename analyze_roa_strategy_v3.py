@@ -24,7 +24,7 @@ def analyze():
     print(f"{'ASN':<8} | {'CC':<2} | {'Cone':<8} | {'Signed%':<8} | {'Name'}")
     print("-" * 95)
     
-    is_secure = df['verdict'].str.contains("SECURE") | df['verdict'].str.contains("PROTECTED")
+    is_secure = df['verdict'].str.contains("ACTIVE") | df['verdict'].str.contains("PASSIVE") | df['verdict'].str.contains("PROTECTOR")
     glass = df[is_secure & (df['signed_pct'] < 10.0)].sort_values(by='cone', ascending=False)
     for _, r in glass.head(15).iterrows():
         print(f"AS{r['asn']:<6} | {r['cc']:<2} | {int(r['cone']):<8} | \033[91m{r['signed_pct']:>5.1f}%\033[0m  | {r['name'][:45]}")

@@ -7,3 +7,6 @@
 - [ ] Incorporate raw timeseries data from APNIC for trend analysis.
     - Example URL: https://stats.labs.apnic.net/cgi-bin/rpki-json-table.pl?x=FJ4638 (ASN 4638)
     - Action: Explore using this JSON endpoint to track RPKI adoption/regression over time for specific ASNs.
+- [ ] Data Storage Refactoring:
+    - Evaluate moving from thousands of small JSON files (`data/parsed/`) to a more efficient storage format like SQLite, Parquet, or a single compressed JSONL file to improve I/O and disk space usage.
+    - Formalize the archiving of legacy directories (`data/html`, `data/apnic_roa`) into a single compressed archive for cold storage, removing them from the active workspace.
