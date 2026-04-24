@@ -3,11 +3,11 @@
     ====================================================================================================
      NATIONAL ROUTING SECURITY: PK
     ====================================================================================================
-    Total Networks:      454
+    Total Networks:      455
     Total Cone Gravity:  603
     ------------------------------------------------------------
     SECURE (ACTIVE/PASSIVE):    10 ( 2.2%) -> Protects 0.7% of Traffic
-    VULNERABLE NETWORKS:       269 (59.3%) -> Exposes  99.3% of Traffic
+    VULNERABLE NETWORKS:       264 (58.0%) -> Exposes  28.9% of Traffic
 
     ====================================================================================================
      THE PK CORE (Top 20 Networks)
@@ -16,19 +16,19 @@
     ----------------------------------------------------------------------------------------------------
     AS17557  | PARTIAL: VULNERABLE (Mixed)    | 208      | 0%     | Pakistan Telecommunication Company Limit
     AS38193  | PARTIAL: VULNERABLE (Mixed)    | 168      | 0%     | Transworld Associates (Pvt.) Ltd.
-    AS38264  | VULNERABLE STABLE              | 43       | 0%     | Wateen Telecom
+    AS38264  | VULNERABLE STABLE              | 43       | 1%     | Wateen Telecom
     AS138423 | VULNERABLE STABLE              | 39       | 0%     | CMPak Limited
     AS9541   | PARTIAL: VULNERABLE (Mixed)    | 20       | 75%    | Cyber Internet Services (Pvt) Ltd.
     AS58470  | PARTIAL: VULNERABLE (Mixed)    | 20       | 0%     | Jazz Pakistan
-    AS139820 | VULNERABLE STABLE              | 14       | 1%     | HG TELECOMMUNICATION PRIVATE LIMITED
     AS23674  | VULNERABLE STABLE              | 14       | 1%     | Nayatel (Pvt) Ltd
+    AS139820 | VULNERABLE STABLE              | 14       | 1%     | HG TELECOMMUNICATION PRIVATE LIMITED
     AS135523 | VULNERABLE STABLE              | 12       | 1%     | Multinet Broadband
     AS24499  | PARTIAL: VULNERABLE (Mixed)    | 9        | 1%     | Telenor Pakistan
     AS138655 | VULNERABLE STABLE              | 9        | 0%     | Trans World Enterprise Services (Private
-    AS23750  | VULNERABLE STABLE              | 8        | 0%     | GERRYS INFORMATION TECHNOLOGY PVT LTD.
-    AS23966  | VULNERABLE STABLE              | 6        | 3%     | LINKdotNET Telecom Limited
-    AS9260   | VULNERABLE STABLE              | 6        | 1%     | Multinet Pakistan Pvt. Ltd.
+    AS23750  | VULNERABLE STABLE              | 8        | 1%     | GERRYS INFORMATION TECHNOLOGY PVT LTD.
+    AS23966  | VULNERABLE STABLE              | 6        | 2%     | LINKdotNET Telecom Limited
     AS132165 | VULNERABLE STABLE              | 6        | 0%     | Connect Communications
+    AS9260   | VULNERABLE STABLE              | 6        | 0%     | Multinet Pakistan Pvt. Ltd.
     AS136969 | VULNERABLE STABLE              | 4        | 0%     | KK Networks (Pvt) Ltd.
     AS139879 | ACTIVE UNSTABLE                | 4        | 0%     | Galaxy Broadband
     AS137561 | VULNERABLE STABLE              | 3        | 0%     | WAYLINK
@@ -55,8 +55,8 @@
     #13  | AS9260   | 7          | VULNERABLE STABLE              | Multinet Pakistan Pvt. Ltd.
     #14  | AS23750  | 7          | VULNERABLE STABLE              | GERRYS INFORMATION TECHNOLOGY PVT LTD.
     #15  | AS23674  | 6          | VULNERABLE STABLE              | Nayatel (Pvt) Ltd
-    #16  | AS136969 | 5          | VULNERABLE STABLE              | KK Networks (Pvt) Ltd.
+    #16  | AS141031 | 5          | VULNERABLE STABLE              | Connect Communication
     #17  | AS138926 | 5          | VULNERABLE STABLE              | Netpoint IT & Communications Pvt. Ltd
-    #18  | AS141031 | 5          | VULNERABLE STABLE              | Connect Communication
+    #18  | AS136969 | 5          | VULNERABLE STABLE              | KK Networks (Pvt) Ltd.
     #19  | AS131471 | 5          | STUB: VULNERABLE STABLE        | Login.Me (Pvt) Ltd
     #20  | AS8529   | 4          | PARTIAL: VULNERABLE (Mixed)    | Zain Omantel International FZ-LLC

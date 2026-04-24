@@ -6,8 +6,8 @@
     Total Networks:      1,167
     Total Cone Gravity:  3,064
     ------------------------------------------------------------
-    SECURE (ACTIVE/PASSIVE):   259 (22.2%) -> Protects 72.0% of Traffic
-    VULNERABLE NETWORKS:       683 (58.5%) -> Exposes  28.0% of Traffic
+    SECURE (ACTIVE/PASSIVE):   258 (22.1%) -> Protects 72.0% of Traffic
+    VULNERABLE NETWORKS:       648 (55.5%) -> Exposes  1.7% of Traffic
 
     ====================================================================================================
      THE ES CORE (Top 20 Networks)
@@ -16,17 +16,17 @@
     ----------------------------------------------------------------------------------------------------
     AS12956  | CORE: ACTIVE PROTECTOR         | 1588     | -      | Telxius (Telefonica Global)
     AS29119  | PARTIAL: VULNERABLE (Mixed)    | 319      | 0%     | AIRE NETWORKS DEL MEDITERRANEO SL UNIPER
-    AS60171  | ACTIVE UNSTABLE                | 194      | 99%    | AFR-IX TELECOM S.A.
+    AS60171  | ACTIVE UNSTABLE                | 194      | 98%    | AFR-IX TELECOM S.A.
     AS12357  | PARTIAL: VULNERABLE (Mixed)    | 94       | 0%     | VODAFONE ESPANA S.A.U.
     AS12479  | ACTIVE LOCAL ROV               | 81       | 99%    | Orange Espagne SA
     AS3352   | ACTIVE (Atlas Verified)        | 77       | 99%    | TELEFONICA DE ESPANA S.A.U.
-    AS8903   | PASSIVE (Clean Pipe)           | 65       | 0%     | LYNTIA NETWORKS S.A.
     AS202766 | PARTIAL: VULNERABLE (Mixed)    | 65       | -      | LYNTIA NETWORKS S.A.
+    AS8903   | PASSIVE (Clean Pipe)           | 65       | 0%     | LYNTIA NETWORKS S.A.
     AS12541  | PARTIAL: VULNERABLE (Mixed)    | 58       | -      | LYNTIA NETWORKS S.A.
     AS35699  | PARTIAL: VULNERABLE (Mixed)    | 53       | 0%     | Adamo Telecom Iberia S.A.
     AS207336 | VULNERABLE STABLE              | 44       | -      | Netassist SL
     AS49600  | PASSIVE (Clean Pipe)           | 41       | -      | NEAR IP, S.L.
-    AS3262   | ACTIVE LOCAL ROV               | 29       | 88%    | SAREnet, S.A.
+    AS3262   | ACTIVE LOCAL ROV               | 29       | 89%    | SAREnet, S.A.
     AS15704  | PARTIAL: VULNERABLE (Mixed)    | 28       | 99%    | XTRA TELECOM S.A.
     AS766    | PASSIVE (Clean Pipe)           | 22       | 4%     | Entidad Publica Empresarial Red.es
     AS8637   | PARTIAL: VULNERABLE (Mixed)    | 19       | -      | SpainWISP, S.L.

@@ -3,11 +3,11 @@
     ====================================================================================================
      NATIONAL ROUTING SECURITY: FR
     ====================================================================================================
-    Total Networks:      1,866
+    Total Networks:      1,867
     Total Cone Gravity:  126,708
     ------------------------------------------------------------
-    SECURE (ACTIVE/PASSIVE):   744 (39.9%) -> Protects 40.7% of Traffic
-    VULNERABLE NETWORKS:       678 (36.3%) -> Exposes  59.3% of Traffic
+    SECURE (ACTIVE/PASSIVE):   741 (39.7%) -> Protects 40.7% of Traffic
+    VULNERABLE NETWORKS:       624 (33.4%) -> Exposes  0.3% of Traffic
 
     ====================================================================================================
      THE FR CORE (Top 20 Networks)
@@ -22,7 +22,7 @@
     AS204092 | ACTIVE LOCAL ROV               | 3441     | -      | Association GRIFON
     AS50628  | PASSIVE (Clean Pipe)           | 2515     | -      | Leonix Telecom SAS
     AS5511   | CORE: ACTIVE PROTECTOR         | 2143     | 96%    | Orange S.A.
-    AS29075  | PARTIAL: VULNERABLE (Mixed)    | 1299     | 99%    | IELO-LIAZO SERVICES SAS
+    AS29075  | PARTIAL: VULNERABLE (Mixed)    | 1299     | 100%   | IELO-LIAZO SERVICES SAS
     AS16276  | VULNERABLE (Atlas Verified)    | 339      | 0%     | OVH SAS
     AS35625  | PASSIVE (Clean Pipe)           | 297      | 0%     | Eurofiber France SAS
     AS3215   | ACTIVE UNSTABLE                | 162      | 99%    | Orange S.A.

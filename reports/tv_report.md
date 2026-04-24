@@ -14,9 +14,9 @@
     ====================================================================================================
     ASN      | Verdict                        | Cone     | APNIC% | Name
     ----------------------------------------------------------------------------------------------------
+    AS142573 | NOT ROUTED                     | 0        | -      | Government of Tuvalu
     AS23917  | STUB: VULNERABLE STABLE        | 0        | -      | Tuvalu Telecommunications Corporation
     AS133117 | NOT ROUTED                     | 0        | -      | Tuvalu Telecommunications Corporation
-    AS142573 | NOT ROUTED                     | 0        | -      | Government of Tuvalu
 
     ====================================================================================================
      TRANSIT SUPPLY CHAIN (Who provides to TV?)

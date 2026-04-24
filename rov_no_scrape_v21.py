@@ -34,7 +34,7 @@ def analyze():
     safe_asns -= atlas_vulnerable
     safe_asns |= atlas_secure
     
-    for asn, (sd, mn, mx, volatile) in ts_map.items():
+    for asn, (sd, mn, mx, volatile, regression) in ts_map.items():
         if volatile and asn in safe_asns and asn not in rov_set and asn not in cf_set:
             safe_asns.discard(asn)
 
@@ -47,7 +47,7 @@ def analyze():
         is_safe = asn in safe_asns
         
         ts = ts_map.get(asn)
-        apnic_stdev, apnic_min90, apnic_max90, volatile = (ts[0], ts[1], ts[2], ts[3]) if ts else (-1.0, -1.0, -1.0, False)
+        apnic_stdev, apnic_min90, apnic_max90, volatile, regression = (ts[0], ts[1], ts[2], ts[3], ts[4]) if ts else (-1.0, -1.0, -1.0, False, False)
 
         dirty_feeds = sum(1 for p in parents if p not in safe_asns)
         total_feeds = len(parents)
@@ -56,13 +56,18 @@ def analyze():
         verdict = rov_utils.assign_verdict(
             asn, is_safe, cone, parents, dirty_feeds, volatile, atlas_v
         )
+        
+        # Highlight Regression in Verdict - simplified label as requested
+        if regression:
+            verdict = "REGRESSED"
 
         results.append({
             'asn': asn, 'name': name, 'cc': cc, 'cone': cone,
             'verdict': verdict, 'apnic_score': score,
             'dirty_feeds': dirty_feeds, 'total_feeds': total_feeds,
-            'atlas_result': atlas_v or '', # Standardized to atlas_result
+            'atlas_result': atlas_v or '', 
             'apnic_stdev': apnic_stdev, 'apnic_min90': apnic_min90, 'apnic_max90': apnic_max90,
+            'regression': regression
         })
 
     df = pd.DataFrame(results)

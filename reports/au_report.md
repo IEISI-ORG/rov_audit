@@ -3,20 +3,20 @@
     ====================================================================================================
      NATIONAL ROUTING SECURITY: AU
     ====================================================================================================
-    Total Networks:      2,972
+    Total Networks:      2,973
     Total Cone Gravity:  17,029
     ------------------------------------------------------------
-    SECURE (ACTIVE/PASSIVE):   628 (21.1%) -> Protects 96.0% of Traffic
-    VULNERABLE NETWORKS:       987 (33.2%) -> Exposes  4.0% of Traffic
+    SECURE (ACTIVE/PASSIVE):   625 (21.0%) -> Protects 96.0% of Traffic
+    VULNERABLE NETWORKS:       939 (31.6%) -> Exposes  0.5% of Traffic
 
     ====================================================================================================
      THE AU CORE (Top 20 Networks)
     ====================================================================================================
     ASN      | Verdict                        | Cone     | APNIC% | Name
     ----------------------------------------------------------------------------------------------------
-    AS7575   | ACTIVE LOCAL ROV               | 9639     | 99%    | Australian Academic and Research Network
+    AS7575   | ACTIVE LOCAL ROV               | 9639     | 100%   | Australian Academic and Research Network
     AS137409 | ACTIVE UNSTABLE                | 3901     | 99%    | GSL Networks Pty LTD
-    AS4826   | ACTIVE LOCAL ROV               | 1008     | 98%    | Vocus Connect International Backbone
+    AS4826   | ACTIVE LOCAL ROV               | 1008     | 99%    | Vocus Connect International Backbone
     AS1221   | ACTIVE LOCAL ROV               | 582      | 99%    | Telstra Limited
     AS2764   | PARTIAL: VULNERABLE (Mixed)    | 330      | 9%     | AAPT Limited
     AS7474   | ACTIVE LOCAL ROV               | 307      | 1%     | SingTel Optus Pty Ltd
@@ -33,7 +33,7 @@
     AS10143  | ACTIVE (Atlas Verified)        | 25       | 99%    | Exetel Pty Ltd
     AS9723   | PASSIVE (Clean Pipe)           | 22       | -      | iseek Communications Pty Ltd
     AS134143 | PARTIAL: VULNERABLE (Mixed)    | 15       | 0%     | Kinetix Networks
-    AS37988  | PARTIAL: VULNERABLE (Mixed)    | 14       | -      | Alpha Layer Pty Ltd
+    AS7594   | PARTIAL: VULNERABLE (Mixed)    | 14       | -      | On Q
 
     ====================================================================================================
      TRANSIT SUPPLY CHAIN (Who provides to AU?)

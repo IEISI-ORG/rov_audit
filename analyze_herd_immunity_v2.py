@@ -21,10 +21,11 @@ def analyze():
     df_transit = df[df['cone'] > 5].sort_values(by='cone', ascending=False)
     
     def analyze_tier(top_n, label):
-        subset = df_transit.head(top_n)
+        subset = df_transit.head(top_n).copy()
+        subset['category'] = subset['verdict'].apply(rov_utils.classify_verdict)
         
-        secure = subset[subset['verdict'].str.contains("ACTIVE") | subset['verdict'].str.contains("PASSIVE") | subset['verdict'].str.contains("PROTECTOR")]
-        vuln = subset[subset['verdict'].str.contains("VULNERABLE") | subset['verdict'].str.contains("UNPROTECTED")]
+        secure = subset[subset['category'] == "SECURE"]
+        vuln = subset[subset['category'] == "VULNERABLE"]
         
         total_power = subset['cone'].sum()
         secure_power = secure['cone'].sum()

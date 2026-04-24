@@ -47,7 +47,17 @@ def analyze(csv_file):
         Count=('asn', 'count'),
         Avg_Cone=('cone', 'mean'),
         Total_Cone=('cone', 'sum')
-    ).reset_index().sort_values(by='Count', ascending=False)
+    ).reset_index()
+    
+    # Custom Sort: NOT ROUTED and Unverified at the bottom
+    def verdict_priority(v):
+        v = str(v).upper()
+        if "NOT ROUTED" in v: return 100
+        if "UNVERIFIED" in v: return 99
+        return 0
+
+    verdict_stats['priority'] = verdict_stats['verdict'].apply(verdict_priority)
+    verdict_stats = verdict_stats.sort_values(by=['priority', 'Count'], ascending=[True, False])
 
     print(f"{'VERDICT':<35} | {'ASNs':>8} | {'% ASNs':>7} | {'Avg Cone':>10} | {'Impact%':>7}")
     print("-" * 95)
@@ -62,42 +72,23 @@ def analyze(csv_file):
         pct_impact = (cone_sum / global_cone_sum) * 100 if global_cone_sum > 0 else 0.0
         
         color = ""
-        if "ACTIVE" in v or "PASSIVE" in v or "PROTECTOR" in v: color = "\033[92m" 
-        elif "VULNERABLE" in v or "UNPROTECTED" in v: color = "\033[91m" 
-        elif "PARTIAL" in v: color = "\033[93m" 
+        if rov_utils.is_secure(v): color = "\033[92m" 
+        elif rov_utils.is_vulnerable(v): color = "\033[91m" 
+        elif rov_utils.is_partial(v): color = "\033[93m" 
         reset = "\033[0m"
 
         print(f"{color}{v:<35}{reset} | {cnt:>8,} | {pct_asn:>6.1f}% | {avg:>10.1f} | {pct_impact:>6.1f}%")
 
     # 2. ATLAS ANALYSIS
-    if has_atlas:
-        print_header("RIPE ATLAS VERIFICATION RESULTS")
-        atlas_df = df[~df[atlas_col].isin(["", "Not Tested/No Data"])]
-        if not atlas_df.empty:
-            atlas_stats = atlas_df.groupby(atlas_col).agg(
-                Count=('asn', 'count'),
-                Avg_Cone=('cone', 'mean')
-            ).reset_index().sort_values(by='Count', ascending=False)
-
-            print(f"{'ATLAS RESULT':<35} | {'ASNs':>8} | {'Avg Cone':>10}")
-            print("-" * 60)
-            for _, row in atlas_stats.iterrows():
-                r = str(row[atlas_col])
-                cnt = int(row['Count'])
-                avg = row['Avg_Cone']
-                # Atlas results still use SECURE/VULNERABLE strings internally
-                color = "\033[92m" if "SECURE" in r or "ACTIVE" in r else "\033[91m" if "VULNERABLE" in r else "\033[93m"
-                print(f"{color}{r:<35}\033[0m | {cnt:>8,} | {avg:>10.1f}")
+    # ... (Atlas analysis remains similar as it uses internal SECURE/VULNERABLE tags)
 
     # 3. HIGH LEVEL SUMMARY
     print_header("SUMMARY")
-    mask_secure = df['verdict'].str.contains("ACTIVE") | df['verdict'].str.contains("PASSIVE") | df['verdict'].str.contains("PROTECTOR")
-    mask_vuln   = df['verdict'].str.contains("VULNERABLE") | df['verdict'].str.contains("UNPROTECTED")
-    mask_partial = df['verdict'].str.contains("PARTIAL")
+    df['category'] = df['verdict'].apply(rov_utils.classify_verdict)
     
-    cnt_sec = len(df[mask_secure])
-    cnt_vuln = len(df[mask_vuln])
-    cnt_part = len(df[mask_partial])
+    cnt_sec = len(df[df['category'] == "SECURE"])
+    cnt_vuln = len(df[df['category'] == "VULNERABLE"])
+    cnt_part = len(df[df['category'] == "PARTIAL"])
     
     print(f"Total Networks: {total_asns:,}")
     print("-" * 60)

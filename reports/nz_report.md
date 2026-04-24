@@ -7,7 +7,7 @@
     Total Cone Gravity:  2,461
     ------------------------------------------------------------
     SECURE (ACTIVE/PASSIVE):    61 ( 8.5%) -> Protects 85.8% of Traffic
-    VULNERABLE NETWORKS:       348 (48.3%) -> Exposes  14.2% of Traffic
+    VULNERABLE NETWORKS:       331 (46.0%) -> Exposes  7.5% of Traffic
 
     ====================================================================================================
      THE NZ CORE (Top 20 Networks)
@@ -19,11 +19,11 @@
     AS135069 | PASSIVE (Clean Pipe)           | 77       | 0%     | Feenix Communications Limited
     AS45177  | PARTIAL: VULNERABLE (Mixed)    | 52       | 99%    | Devoli
     AS55850  | ACTIVE LOCAL ROV               | 48       | 99%    | Mercury NZ Limited
-    AS4648   | PASSIVE (Clean Pipe)           | 43       | 2%     | Spark New Zealand
+    AS4648   | PASSIVE (Clean Pipe)           | 43       | 3%     | Spark New Zealand
     AS38022  | PARTIAL: VULNERABLE (Mixed)    | 33       | -      | REANNZ National Research and Education N
-    AS4768   | VULNERABLE STABLE              | 32       | 0%     | One New Zealand Group Limited
+    AS4768   | VULNERABLE STABLE              | 32       | 1%     | One New Zealand Group Limited
     AS23838  | VULNERABLE STABLE              | 23       | -      | Solarix Networks Limited
-    AS24324  | PARTIAL: VULNERABLE (Mixed)    | 17       | 3%     | Kordia Limited
+    AS24324  | PARTIAL: VULNERABLE (Mixed)    | 17       | 2%     | Kordia Limited
     AS18400  | PARTIAL: VULNERABLE (Mixed)    | 16       | -      | Xtreme Networks Limited
     AS4049   | PARTIAL: VULNERABLE (Mixed)    | 11       | 0%     | CELLO GROUP LIMITED
     AS23655  | ACTIVE UNSTABLE                | 10       | 0%     | 2degrees Networks Limited
@@ -31,8 +31,8 @@
     AS17705  | PARTIAL: VULNERABLE (Mixed)    | 6        | 0%     | InSPire Net Ltd
     AS151336 | PARTIAL: VULNERABLE (Mixed)    | 5        | -      | Verge
     AS9500   | PARTIAL: VULNERABLE (Mixed)    | 4        | 0%     | One New Zealand Group Limited
-    AS132040 | VULNERABLE STABLE              | 4        | -      | Vital Data Ltd
     AS55785  | PASSIVE (Clean Pipe)           | 4        | -      | ISP Limited
+    AS45267  | PARTIAL: VULNERABLE (Mixed)    | 4        | 0%     | Lightwire LTD
     AS17492  | VULNERABLE STABLE              | 4        | -      | Vector Communications LTD.
 
     ====================================================================================================

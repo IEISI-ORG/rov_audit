@@ -7,7 +7,7 @@
     Total Cone Gravity:  584
     ------------------------------------------------------------
     SECURE (ACTIVE/PASSIVE):   111 (43.2%) -> Protects 75.0% of Traffic
-    VULNERABLE NETWORKS:       109 (42.4%) -> Exposes  25.0% of Traffic
+    VULNERABLE NETWORKS:        98 (38.1%) -> Exposes  0.5% of Traffic
 
     ====================================================================================================
      THE GR CORE (Top 20 Networks)
@@ -23,15 +23,15 @@
     AS198477 | PASSIVE (Clean Pipe)           | 24       | -      | TI SPARKLE GREECE SA
     AS25472  | PARTIAL: VULNERABLE (Mixed)    | 21       | 0%     | Nova Telecommunications & Media Single M
     AS56910  | PARTIAL: VULNERABLE (Mixed)    | 18       | -      | Digital Realty Hellas Single Member S.A
-    AS206735 | PARTIAL: VULNERABLE (Mixed)    | 12       | 6%     | Novelcomm LP
-    AS216285 | PASSIVE (Clean Pipe)           | 2        | -      | MYIP NETWORKS G.P.
+    AS206735 | PARTIAL: VULNERABLE (Mixed)    | 12       | 2%     | Novelcomm LP
     AS12713  | PARTIAL: VULNERABLE (Mixed)    | 2        | -      | Ote SA (Hellenic Telecommunications Orga
+    AS216285 | PASSIVE (Clean Pipe)           | 2        | -      | MYIP NETWORKS G.P.
     AS4601   | VULNERABLE STABLE              | 2        | -      | Antonios A. Chariton
-    AS35506  | ACTIVE LOCAL ROV               | 1        | 100%   | INFORMATION SOCIETY S.A.
     AS56457  | ACTIVE LOCAL ROV               | 1        | -      | FASTPATH IKE
     AS196945 | PARTIAL: VULNERABLE (Mixed)    | 1        | -      | Microbase PC
-    AS206652 | PASSIVE (Clean Pipe)           | 1        | -      | Ioannis Roditis trading as Greekstream N
     AS51505  | PARTIAL: VULNERABLE (Mixed)    | 1        | 0%     | Dimosia Epicheirisi Ilektrismou Anonymi 
+    AS35506  | ACTIVE LOCAL ROV               | 1        | 100%   | INFORMATION SOCIETY S.A.
+    AS50919  | PARTIAL: VULNERABLE (Mixed)    | 1        | -      | INTERWORKS Single Member S.A.
     AS200736 | PARTIAL: VULNERABLE (Mixed)    | 1        | 0%     | MEDIANET INVEST AE
     AS35372  | VULNERABLE STABLE              | 1        | -      | GeniusMind S.A.
 

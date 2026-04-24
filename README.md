@@ -23,11 +23,12 @@ This project moves beyond simple "Is ROV enabled?" lists. It builds a full depen
 ### 1. System Requirements
 *   **Python 3.10+**
 *   **Go 1.19+** (For the topology processor)
+*   **bgpdump** (For BGP MRT dump extraction)
 *   **Disk Space:** ~2GB (For raw BGP table dumps and JSON caches)
 
 ### 2. Python Dependencies
 ```bash
-pip install pandas requests beautifulsoup4 pyyaml ripe.atlas.cousteau
+pip install pandas numpy requests beautifulsoup4 pyyaml ripe.atlas.cousteau
 ```
 
 ### 3. API Keys (Optional but Recommended)
@@ -50,8 +51,9 @@ We use raw BGP data from RIPE RIS to determine who provides transit to whom.
 
 1.  **Compile the Tools:**
     ```bash
-    go build -o bgp-extractor go-bgp-relationships.go.txt
-    go build -o cone-calculator cone-calculator-v2.go
+    go build -o bgp-extractor bgp-extractor.go
+    go build -o cone-calculator cone-calculator.go
+    go build -o fetch-roa fetch-roa.go
     ```
 
 2.  **Download & Process** (via `do_data_gathering`):
@@ -65,8 +67,8 @@ We use raw BGP data from RIPE RIS to determine who provides transit to whom.
     # Calculate Customer Cones (The "Gravity" of each network)
     ./cone-calculator -input output/relationships.csv -output final_as_rank.csv -top 0
 
-    # Fetch ROA signing stats for all ASNs
-    python3 fetch_roa_bulk_async_v6.py
+    # Fetch ROA signing stats for all ASNs (Fast Go implementation)
+    python3 do_roa_sync.py
     ```
 
 ### Phase 2: The Audit
@@ -87,7 +89,6 @@ python3 analyze_roa_signing_v2.py       # "Glass Houses" — filters but doesn't
 python3 analyze_herd_immunity_v2.py     # % of global traffic protected by Core
 python3 analyze_roa_strategy_v3.py      # ROA signing strategy recommendations
 python3 analyze_aspa_readiness.py       # ASPA deployment readiness
-python3 analyze_rov_quadrants_v3.py     # ROV/ROA quadrant analysis
 python3 statistics_v6.py               # Summary statistics
 ```
 
@@ -106,7 +107,21 @@ python3 find_atlas_targets.py rov_audit_v21_final.csv --limit 20
 # Run forensic trace (Valid vs Invalid path comparison)
 python3 verify_forensic_path_v2.py [TARGET_ASN]
 ```
-*Requires `secrets.yaml` with a RIPE Atlas API key.*
+*Requires `secrets.yaml` with a RIPE Atlas API key. Use `Makefile` to compile helper tools if needed.*
+
+---
+
+## 🛡️ Safety Verdicts
+
+The tool categorizes networks using a standardized classification engine (`rov_utils.classify_verdict`):
+
+| Category | Primary Verdicts | Description |
+| :--- | :--- | :--- |
+| 🔴 **VULNERABLE** | `REGRESSED`, `UNRELIABLE`, `VULNERABLE` | High-risk: Either leaking routes, has "dirty" upstreams, or shows a regression in security status. |
+| 🟡 **PARTIAL** | `PARTIAL: VULNERABLE (Mixed)` | Inconsistent: Has a mix of clean and dirty upstream feeds. |
+| 🟢 **SECURE** | `ACTIVE LOCAL ROV`, `PASSIVE (Clean Pipe)`, `VOLATILE` | Safe: Actively filtering or inherited protection from clean providers. |
+
+*Note: `NOT ROUTED` and `Unverified` are considered low-priority and are moved to the bottom of all statistical reports.*
 
 ---
 
@@ -116,14 +131,13 @@ python3 verify_forensic_path_v2.py [TARGET_ASN]
 | :--- | :--- |
 | `do_data_gathering` | Shell script — runs full data collection pipeline |
 | `do_reports` | Shell script — runs audit and all analysis/reporting |
+| `do_roa_sync.py` | Python wrapper for fast ROA signing data sync |
 | `rov_no_scrape_v21.py` | **Main audit engine.** Generates `rov_audit_v21_final.csv` |
-| `fetch_roa_bulk_async_v6.py` | Mass-fetches ROA signing stats for all ASNs |
 | `statistics_v6.py` | Summary statistics from the audit CSV |
 | `analyze_herd_immunity_v2.py` | Global protection stats based on Cone Weight |
 | `analyze_roa_signing_v2.py` | Identifies "Glass Houses" |
 | `analyze_roa_strategy_v3.py` | ROA signing strategy recommendations |
 | `analyze_aspa_readiness.py` | ASPA deployment readiness analysis |
-| `analyze_rov_quadrants_v3.py` | ROV/ROA quadrant breakdown |
 | `analyze_cone_quality_v2.py` | Upstream provider quality analysis |
 | `analyze_country_deep_dive_v2.py` | Per-country detailed report |
 | `verify_forensic_path_v2.py` | Active RIPE Atlas tool — Valid vs Invalid traceroutes |
@@ -131,8 +145,9 @@ python3 verify_forensic_path_v2.py [TARGET_ASN]
 | `TODO.md` | Tracked tasks, identified regressions, and feature requests |
 | `reports/` | Directory containing generated audit reports (CC-named) |
 | `reports/old/` | Archive for legacy or non-standardized reports |
-| `go-bgp-relationships.go.txt` | Go source — parses MRT/BGP dumps |
-| `cone-calculator-v2.go` | Go source — Valley-Free logic, calculates customer cones |
+| `bgp-extractor.go` | Go source — parses MRT/BGP dumps |
+| `cone-calculator.go` | Go source — Valley-Free logic, calculates customer cones |
+| `fetch-roa.go` | Go source — Fast multi-threaded ROA status fetcher |
 
 ---
 

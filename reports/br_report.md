@@ -3,11 +3,11 @@
     ====================================================================================================
      NATIONAL ROUTING SECURITY: BR
     ====================================================================================================
-    Total Networks:      9,044
+    Total Networks:      9,047
     Total Cone Gravity:  22,940
     ------------------------------------------------------------
-    SECURE (ACTIVE/PASSIVE):  1001 (11.1%) -> Protects 11.6% of Traffic
-    VULNERABLE NETWORKS:      7561 (83.6%) -> Exposes  88.4% of Traffic
+    SECURE (ACTIVE/PASSIVE):  1003 (11.1%) -> Protects 11.6% of Traffic
+    VULNERABLE NETWORKS:      6873 (76.0%) -> Exposes  2.6% of Traffic
 
     ====================================================================================================
      THE BR CORE (Top 20 Networks)
@@ -17,23 +17,23 @@
     AS16735  | PARTIAL: VULNERABLE (Mixed)    | 2828     | 96%    | Algar Telecom
     AS14840  | PARTIAL: VULNERABLE (Mixed)    | 1958     | 0%     | BR.DIGITAL 
     AS53062  | PARTIAL: VULNERABLE (Mixed)    | 1493     | 1%     | ALT | GRUPO BRASIL TECPAR
-    AS4230   | PARTIAL: VULNERABLE (Mixed)    | 1089     | 2%     | Claro (Embratel)
+    AS4230   | PARTIAL: VULNERABLE (Mixed)    | 1089     | 1%     | Claro (Embratel)
     AS61832  | PARTIAL: VULNERABLE (Mixed)    | 818      | 0%     | Giga+ Empresas
-    AS61568  | PARTIAL: VULNERABLE (Mixed)    | 621      | 0%     | ALOO TELECOM - FSF TECNOLOGIA SA
+    AS61568  | PARTIAL: VULNERABLE (Mixed)    | 621      | 1%     | ALOO TELECOM - FSF TECNOLOGIA SA
     AS267613 | PARTIAL: VULNERABLE (Mixed)    | 460      | -      | ELETRONET S.A.
     AS10429  | ACTIVE LOCAL ROV               | 425      | 0%     | Vivo (TELEFÔNICA BRASIL)
-    AS271253 | ACTIVE LOCAL ROV               | 411      | 99%    | LINK BRASIL TELECOMUNICACOES LTDA
+    AS271253 | ACTIVE LOCAL ROV               | 411      | 98%    | LINK BRASIL TELECOMUNICACOES LTDA
     AS28283  | PARTIAL: VULNERABLE (Mixed)    | 346      | 0%     | Adyl Telecom
     AS28368  | ACTIVE UNSTABLE                | 329      | 0%     | Wirelink (Sobralnet)
     AS52965  | PARTIAL: VULNERABLE (Mixed)    | 281      | 0%     | 1Telecom
     AS264409 | PASSIVE (Clean Pipe)           | 277      | -      | Huge Networks
     AS23106  | PARTIAL: VULNERABLE (Mixed)    | 262      | 0%     | American Tower Brasil
-    AS22381  | PARTIAL: VULNERABLE (Mixed)    | 258      | 6%     | SAMM (Megatelecom)
+    AS22381  | PARTIAL: VULNERABLE (Mixed)    | 258      | 5%     | SAMM (Megatelecom)
     AS11432  | PARTIAL: VULNERABLE (Mixed)    | 248      | 0%     | Telium Telecomunicações Ltda
     AS263009 | PARTIAL: VULNERABLE (Mixed)    | 231      | 0%     | FORTE TELECOM LTDA.
     AS53181  | PARTIAL: VULNERABLE (Mixed)    | 226      | 0%     | K2 Telecom e Multimidia LTDA ME
-    AS53087  | PARTIAL: VULNERABLE (Mixed)    | 223      | 2%     | TELY Ltda.
-    AS262663 | PARTIAL: VULNERABLE (Mixed)    | 204      | 3%     | METROFLEX TELECOMUNICACOES LTDA
+    AS53087  | PARTIAL: VULNERABLE (Mixed)    | 223      | 1%     | TELY Ltda.
+    AS262663 | PARTIAL: VULNERABLE (Mixed)    | 204      | 4%     | METROFLEX TELECOMUNICACOES LTDA
 
     ====================================================================================================
      TRANSIT SUPPLY CHAIN (Who provides to BR?)

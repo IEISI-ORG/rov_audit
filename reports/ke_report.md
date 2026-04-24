@@ -3,11 +3,11 @@
     ====================================================================================================
      NATIONAL ROUTING SECURITY: KE
     ====================================================================================================
-    Total Networks:      224
+    Total Networks:      225
     Total Cone Gravity:  254
     ------------------------------------------------------------
     SECURE (ACTIVE/PASSIVE):    35 (15.6%) -> Protects 0.4% of Traffic
-    VULNERABLE NETWORKS:       160 (71.4%) -> Exposes  99.6% of Traffic
+    VULNERABLE NETWORKS:       148 (65.8%) -> Exposes  21.3% of Traffic
 
     ====================================================================================================
      THE KE CORE (Top 20 Networks)
@@ -21,19 +21,19 @@
     AS36926  | VULNERABLE STABLE              | 7        | 1%     | Airtel Networks Kenya Limited
     AS36866  | VULNERABLE STABLE              | 6        | 0%     | Jamii Telecommunications Limited
     AS12556  | VULNERABLE STABLE              | 4        | 2%     | Internet Solutions (Kenya)
-    AS37305  | PARTIAL: VULNERABLE (Mixed)    | 4        | 3%     | Frontier Optical Networks Ltd
-    AS328490 | PARTIAL: VULNERABLE (Mixed)    | 3        | 1%     | Unwired Communications Limited
+    AS37305  | PARTIAL: VULNERABLE (Mixed)    | 4        | 4%     | Frontier Optical Networks Ltd
     AS33771  | PARTIAL: VULNERABLE (Mixed)    | 3        | 0%     | Safaricom Limited
-    AS12455  | PARTIAL: VULNERABLE (Mixed)    | 2        | 8%     | Kenyan Post & Telecommunications Company
+    AS328490 | PARTIAL: VULNERABLE (Mixed)    | 3        | 1%     | Unwired Communications Limited
     AS328858 | PARTIAL: VULNERABLE (Mixed)    | 2        | 1%     | Express Data Networks Limited
-    AS329437 | VULNERABLE STABLE              | 2        | 1%     | VENNET SOLUTIONS LIMITED
     AS15399  | PARTIAL: VULNERABLE (Mixed)    | 2        | 1%     | Wananchi Group (Kenya) Limited
+    AS12455  | PARTIAL: VULNERABLE (Mixed)    | 2        | 9%     | Kenyan Post & Telecommunications Company
+    AS329437 | VULNERABLE STABLE              | 2        | 1%     | VENNET SOLUTIONS LIMITED
     AS37684  | PARTIAL: VULNERABLE (Mixed)    | 2        | -      | Angani Limited
-    AS328482 | ACTIVE LOCAL ROV               | 1        | 100%   | SKY TREND NETWORKS LIMITED
-    AS328578 | PARTIAL: VULNERABLE (Mixed)    | 1        | 1%     | KEMNET TECHNOLOGIES LIMITED
+    AS328578 | PARTIAL: VULNERABLE (Mixed)    | 1        | 0%     | KEMNET TECHNOLOGIES LIMITED
     AS328856 | PARTIAL: VULNERABLE (Mixed)    | 1        | 98%    | VIJIJI CONNECT LIMITED
-    AS16907  | STUB: VULNERABLE STABLE        | 0        | 0%     | Wananchi Group (Kenya) Limited
-    AS30896  | STUB: PASSIVE (Clean Pipe)     | 0        | -      | Afsat Communications Ltd
+    AS328482 | ACTIVE LOCAL ROV               | 1        | 99%    | SKY TREND NETWORKS LIMITED
+    AS203905 | NOT ROUTED                     | 0        | -      | GEWAPE CLOUD (K) LIMITED
+    AS328592 | STUB: VULNERABLE STABLE        | 0        | -      | Central Bank of kenya
 
     ====================================================================================================
      TRANSIT SUPPLY CHAIN (Who provides to KE?)

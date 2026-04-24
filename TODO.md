@@ -1,12 +1,14 @@
 # TODO List
 
-- [ ] Investigate volatile changes where an ASN regresses in RPKI/ROV status. 
-    - Example: AS45355 regressed according to APNIC Labs: https://stats.labs.apnic.net/rpki/AS45355?c=FJ&w=7&l=1&v=0&p=thisp&x=thisx
-    - Potential cause: Partial coverage combined with Traffic Engineering (TE) changes causing loss of coverage.
-    - Action: Implement a check to detect such regressions in the audit pipeline.
-- [ ] Incorporate raw timeseries data from APNIC for trend analysis.
-    - Example URL: https://stats.labs.apnic.net/cgi-bin/rpki-json-table.pl?x=FJ4638 (ASN 4638)
-    - Action: Explore using this JSON endpoint to track RPKI adoption/regression over time for specific ASNs.
-- [ ] Data Storage Refactoring:
-    - Evaluate moving from thousands of small JSON files (`data/parsed/`) to a more efficient storage format like SQLite, Parquet, or a single compressed JSONL file to improve I/O and disk space usage.
-    - Formalize the archiving of legacy directories (`data/html`, `data/apnic_roa`) into a single compressed archive for cold storage, removing them from the active workspace.
+- [x] Investigate volatile changes where an ASN regresses in RPKI/ROV status. 
+    - [x] Example: AS45355 regression detected and implemented in pipeline.
+    - [x] Regression detection now uses full historical max from APNIC.
+- [x] Incorporate raw timeseries data from APNIC for trend analysis.
+    - [x] `sync_apnic_timeseries` now handles full history.
+    - [x] `regression` flag added to audit results.
+- [x] Data Storage Refactoring:
+    - [x] Moved from 122k individual files to a single `data/as_data.jsonl.gz`.
+    - [x] Implemented `load_all_asn_data()` in `rov_utils.py` for high-performance ingestion (0.8s vs ~20s).
+    - [x] Archived legacy `data/html` (7.3GB) and `data/apnic_roa` (272MB) into compressed cold storage.
+- [ ] Evaluate moving to SQLite for random access if needed (currently memory-based load is fast enough).
+- [ ] Add a command-line tool to "unpack" or "query" the packed ASN data for quick debugging.

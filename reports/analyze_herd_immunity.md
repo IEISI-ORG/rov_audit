@@ -10,7 +10,7 @@
       Progress: |████████████████████████░░░░░░░░░░░░░░░░░░░░░░░░░░|
 
     [TRANSIT LAYER] (The 1000 largest networks)
-      Networks Secure:     329 / 1000  (32.9%)
+      Networks Secure:     328 / 1000  (32.8%)
       Traffic Protected:   47.6% (by Cone Weight)
       Progress: |███████████████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░|
 
@@ -21,31 +21,31 @@
     Rank  | ASN      | CC | Cone Size  | Name
     --------------------------------------------------------------------------------
     #5    | AS37721  | BF | 60716      | Virtual Technologies & Solutions
-    #6    | AS35280  | FR | 52753      | F5 Networks SARL
-    #10   | AS17639  | PH | 43128      | Converge ICT Solutions Inc.
-    #11   | AS3216   | RU | 35341      | Vimpelcom PJSC
-    #12   | AS34549  | DE | 35312      | meerfarbig GmbH & Co. KG
-    #13   | AS34927  | CH | 34451      | iFog GmbH
-    #14   | AS33891  | DE | 33935      | Core-Backbone GmbH
-    #15   | AS48362  | AT | 32931      | Stadtwerke Feldkirch
-    #19   | AS20485  | RU | 28807      | TransTeleCom JSC
-    #20   | AS12779  | IT | 26743      | IT.Gate S.p.A.
-    #21   | AS213241 | BE | 25036      | TECHIT.BE SRL
-    #23   | AS50300  | GB | 22952      | CustodianDC Limited
-    #24   | AS3214   | DE | 22045      | xTom GmbH
-    #25   | AS48185  | BE | 21668      | team.blue NV
-    #26   | AS29632  | DE | 21632      | Netassist International EOOD
-    #31   | AS56655  | NO | 14487      | Gigahost AS
-    #32   | AS212024 | FR | 14156      | Marc Schmitt
-    #33   | AS25091  | CH | 13742      | IP-Max SA
-    #34   | AS1836   | CH | 13649      | green.ch AG
-    #36   | AS56662  | PL | 12612      | Marcin Gondek
-    #37   | AS31133  | RU | 11110      | MegaFon PJSC
     #39   | AS12389  | RU | 11019      | Rostelecom PJSC
-    #44   | AS49673  | RU | 9069       | Truenetwork LLC
-    #47   | AS208972 | TR | 8200       | GIBIRNet Iletisim
-    #48   | AS38001  | SG | 8039       | NewMedia Express Pte. Ltd.
+    #61   | AS13030  | CH | 4810       | Init7 (Switzerland) Ltd.
+    #64   | AS38255  | CN | 4182       | China Education and Research Network (CE
+    #104  | AS37468  | AO | 893        | Angola Cables
+    #125  | AS6327   | CA | 554        | Shaw Communications
+    #127  | AS9121   | TR | 536        | Turk Telekom
+    #150  | AS7717   | ID | 410        | OpenIXP Route Servers
+    #158  | AS4134   | CN | 368        | China Telecom Backbone
+    #161  | AS147094 | ID | 354        | PT Mitra Visioner Pratama
+    #162  | AS55836  | IN | 354        | Reliance Jio Infocomm Limited
+    #163  | AS45820  | IN | 347        | Tata Teleservices ISP
+    #169  | AS16276  | FR | 339        | OVH SAS
+    #175  | AS24115  | SG | 322        | Equinix IX
+    #194  | AS812    | CA | 280        | Rogers Communications Canada Inc.
+    #199  | AS9299   | PH | 276        | PLDT (Philippine Long Distance Telephone
+    #212  | AS20115  | US | 255        | Charter Communications LLC
+    #213  | AS5650   | US | 253        | Verizon (fka. Frontier)
+    #217  | AS9730   | IN | 238        | Bharti Telesonic Ltd
+    #223  | AS4787   | ID | 231        | PT Cyberindo Aditama
+    #235  | AS6830   | NL | 219        | Liberty Global Europe Holding B.V.
+    #237  | AS12302  | RO | 214        | Vodafone Romania S.A.
+    #243  | AS42337  | IR | 208        | Respina Networks & Beyond PJSC
+    #264  | AS8447   | AT | 182        | A1 Telekom Austria AG
+    #275  | AS4788   | MY | 177        | TM Technology Services Sdn. Bhd.
     --------------------------------------------------------------------------------
 
     CONCLUSION:
-    NO IMMUNITY. Major transit providers are still leaking routes.
+    CLOSE TO IMMUNITY. The Core is mostly safe, but key giants remain.

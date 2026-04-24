@@ -1,7 +1,7 @@
     [*] Loading Data for ROA Strategy Report...
         - Loading Cones from final_as_rank.csv... OK (86317 ASNs)
         - Loading Graph from data/downstream_graph.json... OK
-    [4] Loading ROA Stats from data/parsed... OK (122193 records)
+        - Loading ASN data from packed file... OK (122,193 records)
 
     ===============================================================================================
     1. THE GLASS HOUSES (Secure Providers, Unsigned Routes)

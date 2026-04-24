@@ -33,8 +33,10 @@ def analyze_country(target_cc):
     total_asns = len(country_df)
     total_cone = country_df['cone'].sum()
     
-    secure = country_df[country_df['verdict'].str.contains("ACTIVE") | country_df['verdict'].str.contains("PASSIVE") | country_df['verdict'].str.contains("PROTECTOR")]
-    vuln = country_df[country_df['verdict'].str.contains("VULNERABLE") | country_df['verdict'].str.contains("UNPROTECTED")]
+    country_df['category'] = country_df['verdict'].apply(rov_utils.classify_verdict)
+    
+    secure = country_df[country_df['category'] == "SECURE"]
+    vuln = country_df[country_df['category'] == "VULNERABLE"]
     
     pct_secure_traffic = (secure['cone'].sum() / total_cone * 100) if total_cone > 0 else 0
     pct_vuln_traffic = (vuln['cone'].sum() / total_cone * 100) if total_cone > 0 else 0
@@ -53,7 +55,8 @@ def analyze_country(target_cc):
     giants = country_df.sort_values(by='cone', ascending=False).head(20)
     for _, r in giants.iterrows():
         v = r['verdict']
-        color = "\033[92m" if ("ACTIVE" in v or "PASSIVE" in v or "PROTECTOR" in v) else "\033[91m" if ("VULNERABLE" in v or "UNPROTECTED" in v) else "\033[93m" if "PARTIAL" in v else "\033[90m"
+        cat = rov_utils.classify_verdict(v)
+        color = "\033[92m" if cat == "SECURE" else "\033[91m" if cat == "VULNERABLE" else "\033[93m" if cat == "PARTIAL" else "\033[90m"
         score = f"{int(r['apnic_score'])}%" if r['apnic_score'] > -1 else "-"
         print(f"AS{r['asn']:<6} | {color}{v:<30}\033[0m | {r['cone']:<8} | {score:<6} | {r['name'][:40]}")
 
@@ -70,7 +73,8 @@ def analyze_country(target_cc):
         if not provider_row.empty:
             r = provider_row.iloc[0]
             v = r['verdict']
-            color = "\033[92m" if ("ACTIVE" in v or "PASSIVE" in v or "PROTECTOR" in v) else "\033[91m" if ("VULNERABLE" in v or "UNPROTECTED" in v) else "\033[90m"
+            cat = rov_utils.classify_verdict(v)
+            color = "\033[92m" if cat == "SECURE" else "\033[91m" if cat == "VULNERABLE" else "\033[90m"
             print(f"#{i+1:<3} | AS{asn:<6} | {count:<10} | {color}{v:<30}\033[0m | {r['name'][:40]}")
         else:
             print(f"#{i+1:<3} | AS{asn:<6} | {count:<10} | {'Unknown (Not in Audit)':<30} | -")

@@ -23,9 +23,17 @@ A toolkit for auditing RPKI Route Origin Validation (ROV) and ROA Signing adopti
 
 ## Standardized Columns (Audit CSV)
 - `asn`: Autonomous System Number
-- `verdict`: Safety category (SECURE, VULNERABLE, PARTIAL, etc.)
+- `verdict`: Safety category (REGRESSED, SECURE, VULNERABLE, VOLATILE, UNRELIABLE, etc.)
 - `atlas_result`: RIPE Atlas active verification verdict (Standardized).
 - `cone`: Customer cone size (weight).
+
+## Verdict Classification
+The toolkit uses a centralized classification system in `rov_utils.py`:
+- **SECURE**: `ACTIVE`, `PASSIVE`, `PROTECTOR`, `VOLATILE` (Safe states).
+- **VULNERABLE**: `REGRESSED`, `UNRELIABLE`, `UNPROTECTED`, `VULNERABLE` (High-risk states).
+- **PARTIAL**: Mixed upstream environments.
+- **Priority**: `REGRESSED` and `UNRELIABLE` (Volatility in vulnerable states) take priority as `VULNERABLE`.
+- **Sorting**: `NOT ROUTED` and `Unverified` are pushed to the bottom of statistical reports.
 
 ## Versioning Policy
 - New major logic updates should increment the version suffix (e.g., `v21` -> `v22`).

@@ -3,11 +3,11 @@
     ====================================================================================================
      NATIONAL ROUTING SECURITY: CN
     ====================================================================================================
-    Total Networks:      6,462
+    Total Networks:      6,463
     Total Cone Gravity:  5,780
     ------------------------------------------------------------
-    SECURE (ACTIVE/PASSIVE):   117 ( 1.8%) -> Protects 4.5% of Traffic
-    VULNERABLE NETWORKS:      4715 (73.0%) -> Exposes  94.9% of Traffic
+    SECURE (ACTIVE/PASSIVE):   114 ( 1.8%) -> Protects 4.5% of Traffic
+    VULNERABLE NETWORKS:      4698 (72.7%) -> Exposes  86.9% of Traffic
 
     ====================================================================================================
      THE CN CORE (Top 20 Networks)
@@ -22,7 +22,7 @@
     AS139317 | PARTIAL: VULNERABLE (Mixed)    | 72       | -      | Ningbo Dahuamao Information Technology C
     AS4847   | PARTIAL: VULNERABLE (Mixed)    | 68       | 0%     | China Telecom Beijing Province Network
     AS9808   | CORE: UNPROTECTED              | 61       | 0%     | China Mobile Backbone
-    AS4809   | CORE: ACTIVE PROTECTOR         | 50       | 1%     | China Telecom Next Generation Carrier Ne
+    AS4809   | CORE: ACTIVE PROTECTOR         | 50       | 0%     | China Telecom Next Generation Carrier Ne
     AS56048  | ACTIVE (Atlas Verified)        | 49       | 1%     | China Mobile Group Beijing Company
     AS4812   | ACTIVE (Atlas Verified)        | 45       | 0%     | China Telecom Shanghai Province Network
     AS9425   | VULNERABLE STABLE              | 40       | -      | Future Internet Technology Infrastructur
@@ -31,7 +31,7 @@
     AS17621  | VULNERABLE STABLE              | 33       | 2%     | China Unicom Shanghai network
     AS146788 | Unverified (Transit/Peer?)     | 32       | -      | China Broadcasting Network Co., Ltd
     AS24400  | ACTIVE (Atlas Verified)        | 31       | 0%     | Shanghai Mobile Communications Co.,Ltd.
-    AS4538   | PARTIAL: VULNERABLE (Mixed)    | 28       | 2%     | China Education and Research Network Cen
+    AS4538   | PARTIAL: VULNERABLE (Mixed)    | 28       | 3%     | China Education and Research Network Cen
     AS213605 | PARTIAL: VULNERABLE (Mixed)    | 24       | -      | Liu HaoRan
     AS56040  | VULNERABLE STABLE              | 18       | 0%     | China Mobile Group GuangDong Company
 

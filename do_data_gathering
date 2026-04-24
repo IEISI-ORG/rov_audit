@@ -8,3 +8,7 @@ bgpdump -m latest-bview.gz | ./bgp-extractor -input /dev/stdin -output output -w
 
 # Bulk ROA Sync (Go-powered, 500x faster than old version)
 python3 do_roa_sync.py
+
+# Pack data for high-performance analysis
+echo "[*] Packing ASN data for analysis..."
+python3 pack_asn_data.py

@@ -7,7 +7,7 @@
     Total Cone Gravity:  13,595
     ------------------------------------------------------------
     SECURE (ACTIVE/PASSIVE):   123 ( 3.2%) -> Protects 7.2% of Traffic
-    VULNERABLE NETWORKS:      2411 (62.3%) -> Exposes  92.5% of Traffic
+    VULNERABLE NETWORKS:      2338 (60.4%) -> Exposes  14.5% of Traffic
 
     ====================================================================================================
      THE ID CORE (Top 20 Networks)
@@ -28,7 +28,7 @@
     AS58389  | PARTIAL: VULNERABLE (Mixed)    | 218      | 0%     | PT Sumber Data Indonesia
     AS131111 | PASSIVE (Clean Pipe)           | 209      | 0%     | PT Mora Telematika Indonesia Tbk
     AS4761   | PARTIAL: VULNERABLE (Mixed)    | 151      | 47%    | PT Indosat Tbk
-    AS58495  | PARTIAL: VULNERABLE (Mixed)    | 144      | 1%     | PT Parsaoran Global Datatrans
+    AS58495  | PARTIAL: VULNERABLE (Mixed)    | 144      | 2%     | PT Parsaoran Global Datatrans
     AS55685  | PARTIAL: VULNERABLE (Mixed)    | 143      | 0%     | PT Jala Lintas Media
     AS17995  | VULNERABLE STABLE              | 129      | 1%     | PT iForte Global Internet
     AS24534  | PARTIAL: VULNERABLE (Mixed)    | 124      | 0%     | PT Trans Hybrid Communication

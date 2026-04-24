@@ -7,20 +7,20 @@
     Total Cone Gravity:  15,477
     ------------------------------------------------------------
     SECURE (ACTIVE/PASSIVE):   149 ( 2.4%) -> Protects 57.7% of Traffic
-    VULNERABLE NETWORKS:      2535 (41.4%) -> Exposes  42.2% of Traffic
+    VULNERABLE NETWORKS:      2502 (40.9%) -> Exposes  15.7% of Traffic
 
     ====================================================================================================
      THE IN CORE (Top 20 Networks)
     ====================================================================================================
     ASN      | Verdict                        | Cone     | APNIC% | Name
     ----------------------------------------------------------------------------------------------------
-    AS9498   | PASSIVE (Clean Pipe)           | 8814     | 1%     | Bharti Airtel Ltd.
+    AS9498   | PASSIVE (Clean Pipe)           | 8814     | 2%     | Bharti Airtel Ltd.
     AS4755   | PARTIAL: VULNERABLE (Mixed)    | 2490     | 5%     | TATA Communications (formerly VSNL)
-    AS9583   | PARTIAL: VULNERABLE (Mixed)    | 595      | 58%    | Sify Limited
+    AS9583   | PARTIAL: VULNERABLE (Mixed)    | 595      | 56%    | Sify Limited
     AS18229  | PARTIAL: VULNERABLE (Mixed)    | 400      | 0%     | CtrlS
     AS55836  | VULNERABLE (Atlas Verified)    | 354      | 0%     | Reliance Jio Infocomm Limited
     AS45820  | VULNERABLE STABLE              | 347      | 3%     | Tata Teleservices ISP
-    AS55410  | PARTIAL: VULNERABLE (Mixed)    | 318      | 5%     | Vodafone Idea Ltd
+    AS55410  | PARTIAL: VULNERABLE (Mixed)    | 318      | 4%     | Vodafone Idea Ltd
     AS9730   | VULNERABLE STABLE              | 238      | -      | Bharti Telesonic Ltd
     AS45117  | VULNERABLE (Atlas Verified)    | 117      | 0%     | Ishan Netsol Pvt Ltd
     AS17762  | VULNERABLE STABLE              | 114      | 1%     | Tata Teleservices Maharashtra Ltd

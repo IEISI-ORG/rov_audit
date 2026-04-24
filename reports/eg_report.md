@@ -7,7 +7,7 @@
     Total Cone Gravity:  124
     ------------------------------------------------------------
     SECURE (ACTIVE/PASSIVE):    60 (71.4%) -> Protects 93.5% of Traffic
-    VULNERABLE NETWORKS:        14 (16.7%) -> Exposes  6.5% of Traffic
+    VULNERABLE NETWORKS:        13 (15.5%) -> Exposes  0.0% of Traffic
 
     ====================================================================================================
      THE EG CORE (Top 20 Networks)
@@ -18,22 +18,22 @@
     AS24835  | ACTIVE LOCAL ROV               | 30       | 99%    | Vodafone Egypt
     AS20928  | ACTIVE LOCAL ROV               | 11       | 97%    | The Noor Group
     AS24863  | ACTIVE LOCAL ROV               | 9        | 98%    | Link Egypt (Link.NET)
-    AS36992  | PARTIAL: VULNERABLE (Mixed)    | 8        | 1%     | Etisalat Egypt
-    AS8524   | STUB: ACTIVE UNSTABLE          | 0        | 100%   | AUCEGYPT Autonomous System
-    AS6879   | STUB: PASSIVE (Clean Pipe)     | 0        | -      | ENSTINET
-    AS15475  | STUB: VULNERABLE STABLE        | 0        | -      | Nile Online
-    AS2561   | STUB: ACTIVE LOCAL ROV         | 0        | 98%    | Egyptian Universities Network (EUN)
-    AS25364  | STUB: PASSIVE (Clean Pipe)     | 0        | -      | Egypt Cyber Center aka ECC Solutions
-    AS25576  | STUB: VULNERABLE STABLE        | 0        | 5%     | AFMIC
-    AS30993  | STUB: ACTIVE LOCAL ROV         | 0        | 100%   | Egypt Centers
-    AS30995  | STUB: PASSIVE (Clean Pipe)     | 0        | -      | Commercial International Bank (Egypt) AS
-    AS31065  | STUB: VULNERABLE STABLE        | 0        | -      | Ministry of Communications and Informati
-    AS31619  | STUB: VULNERABLE STABLE        | 0        | -      | City Stars
-    AS6127   | STUB: VULNERABLE UNSTABLE      | 0        | 100%   | IDSC
-    AS33777  | NOT ROUTED                     | 0        | -      | CEQUENS  TECHNOLOGIES-Egyptian Joint-Sto
-    AS33778  | STUB: PASSIVE (Clean Pipe)     | 0        | -      | Mantrac Group
-    AS33782  | STUB: PASSIVE (Clean Pipe)     | 0        | -      | Bibliotheca Alexandrina
-    AS33785  | NOT ROUTED                     | 0        | -      | City Net Telecom
+    AS36992  | PARTIAL: VULNERABLE (Mixed)    | 8        | 2%     | Etisalat Egypt
+    AS328587 | STUB: PASSIVE (Clean Pipe)     | 0        | -      | Ministry of Communications and Informati
+    AS328629 | STUB: VULNERABLE STABLE        | 0        | -      | Egyptian Credit Bureau Estealam S.A.E
+    AS328553 | STUB: PASSIVE (Clean Pipe)     | 0        | -      | Bank Misr S.A.E
+    AS328762 | STUB: PASSIVE (Clean Pipe)     | 0        | -      | Mansoura University
+    AS328654 | STUB: PASSIVE (Clean Pipe)     | 0        | -      | Fixed Solutions
+    AS328645 | STUB: PASSIVE (Clean Pipe)     | 0        | -      | The Egyptian Stock Exchange
+    AS328308 | STUB: PASSIVE (Clean Pipe)     | 0        | -      | L'Azurde Company For Jewelry
+    AS328299 | STUB: PASSIVE (Clean Pipe)     | 0        | -      | Attijariwafa Bank Egypt S.A.E
+    AS328430 | STUB: PASSIVE (Clean Pipe)     | 0        | -      | Fawry for Banking and Electronic Payment
+    AS328484 | STUB: PASSIVE (Clean Pipe)     | 0        | -      | TBE Egypt for Payment Solutions and Serv
+    AS328405 | STUB: PASSIVE (Clean Pipe)     | 0        | -      | Link Datacenter For Data Circulation
+    AS329132 | STUB: PASSIVE (Clean Pipe)     | 0        | -      | National Company for Telecommunication S
+    AS329131 | STUB: PASSIVE (Clean Pipe)     | 0        | -      | National Bank of Kuwait (NBK) - Egypt - 
+    AS329114 | STUB: PASSIVE (Clean Pipe)     | 0        | -      | Halan for technology and services
+    AS329325 | ACTIVE (Atlas Verified)        | 0        | -      | Maxko for Gaming Development
 
     ====================================================================================================
      TRANSIT SUPPLY CHAIN (Who provides to EG?)
@@ -56,7 +56,7 @@
     #14  | AS2914   | 1          | CORE: ACTIVE PROTECTOR         | NTT America, Inc.
     #15  | AS10241  | 1          | VULNERABLE STABLE              | Options & Choices, Inc.
     #16  | AS3491   | 1          | CORE: ACTIVE PROTECTOR         | PCCW Global (HK) Ltd.
-    #17  | AS55002  | 1          | VULNERABLE (Atlas Verified)    | F5, Inc.
-    #18  | AS6127   | 1          | STUB: VULNERABLE UNSTABLE      | IDSC
-    #19  | AS35280  | 1          | PARTIAL: VULNERABLE (Mixed)    | F5 Networks SARL
-    #20  | AS13335  | 1          | ACTIVE LOCAL ROV (Hardcoded)   | Cloudflare, Inc.
+    #17  | AS2561   | 1          | STUB: ACTIVE LOCAL ROV         | Egyptian Universities Network (EUN)
+    #18  | AS37611  | 1          | ACTIVE (Atlas Verified)        | Afrihost (Pty) Ltd
+    #19  | AS29632  | 1          | PARTIAL: VULNERABLE (Mixed)    | Netassist International EOOD
+    #20  | AS8772   | 1          | PARTIAL: VULNERABLE (Mixed)    | NetAssist LLC

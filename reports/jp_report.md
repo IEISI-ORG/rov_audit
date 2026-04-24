@@ -6,8 +6,8 @@
     Total Networks:      972
     Total Cone Gravity:  1,795
     ------------------------------------------------------------
-    SECURE (ACTIVE/PASSIVE):   295 (30.3%) -> Protects 87.0% of Traffic
-    VULNERABLE NETWORKS:       425 (43.7%) -> Exposes  13.0% of Traffic
+    SECURE (ACTIVE/PASSIVE):   296 (30.5%) -> Protects 87.0% of Traffic
+    VULNERABLE NETWORKS:       391 (40.2%) -> Exposes  1.1% of Traffic
 
     ====================================================================================================
      THE JP CORE (Top 20 Networks)
@@ -28,11 +28,11 @@
     AS9824   | ACTIVE UNSTABLE                | 15       | 99%    | JCOM Co., Ltd.
     AS7670   | PARTIAL: VULNERABLE (Mixed)    | 13       | 0%     | Enecom,Inc.
     AS59103  | VULNERABLE STABLE              | 13       | -      | SoftEther Corporation
-    AS7679   | PARTIAL: VULNERABLE (Mixed)    | 12       | 0%     | QTnet,Inc.
     AS2500   | PARTIAL: VULNERABLE (Mixed)    | 12       | -      | WIDE Project
-    AS9354   | PARTIAL: VULNERABLE (Mixed)    | 11       | 0%     | Community Network Center Inc.
+    AS7679   | PARTIAL: VULNERABLE (Mixed)    | 12       | 0%     | QTnet,Inc.
     AS38074  | PARTIAL: VULNERABLE (Mixed)    | 11       | -      | SDCC Japan-West Area
     AS150369 | ACTIVE LOCAL ROV               | 11       | -      | TelHi Corporation
+    AS9354   | PARTIAL: VULNERABLE (Mixed)    | 11       | 0%     | Community Network Center Inc.
     AS17511  | PASSIVE (Clean Pipe)           | 8        | 0%     | OPTAGE Inc.
 
     ====================================================================================================

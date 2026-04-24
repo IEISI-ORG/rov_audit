@@ -25,9 +25,42 @@ FILE_RELATIONSHIPS = "output/relationships.csv"
 FILE_CONES = "final_as_rank.csv"
 FILE_GRAPH = "data/downstream_graph.json"
 FILE_AUDIT_FINAL = "rov_audit_v21_final.csv"
+FILE_PACKED_ASN = "data/as_data.jsonl.gz"
 
 # URLs
 URL_ASNS_CSV = "https://bgp.tools/asns.csv"
+# ... (rest of URLs)
+
+# ... (other functions)
+
+def load_all_asn_data() -> dict:
+    """Load all ASN data from either packed JSONL or individual JSON files."""
+    data = {}
+    # 1. Try Packed File First (Fast)
+    if os.path.exists(FILE_PACKED_ASN):
+        print(f"    - Loading ASN data from packed file...", end=" ", flush=True)
+        try:
+            with gzip.open(FILE_PACKED_ASN, 'rt', encoding='utf-8') as f:
+                for line in f:
+                    d = json.loads(line)
+                    data[d['asn']] = d
+            print(f"OK ({len(data):,} records)")
+            return data
+        except Exception as e:
+            print(f"FAIL ({e})")
+    
+    # 2. Fallback to individual files
+    print(f"    - Loading ASN data from individual files...", end=" ", flush=True)
+    files = glob.glob(os.path.join(DIR_PARSED, "as_*.json"))
+    for f in files:
+        try:
+            with open(f, 'r') as h:
+                d = json.load(h)
+                data[d['asn']] = d
+        except: pass
+    print(f"OK ({len(data):,} records)")
+    return data
+
 URL_ROV_TAGS = "https://bgp.tools/tags/rpkirov.csv"
 URL_CLOUDFLARE_CSV = "https://raw.githubusercontent.com/cloudflare/isbgpsafeyet.com/master/data/operators.csv"
 URL_IPTOASN_V4 = "https://iptoasn.com/data/ip2asn-v4.tsv.gz"
@@ -197,7 +230,7 @@ def _fetch_apnic_ts_rates(asn: int, cc: str) -> list[float]:
         resp = requests.get(f"{URL_APNIC_TS}?x={cc}{asn}", headers=HEADERS, timeout=15)
         if resp.status_code == 200:
             rows = resp.json().get('data', [])
-            rates = [r['7']['filter_rate'] for r in rows[-90:] if '7' in r]
+            rates = [r['7']['filter_rate'] for r in rows if '7' in r]
             if rates:
                 with open(cache, 'w') as f: json.dump(rates, f)
                 return rates
@@ -209,7 +242,17 @@ def sync_apnic_timeseries(apnic_map: dict, meta: dict) -> dict:
     import statistics
     APNIC_TS_SCORE_MIN = 60.0
     APNIC_VOLATILE_STDEV = 20.0
+    APNIC_REGRESSION_THRESHOLD = 30.0 # Drop from max in 90 days
+
+    # Candidates: High current score OR existing history we want to keep fresh
     candidates = {asn for asn, score in apnic_map.items() if score >= APNIC_TS_SCORE_MIN}
+    for f in glob.glob(os.path.join(DIR_APNIC_TS, "*.json")):
+        try:
+            asn_str = os.path.basename(f).replace(".json", "")
+            if asn_str.isdigit():
+                candidates.add(int(asn_str))
+        except: pass
+
     if not candidates: return {}
     print(f"[Sync] APNIC Time Series ({len(candidates)} ASNs)...")
     result, fetched = {}, 0
@@ -218,10 +261,20 @@ def sync_apnic_timeseries(apnic_map: dict, meta: dict) -> dict:
         if not cc: continue
         rates = _fetch_apnic_ts_rates(asn, cc)
         if len(rates) < 14: continue
-        sd = statistics.stdev(rates)
-        mn, mx = min(rates), max(rates)
-        crossed_threshold = (mx >= 95.0 and mn < 60.0)
-        result[asn] = (round(sd, 1), round(mn, 1), round(mx, 1), sd > APNIC_VOLATILE_STDEV or crossed_threshold)
+        
+        # Current and 90-day window
+        current = rates[-1]
+        rates_90 = rates[-90:]
+        sd = statistics.stdev(rates_90)
+        mn90, mx90 = min(rates_90), max(rates_90)
+        historical_max = max(rates)
+        
+        # Volatility & Regression Criteria
+        crossed_threshold = (mx90 >= 95.0 and mn90 < 60.0)
+        regression = (historical_max - current) > APNIC_REGRESSION_THRESHOLD
+        is_volatile = (sd > APNIC_VOLATILE_STDEV or crossed_threshold or regression)
+        
+        result[asn] = (round(sd, 1), round(mn90, 1), round(mx90, 1), is_volatile, regression)
         fetched += 1
     print(f"    - Result: {fetched} Analysed, {len(candidates)-fetched} Skipped.")
     return result
@@ -328,18 +381,8 @@ def load_atlas_boundaries() -> dict:
 
 def load_signing_stats() -> dict:
     """Load ROA signing percentages from JSON cache."""
-    print(f"[4] Loading ROA Stats from {DIR_PARSED}...", end=" ", flush=True)
-    signing_data = {}
-    files = glob.glob(os.path.join(DIR_PARSED, "*.json"))
-    for f in files:
-        try:
-            with open(f, 'r') as h:
-                d = json.load(h)
-                asn = d.get('asn')
-                pct = d.get('roa_signed_pct', 0.0)
-                if asn: signing_data[int(asn)] = pct
-        except: pass
-    print(f"OK ({len(signing_data)} records)")
+    data = load_all_asn_data()
+    signing_data = {asn: d.get('roa_signed_pct', 0.0) for asn, d in data.items()}
     return signing_data
 
 def calculate_cone_health(root_asn: int, downstream: dict, roa_map: dict) -> tuple[int, int]:
@@ -375,6 +418,29 @@ def load_upstreams_from_cache(target_asns: list) -> Counter:
             except: pass
     return dependencies
 
+def classify_verdict(verdict: str) -> str:
+    """Categorize a verdict string into high-level status."""
+    v = str(verdict).upper()
+    # Regressions and Unreliable states are always treated as VULNERABLE
+    if any(x in v for x in ["(REG)", "REGRESSED", "UNRELIABLE", "UNPROT"]):
+        return "VULNERABLE"
+    if any(x in v for x in ["ACTIVE", "PASSIVE", "PROTECTOR", "VOLATILE"]):
+        return "SECURE"
+    if "PARTIAL" in v:
+        return "PARTIAL"
+    if any(x in v for x in ["VULNERABLE", "VULN"]):
+        return "VULNERABLE"
+    return "UNKNOWN"
+
+def is_secure(verdict: str) -> bool:
+    return classify_verdict(verdict) == "SECURE"
+
+def is_vulnerable(verdict: str) -> bool:
+    return classify_verdict(verdict) == "VULNERABLE"
+
+def is_partial(verdict: str) -> bool:
+    return classify_verdict(verdict) == "PARTIAL"
+
 def assign_verdict(asn: int, is_safe: bool, cone: int, parents: list, dirty_feeds: int, volatile: bool, atlas_v: str = "") -> str:
     """Standardized logic for assigning safety verdicts."""
     if asn in HARDCODED_SECURE:
@@ -391,20 +457,20 @@ def assign_verdict(asn: int, is_safe: bool, cone: int, parents: list, dirty_feed
         if dirty_feeds == 0:
             if not is_safe:
                 return "STUB: PASSIVE (Clean Pipe)"
-            return "STUB: ACTIVE UNSTABLE" if volatile else "STUB: ACTIVE LOCAL ROV"
+            return "STUB: VOLATILE" if volatile else "STUB: ACTIVE LOCAL ROV"
         elif is_safe:
-            return "STUB: ACTIVE UNSTABLE"
+            return "STUB: VOLATILE"
         else:
-            return "STUB: VULNERABLE UNSTABLE" if volatile else "STUB: VULNERABLE STABLE"
+            return "STUB: UNRELIABLE" if volatile else "STUB: VULNERABLE"
     else: # TRANSIT
         if dirty_feeds == 0:
             if not is_safe:
                 return "PASSIVE (Clean Pipe)"
-            return "ACTIVE UNSTABLE" if volatile else "ACTIVE LOCAL ROV"
+            return "VOLATILE" if volatile else "ACTIVE LOCAL ROV"
         elif dirty_feeds < total_feeds:
             return "PARTIAL: VULNERABLE (Mixed)"
         elif is_safe:
-            return "ACTIVE UNSTABLE" 
+            return "VOLATILE" 
         else:
-            return "VULNERABLE UNSTABLE" if volatile else "VULNERABLE STABLE"
+            return "UNRELIABLE" if volatile else "VULNERABLE"
     return "Unknown"

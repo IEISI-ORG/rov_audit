@@ -6,8 +6,8 @@
     Total Networks:      3,211
     Total Cone Gravity:  125,119
     ------------------------------------------------------------
-    SECURE (ACTIVE/PASSIVE):  1053 (32.8%) -> Protects 8.0% of Traffic
-    VULNERABLE NETWORKS:      1353 (42.1%) -> Exposes  91.9% of Traffic
+    SECURE (ACTIVE/PASSIVE):  1048 (32.6%) -> Protects 8.0% of Traffic
+    VULNERABLE NETWORKS:      1206 (37.6%) -> Exposes  0.1% of Traffic
 
     ====================================================================================================
      THE DE CORE (Top 20 Networks)
@@ -20,7 +20,7 @@
     AS29632  | PARTIAL: VULNERABLE (Mixed)    | 21632    | -      | Netassist International EOOD
     AS3320   | CORE: ACTIVE PROTECTOR         | 4951     | 99%    | Deutsche Telekom AG
     AS5405   | ACTIVE LOCAL ROV               | 3131     | -      | Inter.link GmbH
-    AS34854  | PASSIVE (Clean Pipe)           | 834      | -      | Maria Merkel trading as Blahaj Studio
+    AS34854  | ACTIVE LOCAL ROV               | 834      | -      | Maria Merkel trading as Blahaj Studio
     AS212895 | PARTIAL: VULNERABLE (Mixed)    | 329      | -      | Johannes Ernst
     AS13237  | PARTIAL: VULNERABLE (Mixed)    | 272      | 0%     | euNetworks GmbH
     AS50629  | ACTIVE LOCAL ROV               | 192      | 100%   | LWLcom GmbH

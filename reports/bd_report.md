@@ -7,7 +7,7 @@
     Total Cone Gravity:  3,248
     ------------------------------------------------------------
     SECURE (ACTIVE/PASSIVE):    13 ( 0.7%) -> Protects 0.0% of Traffic
-    VULNERABLE NETWORKS:      1445 (72.9%) -> Exposes  99.9% of Traffic
+    VULNERABLE NETWORKS:      1429 (72.1%) -> Exposes  17.3% of Traffic
 
     ====================================================================================================
      THE BD CORE (Top 20 Networks)
@@ -18,8 +18,8 @@
     AS10075  | PARTIAL: VULNERABLE (Mixed)    | 341      | 0%     | Fiber@Home Global Limited
     AS139009 | PARTIAL: VULNERABLE (Mixed)    | 307      | 0%     | Windstream Communication Limited
     AS58682  | PARTIAL: VULNERABLE (Mixed)    | 278      | 0%     | Level3 Carrier Ltd.
-    AS150178 | PARTIAL: VULNERABLE (Mixed)    | 130      | -      | EXABYTE LTD
     AS58715  | PARTIAL: VULNERABLE (Mixed)    | 130      | 0%     | EARTH TELECOMMUNICATION (Pvt) LTD.
+    AS150178 | PARTIAL: VULNERABLE (Mixed)    | 130      | -      | EXABYTE LTD
     AS139901 | PARTIAL: VULNERABLE (Mixed)    | 108      | 0%     | Apple Communication Ltd.
     AS17494  | PARTIAL: VULNERABLE (Mixed)    | 76       | 0%     | Bangladesh Telegraph & Telephone Board
     AS137491 | PARTIAL: VULNERABLE (Mixed)    | 66       | 0%     | Peerex Networks Ltd

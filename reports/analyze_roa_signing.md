@@ -1,13 +1,13 @@
     [*] Loading Data for ROA Signing Report...
-    [4] Loading ROA Stats from data/parsed... OK (122193 records)
+        - Loading ASN data from packed file... OK (122,193 records)
 
     ================================================================================
     GLOBAL ROA SIGNING REPORT
     ================================================================================
-    Total Networks: 121,160
-      - Fully Signed (>90%):  42,472  (35.1%)
+    Total Networks: 121,196
+      - Fully Signed (>90%):  42,472  (35.0%)
       - Partially Signed:      5,818  (4.8%)
-      - Totally Unsigned:     72,870  (60.1%)
+      - Totally Unsigned:     72,906  (60.2%)
 
     ================================================================================
     THE 'GLASS HOUSES' (Secure Provider, but Unsigned Routes)
@@ -37,17 +37,17 @@
     ASN      | CC | Cone     | Feeds  | Name
     --------------------------------------------------------------------------------
     AS37721  | BF | 60716    | 0/14   | Virtual Technologies & Solutions
-    AS35280  | FR | 52753    | 1/6    | F5 Networks SARL
-    AS17639  | PH | 43128    | 4/16   | Converge ICT Solutions Inc.
-    AS34927  | CH | 34451    | 2/11   | iFog GmbH
-    AS48362  | AT | 32931    | 1/4    | Stadtwerke Feldkirch
-    AS213241 | BE | 25036    | 2/3    | TECHIT.BE SRL
-    AS3214   | DE | 22045    | 1/7    | xTom GmbH
-    AS56655  | NO | 14487    | 1/3    | Gigahost AS
-    AS212024 | FR | 14156    | 1/2    | Marc Schmitt
-    AS25091  | CH | 13742    | 2/8    | IP-Max SA
-    AS1836   | CH | 13649    | 3/7    | green.ch AG
-    AS31133  | RU | 11110    | 1/6    | MegaFon PJSC
     AS12389  | RU | 11019    | 1/11   | Rostelecom PJSC
-    AS49673  | RU | 9069     | 5/6    | Truenetwork LLC
-    AS208972 | TR | 8200     | 5/6    | GIBIRNet Iletisim
+    AS37468  | AO | 893      | 1/8    | Angola Cables
+    AS6327   | CA | 554      | 0/6    | Shaw Communications
+    AS9121   | TR | 536      | 0/5    | Turk Telekom
+    AS55836  | IN | 354      | 2/2    | Reliance Jio Infocomm Limited
+    AS147094 | ID | 354      | 1/1    | PT Mitra Visioner Pratama
+    AS45820  | IN | 347      | 4/4    | Tata Teleservices ISP
+    AS16276  | FR | 339      | 3/18   | OVH SAS
+    AS812    | CA | 280      | 1/7    | Rogers Communications Canada Inc.
+    AS9299   | PH | 276      | 3/12   | PLDT (Philippine Long Distance Telephone
+    AS5650   | US | 253      | 0/2    | Verizon (fka. Frontier)
+    AS4787   | ID | 231      | 2/2    | PT Cyberindo Aditama
+    AS6830   | NL | 219      | 0/0    | Liberty Global Europe Holding B.V.
+    AS12302  | RO | 214      | 0/1    | Vodafone Romania S.A.

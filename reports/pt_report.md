@@ -7,7 +7,7 @@
     Total Cone Gravity:  276
     ------------------------------------------------------------
     SECURE (ACTIVE/PASSIVE):    58 (35.6%) -> Protects 87.3% of Traffic
-    VULNERABLE NETWORKS:        65 (39.9%) -> Exposes  12.7% of Traffic
+    VULNERABLE NETWORKS:        62 (38.0%) -> Exposes  11.2% of Traffic
 
     ====================================================================================================
      THE PT CORE (Top 20 Networks)
@@ -23,17 +23,17 @@
     AS3243   | VULNERABLE (Atlas Verified)    | 6        | 0%     | MEO
     AS1930   | ACTIVE LOCAL ROV               | 4        | 99%    | Fundacao para a Ciencia e a Tecnologia, 
     AS24768  | ACTIVE LOCAL ROV               | 3        | 0%     | AlmourolTec, Lda
-    AS209874 | VULNERABLE STABLE              | 2        | 0%     | Tech Tide Portugal Unipessoal LDA
     AS29003  | PASSIVE (Clean Pipe)           | 2        | 100%   | IP TELECOM, SERVICOS DE TELECOMUNICACOES
+    AS209874 | VULNERABLE STABLE              | 2        | 0%     | Tech Tide Portugal Unipessoal LDA
     AS47787  | PARTIAL: VULNERABLE (Mixed)    | 2        | -      | EDGOO NETWORKS UNIPESSOAL LDA
-    AS50293  | PARTIAL: VULNERABLE (Mixed)    | 1        | -      | Interfiber Networks LDA
-    AS200454 | PARTIAL: VULNERABLE (Mixed)    | 1        | -      | Tomas Oliveira Valente Leite de Castro
     AS201782 | PASSIVE (Clean Pipe)           | 1        | -      | Make It Simple Consultoria Informatica L
-    AS8609   | STUB: VULNERABLE STABLE        | 0        | -      | Universidade Catolica Portuguesa
-    AS9118   | STUB: VULNERABLE STABLE        | 0        | -      | Novo Banco, S.A.
-    AS12305  | STUB: VULNERABLE STABLE        | 0        | -      | G9, S.A.
-    AS12527  | STUB: PASSIVE (Clean Pipe)     | 0        | -      | Millennium BCP-Prestacao de Servicos ACE
-    AS12542  | NOT ROUTED                     | 0        | -      | NOS COMUNICACOES, S.A.
+    AS200454 | PARTIAL: VULNERABLE (Mixed)    | 1        | -      | Tomas Oliveira Valente Leite de Castro
+    AS50293  | PARTIAL: VULNERABLE (Mixed)    | 1        | -      | Interfiber Networks LDA
+    AS199155 | STUB: ACTIVE LOCAL ROV         | 0        | 99%    | Direcao Geral de Estatisticas da Educaca
+    AS198980 | NOT ROUTED                     | 0        | -      | Banco de Portugal
+    AS199130 | STUB: PASSIVE (Clean Pipe)     | 0        | -      | 4Spiro - Sociedade de Consultoria, LDA
+    AS199016 | STUB: VULNERABLE STABLE        | 0        | -      | VISUALFORMA TECNOLOGIAS DE INFORMACAO, S
+    AS199667 | NOT ROUTED                     | 0        | -      | 4Spiro - Sociedade de Consultoria, LDA
 
     ====================================================================================================
      TRANSIT SUPPLY CHAIN (Who provides to PT?)
@@ -47,9 +47,9 @@
     #5   | AS6939   | 9          | CORE: ACTIVE PROTECTOR         | Hurricane Electric LLC
     #6   | AS6424   | 9          | PASSIVE (Clean Pipe)           | EDGOO NETWORKS
     #7   | AS8220   | 9          | ACTIVE LOCAL ROV               | COLT
-    #8   | AS3243   | 7          | VULNERABLE (Atlas Verified)    | MEO
-    #9   | AS1930   | 7          | ACTIVE LOCAL ROV               | Fundacao para a Ciencia e a Tecnologia, 
-    #10  | AS9186   | 7          | PASSIVE (Clean Pipe)           | ONITELECOM - INFOCOMUNICACOES, S.A.
+    #8   | AS1930   | 7          | ACTIVE LOCAL ROV               | Fundacao para a Ciencia e a Tecnologia, 
+    #9   | AS9186   | 7          | PASSIVE (Clean Pipe)           | ONITELECOM - INFOCOMUNICACOES, S.A.
+    #10  | AS3243   | 7          | VULNERABLE (Atlas Verified)    | MEO
     #11  | AS29003  | 5          | PASSIVE (Clean Pipe)           | IP TELECOM, SERVICOS DE TELECOMUNICACOES
     #12  | AS24768  | 4          | ACTIVE LOCAL ROV               | AlmourolTec, Lda
     #13  | AS20473  | 4          | ACTIVE (Atlas Verified)        | The Constant Company, LLC

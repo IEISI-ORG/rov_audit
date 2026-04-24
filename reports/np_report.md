@@ -7,7 +7,7 @@
     Total Cone Gravity:  158
     ------------------------------------------------------------
     SECURE (ACTIVE/PASSIVE):     2 ( 1.0%) -> Protects 0.0% of Traffic
-    VULNERABLE NETWORKS:       138 (66.3%) -> Exposes  100.0% of Traffic
+    VULNERABLE NETWORKS:       136 (65.4%) -> Exposes  65.8% of Traffic
 
     ====================================================================================================
      THE NP CORE (Top 20 Networks)
@@ -23,17 +23,17 @@
     AS139922 | VULNERABLE (Atlas Verified)    | 7        | 0%     | DISH MEDIA NETWORK PUBLIC LIMITED
     AS58504  | VULNERABLE STABLE              | 6        | 0%     | TECHMINDS NETWORKS PVT. LTD.
     AS151396 | VULNERABLE (Atlas Verified)    | 3        | 0%     | Sajilo Net Pvt Ltd
+    AS38565  | VULNERABLE STABLE              | 1        | 0%     | Ncell Pvt. Ltd.
     AS55915  | VULNERABLE (Atlas Verified)    | 1        | 0%     | Classic Tech Pvt. Ltd.
     AS141767 | VULNERABLE STABLE              | 1        | 0%     | C G Communications Ltd
-    AS38565  | VULNERABLE STABLE              | 1        | 0%     | Ncell Pvt. Ltd.
-    AS17412  | STUB: VULNERABLE STABLE        | 0        | -      | Internet Exchange Nepal
-    AS18222  | STUB: VULNERABLE STABLE        | 0        | -      | Data Hub Pvt. Ltd.
-    AS18395  | NOT ROUTED                     | 0        | -      | I.B.SYS. Solution Nepal Pvt. Ltd.
-    AS23647  | STUB: VULNERABLE STABLE        | 0        | -      | Communications & Communicate Nepal Pvt L
-    AS23672  | STUB: VULNERABLE STABLE        | 0        | -      | I.B.SYS. Solution Nepal Pvt. Ltd.
-    AS23752  | VULNERABLE (Atlas Verified)    | 0        | 0%     | Nepal Telecommunications Corporation, In
-    AS24123  | NOT ROUTED                     | 0        | -      | Vianet Communications Pvt Ltd
-    AS24474  | STUB: VULNERABLE STABLE        | 0        | -      | Nepal Internet Exchange NP Anycast
+    AS154096 | NOT ROUTED                     | 0        | -      | eSewa Private Limited
+    AS154237 | STUB: VULNERABLE STABLE        | 0        | -      | Swift Technology Pvt. Ltd.
+    AS154235 | STUB: VULNERABLE STABLE        | 0        | -      | Itel network pvt.ltd.
+    AS154259 | STUB: VULNERABLE STABLE        | 0        | -      | Workalaya R. And D. Private Limited
+    AS153861 | STUB: VULNERABLE STABLE        | 0        | -      | NMB Bank Ltd.
+    AS153885 | STUB: VULNERABLE STABLE        | 0        | 1%     | Interweb Network Pvt.Ltd.
+    AS154038 | STUB: VULNERABLE STABLE        | 0        | 1%     | Shikhar Net Pvt. Ltd.
+    AS154542 | NOT ROUTED                     | 0        | -      | Fonepay Payment Service Limited
 
     ====================================================================================================
      TRANSIT SUPPLY CHAIN (Who provides to NP?)
@@ -57,6 +57,6 @@
     #15  | AS24550  | 3          | VULNERABLE (Atlas Verified)    | Websurfer Nepal Internet Service Provide
     #16  | AS6453   | 2          | CORE: ACTIVE PROTECTOR         | TATA Communications (America) Inc
     #17  | AS55427  | 2          | STUB: VULNERABLE STABLE        | Broadlink Nepal
-    #18  | AS136908 | 2          | STUB: VULNERABLE STABLE        | Sky Broadband Pvt. Ltd
-    #19  | AS23752  | 2          | VULNERABLE (Atlas Verified)    | Nepal Telecommunications Corporation, In
-    #20  | AS45353  | 2          | NOT ROUTED                     | NITC: IT Agency of Government of Nepal
+    #18  | AS23752  | 2          | VULNERABLE (Atlas Verified)    | Nepal Telecommunications Corporation, In
+    #19  | AS45353  | 2          | NOT ROUTED                     | NITC: IT Agency of Government of Nepal
+    #20  | AS55915  | 2          | VULNERABLE (Atlas Verified)    | Classic Tech Pvt. Ltd.
