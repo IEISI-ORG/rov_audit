@@ -116,7 +116,7 @@ python3 verify_forensic_path_v2.py [TARGET_ASN]
 The tool categorizes networks using a standardized classification engine (`rov_utils.classify_verdict`):
 
 | Category | Primary Verdicts | Description |
-| :--- | :--- | :--- |
+| :----- | :----- | :----- |
 | 🔴 **VULNERABLE** | `REGRESSED`, `UNRELIABLE`, `VULNERABLE` | High-risk: Either leaking routes, has "dirty" upstreams, or shows a regression in security status. |
 | 🟡 **PARTIAL** | `PARTIAL: VULNERABLE (Mixed)` | Inconsistent: Has a mix of clean and dirty upstream feeds. |
 | 🟢 **SECURE** | `ACTIVE LOCAL ROV`, `PASSIVE (Clean Pipe)`, `VOLATILE` | Safe: Actively filtering or inherited protection from clean providers. |
