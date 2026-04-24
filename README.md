@@ -125,6 +125,42 @@ The tool categorizes networks using a standardized classification engine (`rov_u
 
 ---
 
+## 🛰️ Topology & Valley-Free Logic
+
+The tool uses a **Valley-Free** routing inference model to build the global dependency graph. This model assumes that a network will not provide transit between its own providers or peers, as there is no economic incentive to do so.
+
+### The Algorithm
+The `cone-calculator.go` tool processes relationships into a "Customer Cone" (the set of all ASNs reachable through a network's customers). 
+
+**Valid paths must follow the "Up-Peer-Down" flow:**
+1.  **Upward:** (Customer ➔ Provider) - Any number of hops.
+2.  **Horizontal:** (Peer ⇄ Peer) - At most one hop at the peak.
+3.  **Downward:** (Provider ➔ Customer) - Any number of hops.
+
+### ASCII Visualization
+```text
+      [ Tier 1 ]       [ Tier 1 ]
+          ^  \           /  ^
+    UP    |   \  PEER   /   |  DOWN
+          |    v <---> v    |
+      [  ISP A  ]     [  ISP B  ]
+          ^  \           /  ^
+    UP    |   \  TRANSIT/   |  DOWN
+          |    v       v    |
+      [  STUB 1 ]     [  STUB 2 ]
+
+   ✅ VALID PATHS (Valley-Free):
+   - STUB 1 ➔ ISP A ➔ Tier 1 (Upward/Transit)
+   - Tier 1 ➔ ISP B ➔ STUB 2 (Downward/Delivery)
+   - STUB 1 ➔ ISP A ⇄ ISP B ➔ STUB 2 (Up-Peer-Down)
+
+   ❌ INVALID PATHS (The "Valley"):
+   - Tier 1 ➔ ISP A ➔ Tier 2 (Provider ➔ Customer ➔ Provider)
+     *Reason: ISP A will not pay Tier 1 to carry traffic for Tier 2.*
+```
+
+---
+
 ## 📂 File Manifest
 
 | File | Description |
