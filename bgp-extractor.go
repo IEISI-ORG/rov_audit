@@ -27,10 +27,10 @@ type ASRelationship struct {
 
 // ASNStats holds statistics for a single ASN
 type ASNStats struct {
-	ASN           string
-	LeftNeighbors map[string]int64 // upstream/providers
+	ASN            string
+	LeftNeighbors  map[string]int64 // upstream/providers
 	RightNeighbors map[string]int64 // downstream/customers
-	TotalPaths    int64
+	TotalPaths     int64
 }
 
 func main() {
@@ -46,7 +46,7 @@ func main() {
 	}
 
 	start := time.Now()
-	
+
 	// Create output directory
 	if err := os.MkdirAll(*outputDir, 0755); err != nil {
 		log.Fatal("Failed to create output directory:", err)
@@ -115,12 +115,12 @@ func processBGPDump(filename string, workers int, verbose bool) (map[string]*ASN
 	scanner := bufio.NewScanner(reader)
 	buf := make([]byte, 0, 1024*1024) // 1MB buffer
 	scanner.Buffer(buf, 10*1024*1024) // 10MB max
-	
+
 	lineCount := int64(0)
 	for scanner.Scan() {
 		linesChan <- scanner.Text()
 		lineCount++
-		
+
 		if verbose && lineCount%100000 == 0 {
 			fmt.Fprintf(os.Stderr, "\rProcessed %d lines...", lineCount)
 		}
@@ -160,7 +160,7 @@ func worker(lines <-chan string, results chan<- *pathResult, wg *sync.WaitGroup)
 
 func parseASPath(line string) []string {
 	fields := strings.Split(line, "|")
-	
+
 	// Check if it's a TABLE_DUMP2 entry
 	if len(fields) < 7 || fields[0] != "TABLE_DUMP2" {
 		return nil
@@ -180,7 +180,7 @@ func parseASPath(line string) []string {
 	for _, asn := range rawPath {
 		// Remove AS sets (curly braces)
 		asn = strings.Trim(asn, "{}")
-		
+
 		// Skip if it's part of an AS set with commas
 		if strings.Contains(asn, ",") {
 			parts := strings.Split(asn, ",")
@@ -197,14 +197,14 @@ func parseASPath(line string) []string {
 	return cleanPath
 }
 
-func collectResults(results <-chan *pathResult, stats map[string]*ASNStats, 
+func collectResults(results <-chan *pathResult, stats map[string]*ASNStats,
 	relationships map[string]*ASRelationship, done chan<- struct{}, verbose bool) {
-	
+
 	count := int64(0)
-	
+
 	for result := range results {
 		count++
-		
+
 		if verbose && count%10000 == 0 {
 			fmt.Fprintf(os.Stderr, "\rCollected %d paths...", count)
 		}
@@ -225,7 +225,7 @@ func collectResults(results <-chan *pathResult, stats map[string]*ASNStats,
 			if i > 0 {
 				leftASN := result.asPath[i-1]
 				stats[asn].LeftNeighbors[leftASN]++
-				
+
 				// Record relationship
 				relKey := fmt.Sprintf("%s->%s:left", asn, leftASN)
 				if relationships[relKey] == nil {
@@ -242,7 +242,7 @@ func collectResults(results <-chan *pathResult, stats map[string]*ASNStats,
 			if i < len(result.asPath)-1 {
 				rightASN := result.asPath[i+1]
 				stats[asn].RightNeighbors[rightASN]++
-				
+
 				// Record relationship
 				relKey := fmt.Sprintf("%s->%s:right", asn, rightASN)
 				if relationships[relKey] == nil {
@@ -260,7 +260,7 @@ func collectResults(results <-chan *pathResult, stats map[string]*ASNStats,
 	if verbose {
 		fmt.Fprintf(os.Stderr, "\rCollected %d paths total\n", count)
 	}
-	
+
 	done <- struct{}{}
 }
 
@@ -383,7 +383,7 @@ func writeTopASNs(filename string, stats map[string]*ASNStats) error {
 	// Write top 100
 	fmt.Fprintf(file, "Top 100 ASNs by Total Neighbor Count\n")
 	fmt.Fprintf(file, "=====================================\n\n")
-	
+
 	limit := 100
 	if len(rankings) < limit {
 		limit = len(rankings)
@@ -415,7 +415,7 @@ func writeTopASNs(filename string, stats map[string]*ASNStats) error {
 			break
 		}
 		fmt.Fprintf(file, "AS%-6s - Left: %4d, Right: %4d (%.1f%% downstream)\n",
-			rank.asn, rank.left, rank.right, 
+			rank.asn, rank.left, rank.right,
 			float64(rank.right)/float64(rank.total)*100)
 	}
 

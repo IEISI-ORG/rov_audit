@@ -53,7 +53,10 @@ jobs:
         fi
 
     - name: Go Vet
-      run: go vet ./...
+      run: |
+        go vet bgp-extractor.go
+        go vet cone-calculator.go
+        go vet fetch-roa.go
 
     - name: Compile Binaries
       run: |

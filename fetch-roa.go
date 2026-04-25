@@ -17,9 +17,9 @@ import (
 )
 
 const (
-	BaseURL    = "https://stats.labs.apnic.net/roa"
-	OutputDir  = "data/parsed"
-	UserAgent  = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0 Safari/537.36"
+	BaseURL   = "https://stats.labs.apnic.net/roa"
+	OutputDir = "data/parsed"
+	UserAgent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0 Safari/537.36"
 )
 
 var (
@@ -72,21 +72,29 @@ func runCountryMode(countries []string, workers int) {
 			defer wg.Done()
 			client := &http.Client{Timeout: 30 * time.Second}
 			for cc := range ccChan {
-				if cc == "" { continue }
+				if cc == "" {
+					continue
+				}
 				body, err := fetchURL(client, fmt.Sprintf("%s/%s", BaseURL, cc))
-				if err != nil { continue }
-				
+				if err != nil {
+					continue
+				}
+
 				lines := strings.Split(string(body), "\n")
 				found := 0
 				for _, line := range lines {
-					if !strings.Contains(line, ">AS") { continue }
+					if !strings.Contains(line, ">AS") {
+						continue
+					}
 					aMatch := asnRegex.FindStringSubmatch(line)
 					sMatch := scoreRegex.FindStringSubmatch(line)
 					if len(aMatch) >= 2 && len(sMatch) >= 2 {
 						asn, _ := strconv.Atoi(aMatch[1])
 						score, _ := strconv.ParseFloat(sMatch[1], 64)
 						mu.Lock()
-						if score > results[asn] { results[asn] = score }
+						if score > results[asn] {
+							results[asn] = score
+						}
 						mu.Unlock()
 						found++
 					}
@@ -123,13 +131,17 @@ func runASNMode(asns []string, workers int) {
 			for asn := range asnChan {
 				url := fmt.Sprintf("%s/AS%d?hf=1", BaseURL, asn)
 				body, err := fetchURL(client, url)
-				if err != nil { continue }
+				if err != nil {
+					continue
+				}
 
 				var dataObj struct {
 					Data []map[string]interface{} `json:"data"`
 				}
-				if err := json.Unmarshal(body, &dataObj); err != nil { continue }
-				
+				if err := json.Unmarshal(body, &dataObj); err != nil {
+					continue
+				}
+
 				score := aggregateASNData(dataObj.Data)
 				updateASNFile(asn, score)
 				fmt.Printf("    - AS%d: %.1f%%\n", asn, score)
@@ -144,28 +156,40 @@ func fetchURL(client *http.Client, url string) ([]byte, error) {
 	req, _ := http.NewRequest("GET", url, nil)
 	req.Header.Set("User-Agent", UserAgent)
 	resp, err := client.Do(req)
-	if err != nil { return nil, err }
+	if err != nil {
+		return nil, err
+	}
 	defer resp.Body.Close()
 	return io.ReadAll(resp.Body)
 }
 
 func aggregateASNData(series []map[string]interface{}) float64 {
-	if len(series) == 0 { return 0 }
+	if len(series) == 0 {
+		return 0
+	}
 	latestDate := ""
 	for _, item := range series {
 		if dt, ok := item["ras_dt"].(string); ok && dt > latestDate {
 			latestDate = dt
 		}
 	}
-	if latestDate == "" { return 0 }
+	if latestDate == "" {
+		return 0
+	}
 	var valid, total float64
 	for _, item := range series {
 		if item["ras_dt"] == latestDate {
-			if v, ok := item["ras_v4_val_robjs"].(float64); ok { valid += v }
-			if t, ok := item["ras_v4_robjs"].(float64); ok { total += t }
+			if v, ok := item["ras_v4_val_robjs"].(float64); ok {
+				valid += v
+			}
+			if t, ok := item["ras_v4_robjs"].(float64); ok {
+				total += t
+			}
 		}
 	}
-	if total == 0 { return 0 }
+	if total == 0 {
+		return 0
+	}
 	return (valid / total) * 100.0
 }
 

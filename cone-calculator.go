@@ -22,9 +22,9 @@ const (
 
 type ASNInfo struct {
 	ASN       string
-	Degree    int            // Total unique neighbors
+	Degree    int             // Total unique neighbors
 	Customers map[string]bool // Only confirmed downstream customers
-	Cone      int            // Final calculated cone size
+	Cone      int             // Final calculated cone size
 }
 
 func main() {
@@ -49,14 +49,14 @@ func main() {
 	// We only keep links where Provider is significantly larger than Customer
 	fmt.Println("[2/3] Inferring Provider-Customer Relationships (Valley-Free)...")
 	nodes := buildHierarchy(adjacency, degrees)
-	
+
 	// 3. CALCULATE CONES (Recursive)
 	fmt.Println("[3/3] Calculating Customer Cones...")
 	calculateCones(nodes)
 
 	// 4. OUTPUT
 	writeOutput(*outputFile, nodes, *topN)
-	
+
 	fmt.Printf("\nDone in %v. Results saved to %s\n", time.Since(start), *outputFile)
 }
 
@@ -92,13 +92,17 @@ func loadAdjacency(filename string) (map[string][]string, map[string]int) {
 		as1, as2 := row[0], row[1]
 
 		// Init sets
-		if degreeSet[as1] == nil { degreeSet[as1] = make(map[string]bool) }
-		if degreeSet[as2] == nil { degreeSet[as2] = make(map[string]bool) }
+		if degreeSet[as1] == nil {
+			degreeSet[as1] = make(map[string]bool)
+		}
+		if degreeSet[as2] == nil {
+			degreeSet[as2] = make(map[string]bool)
+		}
 
 		// Record Adjacency (Undirected at this stage)
 		degreeSet[as1][as2] = true
 		degreeSet[as2][as1] = true
-		
+
 		// Store raw link for later processing
 		adj[as1] = append(adj[as1], as2)
 	}
@@ -114,7 +118,7 @@ func loadAdjacency(filename string) (map[string][]string, map[string]int) {
 
 func buildHierarchy(adj map[string][]string, degrees map[string]int) map[string]*ASNInfo {
 	nodes := make(map[string]*ASNInfo)
-	
+
 	// Init Nodes
 	for asn, deg := range degrees {
 		nodes[asn] = &ASNInfo{
@@ -128,22 +132,26 @@ func buildHierarchy(adj map[string][]string, degrees map[string]int) map[string]
 	peersCount := 0
 	custCount := 0
 
-	// We iterate the adjacency map. 
+	// We iterate the adjacency map.
 	// adj contains raw observed links. We need to decide who is the parent.
 	seen := make(map[string]bool) // Dedupe links
 
 	for as1, neighbors := range adj {
 		for _, as2 := range neighbors {
 			linkKey := as1 + "-" + as2
-			if as1 > as2 { linkKey = as2 + "-" + as1 }
-			if seen[linkKey] { continue }
+			if as1 > as2 {
+				linkKey = as2 + "-" + as1
+			}
+			if seen[linkKey] {
+				continue
+			}
 			seen[linkKey] = true
 
 			d1 := degrees[as1]
 			d2 := degrees[as2]
 
 			// === THE FILTER LOGIC ===
-			
+
 			// --- Tier 1 Override Logic ---
 			isT1_as1 := isTier1(as1)
 			isT1_as2 := isTier1(as2)
@@ -163,13 +171,13 @@ func buildHierarchy(adj map[string][]string, degrees map[string]int) map[string]
 			if float64(d1) > float64(d2)*PROVIDER_RATIO {
 				nodes[as1].Customers[as2] = true
 				custCount++
-			
-			// Case 2: AS2 is much bigger -> AS2 is Provider
+
+				// Case 2: AS2 is much bigger -> AS2 is Provider
 			} else if float64(d2) > float64(d1)*PROVIDER_RATIO {
 				nodes[as2].Customers[as1] = true
 				custCount++
-			
-			// Case 3: Similar sizes -> Peering (Ignore for Cone)
+
+				// Case 3: Similar sizes -> Peering (Ignore for Cone)
 			} else {
 				peersCount++
 			}
@@ -197,7 +205,7 @@ func calculateCones(nodes map[string]*ASNInfo) {
 	// But actually, we need the SET of ASNs to handle overlap correctly
 	// Optimization: Since we just want the COUNT, but A->B and A->C->B shouldn't double count B.
 	// For massive graphs, we usually implement a "Cone Set" cache.
-	
+
 	coneCache := make(map[string]map[string]bool)
 
 	var getCone func(string) map[string]bool
@@ -208,11 +216,11 @@ func calculateCones(nodes map[string]*ASNInfo) {
 
 		node := nodes[asn]
 		myCone := make(map[string]bool)
-		
+
 		// Add direct customers
 		for custASN := range node.Customers {
 			myCone[custASN] = true
-			
+
 			// recurse
 			subCone := getCone(custASN)
 			for sub := range subCone {
@@ -225,21 +233,21 @@ func calculateCones(nodes map[string]*ASNInfo) {
 	}
 
 	// Calculate for all
-	// We sort processing by Degree (Ascending) to populate leaf caches first? 
+	// We sort processing by Degree (Ascending) to populate leaf caches first?
 	// No, calculating root requires children. DFS handles this naturally.
-	
+
 	// Just iterate everyone to ensure stats are populated
 	// Doing this in parallel would be faster for massive sets, but serial is safe.
 	count := 0
 	total := len(nodes)
-	
-	// To speed up, we only really care about calculating the big ones, 
+
+	// To speed up, we only really care about calculating the big ones,
 	// but to get the big ones right we need the small ones.
-	
+
 	for asn := range nodes {
 		c := getCone(asn)
 		nodes[asn].Cone = len(c)
-		
+
 		count++
 		if count%5000 == 0 {
 			fmt.Printf("\r      Calculated %d/%d...", count, total)
@@ -271,13 +279,15 @@ func writeOutput(filename string, nodes map[string]*ASNInfo, topN int) {
 		if len(n.Customers) > 0 {
 			ratio = float64(n.Cone) / float64(len(n.Customers))
 		}
-		fmt.Printf("%-6d AS%-9s %-12d %-12d %.1fx\n", 
+		fmt.Printf("%-6d AS%-9s %-12d %-12d %.1fx\n",
 			i+1, n.ASN, n.Cone, n.Degree, ratio)
 	}
 
 	// Write CSV
 	file, err := os.Create(filename)
-	if err != nil { log.Fatal(err) }
+	if err != nil {
+		log.Fatal(err)
+	}
 	defer file.Close()
 
 	writer := csv.NewWriter(file)
