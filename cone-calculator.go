@@ -144,6 +144,21 @@ func buildHierarchy(adj map[string][]string, degrees map[string]int) map[string]
 
 			// === THE FILTER LOGIC ===
 			
+			// --- Tier 1 Override Logic ---
+			isT1_as1 := isTier1(as1)
+			isT1_as2 := isTier1(as2)
+
+			if isT1_as1 && !isT1_as2 {
+				nodes[as1].Customers[as2] = true
+				custCount++
+				continue
+			} else if isT1_as2 && !isT1_as1 {
+				nodes[as2].Customers[as1] = true
+				custCount++
+				continue
+			}
+			// -----------------------------
+
 			// Case 1: AS1 is much bigger -> AS1 is Provider
 			if float64(d1) > float64(d2)*PROVIDER_RATIO {
 				nodes[as1].Customers[as2] = true
@@ -163,6 +178,18 @@ func buildHierarchy(adj map[string][]string, degrees map[string]int) map[string]
 
 	fmt.Printf("      Inferred %d Customer Links and %d Peering Links.\n", custCount, peersCount)
 	return nodes
+}
+
+func isTier1(asn string) bool {
+	t1 := map[string]bool{
+		"3356": true, "1299": true, "174": true, "2914": true, "3257": true,
+		"6762": true, "6939": true, "6453": true, "3491": true, "1239": true,
+		"701": true, "6461": true, "5511": true, "6830": true, "4637": true,
+		"7018": true, "3320": true, "12956": true, "1273": true, "7922": true,
+		"209": true, "2828": true, "4134": true, "4809": true, "4837": true,
+		"9929": true, "9808": true,
+	}
+	return t1[asn]
 }
 
 func calculateCones(nodes map[string]*ASNInfo) {

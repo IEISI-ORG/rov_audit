@@ -1,351 +1,169 @@
-import pandas as pd
-import requests
-import json
-import os
 import argparse
-import time
+import pandas as pd
+import os
+import json
 import yaml
-import socket
-import bz2
-from datetime import datetime, timezone
-from ripe.atlas.cousteau import (
-    AtlasSource, Ping, Traceroute, AtlasCreateRequest, AtlasResultsRequest
-)
+import time
+import glob
+from datetime import datetime, timezone, timedelta
+import rov_utils
+import verify_forensic_path_v2 as forensic
 
 # --- CONFIGURATION ---
-HEADERS = {'User-Agent': 'ResearchScript/1.0'}
-SECRETS_FILE = "secrets.yaml"
 DIR_ATLAS = "data/atlas"
-FILE_AUDIT = "rov_audit_v20_final.csv"
-FILE_GRAPH = "data/downstream_graph.json"
-RIPE_STAT_URL = "https://stat.ripe.net/data/network-info/data.json?resource="
+TEST_TTL_DAYS = 7
+MAX_TARGETS_PER_RUN = 5
 
-# RIPE Atlas Daily Dump
-URL_PROBE_DUMP = "https://ftp.ripe.net/ripe/atlas/probes/archive/meta-latest"
-
-DOMAIN_VALID   = "valid.rpki.isbgpsafeyet.com"
-DOMAIN_INVALID = "invalid.rpki.isbgpsafeyet.com"
-CLOUDFLARE_ASN = 13335
-
-# --- SETUP ---
-if not os.path.exists(DIR_ATLAS): os.makedirs(DIR_ATLAS)
-
-def load_api_key():
-    if not os.path.exists(SECRETS_FILE): return None
-    try:
-        with open(SECRETS_FILE, 'r') as f: return yaml.safe_load(f).get('ripe_atlas_key')
-    except: return None
-
-ATLAS_API_KEY = load_api_key()
-
-# ==============================================================================
-# 1. HELPERS: RESOLVERS & DATA LOADING
-# ==============================================================================
-def resolve_ip(domain):
-    try: return socket.gethostbyname(domain)
-    except: return None
-
-def resolve_path_asns(ip_list):
-    """Resolves list of IPs to ASNs using RIPEstat."""
-    mapping = {}
-    unique = list(set(ip for ip in ip_list if ip and not ip.startswith(('10.', '192.', '172.'))))
-    # Simple serial resolver (fast enough for small batches of hops)
-    for ip in unique:
-        try:
-            r = requests.get(f"{RIPE_STAT_URL}{ip}", timeout=2)
-            if r.status_code == 200:
-                asns = r.json().get('data', {}).get('asns', [])
-                if asns: mapping[ip] = int(asns[0])
-        except: pass
-    return mapping
-
-def get_asn_probe_map():
-    """Downloads and decompresses RIPE Atlas probe dump."""
-    print("[*] Fetching Global Probe List (meta-latest)...")
-    try:
-        resp = requests.get(URL_PROBE_DUMP, headers=HEADERS, stream=True)
-        
-        # Handle BZ2
-        try:
-            content = bz2.decompress(resp.content)
-            data = json.loads(content)
-        except:
-            data = resp.json() # Fallback
-
-        # Find list
-        probe_list = []
-        if isinstance(data, dict):
-            if 'objects' in data: probe_list = data['objects']
-            else: probe_list = list(data.values())[0] if data else []
-        elif isinstance(data, list):
-            probe_list = data
-
-        mapping = {}
-        for p in probe_list:
-            status = str(p.get('status_id', p.get('status')))
-            if status == "1" and p.get('is_public') and p.get('asn_v4'):
-                asn = int(p['asn_v4'])
-                if asn not in mapping: mapping[asn] = []
-                mapping[asn].append(p['id'])
-                
-        print(f"    - Mapped active probes across {len(mapping):,} ASNs.")
-        return mapping
-    except Exception as e:
-        print(f"[!] Probe Dump Error: {e}")
-        return {}
-
-def load_topology():
-    if not os.path.exists(FILE_GRAPH): return {}
-    with open(FILE_GRAPH, 'r') as f:
-        return json.load(f)
-
-# ==============================================================================
-# 2. TARGET SELECTION (THE SMART PART)
-# ==============================================================================
-def find_test_strategy(target_asn, probe_map, topology):
+def get_smart_targets(limit=5):
     """
-    Decides how to test the target.
-    Returns: (probe_id, strategy_type, description)
-    strategy_type: 'DIRECT' or 'PROXY'
+    Finds targets that:
+    1. Are high-impact (large cone)
+    2. Are REGRESSED or VULNERABLE or UNRELIABLE
+    3. Haven't been tested in the last 7 days
     """
-    # 1. Try Direct
-    if target_asn in probe_map:
-        return probe_map[target_asn][0], "DIRECT", f"Direct Probe"
+    if not os.path.exists(rov_utils.FILE_AUDIT_FINAL):
+        print(f"[!] {rov_utils.FILE_AUDIT_FINAL} not found.")
+        return []
 
-    # 2. Try Proxy (Downstream Customers)
-    # The topology file maps Parent -> [Children]
-    # We want Children of Target
-    children = topology.get(str(target_asn), [])
+    df = pd.read_csv(rov_utils.FILE_AUDIT_FINAL)
+    df['cone'] = pd.to_numeric(df['cone'], errors='coerce').fillna(0).astype(int)
     
-    for child in children:
-        child_asn = int(child)
-        if child_asn in probe_map:
-            return probe_map[child_asn][0], "PROXY", f"Via Customer AS{child_asn}"
-            
-    return None, "NONE", "No probes found in ASN or Customers"
-
-def get_atlas_tested_asns():
-    tested = set()
-    for f in os.listdir(DIR_ATLAS):
-        if f.startswith("as_") and f.endswith(".json") and "_via_" not in f:
-            try: tested.add(int(f.replace("as_", "").replace(".json", "")))
-            except: pass
-    return tested
-
-def get_targets(probe_map, topology, retest=False):
-    print(f"[*] Analyzing Targets ({'RETEST mode' if retest else 'new targets'})...")
-    if not os.path.exists(FILE_AUDIT): return []
-
-    df = pd.read_csv(FILE_AUDIT, low_memory=False)
-    tested = get_atlas_tested_asns()
-
-    if retest:
-        # Retest: ASNs that already have Atlas results
-        candidates = df[df['asn'].isin(tested)].copy()
-        print(f"    - {len(candidates)} ASNs have existing Atlas results to retest.")
-    else:
-        # Normal: unverified ASNs not yet tested
-        mask = df['verdict'].str.contains("Unverified", na=False) | df['verdict'].str.contains("Unknown", na=False)
-        candidates = df[mask & ~df['asn'].isin(tested)].copy()
-
-    candidates['cone'] = pd.to_numeric(candidates['cone'], errors='coerce').fillna(0)
-    candidates = candidates.sort_values(by='cone', ascending=False)
-
-    work_queue = []
-    print(f"    - Scanning {len(candidates)} candidates for testability...")
-
+    # Priority 1: REGRESSED giants
+    # Priority 2: VULNERABLE/UNRELIABLE giants
+    # Priority 3: Large Unverified transit
+    
+    def get_priority(row):
+        v = str(row['verdict']).upper()
+        cone = row['cone']
+        if "REGRESSED" in v: return 100 + (cone / 1000)
+        if "UNRELIABLE" in v or "VULNERABLE" in v: return 50 + (cone / 1000)
+        if "UNVERIFIED" in v: return 10 + (cone / 1000)
+        return 0
+    
+    df['priority'] = df.apply(get_priority, axis=1)
+    candidates = df[df['priority'] > 0].sort_values(by='priority', ascending=False)
+    
+    targets = []
+    now = datetime.now(timezone.utc)
+    
     for _, row in candidates.iterrows():
         asn = int(row['asn'])
-        pid, strat, desc = find_test_strategy(asn, probe_map, topology)
-        if pid:
-            work_queue.append({
+        file_path = os.path.join(DIR_ATLAS, f"as_{asn}.json")
+        
+        needs_test = True
+        if os.path.exists(file_path):
+            try:
+                with open(file_path, 'r') as f:
+                    data = json.load(f)
+                    ts_str = data.get('timestamp')
+                    if ts_str:
+                        last_test = datetime.fromisoformat(ts_str)
+                        if (now - last_test).days < TEST_TTL_DAYS:
+                            needs_test = False
+            except: pass
+            
+        if needs_test:
+            targets.append(asn)
+            
+        if len(targets) >= limit:
+            break
+            
+    return targets
+
+def find_best_probes_in_cone(target_asn, count=5):
+    """
+    Finds probes inside the customer cone of target_asn.
+    Prefers single-homed customers for high fidelity.
+    """
+    print(f"    - Searching for probes in the customer cone of AS{target_asn}...")
+    
+    # 1. Find customers from local cache
+    # We use the logic from find_proxy_probes.py but integrated
+    customers = []
+    asn_data = rov_utils.load_all_asn_data()
+    
+    for asn, data in asn_data.items():
+        if target_asn in data.get('upstreams', []):
+            customers.append({
                 'asn': asn,
-                'name': row['name'],
-                'cone': row['cone'],
-                'probe_id': pid,
-                'strategy': strat,
-                'desc': desc
+                'is_single': (len(data.get('upstreams', [])) == 1)
             })
+    
+    # Sort: single-homed first
+    customers.sort(key=lambda x: not x['is_single'])
+    
+    # 2. Check for probes in these customers
+    found_probes = []
+    # Check top 50 customers to avoid API hammering
+    for c in customers[:50]:
+        p_ids = forensic.get_probes(c['asn'], count=2)
+        if p_ids:
+            found_probes.extend(p_ids)
+            print(f"      * Found {len(p_ids)} probes in customer AS{c['asn']}")
+        
+        if len(found_probes) >= count:
+            break
+            
+    # 3. Fallback: Check target ASN itself
+    if len(found_probes) < count:
+        local_probes = forensic.get_probes(target_asn, count=(count - len(found_probes)))
+        found_probes.extend(local_probes)
+        if local_probes:
+            print(f"      * Found {len(local_probes)} probes inside AS{target_asn} (Fallback)")
+            
+    return found_probes[:count]
 
-    return work_queue
-
-# ==============================================================================
-# 3. MEASUREMENT & ANALYSIS
-# ==============================================================================
-def run_measurements(asn, probe_id, strategy, ip_v, ip_i):
-    # Always run Traceroute if PROXY, to prove path.
-    # If DIRECT, Traceroute is also good for forensics.
-    # Let's standardize on Trace for this batch script for robustness.
-    
-    source = AtlasSource(type="probes", value=str(probe_id), requested=1)
-    
-    desc_v = f"RPKI Valid ({strategy}) - AS{asn}"
-    desc_i = f"RPKI Invalid ({strategy}) - AS{asn}"
-    
-    defs = [
-        Traceroute(af=4, target=ip_v, description=desc_v, is_oneoff=True, protocol="ICMP"),
-        Traceroute(af=4, target=ip_i, description=desc_i, is_oneoff=True, protocol="ICMP")
-    ]
-    
-    req = AtlasCreateRequest(
-        start_time=datetime.now(timezone.utc), 
-        key=ATLAS_API_KEY, 
-        measurements=defs, 
-        sources=[source], 
-        is_oneoff=True
-    )
-    
-    success, resp = req.create()
-    if success: return resp["measurements"]
-    else: return None
-
-def analyze_trace_result(target_asn, res_v, res_i, strategy):
-    # 1. Extract Hops (IPs)
-    def get_hops(res):
-        ips = []
-        if not res: return []
-        for h in res[0].get('result', []):
-            for p in h.get('result', []):
-                if 'from' in p: 
-                    ips.append(p['from'])
-                    break
-        return ips
-
-    hops_v = get_hops(res_v)
-    hops_i = get_hops(res_i)
-    
-    # 2. Resolve ASNs
-    all_ips = list(set(hops_v + hops_i))
-    ip_map = resolve_path_asns(all_ips)
-    
-    path_v = []
-    for ip in hops_v:
-        a = ip_map.get(ip)
-        if a and (not path_v or path_v[-1] != a): path_v.append(a)
-
-    path_i = []
-    for ip in hops_i:
-        a = ip_map.get(ip)
-        if a and (not path_i or path_i[-1] != a): path_i.append(a)
-
-    # 3. Logic
-    reached_cf = CLOUDFLARE_ASN in path_i
-    target_in_valid = target_asn in path_v
-    
-    verdict = "INCONCLUSIVE"
-    notes = ""
-    
-    if strategy == "PROXY" and not target_in_valid:
-        verdict = "INCONCLUSIVE (Bypassed)"
-        notes = f"Valid path did not traverse Target AS{target_asn}"
-    elif reached_cf:
-        verdict = "VULNERABLE (ATLAS Verified)"
-        notes = "Invalid route reached Cloudflare"
-    else:
-        # It stopped.
-        if strategy == "DIRECT":
-            verdict = "SECURE (Verified Active)" # Direct probe couldn't reach invalid
-        elif strategy == "PROXY":
-            # Did it stop AT or AFTER the target?
-            # If target is in Invalid Path, and it stopped later -> Secure
-            if target_asn in path_i:
-                verdict = "SECURE (Verified Active)"
-                notes = "Traffic passed Target and was dropped upstream"
-            elif path_i and path_i[-1] == target_asn:
-                verdict = "SECURE (Verified Active)"
-                notes = "Traffic dropped AT Target"
-            else:
-                # Stopped BEFORE target?
-                verdict = "INCONCLUSIVE (Upstream Block)"
-                notes = "Traffic dropped before reaching Target"
-
-    return verdict, notes, path_v
-
-# ==============================================================================
-# 4. MAIN
-# ==============================================================================
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--limit", type=int, default=10, help="Max tests to run")
-    parser.add_argument("--dry-run", action="store_true")
-    parser.add_argument("--retest", action="store_true", help="Re-test ASNs that already have Atlas results")
+    parser.add_argument("--limit", type=int, default=MAX_TARGETS_PER_RUN)
     args = parser.parse_args()
 
-    if not ATLAS_API_KEY and not args.dry_run:
-        print("[!] No API Key"); return
-
-    probe_map = get_asn_probe_map()
-    topology = load_topology()
-    queue = get_targets(probe_map, topology, retest=args.retest)
-    
-    print("-" * 60)
-    print(f"Total Testable Candidates: {len(queue)}")
-    print("-" * 60)
-    
-    if args.dry_run:
-        print(f"Top {args.limit} candidates:")
-        for q in queue[:args.limit]:
-            print(f"AS{q['asn']:<6} | Cone: {int(q['cone']):<6} | {q['strategy']:<6} | {q['desc']}")
+    if not forensic.ATLAS_API_KEY:
+        print("[!] Missing RIPE Atlas API Key in secrets.yaml")
         return
 
-    # Execute
-    ip_v = resolve_ip(DOMAIN_VALID)
-    ip_i = resolve_ip(DOMAIN_INVALID)
-    if not ip_v: print("[-] DNS Error"); return
+    # Ensure DIR_ATLAS exists
+    os.makedirs(DIR_ATLAS, exist_ok=True)
 
-    batch = queue[:args.limit]
-
-    if args.retest:
-        print(f"\n[*] Clearing {len(batch)} stale Atlas cache files...")
-        for item in batch:
-            stale = os.path.join(DIR_ATLAS, f"as_{item['asn']}.json")
-            if os.path.exists(stale):
-                os.remove(stale)
-
-    print(f"\n[*] Executing {len(batch)} Tests...")
+    # 1. Get Targets
+    targets = get_smart_targets(limit=args.limit)
+    if not targets:
+        print("[*] No high-priority targets need testing today (TTL Active).")
+        return
+        
+    print(f"[*] Smart Selection identified {len(targets)} targets for re-verification.")
     
-    for i, item in enumerate(batch):
-        asn = item['asn']
-        print(f"\n[{i+1}] Testing AS{asn} ({item['strategy']})...")
-        
-        msm_ids = run_measurements(asn, item['probe_id'], item['strategy'], ip_v, ip_i)
-        if not msm_ids:
-            print("    [!] API Fail"); continue
-            
-        print("    - Waiting 40s...")
-        time.sleep(40)
-        
-        # Fetch Result
-        try:
-            res_v = AtlasResultsRequest(msm_id=msm_ids[0]).create()[1]
-            res_i = AtlasResultsRequest(msm_id=msm_ids[1]).create()[1]
-            
-            verdict, notes, path = analyze_trace_result(asn, res_v, res_i, item['strategy'])
-            
-            color = "\033[0m"
-            if "SECURE" in verdict: color = "\033[92m"
-            elif "VULNERABLE" in verdict: color = "\033[91m"
-            
-            print(f"    -> {color}{verdict}\033[0m")
-            print(f"    -> {notes}")
-            print(f"    -> Path: {path}")
-            
-            # Save
-            data = {
-                "asn": asn,
-                "timestamp": datetime.now(timezone.utc).isoformat(),
-                "verdict": verdict,
-                "strategy": item['strategy'],
-                "valid_path": path,
-                "notes": notes
-            }
-            with open(os.path.join(DIR_ATLAS, f"as_{asn}.json"), 'w') as f:
-                json.dump(data, f, indent=2)
-                
-        except Exception as e:
-            print(f"    [!] Error processing results: {e}")
+    # 2. DNS Resolve targets once
+    ip_v = forensic.resolve_ip(forensic.DOMAIN_VALID)
+    ip_i = forensic.resolve_ip(forensic.DOMAIN_INVALID)
+    if not ip_v or not ip_i:
+        print("[!] DNS Resolution failed for test domains.")
+        return
 
-    print("\n[*] Batch Complete. Run 'rov_no_scrape_v20.py' to update report.")
+    # 3. Run Tests
+    for asn in targets:
+        print(f"\n>>> Verifying AS{asn} via Customer Cone probes...")
+        
+        probes = find_best_probes_in_cone(asn, count=5)
+        if not probes:
+            print(f"    [!] No usable probes found in cone of AS{asn}. Skipping.")
+            continue
+            
+        print(f"    - Selected {len(probes)} probes for forensic trace.")
+        raw_results = forensic.run_forensic_test(asn, probes, ip_v, ip_i)
+        
+        if raw_results:
+            analysis = forensic.analyze_results(asn, raw_results)
+            
+            # Save Result
+            out_file = os.path.join(DIR_ATLAS, f"as_{asn}.json")
+            with open(out_file, 'w') as f:
+                json.dump(analysis, f, indent=2)
+                
+            color = "\033[92m" if "SECURE" in analysis['verdict'] else "\033[91m"
+            print(f"    - VERDICT: {color}{analysis['verdict']}\033[0m ({analysis['notes']})")
+        else:
+            print(f"    [!] Forensic test failed for AS{asn}")
 
 if __name__ == "__main__":
     main()

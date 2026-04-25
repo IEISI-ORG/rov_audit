@@ -89,6 +89,12 @@ present-html: $(PITA30_SRC)
 	$(MARP) --html --allow-local-files $(PITA30_SRC) -o $(PITA30_HTML)
 	@echo "[+] HTML saved to $(PITA30_HTML)"
 
+present-apnic: presentations/apnic62/apnic62_presentation.md
+	@echo "[*] Building APNIC-62 Mumbai presentation..."
+	$(MARP) --pdf --allow-local-files presentations/apnic62/apnic62_presentation.md -o presentations/apnic62/apnic62_presentation.pdf
+	$(MARP) --html --allow-local-files presentations/apnic62/apnic62_presentation.md -o presentations/apnic62/apnic62_presentation.html
+	@echo "[+] Files saved to presentations/apnic62/"
+
 # Cleanup
 clean:
 	@echo "[*] Cleaning up..."

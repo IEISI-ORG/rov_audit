@@ -6,6 +6,9 @@ bgpdump -m latest-bview.gz | ./bgp-extractor -input /dev/stdin -output output -w
 
 ./cone-calculator -input output/relationships.csv -output final_as_rank.csv -top 0
 
+# Sync RPKI timeseries for all transit networks to detect regressions
+python3 sync_transit_timeseries.py
+
 # Bulk ROA Sync (Go-powered, 500x faster than old version)
 python3 do_roa_sync.py
 

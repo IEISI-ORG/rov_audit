@@ -197,7 +197,7 @@ def sync_apnic_data(countries: set, force: bool = False):
     print(f"[Sync] APNIC RPKI Data ({len(countries)} Countries)...")
     pattern = re.compile(r'>AS(\d+)<.*?\{v:\s*([\d\.]+)', re.IGNORECASE)
     updated, cached = 0, 0
-    CACHE_TTL = 86400
+    CACHE_TTL = 86400 * 7 # 7-day TTL
     for cc in countries:
         file_path = os.path.join(DIR_APNIC, f"{cc}.json")
         if not force and os.path.exists(file_path):

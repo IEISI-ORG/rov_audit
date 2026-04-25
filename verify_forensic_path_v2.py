@@ -160,36 +160,49 @@ def analyze_results(asn, results):
     notes = "Analysis failed"
     peers_cf = False
     divergent = False
+    leak_path = []
+    filter_boundary = None
+    last_passed = None
 
     if CLOUDFLARE_ASN in path_v:
         peers_cf = True
 
-    if len(path_v) > 1 and len(path_i) > 1:
+    # Check for Divergence (Scenario 1)
+    if len(path_v) > 0 and len(path_i) > 0:
         if path_v[0] != path_i[0]:
             divergent = True
-            notes = f"Path Divergence: Valid via AS{path_v[0]}, Invalid via AS{path_i[0]}"
+            verdict = "VULNERABLE (Divergent)"
+            leak_path = path_i
+            notes = f"LEAK DETECTED: Invalid path diverged via AS{path_i[0]}. Full path: {path_i}"
 
     if score_v < 50.0:
         verdict = "INCONCLUSIVE"
         notes = "Control (Valid) Ping failed."
     elif divergent:
-        verdict = "INCONCLUSIVE (Divergent)"
+        # Already set above
+        pass
     elif score_i > 90.0:
         verdict = "VULNERABLE"
-        notes = "Invalid Prefix Reachable."
+        notes = "Invalid Prefix Reachable via standard path."
     elif score_i < 10.0:
         verdict = "SECURE"
+        # Scenario 2: Find the Filter Boundary
         if not path_i:
-            notes = "Filtered locally (No trace output)"
+            notes = "Filtered locally by Source ASN"
+            filter_boundary = asn
         else:
-            last_as = path_i[-1]
-            if last_as == asn:
-                notes = "Filtered Locally (Last hop was us)"
+            last_passed = path_i[-1]
+            # Try to find the refuser by looking at the next hop in the VALID path
+            # assuming the paths were identical up to the stop point
+            idx = len(path_i)
+            if len(path_v) > idx:
+                filter_boundary = path_v[idx]
+                notes = f"Filter Boundary: AS{last_passed} passed -> AS{filter_boundary} BLOCKED"
             else:
-                notes = f"Filtered by Upstream AS{last_as}"
+                notes = f"Filtered by AS{last_passed} (End of known path)"
     else:
-        verdict = "MIXED"
-        notes = f"Partial block ({score_i:.1f}% reachable)"
+        verdict = "PARTIAL"
+        notes = f"Inconsistent filtering ({score_i:.1f}% reachable)"
 
     # --- FIX: Use timezone-aware datetime ---
     return {
@@ -200,6 +213,9 @@ def analyze_results(asn, results):
         'score_invalid': score_i,
         'valid_path': path_v,
         'invalid_path': path_i,
+        'leak_path': leak_path,
+        'filter_boundary': filter_boundary,
+        'last_passed': last_passed,
         'peers_cf': peers_cf,
         'divergent': divergent,
         'timestamp': datetime.now(timezone.utc).isoformat()
