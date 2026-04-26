@@ -22,7 +22,7 @@ const PROVIDER_RATIO = 4.0
 // Removed AS2828 (Verizon Business/MCI legacy, 0 direct customers).
 func isTier1(asn string) bool {
 	switch asn {
-	case "3356",  // Lumen / Level 3
+	case "3356", // Lumen / Level 3
 		"1299",  // Arelion (fka Telia Carrier)
 		"174",   // Cogent Communications
 		"2914",  // NTT America
@@ -58,7 +58,8 @@ func isTier1(asn string) bool {
 // Root server ASNs sourced from bgp.tools icrit tag (verified 2026-04-26).
 // Do NOT add CDN-tagged ASNs in bulk — some CDNs (e.g. OVH AS16276) also sell transit.
 // Removed: AS3661 (Chinese U of HK, not A-Root), AS1941 (Renater, not B-Root),
-//          AS15061 (Insurance Corp BC, not H-Root) — those ASNs were reassigned.
+//
+//	AS15061 (Insurance Corp BC, not H-Root) — those ASNs were reassigned.
 func isNonTransit(asn string) bool {
 	switch asn {
 	case "213241", // TECHIT.BE — IXP Route Server

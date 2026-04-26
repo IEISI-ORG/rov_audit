@@ -145,7 +145,7 @@ func buildHierarchy(adj map[string][]string, degrees map[string]int) map[string]
 			d2 := degrees[as2]
 
 			// --- Non-Transit / Infrastructure Override ---
-			// Certain ASNs (RIRs, IXP Route Servers, Roots) have high degrees 
+			// Certain ASNs (RIRs, IXP Route Servers, Roots) have high degrees
 			// but do NOT provide transit. They should never be providers.
 			if isNonTransit(as1) {
 				peersCount++
