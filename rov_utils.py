@@ -21,15 +21,75 @@ DIR_PARSED = "data/parsed"
 DIR_APNIC = "data/apnic"
 DIR_ATLAS = "data/atlas"
 DIR_APNIC_TS = "data/apnic/timeseries"
-FILE_RELATIONSHIPS = "output/relationships.csv"
+DIR_TAGS = "data/tags"
+DIR_RRC = "output"          # parent dir; each collector writes to output/rrcNN/
+FILE_RELATIONSHIPS = "output/relationships.csv"   # legacy single-collector path
 FILE_CONES = "final_as_rank.csv"
+
+# RIPE RIS Route Collectors used for multi-vantage topology inference.
+#
+# Selection rationale (2026-04-26):
+#   rrc00  Amsterdam    RIPE-NCC Multihop  114 peers  — primary (legacy), EU bias
+#   rrc14  Palo Alto    PAIX                23 peers  — North America West Coast
+#   rrc19  Johannesburg NAP Africa JB       71 peers  — Africa
+#   rrc23  Singapore    Equinix SG          65 peers  — Asia-Pacific
+#   rrc24  Montevideo   LACNIC Multihop     29 peers  — South America / LACNIC
+#
+# Four distinct regions (EU, NA, AF, APAC, AMER) — dropping the second EU
+# collector (rrc12/DE-CIX) in favour of NA and Africa gives better geographic
+# spread for cross-regional consensus.
+#
+# A provider-customer link confirmed in ≥2 distinct regions is treated as real
+# transit (4× ratio).  A link seen in only 1 region is suspect IXP peering (8×).
+#
+# Add collectors here to increase coverage; remove to reduce download size.
+# Must stay in sync with RRCS= in do_data_gathering.
+RRC_COLLECTORS: dict[str, dict] = {
+    "rrc00": {"region": "EU",   "location": "Amsterdam",    "type": "multihop"},
+    "rrc14": {"region": "NA",   "location": "Palo Alto",    "type": "ixp",  "ixp": "PAIX"},
+    "rrc19": {"region": "AF",   "location": "Johannesburg", "type": "ixp",  "ixp": "NAP Africa JB"},
+    "rrc23": {"region": "APAC", "location": "Singapore",    "type": "ixp",  "ixp": "Equinix SG"},
+    "rrc24": {"region": "AMER", "location": "Montevideo",   "type": "multihop"},
+}
+
+# Minimum number of DISTINCT REGIONS that must see a link before it is treated
+# as confirmed transit.  1 = any single collector suffices (current behaviour);
+# 2 = must appear at both a European and at least one non-European collector.
+RRC_CONFIRM_REGIONS = 2
+
+# Stricter degree ratio applied to single-region links (suspect IXP peering).
+# Normal ratio is PROVIDER_RATIO (4×); single-region links need 8× evidence.
+RRC_SINGLE_REGION_RATIO = 8.0
 FILE_GRAPH = "data/downstream_graph.json"
-FILE_AUDIT_FINAL = "rov_audit_v21_final.csv"
+FILE_AUDIT_FINAL = "rov_audit_v22_final.csv"
 FILE_PACKED_ASN = "data/as_data.jsonl.gz"
 
 # URLs
+# bgp.tools API docs: https://bgp.tools/kb/api
+# User-Agent required; bulk tag CSVs at /tags/<tag>.csv; full table at /table.jsonl
 URL_ASNS_CSV = "https://bgp.tools/asns.csv"
 # ... (rest of URLs)
+
+# bgp.tools classification tags — all available at https://bgp.tools/tags/<key>.csv
+# Each CSV has format: AS<number>,Organization Name
+# 7-day TTL applies; cached under data/tags/
+BGPTOOLS_TAGS: dict[str, str] = {
+    "cdn":     "CDN",                    # Content delivery networks (non-transit context)
+    "ddosm":   "DDoS Mitigation",        # Scrubbing / DDoS protection providers
+    "gov":     "Government",             # Government / defence networks
+    "uni":     "University/Research",    # Academic and research networks
+    "mobile":  "Mobile Operator",        # Cellular / mobile carriers
+    "corp":    "Corporate",              # Enterprise stub networks
+    "anycast": "Anycast Service",        # Anycast infrastructure (DNS, etc.)
+    "vpn":     "VPN Provider",           # Commercial VPN services
+    "icrit":   "Internet Critical Infra",# NICs, root servers, IXP-adjacent
+    "tor":     "Tor Exit",               # Tor exit nodes
+    "vpsh":    "VPS Hosting",            # Virtual private server / hosting
+    "satnet":  "Satellite Network",      # Satellite broadband
+    "dsl":     "DSL/Broadband",          # Residential broadband providers
+    "biznet":  "Business ISP",           # Business-focused ISPs
+    "perso":   "Personal/Hobbyist",      # Personal ASNs (BGP experimenters)
+}
 
 # ... (other functions)
 
@@ -67,19 +127,128 @@ URL_IPTOASN_V4 = "https://iptoasn.com/data/ip2asn-v4.tsv.gz"
 URL_IPTOASN_V6 = "https://iptoasn.com/data/ip2asn-v6.tsv.gz"
 URL_APNIC_TS = "https://stats.labs.apnic.net/cgi-bin/rpki-json-table.pl"
 
-# Tier 1 Definition (Authoritative List)
-TIER_1_ASNS = {
-    3356, 1299, 174, 2914, 3257, 6762, 6939, 6453, 3491, 1239, 701, 6461, 5511, 6830, 4637,
-    7018, 3320, 12956, 1273, 7922, 209, 2828, 4134, 4809, 4837, 9929, 9808
+# ===========================================================================
+# AUTHORITATIVE CLASSIFICATION CONSTANTS
+# These are the single source of truth for both Python scripts and Go tools.
+# The Go equivalents live in constants.go (isTier1 / isNonTransit).
+# The sync test in tests/test_gao_rexford.py will fail if they diverge.
+# ===========================================================================
+
+# Networks that are never a customer of anyone else (valley-free topology peaks).
+# Verified 2026-04-26: all confirmed to have zero providers in downstream_graph.json.
+# Removed AS1239 (Sprint/Cogent legacy — 0 direct customers, cone=302)
+# Removed AS2828 (Verizon Business/MCI legacy — 0 direct customers, cone=4812)
+TIER_1_ASNS: set[int] = {
+    3356, 1299, 174, 2914, 3257, 6762, 6939, 6453, 3491, 701, 6461, 5511, 6830, 4637,
+    7018, 3320, 12956, 1273, 7922, 209, 4134, 4809, 4837, 9929, 9808
 }
 
-# ASNs that are known to be secure but might be flagged due to testing (e.g., Cloudflare leaks invalids for testing)
-HARDCODED_SECURE = {13335}
+# ASNs excluded from provider-customer inference in the topology builder.
+# Includes DNS root servers (sourced from bgp.tools icrit tag, 2026-04-26),
+# RIRs, IXP route servers, and anycast/CDN infrastructure.
+# WARNING: do NOT add CDN-tagged ASNs in bulk — some CDNs (e.g. OVH AS16276)
+# also sell BGP transit and must NOT be excluded.
+# Go equivalent: isNonTransit() in constants.go
+NON_TRANSIT_ASNS: set[int] = {
+    213241,  # TECHIT.BE — IXP Route Server
+    24482,   # SG.GS — IXP Route Server
+    13335,   # Cloudflare — CDN/Anycast (non-transit for topology)
+    3333,    # RIPE NCC
+    4608,    # APNIC (refuses ROV to avoid member lockout)
+    4777,    # APNIC (refuses ROV to avoid member lockout)
+    394353,  # USC/ISI — B-Root
+    2149,    # Cogent Communications — C-Root
+    10886,   # University of Maryland — D-Root
+    21556,   # NASA Ames Research Center — E-Root
+    3557,    # ISC — F-Root
+    5927,    # US Dept of Defense — G-Root
+    1508,    # US Army Research Lab — H-Root
+    29216,   # Netnod — I-Root
+    26415,   # VeriSign — A-Root & J-Root
+    25152,   # RIPE NCC — K-Root
+    20144,   # ICANN — L-Root
+    7500,    # WIDE Project — M-Root
+    112,     # AS112 Project — RFC 7534 blackhole for private PTR
+}
+
+# Minimum degree ratio for provider-customer inference (must match PROVIDER_RATIO in constants.go).
+PROVIDER_RATIO: float = 4.0
+
+# AS13335 (Cloudflare) deliberately accepts RPKI-invalid routes on test infrastructure
+# so researchers can verify their ROV posture. Hardcoding prevents false VULNERABLE verdicts.
+HARDCODED_SECURE: set[int] = {13335}
 
 def ensure_dirs():
     """Ensure all required data directories exist."""
-    for d in [DIR_DATA, DIR_PARSED, DIR_APNIC, DIR_ATLAS, DIR_APNIC_TS]:
+    for d in [DIR_DATA, DIR_PARSED, DIR_APNIC, DIR_ATLAS, DIR_APNIC_TS, DIR_TAGS]:
         os.makedirs(d, exist_ok=True)
+
+
+def fetch_bgp_tools_tags(force: bool = False) -> dict[int, list[str]]:
+    """
+    Download classification tags from bgp.tools and return {asn: [tag, ...]}.
+
+    Each tag CSV has format: AS<number>,Organization Name
+    Results are cached under data/tags/ with a 7-day TTL.
+    On network failure, stale cache is used silently.
+
+    Available tags and their meaning are in BGPTOOLS_TAGS.
+    Note: tags are classification labels only — do NOT use cdn/ddosm to auto-expand
+    IS_NON_TRANSIT without manual review, since some CDNs (e.g. OVH AS16276)
+    also sell BGP transit.
+    """
+    os.makedirs(DIR_TAGS, exist_ok=True)
+    CACHE_TTL = 86400 * 7
+    tag_map: dict[int, list[str]] = defaultdict(list)
+
+    print(f"[Tags] Fetching {len(BGPTOOLS_TAGS)} bgp.tools classification tags...")
+    fetched, cached, failed = 0, 0, 0
+
+    for tag in BGPTOOLS_TAGS:
+        cache_path = os.path.join(DIR_TAGS, f"{tag}.csv")
+        use_cache = (
+            not force
+            and os.path.exists(cache_path)
+            and (time.time() - os.path.getmtime(cache_path)) < CACHE_TTL
+        )
+
+        raw_lines: list[str] = []
+
+        if use_cache:
+            with open(cache_path) as fh:
+                raw_lines = fh.readlines()
+            cached += 1
+        else:
+            url = f"https://bgp.tools/tags/{tag}.csv"
+            try:
+                resp = requests.get(url, headers=HEADERS, timeout=30)
+                resp.raise_for_status()
+                raw_lines = resp.text.splitlines()
+                with open(cache_path, "w") as fh:
+                    fh.write(resp.text)
+                fetched += 1
+            except Exception as e:
+                failed += 1
+                if os.path.exists(cache_path):
+                    with open(cache_path) as fh:
+                        raw_lines = fh.readlines()
+
+        for line in raw_lines:
+            line = line.strip()
+            if not line or not line.upper().startswith("AS"):
+                continue
+            asn_str = line.split(",")[0][2:]  # strip "AS" prefix
+            try:
+                tag_map[int(asn_str)].append(tag)
+            except ValueError:
+                pass
+
+    total_assignments = sum(len(v) for v in tag_map.values())
+    print(
+        f"    - Tags: {fetched} fetched, {cached} cached, {failed} failed | "
+        f"{total_assignments:,} assignments across {len(tag_map):,} ASNs"
+    )
+    return dict(tag_map)
 
 def fetch_csv(url: str, name: str) -> pd.DataFrame:
     """Fetch a CSV from a URL with standard headers."""
@@ -218,22 +387,54 @@ def sync_apnic_data(countries: set, force: bool = False):
         except: pass
     print(f"    - Result: {updated} Fetched, {cached} Cached.")
 
-def _fetch_apnic_ts_rates(asn: int, cc: str) -> list[float]:
-    """Fetch last 90 days of 7-day filter_rate for one ASN."""
+APNIC_MIN_SAMPLES = 30  # minimum seen+filtered observations for a reliable filter_rate
+
+def _fetch_apnic_ts_rates(asn: int, cc: str) -> list:
+    """Fetch full timeseries for one ASN.
+
+    Returns list of [rate, samples] pairs, one per calendar day.
+    rate is None when no window has sufficient samples (network too sparse).
+
+    Window selection per day (shortest window with >= APNIC_MIN_SAMPLES):
+      7-day  → best temporal resolution, but sparse for small networks
+      14-day → fallback
+      28-day → fallback
+      112-day → last resort
+    Old-format caches (plain floats, no sample counts) are re-fetched on
+    next TTL expiry; until then they are returned as-is in legacy mode.
+    """
     APNIC_TS_TTL = 86400 * 7
     cache = os.path.join(DIR_APNIC_TS, f"{asn}.json")
     if os.path.exists(cache) and (time.time() - os.path.getmtime(cache)) < APNIC_TS_TTL:
         try:
-            with open(cache) as f: return json.load(f)
+            with open(cache) as f:
+                data = json.load(f)
+            if data and isinstance(data[0], list):
+                return data          # new format: [[rate, samples], ...]
+            if data and isinstance(data[0], (int, float)):
+                return data          # old format: [float, ...] — caller detects via isinstance
         except: pass
     try:
         resp = requests.get(f"{URL_APNIC_TS}?x={cc}{asn}", headers=HEADERS, timeout=15)
         if resp.status_code == 200:
             rows = resp.json().get('data', [])
-            rates = [r['7']['filter_rate'] for r in rows if '7' in r]
-            if rates:
-                with open(cache, 'w') as f: json.dump(rates, f)
-                return rates
+            result = []
+            for r in rows:
+                chosen_rate, chosen_n = None, 0
+                for window in ('7', '14', '28', '112'):
+                    w = r.get(window)
+                    if not w:
+                        continue
+                    n = w['seen'] + w['filtered']
+                    if n >= APNIC_MIN_SAMPLES:
+                        chosen_rate, chosen_n = w['filter_rate'], n
+                        break
+                result.append([chosen_rate, chosen_n])
+            valid = [x for x in result if x[0] is not None]
+            if len(valid) >= 14:
+                with open(cache, 'w') as f:
+                    json.dump(result, f)
+                return result
     except: pass
     return []
 
@@ -255,28 +456,47 @@ def sync_apnic_timeseries(apnic_map: dict, meta: dict) -> dict:
 
     if not candidates: return {}
     print(f"[Sync] APNIC Time Series ({len(candidates)} ASNs)...")
-    result, fetched = {}, 0
+    result, fetched, skipped_sparse = {}, 0, 0
     for asn in candidates:
         cc = meta.get(asn, {}).get('cc', '')
         if not cc: continue
-        rates = _fetch_apnic_ts_rates(asn, cc)
-        if len(rates) < 14: continue
-        
-        # Current and 90-day window
+        raw = _fetch_apnic_ts_rates(asn, cc)
+        if not raw: continue
+
+        # Normalise: new format [[rate, samples], ...] or old format [float, ...]
+        if raw and isinstance(raw[0], list):
+            # New format — extract only data points with sufficient samples
+            rates = [r[0] for r in raw if r[0] is not None]
+        else:
+            # Old-format cache (plain floats, no sample counts).
+            # Treat all points as valid until cache expires and is re-fetched.
+            rates = [v for v in raw if isinstance(v, (int, float))]
+
+        if len(rates) < 14:
+            skipped_sparse += 1
+            continue
+
+        # Current and 90-day window (over reliable data points only)
         current = rates[-1]
         rates_90 = rates[-90:]
         sd = statistics.stdev(rates_90)
         mn90, mx90 = min(rates_90), max(rates_90)
-        historical_max = max(rates)
-        
+        # Use 1-year lookback, not all-time max.  All-time max over 6 years of
+        # APNIC data includes early measurement noise spikes that never reflected
+        # real ROV deployment.  A genuine regression is "was high in the past
+        # year, now dropped" — not "peaked once in 2020".
+        rates_1yr = rates[-365:] if len(rates) >= 365 else rates
+        historical_max = max(rates_1yr)
+
         # Volatility & Regression Criteria
         crossed_threshold = (mx90 >= 95.0 and mn90 < 60.0)
         regression = (historical_max - current) > APNIC_REGRESSION_THRESHOLD
         is_volatile = (sd > APNIC_VOLATILE_STDEV or crossed_threshold or regression)
-        
+
         result[asn] = (round(sd, 1), round(mn90, 1), round(mx90, 1), is_volatile, regression)
         fetched += 1
-    print(f"    - Result: {fetched} Analysed, {len(candidates)-fetched} Skipped.")
+    print(f"    - Result: {fetched} Analysed, {skipped_sparse} Sparse/skipped, "
+          f"{len(candidates)-fetched-skipped_sparse} No data.")
     return result
 
 def load_security_status() -> tuple[set, set, dict]:
@@ -325,10 +545,21 @@ def load_topology() -> tuple[dict, dict, dict]:
             upstreams[int(c)].add(int(p))
     return cones, downstream, upstreams
 
-def load_atlas_verdicts() -> tuple[set, set, dict]:
-    """Load RIPE Atlas active measurement results."""
+ATLAS_TTL_DAYS = 7  # Results older than this are discarded and re-queued
+
+def load_atlas_verdicts() -> tuple[set, set, dict, set]:
+    """Load RIPE Atlas active measurement results.
+
+    Returns (secure, vulnerable, raw, stale) where:
+      stale  — ASNs whose cached result has expired and should be re-tested.
+               These are NOT added to secure/vulnerable so stale data never
+               influences the current audit.
+    """
+    from datetime import datetime, timezone
     print("[3] Loading Atlas Verification Results...")
-    secure, vulnerable, raw = set(), set(), {}
+    secure, vulnerable, raw, stale = set(), set(), {}, set()
+    now = datetime.now(timezone.utc)
+
     for f in glob.glob(os.path.join(DIR_ATLAS, "*.json")):
         try:
             with open(f) as h:
@@ -341,41 +572,74 @@ def load_atlas_verdicts() -> tuple[set, set, dict]:
                 if m: asn = int(m.group(1))
             if asn is None: continue
             asn = int(asn)
+
+            # TTL check using the timestamp embedded in the result file.
+            # Fall back to file mtime if timestamp is absent (legacy files).
+            ts_str = d.get('timestamp')
+            if ts_str:
+                try:
+                    last_test = datetime.fromisoformat(ts_str)
+                    age_days = (now - last_test).total_seconds() / 86400
+                except Exception:
+                    age_days = 0
+            else:
+                age_days = (now.timestamp() - os.path.getmtime(f)) / 86400
+
+            if age_days > ATLAS_TTL_DAYS:
+                stale.add(asn)
+                continue  # expired — don't use; will be re-queued
+
             raw[asn] = verdict
-            if 'VULNERABLE' in verdict:
+            v = verdict.upper()
+            # New taxonomy: "SECURE (Upstream Filtered)" means the target
+            # forwarded invalid prefixes — it is NOT doing ROV itself.
+            if 'VULNERABLE' in v or v == 'SECURE (UPSTREAM FILTERED)':
                 vulnerable.add(asn)
                 secure.discard(asn)
-            elif 'SECURE' in verdict and asn not in vulnerable:
+            elif 'SECURE' in v and asn not in vulnerable:
                 secure.add(asn)
         except: pass
-    print(f"    - Atlas Data: {len(secure)} Secure, {len(vulnerable)} Vulnerable")
-    return secure, vulnerable, raw
+
+    print(f"    - Atlas Data: {len(secure)} Secure, {len(vulnerable)} Vulnerable, "
+          f"{len(stale)} Stale (queued for re-test)")
+    return secure, vulnerable, raw, stale
 
 def load_atlas_boundaries() -> dict:
     """
-    Analyzes Atlas invalid paths to identify the 'Hard Boundary' ASNs 
-    that are actively filtering. Returns a mapping of boundary_asn -> count of blocks.
+    Analyzes Atlas probe_details to identify ASNs actively filtering
+    RPKI-invalid prefixes (the 'hard boundary').  Only uses fresh results
+    (within ATLAS_TTL_DAYS); stale files are skipped.
+    Returns boundary_asn -> count of blocks observed.
     """
+    from datetime import datetime, timezone
     print("[3.5] Analyzing Atlas Hard Boundaries...")
     boundaries = Counter()
+    now = datetime.now(timezone.utc)
     for f in glob.glob(os.path.join(DIR_ATLAS, "*.json")):
         try:
             with open(f) as h:
                 d = json.load(h)
-            
-            # If it's SECURE and has an invalid path that died
+
+            ts_str = d.get('timestamp')
+            if ts_str:
+                try:
+                    age_days = (now - datetime.fromisoformat(ts_str)).total_seconds() / 86400
+                    if age_days > ATLAS_TTL_DAYS:
+                        continue
+                except Exception:
+                    pass
+
             verdict = d.get('verdict', '')
-            invalid_path = d.get('invalid_path', [])
-            score_i = d.get('score_invalid', 100.0)
-            
-            if "SECURE" in verdict and score_i < 10.0 and invalid_path:
-                # The last ASN in the invalid path is the one that dropped it (or passed it to a dropper)
-                # But more accurately, if it died after AS-X, and AS-X is NOT the destination,
-                # then AS-X or its immediate next hop is the boundary.
-                last_hop = invalid_path[-1]
-                boundaries[last_hop] += 1
-        except: pass
-    
+            if "SECURE" not in verdict:
+                continue
+
+            for probe in d.get('probe_details', []):
+                boundary = probe.get('boundary')
+                if boundary and "SECURE" in probe.get('verdict', ''):
+                    boundaries[boundary] += 1
+        except:
+            pass
+
     print(f"    - Found {len(boundaries)} filtering boundary ASNs via Atlas.")
     return dict(boundaries)
 
@@ -431,6 +695,37 @@ def classify_verdict(verdict: str) -> str:
     if any(x in v for x in ["VULNERABLE", "VULN"]):
         return "VULNERABLE"
     return "UNKNOWN"
+
+def cone_quality(asn: int, downstream: dict, providers_of: dict) -> tuple[int, float, float]:
+    """
+    Measure whether a network's cone is real transit or IXP phantom inflation.
+
+    Returns (direct_customers, excl_pct, avg_providers_per_customer) where:
+      excl_pct   = % of direct customers that have ≤ 2 total providers
+                   (high = captive customers = real transit)
+      avg_prov   = average number of providers per direct customer
+                   (low = captive customers; high ≥ 8 = IXP phantom)
+
+    Phantom detection rule: excl_pct < CONE_QUALITY_THRESHOLD (5%)
+    A legitimate transit provider has captive downstream customers.
+    An IXP participant has peers who each have 5-20 other providers.
+
+    NOTE: Tier 1s are exempt from this filter — their low exclusivity is
+    expected because Tier 2 customers legitimately multi-home to several T1s.
+    """
+    customers = downstream.get(asn, [])
+    if not customers:
+        return 0, 0.0, 0.0
+    total = len(customers)
+    excl = sum(1 for c in customers if len(providers_of.get(c, set())) <= 2)
+    avg_p = sum(len(providers_of.get(c, set())) for c in customers) / total
+    return total, round(excl / total * 100, 1), round(avg_p, 1)
+
+
+# Networks whose claimed cone size passes quality validation.
+# Used by reports to exclude IXP phantom inflation.
+CONE_QUALITY_THRESHOLD = 5.0  # min excl_pct to be counted as real transit
+
 
 def is_secure(verdict: str) -> bool:
     return classify_verdict(verdict) == "SECURE"

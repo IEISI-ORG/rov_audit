@@ -43,13 +43,17 @@ def main():
             json.dump(analysis, f, indent=2)
             
         color = "\033[92m" if "SECURE" in analysis['verdict'] else "\033[91m"
-        print(f"\n    [+] ANALYSIS COMPLETE")
-        print(f"    - Verdict:  {color}{analysis['verdict']}\033[0m")
-        print(f"    - Notes:    {analysis['notes']}")
-        print(f"    - Boundary: {analysis.get('filter_boundary')}")
-        print(f"    - Passed:   {analysis.get('last_passed')}")
-        print(f"    - Valid P:  {analysis['valid_path']}")
-        print(f"    - Invalid P:{analysis['invalid_path']}")
+        print(f"\n    [+] ANALYSIS COMPLETE ({analysis['successful_probes']}/{analysis['total_probes']} probes succeeded)")
+        print(f"    - Final Verdict: {color}{analysis['verdict']}\033[0m")
+        print(f"    - Notes:         {analysis['notes']}")
+        
+        # Show first on-path probe as an example
+        on_path = [p for p in analysis['probe_details']
+                   if "Off-Path" not in p['verdict'] and "Down" not in p['verdict']]
+        if on_path:
+            p0 = on_path[0]
+            print(f"    - Example Path (Valid):   {p0['path_v']}")
+            print(f"    - Example Path (Invalid): {p0['path_i']}")
     else:
         print("    [!] Forensic test failed.")
 

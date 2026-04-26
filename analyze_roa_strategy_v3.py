@@ -5,7 +5,7 @@ import rov_utils
 def analyze():
     print("[*] Loading Data for ROA Strategy Report...")
     if not os.path.exists(rov_utils.FILE_AUDIT_FINAL):
-        print(f"[!] {rov_utils.FILE_AUDIT_FINAL} not found. Run rov_no_scrape_v21.py first.")
+        print(f"[!] {rov_utils.FILE_AUDIT_FINAL} not found. Run rov_no_scrape_v22.py first.")
         return
 
     # 1. Load Audit Results
@@ -24,7 +24,8 @@ def analyze():
     print(f"{'ASN':<8} | {'CC':<2} | {'Cone':<8} | {'Signed%':<8} | {'Name'}")
     print("-" * 95)
     
-    is_secure = df['verdict'].str.contains("ACTIVE") | df['verdict'].str.contains("PASSIVE") | df['verdict'].str.contains("PROTECTOR")
+    df['category'] = df['verdict'].apply(rov_utils.classify_verdict)
+    is_secure = df['category'] == "SECURE"
     glass = df[is_secure & (df['signed_pct'] < 10.0)].sort_values(by='cone', ascending=False)
     for _, r in glass.head(15).iterrows():
         print(f"AS{r['asn']:<6} | {r['cc']:<2} | {int(r['cone']):<8} | \033[91m{r['signed_pct']:>5.1f}%\033[0m  | {r['name'][:45]}")
@@ -36,7 +37,7 @@ def analyze():
     print(f"{'ASN':<8} | {'CC':<2} | {'Cone':<8} | {'Signed%':<8} | {'Name'}")
     print("-" * 95)
     
-    is_vuln = df['verdict'].str.contains("VULNERABLE") | df['verdict'].str.contains("UNPROTECTED")
+    is_vuln = df['category'] == "VULNERABLE"
     screaming = df[is_vuln & (df['signed_pct'] > 95.0)].sort_values(by='cone', ascending=False)
     for _, r in screaming.head(15).iterrows():
         print(f"AS{r['asn']:<6} | {r['cc']:<2} | {int(r['cone']):<8} | \033[92m{r['signed_pct']:>5.1f}%\033[0m  | {r['name'][:45]}")

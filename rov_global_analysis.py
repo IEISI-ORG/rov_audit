@@ -11,11 +11,9 @@ DIR_JSON = "data/parsed"
 DIR_APNIC = "data/apnic"
 FILE_ASNS_CSV = "data/asns.csv"
 
-# Global Core Definition
-KNOWN_TIER_1 = {
-    3356, 1299, 174, 2914, 3257, 6762, 6939, 6453, 3491, 1239, 701, 6461, 5511, 6830, 4637,
-    7018, 3320, 12956, 1273, 7922, 209, 2828, 4134, 4809, 4837, 9929, 9808
-}
+# Single source of truth — defined in rov_utils.py
+import rov_utils
+KNOWN_TIER_1 = rov_utils.TIER_1_ASNS
 
 def load_data():
     print("[*] Loading Data...")

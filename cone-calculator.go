@@ -12,13 +12,7 @@ import (
 	"time"
 )
 
-// Config
-const (
-	// How much bigger must a provider be to be considered a provider?
-	// 4.0 means Provider must have 4x more neighbors than Customer.
-	// If ratio is < 4.0, we assume they are Peers (no cone).
-	PROVIDER_RATIO = 4.0
-)
+// PROVIDER_RATIO, isTier1, and isNonTransit are defined in constants.go
 
 type ASNInfo struct {
 	ASN       string
@@ -150,9 +144,21 @@ func buildHierarchy(adj map[string][]string, degrees map[string]int) map[string]
 			d1 := degrees[as1]
 			d2 := degrees[as2]
 
-			// === THE FILTER LOGIC ===
+			// --- Non-Transit / Infrastructure Override ---
+			// Certain ASNs (RIRs, IXP Route Servers, Roots) have high degrees 
+			// but do NOT provide transit. They should never be providers.
+			if isNonTransit(as1) {
+				peersCount++
+				continue
+			}
+			if isNonTransit(as2) {
+				peersCount++
+				continue
+			}
+			// ----------------------------------------------
 
 			// --- Tier 1 Override Logic ---
+
 			isT1_as1 := isTier1(as1)
 			isT1_as2 := isTier1(as2)
 
@@ -188,17 +194,7 @@ func buildHierarchy(adj map[string][]string, degrees map[string]int) map[string]
 	return nodes
 }
 
-func isTier1(asn string) bool {
-	t1 := map[string]bool{
-		"3356": true, "1299": true, "174": true, "2914": true, "3257": true,
-		"6762": true, "6939": true, "6453": true, "3491": true, "1239": true,
-		"701": true, "6461": true, "5511": true, "6830": true, "4637": true,
-		"7018": true, "3320": true, "12956": true, "1273": true, "7922": true,
-		"209": true, "2828": true, "4134": true, "4809": true, "4837": true,
-		"9929": true, "9808": true,
-	}
-	return t1[asn]
-}
+// isTier1 and isNonTransit are defined in constants.go
 
 func calculateCones(nodes map[string]*ASNInfo) {
 	// Memoization cache for cone sizes

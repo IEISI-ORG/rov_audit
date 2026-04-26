@@ -2,17 +2,14 @@ import json
 import glob
 import os
 from collections import defaultdict
+import rov_utils
 
 # --- CONFIGURATION ---
 DIR_JSON = "data/parsed"
 DIR_DATA = "data"
 
-# "The Core" - These should NEVER appear as children in our dependency graph
-# Breaking links to these ASNs prevents infinite loops in the cone calculation.
-TIER_1_FIREWALL = {
-    3356, 1299, 174, 2914, 3257, 6762, 6939, 6453, 3491, 1239, 701, 6461, 5511, 6830, 4637,
-    7018, 3320, 12956, 1273, 7922, 209, 2828, 4134, 4809, 4837, 9929, 9808
-}
+# Single source of truth — defined in rov_utils.py
+TIER_1_FIREWALL = rov_utils.TIER_1_ASNS
 
 def build_topology():
     print("[*] Building STRICT Topology (Breaking Cycles)...")

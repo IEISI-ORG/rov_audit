@@ -46,7 +46,7 @@ class TestVerdicts(unittest.TestCase):
         
     def test_stub_vulnerable_stable(self):
         v = rov_utils.assign_verdict(1234, False, 0, [5], 1, False)
-        self.assertEqual(v, "STUB: VULNERABLE STABLE")
+        self.assertEqual(v, "STUB: VULNERABLE")
         
     def test_partial_mixed(self):
         # 2 parents, 1 dirty
@@ -55,7 +55,7 @@ class TestVerdicts(unittest.TestCase):
         
     def test_transit_secure_unstable(self):
         v = rov_utils.assign_verdict(1234, True, 10, [3356], 0, True)
-        self.assertEqual(v, "ACTIVE UNSTABLE")
+        self.assertEqual(v, "VOLATILE")
 
 if __name__ == '__main__':
     unittest.main()

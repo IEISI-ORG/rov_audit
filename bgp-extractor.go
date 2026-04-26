@@ -221,7 +221,11 @@ func collectResults(results <-chan *pathResult, stats map[string]*ASNStats,
 			}
 			stats[asn].TotalPaths++
 
-			// Record left neighbor (upstream)
+			// Record left neighbor (toward-collector / data-plane downstream / customer direction).
+			// In TABLE_DUMP2 paths [peer, ..., origin], position i-1 is closer to the
+			// route collector.  In Gao-Rexford terms this is the side that receives
+			// transit FROM this ASN — i.e. its customers or its own peer at the top.
+			// Do NOT confuse with "upstream" in the route-announcement sense.
 			if i > 0 {
 				leftASN := result.asPath[i-1]
 				stats[asn].LeftNeighbors[leftASN]++
@@ -238,7 +242,11 @@ func collectResults(results <-chan *pathResult, stats map[string]*ASNStats,
 				relationships[relKey].Count++
 			}
 
-			// Record right neighbor (downstream)
+			// Record right neighbor (toward-origin / data-plane upstream / provider direction).
+			// Position i+1 is closer to the route origin.  In Gao-Rexford terms this
+			// is the side that provides transit TO this ASN — i.e. its providers or
+			// its own peer at the top of the valley.
+			// Do NOT confuse with "downstream" in the route-announcement sense.
 			if i < len(result.asPath)-1 {
 				rightASN := result.asPath[i+1]
 				stats[asn].RightNeighbors[rightASN]++

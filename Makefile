@@ -8,7 +8,8 @@ PITA30_SRC := pita30_presentation.md
 PITA30_PDF := pita30_presentation.pdf
 PITA30_HTML := pita30_presentation.html
 
-# Source files
+# Source files — constants.go is shared across all binaries
+SRC_SHARED    := constants.go
 SRC_EXTRACTOR := bgp-extractor.go
 SRC_CALCULATOR := cone-calculator.go
 SRC_FETCHROA := fetch-roa.go
@@ -47,17 +48,17 @@ setup:
 # 2. Compile Binaries
 build: $(BINARY_EXTRACTOR) $(BINARY_CALCULATOR) $(BINARY_FETCHROA)
 
-$(BINARY_EXTRACTOR): $(SRC_EXTRACTOR)
+$(BINARY_EXTRACTOR): $(SRC_EXTRACTOR) $(SRC_SHARED)
 	@echo "[*] Building $(BINARY_EXTRACTOR)..."
-	$(GO) build -o $(BINARY_EXTRACTOR) $(SRC_EXTRACTOR)
+	$(GO) build -o $(BINARY_EXTRACTOR) $(SRC_EXTRACTOR) $(SRC_SHARED)
 
-$(BINARY_CALCULATOR): $(SRC_CALCULATOR)
+$(BINARY_CALCULATOR): $(SRC_CALCULATOR) $(SRC_SHARED)
 	@echo "[*] Building $(BINARY_CALCULATOR)..."
-	$(GO) build -o $(BINARY_CALCULATOR) $(SRC_CALCULATOR)
+	$(GO) build -o $(BINARY_CALCULATOR) $(SRC_CALCULATOR) $(SRC_SHARED)
 
-$(BINARY_FETCHROA): $(SRC_FETCHROA)
+$(BINARY_FETCHROA): $(SRC_FETCHROA) $(SRC_SHARED)
 	@echo "[*] Building $(BINARY_FETCHROA)..."
-	$(GO) build -o $(BINARY_FETCHROA) $(SRC_FETCHROA)
+	$(GO) build -o $(BINARY_FETCHROA) $(SRC_FETCHROA) $(SRC_SHARED)
 
 # 3. Download Data
 download:

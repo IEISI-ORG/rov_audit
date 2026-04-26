@@ -1,17 +1,108 @@
 #!/bin/bash
+set -euo pipefail
 
-wget --timestamping --output-document=latest-bview.gz http://data.ris.ripe.net/rrc00/latest-bview.gz
+# ============================================================
+# Multi-collector BGP topology pipeline
+#
+# Downloads RIB dumps from geographically diverse RIPE RIS
+# collectors to enable cross-regional consensus in topology
+# inference.  A provider→customer link must be independently
+# observed from at least 2 distinct regions (EU, APAC, AMER)
+# to be trusted as genuine transit rather than IXP peering.
+#
+# Collectors (defined in rov_utils.py RRC_COLLECTORS):
+#   rrc00  Amsterdam  RIPE-NCC Multihop  (primary, European bias)
+#   rrc12  Frankfurt  DE-CIX             (large European IXP cross-check)
+#   rrc23  Singapore  Equinix SG         (Asia-Pacific vantage)
+#   rrc24  Montevideo LACNIC Multihop    (Americas vantage)
+#
+# The IXP phantom problem: RIPE RIS collectors peer directly with
+# IXP participants.  IXP route servers strip their own ASN (RFC 7947),
+# making IXP-peer adjacencies look identical to transit in AS paths.
+# A degree-ratio rule alone cannot distinguish them.  Cross-regional
+# confirmation solves this: AMS-IX peering appears only in European
+# dumps; genuine transit appears everywhere.
+# ============================================================
 
-bgpdump -m latest-bview.gz | ./bgp-extractor -input /dev/stdin -output output -workers 16
+WORKERS=16
+RRCS="rrc00 rrc14 rrc19 rrc23 rrc24"
+BASE_URL="https://data.ris.ripe.net"
 
-./cone-calculator -input output/relationships.csv -output final_as_rank.csv -top 0
+mkdir -p output
 
-# Sync RPKI timeseries for all transit networks to detect regressions
+# ----------------------------------------------------------
+# 1. Download RIB dumps in parallel
+# ----------------------------------------------------------
+echo "[1/4] Downloading RIB dumps..."
+pids=()
+for rrc in $RRCS; do
+    dump="output/${rrc}-bview.gz"
+    url="${BASE_URL}/${rrc}/latest-bview.gz"
+    echo "  -> ${rrc}: ${url}"
+    wget --quiet --timestamping --output-document="${dump}" "${url}" &
+    pids+=($!)
+done
+
+for pid in "${pids[@]}"; do
+    wait "$pid" || echo "  [!] A download failed — continuing with available dumps"
+done
+echo "  Downloads complete."
+
+# ----------------------------------------------------------
+# 2. Extract relationships from each collector (parallel)
+# ----------------------------------------------------------
+echo "[2/4] Extracting BGP relationships..."
+pids=()
+for rrc in $RRCS; do
+    dump="output/${rrc}-bview.gz"
+    outdir="output/${rrc}"
+    if [ ! -f "$dump" ]; then
+        echo "  [!] ${dump} not found, skipping ${rrc}"
+        continue
+    fi
+    mkdir -p "$outdir"
+    echo "  -> ${rrc}: bgpdump | bgp-extractor -> ${outdir}/"
+    (bgpdump -m "$dump" | ./bgp-extractor -input /dev/stdin \
+        -output "$outdir" -workers $WORKERS) &
+    pids+=($!)
+done
+
+for pid in "${pids[@]}"; do
+    wait "$pid" || echo "  [!] An extraction failed — continuing"
+done
+echo "  Extraction complete."
+
+# ----------------------------------------------------------
+# 3. Cone calculation uses the primary (rrc00) relationships
+#    for ranking.  The multi-collector topology build handles
+#    phantom filtering using all collectors together.
+# ----------------------------------------------------------
+echo "[3/4] Calculating customer cones (rrc00 primary)..."
+if [ -f "output/rrc00/relationships.csv" ]; then
+    ./cone-calculator \
+        -input output/rrc00/relationships.csv \
+        -output final_as_rank.csv \
+        -top 0
+else
+    echo "  [!] output/rrc00/relationships.csv not found, skipping cone calculation"
+fi
+
+# ----------------------------------------------------------
+# 4. Build multi-collector topology graph
+# ----------------------------------------------------------
+echo "[4/4] Building topology with cross-regional consensus..."
+python3 build_topology_from_go.py
+
+# ----------------------------------------------------------
+# Downstream pipeline (unchanged)
+# ----------------------------------------------------------
+echo "[*] Syncing RPKI timeseries..."
 python3 sync_transit_timeseries.py
 
-# Bulk ROA Sync (Go-powered, 500x faster than old version)
+echo "[*] Syncing ROA data..."
 python3 do_roa_sync.py
 
-# Pack data for high-performance analysis
-echo "[*] Packing ASN data for analysis..."
+echo "[*] Packing ASN data..."
 python3 pack_asn_data.py
+
+echo "[+] Data gathering complete."

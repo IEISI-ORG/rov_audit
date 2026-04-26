@@ -117,108 +117,273 @@ def run_forensic_test(asn, probes, ip_v, ip_i):
 # ==============================================================================
 # 3. ANALYSIS LOGIC
 # ==============================================================================
-def analyze_results(asn, results):
-    res_pv, res_pi, res_tv, res_ti = results
-    
-    # A. Ping Scores
-    def get_ping_rate(res):
-        total, rec = 0, 0
-        for r in res:
-            if r.get('avg', -1) > 0: rec += 1
-            total += 1
-        return (rec/total)*100 if total else 0
 
-    score_v = get_ping_rate(res_pv)
-    score_i = get_ping_rate(res_pi)
-    
-    # B. Extract Hops
-    def extract_hops(res):
+def _find_boundary(path_v: list, path_i: list) -> tuple:
+    """
+    Determine where path_i stops or diverges relative to path_v.
+
+    Returns (boundary_asn, diverge_pos, is_prefix_stop) where:
+      boundary_asn  — first ASN in path_v not reached by path_i (None if paths
+                      fully diverge in a way that makes boundary indeterminate)
+      diverge_pos   — index in path_v where paths first differ (None if path_i
+                      is a clean prefix of path_v)
+      is_prefix_stop — True when path_i is a proper prefix of path_v (no fork,
+                       just stopped early); False when paths fork mid-route
+    """
+    common = 0
+    for i in range(min(len(path_v), len(path_i))):
+        if path_v[i] == path_i[i]:
+            common = i + 1
+        else:
+            break
+
+    # Did path_i follow path_v exactly up to its last hop?
+    is_prefix_stop = (len(path_i) == 0 or path_i == path_v[:len(path_i)])
+
+    if is_prefix_stop:
+        boundary_asn = path_v[len(path_i)] if len(path_i) < len(path_v) else None
+        diverge_pos  = None
+    else:
+        # Paths forked: the fork point is at index `common`
+        boundary_asn = None          # can't reliably identify a single boundary
+        diverge_pos  = common        # index where path_v[common] != path_i[common]
+
+    return boundary_asn, diverge_pos, is_prefix_stop
+
+
+def _classify_probe(asn: int, p_id: int,
+                    path_v: list, path_i: list,
+                    score_v: float, score_i: float) -> dict:
+    """
+    Full per-probe analysis.  Returns a dict with:
+
+      verdict — one of:
+        INCONCLUSIVE (Probe Down)       valid target unreachable; probe unusable
+        INCONCLUSIVE (Off-Path)         valid path never traverses target; result
+                                        tells us nothing about the target's ROV
+        INCONCLUSIVE (Partial)          ping score between 10-90 %; inconsistent
+        VULNERABLE                      target in path_i and invalid reachable;
+                                        target confirmed NOT doing ROV on this path
+        VULNERABLE (Bypass Route)       invalid reachable but via a path that avoided
+                                        the target; target's ROV status ambiguous
+                                        but the network as a whole leaks
+        SECURE (Target Filtered)        target is the drop boundary; target
+                                        confirmed doing ROV
+        SECURE (Upstream Filtered)      target forwarded the invalid prefix;
+                                        an upstream of target dropped it.
+                                        NOTE: target itself is NOT doing ROV here
+        SECURE (Pre-Target Filtered)    invalid stopped before reaching target;
+                                        target's ROV status unknown from this probe
+
+      boundary_asn   — ASN that dropped the invalid prefix (if determinable)
+      boundary_type  — 'target' | 'upstream_of_target' | 'pre_target' | None
+      non_rov_hops   — every ASN in path_i; each one forwarded the invalid prefix
+                       and is therefore confirmed NOT doing ROV at that hop
+      path_v, path_i — AS-level paths as lists
+    """
+    out = {
+        'probe_id':     p_id,
+        'verdict':      'INCONCLUSIVE',
+        'boundary_asn': None,
+        'boundary_type': None,
+        'non_rov_hops': list(path_i),   # all hops that forwarded the invalid prefix
+        'path_v':       path_v,
+        'path_i':       path_i,
+    }
+
+    # ── Gate 1: probe must reach the valid destination ────────────────────────
+    if score_v < 50.0:
+        out['verdict'] = 'INCONCLUSIVE (Probe Down)'
+        return out
+
+    # ── Gate 2: valid path must traverse the target ───────────────────────────
+    if not path_v or asn not in path_v:
+        out['verdict'] = 'INCONCLUSIVE (Off-Path)'
+        return out
+
+    target_pos_v = path_v.index(asn)
+
+    # ── Gate 3: reject noisy / inconsistent pings ────────────────────────────
+    if 10.0 <= score_i <= 90.0:
+        out['verdict'] = 'INCONCLUSIVE (Partial)'
+        return out
+
+    boundary_asn, diverge_pos, is_prefix_stop = _find_boundary(path_v, path_i)
+
+    # ── Branch A: invalid prefix is reachable ────────────────────────────────
+    if score_i > 90.0:
+        if asn in path_i:
+            # Target explicitly forwarded the invalid prefix — confirmed non-ROV
+            out['verdict'] = 'VULNERABLE'
+        else:
+            # Invalid reachable but the path avoided the target entirely.
+            # Likely the probe is multi-homed: its traffic to the invalid
+            # destination went via a different provider that doesn't do ROV.
+            # The target may or may not be filtering; we cannot tell.
+            out['verdict'] = 'VULNERABLE (Bypass Route)'
+        return out
+
+    # ── Branch B: invalid prefix is NOT reachable (score_i < 10) ────────────
+    if is_prefix_stop:
+        # path_i followed path_v then stopped — clean single-boundary case
+        if boundary_asn == asn:
+            # Target itself is the drop boundary
+            out['verdict']      = 'SECURE (Target Filtered)'
+            out['boundary_asn'] = asn
+            out['boundary_type'] = 'target'
+        elif boundary_asn is not None:
+            boundary_pos = path_v.index(boundary_asn) if boundary_asn in path_v else -1
+            if boundary_pos < target_pos_v:
+                # Boundary is before target in path_v → something between probe
+                # and target dropped it; target's ROV status unknown
+                out['verdict']      = 'SECURE (Pre-Target Filtered)'
+                out['boundary_asn'] = boundary_asn
+                out['boundary_type'] = 'pre_target'
+            else:
+                # Boundary is after target → target forwarded invalid to upstream,
+                # upstream dropped it.  Target is NOT doing ROV.
+                out['verdict']      = 'SECURE (Upstream Filtered)'
+                out['boundary_asn'] = boundary_asn
+                out['boundary_type'] = 'upstream_of_target'
+        else:
+            # path_i reached the end of path_v with nothing left — shouldn't
+            # happen when score_i < 10, but handle gracefully
+            out['verdict'] = 'INCONCLUSIVE (Partial)'
+    else:
+        # Paths forked mid-route and invalid became unreachable on the fork.
+        # We can't reliably attribute the block to a single boundary ASN
+        # because we don't know what the forked path hit.
+        if asn in path_i:
+            # Target was on the invalid path before the fork — it forwarded
+            # the invalid prefix as far as it went
+            out['verdict']      = 'SECURE (Upstream Filtered)'
+            out['boundary_type'] = 'upstream_of_target'
+        else:
+            out['verdict'] = 'INCONCLUSIVE (Divergent)'
+
+    return out
+
+
+def analyze_results(asn: int, results: list) -> dict:
+    """
+    Aggregate per-probe classifications into a single verdict for the target ASN.
+
+    Verdict precedence (highest wins):
+      1. VULNERABLE — any probe where target forwarded invalid prefix
+      2. SECURE (Target Filtered) — target confirmed as drop boundary
+      3. VULNERABLE (Bypass Route) — invalid reachable but avoided target
+      4. SECURE (Upstream Filtered) — target forwarded invalid; upstream caught it
+         NOTE: counted as evidence the target is NOT doing ROV
+      5. INCONCLUSIVE (Divergent) — paths forked, can't conclude
+      6. INCONCLUSIVE — no on-path probes succeeded
+    """
+    def get_probe_map(res_list):
+        return {r['prb_id']: r for r in res_list if 'prb_id' in r}
+
+    res_pv, res_pi, res_tv, res_ti = results
+    map_pv = get_probe_map(res_pv)
+    map_pi = get_probe_map(res_pi)
+    map_tv = get_probe_map(res_tv)
+    map_ti = get_probe_map(res_ti)
+
+    def extract_path(t_res):
         hops = []
-        if not res: return []
-        for r in res:
-            if 'result' in r:
-                for h in r['result']:
-                    for p in h.get('result', []):
-                        if 'from' in p:
-                            hops.append(p['from'])
-                            break 
-                if hops: break
+        for h in t_res.get('result', []):
+            for p in h.get('result', []):
+                if 'from' in p:
+                    hops.append(p['from'])
+                    break
         return hops
 
-    hops_v = extract_hops(res_tv)
-    hops_i = extract_hops(res_ti)
-    
-    # C. Map to ASNs
-    all_ips = list(set(hops_v + hops_i))
-    ip_map = resolve_asns(all_ips)
-    
-    path_v = ips_to_as_path(hops_v, ip_map)
-    path_i = ips_to_as_path(hops_i, ip_map)
-    
-    # D. Logic
-    verdict = "INCONCLUSIVE"
-    notes = "Analysis failed"
-    peers_cf = False
-    divergent = False
-    leak_path = []
-    filter_boundary = None
-    last_passed = None
+    all_probe_ids = set(map_pv) | set(map_pi)
+    probe_details = []
+    all_non_rov_hops: set[int] = set()
 
-    if CLOUDFLARE_ASN in path_v:
-        peers_cf = True
+    for p_id in all_probe_ids:
+        score_v = 100.0 if map_pv.get(p_id, {}).get('avg', -1) > 0 else 0.0
+        score_i = 100.0 if map_pi.get(p_id, {}).get('avg', -1) > 0 else 0.0
 
-    # Check for Divergence (Scenario 1)
-    if len(path_v) > 0 and len(path_i) > 0:
-        if path_v[0] != path_i[0]:
-            divergent = True
-            verdict = "VULNERABLE (Divergent)"
-            leak_path = path_i
-            notes = f"LEAK DETECTED: Invalid path diverged via AS{path_i[0]}. Full path: {path_i}"
+        hops_v = extract_path(map_tv.get(p_id, {}))
+        hops_i = extract_path(map_ti.get(p_id, {}))
+        all_ips = list(set(hops_v + hops_i))
+        ip_map  = resolve_asns(all_ips)
+        path_v  = ips_to_as_path(hops_v, ip_map)
+        path_i  = ips_to_as_path(hops_i, ip_map)
 
-    if score_v < 50.0:
-        verdict = "INCONCLUSIVE"
-        notes = "Control (Valid) Ping failed."
-    elif divergent:
-        # Already set above
-        pass
-    elif score_i > 90.0:
-        verdict = "VULNERABLE"
-        notes = "Invalid Prefix Reachable via standard path."
-    elif score_i < 10.0:
-        verdict = "SECURE"
-        # Scenario 2: Find the Filter Boundary
-        if not path_i:
-            notes = "Filtered locally by Source ASN"
-            filter_boundary = asn
-        else:
-            last_passed = path_i[-1]
-            # Try to find the refuser by looking at the next hop in the VALID path
-            # assuming the paths were identical up to the stop point
-            idx = len(path_i)
-            if len(path_v) > idx:
-                filter_boundary = path_v[idx]
-                notes = f"Filter Boundary: AS{last_passed} passed -> AS{filter_boundary} BLOCKED"
-            else:
-                notes = f"Filtered by AS{last_passed} (End of known path)"
+        detail = _classify_probe(asn, p_id, path_v, path_i, score_v, score_i)
+        probe_details.append(detail)
+        all_non_rov_hops.update(detail['non_rov_hops'])
+
+    # ── Tally per-verdict counts ──────────────────────────────────────────────
+    counts = {}
+    for d in probe_details:
+        counts[d['verdict']] = counts.get(d['verdict'], 0) + 1
+
+    n_vulnerable         = counts.get('VULNERABLE', 0)
+    n_secure_local       = counts.get('SECURE (Target Filtered)', 0)
+    n_bypass             = counts.get('VULNERABLE (Bypass Route)', 0)
+    n_upstream_filtered  = counts.get('SECURE (Upstream Filtered)', 0)
+
+    # ── Aggregate verdict ─────────────────────────────────────────────────────
+    # VULNERABLE (Upstream Filtered): target forwarded invalid → counts as
+    # evidence of non-ROV, same as VULNERABLE from an enforcement standpoint
+    confirmed_non_rov = n_vulnerable + n_upstream_filtered
+
+    if confirmed_non_rov > 0:
+        final_verdict = 'VULNERABLE'
+        # Distinguish partial-deployment: secure probes exist alongside vulnerable
+        if n_secure_local > 0:
+            final_verdict = 'VULNERABLE (Partial Deployment)'
+    elif n_secure_local > 0:
+        final_verdict = 'SECURE (Verified Active)'
+    elif n_bypass > 0:
+        final_verdict = 'INCONCLUSIVE (Divergent)'
     else:
-        verdict = "PARTIAL"
-        notes = f"Inconsistent filtering ({score_i:.1f}% reachable)"
+        final_verdict = 'INCONCLUSIVE'
 
-    # --- FIX: Use timezone-aware datetime ---
+    # ── Build notes ───────────────────────────────────────────────────────────
+    on_path = [d for d in probe_details if 'Off-Path' not in d['verdict']
+               and 'Down' not in d['verdict']]
+
+    if 'VULNERABLE' in final_verdict:
+        # List the non-ROV hops on the invalid path as evidence
+        non_rov_evidence = sorted(all_non_rov_hops - {asn})
+        final_notes = (f"Invalid prefix reachable; "
+                       f"{n_vulnerable} probe(s) confirm target non-ROV. "
+                       f"Non-ROV hops on invalid path: {non_rov_evidence}")
+    elif 'SECURE' in final_verdict:
+        boundaries = [d['boundary_asn'] for d in on_path
+                      if d.get('boundary_type') == 'target' and d['boundary_asn']]
+        final_notes = (f"Target is drop boundary in {n_secure_local} probe(s). "
+                       f"Boundary ASNs: {boundaries}")
+    elif 'Divergent' in final_verdict:
+        final_notes = (f"Invalid prefix reachable via bypass in {n_bypass} probe(s); "
+                       f"target's ROV ambiguous — probe is multi-homed")
+    else:
+        inconclusive_reasons = sorted(set(
+            d['verdict'] for d in probe_details if 'INCONCLUSIVE' in d['verdict']
+        ))
+        final_notes = f"No on-path conclusive probes. Reasons: {inconclusive_reasons}"
+
+    # Pick representative on-path probe for the top-level boundary fields
+    rep_secure = next((d for d in on_path if 'SECURE (Target' in d['verdict']), None)
+    rep_any    = on_path[0] if on_path else (probe_details[0] if probe_details else {})
+
     return {
-        'asn': asn,
-        'verdict': verdict,
-        'notes': notes,
-        'score_valid': score_v,
-        'score_invalid': score_i,
-        'valid_path': path_v,
-        'invalid_path': path_i,
-        'leak_path': leak_path,
-        'filter_boundary': filter_boundary,
-        'last_passed': last_passed,
-        'peers_cf': peers_cf,
-        'divergent': divergent,
-        'timestamp': datetime.now(timezone.utc).isoformat()
+        'asn':             asn,
+        'verdict':         final_verdict,
+        'notes':           final_notes,
+        'n_vulnerable':    n_vulnerable,
+        'n_secure_local':  n_secure_local,
+        'n_bypass':        n_bypass,
+        'n_upstream_filtered': n_upstream_filtered,
+        'verdict_counts':  counts,
+        'non_rov_hops':    sorted(all_non_rov_hops),
+        'filter_boundary': (rep_secure or rep_any).get('boundary_asn'),
+        'successful_probes': len(on_path),
+        'total_probes':    len(all_probe_ids),
+        'probe_details':   probe_details,
+        'timestamp':       datetime.now(timezone.utc).isoformat(),
     }
 
 # ==============================================================================
@@ -282,7 +447,10 @@ def main():
         
         print(f"    Verdict: {color}{data['verdict']}\033[0m")
         print(f"    Notes:   {data['notes']}")
-        print(f"    Path V:  {data['valid_path']}")
+        on_path = [p for p in data.get('probe_details', [])
+                   if "Off-Path" not in p['verdict'] and "Down" not in p['verdict']]
+        if on_path:
+            print(f"    Path V:  {on_path[0]['path_v']}")
         
         with open(os.path.join(DIR_ATLAS, f"as_{asn}.json"), 'w') as f:
             json.dump(data, f, indent=2)
