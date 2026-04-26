@@ -1,6 +1,4 @@
 import pandas as pd
-import os
-import sys
 import rov_utils
 
 def analyze():

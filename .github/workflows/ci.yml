@@ -26,7 +26,7 @@ jobs:
     - name: Lint with Ruff
       run: |
         # We allow some leeway for legacy scripts but check main engine
-        ruff check rov_utils.py rov_no_scrape_v21.py statistics_v6.py
+        ruff check rov_utils.py rov_no_scrape_v22.py statistics_v6.py
 
     - name: Run Policy Integrity Tests
       run: |
@@ -54,12 +54,13 @@ jobs:
 
     - name: Go Vet
       run: |
-        go vet bgp-extractor.go
-        go vet cone-calculator.go
-        go vet fetch-roa.go
+        # constants.go is shared across all three binaries — pass it with each
+        go vet bgp-extractor.go constants.go
+        go vet cone-calculator.go constants.go
+        go vet fetch-roa.go constants.go
 
     - name: Compile Binaries
       run: |
-        go build -o bgp-extractor bgp-extractor.go
-        go build -o cone-calculator cone-calculator.go
-        go build -o fetch-roa fetch-roa.go
+        go build -o bgp-extractor bgp-extractor.go constants.go
+        go build -o cone-calculator cone-calculator.go constants.go
+        go build -o fetch-roa fetch-roa.go constants.go

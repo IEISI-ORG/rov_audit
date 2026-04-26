@@ -1,8 +1,6 @@
 import pandas as pd
 import json
 import os
-import csv
-import sys
 import requests
 import glob
 import gzip
@@ -227,7 +225,7 @@ def fetch_bgp_tools_tags(force: bool = False) -> dict[int, list[str]]:
                 with open(cache_path, "w") as fh:
                     fh.write(resp.text)
                 fetched += 1
-            except Exception as e:
+            except Exception:
                 failed += 1
                 if os.path.exists(cache_path):
                     with open(cache_path) as fh:
