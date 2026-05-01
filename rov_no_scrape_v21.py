@@ -10,7 +10,7 @@ def analyze():
     meta, countries = rov_utils.load_metadata()
     rov_utils.sync_apnic_data(countries)
     rov_set, cf_set, apnic_map = rov_utils.load_security_status()
-    atlas_secure, atlas_vulnerable, atlas_raw = rov_utils.load_atlas_verdicts()
+    atlas_secure, atlas_vulnerable, atlas_raw, atlas_stale = rov_utils.load_atlas_verdicts()
     ts_map = rov_utils.sync_apnic_timeseries(apnic_map, meta)
     
     # 2. Topology
@@ -31,7 +31,17 @@ def analyze():
             safe_asns.add(asn)
 
     # Active Overrides (Atlas & Volatility)
-    safe_asns -= atlas_vulnerable
+    # Atlas VULNERABLE can only downgrade networks with weak current evidence.
+    # If a network is confirmed by both bgp.tools ROV tag AND APNIC score >= 60%,
+    # the Atlas result is likely a probe-path artefact (probe routed via a
+    # different provider that doesn't do ROV) rather than evidence that the
+    # target ASN itself doesn't filter.  APNIC carefully selects single-provider
+    # probes; our forensic test does not.
+    strong_current_rov = {
+        asn for asn in atlas_vulnerable
+        if (asn in rov_set or asn in cf_set) and apnic_map.get(asn, -1) >= 60.0
+    }
+    safe_asns -= (atlas_vulnerable - strong_current_rov)
     safe_asns |= atlas_secure
     
     for asn, (sd, mn, mx, volatile, regression) in ts_map.items():

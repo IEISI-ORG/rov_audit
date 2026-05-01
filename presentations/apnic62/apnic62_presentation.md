@@ -95,6 +95,14 @@ style: |
 
 ---
 
+# The RIR Dilemma: Policy vs. Security
+- Even RIR infrastructure (APNIC AS4608/AS4777) remains `VULNERABLE`.
+- **The Rationale:** Avoiding "Member Lockout" during ROA misconfiguration.
+- **The Impact:** Regional infrastructure continues to propagate invalid routes.
+- **Data:** Verified via Customer Cone forensics.
+
+---
+
 # Conclusion & Future Work
 - Centralized classification of routing security.
 - ASPA Maturity Modeling: The "Reality Gap."

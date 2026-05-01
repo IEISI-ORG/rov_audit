@@ -66,8 +66,28 @@ def analyze():
         )
         
         # Highlight Regression in Verdict - simplified label as requested
-        if regression:
+        # Guard: is_safe=True means the network has strong current ROV evidence
+        # (rov_set/cf_set members stay is_safe=True even when volatile, per line 46).
+        # CLAUSE.md: REGRESSED does not fire for networks currently classified as safe.
+        if regression and not is_safe:
             verdict = "REGRESSED"
+
+        # Fortuitous ROV: stub's APNIC score is consistent with filtering by its
+        # upstream, not by the stub itself.  We have no direct evidence (rov_set,
+        # cf_set, or Atlas "Target Filtered") that the stub's own routers drop
+        # RPKI-invalid routes.  The protection is real but not locally confirmed.
+        if (verdict == "STUB: ACTIVE LOCAL ROV"
+                and asn not in rov_set
+                and asn not in cf_set
+                and asn not in atlas_secure):
+            verdict = "STUB: FORTUITOUS ROV"
+
+        # Inconsistent: network declared ROV intent (bgp.tools rov_set) but APNIC
+        # shows < 30% actual filtering.  Either partial deployment, stale declaration,
+        # or ROV misconfigured on a subset of links/routers.  Overrides all other
+        # verdicts — the contradiction is the signal regardless of topology.
+        if asn in rov_set and 0 <= score < 30:
+            verdict = "INCONSISTENT"
 
         results.append({
             'asn': asn, 'name': name, 'cc': cc, 'cone': cone,

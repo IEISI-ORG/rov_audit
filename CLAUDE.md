@@ -118,7 +118,7 @@ The degree-ratio heuristic in `build_topology_from_go.py` (and `cone-calculator.
 
 ## APNIC Timeseries Data Quality
 
-### Minimum sample size (`rov_utils.APNIC_MIN_SAMPLES = 30`)
+### Minimum sample size (`rov_utils.APNIC_MIN_SAMPLES = 30`, `APNIC_REGRESSION_CURRENT_MIN_SAMPLES = 100`)
 The APNIC ROV measurement API returns per-day rows with multiple rolling windows:
 `'7'`, `'14'`, `'28'`, `'112'` days. Each window has `seen`, `filtered`, and
 `filter_rate = seen / (seen + filtered)`.
@@ -132,6 +132,29 @@ the shortest window where `seen + filtered >= APNIC_MIN_SAMPLES`, falling back t
 
 Cache format is now `[[rate, samples], ...]` (new) vs `[float, ...]` (legacy). Legacy
 caches are accepted as-is until their 7-day TTL expires.
+
+`APNIC_REGRESSION_CURRENT_MIN_SAMPLES = 100` is a separate, stricter threshold used
+only when determining `current_for_regression` in `sync_apnic_timeseries()`. Large
+transit ASNs can have weeks where APNIC ad impressions drop to 30-50/day (barely above
+the 30-sample floor), producing 0% rates that are noise not signal. The regression check
+requires `n >= 100` for the most recent data point (within 30 days); if no such point
+exists, the regression flag is skipped rather than trusting a marginal reading.
+
+### APNIC measures user-visible filtering, not ASN-level ROV policy
+`filter_rate` reflects whether end-users in that ASN could reach the RPKI-invalid
+beacon — it **cannot distinguish** between:
+- **Direct filtering**: the ASN itself drops invalid routes (the ASN has ROV policy)
+- **Inherited filtering**: the ASN's upstream drops invalid routes, protecting the ASN's users without the ASN doing anything
+
+A network that is purely passively behind a filtering upstream will show a high
+`filter_rate`. If that upstream changes routing, the score collapses to 0% even though
+the ASN's own policy never changed. This is the most common cause of `current=0%,
+hist_max=100%` patterns in the regression data — inherited filtering was lost, not a
+genuine ROV policy rollback.
+
+**Implication**: "ACTIVE LOCAL ROV" verdicts based solely on APNIC data cannot confirm
+the ASN itself is filtering. For herd immunity (are users protected?) this is fine; for
+per-ASN policy auditing, Atlas forensics provide stronger evidence.
 
 ### Regression detection uses a 1-year lookback
 `sync_apnic_timeseries()` computes `historical_max = max(rates[-365:])`, **not**
@@ -211,9 +234,11 @@ the target.
 
 ### 2. Safety Verdicts & Topology
 - **Centralized Logic**: Use `rov_utils.classify_verdict()` to bucket strings into `SECURE`, `VULNERABLE`, or `PARTIAL`.
-- **Primary Labels**: `REGRESSED`, `VOLATILE`, `UNRELIABLE`, `SECURE`, `PASSIVE`.
+- **Primary Labels**: `REGRESSED`, `VOLATILE`, `UNRELIABLE`, `SECURE`, `PASSIVE`, `FORTUITOUS`.
+- **STUB: FORTUITOUS ROV**: A stub whose APNIC score is high (>=95%) but has no direct confirmation of local ROV (`rov_set`, `cf_set`, or Atlas "Target Filtered"). The protection is real (users are safe) but comes from the upstream's filtering, not the stub's own routers. Applied in `rov_no_scrape_v22.py` after `assign_verdict`. `classify_verdict()` maps this to `SECURE`. Stubs with direct evidence stay `STUB: ACTIVE LOCAL ROV`.
+- **INCONSISTENT**: Network is in bgp.tools `rov_set` (declared ROV intent) but APNIC shows `< 30%` actual filtering. Either partial deployment (ROV on some links/routers only), stale declaration, or misconfiguration. Overrides all other verdicts for `rov_set` members meeting the threshold. `classify_verdict()` maps this to `VULNERABLE`. ~48 networks currently affected (no Tier 1s). Key examples: AS7303 Telecom Argentina (8%), AS3292 TDC Denmark (0%), AS32 Stanford (1%).
 - **Infrastructure Blacklist**: Root Servers and RIRs (AS3333, AS4608, etc.) are marked as non-transit in `cone-calculator.go` (`isNonTransit` logic).
-- **REGRESSED override**: `rov_no_scrape_v22.py` overwrites the `assign_verdict()` result with `"REGRESSED"` when the 1-year APNIC timeseries shows a drop of > 30 points. This only fires when `regression=True` in `ts_map`. It does **not** fire for networks currently classified as `safe` (is_safe=True) — a network that recovered from a regression should not stay REGRESSED.
+- **REGRESSED override**: `rov_no_scrape_v22.py` overwrites the `assign_verdict()` result with `"REGRESSED"` when the 1-year APNIC timeseries shows a drop of > 30 points. This only fires when `regression=True` in `ts_map` **and `is_safe=False`** — a network with strong current ROV evidence (`rov_set`, `cf_set`, or APNIC >= 95%) stays at its earned verdict. Note: `rov_set`/`cf_set` members always remain `is_safe=True` even when volatile (the volatile guard at line 46 has an explicit `asn not in rov_set and asn not in cf_set` exception). APNIC regression for `atlas_secure` networks with `current=0%, hist_max=100%` is most often an inherited-filtering artifact — see the APNIC data quality note above.
 
 ### 3. CI & Quality
 - **Linter**: Python code is linted with `ruff`.

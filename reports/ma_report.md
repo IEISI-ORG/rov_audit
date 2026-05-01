@@ -4,34 +4,34 @@
      NATIONAL ROUTING SECURITY: MA
     ====================================================================================================
     Total Networks:      31
-    Total Cone Gravity:  30
+    Total Cone Gravity:  29
     ------------------------------------------------------------
-    SECURE (ACTIVE/PASSIVE):    22 (71.0%) -> Protects 100.0% of Traffic
-    VULNERABLE NETWORKS:         2 ( 6.5%) -> Exposes  0.0% of Traffic
+    SECURE (ACTIVE/PASSIVE):    19 (61.3%) -> Protects 6.9% of Traffic
+    VULNERABLE NETWORKS:         5 (16.1%) -> Exposes  0.0% of Traffic
 
     ====================================================================================================
      THE MA CORE (Top 20 Networks)
     ====================================================================================================
     ASN      | Verdict                        | Cone     | APNIC% | Name
     ----------------------------------------------------------------------------------------------------
-    AS36925  | ACTIVE LOCAL ROV               | 10       | 99%    | Orange Maroc
-    AS36884  | ACTIVE UNSTABLE                | 8        | 99%    | Wana Corporate
-    AS6713   | ACTIVE LOCAL ROV               | 8        | 99%    | Maroc Telecom
+    AS36925  | PARTIAL: VULNERABLE (Mixed)    | 10       | 99%    | Orange Maroc
+    AS36884  | PARTIAL: VULNERABLE (Mixed)    | 8        | 99%    | Wana Corporate
+    AS6713   | PARTIAL: VULNERABLE (Mixed)    | 7        | 99%    | Maroc Telecom
     AS328867 | PASSIVE (Clean Pipe)           | 2        | -      | Corebach Backbone SARL
-    AS36956  | PASSIVE (Clean Pipe)           | 2        | -      | Office National des Postes et Telecommun
-    AS201129 | NOT ROUTED                     | 0        | -      | Linceris International Cloud Solutions -
-    AS328577 | STUB: PASSIVE (Clean Pipe)     | 0        | -      | Enterprise Services CDG
+    AS36956  | Unverified (Transit/Peer?)     | 2        | -      | Office National des Postes et Telecommun
+    AS201129 | STUB: VULNERABLE               | 0        | -      | Linceris International Cloud Solutions -
     AS328541 | STUB: PASSIVE (Clean Pipe)     | 0        | -      | Direction Générale des Impôts - Minister
+    AS328577 | STUB: PASSIVE (Clean Pipe)     | 0        | -      | Enterprise Services CDG
+    AS328799 | NOT ROUTED                     | 0        | -      | PIXI MEDIA SARL
     AS328671 | NOT ROUTED                     | 0        | -      | Datapacket Maroc SARL
     AS328709 | STUB: PASSIVE (Clean Pipe)     | 0        | -      | Universite Mohammed VI POLYTECHNIQUE - U
     AS328280 | STUB: PASSIVE (Clean Pipe)     | 0        | -      | L'Agence Nationale de Réglementation des
     AS328272 | STUB: PASSIVE (Clean Pipe)     | 0        | -      | CIE NATIONALE ROYAL AIR MAROC
     AS328268 | STUB: PASSIVE (Clean Pipe)     | 0        | -      | INSTITUT NATIONAL DES POSTES ET TELECOMM
     AS328493 | STUB: PASSIVE (Clean Pipe)     | 0        | -      | Societe d'Amenagement et de Developpemen
-    AS329280 | STUB: VULNERABLE STABLE        | 0        | -      | Centre Royal de Télédétection Spatiale
-    AS328799 | NOT ROUTED                     | 0        | -      | PIXI MEDIA SARL
+    AS329280 | STUB: VULNERABLE               | 0        | -      | Centre Royal de Télédétection Spatiale
     AS328960 | STUB: PASSIVE (Clean Pipe)     | 0        | -      | Ministry of Foreign Affairs African Coop
-    AS328066 | STUB: VULNERABLE STABLE        | 0        | -      | MEDAFRICA SYSTEMS
+    AS328066 | STUB: VULNERABLE               | 0        | -      | MEDAFRICA SYSTEMS
     AS328055 | STUB: PASSIVE (Clean Pipe)     | 0        | -      | NPONE
     AS327989 | STUB: PASSIVE (Clean Pipe)     | 0        | -      | Genious Communications
 
@@ -40,14 +40,14 @@
     ====================================================================================================
     Rank | Upstream | Dependents | Global Status                  | Name
     ----------------------------------------------------------------------------------------------------
-    #1   | AS36925  | 13         | ACTIVE LOCAL ROV               | Orange Maroc
-    #2   | AS6713   | 7          | ACTIVE LOCAL ROV               | Maroc Telecom
-    #3   | AS36884  | 7          | ACTIVE UNSTABLE                | Wana Corporate
+    #1   | AS36925  | 13         | PARTIAL: VULNERABLE (Mixed)    | Orange Maroc
+    #2   | AS6713   | 7          | PARTIAL: VULNERABLE (Mixed)    | Maroc Telecom
+    #3   | AS36884  | 7          | PARTIAL: VULNERABLE (Mixed)    | Wana Corporate
     #4   | AS174    | 4          | CORE: ACTIVE PROTECTOR         | Cogent Communications, LLC
     #5   | AS5511   | 3          | CORE: ACTIVE PROTECTOR         | Orange S.A.
     #6   | AS12956  | 2          | CORE: ACTIVE PROTECTOR         | Telxius (Telefonica Global)
-    #7   | AS6762   | 2          | CORE: ACTIVE PROTECTOR         | Telecom Italia Sparkle (Seabone)
-    #8   | AS36956  | 2          | PASSIVE (Clean Pipe)           | Office National des Postes et Telecommun
+    #7   | AS6762   | 2          | CORE: UNPROTECTED              | Telecom Italia Sparkle (Seabone)
+    #8   | AS36956  | 2          | Unverified (Transit/Peer?)     | Office National des Postes et Telecommun
     #9   | AS6453   | 1          | CORE: ACTIVE PROTECTOR         | TATA Communications (America) Inc
     #10  | AS3257   | 1          | CORE: ACTIVE PROTECTOR         | GTT Communications Inc.
     #11  | AS2914   | 1          | CORE: ACTIVE PROTECTOR         | NTT America, Inc.

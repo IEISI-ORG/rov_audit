@@ -385,7 +385,8 @@ def sync_apnic_data(countries: set, force: bool = False):
         except: pass
     print(f"    - Result: {updated} Fetched, {cached} Cached.")
 
-APNIC_MIN_SAMPLES = 30  # minimum seen+filtered observations for a reliable filter_rate
+APNIC_MIN_SAMPLES = 30           # minimum seen+filtered for a valid daily rate
+APNIC_REGRESSION_CURRENT_MIN_SAMPLES = 100  # minimum n for 'current' in regression detection
 
 def _fetch_apnic_ts_rates(asn: int, cc: str) -> list:
     """Fetch full timeseries for one ASN.
@@ -441,7 +442,7 @@ def sync_apnic_timeseries(apnic_map: dict, meta: dict) -> dict:
     import statistics
     APNIC_TS_SCORE_MIN = 60.0
     APNIC_VOLATILE_STDEV = 20.0
-    APNIC_REGRESSION_THRESHOLD = 30.0 # Drop from max in 90 days
+    APNIC_REGRESSION_THRESHOLD = 30.0 # >30-point drop from 1-year max to current
 
     # Candidates: High current score OR existing history we want to keep fresh
     candidates = {asn for asn, score in apnic_map.items() if score >= APNIC_TS_SCORE_MIN}
@@ -465,17 +466,25 @@ def sync_apnic_timeseries(apnic_map: dict, meta: dict) -> dict:
         if raw and isinstance(raw[0], list):
             # New format — extract only data points with sufficient samples
             rates = [r[0] for r in raw if r[0] is not None]
+            # For regression: 'current' must come from a recent data point with enough
+            # samples to be statistically reliable.  A point that barely clears the
+            # APNIC_MIN_SAMPLES floor (e.g. 31 samples from a large transit ASN) is
+            # noise, not a meaningful current measurement.  Look for the most recent
+            # point in the last 30 calendar days where n >= APNIC_REGRESSION_CURRENT_MIN_SAMPLES.
+            recent_reliable = [r for r in raw[-30:] if r[0] is not None
+                               and r[1] >= APNIC_REGRESSION_CURRENT_MIN_SAMPLES]
+            current_for_regression = recent_reliable[-1][0] if recent_reliable else None
         else:
             # Old-format cache (plain floats, no sample counts).
             # Treat all points as valid until cache expires and is re-fetched.
             rates = [v for v in raw if isinstance(v, (int, float))]
+            current_for_regression = rates[-1] if rates else None
 
         if len(rates) < 14:
             skipped_sparse += 1
             continue
 
-        # Current and 90-day window (over reliable data points only)
-        current = rates[-1]
+        # Stats use all valid data points (90-day window)
         rates_90 = rates[-90:]
         sd = statistics.stdev(rates_90)
         mn90, mx90 = min(rates_90), max(rates_90)
@@ -487,8 +496,13 @@ def sync_apnic_timeseries(apnic_map: dict, meta: dict) -> dict:
         historical_max = max(rates_1yr)
 
         # Volatility & Regression Criteria
+        # Regression requires a reliable recent 'current' (n >= APNIC_REGRESSION_CURRENT_MIN_SAMPLES
+        # within the last 30 days).  If no such point exists the current state cannot be
+        # determined from APNIC data alone — skip regression rather than use a marginal
+        # low-sample reading as a false low-water-mark.
         crossed_threshold = (mx90 >= 95.0 and mn90 < 60.0)
-        regression = (historical_max - current) > APNIC_REGRESSION_THRESHOLD
+        regression = (current_for_regression is not None
+                      and (historical_max - current_for_regression) > APNIC_REGRESSION_THRESHOLD)
         is_volatile = (sd > APNIC_VOLATILE_STDEV or crossed_threshold or regression)
 
         result[asn] = (round(sd, 1), round(mn90, 1), round(mx90, 1), is_volatile, regression)
@@ -684,9 +698,9 @@ def classify_verdict(verdict: str) -> str:
     """Categorize a verdict string into high-level status."""
     v = str(verdict).upper()
     # Regressions and Unreliable states are always treated as VULNERABLE
-    if any(x in v for x in ["(REG)", "REGRESSED", "UNRELIABLE", "UNPROT"]):
+    if any(x in v for x in ["(REG)", "REGRESSED", "UNRELIABLE", "UNPROT", "INCONSISTENT"]):
         return "VULNERABLE"
-    if any(x in v for x in ["ACTIVE", "PASSIVE", "PROTECTOR", "VOLATILE"]):
+    if any(x in v for x in ["ACTIVE", "PASSIVE", "PROTECTOR", "VOLATILE", "FORTUITOUS"]):
         return "SECURE"
     if "PARTIAL" in v:
         return "PARTIAL"

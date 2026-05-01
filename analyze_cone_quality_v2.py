@@ -3,17 +3,18 @@ import pandas as pd
 import os
 import sys
 import collections
+import rov_utils
 
 # --- CONFIGURATION ---
-FILE_AUDIT_CSV = "rov_audit_v13_final.csv"
-FILE_GRAPH = "data/downstream_graph.json"
+FILE_AUDIT_CSV = rov_utils.FILE_AUDIT_FINAL
+FILE_GRAPH = rov_utils.FILE_GRAPH
 
 # Optimization: Only analyze providers with a cone larger than this
 # (Skips the 80,000+ stub networks that have no downstream impact)
 MIN_REAL_CONE_SIZE = 5 
 
 def analyze_cones():
-    print("[*] Loading Topology and Audit Data...")
+    print("[*] Loading Topology and Audit Data for Cone Quality...")
     
     if not os.path.exists(FILE_GRAPH):
         print(f"[!] Error: {FILE_GRAPH} not found.")
@@ -30,7 +31,7 @@ def analyze_cones():
         downstream_adj = {int(k): [int(x) for x in v] for k,v in downstream_map.items()}
 
     # 2. Load Audit Data
-    print("    - Parsing CSV verdicts...")
+    print("    - Parsing verdicts...")
     df = pd.read_csv(FILE_AUDIT_CSV)
     
     # Maps for O(1) lookup
@@ -44,12 +45,7 @@ def analyze_cones():
         asn = int(row['asn'])
         v = str(row['verdict']).upper()
         
-        # Status
-        if "ACTIVE" in v or "PASSIVE" in v or "PROTECTOR" in v: status = "SECURE"
-        elif "VULNERABLE" in v or "UNPROTECTED" in v: status = "VULNERABLE"
-        elif "DEAD" in v: status = "DEAD"
-        else: status = "UNKNOWN"
-        
+        status = rov_utils.classify_verdict(v)
         status_map[asn] = status
         
         # Meta

@@ -3,6 +3,7 @@ import subprocess
 import os
 import json
 import glob
+import pandas as pd
 
 def main():
     # 1. Load Metadata
@@ -22,33 +23,23 @@ def main():
     subprocess.run(["./fetch-roa", "-countries", cc_list], check=True)
 
     # 4. PHASE 2: Targeted ASN Sync (For missing giants)
-    # Check who is still missing 'roa_signed_pct' but is important (cone > 50)
     print("[*] PHASE 2: Checking for missing high-impact ASNs...")
     
-    # Load all ASNs from audit
+    # Load all ASNs from audit and packed data
     if not os.path.exists(rov_utils.FILE_AUDIT_FINAL):
         print("[!] Audit file not found. Skipping Phase 2.")
         return
         
-    import pandas as pd
     df = pd.read_csv(rov_utils.FILE_AUDIT_FINAL)
+    asn_data = rov_utils.load_all_asn_data()
     
     # Important ASNs (Cone > 50)
     important = df[df['cone'] > 50]['asn'].tolist()
     
     missing = []
     for asn in important:
-        json_path = os.path.join(rov_utils.DIR_PARSED, f"as_{asn}.json")
-        has_roa = False
-        if os.path.exists(json_path):
-            try:
-                with open(json_path, 'r') as f:
-                    data = json.load(f)
-                    if 'roa_signed_pct' in data:
-                        has_roa = True
-            except: pass
-        
-        if not has_roa:
+        data = asn_data.get(asn, {})
+        if 'roa_signed_pct' not in data:
             missing.append(str(asn))
             
     if missing:

@@ -6,34 +6,34 @@
     Total Networks:      21
     Total Cone Gravity:  11
     ------------------------------------------------------------
-    SECURE (ACTIVE/PASSIVE):     6 (28.6%) -> Protects 81.8% of Traffic
-    VULNERABLE NETWORKS:         5 (23.8%) -> Exposes  18.2% of Traffic
+    SECURE (ACTIVE/PASSIVE):     3 (14.3%) -> Protects 0.0% of Traffic
+    VULNERABLE NETWORKS:         9 (42.9%) -> Exposes  36.4% of Traffic
 
     ====================================================================================================
      THE FJ CORE (Top 20 Networks)
     ====================================================================================================
     ASN      | Verdict                        | Cone     | APNIC% | Name
     ----------------------------------------------------------------------------------------------------
-    AS38442  | PASSIVE (Clean Pipe)           | 7        | 0%     | Vodafone Fiji Limited
-    AS4638   | ACTIVE (Atlas Verified)        | 2        | 63%    | Telecom Fiji Limited
-    AS45355  | REGRESSED                      | 2        | 1%     | Digicel Fiji Limited
+    AS38442  | PARTIAL: VULNERABLE (Mixed)    | 7        | 0%     | Vodafone Fiji Limited
+    AS4638   | VULNERABLE (Atlas Verified)    | 2        | 63%    | Telecom Fiji Limited
+    AS45355  | INCONSISTENT                   | 2        | 1%     | Digicel Fiji Limited
     AS154229 | NOT ROUTED                     | 0        | -      | Fiji National Provident Fund
     AS153509 | NOT ROUTED                     | 0        | -      | Land Transport Authority of Fiji
-    AS141470 | STUB: VULNERABLE STABLE        | 0        | -      | ITC Services
-    AS142245 | NOT ROUTED                     | 0        | -      | Kastle (Fiji) Pte Ltd
-    AS137890 | STUB: VULNERABLE STABLE        | 0        | -      | Walesi Ltd
+    AS141470 | STUB: VULNERABLE               | 0        | -      | ITC Services
+    AS142245 | STUB: PASSIVE (Clean Pipe)     | 0        | -      | Kastle (Fiji) Pte Ltd
+    AS137890 | STUB: VULNERABLE               | 0        | -      | Walesi Ltd
     AS140046 | NOT ROUTED                     | 0        | -      | Telecommunications Authority of Fiji
-    AS149429 | NOT ROUTED                     | 0        | -      | Reserve Bank of Fiji
+    AS149429 | STUB: VULNERABLE               | 0        | -      | Reserve Bank of Fiji
     AS24390  | STUB: ACTIVE LOCAL ROV         | 0        | -      | The University of the South Pacific
-    AS9241   | STUB: VULNERABLE STABLE        | 0        | -      | Fiji International Telecomunications Ltd
+    AS9241   | STUB: VULNERABLE               | 0        | -      | Fiji International Telecomunications Ltd
     AS133625 | NOT ROUTED                     | 0        | -      | HFC Bank
     AS134208 | NOT ROUTED                     | 0        | -      | Bank of South Pacifc (Fiji)
     AS136415 | NOT ROUTED                     | 0        | -      | KIDANET Internet Service Provider
-    AS136921 | STUB: PASSIVE (Clean Pipe)     | 0        | 100%   | Fiji National University
-    AS135647 | STUB: PASSIVE (Clean Pipe)     | 0        | -      | Airports Fiji Limited
+    AS136921 | STUB: FORTUITOUS ROV           | 0        | 100%   | Fiji National University
+    AS135647 | STUB: VULNERABLE               | 0        | -      | Airports Fiji Limited
     AS133067 | NOT ROUTED                     | 0        | -      | Newcom Live (Fiji) Limited
-    AS132248 | STUB: PASSIVE (Clean Pipe)     | 0        | -      | Reserve Bank of Fiji
-    AS45349  | STUB: VULNERABLE STABLE        | 0        | -      | Telecom Fiji Ltd
+    AS132248 | STUB: VULNERABLE               | 0        | -      | Reserve Bank of Fiji
+    AS45349  | STUB: VULNERABLE               | 0        | -      | Telecom Fiji Ltd
 
     ====================================================================================================
      TRANSIT SUPPLY CHAIN (Who provides to FJ?)
@@ -43,13 +43,13 @@
     #1   | AS174    | 3          | CORE: ACTIVE PROTECTOR         | Cogent Communications, LLC
     #2   | AS6939   | 3          | CORE: ACTIVE PROTECTOR         | Hurricane Electric LLC
     #3   | AS4637   | 3          | CORE: ACTIVE PROTECTOR         | Telstra International Limited
-    #4   | AS4638   | 3          | ACTIVE (Atlas Verified)        | Telecom Fiji Limited
-    #5   | AS7474   | 2          | ACTIVE LOCAL ROV               | SingTel Optus Pty Ltd
-    #6   | AS38442  | 2          | PASSIVE (Clean Pipe)           | Vodafone Fiji Limited
-    #7   | AS7575   | 2          | ACTIVE LOCAL ROV               | Australian Academic and Research Network
-    #8   | AS4648   | 2          | PASSIVE (Clean Pipe)           | Spark New Zealand
+    #4   | AS4638   | 3          | VULNERABLE (Atlas Verified)    | Telecom Fiji Limited
+    #5   | AS7474   | 2          | VULNERABLE (Atlas Verified)    | SingTel Optus Pty Ltd
+    #6   | AS38442  | 2          | PARTIAL: VULNERABLE (Mixed)    | Vodafone Fiji Limited
+    #7   | AS7575   | 2          | PARTIAL: VULNERABLE (Mixed)    | Australian Academic and Research Network
+    #8   | AS4648   | 2          | PARTIAL: VULNERABLE (Mixed)    | Spark New Zealand
     #9   | AS2914   | 1          | CORE: ACTIVE PROTECTOR         | NTT America, Inc.
     #10  | AS7473   | 1          | PARTIAL: VULNERABLE (Mixed)    | Singapore Telecommunications Ltd
-    #11  | AS45349  | 1          | STUB: VULNERABLE STABLE        | Telecom Fiji Ltd
+    #11  | AS45349  | 1          | STUB: VULNERABLE               | Telecom Fiji Ltd
     #12  | AS132528 | 1          | PARTIAL: VULNERABLE (Mixed)    | DIGICEL (AUS) PTY LTD
-    #13  | AS45355  | 1          | REGRESSED                      | Digicel Fiji Limited
+    #13  | AS45355  | 1          | INCONSISTENT                   | Digicel Fiji Limited
