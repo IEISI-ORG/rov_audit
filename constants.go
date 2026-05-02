@@ -63,7 +63,6 @@ func isTier1(asn string) bool {
 func isNonTransit(asn string) bool {
 	switch asn {
 	case "213241", // TECHIT.BE — IXP Route Server
-		"24482",  // SG.GS — IXP Route Server
 		"13335",  // Cloudflare — CDN/Anycast (non-transit for topology)
 		"3333",   // RIPE NCC
 		"4608",   // APNIC (refuses ROV to avoid member lockout)
