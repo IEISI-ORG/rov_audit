@@ -15,7 +15,7 @@
     ASN      | Verdict                        | Cone     | APNIC% | Name
     ----------------------------------------------------------------------------------------------------
     AS152093 | STUB: VULNERABLE               | 0        | -      | VakaNet Limited
-    AS10131  | STUB: VULNERABLE               | 0        | 0%     | Telecom Cook Islands
+    AS10131  | STUB: VULNERABLE               | 0        | -      | Telecom Cook Islands
 
     ====================================================================================================
      TRANSIT SUPPLY CHAIN (Who provides to CK?)

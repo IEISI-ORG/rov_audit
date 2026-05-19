@@ -25,4 +25,4 @@
     ----------------------------------------------------------------------------------------------------
     #1   | AS60679  | 1          | Unverified (Transit/Peer?)     | Freedom Registry BV
     #2   | AS4648   | 1          | PARTIAL: VULNERABLE (Mixed)    | Spark New Zealand
-    #3   | AS56294  | 1          | REGRESSED                      | VMvault Pty Ltd
+    #3   | AS56294  | 1          | PARTIAL: VULNERABLE (Mixed)    | VMvault Pty Ltd

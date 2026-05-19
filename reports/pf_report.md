@@ -14,11 +14,11 @@
     ====================================================================================================
     ASN      | Verdict                        | Cone     | APNIC% | Name
     ----------------------------------------------------------------------------------------------------
-    AS55943  | REGRESSED                      | 2        | 0%     | ONATI
-    AS138179 | STUB: VULNERABLE               | 0        | 0%     | PACIFIC MOBILE TELECOM
+    AS55943  | REGRESSED                      | 2        | -      | ONATI
     AS139263 | STUB: VULNERABLE               | 0        | -      | Universite de la Polynesie Francaise
-    AS9471   | STUB: VULNERABLE               | 0        | 0%     | ONATI
-    AS56017  | STUB: VULNERABLE               | 0        | 8%     | VITI
+    AS138179 | STUB: VULNERABLE               | 0        | -      | PACIFIC MOBILE TELECOM
+    AS9471   | STUB: VULNERABLE               | 0        | -      | ONATI
+    AS56017  | STUB: VULNERABLE               | 0        | -      | VITI
     AS133896 | NOT ROUTED                     | 0        | -      | Tahiti Nui Telecom
 
     ====================================================================================================

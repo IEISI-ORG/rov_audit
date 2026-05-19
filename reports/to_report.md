@@ -6,8 +6,8 @@
     Total Networks:      5
     Total Cone Gravity:  0
     ------------------------------------------------------------
-    SECURE (ACTIVE/PASSIVE):     1 (20.0%) -> Protects 0.0% of Traffic
-    VULNERABLE NETWORKS:         2 (40.0%) -> Exposes  0.0% of Traffic
+    SECURE (ACTIVE/PASSIVE):     0 ( 0.0%) -> Protects 0.0% of Traffic
+    VULNERABLE NETWORKS:         3 (60.0%) -> Exposes  0.0% of Traffic
 
     ====================================================================================================
      THE TO CORE (Top 20 Networks)
@@ -17,8 +17,8 @@
     AS140987 | NOT ROUTED                     | 0        | -      | Government of Tonga, Ministry of MEIDECC
     AS132831 | STUB: VULNERABLE               | 0        | -      | TokoWireless Limited
     AS132579 | STUB: VULNERABLE               | 0        | -      | Tonga Cable Limited
-    AS38201  | STUB: VOLATILE                 | 0        | 100%   | Tonga Communications Internet Network
-    AS38198  | NOT ROUTED                     | 0        | 1%     | Digicel Tonga Ltd
+    AS38201  | STUB: VULNERABLE               | 0        | -      | Tonga Communications Internet Network
+    AS38198  | NOT ROUTED                     | 0        | -      | Digicel Tonga Ltd
 
     ====================================================================================================
      TRANSIT SUPPLY CHAIN (Who provides to TO?)

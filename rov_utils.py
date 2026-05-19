@@ -149,7 +149,6 @@ TIER_1_ASNS: set[int] = {
 # Go equivalent: isNonTransit() in constants.go
 NON_TRANSIT_ASNS: set[int] = {
     213241,  # TECHIT.BE — IXP Route Server
-    24482,   # SG.GS — IXP Route Server
     13335,   # Cloudflare — CDN/Anycast (non-transit for topology)
     3333,    # RIPE NCC
     4608,    # APNIC (refuses ROV to avoid member lockout)

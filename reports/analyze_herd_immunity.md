@@ -1,21 +1,21 @@
     [*] Loading rov_audit_v22_final.csv...
-        - Loading Cones from final_as_rank.csv... OK (86353 ASNs)
+        - Loading Cones from final_as_rank.csv... OK (86453 ASNs)
         - Loading Graph from data/downstream_graph.json... OK
-    [!] 77 IXP phantom networks excluded (< 5% captive customers). Re-run build_topology for full fix.
+    [!] 83 IXP phantom networks excluded (< 5% captive customers). Re-run build_topology for full fix.
 
     ================================================================================
      HERD IMMUNITY STATUS
     ================================================================================
 
     [GLOBAL CORE] (The 100 largest legitimate transit networks)
-      Networks Secure:      33 / 100  (33.0%)
-      Traffic Protected:   68.6% (by Cone Weight)
-      Progress: |██████████████████████████████████░░░░░░░░░░░░░░░░|
+      Networks Secure:      58 / 100  (58.0%)
+      Traffic Protected:   82.8% (by Cone Weight)
+      Progress: |█████████████████████████████████████████░░░░░░░░░|
 
     [TRANSIT LAYER] (The 1000 largest legitimate transit networks)
-      Networks Secure:     262 / 1000  (26.2%)
-      Traffic Protected:   66.6% (by Cone Weight)
-      Progress: |█████████████████████████████████░░░░░░░░░░░░░░░░░|
+      Networks Secure:     272 / 1000  (27.2%)
+      Traffic Protected:   80.5% (by Cone Weight)
+      Progress: |████████████████████████████████████████░░░░░░░░░░|
 
     ================================================================================
      THE HOLDOUTS (Top Vulnerable Transit Nets)
@@ -23,32 +23,32 @@
     ------------------------------------------------------------------------------------
     Rank  | ASN      | CC |       Cone |  Excl% | Name
     ------------------------------------------------------------------------------------
-    #4    | AS6461   | US |     70,612 |    39% | Zayo Bandwidth
-    #10   | AS6762   | IT |     65,564 |    10% | Telecom Italia Sparkle (Seabone)
-    #19   | AS4134   | CN |     60,707 |    81% | China Telecom Backbone
-    #23   | AS4837   | CN |     44,096 |    65% | China Unicom Backbone
-    #24   | AS3216   | RU |     34,513 |    28% | Vimpelcom PJSC
-    #26   | AS34927  | CH |     31,562 |    10% | iFog GmbH
-    #27   | AS20485  | RU |     29,164 |    21% | TransTeleCom JSC
-    #32   | AS31133  | RU |     10,063 |    34% | MegaFon PJSC
-    #34   | AS9498   | IN |      8,526 |    53% | Bharti Airtel Ltd.
-    #37   | AS7713   | ID |      6,842 |    13% | PT Telkom Indonesia Tbk
-    #38   | AS56655  | NO |      6,834 |     5% | Gigahost AS
-    #41   | AS9304   | HK |      5,231 |    22% | HGC Global Communications Limited
-    #42   | AS52468  | PA |      5,015 |    46% | UFINET PANAMA S.A.
-    #50   | AS32787  | US |      3,081 |    52% | Akamai (Prolexic)
-    #52   | AS9808   | CN |      2,537 |    77% | China Mobile Backbone
-    #53   | AS4755   | IN |      2,497 |    54% | TATA Communications (formerly VSNL)
-    #59   | AS8359   | RU |      2,053 |    60% | MTS PJSC
-    #65   | AS53062  | BR |      1,474 |    60% | ALT | GRUPO BRASIL TECPAR
-    #67   | AS46887  | US |      1,375 |    67% | Crown Castle Fiber LLC
-    #69   | AS20764  | RU |      1,143 |    16% | CJSC RASCOM
-    #70   | AS4230   | BR |      1,125 |    50% | Claro (Embratel)
-    #73   | AS4766   | KR |      1,035 |    78% | Korea Telecom
-    #77   | AS35598  | RU |        845 |    17% | INETCOM CARRIER LLC
-    #79   | AS9049   | RU |        813 |    58% | JSC "ER-Telecom Holding"
-    #80   | AS12741  | PL |        802 |    70% | Netia SA
+    #15   | AS4134   | CN |     64,579 |    81% | China Telecom Backbone
+    #22   | AS4837   | CN |     47,004 |    67% | China Unicom Backbone
+    #27   | AS20485  | RU |     28,703 |    22% | TransTeleCom JSC
+    #41   | AS9304   | HK |      5,182 |    22% | HGC Global Communications Limited
+    #42   | AS52468  | PA |      4,857 |    50% | UFINET PANAMA S.A.
+    #43   | AS8220   | GB |      4,784 |    55% | COLT
+    #51   | AS9808   | CN |      2,629 |    76% | China Mobile Backbone
+    #76   | AS12741  | PL |        793 |    70% | Netia SA
+    #80   | AS14789  | US |        674 |    29% | Cloudflare, Inc.
+    #89   | AS9929   | CN |        543 |    69% | China Unicom Industrial Internet Backbon
+    #104  | AS18229  | IN |        458 |    78% | CtrlS
+    #130  | AS45820  | IN |        343 |    69% | Tata Teleservices ISP
+    #175  | AS20115  | US |        232 |    73% | Charter Communications LLC
+    #180  | AS9730   | IN |        229 |    73% | Bharti Telesonic Ltd
+    #185  | AS12302  | RO |        215 |    72% | Vodafone Romania S.A.
+    #186  | AS971    | US |        215 |    11% | PureVoltage Hosting Inc.
+    #193  | AS131111 | ID |        210 |    29% | PT Mora Telematika Indonesia Tbk
+    #196  | AS42337  | IR |        206 |    90% | Respina Networks & Beyond PJSC
+    #200  | AS263903 | BR |        201 |    57% | INFORBARRA TELECOM
+    #211  | AS20205  | US |        187 |     6% | Amplex Electric, Inc.
+    #219  | AS262663 | BR |        182 |    27% | METROFLEX TELECOMUNICACOES LTDA
+    #230  | AS7717   | ID |        174 |    32% | OpenIXP Route Servers
+    #249  | AS52925  | BR |        161 |    30% | Ascenty Data Centers e Telecomunicações 
+    #258  | AS4761   | ID |        158 |    52% | PT Indosat Tbk
+    #260  | AS1680   | IL |        158 |    69% | Cellcom Fixed Line Communication L.P
     ------------------------------------------------------------------------------------
 
     CONCLUSION:
-    NO IMMUNITY. Major transit providers are still leaking routes.
+    CLOSE TO IMMUNITY. The Core is mostly safe, but key giants remain.

@@ -15,7 +15,7 @@
     ASN      | Verdict                        | Cone     | APNIC% | Name
     ----------------------------------------------------------------------------------------------------
     AS214652 | STUB: PASSIVE (Clean Pipe)     | 0        | -      | ANQI CHEN
-    AS17893  | STUB: PASSIVE (Clean Pipe)     | 0        | 0%     | Palau National Communications Corp.
+    AS17893  | STUB: PASSIVE (Clean Pipe)     | 0        | -      | Palau National Communications Corp.
     AS58932  | STUB: VULNERABLE               | 0        | -      | Palau Mobile Communications Inc.
     AS133897 | STUB: VULNERABLE               | 0        | -      | Palau Equipment Co. Inc.
 

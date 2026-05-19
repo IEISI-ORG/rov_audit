@@ -7,7 +7,7 @@
     Total Cone Gravity:  11
     ------------------------------------------------------------
     SECURE (ACTIVE/PASSIVE):     3 (14.3%) -> Protects 0.0% of Traffic
-    VULNERABLE NETWORKS:         9 (42.9%) -> Exposes  36.4% of Traffic
+    VULNERABLE NETWORKS:         8 (38.1%) -> Exposes  18.2% of Traffic
 
     ====================================================================================================
      THE FJ CORE (Top 20 Networks)
@@ -15,21 +15,21 @@
     ASN      | Verdict                        | Cone     | APNIC% | Name
     ----------------------------------------------------------------------------------------------------
     AS38442  | PARTIAL: VULNERABLE (Mixed)    | 7        | 0%     | Vodafone Fiji Limited
-    AS4638   | VULNERABLE (Atlas Verified)    | 2        | 63%    | Telecom Fiji Limited
+    AS4638   | Unverified (Transit/Peer?)     | 2        | -      | Telecom Fiji Limited
     AS45355  | INCONSISTENT                   | 2        | 1%     | Digicel Fiji Limited
-    AS154229 | NOT ROUTED                     | 0        | -      | Fiji National Provident Fund
     AS153509 | NOT ROUTED                     | 0        | -      | Land Transport Authority of Fiji
+    AS154229 | NOT ROUTED                     | 0        | -      | Fiji National Provident Fund
     AS141470 | STUB: VULNERABLE               | 0        | -      | ITC Services
     AS142245 | STUB: PASSIVE (Clean Pipe)     | 0        | -      | Kastle (Fiji) Pte Ltd
     AS137890 | STUB: VULNERABLE               | 0        | -      | Walesi Ltd
     AS140046 | NOT ROUTED                     | 0        | -      | Telecommunications Authority of Fiji
     AS149429 | STUB: VULNERABLE               | 0        | -      | Reserve Bank of Fiji
-    AS24390  | STUB: ACTIVE LOCAL ROV         | 0        | -      | The University of the South Pacific
+    AS24390  | STUB: PASSIVE (Clean Pipe)     | 0        | -      | The University of the South Pacific
     AS9241   | STUB: VULNERABLE               | 0        | -      | Fiji International Telecomunications Ltd
     AS133625 | NOT ROUTED                     | 0        | -      | HFC Bank
     AS134208 | NOT ROUTED                     | 0        | -      | Bank of South Pacifc (Fiji)
     AS136415 | NOT ROUTED                     | 0        | -      | KIDANET Internet Service Provider
-    AS136921 | STUB: FORTUITOUS ROV           | 0        | 100%   | Fiji National University
+    AS136921 | STUB: PASSIVE (Clean Pipe)     | 0        | -      | Fiji National University
     AS135647 | STUB: VULNERABLE               | 0        | -      | Airports Fiji Limited
     AS133067 | NOT ROUTED                     | 0        | -      | Newcom Live (Fiji) Limited
     AS132248 | STUB: VULNERABLE               | 0        | -      | Reserve Bank of Fiji
@@ -43,10 +43,10 @@
     #1   | AS174    | 3          | CORE: ACTIVE PROTECTOR         | Cogent Communications, LLC
     #2   | AS6939   | 3          | CORE: ACTIVE PROTECTOR         | Hurricane Electric LLC
     #3   | AS4637   | 3          | CORE: ACTIVE PROTECTOR         | Telstra International Limited
-    #4   | AS4638   | 3          | VULNERABLE (Atlas Verified)    | Telecom Fiji Limited
-    #5   | AS7474   | 2          | VULNERABLE (Atlas Verified)    | SingTel Optus Pty Ltd
+    #4   | AS4638   | 3          | Unverified (Transit/Peer?)     | Telecom Fiji Limited
+    #5   | AS7474   | 2          | PARTIAL: VULNERABLE (Mixed)    | SingTel Optus Pty Ltd
     #6   | AS38442  | 2          | PARTIAL: VULNERABLE (Mixed)    | Vodafone Fiji Limited
-    #7   | AS7575   | 2          | PARTIAL: VULNERABLE (Mixed)    | Australian Academic and Research Network
+    #7   | AS7575   | 2          | ACTIVE LOCAL ROV               | Australian Academic and Research Network
     #8   | AS4648   | 2          | PARTIAL: VULNERABLE (Mixed)    | Spark New Zealand
     #9   | AS2914   | 1          | CORE: ACTIVE PROTECTOR         | NTT America, Inc.
     #10  | AS7473   | 1          | PARTIAL: VULNERABLE (Mixed)    | Singapore Telecommunications Ltd
