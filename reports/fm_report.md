@@ -15,11 +15,11 @@
     ASN      | Verdict                        | Cone     | APNIC% | Name
     ----------------------------------------------------------------------------------------------------
     AS142139 | STUB: PASSIVE (Clean Pipe)     | 0        | -      | Boom! Inc.
-    AS139759 | NOT ROUTED                     | 0        | -      | FSM Telecommunications Corporation
+    AS139759 | NOT ROUTED                     | 0        | 0%     | FSM Telecommunications Corporation
     AS10130  | STUB: VULNERABLE               | 0        | -      | FSM Telecommunications Corporation
-    AS58524  | NOT ROUTED                     | 0        | -      | FSM Telecom
-    AS45193  | NOT ROUTED                     | 0        | -      | FSM Telecommunications Corporation
-    AS38875  | NOT ROUTED                     | 0        | -      | FSM Telecommunications Corporation
+    AS58524  | NOT ROUTED                     | 0        | 3%     | FSM Telecom
+    AS45193  | NOT ROUTED                     | 0        | 0%     | FSM Telecommunications Corporation
+    AS38875  | NOT ROUTED                     | 0        | 0%     | FSM Telecommunications Corporation
 
     ====================================================================================================
      TRANSIT SUPPLY CHAIN (Who provides to FM?)

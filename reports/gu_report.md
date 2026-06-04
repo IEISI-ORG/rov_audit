@@ -14,15 +14,15 @@
     ====================================================================================================
     ASN      | Verdict                        | Cone     | APNIC% | Name
     ----------------------------------------------------------------------------------------------------
-    AS3605   | PARTIAL: VULNERABLE (Mixed)    | 3        | -      | Guam Cablevision, LLC.
+    AS3605   | PARTIAL: VULNERABLE (Mixed)    | 3        | 0%     | Guam Cablevision, LLC.
     AS395400 | PASSIVE (Clean Pipe)           | 2        | -      | UNIVERSITY OF GUAM
     AS152735 | STUB: VULNERABLE               | 0        | -      | Guam Exchange
     AS23676  | STUB: VULNERABLE               | 0        | -      | Mariana Islands Internet Exchange
     AS17456  | STUB: VOLATILE                 | 0        | -      | Pacific Data Systems
-    AS9246   | STUB: VULNERABLE               | 0        | -      | Teleguam Holdings, LLC
+    AS9246   | STUB: VULNERABLE               | 0        | 0%     | Teleguam Holdings, LLC
     AS9548   | NOT ROUTED                     | 0        | -      | InternetPCI
-    AS56200  | STUB: VULNERABLE               | 0        | -      | Guam Community College
     AS55863  | NOT ROUTED                     | 0        | -      | Choice Phone LLC
+    AS56200  | STUB: VULNERABLE               | 0        | -      | Guam Community College
     AS133071 | NOT ROUTED                     | 0        | -      | DoCoMo Pacific
 
     ====================================================================================================

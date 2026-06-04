@@ -3,37 +3,37 @@
     ====================================================================================================
      NATIONAL ROUTING SECURITY: FR
     ====================================================================================================
-    Total Networks:      1,868
-    Total Cone Gravity:  179,085
+    Total Networks:      1,873
+    Total Cone Gravity:  180,479
     ------------------------------------------------------------
-    SECURE (ACTIVE/PASSIVE):   640 (34.3%) -> Protects 62.0% of Traffic
-    VULNERABLE NETWORKS:       657 (35.2%) -> Exposes  0.0% of Traffic
+    SECURE (ACTIVE/PASSIVE):   670 (35.8%) -> Protects 61.5% of Traffic
+    VULNERABLE NETWORKS:       623 (33.3%) -> Exposes  0.0% of Traffic
 
     ====================================================================================================
      THE FR CORE (Top 20 Networks)
     ====================================================================================================
     ASN      | Verdict                        | Cone     | APNIC% | Name
     ----------------------------------------------------------------------------------------------------
-    AS5511   | CORE: ACTIVE PROTECTOR         | 61017    | -      | Orange S.A.
-    AS35280  | PARTIAL: VULNERABLE (Mixed)    | 50781    | -      | F5 Networks SARL
-    AS34019  | ACTIVE LOCAL ROV               | 27497    | -      | Hivane Association
-    AS212024 | PASSIVE (Clean Pipe)           | 14848    | -      | Marc Schmitt
-    AS30781  | PARTIAL: VULNERABLE (Mixed)    | 9999     | -      | Free Pro SAS
-    AS8218   | ACTIVE LOCAL ROV               | 5996     | -      | Zayo Europe
-    AS204092 | PARTIAL: VULNERABLE (Mixed)    | 3618     | -      | Association GRIFON
-    AS50628  | PARTIAL: VULNERABLE (Mixed)    | 2209     | -      | Leonix Telecom SAS
-    AS29075  | VOLATILE                       | 1414     | -      | IELO-LIAZO SERVICES SAS
-    AS16276  | PARTIAL: VULNERABLE (Mixed)    | 425      | 0%     | OVH SAS
-    AS35625  | PARTIAL: VULNERABLE (Mixed)    | 295      | -      | Eurofiber France SAS
-    AS3215   | VOLATILE                       | 165      | 100%   | Orange S.A.
-    AS15557  | PARTIAL: VULNERABLE (Mixed)    | 91       | 42%    | SFR SA
-    AS35661  | PARTIAL: VULNERABLE (Mixed)    | 87       | 0%     | VIRTUA SYSTEMS SAS
+    AS5511   | CORE: ACTIVE PROTECTOR         | 60990    | 100%   | Orange S.A.
+    AS35280  | PARTIAL: VULNERABLE (Mixed)    | 51289    | -      | F5 Networks SARL
+    AS34019  | ACTIVE LOCAL ROV               | 28235    | -      | Hivane Association
+    AS212024 | PASSIVE (Clean Pipe)           | 14380    | -      | Marc Schmitt
+    AS30781  | PARTIAL: VULNERABLE (Mixed)    | 10785    | 97%    | Free Pro SAS
+    AS8218   | ACTIVE LOCAL ROV               | 5803     | 82%    | Zayo Europe
+    AS204092 | PARTIAL: VULNERABLE (Mixed)    | 3727     | -      | Association GRIFON
+    AS50628  | PARTIAL: VULNERABLE (Mixed)    | 2205     | -      | Leonix Telecom SAS
+    AS29075  | VOLATILE                       | 1372     | 97%    | IELO-LIAZO SERVICES SAS
+    AS16276  | PARTIAL: VULNERABLE (Mixed)    | 433      | 1%     | OVH SAS
+    AS35625  | PARTIAL: VULNERABLE (Mixed)    | 283      | 0%     | Eurofiber France SAS
+    AS3215   | ACTIVE LOCAL ROV               | 163      | 100%   | Orange S.A.
+    AS15557  | PARTIAL: VULNERABLE (Mixed)    | 92       | 53%    | SFR SA
+    AS35661  | PARTIAL: VULNERABLE (Mixed)    | 85       | 0%     | VIRTUA SYSTEMS SAS
     AS31216  | PASSIVE (Clean Pipe)           | 67       | -      | BSO Network Solutions SAS
-    AS2200   | PARTIAL: VULNERABLE (Mixed)    | 41       | -      | Renater
-    AS43531  | VULNERABLE                     | 24       | -      | BSO Network Solutions SAS
+    AS2200   | PARTIAL: VULNERABLE (Mixed)    | 41       | 4%     | Renater
+    AS16347  | PARTIAL: VULNERABLE (Mixed)    | 23       | 0%     | ADISTA SAS
     AS39801  | PARTIAL: VULNERABLE (Mixed)    | 23       | -      | France-IX L3 Services
-    AS16347  | PARTIAL: VULNERABLE (Mixed)    | 23       | -      | ADISTA SAS
-    AS198831 | Unverified (Transit/Peer?)     | 20       | -      | GENIUSWEER SAS
+    AS43531  | VULNERABLE                     | 23       | -      | BSO Network Solutions SAS
+    AS212815 | PARTIAL: VULNERABLE (Mixed)    | 22       | 100%   | Dyjix SAS
 
     ====================================================================================================
      TRANSIT SUPPLY CHAIN (Who provides to FR?)
@@ -41,11 +41,11 @@
     Rank | Upstream | Dependents | Global Status                  | Name
     ----------------------------------------------------------------------------------------------------
     #1   | AS174    | 322        | CORE: ACTIVE PROTECTOR         | Cogent Communications, LLC
-    #2   | AS30781  | 140        | PARTIAL: VULNERABLE (Mixed)    | Free Pro SAS
-    #3   | AS3215   | 124        | VOLATILE                       | Orange S.A.
+    #2   | AS30781  | 139        | PARTIAL: VULNERABLE (Mixed)    | Free Pro SAS
+    #3   | AS3215   | 124        | ACTIVE LOCAL ROV               | Orange S.A.
     #4   | AS3356   | 116        | CORE: ACTIVE PROTECTOR         | Lumen (Level 3)
     #5   | AS8218   | 113        | ACTIVE LOCAL ROV               | Zayo Europe
-    #6   | AS8220   | 96         | INCONSISTENT                   | COLT
+    #6   | AS8220   | 96         | ACTIVE LOCAL ROV               | COLT
     #7   | AS29075  | 92         | VOLATILE                       | IELO-LIAZO SERVICES SAS
     #8   | AS1299   | 87         | CORE: ACTIVE PROTECTOR         | Arelion (fka. Telia Carrier)
     #9   | AS6939   | 77         | CORE: ACTIVE PROTECTOR         | Hurricane Electric LLC

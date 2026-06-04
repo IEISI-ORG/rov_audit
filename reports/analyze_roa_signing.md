@@ -1,13 +1,13 @@
     [*] Loading Data for ROA Signing Report...
-        - Loading ASN data from packed file... OK (122,550 records)
+        - Loading ASN data from packed file... OK (122,782 records)
 
     ================================================================================
     GLOBAL ROA SIGNING REPORT
     ================================================================================
-    Total Networks: 121,363
-      - Fully Signed (>90%):  43,150  (35.6%)
-      - Partially Signed:      5,900  (4.9%)
-      - Totally Unsigned:     72,313  (59.6%)
+    Total Networks: 121,565
+      - Fully Signed (>90%):  43,568  (35.8%)
+      - Partially Signed:      5,921  (4.9%)
+      - Totally Unsigned:     72,076  (59.3%)
 
     ================================================================================
     THE 'GLASS HOUSES' (Secure Provider, but Unsigned Routes)
@@ -15,39 +15,39 @@
     --------------------------------------------------------------------------------
     ASN      | CC | Cone     | Signed | Name
     --------------------------------------------------------------------------------
-    AS3216   | RU | 34717    |   1.3% | Vimpelcom PJSC
-    AS48185  | BE | 22344    |   0.0% | team.blue NV
-    AS16735  | BR | 2619     |   0.0% | Algar Telecom
-    AS14840  | BR | 1457     |   0.0% | BR.DIGITAL 
-    AS46887  | US | 1372     |   0.3% | Crown Castle Fiber LLC
-    AS201054 | PL | 1350     |   0.0% | Stowarzyszenie e-Poludnie
-    AS209    | US | 610      |   1.3% | Lumen (ex. Qwest)
-    AS61568  | BR | 533      |   0.0% | ALOO TELECOM - FSF TECNOLOGIA SA
-    AS3549   | US | 478      |   1.2% | Lumen (fka. Global Crossing)
-    AS10429  | BR | 473      |   0.0% | Vivo (TELEFÔNICA BRASIL)
-    AS3786   | KR | 459      |   0.2% | LG DACOM Corporation
-    AS2764   | AU | 424      |   0.6% | AAPT Limited
-    AS24115  | SG | 296      |   0.0% | Equinix IX
-    AS62081  | PL | 286      |   0.0% | Stowarzyszenie e-Poludnie
-    AS61973  | CZ | 269      |   0.0% | Netassist International s.r.o.
+    AS3216   | RU | 29953    |   1.3% | Vimpelcom PJSC
+    AS48185  | BE | 22960    |   0.0% | team.blue NV
+    AS16735  | BR | 2323     |   0.0% | Algar Telecom
+    AS14840  | BR | 1638     |   0.0% | BR.DIGITAL 
+    AS46887  | US | 1379     |   0.3% | Crown Castle Fiber LLC
+    AS1031   | US | 941      |   0.0% | PEER 1031 LLC
+    AS201054 | PL | 857      |   0.0% | Stowarzyszenie e-Poludnie
+    AS209    | US | 608      |   1.3% | Lumen (ex. Qwest)
+    AS61568  | BR | 551      |   0.0% | ALOO TELECOM - FSF TECNOLOGIA SA
+    AS3549   | US | 475      |   1.2% | Lumen (fka. Global Crossing)
+    AS3786   | KR | 460      |   0.2% | LG DACOM Corporation
+    AS10429  | BR | 434      |   0.0% | Vivo (TELEFÔNICA BRASIL)
+    AS2764   | AU | 411      |   0.7% | AAPT Limited
+    AS28368  | BR | 311      |   0.0% | Wirelink (Sobralnet)
+    AS62081  | PL | 283      |   0.0% | Stowarzyszenie e-Poludnie
 
     ================================================================================
     SCREAMING INTO THE VOID (Fully Signed, but Vulnerable Upstreams)
     --------------------------------------------------------------------------------
     ASN      | CC | Cone     | Feeds  | Name
     --------------------------------------------------------------------------------
-    AS37721  | BF | 58192    | 1/17   | Virtual Technologies & Solutions
-    AS17639  | PH | 42698    | 0/10   | Converge ICT Solutions Inc.
-    AS38001  | SG | 7938     | 0/8    | NewMedia Express Pte. Ltd.
-    AS9304   | HK | 5182     | 2/15   | HGC Global Communications Limited
-    AS52468  | PA | 4857     | 0/7    | UFINET PANAMA S.A.
-    AS8220   | GB | 4784     | 0/12   | COLT
-    AS12741  | PL | 793      | 0/5    | Netia SA
-    AS14789  | US | 674      | 2/2    | Cloudflare, Inc.
-    AS18229  | IN | 458      | 1/1    | CtrlS
-    AS45820  | IN | 343      | 1/1    | Tata Teleservices ISP
-    AS12302  | RO | 215      | 0/1    | Vodafone Romania S.A.
-    AS131111 | ID | 210      | 1/1    | PT Mora Telematika Indonesia Tbk
-    AS42337  | IR | 206      | 0/0    | Respina Networks & Beyond PJSC
-    AS1680   | IL | 158      | 2/10   | Cellcom Fixed Line Communication L.P
-    AS4761   | ID | 158      | 3/10   | PT Indosat Tbk
+    AS37721  | BF | 58375    | 1/17   | Virtual Technologies & Solutions
+    AS17639  | PH | 40992    | 1/11   | Converge ICT Solutions Inc.
+    AS9304   | HK | 8894     | 1/14   | HGC Global Communications Limited
+    AS38001  | SG | 7866     | 0/8    | NewMedia Express Pte. Ltd.
+    AS52468  | PA | 5113     | 0/7    | UFINET PANAMA S.A.
+    AS12741  | PL | 796      | 0/5    | Netia SA
+    AS3223   | GB | 792      | 1/13   | Voxility LLP
+    AS14789  | US | 726      | 2/2    | Cloudflare, Inc.
+    AS18229  | IN | 445      | 1/1    | CtrlS
+    AS45820  | IN | 330      | 1/1    | Tata Teleservices ISP
+    AS53356  | CA | 270      | 1/4    | Free Range Cloud Hosting Inc.
+    AS42337  | IR | 230      | 0/0    | Respina Networks & Beyond PJSC
+    AS131111 | ID | 223      | 1/1    | PT Mora Telematika Indonesia Tbk
+    AS12302  | RO | 218      | 0/1    | Vodafone Romania S.A.
+    AS135607 | PH | 194      | 0/5    | Infinivan Incorporated

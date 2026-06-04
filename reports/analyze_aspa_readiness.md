@@ -1,15 +1,15 @@
     [*] Loading Data for ASPA Maturity Model...
-        - Loading ASN data from packed file... OK (122,550 records)
+        - Loading ASN data from packed file... OK (122,782 records)
     [*] Modeling Global ASPA Maturity...
 
     ===============================================================================================
      1. THE REALITY OF ASPA ENFORCEMENT
     ===============================================================================================
-    Total Customer-to-Provider Links: 168,935
-    Theoretical Max Protection (Top 100 Providers): 88,073 links (52.1%)
-    Realistic Forecast (Weighted by current ROV status): 73,888 links (43.7%)
+    Total Customer-to-Provider Links: 168,075
+    Theoretical Max Protection (Top 100 Providers): 87,953 links (52.3%)
+    Realistic Forecast (Weighted by current ROV status): 73,998 links (44.0%)
 
-    [!] THE REALITY GAP: 14,184 links are dependent on providers who currently FAIL at ROV.
+    [!] THE REALITY GAP: 13,954 links are dependent on providers who currently FAIL at ROV.
         These networks cannot be expected to enforce ASPA until they fix their ROV baseline.
 
     ===============================================================================================
@@ -20,20 +20,20 @@
     ASN      | CC | Maturity   | ROA%   | Ups  | Name
     ---------------------------------------------------------------------------------------------------------
     AS20473  | US |    100.0% | 100.0% | 9    | The Constant Company, LLC
-    AS206499 | DE |    100.0% | 100.0% | 2    | LOCIX LIMITED
     AS29504  | CZ |    100.0% | 100.0% | 2    | Freenet Liberec, z.s.
-    AS53667  | US |    100.0% | 100.0% | 2    | FranTech Solutions
-    AS53087  | BR |    100.0% | 100.0% | 3    | TELY Ltda.
-    AS3215   | FR |    100.0% | 100.0% | 1    | Orange S.A.
-    AS5617   | PL |    100.0% | 100.0% | 2    | Orange Polska Spolka Akcyjna
-    AS204092 | NL |    100.0% | 100.0% | 2    | Association GRIFON
-    AS50607  | PL |    100.0% | 100.0% | 5    | Stowarzyszenie e-Poludnie
-    AS131111 | ID |    100.0% | 100.0% | 1    | PT Mora Telematika Indonesia Tbk
+    AS206499 | DE |    100.0% | 100.0% | 2    | LOCIX LIMITED
     AS61292  | SG |    100.0% | 100.0% | 4    | Blix Group AS
-    AS59919  | IT |    100.0% | 100.0% | 2    | Brainbox S.r.l.
+    AS131111 | ID |    100.0% | 100.0% | 1    | PT Mora Telematika Indonesia Tbk
     AS15830  | US |    100.0% | 100.0% | 8    | Equinix, Inc.
-    AS48362  | DE |    100.0% | 100.0% | 3    | Stadtwerke Feldkirch
-    AS7029   | US |    100.0% | 100.0% | 5    | Windstream Communications LLC
+    AS53667  | US |    100.0% | 100.0% | 2    | FranTech Solutions
+    AS28343  | BR |    100.0% | 100.0% | 4    | Unifique Telecomunicações SA
+    AS44324  | US |    100.0% | 100.0% | 3    | MoeDove LLC
+    AS49673  | RU |    100.0% | 100.0% | 1    | Truenetwork LLC
+    AS50607  | PL |    100.0% | 100.0% | 5    | Stowarzyszenie e-Poludnie
+    AS53087  | BR |    100.0% | 100.0% | 3    | TELY Ltda.
+    AS9498   | IN |    100.0% | 100.0% | 11   | Bharti Airtel Ltd.
+    AS267613 | BR |    100.0% | 100.0% | 4    | ELETRONET S.A.
+    AS55410  | IN |    100.0% | 100.0% | 6    | Vodafone Idea Ltd
 
     ===============================================================================================
      3. THE ASPA 'IMPOSSIBLES'
@@ -44,11 +44,11 @@
     ---------------------------------------------------------------------------------------------------------
     AS714    | US | 25         | Apple Inc.
     AS19679  | US | 24         | Dropbox, Inc.
-    AS23576  | KR | 24         | NAVER Cloud Corp.
-    AS39063  | DE | 22         | Leitwert GmbH
+    AS23576  | KR | 23         | NAVER Cloud Corp.
     AS35928  | US | 21         | BECKMAN COULTER, INC.
+    AS39063  | DE | 21         | Leitwert GmbH
     AS3573   | US | 20         | Accenture LLP
     AS48237  | SA | 20         | Etihad Etisalat, a joint stock company
     AS11179  | US | 20         | Aryaka Networks, Inc.
-    AS30012  | US | 19         | Universal Music Group, INC.
-    AS16265  | NL | 16         | LeaseWeb Network B.V.
+    AS30012  | US | 18         | Universal Music Group, INC.
+    AS22764  | US | 16         | Fluor Enterprises, Inc.

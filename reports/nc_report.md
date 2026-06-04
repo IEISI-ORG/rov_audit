@@ -14,7 +14,7 @@
     ====================================================================================================
     ASN      | Verdict                        | Cone     | APNIC% | Name
     ----------------------------------------------------------------------------------------------------
-    AS18200  | PARTIAL: VULNERABLE (Mixed)    | 12       | -      | Office des Postes et Telecommunications 
+    AS18200  | PARTIAL: VULNERABLE (Mixed)    | 12       | 100%   | Office des Postes et Telecommunications 
     AS141695 | NOT ROUTED                     | 0        | -      | Pacific Community
     AS140718 | STUB: PASSIVE (Clean Pipe)     | 0        | -      | ENGIE PACIFIQUE INFORMATIQUE
     AS141197 | STUB: PASSIVE (Clean Pipe)     | 0        | -      | Pacific Community
@@ -22,17 +22,17 @@
     AS147030 | NOT ROUTED                     | 0        | -      | Mynet
     AS149003 | NOT ROUTED                     | 0        | -      | CAN'L
     AS24053  | NOT ROUTED                     | 0        | -      | Data Services Pacific
-    AS17480  | STUB: PASSIVE (Clean Pipe)     | 0        | -      | CANL
-    AS56055  | STUB: PASSIVE (Clean Pipe)     | 0        | -      | Micro Logic Systems
-    AS56089  | STUB: VOLATILE                 | 0        | -      | OFFRATEL
+    AS17480  | STUB: PASSIVE (Clean Pipe)     | 0        | 100%   | CANL
+    AS56055  | STUB: PASSIVE (Clean Pipe)     | 0        | 100%   | Micro Logic Systems
+    AS56089  | STUB: VOLATILE                 | 0        | 100%   | OFFRATEL
     AS134405 | STUB: PASSIVE (Clean Pipe)     | 0        | -      | Data Services Pacific
-    AS136402 | STUB: PASSIVE (Clean Pipe)     | 0        | -      | Nautile SARL
     AS137243 | STUB: PASSIVE (Clean Pipe)     | 0        | -      | INGENIERIE DES SYSTEMES DES INFORMATIONS
+    AS136402 | STUB: PASSIVE (Clean Pipe)     | 0        | -      | Nautile SARL
     AS131248 | STUB: PASSIVE (Clean Pipe)     | 0        | -      | GOTV
     AS132079 | NOT ROUTED                     | 0        | -      | Office des Postes et Telecommunications 
     AS131995 | STUB: VULNERABLE               | 0        | -      | XLPM
-    AS45345  | STUB: VOLATILE                 | 0        | -      | Nautile
     AS45461  | STUB: PASSIVE (Clean Pipe)     | 0        | -      | TeleNet
+    AS45345  | STUB: VOLATILE                 | 0        | 100%   | Nautile
 
     ====================================================================================================
      TRANSIT SUPPLY CHAIN (Who provides to NC?)

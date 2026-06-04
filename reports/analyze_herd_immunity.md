@@ -1,20 +1,20 @@
     [*] Loading rov_audit_v22_final.csv...
-        - Loading Cones from final_as_rank.csv... OK (86453 ASNs)
+        - Loading Cones from final_as_rank.csv... OK (86582 ASNs)
         - Loading Graph from data/downstream_graph.json... OK
-    [!] 83 IXP phantom networks excluded (< 5% captive customers). Re-run build_topology for full fix.
+    [!] 90 IXP phantom networks excluded (< 5% captive customers). Re-run build_topology for full fix.
 
     ================================================================================
      HERD IMMUNITY STATUS
     ================================================================================
 
     [GLOBAL CORE] (The 100 largest legitimate transit networks)
-      Networks Secure:      58 / 100  (58.0%)
+      Networks Secure:      57 / 100  (57.0%)
       Traffic Protected:   82.8% (by Cone Weight)
       Progress: |█████████████████████████████████████████░░░░░░░░░|
 
     [TRANSIT LAYER] (The 1000 largest legitimate transit networks)
-      Networks Secure:     272 / 1000  (27.2%)
-      Traffic Protected:   80.5% (by Cone Weight)
+      Networks Secure:     267 / 1000  (26.7%)
+      Traffic Protected:   80.6% (by Cone Weight)
       Progress: |████████████████████████████████████████░░░░░░░░░░|
 
     ================================================================================
@@ -23,31 +23,31 @@
     ------------------------------------------------------------------------------------
     Rank  | ASN      | CC |       Cone |  Excl% | Name
     ------------------------------------------------------------------------------------
-    #15   | AS4134   | CN |     64,579 |    81% | China Telecom Backbone
-    #22   | AS4837   | CN |     47,004 |    67% | China Unicom Backbone
-    #27   | AS20485  | RU |     28,703 |    22% | TransTeleCom JSC
-    #41   | AS9304   | HK |      5,182 |    22% | HGC Global Communications Limited
-    #42   | AS52468  | PA |      4,857 |    50% | UFINET PANAMA S.A.
-    #43   | AS8220   | GB |      4,784 |    55% | COLT
-    #51   | AS9808   | CN |      2,629 |    76% | China Mobile Backbone
-    #76   | AS12741  | PL |        793 |    70% | Netia SA
-    #80   | AS14789  | US |        674 |    29% | Cloudflare, Inc.
-    #89   | AS9929   | CN |        543 |    69% | China Unicom Industrial Internet Backbon
-    #104  | AS18229  | IN |        458 |    78% | CtrlS
-    #130  | AS45820  | IN |        343 |    69% | Tata Teleservices ISP
-    #175  | AS20115  | US |        232 |    73% | Charter Communications LLC
-    #180  | AS9730   | IN |        229 |    73% | Bharti Telesonic Ltd
-    #185  | AS12302  | RO |        215 |    72% | Vodafone Romania S.A.
-    #186  | AS971    | US |        215 |    11% | PureVoltage Hosting Inc.
-    #193  | AS131111 | ID |        210 |    29% | PT Mora Telematika Indonesia Tbk
-    #196  | AS42337  | IR |        206 |    90% | Respina Networks & Beyond PJSC
-    #200  | AS263903 | BR |        201 |    57% | INFORBARRA TELECOM
-    #211  | AS20205  | US |        187 |     6% | Amplex Electric, Inc.
-    #219  | AS262663 | BR |        182 |    27% | METROFLEX TELECOMUNICACOES LTDA
-    #230  | AS7717   | ID |        174 |    32% | OpenIXP Route Servers
-    #249  | AS52925  | BR |        161 |    30% | Ascenty Data Centers e Telecomunicações 
-    #258  | AS4761   | ID |        158 |    52% | PT Indosat Tbk
-    #260  | AS1680   | IL |        158 |    69% | Cellcom Fixed Line Communication L.P
+    #15   | AS4134   | CN |     64,918 |    74% | China Telecom Backbone
+    #23   | AS4837   | CN |     43,958 |    66% | China Unicom Backbone
+    #27   | AS20485  | RU |     28,709 |    21% | TransTeleCom JSC
+    #31   | AS9304   | HK |      8,894 |    18% | HGC Global Communications Limited
+    #41   | AS52468  | PA |      5,113 |    51% | UFINET PANAMA S.A.
+    #50   | AS9808   | CN |      2,563 |    75% | China Mobile Backbone
+    #75   | AS12741  | PL |        796 |    71% | Netia SA
+    #76   | AS3223   | GB |        792 |    23% | Voxility LLP
+    #78   | AS14789  | US |        726 |    28% | Cloudflare, Inc.
+    #81   | AS9583   | IN |        665 |    57% | Sify Limited
+    #90   | AS9929   | CN |        545 |    75% | China Unicom Industrial Internet Backbon
+    #103  | AS18229  | IN |        445 |    77% | CtrlS
+    #130  | AS45820  | IN |        330 |    69% | Tata Teleservices ISP
+    #152  | AS53356  | CA |        270 |    28% | Free Range Cloud Hosting Inc.
+    #174  | AS20115  | US |        232 |    73% | Charter Communications LLC
+    #177  | AS9730   | IN |        231 |    74% | Bharti Telesonic Ltd
+    #179  | AS42337  | IR |        230 |    90% | Respina Networks & Beyond PJSC
+    #185  | AS131111 | ID |        223 |    28% | PT Mora Telematika Indonesia Tbk
+    #186  | AS262663 | BR |        221 |    34% | METROFLEX TELECOMUNICACOES LTDA
+    #187  | AS12302  | RO |        218 |    72% | Vodafone Romania S.A.
+    #193  | AS13536  | US |        208 |    76% | FirstLight Networks, LLC
+    #196  | AS263903 | BR |        202 |    60% | INFORBARRA TELECOM
+    #203  | AS135607 | PH |        194 |    70% | Infinivan Incorporated
+    #208  | AS20205  | US |        185 |     6% | Amplex Electric, Inc.
+    #217  | AS7717   | ID |        178 |    30% | OpenIXP Route Servers
     ------------------------------------------------------------------------------------
 
     CONCLUSION:

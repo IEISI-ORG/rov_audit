@@ -3,37 +3,37 @@
     ====================================================================================================
      NATIONAL ROUTING SECURITY: CN
     ====================================================================================================
-    Total Networks:      6,473
-    Total Cone Gravity:  183,800
+    Total Networks:      6,476
+    Total Cone Gravity:  181,525
     ------------------------------------------------------------
-    SECURE (ACTIVE/PASSIVE):    77 ( 1.2%) -> Protects 34.8% of Traffic
-    VULNERABLE NETWORKS:      5046 (78.0%) -> Exposes  62.7% of Traffic
+    SECURE (ACTIVE/PASSIVE):    75 ( 1.2%) -> Protects 35.5% of Traffic
+    VULNERABLE NETWORKS:      5050 (78.0%) -> Exposes  62.0% of Traffic
 
     ====================================================================================================
      THE CN CORE (Top 20 Networks)
     ====================================================================================================
     ASN      | Verdict                        | Cone     | APNIC% | Name
     ----------------------------------------------------------------------------------------------------
-    AS4134   | CORE: UNPROTECTED              | 64579    | 0%     | China Telecom Backbone
-    AS4809   | CORE: ACTIVE PROTECTOR         | 63887    | 1%     | China Telecom Next Generation Carrier Ne
-    AS4837   | CORE: UNPROTECTED              | 47004    | 0%     | China Unicom Backbone
+    AS4134   | CORE: UNPROTECTED              | 64918    | 0%     | China Telecom Backbone
+    AS4809   | CORE: ACTIVE PROTECTOR         | 64341    | 0%     | China Telecom Next Generation Carrier Ne
+    AS4837   | CORE: UNPROTECTED              | 43958    | 2%     | China Unicom Backbone
     AS38255  | Unverified (Transit/Peer?)     | 4182     | -      | China Education and Research Network (CE
-    AS9808   | CORE: UNPROTECTED              | 2629     | 0%     | China Mobile Backbone
-    AS9929   | CORE: UNPROTECTED              | 543      | 22%    | China Unicom Industrial Internet Backbon
-    AS24429  | PARTIAL: VULNERABLE (Mixed)    | 164      | -      | Alibaba Cloud
+    AS9808   | CORE: UNPROTECTED              | 2563     | 0%     | China Mobile Backbone
+    AS9929   | CORE: UNPROTECTED              | 545      | 67%    | China Unicom Industrial Internet Backbon
+    AS24429  | PARTIAL: VULNERABLE (Mixed)    | 197      | -      | Alibaba Cloud
     AS4808   | VULNERABLE                     | 79       | 0%     | China Unicom Beijing Province Network
     AS139317 | PASSIVE (Clean Pipe)           | 69       | -      | Ningbo Dahuamao Information Technology C
     AS4847   | PARTIAL: VULNERABLE (Mixed)    | 67       | 0%     | China Telecom Beijing Province Network
-    AS56048  | VULNERABLE                     | 51       | 0%     | China Mobile Group Beijing Company
-    AS4812   | PARTIAL: VULNERABLE (Mixed)    | 45       | 0%     | China Telecom Shanghai Province Network
+    AS56048  | VULNERABLE                     | 50       | 0%     | China Mobile Group Beijing Company
+    AS4812   | PARTIAL: VULNERABLE (Mixed)    | 46       | 0%     | China Telecom Shanghai Province Network
     AS9425   | VULNERABLE                     | 40       | -      | Future Internet Technology Infrastructur
     AS38272  | VULNERABLE                     | 39       | -      | China Education and Research Network (CE
-    AS23910  | VULNERABLE                     | 35       | 1%     | China Next Generation Internet CERNET2
-    AS17621  | VULNERABLE                     | 34       | 11%    | China Unicom Shanghai network
-    AS24400  | VULNERABLE                     | 33       | 0%     | Shanghai Mobile Communications Co.,Ltd.
+    AS17621  | VULNERABLE                     | 34       | 5%     | China Unicom Shanghai network
+    AS23910  | VULNERABLE                     | 34       | 0%     | China Next Generation Internet CERNET2
+    AS24400  | VULNERABLE                     | 34       | 0%     | Shanghai Mobile Communications Co.,Ltd.
+    AS4538   | PARTIAL: VULNERABLE (Mixed)    | 32       | 0%     | China Education and Research Network Cen
     AS146788 | VULNERABLE                     | 32       | -      | China Broadcasting Network Co., Ltd
-    AS4538   | PARTIAL: VULNERABLE (Mixed)    | 28       | 1%     | China Education and Research Network Cen
-    AS213605 | PARTIAL: VULNERABLE (Mixed)    | 24       | -      | Liu HaoRan
+    AS213605 | PARTIAL: VULNERABLE (Mixed)    | 22       | -      | Liu HaoRan
 
     ====================================================================================================
      TRANSIT SUPPLY CHAIN (Who provides to CN?)

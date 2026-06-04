@@ -14,8 +14,8 @@
     ====================================================================================================
     ASN      | Verdict                        | Cone     | APNIC% | Name
     ----------------------------------------------------------------------------------------------------
-    AS140504 | STUB: VULNERABLE               | 0        | -      | Digicel Nauru Corporation
     AS141368 | NOT ROUTED                     | 0        | -      | ICT
+    AS140504 | STUB: VULNERABLE               | 0        | 0%     | Digicel Nauru Corporation
     AS152706 | NOT ROUTED                     | 0        | -      | Neotel
     AS55723  | NOT ROUTED                     | 0        | -      | Digicel Nauru
     AS55722  | STUB: PASSIVE (Clean Pipe)     | 0        | -      | Cenpac Net Inc
@@ -25,7 +25,7 @@
     ====================================================================================================
     Rank | Upstream | Dependents | Global Status                  | Name
     ----------------------------------------------------------------------------------------------------
-    #1   | AS132528 | 1          | PARTIAL: VULNERABLE (Mixed)    | DIGICEL (AUS) PTY LTD
-    #2   | AS12684  | 1          | PARTIAL: VULNERABLE (Mixed)    | SES ASTRA S.A.
-    #3   | AS55722  | 1          | STUB: PASSIVE (Clean Pipe)     | Cenpac Net Inc
+    #1   | AS55722  | 1          | STUB: PASSIVE (Clean Pipe)     | Cenpac Net Inc
+    #2   | AS132528 | 1          | PARTIAL: VULNERABLE (Mixed)    | DIGICEL (AUS) PTY LTD
+    #3   | AS12684  | 1          | REGRESSED                      | SES ASTRA S.A.
     #4   | AS14593  | 1          | PARTIAL: VULNERABLE (Mixed)    | SpaceX Starlink

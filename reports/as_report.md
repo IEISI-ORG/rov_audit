@@ -14,8 +14,8 @@
     ====================================================================================================
     ASN      | Verdict                        | Cone     | APNIC% | Name
     ----------------------------------------------------------------------------------------------------
-    AS23657  | STUB: PASSIVE (Clean Pipe)     | 0        | -      | Blue Sky Communications
-    AS9751   | STUB: PASSIVE (Clean Pipe)     | 0        | -      | AMERICAN SAMOA TELECOMMUNICATIONS AUTHOR
+    AS23657  | STUB: FORTUITOUS ROV           | 0        | 95%    | Blue Sky Communications
+    AS9751   | STUB: PASSIVE (Clean Pipe)     | 0        | 0%     | AMERICAN SAMOA TELECOMMUNICATIONS AUTHOR
 
     ====================================================================================================
      TRANSIT SUPPLY CHAIN (Who provides to AS?)

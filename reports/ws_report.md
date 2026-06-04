@@ -6,24 +6,24 @@
     Total Networks:      10
     Total Cone Gravity:  1
     ------------------------------------------------------------
-    SECURE (ACTIVE/PASSIVE):     0 ( 0.0%) -> Protects 0.0% of Traffic
-    VULNERABLE NETWORKS:         2 (20.0%) -> Exposes  0.0% of Traffic
+    SECURE (ACTIVE/PASSIVE):     1 (10.0%) -> Protects 0.0% of Traffic
+    VULNERABLE NETWORKS:         1 (10.0%) -> Exposes  0.0% of Traffic
 
     ====================================================================================================
      THE WS CORE (Top 20 Networks)
     ====================================================================================================
     ASN      | Verdict                        | Cone     | APNIC% | Name
     ----------------------------------------------------------------------------------------------------
-    AS17993  | PARTIAL: VULNERABLE (Mixed)    | 1        | -      | Vodafone Samoa Limited
+    AS17993  | PARTIAL: VULNERABLE (Mixed)    | 1        | 97%    | Vodafone Samoa Limited
     AS138356 | NOT ROUTED                     | 0        | -      | National University of Samoa
     AS139679 | NOT ROUTED                     | 0        | -      | Office of the Electoral Commission
-    AS150321 | STUB: VULNERABLE               | 0        | -      | Secretariat of the Pacific Regional Envi
+    AS150321 | STUB: PASSIVE (Clean Pipe)     | 0        | -      | Secretariat of the Pacific Regional Envi
     AS153053 | STUB: VULNERABLE               | 0        | -      | Lesamoa.net
     AS9218   | NOT ROUTED                     | 0        | -      | WISEVAN GUARD Limited
     AS55579  | NOT ROUTED                     | 0        | -      | Computer Services Ltd
     AS134376 | NOT ROUTED                     | 0        | -      | Samoa IXP
     AS38227  | NOT ROUTED                     | 0        | -      | Computer Services Limited (CSL)
-    AS38800  | NOT ROUTED                     | 0        | -      | Digicel Samoa Ltd
+    AS38800  | NOT ROUTED                     | 0        | 0%     | Digicel Samoa Ltd
 
     ====================================================================================================
      TRANSIT SUPPLY CHAIN (Who provides to WS?)

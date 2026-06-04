@@ -15,17 +15,17 @@
     ASN      | Verdict                        | Cone     | APNIC% | Name
     ----------------------------------------------------------------------------------------------------
     AS45495  | VULNERABLE                     | 3        | -      | Interchange Ltd.
-    AS23959  | STUB: VULNERABLE               | 0        | -      | Owl Limited
+    AS23959  | STUB: VULNERABLE               | 0        | 0%     | Owl Limited
     AS9249   | STUB: VULNERABLE               | 0        | -      | Telecom Vanuatu Limited
     AS136996 | STUB: VULNERABLE               | 0        | -      | Pacific Networks
     AS136949 | NOT ROUTED                     | 0        | -      | Engineering Business Services Limited
     AS131166 | NOT ROUTED                     | 0        | -      | Wantok Network Limited
     AS132797 | STUB: PASSIVE (Clean Pipe)     | 0        | -      | Vanuatu Internet Exchange (VIX)
     AS133383 | NOT ROUTED                     | 0        | -      | Vanuatu Government
-    AS132254 | STUB: VULNERABLE               | 0        | -      | PRIMA DC LIMITED
     AS132429 | STUB: PASSIVE (Clean Pipe)     | 0        | -      | Digicel Vanuatu LTD
     AS132228 | STUB: VULNERABLE               | 0        | -      | Vanuatu Government
-    AS43357  | STUB: VOLATILE                 | 0        | -      | Owl Limited
+    AS132254 | STUB: VULNERABLE               | 0        | -      | PRIMA DC LIMITED
+    AS43357  | STUB: VOLATILE                 | 0        | 99%    | Owl Limited
     AS45935  | STUB: VULNERABLE               | 0        | -      | Wantok Network Limited
 
     ====================================================================================================
