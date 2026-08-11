@@ -6,8 +6,8 @@
     Total Networks:      38
     Total Cone Gravity:  25
     ------------------------------------------------------------
-    SECURE (ACTIVE/PASSIVE):     1 ( 2.6%) -> Protects 0.0% of Traffic
-    VULNERABLE NETWORKS:        24 (63.2%) -> Exposes  0.0% of Traffic
+    SECURE (ACTIVE/PASSIVE):    15 (39.5%) -> Protects 0.0% of Traffic
+    VULNERABLE NETWORKS:        10 (26.3%) -> Exposes  0.0% of Traffic
 
     ====================================================================================================
      THE PG CORE (Top 20 Networks)
@@ -18,21 +18,21 @@
     AS58460  | PARTIAL: VULNERABLE (Mixed)    | 6        | 82%    | Digicel (PNG) Ltd
     AS142269 | NOT ROUTED                     | 0        | -      | KINA BANK
     AS139898 | STUB: VULNERABLE               | 0        | 21%    | Digitec Communications Limited
-    AS139778 | STUB: VULNERABLE               | 0        | -      | DALTRON
+    AS139778 | STUB: PASSIVE (Clean Pipe)     | 0        | -      | DALTRON
     AS138506 | STUB: UNRELIABLE               | 0        | -      | PNG Nambawan Trophy Ltd
-    AS138902 | STUB: VULNERABLE               | 0        | -      | Emstret Holdings Ltd
+    AS138902 | STUB: PASSIVE (Clean Pipe)     | 0        | -      | Emstret Holdings Ltd
     AS140935 | NOT ROUTED                     | 0        | -      | Asia Pacific Communication Specialist (P
-    AS140665 | STUB: VULNERABLE               | 0        | -      | KINECT LIMITED
+    AS140665 | STUB: PASSIVE (Clean Pipe)     | 0        | -      | KINECT LIMITED
     AS151398 | NOT ROUTED                     | 0        | -      | Credit Corporation (PNG) Limited
     AS151647 | STUB: VULNERABLE               | 0        | -      | Rural Tech Development
     AS150392 | NOT ROUTED                     | 0        | -      | Government Private Network - Papua New G
     AS150693 | NOT ROUTED                     | 0        | -      | 2K Internet Services
-    AS153781 | STUB: VULNERABLE               | 0        | -      | Wintop Investment Limited
-    AS153621 | STUB: VULNERABLE               | 0        | -      | GIT LIMITED
+    AS153781 | STUB: PASSIVE (Clean Pipe)     | 0        | -      | Wintop Investment Limited
+    AS153621 | STUB: PASSIVE (Clean Pipe)     | 0        | -      | GIT LIMITED
     AS152477 | STUB: VULNERABLE               | 0        | -      | LOTIC Bige Limited
     AS152883 | NOT ROUTED                     | 0        | -      | Teachers Savings and Loan Society Limite
     AS152655 | STUB: VULNERABLE               | 0        | -      | Digicel (PNG) Ltd
-    AS147024 | STUB: VULNERABLE               | 0        | -      | bikpla.net
+    AS147024 | STUB: PASSIVE (Clean Pipe)     | 0        | -      | bikpla.net
     AS146949 | STUB: VULNERABLE               | 0        | -      | National Superannuation Fund Ltd.
 
     ====================================================================================================
@@ -54,7 +54,7 @@
     #12  | AS152655 | 1          | STUB: VULNERABLE               | Digicel (PNG) Ltd
     #13  | AS38442  | 1          | PARTIAL: VULNERABLE (Mixed)    | Vodafone Fiji Limited
     #14  | AS31732  | 1          | PARTIAL: VULNERABLE (Mixed)    | Parsun Network Solutions PTY LTD
-    #15  | AS55792  | 1          | STUB: VULNERABLE               | Datec-PNG
-    #16  | AS139898 | 1          | STUB: VULNERABLE               | Digitec Communications Limited
+    #15  | AS139898 | 1          | STUB: VULNERABLE               | Digitec Communications Limited
+    #16  | AS55792  | 1          | STUB: PASSIVE (Clean Pipe)     | Datec-PNG
     #17  | AS45411  | 1          | STUB: UNRELIABLE               | APCS Australia
     #18  | AS24516  | 1          | PASSIVE (Clean Pipe)           | Virtutel Pty Ltd

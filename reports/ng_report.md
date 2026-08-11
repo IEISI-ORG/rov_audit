@@ -21,19 +21,19 @@
     AS16284  | VULNERABLE                     | 11       | 23%    | Inq. Digital Nigeria
     AS36940  | PARTIAL: VULNERABLE (Mixed)    | 7        | -      | Internet Exchange Point of Nigeria
     AS36920  | PARTIAL: VULNERABLE (Mixed)    | 5        | 96%    | KKON Technologies Ltd
+    AS37480  | PARTIAL: VULNERABLE (Mixed)    | 4        | 18%    | Cobranet Limited
     AS37088  | VULNERABLE                     | 4        | 18%    | VDT COMMUNICATIONS LIMITED
     AS29091  | REGRESSED                      | 4        | 66%    | ipNX Nigeria Limited
-    AS37480  | PARTIAL: VULNERABLE (Mixed)    | 4        | 18%    | Cobranet Limited
     AS30988  | PARTIAL: VULNERABLE (Mixed)    | 3        | 29%    | IS InternetSolutions Limited
     AS37661  | VOLATILE                       | 3        | 100%   | Nigerian Research and Education Network 
-    AS214354 | REGRESSED                      | 2        | -      | SiteHUB Agency Ltd
-    AS37018  | VULNERABLE                     | 2        | 14%    | Galaxy Backbone PLC
     AS328658 | VULNERABLE                     | 2        | 37%    | De Choicetech Integrated Ltd
-    AS37688  | VULNERABLE                     | 1        | 37%    | BACKBONE CONNECTIVITY NETWORK (NIGERIA) 
+    AS37018  | VULNERABLE                     | 2        | 14%    | Galaxy Backbone PLC
+    AS214354 | REGRESSED                      | 2        | -      | SiteHUB Agency Ltd
     AS328668 | PARTIAL: VULNERABLE (Mixed)    | 1        | -      | Nkponani Limited
     AS328555 | REGRESSED                      | 1        | 20%    | Timeless Network Services Ltd
-    AS328527 | VOLATILE                       | 1        | 96%    | PDS Networks Nigeria Limited
+    AS37688  | VULNERABLE                     | 1        | 37%    | BACKBONE CONNECTIVITY NETWORK (NIGERIA) 
     AS37125  | VULNERABLE                     | 1        | 13%    | Layer3 Limited
+    AS328527 | VOLATILE                       | 1        | 96%    | PDS Networks Nigeria Limited
 
     ====================================================================================================
      TRANSIT SUPPLY CHAIN (Who provides to NG?)

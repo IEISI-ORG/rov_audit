@@ -17,21 +17,21 @@
     AS14259  | PASSIVE (Clean Pipe)           | 64       | 40%    | Gtd Internet S.A.
     AS263702 | PARTIAL: VULNERABLE (Mixed)    | 60       | 30%    | GRUPO ZGH SPA
     AS7004   | PASSIVE (Clean Pipe)           | 31       | 99%    | TELEFÓNICA CHILE S.A.
-    AS61503  | Unverified (Transit/Peer?)     | 18       | 22%    | SERVICIOS DE TELECOMUNICACIONES INTERCAB
     AS16629  | UNRELIABLE                     | 18       | 91%    | CTC. CORP S.A. (TELEFONICA EMPRESAS)
+    AS61503  | Unverified (Transit/Peer?)     | 18       | 22%    | SERVICIOS DE TELECOMUNICACIONES INTERCAB
     AS6471   | REGRESSED                      | 17       | -      | ENTEL CHILE S.A.
     AS263237 | PARTIAL: VULNERABLE (Mixed)    | 16       | -      | PowerHost Telecom SPA
     AS6429   | REGRESSED                      | 15       | 25%    | Telmex Chile Internet S.A.
     AS266771 | REGRESSED                      | 13       | 37%    | MAKRONET CONSULTING TECNOLOGIA E INFORMA
     AS14117  | VULNERABLE                     | 9        | 38%    | Telefonica del Sur S.A.
     AS11340  | REGRESSED                      | 6        | 22%    | Red Universitaria Nacional
-    AS264827 | Unverified (Transit/Peer?)     | 5        | 99%    | WIRCOM S.P.A.
     AS27901  | REGRESSED                      | 5        | 34%    | Pacifico Cable SPA.
-    AS266830 | REGRESSED                      | 4        | 34%    | AIRPOINT TELECOMUNICACIONES LIMITADA
+    AS264827 | Unverified (Transit/Peer?)     | 5        | 99%    | WIRCOM S.P.A.
     AS64139  | PASSIVE (Clean Pipe)           | 4        | 53%    | GRUPO METROWAN TELECOM SPA
+    AS266830 | REGRESSED                      | 4        | 34%    | AIRPOINT TELECOMUNICACIONES LIMITADA
     AS262237 | REGRESSED                      | 3        | -      | Orbyta S.A.
-    AS10778  | PARTIAL: VULNERABLE (Mixed)    | 2        | 28%    | MCL Internet
     AS27986  | PASSIVE (Clean Pipe)           | 2        | -      | ENTEL CHILE S.A.
+    AS10778  | PARTIAL: VULNERABLE (Mixed)    | 2        | 28%    | MCL Internet
     AS265757 | PARTIAL: VULNERABLE (Mixed)    | 1        | 41%    | Intersur Limitada
     AS265662 | PARTIAL: VULNERABLE (Mixed)    | 1        | 36%    | TLINK SPA
 

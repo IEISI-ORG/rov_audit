@@ -6,8 +6,8 @@
     Total Networks:      262
     Total Cone Gravity:  581
     ------------------------------------------------------------
-    SECURE (ACTIVE/PASSIVE):   124 (47.3%) -> Protects 79.9% of Traffic
-    VULNERABLE NETWORKS:        95 (36.3%) -> Exposes  2.2% of Traffic
+    SECURE (ACTIVE/PASSIVE):   123 (46.9%) -> Protects 79.9% of Traffic
+    VULNERABLE NETWORKS:        96 (36.6%) -> Exposes  2.2% of Traffic
 
     ====================================================================================================
      THE GR CORE (Top 20 Networks)
@@ -24,16 +24,16 @@
     AS25472  | PASSIVE (Clean Pipe)           | 19       | 35%    | Nova Telecommunications & Media Single M
     AS56910  | PASSIVE (Clean Pipe)           | 19       | -      | Digital Realty Hellas Single Member S.A
     AS206735 | REGRESSED                      | 12       | 19%    | Novelcomm LP
-    AS4601   | PARTIAL: VULNERABLE (Mixed)    | 2        | -      | Antonios A. Chariton
     AS216285 | PASSIVE (Clean Pipe)           | 2        | -      | MYIP NETWORKS G.P.
     AS12713  | PARTIAL: VULNERABLE (Mixed)    | 2        | -      | Ote SA (Hellenic Telecommunications Orga
+    AS4601   | PARTIAL: VULNERABLE (Mixed)    | 2        | -      | Antonios A. Chariton
     AS35506  | ACTIVE LOCAL ROV               | 1        | 99%    | INFORMATION SOCIETY S.A.
-    AS206652 | PASSIVE (Clean Pipe)           | 1        | 48%    | Ioannis Roditis trading as Greekstream N
-    AS56457  | ACTIVE LOCAL ROV               | 1        | -      | FASTPATH IKE
-    AS51505  | PARTIAL: VULNERABLE (Mixed)    | 1        | 33%    | Dimosia Epicheirisi Ilektrismou Anonymi 
-    AS196945 | PARTIAL: VULNERABLE (Mixed)    | 1        | -      | Microbase PC
+    AS200736 | PARTIAL: VULNERABLE (Mixed)    | 1        | 41%    | MEDIANET INVEST AE
     AS215492 | PASSIVE (Clean Pipe)           | 1        | -      | BUTLER CHAT I.K.E.
     AS35372  | VULNERABLE                     | 1        | -      | GeniusMind S.A.
+    AS196945 | PARTIAL: VULNERABLE (Mixed)    | 1        | -      | Microbase PC
+    AS56457  | ACTIVE LOCAL ROV               | 1        | -      | FASTPATH IKE
+    AS206652 | PASSIVE (Clean Pipe)           | 1        | 48%    | Ioannis Roditis trading as Greekstream N
 
     ====================================================================================================
      TRANSIT SUPPLY CHAIN (Who provides to GR?)

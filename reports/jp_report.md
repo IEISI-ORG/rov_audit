@@ -6,8 +6,8 @@
     Total Networks:      979
     Total Cone Gravity:  1,802
     ------------------------------------------------------------
-    SECURE (ACTIVE/PASSIVE):   321 (32.8%) -> Protects 53.3% of Traffic
-    VULNERABLE NETWORKS:       380 (38.8%) -> Exposes  1.1% of Traffic
+    SECURE (ACTIVE/PASSIVE):   300 (30.6%) -> Protects 53.3% of Traffic
+    VULNERABLE NETWORKS:       401 (41.0%) -> Exposes  1.1% of Traffic
 
     ====================================================================================================
      THE JP CORE (Top 20 Networks)
@@ -20,16 +20,16 @@
     AS2907   | PASSIVE (Clean Pipe)           | 114      | 26%    | Science Information Network
     AS4713   | ACTIVE LOCAL ROV               | 103      | 99%    | NTT Communications Corporation (OCN)
     AS2519   | PASSIVE (Clean Pipe)           | 86       | 32%    | ARTERIA Networks Corporation
-    AS10010  | ACTIVE LOCAL ROV               | 41       | 40%    | TOKAI Communications Corporation
+    AS10010  | PASSIVE (Clean Pipe)           | 41       | 40%    | TOKAI Communications Corporation
     AS2518   | ACTIVE LOCAL ROV               | 31       | 99%    | BIGLOBE Inc.
     AS59105  | PARTIAL: VULNERABLE (Mixed)    | 24       | -      | Home NOC Operators Group
     AS7529   | PARTIAL: VULNERABLE (Mixed)    | 17       | -      | GMO NetIRD, Inc.
-    AS150369 | ACTIVE LOCAL ROV               | 15       | -      | TelHi Corporation
     AS9824   | ACTIVE LOCAL ROV               | 15       | 99%    | JCOM Co., Ltd.
-    AS2500   | PASSIVE (Clean Pipe)           | 13       | -      | WIDE Project
+    AS150369 | ACTIVE LOCAL ROV               | 15       | -      | TelHi Corporation
     AS7670   | PASSIVE (Clean Pipe)           | 13       | 36%    | Enecom,Inc.
-    AS59103  | UNRELIABLE                     | 12       | 82%    | SoftEther Corporation
+    AS2500   | PASSIVE (Clean Pipe)           | 13       | -      | WIDE Project
     AS38074  | PASSIVE (Clean Pipe)           | 12       | -      | SDCC Japan-West Area
+    AS59103  | UNRELIABLE                     | 12       | 82%    | SoftEther Corporation
     AS7679   | PASSIVE (Clean Pipe)           | 11       | 37%    | QTnet,Inc.
     AS9354   | PASSIVE (Clean Pipe)           | 11       | 99%    | Community Network Center Inc.
     AS214675 | PARTIAL: VULNERABLE (Mixed)    | 9        | -      | Hidenori Matsuo
@@ -50,7 +50,7 @@
     #8   | AS6939   | 35         | CORE: ACTIVE PROTECTOR         | Hurricane Electric LLC
     #9   | AS4637   | 35         | CORE: ACTIVE PROTECTOR         | Telstra International Limited
     #10  | AS2518   | 34         | ACTIVE LOCAL ROV               | BIGLOBE Inc.
-    #11  | AS10010  | 32         | ACTIVE LOCAL ROV               | TOKAI Communications Corporation
+    #11  | AS10010  | 32         | PASSIVE (Clean Pipe)           | TOKAI Communications Corporation
     #12  | AS3356   | 20         | CORE: ACTIVE PROTECTOR         | Lumen (Level 3)
     #13  | AS9607   | 19         | ACTIVE LOCAL ROV               | BroadBand Tower, Inc.
     #14  | AS9824   | 19         | ACTIVE LOCAL ROV               | JCOM Co., Ltd.

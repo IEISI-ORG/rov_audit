@@ -25,15 +25,15 @@
     AS140695 | STUB: VULNERABLE               | 0        | -      | Bank of Bhutan Limited
     AS151782 | NOT ROUTED                     | 0        | -      | Royal Insurance Corporation of Bhutan Li
     AS151498 | STUB: VULNERABLE               | 0        | -      | Bhutan Power Corporation Ltd
-    AS153740 | STUB: VULNERABLE               | 0        | -      | Bhutan Development Bank
+    AS151955 | STUB: VULNERABLE               | 0        | -      | DRUK PNB BANK LIMITED
     AS153779 | STUB: VULNERABLE               | 0        | 39%    | Nilo FiberNet
+    AS153740 | STUB: VULNERABLE               | 0        | -      | Bhutan Development Bank
     AS152318 | NOT ROUTED                     | 0        | -      | Gelephu Thromde
     AS152317 | STUB: VULNERABLE               | 0        | 17%    | Wangdue Phodrang Dzongkhag Administratio
     AS152316 | NOT ROUTED                     | 0        | -      | Punakha Dzongkhag Administration
     AS152315 | NOT ROUTED                     | 0        | -      | Sarpang Dzongkhag Administration
     AS152314 | NOT ROUTED                     | 0        | -      | Chhukha Dzongkhag Administration
     AS152313 | NOT ROUTED                     | 0        | -      | Samtse Dzongkhag Administration
-    AS152312 | NOT ROUTED                     | 0        | -      | Paro Dzongkhag Administration
 
     ====================================================================================================
      TRANSIT SUPPLY CHAIN (Who provides to BT?)

@@ -15,8 +15,8 @@
     ASN      | Verdict                        | Cone     | APNIC% | Name
     ----------------------------------------------------------------------------------------------------
     AS154410 | PASSIVE (Clean Pipe)           | 7        | -      | Marshall Telecom Ltd
-    AS205009 | STUB: PASSIVE (Clean Pipe)     | 0        | -      | HDM Solutions LTD
     AS204938 | NOT ROUTED                     | 0        | -      | APEX NODE LTD
+    AS205009 | STUB: PASSIVE (Clean Pipe)     | 0        | -      | HDM Solutions LTD
     AS200877 | NOT ROUTED                     | 0        | -      | iSH TRANSIT LTD
     AS201501 | STUB: VULNERABLE               | 0        | -      | ISECLAYER INC
     AS213846 | NOT ROUTED                     | 0        | -      | NALMI LIMITED

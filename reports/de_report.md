@@ -6,8 +6,8 @@
     Total Networks:      3,251
     Total Cone Gravity:  173,698
     ------------------------------------------------------------
-    SECURE (ACTIVE/PASSIVE):  1166 (35.9%) -> Protects 38.7% of Traffic
-    VULNERABLE NETWORKS:      1112 (34.2%) -> Exposes  0.1% of Traffic
+    SECURE (ACTIVE/PASSIVE):  1164 (35.8%) -> Protects 38.7% of Traffic
+    VULNERABLE NETWORKS:      1112 (34.2%) -> Exposes  0.0% of Traffic
 
     ====================================================================================================
      THE DE CORE (Top 20 Networks)
@@ -29,7 +29,7 @@
     AS3209   | ACTIVE LOCAL ROV               | 111      | 48%    | Vodafone GmbH
     AS57821  | ACTIVE LOCAL ROV               | 95       | -      | Nonattached Network e.V.
     AS35708  | Unverified (Transit/Peer?)     | 75       | -      | 4b42 UG
-    AS30823  | REGRESSED                      | 73       | 54%    | aurologic GmbH
+    AS30823  | PARTIAL: VULNERABLE (Mixed)    | 73       | 54%    | aurologic GmbH
     AS8767   | PARTIAL: VULNERABLE (Mixed)    | 67       | 99%    | M-net Telekommunikations GmbH
     AS58212  | PASSIVE (Clean Pipe)           | 67       | 41%    | dataforest GmbH
     AS34309  | PARTIAL: VULNERABLE (Mixed)    | 54       | -      | Link11 GmbH

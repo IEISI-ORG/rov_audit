@@ -3,11 +3,11 @@
     ====================================================================================================
      NATIONAL ROUTING SECURITY: CN
     ====================================================================================================
-    Total Networks:      6,494
+    Total Networks:      6,496
     Total Cone Gravity:  187,944
     ------------------------------------------------------------
-    SECURE (ACTIVE/PASSIVE):    72 ( 1.1%) -> Protects 36.8% of Traffic
-    VULNERABLE NETWORKS:      5060 (77.9%) -> Exposes  62.2% of Traffic
+    SECURE (ACTIVE/PASSIVE):    74 ( 1.1%) -> Protects 36.8% of Traffic
+    VULNERABLE NETWORKS:      5058 (77.9%) -> Exposes  62.2% of Traffic
 
     ====================================================================================================
      THE CN CORE (Top 20 Networks)

@@ -30,10 +30,10 @@
     AS201782 | PASSIVE (Clean Pipe)           | 1        | -      | Make It Simple Consultoria Informatica L
     AS50293  | PARTIAL: VULNERABLE (Mixed)    | 1        | -      | Interfiber Networks LDA
     AS12926  | PARTIAL: VULNERABLE (Mixed)    | 1        | 8%     | AR TELECOM - Acessos e Redes de Telecomu
-    AS199667 | NOT ROUTED                     | 0        | -      | 4Spiro - Sociedade de Consultoria, LDA
     AS199993 | STUB: VULNERABLE               | 0        | -      | Associacao DNS.PT
-    AS197802 | STUB: VULNERABLE               | 0        | -      | Secretaria-Geral Ministerio da Administr
-    AS199155 | STUB: FORTUITOUS ROV           | 0        | 100%   | Direcao Geral de Estatisticas da Educaca
+    AS198980 | STUB: VULNERABLE               | 0        | -      | Banco de Portugal
+    AS199130 | STUB: PASSIVE (Clean Pipe)     | 0        | -      | 4Spiro - Sociedade de Consultoria, LDA
+    AS199016 | STUB: VULNERABLE               | 0        | -      | VISUALFORMA TECNOLOGIAS DE INFORMACAO, S
 
     ====================================================================================================
      TRANSIT SUPPLY CHAIN (Who provides to PT?)

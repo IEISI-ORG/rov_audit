@@ -3,11 +3,11 @@
     ====================================================================================================
      NATIONAL ROUTING SECURITY: BR
     ====================================================================================================
-    Total Networks:      9,129
+    Total Networks:      9,133
     Total Cone Gravity:  22,301
     ------------------------------------------------------------
-    SECURE (ACTIVE/PASSIVE):  1230 (13.5%) -> Protects 61.1% of Traffic
-    VULNERABLE NETWORKS:      6703 (73.4%) -> Exposes  9.1% of Traffic
+    SECURE (ACTIVE/PASSIVE):  1231 (13.5%) -> Protects 61.4% of Traffic
+    VULNERABLE NETWORKS:      6701 (73.4%) -> Exposes  8.8% of Traffic
 
     ====================================================================================================
      THE BR CORE (Top 20 Networks)

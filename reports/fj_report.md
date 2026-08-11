@@ -15,8 +15,8 @@
     ASN      | Verdict                        | Cone     | APNIC% | Name
     ----------------------------------------------------------------------------------------------------
     AS38442  | PARTIAL: VULNERABLE (Mixed)    | 7        | 31%    | Vodafone Fiji Limited
-    AS45355  | PASSIVE (Clean Pipe)           | 2        | 99%    | Digicel Fiji Limited
     AS4638   | Unverified (Transit/Peer?)     | 2        | 77%    | Telecom Fiji Limited
+    AS45355  | PASSIVE (Clean Pipe)           | 2        | 99%    | Digicel Fiji Limited
     AS154229 | NOT ROUTED                     | 0        | -      | Fiji National Provident Fund
     AS142245 | STUB: VULNERABLE               | 0        | -      | Kastle (Fiji) Pte Ltd
     AS140046 | NOT ROUTED                     | 0        | -      | Telecommunications Authority of Fiji
@@ -50,6 +50,6 @@
     #8   | AS4648   | 2          | PARTIAL: VULNERABLE (Mixed)    | Spark New Zealand
     #9   | AS2914   | 1          | CORE: ACTIVE PROTECTOR         | NTT America, Inc.
     #10  | AS7473   | 1          | PARTIAL: VULNERABLE (Mixed)    | Singapore Telecommunications Ltd
-    #11  | AS132528 | 1          | PARTIAL: VULNERABLE (Mixed)    | DIGICEL (AUS) PTY LTD
-    #12  | AS45349  | 1          | STUB: VULNERABLE               | Telecom Fiji Ltd
+    #11  | AS45349  | 1          | STUB: VULNERABLE               | Telecom Fiji Ltd
+    #12  | AS132528 | 1          | PARTIAL: VULNERABLE (Mixed)    | DIGICEL (AUS) PTY LTD
     #13  | AS45355  | 1          | PASSIVE (Clean Pipe)           | Digicel Fiji Limited

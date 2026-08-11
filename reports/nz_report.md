@@ -28,12 +28,12 @@
     AS4049   | PARTIAL: VULNERABLE (Mixed)    | 11       | 33%    | CELLO GROUP LIMITED
     AS23655  | ACTIVE LOCAL ROV               | 10       | 50%    | 2degrees Networks Limited
     AS56030  | PARTIAL: VULNERABLE (Mixed)    | 9        | 52%    | Voyager Internet Ltd.
-    AS17705  | PARTIAL: VULNERABLE (Mixed)    | 6        | 50%    | InSPire Net Ltd
     AS151336 | PARTIAL: VULNERABLE (Mixed)    | 6        | -      | Verge
-    AS4771   | VULNERABLE                     | 5        | 47%    | Spark New Zealand Trading Ltd.
+    AS17705  | PARTIAL: VULNERABLE (Mixed)    | 6        | 50%    | InSPire Net Ltd
     AS138398 | PARTIAL: VULNERABLE (Mixed)    | 5        | -      | Prodigi Technology Services Limited
-    AS45267  | PARTIAL: VULNERABLE (Mixed)    | 4        | 38%    | Lightwire LTD
+    AS4771   | VULNERABLE                     | 5        | 47%    | Spark New Zealand Trading Ltd.
     AS45637  | PARTIAL: VULNERABLE (Mixed)    | 4        | 44%    | UniFone New Zealand Ltd
+    AS24183  | PARTIAL: VULNERABLE (Mixed)    | 4        | 100%   | DTS LTD
 
     ====================================================================================================
      TRANSIT SUPPLY CHAIN (Who provides to NZ?)

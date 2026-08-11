@@ -3,11 +3,11 @@
     ====================================================================================================
      NATIONAL ROUTING SECURITY: KE
     ====================================================================================================
-    Total Networks:      234
+    Total Networks:      235
     Total Cone Gravity:  311
     ------------------------------------------------------------
     SECURE (ACTIVE/PASSIVE):    20 ( 8.5%) -> Protects 69.8% of Traffic
-    VULNERABLE NETWORKS:       178 (76.1%) -> Exposes  5.1% of Traffic
+    VULNERABLE NETWORKS:       179 (76.2%) -> Exposes  5.1% of Traffic
 
     ====================================================================================================
      THE KE CORE (Top 20 Networks)
@@ -21,19 +21,19 @@
     AS36866  | VULNERABLE                     | 7        | 20%    | Jamii Telecommunications Limited
     AS12556  | PASSIVE (Clean Pipe)           | 6        | 56%    | Internet Solutions (Kenya)
     AS207113 | PARTIAL: VULNERABLE (Mixed)    | 5        | -      | Cyrus Mbitao trading as Wofbit Networks
-    AS329621 | PARTIAL: VULNERABLE (Mixed)    | 4        | 27%    | Gawia Ltd
     AS37305  | PARTIAL: VULNERABLE (Mixed)    | 4        | 21%    | Frontier Optical Networks Ltd
-    AS329029 | PARTIAL: VULNERABLE (Mixed)    | 3        | 13%    | Mymanga Networks
+    AS329621 | PARTIAL: VULNERABLE (Mixed)    | 4        | 27%    | Gawia Ltd
     AS33771  | PARTIAL: VULNERABLE (Mixed)    | 3        | 20%    | Safaricom Limited
-    AS37684  | REGRESSED                      | 2        | 25%    | Angani Limited
+    AS329029 | PARTIAL: VULNERABLE (Mixed)    | 3        | 13%    | Mymanga Networks
     AS12455  | REGRESSED                      | 2        | 19%    | Kenyan Post & Telecommunications Company
+    AS37684  | REGRESSED                      | 2        | 25%    | Angani Limited
     AS36926  | PARTIAL: VULNERABLE (Mixed)    | 2        | 18%    | Airtel Networks Kenya Limited
     AS328858 | REGRESSED                      | 2        | 21%    | Express Data Networks Limited
+    AS329437 | PARTIAL: VULNERABLE (Mixed)    | 1        | 21%    | VENNET SOLUTIONS LIMITED
+    AS329033 | PARTIAL: VULNERABLE (Mixed)    | 1        | 17%    | Systel Limited
     AS329387 | REGRESSED                      | 1        | 19%    | Skylink Networks LTD
     AS15399  | PARTIAL: VULNERABLE (Mixed)    | 1        | 24%    | Wananchi Group (Kenya) Limited
-    AS329033 | PARTIAL: VULNERABLE (Mixed)    | 1        | 17%    | Systel Limited
     AS328482 | REGRESSED                      | 1        | 17%    | SKY TREND NETWORKS LIMITED
-    AS329437 | PARTIAL: VULNERABLE (Mixed)    | 1        | 21%    | VENNET SOLUTIONS LIMITED
 
     ====================================================================================================
      TRANSIT SUPPLY CHAIN (Who provides to KE?)

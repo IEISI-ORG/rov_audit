@@ -3,11 +3,11 @@
     ====================================================================================================
      NATIONAL ROUTING SECURITY: IN
     ====================================================================================================
-    Total Networks:      6,166
+    Total Networks:      6,167
     Total Cone Gravity:  13,796
     ------------------------------------------------------------
-    SECURE (ACTIVE/PASSIVE):   198 ( 3.2%) -> Protects 69.2% of Traffic
-    VULNERABLE NETWORKS:      2562 (41.6%) -> Exposes  21.9% of Traffic
+    SECURE (ACTIVE/PASSIVE):   199 ( 3.2%) -> Protects 73.1% of Traffic
+    VULNERABLE NETWORKS:      2561 (41.5%) -> Exposes  18.1% of Traffic
 
     ====================================================================================================
      THE IN CORE (Top 20 Networks)
@@ -16,7 +16,7 @@
     ----------------------------------------------------------------------------------------------------
     AS9498   | PASSIVE (Clean Pipe)           | 7002     | 32%    | Bharti Airtel Ltd.
     AS4755   | PASSIVE (Clean Pipe)           | 2522     | 38%    | TATA Communications (formerly VSNL)
-    AS9583   | REGRESSED                      | 533      | 37%    | Sify Limited
+    AS9583   | PASSIVE (Clean Pipe)           | 533      | 37%    | Sify Limited
     AS18229  | VULNERABLE                     | 448      | 34%    | CtrlS
     AS55836  | Unverified (Transit/Peer?)     | 395      | 29%    | Reliance Jio Infocomm Limited
     AS55410  | PARTIAL: VULNERABLE (Mixed)    | 370      | 42%    | Vodafone Idea Ltd
@@ -33,7 +33,7 @@
     AS135718 | VULNERABLE                     | 55       | 36%    | DISHAWAVES INFONET PVT. LTD
     AS137085 | VULNERABLE                     | 51       | 36%    | ANONET COMMUNICATIONS PVT LTD
     AS136334 | VULNERABLE                     | 49       | 39%    | Vortex Netsol Private Limited
-    AS151690 | VULNERABLE                     | 39       | 35%    | FAB FIVE NETWORK PRIVATE LIMITED
+    AS140641 | PARTIAL: VULNERABLE (Mixed)    | 39       | -      | YOTTA NETWORK SERVICES PRIVATE LIMITED
 
     ====================================================================================================
      TRANSIT SUPPLY CHAIN (Who provides to IN?)
@@ -44,7 +44,7 @@
     #2   | AS4755   | 561        | PASSIVE (Clean Pipe)           | TATA Communications (formerly VSNL)
     #3   | AS45820  | 186        | VULNERABLE                     | Tata Teleservices ISP
     #4   | AS9730   | 170        | VULNERABLE                     | Bharti Telesonic Ltd
-    #5   | AS9583   | 167        | REGRESSED                      | Sify Limited
+    #5   | AS9583   | 167        | PASSIVE (Clean Pipe)           | Sify Limited
     #6   | AS55410  | 156        | PARTIAL: VULNERABLE (Mixed)    | Vodafone Idea Ltd
     #7   | AS55836  | 143        | Unverified (Transit/Peer?)     | Reliance Jio Infocomm Limited
     #8   | AS18229  | 139        | VULNERABLE                     | CtrlS

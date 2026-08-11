@@ -22,8 +22,8 @@
     AS131166 | NOT ROUTED                     | 0        | -      | Wantok Network Limited
     AS133383 | NOT ROUTED                     | 0        | -      | Vanuatu Government
     AS132429 | STUB: UNRELIABLE               | 0        | -      | Digicel Vanuatu LTD
-    AS132228 | STUB: VULNERABLE               | 0        | -      | Vanuatu Government
     AS132254 | STUB: VULNERABLE               | 0        | -      | PRIMA DC LIMITED
+    AS132228 | STUB: VULNERABLE               | 0        | -      | Vanuatu Government
     AS132797 | NOT ROUTED                     | 0        | -      | Vanuatu Internet Exchange (VIX)
     AS43357  | STUB: VOLATILE                 | 0        | 77%    | Owl Limited
     AS45935  | STUB: VULNERABLE               | 0        | -      | Wantok Network Limited

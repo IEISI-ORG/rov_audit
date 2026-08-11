@@ -6,8 +6,8 @@
     Total Networks:      2,982
     Total Cone Gravity:  12,370
     ------------------------------------------------------------
-    SECURE (ACTIVE/PASSIVE):   779 (26.1%) -> Protects 92.0% of Traffic
-    VULNERABLE NETWORKS:       769 (25.8%) -> Exposes  0.3% of Traffic
+    SECURE (ACTIVE/PASSIVE):   780 (26.2%) -> Protects 92.0% of Traffic
+    VULNERABLE NETWORKS:       768 (25.8%) -> Exposes  0.3% of Traffic
 
     ====================================================================================================
      THE AU CORE (Top 20 Networks)

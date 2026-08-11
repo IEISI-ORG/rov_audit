@@ -36,14 +36,14 @@
     AS52468  | PA | 5670     | 100.0%  | UFINET PANAMA S.A.
     AS14789  | US | 1252     | 100.0%  | Cloudflare, Inc.
     AS12741  | PL | 784      |  98.9%  | Netia SA
+    AS23947  | ID | 469      | 100.0%  | PT Mora Telematika Indonesia Tbk
     AS18229  | IN | 448      | 100.0%  | CtrlS
     AS45820  | IN | 336      |  98.2%  | Tata Teleservices ISP
     AS42337  | IR | 278      |  97.7%  | Respina Networks & Beyond PJSC
-    AS20115  | US | 222      |  98.3%  | Charter Communications LLC
     AS131111 | ID | 222      |  99.8%  | PT Mora Telematika Indonesia Tbk
+    AS20115  | US | 222      |  98.3%  | Charter Communications LLC
     AS971    | US | 211      | 100.0%  | PureVoltage Hosting Inc.
     AS401753 | VG | 204      | 100.0%  | BIXCE Inc
-    AS1680   | IL | 165      |  99.7%  | Cellcom Fixed Line Communication L.P
 
     ===============================================================================================
     3. WEIGHTED EVANGELISM TARGETS

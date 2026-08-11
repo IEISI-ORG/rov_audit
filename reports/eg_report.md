@@ -6,8 +6,8 @@
     Total Networks:      86
     Total Cone Gravity:  138
     ------------------------------------------------------------
-    SECURE (ACTIVE/PASSIVE):    61 (70.9%) -> Protects 43.5% of Traffic
-    VULNERABLE NETWORKS:        11 (12.8%) -> Exposes  5.8% of Traffic
+    SECURE (ACTIVE/PASSIVE):    60 (69.8%) -> Protects 43.5% of Traffic
+    VULNERABLE NETWORKS:        12 (14.0%) -> Exposes  5.8% of Traffic
 
     ====================================================================================================
      THE EG CORE (Top 20 Networks)
@@ -16,8 +16,8 @@
     ----------------------------------------------------------------------------------------------------
     AS8452   | PARTIAL: VULNERABLE (Mixed)    | 70       | 98%    | Telecom Egypt
     AS24835  | ACTIVE LOCAL ROV               | 36       | 99%    | Vodafone Egypt
-    AS24863  | ACTIVE LOCAL ROV               | 12       | 97%    | Link Egypt (Link.NET)
     AS20928  | ACTIVE LOCAL ROV               | 12       | 96%    | The Noor Group
+    AS24863  | ACTIVE LOCAL ROV               | 12       | 97%    | Link Egypt (Link.NET)
     AS36992  | REGRESSED                      | 8        | 26%    | Etisalat Egypt
     AS207740 | STUB: VULNERABLE               | 0        | -      | Youssef Hamed
     AS329114 | STUB: PASSIVE (Clean Pipe)     | 0        | -      | Halan for technology and services

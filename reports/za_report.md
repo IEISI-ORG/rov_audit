@@ -33,7 +33,7 @@
     AS37239  | PARTIAL: VULNERABLE (Mixed)    | 10       | 31%    | ICTGlobe Management (Pty) Ltd
     AS37680  | REGRESSED                      | 9        | 52%    | Cool Ideas Service Provider (Pty) Ltd
     AS10798  | VULNERABLE                     | 8        | -      | The Standard Bank of South Africa (Propr
-    AS37236  | PARTIAL: VULNERABLE (Mixed)    | 8        | 20%    | Reflex Solutions
+    AS37153  | PARTIAL: VULNERABLE (Mixed)    | 8        | 11%    | Xneelo (Pty) Ltd
 
     ====================================================================================================
      TRANSIT SUPPLY CHAIN (Who provides to ZA?)

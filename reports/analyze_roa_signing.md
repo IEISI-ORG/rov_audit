@@ -4,10 +4,10 @@
     ================================================================================
     GLOBAL ROA SIGNING REPORT
     ================================================================================
-    Total Networks: 122,379
-      - Fully Signed (>90%):  45,505  (37.2%)
+    Total Networks: 122,399
+      - Fully Signed (>90%):  45,498  (37.2%)
       - Partially Signed:      5,918  (4.8%)
-      - Totally Unsigned:     70,956  (58.0%)
+      - Totally Unsigned:     70,983  (58.0%)
 
     ================================================================================
     THE 'GLASS HOUSES' (Secure Provider, but Unsigned Routes)
@@ -43,11 +43,11 @@
     AS52468  | PA | 5670     | 0/8    | UFINET PANAMA S.A.
     AS14789  | US | 1252     | 2/2    | Cloudflare, Inc.
     AS12741  | PL | 784      | 0/5    | Netia SA
+    AS23947  | ID | 469      | 0/5    | PT Mora Telematika Indonesia Tbk
     AS18229  | IN | 448      | 1/1    | CtrlS
     AS45820  | IN | 336      | 1/1    | Tata Teleservices ISP
     AS42337  | IR | 278      | 0/0    | Respina Networks & Beyond PJSC
-    AS20115  | US | 222      | 1/10   | Charter Communications LLC
     AS131111 | ID | 222      | 1/1    | PT Mora Telematika Indonesia Tbk
+    AS20115  | US | 222      | 1/10   | Charter Communications LLC
     AS971    | US | 211      | 1/6    | PureVoltage Hosting Inc.
     AS401753 | VG | 204      | 2/2    | BIXCE Inc
-    AS1680   | IL | 165      | 1/10   | Cellcom Fixed Line Communication L.P

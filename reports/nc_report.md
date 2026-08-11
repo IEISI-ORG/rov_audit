@@ -23,8 +23,8 @@
     AS149520 | NOT ROUTED                     | 0        | -      | THEMIS
     AS24053  | NOT ROUTED                     | 0        | -      | Data Services Pacific
     AS17480  | STUB: FORTUITOUS ROV           | 0        | 100%   | CANL
-    AS56055  | STUB: FORTUITOUS ROV           | 0        | 100%   | Micro Logic Systems
     AS56089  | STUB: ACTIVE LOCAL ROV         | 0        | 100%   | OFFRATEL
+    AS56055  | STUB: FORTUITOUS ROV           | 0        | 100%   | Micro Logic Systems
     AS134405 | STUB: PASSIVE (Clean Pipe)     | 0        | -      | Data Services Pacific
     AS137243 | STUB: PASSIVE (Clean Pipe)     | 0        | -      | INGENIERIE DES SYSTEMES DES INFORMATIONS
     AS136402 | STUB: PASSIVE (Clean Pipe)     | 0        | -      | Nautile SARL

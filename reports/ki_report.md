@@ -14,8 +14,8 @@
     ====================================================================================================
     ASN      | Verdict                        | Cone     | APNIC% | Name
     ----------------------------------------------------------------------------------------------------
-    AS154102 | NOT ROUTED                     | 0        | -      | Bwebwerikinet Limited
     AS154100 | STUB: PASSIVE (Clean Pipe)     | 0        | -      | BNL Tarawa
+    AS154102 | NOT ROUTED                     | 0        | -      | Bwebwerikinet Limited
     AS4865   | NOT ROUTED                     | 0        | -      | Amalgamated Telecom Holdings Kiribati Lt
     AS134783 | STUB: VULNERABLE               | 0        | 12%    | Amalgamated Telecom Holdings Kiribati Lt
     AS132486 | NOT ROUTED                     | 0        | -      | OCEAN LINK LTD
