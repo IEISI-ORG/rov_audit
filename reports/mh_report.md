@@ -6,7 +6,7 @@
     Total Networks:      11
     Total Cone Gravity:  7
     ------------------------------------------------------------
-    SECURE (ACTIVE/PASSIVE):     5 (45.5%) -> Protects 0.0% of Traffic
+    SECURE (ACTIVE/PASSIVE):     6 (54.5%) -> Protects 100.0% of Traffic
     VULNERABLE NETWORKS:         1 ( 9.1%) -> Exposes  0.0% of Traffic
 
     ====================================================================================================
@@ -14,15 +14,15 @@
     ====================================================================================================
     ASN      | Verdict                        | Cone     | APNIC% | Name
     ----------------------------------------------------------------------------------------------------
-    AS154410 | PARTIAL: VULNERABLE (Mixed)    | 7        | -      | Marshall Telecom Ltd
-    AS204938 | NOT ROUTED                     | 0        | -      | APEX NODE LTD
+    AS154410 | PASSIVE (Clean Pipe)           | 7        | -      | Marshall Telecom Ltd
     AS205009 | STUB: PASSIVE (Clean Pipe)     | 0        | -      | HDM Solutions LTD
-    AS201501 | STUB: VULNERABLE               | 0        | -      | ISECLAYER INC
+    AS204938 | NOT ROUTED                     | 0        | -      | APEX NODE LTD
     AS200877 | NOT ROUTED                     | 0        | -      | iSH TRANSIT LTD
-    AS213205 | STUB: PASSIVE (Clean Pipe)     | 0        | -      | Unknown
+    AS201501 | STUB: VULNERABLE               | 0        | -      | ISECLAYER INC
     AS213846 | NOT ROUTED                     | 0        | -      | NALMI LIMITED
+    AS213205 | STUB: PASSIVE (Clean Pipe)     | 0        | -      | Unknown
     AS209194 | STUB: PASSIVE (Clean Pipe)     | 0        | -      | Hyper Data Transit LTD
-    AS24439  | STUB: PASSIVE (Clean Pipe)     | 0        | 100%   | MARSHALL ISLANDS NTA ISP AS
+    AS24439  | STUB: FORTUITOUS ROV           | 0        | 99%    | MARSHALL ISLANDS NTA ISP AS
     AS62880  | NOT ROUTED                     | 0        | -      | Synatec LLC
     AS50183  | STUB: PASSIVE (Clean Pipe)     | 0        | -      | CenturyNetworks Ltd
 

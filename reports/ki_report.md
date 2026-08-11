@@ -17,7 +17,7 @@
     AS154102 | NOT ROUTED                     | 0        | -      | Bwebwerikinet Limited
     AS154100 | STUB: PASSIVE (Clean Pipe)     | 0        | -      | BNL Tarawa
     AS4865   | NOT ROUTED                     | 0        | -      | Amalgamated Telecom Holdings Kiribati Lt
-    AS134783 | STUB: VULNERABLE               | 0        | 0%     | Amalgamated Telecom Holdings Kiribati Lt
+    AS134783 | STUB: VULNERABLE               | 0        | 12%    | Amalgamated Telecom Holdings Kiribati Lt
     AS132486 | NOT ROUTED                     | 0        | -      | OCEAN LINK LTD
 
     ====================================================================================================
@@ -28,4 +28,4 @@
     #1   | AS14593  | 1          | PARTIAL: VULNERABLE (Mixed)    | SpaceX Starlink
     #2   | AS38442  | 1          | PARTIAL: VULNERABLE (Mixed)    | Vodafone Fiji Limited
     #3   | AS154100 | 1          | STUB: PASSIVE (Clean Pipe)     | BNL Tarawa
-    #4   | AS12684  | 1          | REGRESSED                      | SES ASTRA S.A.
+    #4   | AS12684  | 1          | PARTIAL: VULNERABLE (Mixed)    | SES ASTRA S.A.

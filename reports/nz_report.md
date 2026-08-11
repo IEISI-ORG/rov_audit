@@ -3,37 +3,37 @@
     ====================================================================================================
      NATIONAL ROUTING SECURITY: NZ
     ====================================================================================================
-    Total Networks:      718
-    Total Cone Gravity:  2,431
+    Total Networks:      719
+    Total Cone Gravity:  2,221
     ------------------------------------------------------------
-    SECURE (ACTIVE/PASSIVE):    75 (10.4%) -> Protects 81.8% of Traffic
-    VULNERABLE NETWORKS:       305 (42.5%) -> Exposes  0.7% of Traffic
+    SECURE (ACTIVE/PASSIVE):    81 (11.3%) -> Protects 81.5% of Traffic
+    VULNERABLE NETWORKS:       300 (41.7%) -> Exposes  0.2% of Traffic
 
     ====================================================================================================
      THE NZ CORE (Top 20 Networks)
     ====================================================================================================
     ASN      | Verdict                        | Cone     | APNIC% | Name
     ----------------------------------------------------------------------------------------------------
-    AS64073  | PASSIVE (Clean Pipe)           | 1878     | 0%     | Vetta Group
-    AS9790   | ACTIVE LOCAL ROV               | 110      | 0%     | Two Degrees Networks Limited
-    AS135069 | PARTIAL: VULNERABLE (Mixed)    | 79       | 0%     | Feenix Communications Limited
-    AS45177  | PARTIAL: VULNERABLE (Mixed)    | 52       | 99%    | Devoli
-    AS4648   | PARTIAL: VULNERABLE (Mixed)    | 51       | 0%     | Spark New Zealand
-    AS55850  | PARTIAL: VULNERABLE (Mixed)    | 49       | 99%    | Mercury NZ Limited
-    AS4768   | Unverified (Transit/Peer?)     | 33       | 2%     | One New Zealand Group Limited
-    AS38022  | PARTIAL: VULNERABLE (Mixed)    | 33       | -      | REANNZ National Research and Education N
-    AS23838  | PARTIAL: VULNERABLE (Mixed)    | 23       | 0%     | Solarix Networks Limited
-    AS24324  | PARTIAL: VULNERABLE (Mixed)    | 18       | -      | Kordia Limited
-    AS18400  | VULNERABLE                     | 16       | -      | Xtreme Networks Limited
-    AS4049   | PARTIAL: VULNERABLE (Mixed)    | 11       | 0%     | CELLO GROUP LIMITED
-    AS23655  | PARTIAL: VULNERABLE (Mixed)    | 10       | 0%     | 2degrees Networks Limited
-    AS56030  | PARTIAL: VULNERABLE (Mixed)    | 8        | 0%     | Voyager Internet Ltd.
-    AS17492  | PARTIAL: VULNERABLE (Mixed)    | 6        | -      | Vector Communications LTD.
-    AS17705  | PARTIAL: VULNERABLE (Mixed)    | 6        | 0%     | InSPire Net Ltd
+    AS64073  | PASSIVE (Clean Pipe)           | 1690     | 60%    | Vetta Group
+    AS9790   | ACTIVE LOCAL ROV               | 110      | 43%    | Two Degrees Networks Limited
+    AS135069 | PARTIAL: VULNERABLE (Mixed)    | 69       | 47%    | Feenix Communications Limited
+    AS55850  | PARTIAL: VULNERABLE (Mixed)    | 50       | 99%    | Mercury NZ Limited
+    AS45177  | PARTIAL: VULNERABLE (Mixed)    | 47       | 41%    | Devoli
+    AS4648   | PARTIAL: VULNERABLE (Mixed)    | 47       | 34%    | Spark New Zealand
+    AS38022  | PARTIAL: VULNERABLE (Mixed)    | 39       | 100%   | REANNZ National Research and Education N
+    AS4768   | Unverified (Transit/Peer?)     | 33       | 31%    | One New Zealand Group Limited
+    AS23838  | PARTIAL: VULNERABLE (Mixed)    | 21       | -      | Solarix Networks Limited
+    AS18400  | PARTIAL: VULNERABLE (Mixed)    | 15       | -      | Xtreme Networks Limited
+    AS24324  | PARTIAL: VULNERABLE (Mixed)    | 14       | 28%    | Kordia Limited
+    AS4049   | PARTIAL: VULNERABLE (Mixed)    | 11       | 33%    | CELLO GROUP LIMITED
+    AS23655  | ACTIVE LOCAL ROV               | 10       | 50%    | 2degrees Networks Limited
+    AS56030  | PARTIAL: VULNERABLE (Mixed)    | 9        | 52%    | Voyager Internet Ltd.
+    AS17705  | PARTIAL: VULNERABLE (Mixed)    | 6        | 50%    | InSPire Net Ltd
+    AS151336 | PARTIAL: VULNERABLE (Mixed)    | 6        | -      | Verge
+    AS4771   | VULNERABLE                     | 5        | 47%    | Spark New Zealand Trading Ltd.
     AS138398 | PARTIAL: VULNERABLE (Mixed)    | 5        | -      | Prodigi Technology Services Limited
-    AS151336 | PARTIAL: VULNERABLE (Mixed)    | 5        | -      | Verge
-    AS132040 | PARTIAL: VULNERABLE (Mixed)    | 4        | -      | Vital Data Ltd
-    AS9500   | PARTIAL: VULNERABLE (Mixed)    | 4        | 0%     | One New Zealand Group Limited
+    AS45267  | PARTIAL: VULNERABLE (Mixed)    | 4        | 38%    | Lightwire LTD
+    AS45637  | PARTIAL: VULNERABLE (Mixed)    | 4        | 44%    | UniFone New Zealand Ltd
 
     ====================================================================================================
      TRANSIT SUPPLY CHAIN (Who provides to NZ?)
@@ -50,8 +50,8 @@
     #8   | AS23838  | 24         | PARTIAL: VULNERABLE (Mixed)    | Solarix Networks Limited
     #9   | AS4826   | 18         | ACTIVE LOCAL ROV               | Vocus Connect International Backbone
     #10  | AS64073  | 14         | PASSIVE (Clean Pipe)           | Vetta Group
-    #11  | AS18400  | 14         | VULNERABLE                     | Xtreme Networks Limited
-    #12  | AS23655  | 13         | PARTIAL: VULNERABLE (Mixed)    | 2degrees Networks Limited
+    #11  | AS18400  | 14         | PARTIAL: VULNERABLE (Mixed)    | Xtreme Networks Limited
+    #12  | AS23655  | 13         | ACTIVE LOCAL ROV               | 2degrees Networks Limited
     #13  | AS24324  | 13         | PARTIAL: VULNERABLE (Mixed)    | Kordia Limited
     #14  | AS13335  | 13         | ACTIVE LOCAL ROV (Hardcoded)   | Cloudflare, Inc.
     #15  | AS56030  | 12         | PARTIAL: VULNERABLE (Mixed)    | Voyager Internet Ltd.

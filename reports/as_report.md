@@ -6,16 +6,16 @@
     Total Networks:      2
     Total Cone Gravity:  0
     ------------------------------------------------------------
-    SECURE (ACTIVE/PASSIVE):     2 (100.0%) -> Protects 0.0% of Traffic
-    VULNERABLE NETWORKS:         0 ( 0.0%) -> Exposes  0.0% of Traffic
+    SECURE (ACTIVE/PASSIVE):     1 (50.0%) -> Protects 0.0% of Traffic
+    VULNERABLE NETWORKS:         1 (50.0%) -> Exposes  0.0% of Traffic
 
     ====================================================================================================
      THE AS CORE (Top 20 Networks)
     ====================================================================================================
     ASN      | Verdict                        | Cone     | APNIC% | Name
     ----------------------------------------------------------------------------------------------------
-    AS23657  | STUB: FORTUITOUS ROV           | 0        | 95%    | Blue Sky Communications
-    AS9751   | STUB: PASSIVE (Clean Pipe)     | 0        | 0%     | AMERICAN SAMOA TELECOMMUNICATIONS AUTHOR
+    AS23657  | REGRESSED                      | 0        | 99%    | Blue Sky Communications
+    AS9751   | STUB: PASSIVE (Clean Pipe)     | 0        | 53%    | AMERICAN SAMOA TELECOMMUNICATIONS AUTHOR
 
     ====================================================================================================
      TRANSIT SUPPLY CHAIN (Who provides to AS?)

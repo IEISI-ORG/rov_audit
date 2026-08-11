@@ -27,3 +27,7 @@
     - [x] Implement smart "Customer Cone" probe selection to test transit providers from their customers' perspective (`batch_verify_smart_v4.py`).
     - [x] Implement a 7-day TTL for forensic re-verification to catch regressions without wasting Atlas credits.
     - [ ] Create a weekly cron-like trigger to run the smart forensic scan.
+
+
+Pull https://web.archive.org/web/20220724031723/http://rpki-rfc.routingsecurity.net/ and reproduce it.
+

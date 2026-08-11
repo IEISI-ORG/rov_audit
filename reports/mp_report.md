@@ -4,7 +4,7 @@
      NATIONAL ROUTING SECURITY: MP
     ====================================================================================================
     Total Networks:      2
-    Total Cone Gravity:  1
+    Total Cone Gravity:  2
     ------------------------------------------------------------
     SECURE (ACTIVE/PASSIVE):     1 (50.0%) -> Protects 100.0% of Traffic
     VULNERABLE NETWORKS:         0 ( 0.0%) -> Exposes  0.0% of Traffic
@@ -14,7 +14,7 @@
     ====================================================================================================
     ASN      | Verdict                        | Cone     | APNIC% | Name
     ----------------------------------------------------------------------------------------------------
-    AS7131   | PASSIVE (Clean Pipe)           | 1        | 0%     | PTI Pacifica Inc.
+    AS7131   | PASSIVE (Clean Pipe)           | 2        | 21%    | PTI Pacifica Inc.
     AS9839   | NOT ROUTED                     | 0        | -      | Micronesian Telecommunications Corp
 
     ====================================================================================================

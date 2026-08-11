@@ -7,18 +7,18 @@
     Total Cone Gravity:  0
     ------------------------------------------------------------
     SECURE (ACTIVE/PASSIVE):     0 ( 0.0%) -> Protects 0.0% of Traffic
-    VULNERABLE NETWORKS:         0 ( 0.0%) -> Exposes  0.0% of Traffic
+    VULNERABLE NETWORKS:         1 (100.0%) -> Exposes  0.0% of Traffic
 
     ====================================================================================================
      THE NU CORE (Top 20 Networks)
     ====================================================================================================
     ASN      | Verdict                        | Cone     | APNIC% | Name
     ----------------------------------------------------------------------------------------------------
-    AS55885  | NOT ROUTED                     | 0        | 1%     | No. 1 Commercial Center
+    AS55885  | STUB: VULNERABLE               | 0        | -      | No. 1 Commercial Center
 
     ====================================================================================================
      TRANSIT SUPPLY CHAIN (Who provides to NU?)
     ====================================================================================================
     Rank | Upstream | Dependents | Global Status                  | Name
     ----------------------------------------------------------------------------------------------------
-    #1   | AS38800  | 1          | NOT ROUTED                     | Digicel Samoa Ltd
+    #1   | AS38800  | 1          | STUB: UNRELIABLE               | Digicel Samoa Ltd
