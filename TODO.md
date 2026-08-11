@@ -23,9 +23,9 @@
     - [ ] Update to use `rov_utils.load_all_asn_data()` and current verdict/classification helpers.
     - [ ] Integrate into the `do_reports` pipeline.
     - Note: `reports/analyze_aspa_realistic.html` is stale (last generated Apr 22 2026, not wired into `do_reports`), same orphaned-report pattern as quadrants above. Distinct from `analyze_aspa_readiness_v2.py`, which is current and live in `do_reports`.
-- [ ] Update ROA Signing Data:
-    - [ ] Run `python3 do_roa_sync.py` to refresh global ROA signing percentages.
-    - [ ] Run `python3 pack_asn_data.py` to update the high-performance packed archive with new ROA stats.
+- [x] Update ROA Signing Data:
+    - [x] `do_roa_sync.py` + `pack_asn_data.py` run automatically inside `do_data_gathering`, triggered by the `full` cron mode — **weekly (Sunday 03:00), not daily**. The daily `reports` cron job does not touch ROA data, it only reruns analysis against the last weekly-packed archive. Verified 7 consecutive successful runs in `logs/cron.log` (2026-06-28 through 2026-08-09), each ending `[SUCCESS] Global ROA Sync Complete`.
+    - Known issue: every run logs `Fetching IPv4 Geo... FAIL` during the metadata phase (non-fatal, Cymru fallback covers it, run still succeeds) — consistent across all 7 observed runs, worth root-causing separately.
 - [ ] Repository Maintenance:
     - [ ] Trim the git repository of large data blobs from historical commits (using `git filter-repo` or `bfg`) to reduce `.git` directory size.
     - [x] Implement a 7-day TTL for all APNIC Labs data fetches to avoid overloading their servers (Implemented in `rov_utils.py`).
