@@ -17,12 +17,19 @@
     - [ ] Refactor `old/analyze_rov_quadrants_v3.py` into a modern `analyze_rov_quadrants_v4.py`.
     - [ ] Update to use `rov_utils.load_all_asn_data()` and `rov_utils.is_secure()`.
     - [ ] Integrate into the `do_reports` pipeline.
+    - Note: `reports/analyze_rov_quadrants.html` is stale (last generated Apr 22 2026, not wired into `do_reports`). The `.md` mtime looks fresh only because `do_reports`'s pandoc loop reconverts every existing `.html` on each run regardless of whether it was regenerated.
+- [ ] Write a new ASPA-realistic analysis script:
+    - [ ] `old/analyze_aspa_realistic_v4.py` is the latest prior attempt but is stale (Jan 2 2026) and diverged from current `rov_utils` conventions — write a fresh script rather than patching it, following the same modernization pattern as the quadrant analysis above.
+    - [ ] Update to use `rov_utils.load_all_asn_data()` and current verdict/classification helpers.
+    - [ ] Integrate into the `do_reports` pipeline.
+    - Note: `reports/analyze_aspa_realistic.html` is stale (last generated Apr 22 2026, not wired into `do_reports`), same orphaned-report pattern as quadrants above. Distinct from `analyze_aspa_readiness_v2.py`, which is current and live in `do_reports`.
 - [ ] Update ROA Signing Data:
     - [ ] Run `python3 do_roa_sync.py` to refresh global ROA signing percentages.
     - [ ] Run `python3 pack_asn_data.py` to update the high-performance packed archive with new ROA stats.
 - [ ] Repository Maintenance:
     - [ ] Trim the git repository of large data blobs from historical commits (using `git filter-repo` or `bfg`) to reduce `.git` directory size.
     - [x] Implement a 7-day TTL for all APNIC Labs data fetches to avoid overloading their servers (Implemented in `rov_utils.py`).
+    - [x] Monthly cron commit of report outputs — `rov_cron.sh commit` mode, scoped to `git add -u -- reports/ '*.csv' logs/cron.log` (tracked files only, no push). Scheduled 1st of month 07:00.
 - [ ] Forensic Automation:
     - [x] Implement smart "Customer Cone" probe selection to test transit providers from their customers' perspective (`batch_verify_smart_v4.py`).
     - [x] Implement a 7-day TTL for forensic re-verification to catch regressions without wasting Atlas credits.

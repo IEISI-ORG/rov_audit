@@ -13,10 +13,14 @@
 #   # Reports-only refresh: daily at 06:00 (uses cached topology)
 #   0 6 * * * /home/terry/rov_audit/rov_cron.sh reports >> /home/terry/rov_audit/logs/cron.log 2>&1
 #
+#   # Commit report outputs: monthly on the 1st at 07:00
+#   0 7 1 * * /home/terry/rov_audit/rov_cron.sh commit >> /home/terry/rov_audit/logs/cron.log 2>&1
+#
 # Modes:
 #   atlas    — run batch_verify_smart_v4.py (5 Atlas targets, fast ~5 min)
 #   reports  — run do_reports (audit + analysis + HTML generation)
 #   full     — do_data_gathering + atlas + reports (weekly heavyweight run)
+#   commit   — git commit changed report outputs (monthly, local commit only — no push)
 #
 # Lock files prevent overlapping runs of the same mode.
 # ============================================================
@@ -121,6 +125,28 @@ run_data_gathering() {
 }
 
 # -----------------------------------------------------------
+# Stage: Commit report outputs
+# Only stages *already-tracked* files under reports/, root-level CSVs,
+# and logs/cron.log (git add -u), so it can never sweep in unrelated
+# untracked files (secrets, new scratch scripts, etc.). Commits nothing
+# and exits cleanly if there are no changes. Local commit only — never
+# pushes.
+# -----------------------------------------------------------
+run_commit() {
+    log "[commit] Checking for changed report outputs..."
+    cd "$SCRIPT_DIR"
+    git add -u -- reports/ '*.csv' logs/cron.log
+    if git diff --cached --quiet; then
+        log "[commit] No changes to commit."
+        return
+    fi
+    local msg
+    msg="chore: monthly report output snapshot ($(date '+%Y-%m'))"
+    git commit -m "$msg" >/dev/null
+    log "[commit] Committed: $msg"
+}
+
+# -----------------------------------------------------------
 # Main dispatch
 # -----------------------------------------------------------
 case "$MODE" in
@@ -143,12 +169,18 @@ case "$MODE" in
         run_reports
         log "[full] === Weekly full pipeline complete ==="
         ;;
+    commit)
+        acquire_lock commit
+        trap release_lock EXIT
+        run_commit
+        ;;
     *)
-        echo "Usage: $0 {atlas|reports|full}"
+        echo "Usage: $0 {atlas|reports|full|commit}"
         echo ""
         echo "  atlas    — RIPE Atlas forensic batch (nightly, ~5 min)"
         echo "  reports  — Audit + analysis + HTML reports (daily, ~30 min)"
         echo "  full     — Topology rebuild + atlas + reports (weekly, ~2-3 hr)"
+        echo "  commit   — Commit changed report outputs (monthly, local only)"
         exit 1
         ;;
 esac
