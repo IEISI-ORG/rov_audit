@@ -35,5 +35,8 @@
     - [x] Create a weekly cron-like trigger to run the smart forensic scan — actually implemented as nightly (02:00) via `rov_cron.sh atlas`, which exceeds the original weekly spec.
 
 
-- [ ] Reproduce the archived RPKI RFC routing-security reference page: https://web.archive.org/web/20220724031723/http://rpki-rfc.routingsecurity.net/
+- [x] Reproduce the archived RPKI RFC routing-security reference page: https://web.archive.org/web/20220724031723/http://rpki-rfc.routingsecurity.net/
+    - [x] Original site is dead; reproduced from `RPKI_RFCS.md` at repo root as a static markdown reference (the source was a D3.js reading-dependency graph, not a data page — reproduced the underlying curation, not the visualization). Sourced from the Wayback snapshot at `2022-07-27T16:37:30Z` (nearest crawl of the data file to the `2022-07-24` page snapshot originally noted here).
+    - Faithful reproduction of the 2022 snapshot only (63 RFCs, MUST/SHOULD/MAY tiers, 29 UPDATE/OBSOLETE relationships) — RFCs published since then (e.g. ASPA RFC 9582) are deliberately excluded. Extending the list is a separate future item if wanted.
+    - 4 of the 63 entries have known title/author corruption baked into the original source data (not introduced here) — flagged inline in `RPKI_RFCS.md` via a footnote.
 
