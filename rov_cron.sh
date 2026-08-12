@@ -131,10 +131,24 @@ run_data_gathering() {
 # untracked files (secrets, new scratch scripts, etc.). Commits nothing
 # and exits cleanly if there are no changes. Local commit only — never
 # pushes.
+#
+# cron.log is rotated first via copytruncate (cp + in-place truncate,
+# not mv/rename) so the shell's `>> logs/cron.log` file descriptor from
+# the crontab invocation keeps writing into the same inode — a plain
+# rename would silently redirect the rest of this run's log output into
+# the archived file instead of a fresh one. Rotated archives are
+# gitignored (logs/cron.log.*) so they never get swept into a commit
+# and recreate the same unbounded-growth problem under a new filename.
 # -----------------------------------------------------------
 run_commit() {
-    log "[commit] Checking for changed report outputs..."
     cd "$SCRIPT_DIR"
+    if [ -s logs/cron.log ]; then
+        local archive="logs/cron.log.$(date '+%Y-%m').log"
+        cp logs/cron.log "$archive" && : > logs/cron.log
+        gzip -f "$archive"
+        log "[commit] Rotated cron.log -> ${archive}.gz"
+    fi
+    log "[commit] Checking for changed report outputs..."
     git add -u -- reports/ '*.csv' logs/cron.log
     if git diff --cached --quiet; then
         log "[commit] No changes to commit."
