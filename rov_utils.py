@@ -336,6 +336,7 @@ def load_metadata() -> tuple[dict, set]:
         print(f"    - Fetching {label} Geo...", end=" ", flush=True)
         try:
             resp = requests.get(url, headers=HEADERS, timeout=30)
+            resp.raise_for_status()
             with gzip.open(BytesIO(resp.content), 'rt') as f:
                 count = 0
                 for line in f:
@@ -346,7 +347,8 @@ def load_metadata() -> tuple[dict, set]:
                         asn_countries[int(asn_str)].append(cc)
                         count += 1
                 print(f"OK ({count:,} rows)")
-        except: print("FAIL")
+        except Exception as e:
+            print(f"FAIL ({type(e).__name__}: {e})")
 
     for asn, ccs in asn_countries.items():
         primary_cc = Counter(ccs).most_common(1)[0][0].upper()
