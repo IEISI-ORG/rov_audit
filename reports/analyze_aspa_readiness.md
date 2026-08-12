@@ -7,9 +7,9 @@
     ===============================================================================================
     Total Customer-to-Provider Links: 168,503
     Theoretical Max Protection (Top 100 Providers): 87,232 links (51.8%)
-    Realistic Forecast (Weighted by current ROV status): 78,103 links (46.4%)
+    Realistic Forecast (Weighted by current ROV status): 78,206 links (46.4%)
 
-    [!] THE REALITY GAP: 9,128 links are dependent on providers who currently FAIL at ROV.
+    [!] THE REALITY GAP: 9,025 links are dependent on providers who currently FAIL at ROV.
         These networks cannot be expected to enforce ASPA until they fix their ROV baseline.
 
     ===============================================================================================

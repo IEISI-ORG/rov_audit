@@ -3,11 +3,11 @@
     ====================================================================================================
      NATIONAL ROUTING SECURITY: ID
     ====================================================================================================
-    Total Networks:      3,969
+    Total Networks:      3,971
     Total Cone Gravity:  10,609
     ------------------------------------------------------------
-    SECURE (ACTIVE/PASSIVE):    78 ( 2.0%) -> Protects 62.1% of Traffic
-    VULNERABLE NETWORKS:      2625 (66.1%) -> Exposes  16.4% of Traffic
+    SECURE (ACTIVE/PASSIVE):    63 ( 1.6%) -> Protects 66.5% of Traffic
+    VULNERABLE NETWORKS:      2668 (67.2%) -> Exposes  12.8% of Traffic
 
     ====================================================================================================
      THE ID CORE (Top 20 Networks)
@@ -18,7 +18,7 @@
     AS136106 | PASSIVE (Clean Pipe)           | 691      | 32%    | PT Mega Akses Persada
     AS4800   | PARTIAL: VULNERABLE (Mixed)    | 638      | 20%    | PT Aplikanusa Lintasarta
     AS147094 | PASSIVE (Clean Pipe)           | 529      | -      | PT Mitra Visioner Pratama
-    AS23947  | INCONSISTENT                   | 469      | 21%    | PT Mora Telematika Indonesia Tbk
+    AS23947  | PASSIVE (Clean Pipe)           | 469      | 21%    | PT Mora Telematika Indonesia Tbk
     AS138840 | PASSIVE (Clean Pipe)           | 440      | -      | PT Parsaoran Global Datatrans
     AS38158  | PASSIVE (Clean Pipe)           | 298      | -      | PT Cyberindo Aditama
     AS133095 | PARTIAL: VULNERABLE (Mixed)    | 224      | -      | PT Pusat Fiber Indonesia
@@ -45,7 +45,7 @@
     #3   | AS4800   | 261        | PARTIAL: VULNERABLE (Mixed)    | PT Aplikanusa Lintasarta
     #4   | AS138840 | 249        | PASSIVE (Clean Pipe)           | PT Parsaoran Global Datatrans
     #5   | AS136106 | 234        | PASSIVE (Clean Pipe)           | PT Mega Akses Persada
-    #6   | AS23947  | 207        | INCONSISTENT                   | PT Mora Telematika Indonesia Tbk
+    #6   | AS23947  | 207        | PASSIVE (Clean Pipe)           | PT Mora Telematika Indonesia Tbk
     #7   | AS38158  | 187        | PASSIVE (Clean Pipe)           | PT Cyberindo Aditama
     #8   | AS4761   | 139        | REGRESSED                      | PT Indosat Tbk
     #9   | AS4787   | 108        | Unverified (Transit/Peer?)     | PT Cyberindo Aditama

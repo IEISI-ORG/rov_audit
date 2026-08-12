@@ -26,14 +26,14 @@
     AS141767 | VULNERABLE                     | 4        | 26%    | C G Communications Ltd
     AS38565  | VULNERABLE                     | 3        | 17%    | Ncell Pvt. Ltd.
     AS24550  | VULNERABLE                     | 1        | 22%    | Websurfer Nepal Internet Service Provide
-    AS154235 | STUB: VULNERABLE               | 0        | 41%    | Itel network pvt.ltd.
     AS154237 | STUB: VULNERABLE               | 0        | -      | Swift Technology Pvt. Ltd.
+    AS154235 | STUB: VULNERABLE               | 0        | 41%    | Itel network pvt.ltd.
     AS154259 | STUB: VULNERABLE               | 0        | -      | Workalaya R. And D. Private Limited
-    AS154342 | NOT ROUTED                     | 0        | -      | Nagarik Cable Link pvt. ltd
-    AS154272 | NOT ROUTED                     | 0        | -      | CG Digital
     AS154274 | STUB: VULNERABLE               | 0        | -      | Digital Network Solution Pvt. Ltd.
+    AS154272 | NOT ROUTED                     | 0        | -      | CG Digital
     AS154038 | STUB: VULNERABLE               | 0        | 8%     | Shikhar Net Pvt. Ltd.
     AS154096 | STUB: VULNERABLE               | 0        | -      | eSewa Private Limited
+    AS154542 | STUB: VULNERABLE               | 0        | -      | Fonepay Payment Service Limited
 
     ====================================================================================================
      TRANSIT SUPPLY CHAIN (Who provides to NP?)

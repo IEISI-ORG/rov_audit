@@ -3,11 +3,11 @@
     ====================================================================================================
      NATIONAL ROUTING SECURITY: DE
     ====================================================================================================
-    Total Networks:      3,251
+    Total Networks:      3,252
     Total Cone Gravity:  173,698
     ------------------------------------------------------------
-    SECURE (ACTIVE/PASSIVE):  1164 (35.8%) -> Protects 38.7% of Traffic
-    VULNERABLE NETWORKS:      1112 (34.2%) -> Exposes  0.0% of Traffic
+    SECURE (ACTIVE/PASSIVE):  1169 (35.9%) -> Protects 38.7% of Traffic
+    VULNERABLE NETWORKS:      1108 (34.1%) -> Exposes  0.0% of Traffic
 
     ====================================================================================================
      THE DE CORE (Top 20 Networks)
@@ -51,7 +51,7 @@
     #9   | AS5405   | 112        | PARTIAL: VULNERABLE (Mixed)    | Inter.link GmbH
     #10  | AS13237  | 96         | PARTIAL: VULNERABLE (Mixed)    | euNetworks GmbH
     #11  | AS3209   | 93         | ACTIVE LOCAL ROV               | Vodafone GmbH
-    #12  | AS34927  | 83         | PASSIVE (Clean Pipe)           | iFog GmbH
+    #12  | AS34927  | 84         | PASSIVE (Clean Pipe)           | iFog GmbH
     #13  | AS2914   | 77         | CORE: ACTIVE PROTECTOR         | NTT America, Inc.
     #14  | AS3257   | 71         | CORE: ACTIVE PROTECTOR         | GTT Communications Inc.
     #15  | AS8767   | 60         | PARTIAL: VULNERABLE (Mixed)    | M-net Telekommunikations GmbH

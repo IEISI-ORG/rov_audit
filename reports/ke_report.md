@@ -26,14 +26,14 @@
     AS33771  | PARTIAL: VULNERABLE (Mixed)    | 3        | 20%    | Safaricom Limited
     AS329029 | PARTIAL: VULNERABLE (Mixed)    | 3        | 13%    | Mymanga Networks
     AS12455  | REGRESSED                      | 2        | 19%    | Kenyan Post & Telecommunications Company
+    AS328858 | REGRESSED                      | 2        | 21%    | Express Data Networks Limited
     AS37684  | REGRESSED                      | 2        | 25%    | Angani Limited
     AS36926  | PARTIAL: VULNERABLE (Mixed)    | 2        | 18%    | Airtel Networks Kenya Limited
-    AS328858 | REGRESSED                      | 2        | 21%    | Express Data Networks Limited
-    AS329437 | PARTIAL: VULNERABLE (Mixed)    | 1        | 21%    | VENNET SOLUTIONS LIMITED
-    AS329033 | PARTIAL: VULNERABLE (Mixed)    | 1        | 17%    | Systel Limited
     AS329387 | REGRESSED                      | 1        | 19%    | Skylink Networks LTD
+    AS329437 | PARTIAL: VULNERABLE (Mixed)    | 1        | 21%    | VENNET SOLUTIONS LIMITED
     AS15399  | PARTIAL: VULNERABLE (Mixed)    | 1        | 24%    | Wananchi Group (Kenya) Limited
-    AS328482 | REGRESSED                      | 1        | 17%    | SKY TREND NETWORKS LIMITED
+    AS329033 | PARTIAL: VULNERABLE (Mixed)    | 1        | 17%    | Systel Limited
+    AS328271 | REGRESSED                      | 1        | 23%    | Syokinet Solutions Limited
 
     ====================================================================================================
      TRANSIT SUPPLY CHAIN (Who provides to KE?)

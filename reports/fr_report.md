@@ -3,11 +3,11 @@
     ====================================================================================================
      NATIONAL ROUTING SECURITY: FR
     ====================================================================================================
-    Total Networks:      1,874
+    Total Networks:      1,875
     Total Cone Gravity:  166,714
     ------------------------------------------------------------
-    SECURE (ACTIVE/PASSIVE):   716 (38.2%) -> Protects 97.0% of Traffic
-    VULNERABLE NETWORKS:       579 (30.9%) -> Exposes  0.0% of Traffic
+    SECURE (ACTIVE/PASSIVE):   715 (38.1%) -> Protects 97.0% of Traffic
+    VULNERABLE NETWORKS:       580 (30.9%) -> Exposes  0.0% of Traffic
 
     ====================================================================================================
      THE FR CORE (Top 20 Networks)

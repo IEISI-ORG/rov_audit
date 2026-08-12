@@ -24,8 +24,8 @@
     AS140322 | NOT ROUTED                     | 0        | -      | Green E Solutions
     AS140695 | STUB: VULNERABLE               | 0        | -      | Bank of Bhutan Limited
     AS151782 | NOT ROUTED                     | 0        | -      | Royal Insurance Corporation of Bhutan Li
-    AS151498 | STUB: VULNERABLE               | 0        | -      | Bhutan Power Corporation Ltd
     AS151955 | STUB: VULNERABLE               | 0        | -      | DRUK PNB BANK LIMITED
+    AS151498 | STUB: VULNERABLE               | 0        | -      | Bhutan Power Corporation Ltd
     AS153779 | STUB: VULNERABLE               | 0        | 39%    | Nilo FiberNet
     AS153740 | STUB: VULNERABLE               | 0        | -      | Bhutan Development Bank
     AS152318 | NOT ROUTED                     | 0        | -      | Gelephu Thromde

@@ -24,12 +24,12 @@
     AS2518   | ACTIVE LOCAL ROV               | 31       | 99%    | BIGLOBE Inc.
     AS59105  | PARTIAL: VULNERABLE (Mixed)    | 24       | -      | Home NOC Operators Group
     AS7529   | PARTIAL: VULNERABLE (Mixed)    | 17       | -      | GMO NetIRD, Inc.
-    AS9824   | ACTIVE LOCAL ROV               | 15       | 99%    | JCOM Co., Ltd.
     AS150369 | ACTIVE LOCAL ROV               | 15       | -      | TelHi Corporation
+    AS9824   | ACTIVE LOCAL ROV               | 15       | 99%    | JCOM Co., Ltd.
     AS7670   | PASSIVE (Clean Pipe)           | 13       | 36%    | Enecom,Inc.
     AS2500   | PASSIVE (Clean Pipe)           | 13       | -      | WIDE Project
-    AS38074  | PASSIVE (Clean Pipe)           | 12       | -      | SDCC Japan-West Area
     AS59103  | UNRELIABLE                     | 12       | 82%    | SoftEther Corporation
+    AS38074  | PASSIVE (Clean Pipe)           | 12       | -      | SDCC Japan-West Area
     AS7679   | PASSIVE (Clean Pipe)           | 11       | 37%    | QTnet,Inc.
     AS9354   | PASSIVE (Clean Pipe)           | 11       | 99%    | Community Network Center Inc.
     AS214675 | PARTIAL: VULNERABLE (Mixed)    | 9        | -      | Hidenori Matsuo

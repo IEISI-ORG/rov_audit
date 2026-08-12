@@ -6,8 +6,8 @@
     Total Networks:      719
     Total Cone Gravity:  2,221
     ------------------------------------------------------------
-    SECURE (ACTIVE/PASSIVE):    81 (11.3%) -> Protects 81.5% of Traffic
-    VULNERABLE NETWORKS:       300 (41.7%) -> Exposes  0.2% of Traffic
+    SECURE (ACTIVE/PASSIVE):    80 (11.1%) -> Protects 81.5% of Traffic
+    VULNERABLE NETWORKS:       301 (41.9%) -> Exposes  0.2% of Traffic
 
     ====================================================================================================
      THE NZ CORE (Top 20 Networks)
@@ -28,12 +28,12 @@
     AS4049   | PARTIAL: VULNERABLE (Mixed)    | 11       | 33%    | CELLO GROUP LIMITED
     AS23655  | ACTIVE LOCAL ROV               | 10       | 50%    | 2degrees Networks Limited
     AS56030  | PARTIAL: VULNERABLE (Mixed)    | 9        | 52%    | Voyager Internet Ltd.
-    AS151336 | PARTIAL: VULNERABLE (Mixed)    | 6        | -      | Verge
     AS17705  | PARTIAL: VULNERABLE (Mixed)    | 6        | 50%    | InSPire Net Ltd
+    AS151336 | PARTIAL: VULNERABLE (Mixed)    | 6        | -      | Verge
     AS138398 | PARTIAL: VULNERABLE (Mixed)    | 5        | -      | Prodigi Technology Services Limited
     AS4771   | VULNERABLE                     | 5        | 47%    | Spark New Zealand Trading Ltd.
-    AS45637  | PARTIAL: VULNERABLE (Mixed)    | 4        | 44%    | UniFone New Zealand Ltd
-    AS24183  | PARTIAL: VULNERABLE (Mixed)    | 4        | 100%   | DTS LTD
+    AS9500   | PARTIAL: VULNERABLE (Mixed)    | 4        | 43%    | One New Zealand Group Limited
+    AS45267  | PARTIAL: VULNERABLE (Mixed)    | 4        | 38%    | Lightwire LTD
 
     ====================================================================================================
      TRANSIT SUPPLY CHAIN (Who provides to NZ?)

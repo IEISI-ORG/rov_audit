@@ -17,8 +17,8 @@
     AS36925  | PARTIAL: VULNERABLE (Mixed)    | 10       | 99%    | Orange Maroc
     AS36884  | PARTIAL: VULNERABLE (Mixed)    | 9        | 99%    | Wana Corporate
     AS6713   | PARTIAL: VULNERABLE (Mixed)    | 8        | 98%    | Maroc Telecom
-    AS36956  | Unverified (Transit/Peer?)     | 2        | -      | Office National des Postes et Telecommun
     AS328867 | PASSIVE (Clean Pipe)           | 2        | -      | Corebach Backbone SARL
+    AS36956  | Unverified (Transit/Peer?)     | 2        | -      | Office National des Postes et Telecommun
     AS201129 | STUB: VULNERABLE               | 0        | -      | Linceris International Cloud Solutions -
     AS328799 | NOT ROUTED                     | 0        | -      | PIXI MEDIA SARL
     AS328960 | STUB: PASSIVE (Clean Pipe)     | 0        | -      | Ministry of Foreign Affairs African Coop

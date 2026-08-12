@@ -25,8 +25,8 @@
     AS328729 | STUB: VULNERABLE               | 0        | -      | GROUPEMENT DES SERVICES EAU ET ELECTRICI
     AS328903 | NOT ROUTED                     | 0        | -      | Réseau Ivoirien de Télécommunication pou
     AS329666 | STUB: VULNERABLE               | 0        | -      | Cote d'Ivoire Internet Exchange Point
-    AS329586 | STUB: VULNERABLE               | 0        | -      | Port Autonome D'Abidjan
     AS329602 | NOT ROUTED                     | 0        | -      | CÔTE D'IVOIRE DATA
+    AS329586 | STUB: VULNERABLE               | 0        | -      | Port Autonome D'Abidjan
     AS329372 | NOT ROUTED                     | 0        | -      | Orange Côte d'Ivoire
     AS327974 | STUB: VULNERABLE               | 0        | -      | Authorite de Regulation des Telecommunic
     AS328025 | STUB: VULNERABLE               | 0        | -      | VEONE

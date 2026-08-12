@@ -3,11 +3,11 @@
     ====================================================================================================
      NATIONAL ROUTING SECURITY: PT
     ====================================================================================================
-    Total Networks:      163
+    Total Networks:      164
     Total Cone Gravity:  243
     ------------------------------------------------------------
-    SECURE (ACTIVE/PASSIVE):    66 (40.5%) -> Protects 11.5% of Traffic
-    VULNERABLE NETWORKS:        59 (36.2%) -> Exposes  0.0% of Traffic
+    SECURE (ACTIVE/PASSIVE):    65 (39.6%) -> Protects 11.5% of Traffic
+    VULNERABLE NETWORKS:        60 (36.6%) -> Exposes  0.0% of Traffic
 
     ====================================================================================================
      THE PT CORE (Top 20 Networks)
@@ -27,13 +27,13 @@
     AS44222  | PASSIVE (Clean Pipe)           | 2        | -      | Nuno Felgueiras
     AS200454 | PARTIAL: VULNERABLE (Mixed)    | 2        | -      | Tomas Oliveira Valente Leite de Castro
     AS47787  | PARTIAL: VULNERABLE (Mixed)    | 2        | -      | EDGOO NETWORKS UNIPESSOAL LDA
-    AS201782 | PASSIVE (Clean Pipe)           | 1        | -      | Make It Simple Consultoria Informatica L
     AS50293  | PARTIAL: VULNERABLE (Mixed)    | 1        | -      | Interfiber Networks LDA
+    AS201782 | PASSIVE (Clean Pipe)           | 1        | -      | Make It Simple Consultoria Informatica L
     AS12926  | PARTIAL: VULNERABLE (Mixed)    | 1        | 8%     | AR TELECOM - Acessos e Redes de Telecomu
-    AS199993 | STUB: VULNERABLE               | 0        | -      | Associacao DNS.PT
     AS198980 | STUB: VULNERABLE               | 0        | -      | Banco de Portugal
-    AS199130 | STUB: PASSIVE (Clean Pipe)     | 0        | -      | 4Spiro - Sociedade de Consultoria, LDA
-    AS199016 | STUB: VULNERABLE               | 0        | -      | VISUALFORMA TECNOLOGIAS DE INFORMACAO, S
+    AS207118 | STUB: VULNERABLE               | 0        | -      | Diogo Castro
+    AS207112 | STUB: PASSIVE (Clean Pipe)     | 0        | -      | REN - Rede Energeticas Nacionais, S.A.
+    AS199667 | NOT ROUTED                     | 0        | -      | 4Spiro - Sociedade de Consultoria, LDA
 
     ====================================================================================================
      TRANSIT SUPPLY CHAIN (Who provides to PT?)

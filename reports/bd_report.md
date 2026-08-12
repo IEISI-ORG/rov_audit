@@ -3,7 +3,7 @@
     ====================================================================================================
      NATIONAL ROUTING SECURITY: BD
     ====================================================================================================
-    Total Networks:      2,010
+    Total Networks:      2,011
     Total Cone Gravity:  3,365
     ------------------------------------------------------------
     SECURE (ACTIVE/PASSIVE):    19 ( 0.9%) -> Protects 34.6% of Traffic
@@ -32,8 +32,8 @@
     AS24323  | VULNERABLE                     | 37       | 20%    | aamra networks limited
     AS63961  | Unverified (Transit/Peer?)     | 34       | 19%    | Bangladesh Research and Education Networ
     AS141731 | VULNERABLE                     | 32       | 26%    | Max Hub Limited
-    AS17806  | PARTIAL: VULNERABLE (Mixed)    | 26       | 18%    | Mango Teleservices
     AS9230   | VULNERABLE                     | 26       | 13%    | Bangladesh Online Ltd.
+    AS17806  | PARTIAL: VULNERABLE (Mixed)    | 26       | 18%    | Mango Teleservices
 
     ====================================================================================================
      TRANSIT SUPPLY CHAIN (Who provides to BD?)

@@ -6,8 +6,8 @@
     Total Networks:      1,166
     Total Cone Gravity:  62,693
     ------------------------------------------------------------
-    SECURE (ACTIVE/PASSIVE):   292 (25.0%) -> Protects 98.6% of Traffic
-    VULNERABLE NETWORKS:       575 (49.3%) -> Exposes  0.2% of Traffic
+    SECURE (ACTIVE/PASSIVE):   293 (25.1%) -> Protects 98.6% of Traffic
+    VULNERABLE NETWORKS:       574 (49.2%) -> Exposes  0.2% of Traffic
 
     ====================================================================================================
      THE ES CORE (Top 20 Networks)
@@ -19,8 +19,8 @@
     AS60171  | PARTIAL: VULNERABLE (Mixed)    | 199      | 58%    | AFR-IX TELECOM S.A.
     AS12357  | VULNERABLE                     | 106      | 50%    | VODAFONE ESPANA S.A.U.
     AS12479  | ACTIVE LOCAL ROV               | 76       | 99%    | Orange Espagne SA
-    AS3352   | ACTIVE LOCAL ROV               | 74       | 99%    | TELEFONICA DE ESPANA S.A.U.
     AS8903   | PASSIVE (Clean Pipe)           | 74       | 53%    | LYNTIA NETWORKS S.A.
+    AS3352   | ACTIVE LOCAL ROV               | 74       | 99%    | TELEFONICA DE ESPANA S.A.U.
     AS202766 | PASSIVE (Clean Pipe)           | 60       | -      | LYNTIA NETWORKS S.A.
     AS12541  | PASSIVE (Clean Pipe)           | 59       | -      | LYNTIA NETWORKS S.A.
     AS35699  | PASSIVE (Clean Pipe)           | 58       | 41%    | Adamo Telecom Iberia S.A.
@@ -30,10 +30,10 @@
     AS8637   | PARTIAL: VULNERABLE (Mixed)    | 22       | -      | SpainWISP, S.L.
     AS766    | PASSIVE (Clean Pipe)           | 22       | 29%    | Entidad Publica Empresarial Red.es
     AS34696  | PARTIAL: VULNERABLE (Mixed)    | 19       | 48%    | MISMELINK NETWORKS, SL
-    AS34471  | PARTIAL: VULNERABLE (Mixed)    | 17       | 44%    | Free Technologies Excom S.L.
     AS13287  | PARTIAL: VULNERABLE (Mixed)    | 17       | -      | FALBOX S.L. trading as NIXVAL
+    AS34471  | PARTIAL: VULNERABLE (Mixed)    | 17       | 44%    | Free Technologies Excom S.L.
     AS49353  | PASSIVE (Clean Pipe)           | 15       | -      | Valor Information Technologies, S.L.
-    AS12338  | ACTIVE LOCAL ROV               | 11       | 99%    | Euskaltel S.A.
+    AS200845 | PARTIAL: VULNERABLE (Mixed)    | 11       | 41%    | AVATEL TELECOM, SA
 
     ====================================================================================================
      TRANSIT SUPPLY CHAIN (Who provides to ES?)

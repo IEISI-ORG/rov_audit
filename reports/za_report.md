@@ -6,8 +6,8 @@
     Total Networks:      745
     Total Cone Gravity:  840
     ------------------------------------------------------------
-    SECURE (ACTIVE/PASSIVE):   212 (28.5%) -> Protects 23.0% of Traffic
-    VULNERABLE NETWORKS:       291 (39.1%) -> Exposes  3.6% of Traffic
+    SECURE (ACTIVE/PASSIVE):   211 (28.3%) -> Protects 23.0% of Traffic
+    VULNERABLE NETWORKS:       292 (39.2%) -> Exposes  3.6% of Traffic
 
     ====================================================================================================
      THE ZA CORE (Top 20 Networks)
@@ -20,20 +20,20 @@
     AS5713   | PASSIVE (Clean Pipe)           | 56       | 22%    | Telkom SA Ltd.
     AS36994  | PARTIAL: VULNERABLE (Mixed)    | 50       | 32%    | Vodacom
     AS37497  | PARTIAL: VULNERABLE (Mixed)    | 43       | 96%    | Network Platforms (PTY) LTD
-    AS328748 | PARTIAL: VULNERABLE (Mixed)    | 31       | -      | Agile Solutions Provider (PTY) LTD
     AS327782 | PARTIAL: VULNERABLE (Mixed)    | 31       | 30%    | Metrofibre Networx
+    AS328748 | PARTIAL: VULNERABLE (Mixed)    | 31       | -      | Agile Solutions Provider (PTY) LTD
     AS327693 | PARTIAL: VULNERABLE (Mixed)    | 29       | 86%    | Echotel Pty Ltd
     AS9129   | Unverified (Transit/Peer?)     | 26       | 20%    | MTN Business Kenya
     AS36874  | PARTIAL: VULNERABLE (Mixed)    | 18       | 33%    | Cybersmart
     AS37179  | PASSIVE (Clean Pipe)           | 16       | -      | Africa Independent Network Exchange (Pty
-    AS328333 | PARTIAL: VULNERABLE (Mixed)    | 15       | 32%    | Fixed Mobile Telecommunications (Pty) LT
     AS37731  | PARTIAL: VULNERABLE (Mixed)    | 15       | -      | Web Squad Connect (Pty) Ltd
-    AS25818  | PARTIAL: VULNERABLE (Mixed)    | 11       | -      | cmcnetworks
+    AS328333 | PARTIAL: VULNERABLE (Mixed)    | 15       | 32%    | Fixed Mobile Telecommunications (Pty) LT
     AS37358  | PARTIAL: VULNERABLE (Mixed)    | 11       | 25%    | BitCo
+    AS25818  | PARTIAL: VULNERABLE (Mixed)    | 11       | -      | cmcnetworks
     AS37239  | PARTIAL: VULNERABLE (Mixed)    | 10       | 31%    | ICTGlobe Management (Pty) Ltd
     AS37680  | REGRESSED                      | 9        | 52%    | Cool Ideas Service Provider (Pty) Ltd
+    AS37236  | PARTIAL: VULNERABLE (Mixed)    | 8        | 20%    | Reflex Solutions
     AS10798  | VULNERABLE                     | 8        | -      | The Standard Bank of South Africa (Propr
-    AS37153  | PARTIAL: VULNERABLE (Mixed)    | 8        | 11%    | Xneelo (Pty) Ltd
 
     ====================================================================================================
      TRANSIT SUPPLY CHAIN (Who provides to ZA?)

@@ -24,16 +24,16 @@
     AS135523 | Unverified (Transit/Peer?)     | 15       | 26%    | Multinet Broadband
     AS139820 | VULNERABLE                     | 12       | 23%    | HG TELECOMMUNICATION PRIVATE LIMITED
     AS24499  | VULNERABLE                     | 10       | 22%    | Telenor Pakistan
-    AS138655 | VULNERABLE                     | 9        | 25%    | Trans World Enterprise Services (Private
     AS132165 | VULNERABLE                     | 9        | 30%    | Connect Communications
+    AS138655 | VULNERABLE                     | 9        | 25%    | Trans World Enterprise Services (Private
     AS23750  | VULNERABLE                     | 8        | 29%    | GERRYS INFORMATION TECHNOLOGY PVT LTD.
     AS138926 | REGRESSED                      | 5        | 45%    | Netpoint IT & Communications Pvt. Ltd
     AS136969 | PARTIAL: VULNERABLE (Mixed)    | 4        | 30%    | KK Networks (Pvt) Ltd.
     AS9260   | VULNERABLE                     | 4        | 24%    | Multinet Pakistan Pvt. Ltd.
     AS137561 | VULNERABLE                     | 3        | 24%    | WAYLINK
     AS141031 | VULNERABLE                     | 2        | 27%    | Connect Communication
-    AS137910 | VULNERABLE                     | 1        | 27%    | Wavecomm (Private) Limited
-    AS150750 | VULNERABLE                     | 1        | 27%    | IN CABLE INTERNET (PRIVATE) LIMITED
+    AS23966  | VULNERABLE                     | 1        | 25%    | LINKdotNET Telecom Limited
+    AS38710  | VULNERABLE                     | 1        | 14%    | Worldcall Broadband Limited
 
     ====================================================================================================
      TRANSIT SUPPLY CHAIN (Who provides to PK?)

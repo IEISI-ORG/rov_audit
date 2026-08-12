@@ -31,23 +31,23 @@
     #57   | AS9929   | CN |      1,748 |    67% | China Unicom Industrial Internet Backbon
     #66   | AS14789  | US |      1,252 |    22% | Cloudflare, Inc.
     #78   | AS12741  | PL |        784 |    71% | Netia SA
-    #106  | AS23947  | ID |        469 |    35% | PT Mora Telematika Indonesia Tbk
     #109  | AS18229  | IN |        448 |    81% | CtrlS
     #130  | AS45820  | IN |        336 |    68% | Tata Teleservices ISP
     #151  | AS42337  | IR |        278 |    91% | Respina Networks & Beyond PJSC
-    #174  | AS13536  | US |        230 |    76% | FirstLight Networks, LLC
-    #175  | AS9730   | IN |        230 |    74% | Bharti Telesonic Ltd
+    #174  | AS9730   | IN |        230 |    74% | Bharti Telesonic Ltd
+    #175  | AS13536  | US |        230 |    76% | FirstLight Networks, LLC
     #182  | AS20115  | US |        222 |    71% | Charter Communications LLC
     #183  | AS131111 | ID |        222 |    34% | PT Mora Telematika Indonesia Tbk
     #194  | AS7717   | ID |        208 |    30% | OpenIXP Route Servers
     #195  | AS263903 | BR |        204 |    62% | INFORBARRA TELECOM
     #225  | AS52925  | BR |        173 |    32% | Ascenty Data Centers e Telecomunicações 
     #240  | AS1680   | IL |        165 |    69% | Cellcom Fixed Line Communication L.P
-    #265  | AS4761   | ID |        145 |    54% | PT Indosat Tbk
+    #264  | AS4761   | ID |        145 |    54% | PT Indosat Tbk
     #278  | AS17665  | IN |        134 |    84% | ONEOTT INTERTAINMENT LIMITED
     #284  | AS42020  | LB |        132 |    99% | OGERO
-    #291  | AS17995  | ID |        129 |    68% | PT iForte Global Internet
+    #290  | AS17995  | ID |        129 |    68% | PT iForte Global Internet
     #304  | AS17762  | IN |        121 |    63% | Tata Teleservices Maharashtra Ltd
+    #320  | AS8434   | SE |        111 |    66% | Telenor Sverige AB
     ------------------------------------------------------------------------------------
 
     CONCLUSION:

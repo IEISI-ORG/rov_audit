@@ -6,8 +6,8 @@
     Total Networks:      510
     Total Cone Gravity:  2,235
     ------------------------------------------------------------
-    SECURE (ACTIVE/PASSIVE):    49 ( 9.6%) -> Protects 0.0% of Traffic
-    VULNERABLE NETWORKS:       351 (68.8%) -> Exposes  7.6% of Traffic
+    SECURE (ACTIVE/PASSIVE):    50 ( 9.8%) -> Protects 0.0% of Traffic
+    VULNERABLE NETWORKS:       350 (68.6%) -> Exposes  7.6% of Traffic
 
     ====================================================================================================
      THE CO CORE (Top 20 Networks)
@@ -29,8 +29,8 @@
     AS265688 | REGRESSED                      | 4        | 54%    | SINERGY SOLUCIONES INTEGRALES
     AS270075 | PARTIAL: VULNERABLE (Mixed)    | 4        | 18%    | SUPER REDES S.A.S
     AS269804 | VULNERABLE                     | 3        | 22%    | SEPCOM COMUNICACIONES SAS
-    AS272851 | VULNERABLE                     | 2        | 22%    | GIGA FIBRA SAS
     AS272156 | REGRESSED                      | 2        | 20%    | WEB MASTER COLOMBIA SAS
+    AS272851 | VULNERABLE                     | 2        | 22%    | GIGA FIBRA SAS
     AS271957 | PARTIAL: VULNERABLE (Mixed)    | 1        | 19%    | SOMOS NETWORKS COLOMBIA S.A.S. BIC
     AS26619  | PARTIAL: VULNERABLE (Mixed)    | 1        | 33%    | GTD COLOMBIA S.A.S
     AS273168 | VULNERABLE                     | 1        | -      | INFRAESTRUCTURA Y REDES SAS
