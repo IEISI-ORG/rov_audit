@@ -126,19 +126,21 @@ run_data_gathering() {
 
 # -----------------------------------------------------------
 # Stage: Commit report outputs
-# Only stages *already-tracked* files under reports/, root-level CSVs,
-# and logs/cron.log (git add -u), so it can never sweep in unrelated
-# untracked files (secrets, new scratch scripts, etc.). Commits nothing
-# and exits cleanly if there are no changes. Local commit only — never
+# Only stages *already-tracked* files under reports/ and root-level
+# CSVs (git add -u), so it can never sweep in unrelated untracked
+# files (secrets, new scratch scripts, etc.). Commits nothing and
+# exits cleanly if there are no changes. Local commit only — never
 # pushes.
 #
-# cron.log is rotated first via copytruncate (cp + in-place truncate,
-# not mv/rename) so the shell's `>> logs/cron.log` file descriptor from
-# the crontab invocation keeps writing into the same inode — a plain
-# rename would silently redirect the rest of this run's log output into
-# the archived file instead of a fresh one. Rotated archives are
-# gitignored (logs/cron.log.*) so they never get swept into a commit
-# and recreate the same unbounded-growth problem under a new filename.
+# cron.log is never committed — it's purely local operational logging,
+# not a research artifact, unlike the report/CSV outputs above. It's
+# rotated here via copytruncate (cp + in-place truncate, not mv/rename)
+# purely to keep local disk usage bounded: the shell's `>> logs/cron.log`
+# file descriptor from the crontab invocation keeps writing into the
+# same inode across a truncate, but a rename would silently redirect
+# the rest of this run's log output into the archived file instead of
+# a fresh one. Rotated archives (logs/cron.log.*) are gitignored, same
+# as the live file itself.
 # -----------------------------------------------------------
 run_commit() {
     cd "$SCRIPT_DIR"
@@ -149,7 +151,7 @@ run_commit() {
         log "[commit] Rotated cron.log -> ${archive}.gz"
     fi
     log "[commit] Checking for changed report outputs..."
-    git add -u -- reports/ '*.csv' logs/cron.log
+    git add -u -- reports/ '*.csv'
     if git diff --cached --quiet; then
         log "[commit] No changes to commit."
         return
