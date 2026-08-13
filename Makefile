@@ -4,9 +4,6 @@ BINARY_EXTRACTOR := bgp-extractor
 BINARY_CALCULATOR := cone-calculator
 BINARY_FETCHROA := fetch-roa
 MARP := npx @marp-team/marp-cli
-PITA30_SRC := pita30_presentation.md
-PITA30_PDF := pita30_presentation.pdf
-PITA30_HTML := pita30_presentation.html
 
 # Source files — constants.go is shared across all binaries
 SRC_SHARED    := constants.go
@@ -23,7 +20,7 @@ OUTPUT_DIR := output
 
 # --- Main Targets ---
 
-.PHONY: all build clean setup download pipeline present present-pdf present-html help
+.PHONY: all build clean setup download pipeline help
 
 # Default target
 all: build
@@ -35,9 +32,7 @@ help:
 	@echo "  make setup         - Initialize Go module and tidy dependencies"
 	@echo "  make download      - Download the latest RIPE RIS BGP dump"
 	@echo "  make pipeline      - Run the full extraction and calculation pipeline"
-	@echo "  make present       - Build both PDF and HTML for PITA30 presentation"
-	@echo "  make present-pdf   - Build PDF presentation ($(PITA30_PDF))"
-	@echo "  make present-html  - Build HTML presentation ($(PITA30_HTML))"
+	@echo "  make present-apnic - Build APNIC-62 presentation (PITA30/31 use presentations/<event>/Makefile)"
 	@echo "  make clean         - Remove binaries and output directory"
 
 # 1. Setup Environment
@@ -77,19 +72,8 @@ pipeline: build download
 	
 	@echo "\n[+] Pipeline Complete. Topology saved to 'final_as_rank.csv'"
 
-# Presentation targets (PITA30 only — ietf_presentation is not managed here)
-present: present-pdf present-html
-
-present-pdf: $(PITA30_SRC)
-	@echo "[*] Building PITA30 PDF presentation..."
-	$(MARP) --pdf --allow-local-files $(PITA30_SRC) -o $(PITA30_PDF)
-	@echo "[+] PDF saved to $(PITA30_PDF)"
-
-present-html: $(PITA30_SRC)
-	@echo "[*] Building PITA30 HTML presentation..."
-	$(MARP) --html --allow-local-files $(PITA30_SRC) -o $(PITA30_HTML)
-	@echo "[+] HTML saved to $(PITA30_HTML)"
-
+# Presentation targets (PITA30/31 and IETF are built via their own
+# presentations/<event>/Makefile)
 present-apnic: presentations/apnic62/apnic62_presentation.md
 	@echo "[*] Building APNIC-62 Mumbai presentation..."
 	$(MARP) --pdf --allow-local-files presentations/apnic62/apnic62_presentation.md -o presentations/apnic62/apnic62_presentation.pdf
